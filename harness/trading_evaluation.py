@@ -344,6 +344,7 @@ def run(destination: Path) -> dict:
             }
         )
     result["capture_differences"] = capture_differences(result)
+    result["replay_reconciliation"] = replay_reconciliation(result)
     from harness.proposals import summaries
 
     cases = [
@@ -452,3 +453,55 @@ def capture_differences(result: dict) -> list[dict]:
         for _, row in sorted(rows.items())
         if len({json.dumps(v, sort_keys=True) for v in row["captures"].values()}) > 1
     ]
+
+
+# Scenario cases in every real-model capture that mirror a synthetic replay step.
+# "Signal" is what the inherited system itself output on that case (is_signal).
+MIRRORED = {
+    "B identical reprocessing": ("duplicate-input", True),
+    "D/F reprocessing after restart": ("restart-replay", True),
+    "C unchanged revision": ("unchanged-revision", True),
+    "C repeated revision": ("repeated-revision", True),
+    "missing-history": ("missing-prior", True),
+}
+
+
+def replay_reconciliation(result: dict) -> list[dict]:
+    """Which synthetic-replay failures of the inherited system the real captures reproduce."""
+    by_case: dict[str, list[dict]] = {}
+    for o in result["observations"]:
+        by_case.setdefault(o["case_id"], []).append(o)
+    rows = []
+    for step, (case_id, failure_if_signal) in MIRRORED.items():
+        runs = by_case.get(case_id, [])
+        signals = [bool(o["inherited_signal"]) == failure_if_signal for o in runs]
+        rows.append(
+            {
+                "replay_step": step,
+                "real_case": case_id,
+                "real_runs": len(runs),
+                "reproduced_in": sum(signals),
+                "outcomes": [
+                    f"{o['id'].split('/')[0]}: {'signal' if o['inherited_signal'] else 'no signal'}"
+                    + (
+                        ""
+                        if o["inherited_execution"] == "SUCCESS"
+                        else f" ({o['inherited_execution']})"
+                    )
+                    for o in runs
+                ],
+            }
+        )
+    failed = [o for o in result["observations"] if o["inherited_execution"] == "MODEL_FAILURE"]
+    rows.append(
+        {
+            "replay_step": "unusable-impact (verdict failed, still signals)",
+            "real_case": "every case whose real verdict failed",
+            "real_runs": len(failed),
+            "reproduced_in": sum(bool(o["inherited_signal"]) for o in failed),
+            "outcomes": [
+                f"{o['id']}: {'signal' if o['inherited_signal'] else 'no signal'}" for o in failed
+            ],
+        }
+    )
+    return rows

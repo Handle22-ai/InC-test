@@ -535,6 +535,7 @@ def run(destination: Path) -> dict:
                 "label_summaries",
                 "tradeoffs",
                 "capture_differences",
+                "replay_reconciliation",
                 "acceptance",
                 "checks_not_applicable",
             )

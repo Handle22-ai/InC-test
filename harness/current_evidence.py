@@ -126,6 +126,11 @@ def render(destination: Path, result: dict) -> None:
         ]
     edits = result.get("spec_edits_since_reference", [])
     if edits:
+        covered = (result.get("spec_read") or {}).get("decisions") or {}
+        if covered:
+            lines += ["Decisions the reread covers (compare their text with the edits below):", ""]
+            lines += [f"- {key}: {body.get('Decision', '')}" for key, body in covered.items()]
+            lines.append("")
         lines += ["Spec table edits since the Gate 3 reference:", ""]
         lines += [
             f"- {e['declaration']}"
@@ -210,11 +215,32 @@ def render(destination: Path, result: dict) -> None:
         attribution = inherited.get("attribution", {})
         lines += [
             "",
-            f"Inherited system on the 12-step replay: **{inherited['status']}** — "
+            f"Inherited system on the 12-step **synthetic-model** replay: **{inherited['status']}** — "
             f"{len(attribution.get('behavioral_findings', []))} behavioral failures, "
             f"{len(attribution.get('interface_unavailable', []))} observations it has no "
             "interface for (UNKNOWN). [Observations](signals/results.json).",
         ]
+    reconciliation = trading.get("replay_reconciliation", [])
+    if reconciliation:
+        lines += [
+            "",
+            "The synthetic replay uses a stub model. What the real-model captures show for the "
+            "same situations:",
+            "",
+            "| Synthetic replay failure | Real case | Reproduced in real runs | Real outcomes |",
+            "|---|---|---|---|",
+        ]
+        for row in reconciliation:
+            verdict = (
+                "**not reproduced**"
+                if row["reproduced_in"] == 0
+                else f"{row['reproduced_in']}/{row['real_runs']}"
+            )
+            lines.append(
+                f"| {row['replay_step']} | {row['real_case']} | {verdict} | "
+                + "; ".join(row["outcomes"])
+                + " |"
+            )
     unlabeled = result.get("input_contract", {}).get("unlabeled_samples")
     if unlabeled:
         lines += [

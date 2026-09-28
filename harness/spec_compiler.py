@@ -384,6 +384,14 @@ def _compile(text: str, schema_text: str) -> dict:
     decisions = table(
         found, "spec-decisions", ["ID", "Status", "Person", "Previous spec SHA256", "Decision"]
     )
+    for row in decisions:
+        if row["Status"] not in {"proposed", "approved", "owner-requested", "rejected"}:
+            raise fail(
+                "spec-decisions",
+                row["ID"],
+                row["_line"],
+                "status must be proposed, approved, owner-requested or rejected",
+            )
     for section in re.finditer(r"^### D[1-6] — [^\n]+\n(.*?)(?=^##|\Z)", text, re.M | re.S):
         for offset, line in enumerate(section[1].splitlines()):
             if line.strip() and not re.fullmatch(r"\[D[1-6]-\d{3}\] .+", line):
