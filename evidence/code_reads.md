@@ -391,3 +391,12 @@ Missing harness/evidence capability: both ends of every diff shown in the report
 Harness improvement made: the diff ends at the pin's `spec_sha256`; CURRENT.md shows both hashes. A new test fails on the old code (it lists A-004 as covered). Verified end to end in a scratch clone.
 Could the same code read be avoided next time? Yes, now that the report names both ends.
 
+CODE-READ-ID: AUDIT5-TIER1-FALSE-NEGATIVES-20260928
+Observed failure: fifth audit #2. CURRENT.md showed `supplied_label_false_negatives | 0` next to a desk table reporting 2 of 7 positives missed per capture.
+Why evidence was insufficient: the metric's definition was in results.json (`metric_definitions`), but CURRENT.md does not render definitions.
+Source inspected: `harness/trading_evaluation.py` (36–52, 185–195, 355–378), `harness/normalized_evaluation.py` (545–570, how the gate copies the metrics), and `harness/current_evidence.py` (229–233).
+What was learned: the key counted only positives classified NON_SIGNAL; every current miss is a positive sent to review, counted only in `unscored_labeled` together with negatives.
+Missing harness/evidence capability: counts that reconcile with the desk table by construction.
+Harness improvement made: renamed the key, added `labeled_positives_unresolved`, and added a reconciliation test that fails on the old code.
+Could the same code read be avoided next time? Yes, if CURRENT.md rendered `metric_definitions` next to the counts.
+
