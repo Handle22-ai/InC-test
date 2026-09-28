@@ -7,14 +7,14 @@ Captured cases: **46** (two 23-case captures; 14 labels per capture). No abstent
 | BR-FORMAT | 0/46 | 0/46 | Format: 46 |
 | BR-SEMANTICS | 1/46 | 1/46 | Oracle answer: 45 |
 | BR-CONTRADICTION | 3/46 | 3/46 | Conflict: 43 |
-| BR-HISTORY | 4/46 | 3/46 | History: 42 |
+| BR-HISTORY | 6/46 | 5/46 | History: 40 |
 | BR-UNCHANGED | 4/46 | 4/46 | Operational change: 42 |
 | BR-ROUTINE | 6/46 | 6/46 | Information-only: 37; Restriction: 3 |
 | BR-HISTORICAL | 0/46 | 0/46 | Restriction current: 24; Service class: 22 |
 | BR-FIRM | 24/46 | 20/46 | Service class: 22 |
-| BR-UNRESOLVED | 46/46 | 9/46 |  |
+| BR-UNRESOLVED | 46/46 | 7/46 |  |
 
-Previous commit: `41fd17205f05834e70140c6ff116b256c764d128`. Spec-to-spec consequences with current fixed compiler; not a runtime regression mapping
+Previous commit: `5c91e8b9b596e530f3f7e337d24c8e0055743a2b`. Spec-to-spec consequences with current fixed compiler; not a runtime regression mapping
 
 | Notice/capture | From | To |
 |---|---|---|
@@ -160,8 +160,7 @@ Previous commit: `41fd17205f05834e70140c6ff116b256c764d128`. Spec-to-spec conseq
 | capture-0/missing-prior | BR-FORMAT | Format | UNSUPPORTED | SUPPORTED |
 | capture-0/missing-prior | BR-SEMANTICS | Oracle answer | UNUSABLE | USABLE |
 | capture-0/missing-prior | BR-CONTRADICTION | Conflict | YES | NO |
-| capture-0/missing-prior | BR-HISTORY | History | GAP | COMPLETE |
-| capture-0/missing-prior | BR-UNCHANGED | Operational change | UNCHANGED | CHANGED |
+| capture-0/missing-prior | BR-UNCHANGED | Operational change | UNCHANGED | UNKNOWN |
 | capture-0/missing-prior | BR-ROUTINE | Information-only | YES | NO |
 | capture-0/missing-prior | BR-HISTORICAL | Service class | FIRM_DISRUPTION | OTHER |
 | capture-0/missing-prior | BR-FIRM | Service class | FIRM_DISRUPTION | OTHER |
@@ -323,8 +322,7 @@ Previous commit: `41fd17205f05834e70140c6ff116b256c764d128`. Spec-to-spec conseq
 | capture-1/missing-prior | BR-FORMAT | Format | UNSUPPORTED | SUPPORTED |
 | capture-1/missing-prior | BR-SEMANTICS | Oracle answer | UNUSABLE | USABLE |
 | capture-1/missing-prior | BR-CONTRADICTION | Conflict | YES | NO |
-| capture-1/missing-prior | BR-HISTORY | History | GAP | COMPLETE |
-| capture-1/missing-prior | BR-UNCHANGED | Operational change | UNCHANGED | CHANGED |
+| capture-1/missing-prior | BR-UNCHANGED | Operational change | UNCHANGED | UNKNOWN |
 | capture-1/missing-prior | BR-ROUTINE | Information-only | YES | NO |
 | capture-1/missing-prior | BR-HISTORICAL | Service class | FIRM_DISRUPTION | OTHER |
 | capture-1/missing-prior | BR-FIRM | Service class | FIRM_DISRUPTION | OTHER |
