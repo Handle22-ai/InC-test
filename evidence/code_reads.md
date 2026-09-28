@@ -382,3 +382,12 @@ Missing harness/evidence capability: package.md rendered from the same status th
 Harness improvement made: `review_status()`, `edits_since_reread()` and the SPEC UNREVIEWED banner; 2 tests, both failing on the old code; verified end to end in a scratch clone.
 Could the same code read be avoided next time? Yes: the package now states its own review status.
 
+CODE-READ-ID: AUDIT5-TIER1-REREAD-COVERED-20260928
+Observed failure: fifth audit #14. In `gate --proposal`, CURRENT.md listed an unreviewed BR-ROUTINE edit under "Spec table edits covered by the last reread".
+Why evidence was insufficient: CURRENT.md named the starting spec of that diff but not the ending one, so it could not show that the diff ran to the working file.
+Source inspected: `harness/normalized_evaluation.py` (`edits_covered_by_last_reread`), `harness/current_evidence.py` (120–165), `tests/test_release_hardening.py` (158–205).
+What was learned: the diff ended at the working `spec.md`, not at the bytes the pin names.
+Missing harness/evidence capability: both ends of every diff shown in the report.
+Harness improvement made: the diff ends at the pin's `spec_sha256`; CURRENT.md shows both hashes. A new test fails on the old code (it lists A-004 as covered). Verified end to end in a scratch clone.
+Could the same code read be avoided next time? Yes, now that the report names both ends.
+
