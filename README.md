@@ -21,6 +21,8 @@ make gate       # the acceptance run: needs the owner's reread of the current sp
 .venv/bin/python -B -m harness gate --proposal
 ```
 
+`--proposal` runs the component on the unreviewed spec by setting `NGPL_MEASURE_UNREVIEWED_SPEC` to the spec's SHA-256 for that run only. The component refuses an unreviewed spec unless that variable matches, so anyone who sets it by hand can run the component (`rebuilt/normalized_classifier.py`) on unreviewed bytes. It is a measurement switch, not approval: the gate's own acceptance still needs the reread, and `make gate` still exits 5.
+
 Each run writes `evidence/normalized/<time>/CURRENT.md`. It leads with the desk view: labeled positives missed and labeled negatives signaled, per capture. It also lists what the gate does not claim.
 
 | Python gate exit | Meaning |
@@ -32,7 +34,7 @@ Each run writes `evidence/normalized/<time>/CURRENT.md`. It leads with the desk 
 
 CI (`.github/workflows/gate.yml`) runs `make check` and the gate, and passes only on exit 0. Make reports any failure as exit 2.
 
-**What makes the owner's review real:** in GitHub settings, protect `main`. Require pull requests, require the `gate` check, require review from code owners (`.github/CODEOWNERS` covers spec.md, the read receipt, the oracle and the harness), and include administrators. Without that, anyone who can run `harness reread` can produce an accepted run; see harness.md, "Limits".
+**What makes the owner's review real:** in GitHub settings, protect `main`. Require pull requests, require the `gate` check, require review from code owners (`.github/CODEOWNERS` covers spec.md, the read receipt, the frozen labels and witnesses, the capture registry and trading evidence, the reference pointer and reference runs, the harness and the tests; branch protection itself is not verified by this repository), and include administrators. Without that, anyone who can run `harness reread` can produce an accepted run; see harness.md, "Limits".
 
 ## Run the harness against the inherited system (live model calls)
 
@@ -61,8 +63,10 @@ The gate then scores the new capture next to the retained ones, and CURRENT.md l
 1. Copy the spec: `cp spec.md context/proposals/proposed-spec.md`, then edit a rule, predicate, set or setting.
 2. `make consequences SPEC=context/proposals/proposed-spec.md`, then read the printed `REPORT.md`. The baseline defaults to the spec you last reread (pass `BASE=` to override). The report shows every changed notice and the per-capture tradeoffs; keep the losses visible. Exit 4 with a **WOULD BE REFUSED** headline means a compile boundary, the input contract or a frozen classifier witness rejects the proposal; publisher-replay witnesses run only in the gate. **UNMEASURED** means no captured case changes. Examples you supply with `--inputs` are illustrations, not evidence.
 3. To adopt, edit `spec.md` and add a `spec-decisions` row with status `proposed`, then run `make compile`.
-4. The owner reads the new bytes, sets the row to `approved`, and runs `.venv/bin/python -B -m harness reread --person 'Thomas Hand'`. Only names in `spec-settings.owners` are accepted. The receipt covers every decision row added since the last reread, and refuses if any is not approved. Agents never do this step.
+4. The owner reads the new bytes, sets the row to `approved`, and runs `.venv/bin/python -B -m harness reread --person 'Thomas Hand'`. Only names in `spec-settings.owners` are accepted. The receipt covers every decision row added since the last reread, and refuses if any is not approved. Agents never do this step, and never register a reference unasked (one did, once: `35b5af7`, see evidence/ARCHIVE.md).
 5. `make gate`.
+
+Budgets only tighten silently. Raising any `max_` value in `spec-settings.acceptance`, or adding to `review_satisfies`, is refused (`ACCEPTANCE_LOOSENED`) by `make compile`, the gate's preflight and `harness reread`, each comparing against the spec at the last reread, unless a decision row whose Previous spec SHA256 is that spec says `LOOSENS_ACCEPTANCE`. Rereading first does not get around it: the reread runs the same check before it replaces the receipt.
 
 A change to frozen labels or witnesses (`requirements/*witnesses.json`, `dataset.json`) is an oracle change, and a change under `harness/` or `tests/` is an evaluator change. Gate 3 reports either as EVALUATOR_OR_ORACLE_CHANGED, naming the files, until an owner reviews them and registers a new reference from a clean run:
 
@@ -71,7 +75,7 @@ A change to frozen labels or witnesses (`requirements/*witnesses.json`, `dataset
 .venv/bin/python -B -m harness register-reference evidence/reviewed-run evidence/reference-<date> --person 'Thomas Hand'
 ```
 
-The reference records who registered it and which evaluator and oracle files they accepted, and CURRENT.md shows both. Like the reread, this is an assertion, not authentication.
+The reference records who registered it, which evaluator and oracle files they accepted, and any spec table edit it was registered over that changed no measured decision (UNMEASURED_POLICY_EDIT). CURRENT.md shows all three, and keeps listing the spec table edits the last reread covered, so registering a reference does not erase the record of an unmeasured edit. Like the reread, this is an assertion, not authentication.
 
 ## Start a fresh agent session
 
