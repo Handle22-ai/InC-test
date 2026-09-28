@@ -118,7 +118,7 @@ class CaptureRegistrationTests(unittest.TestCase):
 
 
 class PreflightBudgetTests(unittest.TestCase):
-    def run_preflight(self, budget: int) -> dict:
+    def run_preflight(self, budget: int, failing: bool = False) -> dict:
         from harness.adapter import llm_utils
         from harness.preflight import run_preflight
         from harness.signal_evaluation import provider
@@ -127,6 +127,8 @@ class PreflightBudgetTests(unittest.TestCase):
         create = synthetic.messages.create
 
         def with_request_id(**kwargs):
+            if failing:
+                raise RuntimeError("synthetic provider failure")
             response = create(**kwargs)
             response._request_id = "req_synthetic"  # a real provider always returns one
             return response
@@ -146,6 +148,13 @@ class PreflightBudgetTests(unittest.TestCase):
     def test_a_blocked_helper_call_never_passes_or_reports_a_signal(self):
         record = self.run_preflight(1)
         self.assertNotEqual(record["status"], "PASS")
+        self.assertIsNone(record.get("observed_signal"))
+
+    def test_a_failed_extraction_does_not_report_complete_helpers(self):
+        """Audit 5 #34: with no helper asked for, completeness is not applicable, not True."""
+        record = self.run_preflight(2, failing=True)
+        self.assertNotEqual(record["status"], "PASS")
+        self.assertIsNone(record["helpers_complete"])
         self.assertIsNone(record.get("observed_signal"))
 
     def test_the_documented_budget_is_enough(self):
