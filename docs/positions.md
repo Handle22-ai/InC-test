@@ -71,3 +71,8 @@ Held, or waiting on you:
 - **#7, review-rate budget.** Needs a number from you or the desk. Setting it to today's 4/7 would repeat #25's problem.
 - **#20, agent attribution.** Every commit is authored as the owner because the owner asked to remove the Claude co-author line. The honest middle ground is a non-contributor trailer such as `Assisted-by: coding agent`. That is the owner's call.
 - **#25–#32 (C).** The budget is still today's measured misses; the brief's factors are still not rules (no labels to measure them); branch protection is not yet evidenced; out-of-scope memory requirements stay out of scope. Each is stated in harness.md "Limits" or above.
+
+## After the third audit
+
+- **Live path, now exercised.** `make preflight` (2 calls) and `make evaluate-inherited` (38 calls, `claude-sonnet-4-6`) ran with the owner's key. The full run had no harness failure. It reproduced the missing-verdict defect on 46528 live, and it did not reproduce the 46725 false positive, so that false positive depends on the run. It is registered as capture-2, and the report lists every notice where captures disagree.
+- **Owners.** The owners list now comes from the last reread spec, so an edit cannot add its own reviewer.

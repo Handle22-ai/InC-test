@@ -43,6 +43,7 @@ What was learned: the remediation added the check names `refusal` and `replay` t
 Missing harness capability: one registry of check names that both paths must cover; error records that keep the message; a preflight that refuses when any call is blocked; a command that turns a live run into a scored capture.
 Harness improvement made: `spec_compiler.CHECK_NAMES` plus `tests/test_check_registry.py` (every name needs a live branch, and the live scoring of a retained live capture has no HARNESS_FAILURE); messages kept; preflight refuses blocked calls (tested with budgets 1 and 2); `python -m harness register-capture`; a cross-capture differences table in CURRENT.md. These are evaluator changes, reported by Gate 3 as EVALUATOR_OR_ORACLE_CHANGED until the owner registers a new reference.
 Could the same code read be avoided next time? Yes. A new check name without a live branch now fails `make check` before any live run.
+Result: the first full live run after the fix (`evidence/legacy/20260928T180936.681804Z`, 38 calls, registered as capture-2) had no HARNESS_FAILURE. It exposed one more gap: "Measurement valid" and the exit code counted the inherited system's own unusable verdicts (46528, restart-replay) as an invalid measurement. Validity now depends on the calls being answered, and those two cases are findings (`harness/evidence.py`, `harness/evaluator.py`). That run's own summary.md was written by the old code and still says False; it was left as written.
 
 ## Reads behind the second- and third-audit fixes (2026-09-28)
 
