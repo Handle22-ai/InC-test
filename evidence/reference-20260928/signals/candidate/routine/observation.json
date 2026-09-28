@@ -1,0 +1,473 @@
+{
+  "step": "routine",
+  "machine_latency_ms": 5.670875,
+  "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
+  "initial_count": 0,
+  "disposition": "NO_SIGNAL",
+  "reason": "NO_OPERATIONAL_RESTRICTION",
+  "extraction_scorable": true,
+  "classification_scorable": true,
+  "classification_presented_as_valid": true,
+  "decision": {
+    "decision_id": "30870474-c3f8-4327-b943-275c0b3be915",
+    "notice_id": 800007,
+    "source_sha256": "d61a7fd086cfa88045261a1c4a2c5fcf0fe31e637fc295537f13d4de00db7b6b",
+    "reference_time": "2026-01-15T12:00:00+00:00",
+    "raw_proposal": {
+      "notice": {
+        "notice_id": 800007,
+        "tsp_name": "",
+        "pipeline_code": "NGPL",
+        "is_critical": 0,
+        "notice_type": "CAPACITY CONSTRAINT",
+        "notice_subtype": null,
+        "effective_datetime": "2026-01-14T00:00:00",
+        "end_datetime": null,
+        "post_datetime": "2026-01-14T00:00:00",
+        "response_required": 0,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "Synthetic controlled notice",
+        "body_text": "Administrative project list update. No operational restriction or flow change.",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 1,
+        "is_signal": 0,
+        "confidence_score": 0.0,
+        "validity_flags": "[\"VC-1: information-only notice \\u2014 Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T16:49:05.137600",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/candidate/routine/input.html"
+      },
+      "locations": [],
+      "restrictions": []
+    },
+    "semantic_evidence": {
+      "extraction_usable": true,
+      "helpers": [],
+      "execution_error": null,
+      "source_media_type": "text/html"
+    },
+    "normalized_input": {
+      "version": 1,
+      "normalization_trace": [
+        {
+          "field": "content_kind",
+          "source_basis": "Captured notice.information_only and restrictions; validate against source.fields.body",
+          "source_value": {
+            "information_only": 1,
+            "restriction_count": 0
+          },
+          "normalized_value": "INFORMATIONAL",
+          "supplied_by": "model",
+          "unknown_handling": "Missing content meaning stays UNKNOWN; information plus a known restriction is contradictory"
+        },
+        {
+          "field": "availability",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [],
+          "normalized_value": "UNKNOWN",
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "services",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [],
+          "normalized_value": [],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "restrictions",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [],
+          "normalized_value": [],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "locations",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [],
+          "normalized_value": [],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "quantities",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [],
+          "normalized_value": [],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "restriction_status",
+          "source_basis": "Notice Stat Desc header retained in notice.status",
+          "source_value": "INITIATE",
+          "normalized_value": "INITIATE",
+          "supplied_by": "source_parser",
+          "unknown_handling": "Unrecognized status has no inferred lifecycle semantics"
+        },
+        {
+          "field": "source_time",
+          "source_basis": "Source-parser header strings plus model-extracted restriction intervals; only explicit offsets converted",
+          "source_value": {
+            "effective_datetime": "2026-01-14T00:00:00",
+            "end_datetime": null,
+            "restriction_intervals": []
+          },
+          "normalized_value": {
+            "start_time": null,
+            "end_time": null,
+            "time_basis": "UNRESOLVED",
+            "timezone_known": false
+          },
+          "supplied_by": "normalizer",
+          "unknown_handling": "Naive/date-only strings and mixed intervals remain UNRESOLVED; no gas-day or timezone inference"
+        },
+        {
+          "field": "history",
+          "source_basis": "Explicit source-parser prior header and supplied retained history",
+          "source_value": {
+            "status": "INITIATE",
+            "prior_notice_id": null
+          },
+          "normalized_value": {
+            "prior_notice_id": null,
+            "available_notice_ids": [
+              800001,
+              800002,
+              800003,
+              800006
+            ]
+          },
+          "supplied_by": "retained_history",
+          "unknown_handling": "Missing, unsupported or conflicting chain remains review; no ID-order inference"
+        }
+      ],
+      "source": {
+        "pipeline": "NGPL",
+        "media_type": "text/html",
+        "sha256": "d61a7fd086cfa88045261a1c4a2c5fcf0fe31e637fc295537f13d4de00db7b6b",
+        "bytes_reference": "sha256:d61a7fd086cfa88045261a1c4a2c5fcf0fe31e637fc295537f13d4de00db7b6b",
+        "fields": {
+          "body": "Administrative project list update. No operational restriction or flow change.",
+          "effective_datetime": "2026-01-14T00:00:00",
+          "end_datetime": "None",
+          "retained_extraction": "{\"locations\": [], \"restrictions\": []}"
+        }
+      },
+      "notice": {
+        "notice_id": 800007,
+        "prior_notice_id": null,
+        "status": "INITIATE",
+        "notice_type": "CAPACITY CONSTRAINT"
+      },
+      "facts": {
+        "content_kind": "INFORMATIONAL",
+        "services": [],
+        "availability": "UNKNOWN",
+        "locations": [],
+        "quantities": [],
+        "operational_assertions": [
+          "Administrative project list update. No operational restriction or flow change."
+        ],
+        "start_time": null,
+        "end_time": null,
+        "time_basis": "UNRESOLVED",
+        "restrictions": []
+      },
+      "history": [
+        {
+          "facts": {
+            "availability": "UNAVAILABLE",
+            "content_kind": "RESTRICTION",
+            "end_time": null,
+            "locations": [
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "LOC",
+                "value": "8100"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "SEGMENT",
+                "value": "24"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "ZONE",
+                "value": "Louisiana Zone"
+              }
+            ],
+            "operational_assertions": [
+              "LOC 8100 Louisiana Zone. Secondary Firm UNAVAILABLE; current operational capacity restriction until further notice."
+            ],
+            "quantities": [],
+            "restrictions": [
+              {
+                "availability": "UNAVAILABLE",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "UNAVAILABLE",
+                "service": "SECONDARY_FIRM",
+                "source_end": "TBD",
+                "source_start": "2026-01-14T00:00:00+00:00",
+                "status": "UNKNOWN"
+              }
+            ],
+            "services": [
+              "SECONDARY_FIRM"
+            ],
+            "start_time": "2026-01-14T00:00:00+00:00",
+            "time_basis": "UTC"
+          },
+          "notice": {
+            "notice_id": 800001,
+            "notice_type": "CAPACITY CONSTRAINT",
+            "prior_notice_id": null,
+            "status": "INITIATE"
+          },
+          "source_sha256": "4e3014a157f842266f1b8ebebb90fa4d43ae1354e037c12ae075cef90ede25b8"
+        },
+        {
+          "facts": {
+            "availability": "UNAVAILABLE",
+            "content_kind": "RESTRICTION",
+            "end_time": null,
+            "locations": [
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "LOC",
+                "value": "8100"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "SEGMENT",
+                "value": "24"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "ZONE",
+                "value": "Louisiana Zone"
+              }
+            ],
+            "operational_assertions": [
+              "LOC 8100 Louisiana Zone. Secondary Firm UNAVAILABLE; current operational capacity restriction until further notice."
+            ],
+            "quantities": [],
+            "restrictions": [
+              {
+                "availability": "UNAVAILABLE",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "UNAVAILABLE",
+                "service": "SECONDARY_FIRM",
+                "source_end": "TBD",
+                "source_start": "2026-01-14T00:00:00+00:00",
+                "status": "UNKNOWN"
+              }
+            ],
+            "services": [
+              "SECONDARY_FIRM"
+            ],
+            "start_time": "2026-01-14T00:00:00+00:00",
+            "time_basis": "UTC"
+          },
+          "notice": {
+            "notice_id": 800002,
+            "notice_type": "CAPACITY CONSTRAINT",
+            "prior_notice_id": 800001,
+            "status": "SUPERSEDE"
+          },
+          "source_sha256": "a7c7d426273bc476c090c699a7a9894eb49e7d99315fb695101a1c1c8dac0cdc"
+        },
+        {
+          "facts": {
+            "availability": "UNAVAILABLE",
+            "content_kind": "RESTRICTION",
+            "end_time": null,
+            "locations": [
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "LOC",
+                "value": "8200"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "SEGMENT",
+                "value": "24"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "ZONE",
+                "value": "Louisiana Zone"
+              }
+            ],
+            "operational_assertions": [
+              "LOC 8200 Louisiana Zone. Secondary Firm UNAVAILABLE; current operational capacity restriction until further notice."
+            ],
+            "quantities": [],
+            "restrictions": [
+              {
+                "availability": "UNAVAILABLE",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "UNAVAILABLE",
+                "service": "SECONDARY_FIRM",
+                "source_end": "TBD",
+                "source_start": "2026-01-14T00:00:00+00:00",
+                "status": "UNKNOWN"
+              }
+            ],
+            "services": [
+              "SECONDARY_FIRM"
+            ],
+            "start_time": "2026-01-14T00:00:00+00:00",
+            "time_basis": "UTC"
+          },
+          "notice": {
+            "notice_id": 800003,
+            "notice_type": "CAPACITY CONSTRAINT",
+            "prior_notice_id": null,
+            "status": "INITIATE"
+          },
+          "source_sha256": "719194dd0d3f0d0f1b7e880aa8257aa03173255cd2d343947dfb8dc7316443c5"
+        },
+        {
+          "facts": {
+            "availability": "UNAVAILABLE",
+            "content_kind": "RESTRICTION",
+            "end_time": null,
+            "locations": [
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "LOC",
+                "value": "8100"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "SEGMENT",
+                "value": "24"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "ZONE",
+                "value": "Louisiana Zone"
+              }
+            ],
+            "operational_assertions": [
+              "LOC 8100 Louisiana Zone. Secondary Firm UNAVAILABLE; current operational capacity restriction until further notice."
+            ],
+            "quantities": [],
+            "restrictions": [
+              {
+                "availability": "UNAVAILABLE",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "UNAVAILABLE",
+                "service": "SECONDARY_FIRM",
+                "source_end": "TBD",
+                "source_start": "2026-01-14T00:00:00+00:00",
+                "status": "UNKNOWN"
+              }
+            ],
+            "services": [
+              "SECONDARY_FIRM"
+            ],
+            "start_time": "2026-01-14T00:00:00+00:00",
+            "time_basis": "UTC"
+          },
+          "notice": {
+            "notice_id": 800006,
+            "notice_type": "CAPACITY CONSTRAINT",
+            "prior_notice_id": null,
+            "status": "INITIATE"
+          },
+          "source_sha256": "341cf33a9399bc48a6693fa3a0991dc5b947bd86cb27dbc1905533a4eaa3a894"
+        }
+      ],
+      "reference_time": "2026-01-15T12:00:00+00:00",
+      "evidence": {
+        "extraction_usable": true,
+        "helpers_usable": true,
+        "contradictory": false,
+        "references": [
+          "source.fields.body"
+        ]
+      }
+    },
+    "normalization_gaps": [
+      "Unresolved source timestamp: 2026-01-14T00:00:00"
+    ],
+    "actionability": {
+      "status": "UNRESOLVED",
+      "source_timezone_known": false,
+      "source_timezone_status": "UNKNOWN",
+      "automatic_current_future": false,
+      "recommendation_authorized": false
+    },
+    "classifier_decision": {
+      "notice_id": 800007,
+      "source_sha256": "d61a7fd086cfa88045261a1c4a2c5fcf0fe31e637fc295537f13d4de00db7b6b",
+      "classification": "NON_SIGNAL",
+      "disposition": "NO_SIGNAL",
+      "recommendation_allowed": false,
+      "reason_codes": [
+        "BR-ROUTINE",
+        "NO_OPERATIONAL_RESTRICTION"
+      ],
+      "evidence_refs": [
+        "sha256:341cf33a9399bc48a6693fa3a0991dc5b947bd86cb27dbc1905533a4eaa3a894",
+        "sha256:4e3014a157f842266f1b8ebebb90fa4d43ae1354e037c12ae075cef90ede25b8",
+        "sha256:719194dd0d3f0d0f1b7e880aa8257aa03173255cd2d343947dfb8dc7316443c5",
+        "sha256:a7c7d426273bc476c090c699a7a9894eb49e7d99315fb695101a1c1c8dac0cdc",
+        "sha256:d61a7fd086cfa88045261a1c4a2c5fcf0fe31e637fc295537f13d4de00db7b6b",
+        "source.fields.body"
+      ]
+    },
+    "matched_rule": "BR-ROUTINE",
+    "classification": "NON_SIGNAL",
+    "disposition": "NO_SIGNAL",
+    "reason": "NO_OPERATIONAL_RESTRICTION",
+    "reason_codes": [
+      "BR-ROUTINE",
+      "NO_OPERATIONAL_RESTRICTION"
+    ],
+    "recommendation_allowed": false,
+    "candidate_classification": false,
+    "authorization": {
+      "actor": "Synthetic fixture adjudicator (not real approval)",
+      "notice_id": 800007,
+      "source_sha256": "d61a7fd086cfa88045261a1c4a2c5fcf0fe31e637fc295537f13d4de00db7b6b",
+      "reference_time": "2026-01-15T12:00:00+00:00",
+      "materiality": "MATERIAL",
+      "actionable": true,
+      "approved": true,
+      "source_evidence": "evidence/root-run/signals/candidate/routine/input.html",
+      "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+    },
+    "publication_disposition": "NO_SIGNAL",
+    "publication_reason": "NO_OPERATIONAL_RESTRICTION",
+    "initial_decision": false,
+    "publication_attempted": false,
+    "delivery_acknowledged": null,
+    "event_key": "NGPL:800007"
+  },
+  "authorization": {
+    "actor": "Synthetic fixture adjudicator (not real approval)",
+    "notice_id": 800007,
+    "source_sha256": "d61a7fd086cfa88045261a1c4a2c5fcf0fe31e637fc295537f13d4de00db7b6b",
+    "reference_time": "2026-01-15T12:00:00+00:00",
+    "materiality": "MATERIAL",
+    "actionable": true,
+    "approved": true,
+    "source_evidence": "evidence/root-run/signals/candidate/routine/input.html",
+    "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+  },
+  "parser_evidence": "routine/parser.json",
+  "report": "routine/signals.json"
+}

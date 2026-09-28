@@ -1,0 +1,996 @@
+{
+  "case_id": "routine",
+  "input": "evidence/root-run/signals/inherited/routine/input.html",
+  "input_sha256": "d61a7fd086cfa88045261a1c4a2c5fcf0fe31e637fc295537f13d4de00db7b6b",
+  "notice_id": 800007,
+  "state_before": {
+    "notices": [
+      {
+        "notice_id": 800001,
+        "tsp_name": "",
+        "pipeline_code": "NGPL",
+        "is_critical": 0,
+        "notice_type": "CAPACITY CONSTRAINT",
+        "notice_subtype": null,
+        "effective_datetime": "2026-01-14T00:00:00",
+        "end_datetime": null,
+        "post_datetime": "2026-01-14T00:00:00",
+        "response_required": 0,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "Synthetic controlled notice",
+        "body_text": "LOC 8100 Louisiana Zone. Secondary Firm UNAVAILABLE; current operational capacity restriction until further notice.",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 1,
+        "confidence_score": 0.6,
+        "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: small curtailment impact \\u2014 interruptible/lower-priority service only or <10% reduction (+0.10 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T16:49:05.062120",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/inherited/unusable-impact/input.html"
+      },
+      {
+        "notice_id": 800002,
+        "tsp_name": "",
+        "pipeline_code": "NGPL",
+        "is_critical": 0,
+        "notice_type": "CAPACITY CONSTRAINT",
+        "notice_subtype": null,
+        "effective_datetime": "2026-01-14T00:00:00",
+        "end_datetime": null,
+        "post_datetime": "2026-01-14T00:00:00",
+        "response_required": 0,
+        "response_due_date": null,
+        "status": "SUPERSEDE",
+        "prior_notice_id": 800001,
+        "subject": "Synthetic controlled notice",
+        "body_text": "LOC 8100 Louisiana Zone. Secondary Firm UNAVAILABLE; current operational capacity restriction until further notice.",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 1,
+        "confidence_score": 0.8,
+        "validity_flags": "[\"VC-1: superseded notice \\u2014 LLM assessed as materially different from prior notice 800001; continuing as potential new signal\", \"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T16:49:05.056910",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/inherited/D/input.html"
+      },
+      {
+        "notice_id": 800003,
+        "tsp_name": "",
+        "pipeline_code": "NGPL",
+        "is_critical": 0,
+        "notice_type": "CAPACITY CONSTRAINT",
+        "notice_subtype": null,
+        "effective_datetime": "2026-01-14T00:00:00",
+        "end_datetime": null,
+        "post_datetime": "2026-01-14T00:00:00",
+        "response_required": 0,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "Synthetic controlled notice",
+        "body_text": "LOC 8200 Louisiana Zone. Secondary Firm UNAVAILABLE; current operational capacity restriction until further notice.",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 1,
+        "confidence_score": 0.8,
+        "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T16:49:05.060595",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/inherited/F/input.html"
+      },
+      {
+        "notice_id": 800005,
+        "tsp_name": "",
+        "pipeline_code": "NGPL",
+        "is_critical": 0,
+        "notice_type": "CAPACITY CONSTRAINT",
+        "notice_subtype": null,
+        "effective_datetime": "2026-01-14T00:00:00",
+        "end_datetime": null,
+        "post_datetime": "2026-01-14T00:00:00",
+        "response_required": 0,
+        "response_due_date": null,
+        "status": "SUPERSEDE",
+        "prior_notice_id": 899999,
+        "subject": "Synthetic controlled notice",
+        "body_text": "LOC 8100 Louisiana Zone. Secondary Firm UNAVAILABLE; current operational capacity restriction until further notice.",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 1,
+        "confidence_score": 0.8,
+        "validity_flags": "[\"VC-1: superseded notice \\u2014 prior notice not in DB, cannot compare; continuing validation\", \"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T16:49:05.065069",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/inherited/missing-history/input.html"
+      },
+      {
+        "notice_id": 800006,
+        "tsp_name": "",
+        "pipeline_code": "NGPL",
+        "is_critical": 0,
+        "notice_type": "CAPACITY CONSTRAINT",
+        "notice_subtype": null,
+        "effective_datetime": "2026-01-14T00:00:00",
+        "end_datetime": null,
+        "post_datetime": "2026-01-14T00:00:00",
+        "response_required": 0,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "Synthetic controlled notice",
+        "body_text": "LOC 8100 Louisiana Zone. Secondary Firm UNAVAILABLE; current operational capacity restriction until further notice.",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 1,
+        "confidence_score": 0.8,
+        "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T16:49:05.066784",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/inherited/missing-authorization/input.html"
+      }
+    ],
+    "notice_locations": [
+      {
+        "id": 1,
+        "location_index": 0,
+        "notice_id": 800001,
+        "loc_code": "8100",
+        "loc_name": "Synthetic constraint",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      },
+      {
+        "id": 2,
+        "location_index": 0,
+        "notice_id": 800001,
+        "loc_code": "8100",
+        "loc_name": "Synthetic constraint",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      },
+      {
+        "id": 3,
+        "location_index": 0,
+        "notice_id": 800002,
+        "loc_code": "8100",
+        "loc_name": "Synthetic constraint",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      },
+      {
+        "id": 4,
+        "location_index": 0,
+        "notice_id": 800002,
+        "loc_code": "8100",
+        "loc_name": "Synthetic constraint",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      },
+      {
+        "id": 5,
+        "location_index": 0,
+        "notice_id": 800003,
+        "loc_code": "8200",
+        "loc_name": "Synthetic constraint",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      },
+      {
+        "id": 6,
+        "location_index": 0,
+        "notice_id": 800003,
+        "loc_code": "8200",
+        "loc_name": "Synthetic constraint",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      },
+      {
+        "id": 7,
+        "location_index": 0,
+        "notice_id": 800001,
+        "loc_code": "8100",
+        "loc_name": "Synthetic constraint",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      },
+      {
+        "id": 8,
+        "location_index": 0,
+        "notice_id": 800005,
+        "loc_code": "8100",
+        "loc_name": "Synthetic constraint",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      },
+      {
+        "id": 9,
+        "location_index": 0,
+        "notice_id": 800006,
+        "loc_code": "8100",
+        "loc_name": "Synthetic constraint",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      }
+    ],
+    "notice_restrictions": [
+      {
+        "id": 1,
+        "location_index": 0,
+        "notice_id": 800001,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14T00:00:00+00:00",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 2,
+        "location_index": 0,
+        "notice_id": 800001,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14T00:00:00+00:00",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 3,
+        "location_index": 0,
+        "notice_id": 800002,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14T00:00:00+00:00",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 4,
+        "location_index": 0,
+        "notice_id": 800002,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14T00:00:00+00:00",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 5,
+        "location_index": 0,
+        "notice_id": 800003,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14T00:00:00+00:00",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 6,
+        "location_index": 0,
+        "notice_id": 800003,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14T00:00:00+00:00",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 7,
+        "location_index": 0,
+        "notice_id": 800001,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14T00:00:00+00:00",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 8,
+        "location_index": 0,
+        "notice_id": 800005,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14T00:00:00+00:00",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 9,
+        "location_index": 0,
+        "notice_id": 800006,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14T00:00:00+00:00",
+        "end_datetime": "TBD"
+      }
+    ],
+    "foreign_key_violations": [
+      [
+        "notices",
+        800005,
+        "notices",
+        0
+      ]
+    ]
+  },
+  "outcome": "SUCCESS",
+  "output": {
+    "notice": {
+      "notice_id": 800007,
+      "tsp_name": "",
+      "pipeline_code": "NGPL",
+      "is_critical": 0,
+      "notice_type": "CAPACITY CONSTRAINT",
+      "notice_subtype": null,
+      "effective_datetime": "2026-01-14T00:00:00",
+      "end_datetime": null,
+      "post_datetime": "2026-01-14T00:00:00",
+      "response_required": 0,
+      "response_due_date": null,
+      "status": "INITIATE",
+      "prior_notice_id": null,
+      "subject": "Synthetic controlled notice",
+      "body_text": "Administrative project list update. No operational restriction or flow change.",
+      "outage_report_ref": null,
+      "tariff_section": null,
+      "information_only": 1,
+      "is_signal": 0,
+      "confidence_score": 0.0,
+      "validity_flags": "[\"VC-1: information-only notice \\u2014 Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction\", \"llm_extraction\"]",
+      "source_url": null,
+      "scraped_at": "2026-09-28T16:49:05.068654",
+      "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/inherited/routine/input.html"
+    },
+    "locations": [],
+    "restrictions": []
+  },
+  "persistence_insert_succeeded": true,
+  "model_calls": [
+    {
+      "provider": "anthropic",
+      "configured_model": "synthetic-provider",
+      "request_sha256": "240297ca783498c08f9cd0be032a7221c7d52b77940ac4c476a4fc4a3cecaf0c",
+      "request": {
+        "model": "synthetic-provider",
+        "max_tokens": 2048,
+        "system": "You are a structured data extractor for natural gas pipeline EBB (Electronic Bulletin Board) notices.\n\nYour job is to extract locations and their associated capacity restrictions from the notice body into a strict schema.\n\nBefore filling in the schema, reason carefully about the notice:\n1. Is this notice INFORMATION ONLY? Set information_only=true if it is a retrospective post-event report, a weather/demand advisory with no enforceable directive, an administrative update (tariff filing, project list, regulatory notice), or a rolling maintenance plan summary. Set false if it announces or enforces a current or upcoming restriction, curtailment, force majeure, OFO, or maintenance outage with shipper impact.\n2. Does this notice use a CHANGE INDICATOR symbol? Look for a legend line such as \"è Indicates Change\" or \"* Indicates Change\". If found, identify the exact symbol used (e.g. \"è\"). Only rows marked with that specific symbol represent changes — all other rows are unchanged from the prior notice and must be omitted.\n3. What is the ROOT CAUSE of the restriction (e.g. maintenance at CS 343)?\n4. What are the CONSTRAINT POINTS — the specific locations where the capacity limit is enforced? If a change indicator was found in step 2, only include locations that carry that symbol.\n5. Which shippers / service types are SUBJECT TO the restriction at each constraint point?\n6. Does the notice cover multiple named systems (e.g. Amarillo System, Gulf Coast System)? If so, create a separate location object for each system.\n\nSchema structure: restrictions are nested inside each location they apply to. This makes the location↔restriction relationship explicit.\n\nRules:\n- Extract only what is explicitly stated. Do not infer or hallucinate values.\n- Never fabricate LOC codes, compressor station numbers, or segment numbers. If a location identifier does not appear verbatim in the notice text, leave that field null.\n- Use null for any field not present in the text.\n- Change indicators: if the notice uses a symbol such as \"è\" followed by \"Indicates Change\", extract ONLY the entries marked with that symbol. All unmarked rows are unchanged from the prior notice — omit them entirely.\n- For locations: include ONLY the constraint point(s) that are marked as changed (or all impacted locations if no change indicator is used). Do not include locations that are the cause of the restriction, mentioned as positional context, or explicitly stated as unaffected.\n- For system: capture the named pipeline system (e.g. \"Amarillo System\", \"Gulf Coast System\") when stated. Place it as the last identifier field, after zones. Use null if no system name appears.\n- For flow_direction: use ON_TO_PIPE for \"ON to the Pipe\" sections, OFF_OF_PIPE for \"OFF of the Pipe\" sections. Use compass directions (NORTHBOUND etc.) for directional flow. Use RECEIPT/DELIVERY when the notice uses those terms. Use ALL for system-wide. Null if unspecified.\n- For restrictions: nest inside the location they apply to. Only include service types explicitly restricted or unavailable. Include one entry per (service_type, restriction_type, flow_direction) combination.",
+        "tools": [
+          {
+            "name": "extract_notice_data",
+            "description": "Extract changed locations and their associated capacity restrictions from a natural gas pipeline notice. Use only information explicitly stated in the text. Return null for any field not present. Restrictions are nested inside each location they apply to.",
+            "input_schema": {
+              "type": "object",
+              "required": [
+                "locations",
+                "reasoning"
+              ],
+              "properties": {
+                "locations": {
+                  "type": "array",
+                  "description": "Each element is one impacted location group with its own restrictions. IMPORTANT: if the notice uses a change indicator symbol (e.g. 'è Indicates Change'), extract ONLY the locations and restrictions that are marked with that symbol — all unmarked rows are unchanged from the prior notice and must be omitted. If no change indicator is used, extract all impacted locations. Create one location object per distinct (system, zone/segment/CS/LOC) grouping. If a notice covers multiple systems (e.g. Amarillo System and Gulf Coast System), create separate location objects for each system. Nest the restrictions that apply specifically to that location inside it.",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "restrictions"
+                    ],
+                    "properties": {
+                      "loc_codes": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "List of numeric LOC identifiers (numbers only, no 'LOC' prefix) that are directly impacted. e.g. ['3592', '25085']. Empty list if no LOC codes are stated. Do NOT include LOC codes explicitly stated as 'not impacted' or 'not affected'."
+                      },
+                      "loc_names": {
+                        "type": "array",
+                        "items": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "description": "Human-readable names one-to-one with loc_codes. Use null for a code whose name is not stated. Empty list if no LOC codes."
+                      },
+                      "segments": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "Pipeline segment numbers e.g. ['23', '24']. Empty list if none mentioned."
+                      },
+                      "compressor_stations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "Compressor station identifiers, numbers only, no 'CS' prefix. e.g. ['302', '343']. Empty list if none mentioned."
+                      },
+                      "zones": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "Named pipeline zones e.g. ['Louisiana Zone', 'Texok Zone', 'Gulf Coast Mainline', 'Market Delivery Zone']. Empty list if none mentioned."
+                      },
+                      "system": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "description": "The named pipeline system this location belongs to, e.g. 'Amarillo System', 'Gulf Coast System', 'Midcontinent System'. Null if no system name is stated."
+                      },
+                      "restrictions": {
+                        "type": "array",
+                        "description": "All capacity or flow restrictions that apply to THIS location. Include one entry per (service_type, restriction_type, flow_direction) combination.",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "service_type",
+                            "restriction_type"
+                          ],
+                          "properties": {
+                            "service_type": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "Which transportation service type is restricted. Common values: PRIMARY_FIRM, SECONDARY_INPATH_FIRM, SECONDARY_OUTPATH_FIRM, AOR_ITS, INTERRUPTIBLE, NO_NOTICE, ALL. Use the exact wording from the notice if it doesn't fit these categories."
+                            },
+                            "restriction_type": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "The nature of the restriction. Common values: SCHEDULED_TO_PCT_MDQ (scheduled to no less than X% of MDQ), UNAVAILABLE (service completely unavailable), HOURLY_LIMIT_PCT (hourly takes limited to X% of rights), DAILY_LIMIT_PCT (daily takes limited to X%). Use a descriptive string if none of these fit."
+                            },
+                            "restriction_value": {
+                              "type": [
+                                "number",
+                                "null"
+                              ],
+                              "description": "Numeric value of the restriction e.g. 46.0 for 46% MDQ. Null if UNAVAILABLE."
+                            },
+                            "restriction_unit": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "Unit for restriction_value. Common values: PCT_MDQ, PCT_HOURLY, MMBTU, DTH. Null if not applicable."
+                            },
+                            "flow_direction": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "The direction or side this restriction applies to. Use ON_TO_PIPE for gas injected into the pipeline (receipts/injections). Use OFF_OF_PIPE for gas taken off the pipeline (deliveries/withdrawals). Use a compass direction (NORTHBOUND, SOUTHBOUND, EASTBOUND, WESTBOUND) for directional flow restrictions. Use RECEIPT or DELIVERY when the notice uses those terms explicitly. Use ALL if it applies system-wide or direction is unspecified. Use null if not mentioned in the notice."
+                            },
+                            "start_datetime": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "The date this restriction takes effect, extracted from the notice body. Return as YYYY-MM-DD if the date is explicit. Return null if no start date is stated."
+                            },
+                            "end_datetime": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "The date this restriction ends, extracted from the notice body. Return as YYYY-MM-DD if an explicit end date is stated. Return 'TBD' if the notice says 'until further notice' or equivalent. Return null if no end date is mentioned at all."
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "change_indicator": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "description": "The exact change indicator symbol used in this notice (e.g. 'è', '*'), as identified from its legend line (e.g. 'è Indicates Change'). Null if no change indicator legend is present."
+                },
+                "information_only": {
+                  "type": "boolean",
+                  "description": "True if this notice is purely informational and describes no active operational restriction. Set to true for: retrospective post-event reports (describing something that already happened), weather/demand advisories with no enforceable directive, administrative updates (project lists, tariff filings, regulatory notices), and rolling maintenance plan summaries. Set to false if the notice announces or enforces a current or upcoming restriction, curtailment, force majeure, OFO, or maintenance outage with shipper impact."
+                },
+                "reasoning": {
+                  "type": "string",
+                  "description": "One sentence explaining what this notice describes and what the primary operational impact is."
+                }
+              }
+            }
+          }
+        ],
+        "tool_choice": {
+          "type": "tool",
+          "name": "extract_notice_data"
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "## Notice Header (pre-parsed)\nNotice ID: 800007\nNotice Type: CAPACITY CONSTRAINT / \nStatus: INITIATE\nCritical: \nEffective: 01/14/2026\nEnd: Notice Text:\nSubject: Synthetic controlled notice\nPrior Notice: None\n\n## Notice Body\nAdministrative project list update. No operational restriction or flow change."
+          }
+        ]
+      },
+      "success": true,
+      "attempted": true,
+      "stage": "extraction",
+      "request_id": null,
+      "response": {
+        "id": "synthetic-message",
+        "container": null,
+        "content": [
+          {
+            "id": "synthetic-tool",
+            "caller": null,
+            "input": {
+              "information_only": true,
+              "locations": []
+            },
+            "name": "extract_notice_data",
+            "type": "tool_use",
+            "toolset_name": null
+          }
+        ],
+        "model": "synthetic-provider",
+        "role": "assistant",
+        "stop_details": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "type": "message",
+        "usage": {
+          "cache_creation": null,
+          "cache_creation_input_tokens": null,
+          "cache_read_input_tokens": null,
+          "inference_geo": null,
+          "input_tokens": 1,
+          "output_tokens": 1,
+          "output_tokens_details": null,
+          "server_tool_use": null,
+          "service_tier": null
+        }
+      }
+    }
+  ],
+  "helper_results": [],
+  "state_after": {
+    "notices": [
+      {
+        "notice_id": 800001,
+        "tsp_name": "",
+        "pipeline_code": "NGPL",
+        "is_critical": 0,
+        "notice_type": "CAPACITY CONSTRAINT",
+        "notice_subtype": null,
+        "effective_datetime": "2026-01-14T00:00:00",
+        "end_datetime": null,
+        "post_datetime": "2026-01-14T00:00:00",
+        "response_required": 0,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "Synthetic controlled notice",
+        "body_text": "LOC 8100 Louisiana Zone. Secondary Firm UNAVAILABLE; current operational capacity restriction until further notice.",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 1,
+        "confidence_score": 0.6,
+        "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: small curtailment impact \\u2014 interruptible/lower-priority service only or <10% reduction (+0.10 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T16:49:05.062120",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/inherited/unusable-impact/input.html"
+      },
+      {
+        "notice_id": 800002,
+        "tsp_name": "",
+        "pipeline_code": "NGPL",
+        "is_critical": 0,
+        "notice_type": "CAPACITY CONSTRAINT",
+        "notice_subtype": null,
+        "effective_datetime": "2026-01-14T00:00:00",
+        "end_datetime": null,
+        "post_datetime": "2026-01-14T00:00:00",
+        "response_required": 0,
+        "response_due_date": null,
+        "status": "SUPERSEDE",
+        "prior_notice_id": 800001,
+        "subject": "Synthetic controlled notice",
+        "body_text": "LOC 8100 Louisiana Zone. Secondary Firm UNAVAILABLE; current operational capacity restriction until further notice.",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 1,
+        "confidence_score": 0.8,
+        "validity_flags": "[\"VC-1: superseded notice \\u2014 LLM assessed as materially different from prior notice 800001; continuing as potential new signal\", \"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T16:49:05.056910",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/inherited/D/input.html"
+      },
+      {
+        "notice_id": 800003,
+        "tsp_name": "",
+        "pipeline_code": "NGPL",
+        "is_critical": 0,
+        "notice_type": "CAPACITY CONSTRAINT",
+        "notice_subtype": null,
+        "effective_datetime": "2026-01-14T00:00:00",
+        "end_datetime": null,
+        "post_datetime": "2026-01-14T00:00:00",
+        "response_required": 0,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "Synthetic controlled notice",
+        "body_text": "LOC 8200 Louisiana Zone. Secondary Firm UNAVAILABLE; current operational capacity restriction until further notice.",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 1,
+        "confidence_score": 0.8,
+        "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T16:49:05.060595",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/inherited/F/input.html"
+      },
+      {
+        "notice_id": 800005,
+        "tsp_name": "",
+        "pipeline_code": "NGPL",
+        "is_critical": 0,
+        "notice_type": "CAPACITY CONSTRAINT",
+        "notice_subtype": null,
+        "effective_datetime": "2026-01-14T00:00:00",
+        "end_datetime": null,
+        "post_datetime": "2026-01-14T00:00:00",
+        "response_required": 0,
+        "response_due_date": null,
+        "status": "SUPERSEDE",
+        "prior_notice_id": 899999,
+        "subject": "Synthetic controlled notice",
+        "body_text": "LOC 8100 Louisiana Zone. Secondary Firm UNAVAILABLE; current operational capacity restriction until further notice.",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 1,
+        "confidence_score": 0.8,
+        "validity_flags": "[\"VC-1: superseded notice \\u2014 prior notice not in DB, cannot compare; continuing validation\", \"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T16:49:05.065069",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/inherited/missing-history/input.html"
+      },
+      {
+        "notice_id": 800006,
+        "tsp_name": "",
+        "pipeline_code": "NGPL",
+        "is_critical": 0,
+        "notice_type": "CAPACITY CONSTRAINT",
+        "notice_subtype": null,
+        "effective_datetime": "2026-01-14T00:00:00",
+        "end_datetime": null,
+        "post_datetime": "2026-01-14T00:00:00",
+        "response_required": 0,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "Synthetic controlled notice",
+        "body_text": "LOC 8100 Louisiana Zone. Secondary Firm UNAVAILABLE; current operational capacity restriction until further notice.",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 1,
+        "confidence_score": 0.8,
+        "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T16:49:05.066784",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/inherited/missing-authorization/input.html"
+      },
+      {
+        "notice_id": 800007,
+        "tsp_name": "",
+        "pipeline_code": "NGPL",
+        "is_critical": 0,
+        "notice_type": "CAPACITY CONSTRAINT",
+        "notice_subtype": null,
+        "effective_datetime": "2026-01-14T00:00:00",
+        "end_datetime": null,
+        "post_datetime": "2026-01-14T00:00:00",
+        "response_required": 0,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "Synthetic controlled notice",
+        "body_text": "Administrative project list update. No operational restriction or flow change.",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 1,
+        "is_signal": 0,
+        "confidence_score": 0.0,
+        "validity_flags": "[\"VC-1: information-only notice \\u2014 Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T16:49:05.068654",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/inherited/routine/input.html"
+      }
+    ],
+    "notice_locations": [
+      {
+        "id": 1,
+        "location_index": 0,
+        "notice_id": 800001,
+        "loc_code": "8100",
+        "loc_name": "Synthetic constraint",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      },
+      {
+        "id": 2,
+        "location_index": 0,
+        "notice_id": 800001,
+        "loc_code": "8100",
+        "loc_name": "Synthetic constraint",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      },
+      {
+        "id": 3,
+        "location_index": 0,
+        "notice_id": 800002,
+        "loc_code": "8100",
+        "loc_name": "Synthetic constraint",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      },
+      {
+        "id": 4,
+        "location_index": 0,
+        "notice_id": 800002,
+        "loc_code": "8100",
+        "loc_name": "Synthetic constraint",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      },
+      {
+        "id": 5,
+        "location_index": 0,
+        "notice_id": 800003,
+        "loc_code": "8200",
+        "loc_name": "Synthetic constraint",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      },
+      {
+        "id": 6,
+        "location_index": 0,
+        "notice_id": 800003,
+        "loc_code": "8200",
+        "loc_name": "Synthetic constraint",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      },
+      {
+        "id": 7,
+        "location_index": 0,
+        "notice_id": 800001,
+        "loc_code": "8100",
+        "loc_name": "Synthetic constraint",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      },
+      {
+        "id": 8,
+        "location_index": 0,
+        "notice_id": 800005,
+        "loc_code": "8100",
+        "loc_name": "Synthetic constraint",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      },
+      {
+        "id": 9,
+        "location_index": 0,
+        "notice_id": 800006,
+        "loc_code": "8100",
+        "loc_name": "Synthetic constraint",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      }
+    ],
+    "notice_restrictions": [
+      {
+        "id": 1,
+        "location_index": 0,
+        "notice_id": 800001,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14T00:00:00+00:00",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 2,
+        "location_index": 0,
+        "notice_id": 800001,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14T00:00:00+00:00",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 3,
+        "location_index": 0,
+        "notice_id": 800002,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14T00:00:00+00:00",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 4,
+        "location_index": 0,
+        "notice_id": 800002,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14T00:00:00+00:00",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 5,
+        "location_index": 0,
+        "notice_id": 800003,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14T00:00:00+00:00",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 6,
+        "location_index": 0,
+        "notice_id": 800003,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14T00:00:00+00:00",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 7,
+        "location_index": 0,
+        "notice_id": 800001,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14T00:00:00+00:00",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 8,
+        "location_index": 0,
+        "notice_id": 800005,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14T00:00:00+00:00",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 9,
+        "location_index": 0,
+        "notice_id": 800006,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14T00:00:00+00:00",
+        "end_datetime": "TBD"
+      }
+    ],
+    "foreign_key_violations": [
+      [
+        "notices",
+        800005,
+        "notices",
+        0
+      ]
+    ]
+  },
+  "stages": {
+    "extraction": {
+      "scorable": true,
+      "provenance_flags": [
+        "VC-1: information-only notice — Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction",
+        "llm_extraction"
+      ]
+    },
+    "classification": {
+      "scorable": true
+    },
+    "persistence": {
+      "observable": true,
+      "insert_succeeded": true
+    }
+  }
+}
