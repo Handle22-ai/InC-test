@@ -1,26 +1,27 @@
 {
   "version": 2,
   "role": "observed-comparison-reference-not-release-acceptance",
-  "path": "evidence/reference-20260928d",
-  "source_commit": "15d4bdd8bb09ffb06679f8ce8fca180b3d2a6e03",
-  "spec_sha256": "c1f20c1cf233a0ccdd5607c33a443bf653f0e3993b334b806498b55686d4b937",
+  "path": "evidence/reference-20260928e",
+  "source_commit": "37c9dfaa0dc062d746315279e21638ee5b955cbb",
+  "spec_sha256": "41cc4f5916379f1cdc3ef1c8841cc8dfd1fe3587f653b2ee2da7563af296eba9",
   "human_review_asserted": false,
   "registered_by": "Thomas Hand",
   "accepted_changes": {
     "evaluator": [
-      "harness/adapter.py",
-      "harness/baseline.py",
+      "harness/consequences.py",
+      "harness/context.py",
       "harness/contract_preflight.py",
       "harness/current_evidence.py",
-      "harness/domain_rules.py",
-      "harness/input_contract_checks.py",
-      "harness/live.py",
       "harness/normalized_evaluation.py",
       "harness/preflight.py",
-      "harness/spec_compiler.py",
-      "harness/spec_ownership.py",
+      "harness/proposals.py",
+      "harness/signal_evaluation.py",
       "harness/trading_evaluation.py",
-      "tests/test_harness.py",
+      "tests/test_audit_controls.py",
+      "tests/test_check_registry.py",
+      "tests/test_gate_codes.py",
+      "tests/test_normalized_hardening.py",
+      "tests/test_proposal_changes.py",
       "tests/test_release_hardening.py",
       "tests/test_spec_predicates.py",
       "tests/test_spec_source.py"
@@ -29,8 +30,8 @@
   "unmeasured_policy_edits": [],
   "previous_reference_classification": "EVALUATOR_OR_ORACLE_CHANGED",
   "sha256": {
-    "results.json": "dd0d526ba714d771ca5dd51d1a0ef8c11e9e479e4efd86fbf5f62c285c04fb97",
-    "manifest.json": "259aab6ff03024dda1702b767b3246c8f385831acfb5e358798b70ca8741a4bb"
+    "results.json": "7c1ff18f14dc1a752986548352c062b43c9a668b6026ed35a5515777b350666e",
+    "manifest.json": "332549b6cb225f910e8ec508dd3b6c37cebcdc22f2e2215fc92fbfe48541fd1a"
   },
   "observed_gates": {
     "3": "UNKNOWN",

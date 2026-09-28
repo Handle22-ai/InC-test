@@ -1,0 +1,314 @@
+{
+  "id": "capture-1/46604",
+  "case_id": "46604",
+  "notice_id": 46604,
+  "source_capture": "evidence/legacy/20260926T185618.823020Z/results.json",
+  "source_input": "inherited/evaluation/notices/46604_OTHER.html",
+  "input_sha256": "0161fbbc08714add7d3e3742d05667ba6380e07fe60549471ab3d6f7f758acfc",
+  "category": "labeled",
+  "expected_signal": false,
+  "inherited_signal": 0,
+  "inherited_execution": "SUCCESS",
+  "inherited_system": "inherited",
+  "decision": {
+    "decision_id": "ba58bd22-9dcd-40ae-86c1-b6a1d621bab7",
+    "notice_id": 46604,
+    "source_sha256": "0161fbbc08714add7d3e3742d05667ba6380e07fe60549471ab3d6f7f758acfc",
+    "reference_time": "2026-01-06T11:27:29+00:00",
+    "raw_proposal": {
+      "notice": {
+        "notice_id": 46604,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "OTHER",
+        "notice_subtype": "TARIFF PROVISIONS/PARAMETERS",
+        "effective_datetime": "2026-01-06T11:27:29",
+        "end_datetime": "2049-12-31T09:00:00",
+        "post_datetime": "2026-01-06T11:27:29",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "PHMSA MEGA RULE ELIGIBLE PROJ-UPDATE",
+        "body_text": "Pursuant to\nits Tariff (GT&C Section 5.2 (c) (5)), Natural has updated its list of\nPHMSA Mega Rule Eligible Projects set forth on Appendix F to its Settlement in\nDocket No. RP22-1222.  \n\nSee the\nlatest posted notice at \nInformational\nPostings :: Natural Gas Pipeline Company of America, L.L.C.\n under\nRegulatory, which will contain an updated Appendix F.  Any questions or\nconcerns regarding the updated Appendix F should be directed to Rahul Singh,\nDirector of Regulatory, at \nRahul.singh@kindermorgan.com\n.\n\n \n\n..",
+        "outage_report_ref": null,
+        "tariff_section": "GT&C Section 5.2",
+        "information_only": 1,
+        "is_signal": 0,
+        "confidence_score": 0.0,
+        "validity_flags": "[\"VC-1: information-only notice \\u2014 Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-26T18:56:49.912015",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46604_OTHER.html"
+      },
+      "locations": [],
+      "restrictions": []
+    },
+    "semantic_evidence": {
+      "extraction_usable": true,
+      "helpers": [],
+      "execution_error": null,
+      "source_media_type": "text/html"
+    },
+    "normalized_input": {
+      "version": 1,
+      "normalization_trace": [
+        {
+          "field": "content_kind",
+          "source_basis": "Captured notice.information_only and restrictions; validate against source.fields.body",
+          "source_value": {
+            "information_only": 1,
+            "restriction_count": 0
+          },
+          "normalized_value": "INFORMATIONAL",
+          "supplied_by": "model",
+          "unknown_handling": "Missing content meaning stays UNKNOWN; information plus a known restriction is contradictory"
+        },
+        {
+          "field": "availability",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [],
+          "normalized_value": "UNKNOWN",
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "services",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [],
+          "normalized_value": [],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "restrictions",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [],
+          "normalized_value": [],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "locations",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [],
+          "normalized_value": [],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "quantities",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [],
+          "normalized_value": [],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "restriction_status",
+          "source_basis": "Notice Stat Desc header retained in notice.status",
+          "source_value": "INITIATE",
+          "normalized_value": "INITIATE",
+          "supplied_by": "source_parser",
+          "unknown_handling": "Unrecognized status has no inferred lifecycle semantics"
+        },
+        {
+          "field": "source_time",
+          "source_basis": "Source-parser header strings plus model-extracted restriction intervals; only explicit offsets converted",
+          "source_value": {
+            "effective_datetime": "2026-01-06T11:27:29",
+            "end_datetime": "2049-12-31T09:00:00",
+            "restriction_intervals": []
+          },
+          "normalized_value": {
+            "start_time": null,
+            "end_time": null,
+            "time_basis": "UNRESOLVED",
+            "timezone_known": false
+          },
+          "supplied_by": "normalizer",
+          "unknown_handling": "Naive/date-only strings and mixed intervals remain UNRESOLVED; no gas-day or timezone inference"
+        },
+        {
+          "field": "history",
+          "source_basis": "Explicit source-parser prior header and supplied retained history",
+          "source_value": {
+            "status": "INITIATE",
+            "prior_notice_id": null
+          },
+          "normalized_value": {
+            "prior_notice_id": null,
+            "available_notice_ids": [
+              46507
+            ]
+          },
+          "supplied_by": "retained_history",
+          "unknown_handling": "Missing, unsupported or conflicting chain remains review; no ID-order inference"
+        }
+      ],
+      "source": {
+        "pipeline": "NGPL",
+        "media_type": "text/html",
+        "sha256": "0161fbbc08714add7d3e3742d05667ba6380e07fe60549471ab3d6f7f758acfc",
+        "bytes_reference": "sha256:0161fbbc08714add7d3e3742d05667ba6380e07fe60549471ab3d6f7f758acfc",
+        "fields": {
+          "body": "Pursuant to\nits Tariff (GT&C Section 5.2 (c) (5)), Natural has updated its list of\nPHMSA Mega Rule Eligible Projects set forth on Appendix F to its Settlement in\nDocket No. RP22-1222.  \n\nSee the\nlatest posted notice at \nInformational\nPostings :: Natural Gas Pipeline Company of America, L.L.C.\n under\nRegulatory, which will contain an updated Appendix F.  Any questions or\nconcerns regarding the updated Appendix F should be directed to Rahul Singh,\nDirector of Regulatory, at \nRahul.singh@kindermorgan.com\n.\n\n \n\n..",
+          "effective_datetime": "2026-01-06T11:27:29",
+          "end_datetime": "2049-12-31T09:00:00",
+          "retained_extraction": "{\"locations\": [], \"restrictions\": []}"
+        }
+      },
+      "notice": {
+        "notice_id": 46604,
+        "prior_notice_id": null,
+        "status": "INITIATE",
+        "notice_type": "OTHER"
+      },
+      "facts": {
+        "content_kind": "INFORMATIONAL",
+        "services": [],
+        "availability": "UNKNOWN",
+        "locations": [],
+        "quantities": [],
+        "operational_assertions": [
+          "Pursuant to its Tariff (GT&C Section 5.2 (c) (5)), Natural has updated its list of PHMSA Mega Rule Eligible Projects set forth on Appendix F to its Settlement in Docket No. RP22-1222. See the latest posted notice at Informational Postings :: Natural Gas Pipeline Company of America, L.L.C. under Regulatory, which will contain an updated Appendix F. Any questions or concerns regarding the updated Appendix F should be directed to Rahul Singh, Director of Regulatory, at Rahul.singh@kindermorgan.com . .."
+        ],
+        "start_time": null,
+        "end_time": null,
+        "time_basis": "UNRESOLVED",
+        "restrictions": []
+      },
+      "history": [
+        {
+          "facts": {
+            "availability": "UNAVAILABLE",
+            "content_kind": "RESTRICTION",
+            "end_time": null,
+            "locations": [
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "SEGMENT",
+                "value": "14"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "COMPRESSOR_STATION",
+                "value": "113"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "ZONE",
+                "value": "Market Delivery Zone"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "SYSTEM",
+                "value": "Amarillo Mainline System"
+              }
+            ],
+            "operational_assertions": [
+              "SEGMENT 17 FORCE MAJURE SEGMENT 14 WESTBOUND – CS 113 – PRIMARY ONLY Due to current operating conditions, Natural is at operating capacity for transports westbound on the Amarillo Mainline System through Compressor Station 113 located in Will County, IL (Natural's Market Delivery Zone). Therefore, effective for gas day, Wednesday, December 3, 2025, Timely Cycle and continuing until further notice , only Primary Firm and Secondary in-path Firm transports will be scheduled. AOR/ITS and Secondary out-of-path Firm transports will not be available. Please contact your Account Director or Scheduling Representative if you have any questions. .."
+            ],
+            "quantities": [],
+            "restrictions": [
+              {
+                "availability": "UNAVAILABLE",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "UNAVAILABLE",
+                "service": "AOR_ITS",
+                "source_end": "TBD",
+                "source_start": "2025-12-03",
+                "status": "UNKNOWN"
+              },
+              {
+                "availability": "UNAVAILABLE",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "UNAVAILABLE",
+                "service": "SECONDARY_FIRM",
+                "source_end": "TBD",
+                "source_start": "2025-12-03",
+                "status": "UNKNOWN"
+              }
+            ],
+            "services": [
+              "AOR_ITS",
+              "SECONDARY_FIRM"
+            ],
+            "start_time": null,
+            "time_basis": "UNRESOLVED"
+          },
+          "notice": {
+            "notice_id": 46507,
+            "notice_type": "CAPACITY CONSTRAINT",
+            "prior_notice_id": null,
+            "status": "INITIATE"
+          },
+          "source_sha256": "6cc6c6ea924d52f09130dc83de3d1a65a25f75982750faddb57e77c5d7f6d084"
+        }
+      ],
+      "reference_time": "2026-01-06T11:27:29+00:00",
+      "evidence": {
+        "extraction_usable": true,
+        "helpers_usable": true,
+        "contradictory": false,
+        "references": [
+          "source.fields.body"
+        ]
+      }
+    },
+    "normalization_gaps": [
+      "Unresolved source timestamp: 2026-01-06T11:27:29",
+      "Unresolved source timestamp: 2049-12-31T09:00:00"
+    ],
+    "actionability": {
+      "status": "UNRESOLVED",
+      "source_timezone_known": false,
+      "source_timezone_status": "UNKNOWN",
+      "automatic_current_future": false,
+      "recommendation_authorized": false
+    },
+    "classifier_decision": {
+      "notice_id": 46604,
+      "source_sha256": "0161fbbc08714add7d3e3742d05667ba6380e07fe60549471ab3d6f7f758acfc",
+      "classification": "NON_SIGNAL",
+      "disposition": "NO_SIGNAL",
+      "recommendation_allowed": false,
+      "reason_codes": [
+        "BR-ROUTINE",
+        "NO_OPERATIONAL_RESTRICTION"
+      ],
+      "evidence_refs": [
+        "sha256:0161fbbc08714add7d3e3742d05667ba6380e07fe60549471ab3d6f7f758acfc",
+        "sha256:6cc6c6ea924d52f09130dc83de3d1a65a25f75982750faddb57e77c5d7f6d084",
+        "source.fields.body"
+      ]
+    },
+    "matched_rule": "BR-ROUTINE",
+    "classification": "NON_SIGNAL",
+    "disposition": "NO_SIGNAL",
+    "reason": "NO_OPERATIONAL_RESTRICTION",
+    "reason_codes": [
+      "BR-ROUTINE",
+      "NO_OPERATIONAL_RESTRICTION"
+    ],
+    "recommendation_allowed": false,
+    "candidate_classification": false,
+    "authorization": null,
+    "publication_disposition": "NO_SIGNAL",
+    "publication_reason": "NO_OPERATIONAL_RESTRICTION",
+    "initial_decision": false,
+    "publication_attempted": false,
+    "delivery_acknowledged": null,
+    "event_key": "NGPL:46604"
+  },
+  "recommendation_count": 0,
+  "replay_recommendation_count": 0,
+  "evaluation_clock": {
+    "reference_time": "2026-01-06T11:27:29+00:00",
+    "basis": "notice post_datetime"
+  },
+  "authorization": "None; evaluation labels never authorize publication"
+}
