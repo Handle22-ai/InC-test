@@ -1,4 +1,4 @@
-<!-- Index copy of evidence/run-20260928/CURRENT.md, produced by `make gate` (reviewed spec) on commit 0ced592 with a clean tree. Per-case files are omitted from the commit (the replay and trading results are included); the full per-case run is the Gate 3 reference directory. -->
+<!-- Index copy of evidence/run-20260928/CURRENT.md, produced by `make gate` (reviewed spec) on commit 695cc5f with a clean tree. Per-case files are omitted from the commit (the replay and trading results are included); the full per-case run is the Gate 3 reference directory. -->
 
 # Evidence for the engineer's next decision
 
@@ -14,11 +14,11 @@ Gates judge the **rebuilt component**. The inherited system is measured below, n
 | 2 — trading_behavior | PASS | All in-scope findings passed |
 | 3 — regression_change | PASS | Nothing changed since the reference; this is not a regression test of a change |
 
-Run `final-run` · commit `0ced592d4f09cb05c3daed2469bd89a8189ceb0f` · tracked changes `False` · spec `a5bb4e2231092d6da4928c346d8d8f3722c8d44299a721de5c58d4be35249e76`.
+Run `final-run` · commit `695cc5f66afd00e70f94297a878491a9cb0e0d08` · tracked changes `False` · spec `c1f20c1cf233a0ccdd5607c33a443bf653f0e3993b334b806498b55686d4b937`.
 
-Reread by **Thomas Hand**, covering decisions: AUDIT3-001.
+Reread by **Thomas Hand**, covering decisions: AUDIT4-001.
 
-Gate 3 reference `evidence/reference-20260928c` (commit `997ff18`), registered by **Thomas Hand**; evaluator/oracle changes it accepted: oracle: context/authority-reference.json, requirements/capture-registry.json, requirements/trading-evidence.json; evaluator: harness/__main__.py, harness/baseline.py, harness/consequences.py, harness/context.py, harness/current_evidence.py, harness/evaluator.py, harness/evidence.py, harness/normalized_evaluation.py, harness/proposals.py, harness/rule_invariants.py, harness/spec_ownership.py, harness/spec_tables.py, harness/trading_evaluation.py, tests/test_audit_controls.py, tests/test_check_registry.py, tests/test_derivation_integrity.py, tests/test_feedback_loop.py, tests/test_spec_owner_review.py, tests/test_spec_predicates.py, tests/test_spec_source.py.
+Gate 3 reference `evidence/reference-20260928d` (commit `15d4bdd`), registered by **Thomas Hand**; evaluator/oracle changes it accepted: evaluator: harness/adapter.py, harness/baseline.py, harness/contract_preflight.py, harness/current_evidence.py, harness/domain_rules.py, harness/input_contract_checks.py, harness/live.py, harness/normalized_evaluation.py, harness/preflight.py, harness/spec_compiler.py, harness/spec_ownership.py, harness/trading_evaluation.py, tests/test_harness.py, tests/test_release_hardening.py, tests/test_spec_predicates.py, tests/test_spec_source.py.
 
 Gate 2 limits, as declared in spec-settings acceptance (the comparison code is guarded by Gate 3 and the reference owner): max_missed_positives_per_capture = 2, max_false_positives_per_capture = 0, review_satisfies = ['SIGNAL-002', 'SIGNAL-004'].
 
@@ -75,7 +75,18 @@ Where the captures disagree (the same labeled notice, different runs of the inhe
 | labeled_scored | 24 |
 | labeled_total | 42 |
 
-Inherited system on the 12-step replay: **FAIL** — 10 behavioral failures, 16 observations it has no interface for (UNKNOWN). [Observations](run-20260928/signals/results.json).
+Inherited system on the 12-step **synthetic-model** replay: **FAIL** — 10 behavioral failures, 16 observations it has no interface for (UNKNOWN). [Observations](run-20260928/signals/results.json).
+
+The synthetic replay uses a stub model. What the real-model captures show for the same situations:
+
+| Synthetic replay failure | Real case | Reproduced in real runs | Real outcomes |
+|---|---|---|---|
+| B identical reprocessing | duplicate-input | 3/3 | capture-0: signal; capture-1: signal; capture-2: signal |
+| D/F reprocessing after restart | restart-replay | 3/3 | capture-0: signal; capture-1: signal; capture-2: signal (MODEL_FAILURE) |
+| C unchanged revision | unchanged-revision | **not reproduced** | capture-0: no signal; capture-1: no signal; capture-2: no signal |
+| C repeated revision | repeated-revision | **not reproduced** | capture-0: no signal; capture-1: no signal; capture-2: no signal |
+| missing-history | missing-prior | **not reproduced** | capture-0: no signal; capture-1: no signal; capture-2: no signal |
+| unusable-impact (verdict failed, still signals) | every case whose real verdict failed | 2/4 | capture-1/46528: no signal; capture-1/46864: signal; capture-2/46528: no signal; capture-2/restart-replay: signal |
 
 Unlabeled recent NGPL notices: 25 HTML headers, 0 input-contract errors; 7/7 PDF outage reports are an unsupported format and go to review. Classifying them needs live extraction.
 
@@ -95,7 +106,7 @@ Captured cases: **69** (3 captures of 23 cases; 14 labels per capture). No abste
 | BR-FIRM | 36/69 | 30/69 | Service class: 33 |
 | BR-UNRESOLVED | 69/69 | 10/69 |  |
 
-Previous commit: `997ff186f30ca11337177729f934b63e14830f07`. Spec-to-spec consequences with current fixed compiler; not a runtime regression mapping
+Previous commit: `15d4bdd8bb09ffb06679f8ce8fca180b3d2a6e03`. Spec-to-spec consequences with current fixed compiler; not a runtime regression mapping
 
 | Notice/capture | From | To |
 |---|---|---|
