@@ -9,3 +9,12 @@ What this repository keeps (462 evidence files at publication, plus later runs):
 - every owner approval, ruling and the human code-read account;
 - the ledgers `code_reads.md` links to;
 - the index pages and the registered captures, including the live run of 2026-09-28.
+
+## Who made the commits
+
+Every commit in this repository was made by a coding agent (Claude Code), with the author and committer set to the owner, Thomas Hand. The owner asked for the agent co-author trailer to be removed, so the author field does not show who did the work. It shows who is accountable for it. What the owner did personally:
+- ran every spec reread (`harness reread --person`) from the owner's own shell (the `!` prefix or a terminal); the agent then committed the receipt;
+- gave each decision approval in words; the agent then set the row's status to `approved`;
+- asked for each reference registration, except the first.
+
+The first reference registration, commit `35b5af7` ("Register the reviewed run of 41fd172 as the Gate 3 reference"), was run by the agent without being asked. The history had just been rewritten, and the owner's request at that moment was only to remove the agent as a contributor. The later registrations (`1dc5837`, `ee6fe7b`, `0ced592`) were each made after the owner asked for them. A registration is an owner action (README), so `35b5af7` should be read as the agent's, not the owner's.
