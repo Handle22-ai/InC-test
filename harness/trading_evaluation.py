@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from harness.captures import evaluation_clock, oracle, verified_capture
+from harness.captures import evaluation_clock, oracle, store_before, verified_capture
 from harness.requirements import load_requirements
 from harness.runtime import ROOT, digest, write_json
 from harness.signal_evaluation import classification_scorable
@@ -62,20 +62,31 @@ def run(destination: Path) -> dict:
                 "current_action": "Re-executed classifier and publisher over these captured assertions; no original execution identity rewritten",
             }
         )
-        publisher = RecommendationPublisher(folder / "publisher.sqlite")
+        latest: dict[int, dict] = {}  # most recent captured case per notice ID
+        publisher: RecommendationPublisher | None = None
         try:
             for case in capture["cases"]:
                 key = f"capture-{index}/{case['case_id']}"
                 output = case["output"]
                 clock, clock_basis = evaluation_clock(case, capture)
-                flags = json.loads(output.get("notice", {}).get("validity_flags", "[]"))
-                semantic = SemanticEvidence(
-                    case.get("stages", {})
-                    .get("extraction", {})
-                    .get("scorable", "llm_extraction" in flags),
-                    tuple((row["helper"], row["result"]) for row in case.get("helper_results", [])),
-                    None if case["outcome"] == "SUCCESS" else case["outcome"],
-                )
+                semantic = semantic_evidence(case)
+                # Each case starts from exactly the store it was captured with.
+                publisher = RecommendationPublisher(folder / f"{case['case_id']}.sqlite")
+                for prior_id in store_before(case):
+                    prior = latest.get(prior_id)
+                    if prior is not None:
+                        try:
+                            publisher.decide(
+                                prior["output"],
+                                prior["input_sha256"],
+                                semantic_evidence(prior),
+                                None,
+                                evaluation_clock(prior, capture)[0],
+                            )
+                        except ValueError, KeyError, TypeError:
+                            pass  # an unusable prior stays absent, exactly as in its own case
+                if output.get("notice", {}).get("notice_id") is not None:
+                    latest[output["notice"]["notice_id"]] = case
                 try:
                     decision = publisher.decide(output, case["input_sha256"], semantic, None, clock)
                     emitted = publisher.save_signals_report(
@@ -277,8 +288,11 @@ def run(destination: Path) -> dict:
                     metrics["semantic_execution_refusals"].append(key)
                 if decision.get("matched_rule") == "BR-HISTORY":
                     metrics["history_required_review"].append(key)
+                publisher.close()
+                publisher = None
         finally:
-            publisher.close()
+            if publisher is not None:
+                publisher.close()
     result["label_outcomes"] = []
     result["label_summaries"] = []
     for index, source in enumerate(result["sources"]):
@@ -399,3 +413,12 @@ def budget_findings(result: dict, acceptance: dict, requirements: dict) -> list[
                 }
             )
     return rows
+
+
+def semantic_evidence(case: dict) -> SemanticEvidence:
+    flags = json.loads(case["output"].get("notice", {}).get("validity_flags", "[]"))
+    return SemanticEvidence(
+        case.get("stages", {}).get("extraction", {}).get("scorable", "llm_extraction" in flags),
+        tuple((row["helper"], row["result"]) for row in case.get("helper_results", [])),
+        None if case["outcome"] == "SUCCESS" else case["outcome"],
+    )

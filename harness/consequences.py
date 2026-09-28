@@ -14,7 +14,7 @@ from rebuilt.normalization import normalize
 
 
 def observations(contract: dict) -> list[dict]:
-    from harness.captures import evaluation_clock, oracle, verified_capture
+    from harness.captures import evaluation_clock, oracle, store_before, verified_capture
 
     labels = oracle()
     result = []
@@ -39,7 +39,7 @@ def observations(contract: dict) -> list[dict]:
                     case["input_sha256"],
                     semantic,
                     evaluation_clock(case, capture)[0],
-                    list(retained.values()),
+                    [retained[i] for i in store_before(case) if i in retained],
                     contract=contract,
                 )
                 from harness.behavior_contract import validate_input

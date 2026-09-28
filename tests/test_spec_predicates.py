@@ -138,6 +138,22 @@ class SpecPredicateTests(unittest.TestCase):
         self.assertEqual(report["html_contract_errors"], [])
         self.assertEqual(report["pdf_unsupported"], 7)
 
+    def test_each_captured_case_sees_only_the_store_it_was_captured_with(self):
+        from harness import consequences
+        from harness.captures import store_before, verified_capture
+
+        rows = {row["id"]: row for row in consequences.observations(compile_spec(ROOT))}
+        for capture in ("capture-0", "capture-1"):
+            missing = rows[f"{capture}/missing-prior"]["outcome"]
+            self.assertEqual(missing["features"]["History"], "GAP")
+            self.assertEqual(missing["rule"], "BR-HISTORY")
+        registry = json.loads((ROOT / "requirements/trading-evidence.json").read_text())
+        capture = verified_capture(ROOT / registry["captures"][0])
+        for case in capture["cases"]:
+            history = rows[f"capture-0/{case['case_id']}"].get("normalized", {}).get("history", [])
+            ids = {entry["notice"]["notice_id"] for entry in history}
+            self.assertTrue(ids <= set(store_before(case)), case["case_id"])
+
     def test_malformed_predicates_name_the_spec_row(self):
         cases = {
             "unknown path": (

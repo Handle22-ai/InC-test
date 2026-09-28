@@ -126,3 +126,12 @@ def evaluation_clock(case: dict, capture: dict) -> tuple[str, str]:
     except TypeError, ValueError:
         pass
     return capture["manifest"]["provenance"]["timestamp"], "capture execution time (no post time)"
+
+
+def store_before(case: dict) -> list[int]:
+    """Notice IDs the captured store held when this case ran (audit #4).
+
+    A case's history must come from its own recorded store, never from whatever
+    earlier cases in the same capture happened to leave behind.
+    """
+    return [row["notice_id"] for row in case.get("state_before", {}).get("notices", [])]
