@@ -34,7 +34,7 @@ CI accepts only exit 0. Make reports any failure as exit 2.
 
 ## Run the harness against the inherited system (live model calls)
 
-The inherited system needs an Anthropic key: set `ANTHROPIC_API_KEY` in the environment or in `inherited/.env`. Every live command also needs `LIVE=1` and a call budget.
+The inherited system needs an Anthropic key. Export `ANTHROPIC_API_KEY` (and `LLM_MODEL`, if you change it) in the environment. Don't use `inherited/.env`: offline commands never read credential files, so while that file exists the gate cannot see the model setting and keeps Gate 3 UNKNOWN. Every live command also needs `LIVE=1` and a call budget.
 
 ```bash
 make preflight          LIVE=1 MAX_CALLS=1    # key and model reachable?
@@ -47,7 +47,7 @@ A wrong key reports AUTHENTICATION_FAILURE. A missing key reports CREDENTIALS_MI
 ## Change the policy
 
 1. Copy the spec: `cp spec.md context/proposals/proposed-spec.md`, then edit a rule, predicate, set or setting.
-2. `make consequences SPEC=context/proposals/proposed-spec.md BASE=spec.md`, then read the printed `REPORT.md`. It shows every changed notice and the per-capture tradeoffs. Keep the losses visible.
+2. `make consequences SPEC=context/proposals/proposed-spec.md BASE=spec.md`, then read the printed `REPORT.md`. It shows every changed notice and the per-capture tradeoffs. Keep the losses visible. Exit 4 and a **WOULD BE REFUSED** headline mean the compiler and gate would reject the proposal. An **UNMEASURED** headline means no captured case or supplied example exercises the edit.
 3. To adopt, edit `spec.md` and add a `spec-decisions` row with status `proposed`, then run `make compile`.
 4. The owner reads the new bytes, sets the row to `approved`, and runs `.venv/bin/python -B -m harness reread --person 'Name'`. The receipt covers every decision row added since the last reread, and refuses if any of them is not yet approved. Agents never do this step.
 5. `make gate`.

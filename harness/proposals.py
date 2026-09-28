@@ -372,6 +372,21 @@ def run(spec: Path, base: str, destination: Path, inputs_path: Path | None = Non
             for line in diff
         )
     )
+    from harness.rule_invariants import violation
+
+    result["would_be_refused"] = [violation(r) for r in checks if r["status"] == "FAIL"] + [
+        r["reason"] for r in inputs["findings"]
+    ]
+    supplied_changed = result.get("supplied_inputs", {}).get("changed", [])
+    result["unmeasured_edits"] = (
+        []
+        if result["changed_outcomes"] or supplied_changed
+        else [
+            f"{c['block']} / {c['id']}"
+            for c in result["declaration_changes"]
+            if c["block"] not in {"spec-decisions"}
+        ]
+    )
     (destination / "rules.md").write_text(render_rules(after_contract))
     (destination / "nonmatches.md").write_text(render(result))
     lines = [
@@ -379,6 +394,25 @@ def run(spec: Path, base: str, destination: Path, inputs_path: Path | None = Non
         "",
         "**PROPOSAL ONLY — no policy adoption, read receipt or acceptance.**",
         "",
+        *(
+            ["**WOULD BE REFUSED** by `make compile` and the gate:", ""]
+            + [f"- {reason}" for reason in result["would_be_refused"]]
+            + [""]
+            if result["would_be_refused"]
+            else []
+        ),
+        *(
+            [
+                "**UNMEASURED:** these edits change no captured outcome and no supplied example, "
+                "so nothing here shows whether they are right. Add a witness or supply examples "
+                "with `--inputs`:",
+                "",
+            ]
+            + [f"- {edit}" for edit in result["unmeasured_edits"]]
+            + [""]
+            if result["unmeasured_edits"]
+            else []
+        ),
         f"Proposal `{result['spec_sha256']}`; baseline `{result['baseline_sha256']}`.",
         "",
         f"Changed captured outcomes: **{len(result['changed_outcomes'])}/{len(after)}**; action changes: **{sum(r['action_changed'] for r in result['changed_outcomes'])}**; matched rule-ID changes: **{sum(r['rule_changed'] for r in result['changed_outcomes'])}**. Counts may overlap. Rule match counts are not accuracy scores.",
@@ -468,10 +502,14 @@ def main() -> None:
                     "mode": result["mode"],
                     "accepted": False,
                     "changed_outcomes": len(result["changed_outcomes"]),
+                    "would_be_refused": len(result["would_be_refused"]),
+                    "unmeasured_edits": len(result["unmeasured_edits"]),
                     "report": str(destination / "REPORT.md"),
                 }
             )
         )
+        if result["would_be_refused"]:
+            raise SystemExit(4)
     except (ValueError, OSError, KeyError, TypeError, subprocess.CalledProcessError) as exc:
         print(json.dumps({"status": "ERROR", "reason": str(exc), "accepted": False}))
         raise SystemExit(2) from exc

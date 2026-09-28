@@ -600,8 +600,20 @@ def drift(contract: dict, name: str, root: Path) -> ValueError:
                 elif "rules" in observed:
                     by_id = {r.get("id"): r for r in observed["rules"]}
                     rule = next((r for r in contract["rules"] if by_id.get(r["id"]) != r), None)
+                    predicates = observed.get("predicates", [])
+                    changed = next(
+                        (
+                            p
+                            for i, p in enumerate(contract["predicates"])
+                            if i >= len(predicates) or predicates[i] != p
+                        ),
+                        None,
+                    )
                     if rule:
                         block, row, line = "spec-rules", rule["id"], rule["spec_line"]
+                    elif changed:
+                        block, line = "spec-predicates", changed["spec_line"]
+                        row = f"{changed['column']}={changed['value']}"
         except ValueError, AttributeError, TypeError, yaml.YAMLError:
             pass
     return fail(

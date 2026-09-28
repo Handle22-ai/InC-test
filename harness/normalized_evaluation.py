@@ -339,6 +339,15 @@ def identity_findings(
     return rows
 
 
+def crashed_in_component(exc: BaseException) -> bool:
+    """True when the exception was raised inside rebuilt/, the component under test."""
+    import traceback
+
+    component = str(ROOT / "rebuilt")
+    frames = traceback.extract_tb(exc.__traceback__)
+    return bool(frames) and frames[-1].filename.startswith(component)
+
+
 def run(destination: Path) -> dict:
     result: dict = {
         "scope": SCOPE,
@@ -579,7 +588,9 @@ def run(destination: Path) -> dict:
                 "name": "regression_change",
                 "status": "UNKNOWN",
                 "classification": "MODEL_CONFIG_CHANGED",
-                "reason": "Effective configured model differs from retained capture identities; no live model execution or comparison mapping",
+                "reason": "inherited/.env exists and may set LLM_MODEL; the offline gate never reads credential files, so the model is unverified. Use environment variables instead."
+                if result["model_configuration"].get("unverifiable_config_file")
+                else "Effective configured model differs from retained capture identities; no live model execution or comparison mapping",
                 "model_configuration": result["model_configuration"],
             }
         findings.append(
@@ -622,13 +633,60 @@ def run(destination: Path) -> dict:
             if result.get("spec_read", {}).get("mode") == "PROPOSAL_ONLY"
             else "REVIEWED_SPEC"
         )
+        if result["mode"] == "REVIEWED_SPEC" and result["source"]["working_tree_dirty"]:
+            # Acceptance describes a commit; uncommitted bytes have no identity to accept.
+            dirty = {
+                "requirement": "OBS-001",
+                "gate": 1,
+                "case": "working-tree",
+                "status": "UNKNOWN",
+                "code": "UNCOMMITTED_CHANGES",
+                "reason": "Tracked files differ from HEAD; commit before an acceptance run",
+            }
+            result["findings"].append(dirty)
+            gate = result["gates"]["1"]
+            gate["findings"] = [*gate.get("findings", []), dirty]
+            if gate["status"] == "PASS":
+                gate["status"] = "UNKNOWN"
+                gate["reason"] = dirty["reason"]
         result["accepted"] = result["mode"] == "REVIEWED_SPEC" and all(
             gate["status"] == "PASS" for gate in result["gates"].values()
         )
     except PreflightRefused:
         pass
-    except (ValueError, OSError, KeyError, TypeError) as exc:
-        reason = str(exc)
+    except Exception as exc:  # noqa: BLE001 - every failure is classified and retained
+        reason = f"{type(exc).__name__}: {exc}"
+        known = (
+            "UNRECORDED_SPEC_CHANGE",
+            "STALE_SPEC_PIN",
+            "GENERATED_ARTIFACT_DRIFT",
+            "BOUNDARY_VIOLATION",
+        )
+        if crashed_in_component(exc) and not any(code in reason for code in known):
+            # The component under test raised: an established failure, not a refused run.
+            result["findings"].append(
+                {"gate": 1, "status": "FAIL", "code": "COMPONENT_CRASH", "reason": reason}
+            )
+            result["gates"] = {
+                "1": {"name": "contracts_and_invariants", "status": "FAIL", "reason": reason},
+                "2": {
+                    "name": "trading_behavior",
+                    "status": "UNKNOWN",
+                    "reason": "Component crashed",
+                },
+                "3": {
+                    "name": "regression_change",
+                    "status": "UNKNOWN",
+                    "reason": "Component crashed",
+                },
+            }
+            result["mode"] = "COMPONENT_CRASHED"
+            write_json(destination / "results.json", result)
+            write_json(
+                destination / "manifest.json",
+                {"scope": SCOPE, "source": result["source"], "files": {}},
+            )
+            return result
         classification = next(
             (
                 code

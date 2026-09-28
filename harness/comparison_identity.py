@@ -25,6 +25,9 @@ def build(contract: dict, witnesses: list[dict]) -> dict:
     revisions = json.loads((ROOT / "requirements/requirement-revisions.json").read_text())
     captured_models = sorted({capture["manifest"]["configured_model"] for _, capture in sources()})
     effective_model = os.environ.get("LLM_MODEL", llm_utils._MODEL)
+    # The inherited system loads inherited/.env for live runs; offline commands never
+    # read credential files, so a model set there would be invisible (audit 2 #3).
+    unreadable_config = (ROOT / "inherited/.env").exists()
     return {
         "scope": "bounded-integrated-classifier-publisher-v3",
         "python_runtime": sys.version,
@@ -91,7 +94,10 @@ def build(contract: dict, witnesses: list[dict]) -> dict:
         ],
         "capture_interpretation": "Original manifests retain captured model/prompt/config identities. Current adapter/evaluator source hashes describe replay only; historical identities are never restamped.",
         "model_configuration": {
-            "status": "PASS" if captured_models == [effective_model] else "UNKNOWN",
+            "status": "PASS"
+            if captured_models == [effective_model] and not unreadable_config
+            else "UNKNOWN",
+            "unverifiable_config_file": "inherited/.env" if unreadable_config else None,
             "requested_model_environment": os.environ.get("LLM_MODEL"),
             "effective_configured_model": effective_model,
             "captured_configured_models": captured_models,

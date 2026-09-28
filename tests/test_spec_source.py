@@ -189,6 +189,26 @@ class SpecSourceTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             verify(self.root)
 
+    def test_hand_edited_predicate_names_its_spec_row(self):
+        build(self.root)
+        path = self.root / "requirements/behavior.yaml"
+        path.write_text(path.read_text().replace('"op": "within"', '"op": "overlaps"', 1))
+        with self.assertRaisesRegex(ValueError, r"block spec-predicates, row History=COMPLETE"):
+            check_generated(self.root)
+
+    def test_a_crash_inside_the_component_is_a_failure_not_a_refusal(self):
+        from harness.normalized_evaluation import crashed_in_component
+        from rebuilt.rule_engine import check_schema
+
+        try:
+            check_schema({"x": 1}, {"type": "object", "additionalProperties": False})
+        except ValueError as exc:
+            self.assertTrue(crashed_in_component(exc))
+        try:
+            compile_spec(self.root, "not a spec")
+        except ValueError as exc:
+            self.assertFalse(crashed_in_component(exc))
+
     def test_declared_types_and_dates_refuse_fabrication(self):
         c = compile_spec(self.root)
         self.assertEqual(timestamp("2026-01-14", c), (None, None))
