@@ -60,9 +60,9 @@ def observations(contract: dict) -> list[dict]:
                         "normalized": value,
                     }
                 )
-                # History holds what the publisher would have stored, as the gate replays
-                # it: a decided (not UNRESOLVED) notice whose semantic evidence is usable.
-                # Otherwise the latest version of this notice is absent from history.
+                # History holds what the publisher stores: a decided (not UNRESOLVED)
+                # notice whose semantic evidence is usable. Any other version leaves the
+                # last valid one unchanged (spec D5-002), exactly as the gate replays it.
                 if (
                     outcome["action"]["classification"] != "UNRESOLVED"
                     and semantic_evidence(case).refusal() is None
@@ -72,10 +72,7 @@ def observations(contract: dict) -> list[dict]:
                         "facts": value["facts"],
                         "source_sha256": value["source"]["sha256"],
                     }
-                else:
-                    retained.pop(value["notice"]["notice_id"], None)
             except (ValueError, KeyError, TypeError) as exc:
-                retained.pop(case["output"].get("notice", {}).get("notice_id"), None)
                 result.append(
                     {
                         "id": key,

@@ -63,7 +63,7 @@ def run(destination: Path) -> dict:
                 "current_action": "Re-executed classifier and publisher over these captured assertions; no original execution identity rewritten",
             }
         )
-        latest: dict[int, dict] = {}  # most recent captured case per notice ID
+        versions: dict[int, list[dict]] = {}  # every earlier captured case per notice ID
         publisher: RecommendationPublisher | None = None
         try:
             for case in capture["cases"]:
@@ -73,9 +73,11 @@ def run(destination: Path) -> dict:
                 semantic = semantic_evidence(case)
                 # Each case starts from exactly the store it was captured with.
                 publisher = RecommendationPublisher(folder / f"{case['case_id']}.sqlite")
+                # Replay every earlier version of each stored notice in order, so the
+                # publisher keeps the last valid one: a failed later version must leave
+                # it unchanged (spec D5-002), not erase it (audit 5 follow-up).
                 for prior_id in store_before(case):
-                    prior = latest.get(prior_id)
-                    if prior is not None:
+                    for prior in versions.get(prior_id, []):
                         try:
                             publisher.decide(
                                 prior["output"],
@@ -85,9 +87,9 @@ def run(destination: Path) -> dict:
                                 evaluation_clock(prior, capture)[0],
                             )
                         except ValueError, KeyError, TypeError:
-                            pass  # an unusable prior stays absent, exactly as in its own case
+                            pass  # an unusable version is not stored, exactly as in its own case
                 if output.get("notice", {}).get("notice_id") is not None:
-                    latest[output["notice"]["notice_id"]] = case
+                    versions.setdefault(output["notice"]["notice_id"], []).append(case)
                 try:
                     decision = publisher.decide(output, case["input_sha256"], semantic, None, clock)
                     emitted = publisher.save_signals_report(

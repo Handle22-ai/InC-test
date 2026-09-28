@@ -307,3 +307,26 @@ class HarnessExceptionTests(unittest.TestCase):
             self.assertIn("normalized_evaluation.py", traced["traceback"])
             manifest = json.loads((out / "manifest.json").read_text())
             self.assertIn("exception.json", manifest["files"])
+
+
+class LastValidSnapshotTests(unittest.TestCase):
+    """Spec D5-002: a failed later version must not erase a notice's last valid version.
+
+    In capture-2 the latest 46624 before the revision scenarios (restart-replay) lost its
+    impact verdict. Its earlier valid versions must still be history, so the unchanged
+    revisions are suppressed there exactly as in captures 0 and 1.
+    """
+
+    def test_a_failed_later_version_leaves_the_last_valid_one_in_history(self):
+        from harness import consequences
+
+        with tempfile.TemporaryDirectory() as directory:
+            result = trading_evaluation.run(Path(directory))
+        gate = {o["id"]: o["decision"].get("matched_rule") for o in result["observations"]}
+        preview = {
+            r["id"]: r["outcome"]["rule"] for r in consequences.observations(compile_spec(ROOT))
+        }
+        for capture in ("capture-0", "capture-1", "capture-2"):
+            for case in ("unchanged-revision", "repeated-revision"):
+                key = f"{capture}/{case}"
+                self.assertEqual((gate[key], preview[key]), ("BR-UNCHANGED", "BR-UNCHANGED"), key)
