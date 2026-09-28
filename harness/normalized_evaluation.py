@@ -339,6 +339,43 @@ def identity_findings(
     return rows
 
 
+POLICY_BLOCKS = {
+    "spec-rules",
+    "spec-actions",
+    "spec-predicates",
+    "spec-settings",
+    "spec-parameters",
+    "spec-replays",
+    "spec-replay-actions",
+    "spec-inputs",
+}
+
+
+def spec_edits(previous: dict | None, current: dict) -> list[dict]:
+    """Spec table edits since the reference run, and whether any measured decision moved."""
+    if not previous:
+        return []
+    from harness.proposals import declaration_changes
+    from harness.spec_ownership import spec_text_with_hash
+
+    old = spec_text_with_hash(ROOT, previous.get("comparison_identity", {}).get("spec_sha256", ""))
+    if old is None:
+        return []
+    moved = bool(current["gates"].get("3", {}).get("changed_decisions"))
+    edits = []
+    for change in declaration_changes(old, (ROOT / "spec.md").read_text()):
+        if change["block"] not in POLICY_BLOCKS:
+            continue
+        edits.append(
+            {
+                "declaration": f"{change['block']} / {change['id']} ({change['change']})",
+                "fields": change["fields"],
+                "unmeasured": not moved,
+            }
+        )
+    return edits
+
+
 def crashed_in_component(exc: BaseException) -> bool:
     """True when the exception was raised inside rebuilt/, the component under test."""
     import traceback
@@ -608,6 +645,22 @@ def run(destination: Path) -> dict:
                 "reason": "The comparison reference names no spec owner; register it with "
                 "python -m harness register-reference RUN DEST --person OWNER",
             }
+        result["spec_edits_since_reference"] = spec_edits(previous, result)
+        unmeasured = [e for e in result["spec_edits_since_reference"] if e["unmeasured"]]
+        if unmeasured:
+            findings.append(
+                {
+                    "requirement": "OBS-003",
+                    "gate": 3,
+                    "case": "spec-edits",
+                    "status": "UNKNOWN",
+                    "code": "UNMEASURED_POLICY_EDIT",
+                    "reason": "Policy edits since the reference change no measured decision: "
+                    + "; ".join(e["declaration"] for e in unmeasured)
+                    + ". Add a witness or labeled case, or have an owner register a reference "
+                    "that accepts them",
+                }
+            )
         if result["model_configuration"]["status"] != "PASS":
             result["gates"]["3"] = {
                 "name": "regression_change",

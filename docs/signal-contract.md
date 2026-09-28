@@ -1,6 +1,6 @@
 # Rules generated from spec.md
 
-Spec SHA256: `a5bb4e2231092d6da4928c346d8d8f3722c8d44299a721de5c58d4be35249e76`
+Spec SHA256: `7751050013611c0a370c7faaffc61ca7b65a4ffb93a024f74209afd952410847`
 
 Source-grounded normalized facts -> candidate only, including when source timezone is UNKNOWN. Unknown timezone blocks automatic current/future actionability and recommendation authorization, requiring REVIEW_REQUIRED. No timezone is inferred.
 

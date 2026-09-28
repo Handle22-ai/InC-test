@@ -169,6 +169,24 @@ class SpecPredicateTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "required_inputs"):
             enforce(compile_spec(ROOT, text.replace(status, relaxed)))
 
+    def test_an_empty_list_is_never_within_a_set(self):
+        """Audit 4 #6: unknown services must not satisfy a `within` condition vacuously."""
+        text = (ROOT / "spec.md").read_text()
+        within = compile_spec(
+            ROOT,
+            text.replace(
+                "facts.services overlaps FIRM_SERVICES and",
+                "facts.services within FIRM_SERVICES and",
+            ),
+        )
+        value = witness("firm-positive")
+        value = {
+            **value,
+            "facts": {**value["facts"], "services": [], "restrictions": []},
+        }
+        self.assertNotEqual(classify(value, within).matched_rule, "BR-FIRM")
+        self.assertNotEqual(derive(within, value)["rule"], "BR-FIRM")
+
     def test_malformed_predicates_name_the_spec_row(self):
         cases = {
             "unknown path": (

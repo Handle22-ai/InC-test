@@ -21,6 +21,7 @@ def refusal(exc: Exception) -> dict:
                 "UNAPPROVED_ASSUMPTION_CHANGE",
                 "INVALID_REVIEW_RECORD",
                 "INVALID_EVIDENCE_IDENTITY",
+                "ACCEPTANCE_LOOSENED",
             )
             if name in reason
         ),
@@ -82,6 +83,9 @@ def collect(root: Path, destination: Path) -> tuple[dict, dict | None]:
                         "reason": str(fail("spec-checks", key, row["spec_line"], reason)),
                     }
                 )
+    from harness.spec_ownership import check_acceptance
+
+    attempt(lambda: check_acceptance(root, compiled))
     receipt = attempt(lambda: verify(root, compiled))
     if receipt is not None:
         data["spec_read"] = receipt

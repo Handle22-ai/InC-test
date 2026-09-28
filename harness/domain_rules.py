@@ -137,7 +137,9 @@ def holds(tree: dict, value: dict, observations: dict, sets: dict, row: dict | N
     if op == "overlaps":
         return bool(set(get(tree["path"])) & set(sets[tree["set"]]))
     if op == "within":
-        return set(get(tree["path"])) <= set(sets[tree["set"]])
+        # An empty list is never "within" a set: no evidence is not firm evidence.
+        values = set(get(tree["path"]))
+        return bool(values) and values <= set(sets[tree["set"]])
     raise ValueError("unsupported predicate node " + op)
 
 

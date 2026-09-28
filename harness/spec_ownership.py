@@ -145,6 +145,52 @@ def owners_as_of(root: Path, reviewed_sha256: str | None, current: dict) -> list
     return list(current.get("owners", []))
 
 
+def acceptance_loosening(root: Path, contract: dict) -> list[str]:
+    """Gate 2 budgets loosened relative to the spec last reread (audit 4 #3)."""
+    pin_path = root / PIN
+    if not pin_path.exists():
+        return []
+    reviewed = spec_text_with_hash(root, json.loads(pin_path.read_text())["spec_sha256"])
+    if reviewed is None:
+        return []
+    try:
+        old = compile_spec(root, reviewed).get("acceptance") or {}
+    except ValueError:
+        return []
+    new = contract.get("acceptance") or {}
+    loosened = [
+        f"{key}: {old[key]} -> {new.get(key)}"
+        for key in old
+        if key.startswith("max_") and new.get(key, old[key]) > old[key]
+    ]
+    added = sorted(set(new.get("review_satisfies", [])) - set(old.get("review_satisfies", [])))
+    if added:
+        loosened.append(f"review_satisfies adds {added}")
+    return loosened
+
+
+def check_acceptance(root: Path, contract: dict) -> None:
+    """Refuse a loosened budget unless a new decision row says LOOSENS_ACCEPTANCE."""
+    loosened = acceptance_loosening(root, contract)
+    if not loosened:
+        return
+    pin = json.loads((root / PIN).read_text())
+    declared = any(
+        row["Previous spec SHA256"] == pin["spec_sha256"]
+        and "LOOSENS_ACCEPTANCE" in row["Decision"]
+        for row in contract["decisions"]
+    )
+    if not declared:
+        raise fail(
+            "spec-settings",
+            "acceptance",
+            1,
+            "ACCEPTANCE_LOOSENED: "
+            + "; ".join(loosened)
+            + ". A decision row must say LOOSENS_ACCEPTANCE; budgets only tighten silently",
+        )
+
+
 def verify(root: Path = ROOT, contract: dict | None = None) -> dict:
     c = contract or compile_spec(root)
     if _PROPOSAL.get() == (root.resolve(), c["source_spec_sha256"]):

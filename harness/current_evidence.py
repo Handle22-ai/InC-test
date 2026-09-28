@@ -124,6 +124,15 @@ def render(destination: Path, result: dict) -> None:
             + ".",
             "",
         ]
+    edits = result.get("spec_edits_since_reference", [])
+    if edits:
+        lines += ["Spec table edits since the Gate 3 reference:", ""]
+        lines += [
+            f"- {e['declaration']}"
+            + (" — **UNMEASURED**: no measured decision changed" if e["unmeasured"] else "")
+            for e in edits
+        ]
+        lines.append("")
     acceptance = result.get("trading_layer", {}).get("acceptance")
     if acceptance:
         lines += [

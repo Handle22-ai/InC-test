@@ -646,9 +646,11 @@ def check_generated(root: Path = ROOT) -> dict:
 
 def build(root: Path = ROOT) -> dict:
     from harness.rule_invariants import enforce
+    from harness.spec_ownership import check_acceptance
 
     c = compile_spec(root)
     enforce(c)  # compile refuses a spec the gate would refuse
+    check_acceptance(root, c)
     for name, body in artifacts(c, root).items():
         (root / name).parent.mkdir(parents=True, exist_ok=True)
         (root / name).write_text(body)

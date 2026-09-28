@@ -252,7 +252,7 @@ class Evaluator:
         if kind == "overlaps":
             return any(item in members for item in found)
         if kind == "within":
-            return all(item in members for item in found)
+            return bool(found) and all(item in members for item in found)
         raise ValueError("Unsupported predicate node: " + kind)
 
     def features(self, predicates: list[dict]) -> dict:

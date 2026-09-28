@@ -259,6 +259,38 @@ class SpecSourceTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "not a spec owner"):
             reread(None, "Agent", self.root)
 
+    def test_a_loosened_budget_needs_an_explicit_decision(self):
+        import subprocess
+
+        def git(*args):
+            subprocess.run(
+                ["git", "-c", "user.name=t", "-c", "user.email=t@t", *args],
+                cwd=self.root,
+                check=True,
+                capture_output=True,
+            )
+
+        path = self.root / "spec.md"
+        text = path.read_text().replace(" | Thomas Hand | ", " | Owner A | ")
+        text = text.replace('"owners": ["Thomas Hand"]', '"owners": ["Owner A"]')
+        path.write_text(text)
+        first = reread("ARCH-SOURCE-001", "Owner A", self.root)
+        git("init", "-q")
+        git("add", "-A")
+        git("commit", "-qm", "reviewed")
+        anchor = next(line for line in text.splitlines() if line.startswith("ARCH-SOURCE-001 |"))
+        looser = text.replace(
+            '"max_missed_positives_per_capture": 2', '"max_missed_positives_per_capture": 4'
+        )
+        for wording, refused in (("Editorial tidy.", True), ("LOOSENS_ACCEPTANCE: desk.", False)):
+            row = f"LOOSER-001 | approved | Owner A | {first['spec_sha256']} | {wording}"
+            path.write_text(looser.replace(anchor, anchor + "\n" + row))
+            if refused:
+                with self.assertRaisesRegex(ValueError, "ACCEPTANCE_LOOSENED"):
+                    build(self.root)
+            else:
+                build(self.root)
+
     def test_declared_types_and_dates_refuse_fabrication(self):
         c = compile_spec(self.root)
         self.assertEqual(timestamp("2026-01-14", c), (None, None))
