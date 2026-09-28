@@ -158,6 +158,53 @@ class BoundaryAndEvidenceTests(unittest.TestCase):
             evaluation.verify_evidence(path, json.loads((path / "manifest.json").read_text()))
         self.assertEqual(before, digest(ROOT / "evidence/CURRENT.md"))
 
+    def test_registering_a_reference_does_not_erase_an_unmeasured_edit(self):
+        from harness.normalized_evaluation import edits_covered_by_last_reread
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "context").mkdir()
+            spec = (ROOT / "spec.md").read_text()
+            before = spec.replace(
+                '"max_false_positives_per_capture": 0', '"max_false_positives_per_capture": 1'
+            )
+            self.assertNotEqual(before, spec)
+            (root / "spec.md").write_text(before)
+            git = ["git", "-c", "user.name=t", "-c", "user.email=t@t"]
+            subprocess.run([*git, "init", "-q"], cwd=root, check=True)
+            subprocess.run([*git, "add", "-A"], cwd=root, check=True)
+            subprocess.run([*git, "commit", "-qm", "before"], cwd=root, check=True)
+            (root / "spec.md").write_text(spec)
+            pin = {"previous_read": {"spec_sha256": hashlib.sha256(before.encode()).hexdigest()}}
+            write_json(root / "context/spec-read-pin.json", pin)
+            covered = edits_covered_by_last_reread(set(), root)
+            first = "spec-settings / acceptance (edited)"
+            self.assertEqual(covered["edits"], [{"declaration": first, "unmeasured": False}])
+            flagged = edits_covered_by_last_reread({first}, root)
+            self.assertTrue(flagged["edits"][0]["unmeasured"])
+        result: dict = {
+            "scope": "synthetic-renderer-test",
+            "source": {"revision": "synthetic", "working_tree_dirty": False},
+            "accepted": False,
+            "gates": {"3": {"name": "regression_change", "status": "PASS"}},
+            "findings": [],
+            "reference_registration": {
+                "path": "evidence/reference-x",
+                "source_commit": "abcdef0",
+                "registered_by": "Owner A",
+                "unmeasured_policy_edits": [first],
+            },
+            "spec_edits_since_reference": [],
+            "spec_edits_covered_by_last_reread": flagged,
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory)
+            write_json(path / "manifest.json", {"files": {}})
+            current_evidence.render(path, result)
+            text = (path / "CURRENT.md").read_text()
+        self.assertIn("Unmeasured policy edits this reference was registered over", text)
+        self.assertIn(f"- {first} — **UNMEASURED**", text)
+
     def test_extra_command_arguments_are_rejected_before_execution(self):
         result = subprocess.run(
             [sys.executable, "-B", "-m", "harness.commands", "evaluate-spec", "--unknown"],

@@ -138,6 +138,26 @@ def render(destination: Path, result: dict) -> None:
             for e in edits
         ]
         lines.append("")
+    accepted_unmeasured = reference.get("unmeasured_policy_edits") or []
+    if accepted_unmeasured:
+        lines += [
+            "Unmeasured policy edits this reference was registered over (no measured "
+            "decision changed): " + "; ".join(accepted_unmeasured) + ".",
+            "",
+        ]
+    reread_edits = result.get("spec_edits_covered_by_last_reread") or {}
+    if reread_edits.get("edits"):
+        lines += [
+            "Spec table edits covered by the last reread (from spec "
+            f"`{str(reread_edits['from_spec_sha256'])[:12]}…`), kept after reference registration:",
+            "",
+        ]
+        lines += [
+            f"- {e['declaration']}"
+            + (" — **UNMEASURED**: no measured decision changed" if e["unmeasured"] else "")
+            for e in reread_edits["edits"]
+        ]
+        lines.append("")
     acceptance = result.get("trading_layer", {}).get("acceptance")
     if acceptance:
         lines += [

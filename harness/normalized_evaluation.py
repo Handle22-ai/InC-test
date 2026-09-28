@@ -376,6 +376,34 @@ def spec_edits(previous: dict | None, current: dict) -> list[dict]:
     return edits
 
 
+def edits_covered_by_last_reread(unmeasured: set[str], root: Path = ROOT) -> dict:
+    """Spec table edits from the spec before the last reread to the current spec.
+
+    A reference registration moves the Gate 3 baseline, so the since-reference list
+    empties; this list does not, and it keeps any edit known to be unmeasured flagged.
+    """
+    from harness.proposals import declaration_changes
+    from harness.spec_ownership import PIN, spec_text_with_hash
+
+    try:
+        pin = json.loads((root / PIN).read_text())
+    except OSError, ValueError:
+        return {"from_spec_sha256": None, "edits": []}
+    base = (pin.get("previous_read") or {}).get("spec_sha256")
+    old = spec_text_with_hash(root, base) if base else None
+    if old is None:
+        return {"from_spec_sha256": base, "edits": []}
+    edits = [
+        f"{change['block']} / {change['id']} ({change['change']})"
+        for change in declaration_changes(old, (root / "spec.md").read_text())
+        if change["block"] in POLICY_BLOCKS
+    ]
+    return {
+        "from_spec_sha256": base,
+        "edits": [{"declaration": e, "unmeasured": e in unmeasured} for e in edits],
+    }
+
+
 def crashed_in_component(exc: BaseException) -> bool:
     """True when the exception was raised inside rebuilt/, the component under test."""
     import traceback
@@ -622,7 +650,13 @@ def run(destination: Path) -> dict:
         listed = owners()
         result["reference_registration"] = {
             key: registration.get(key)
-            for key in ("path", "source_commit", "registered_by", "accepted_changes")
+            for key in (
+                "path",
+                "source_commit",
+                "registered_by",
+                "accepted_changes",
+                "unmeasured_policy_edits",
+            )
         }
         result["gates"]["3"] = {
             "name": "regression_change",
@@ -648,6 +682,11 @@ def run(destination: Path) -> dict:
             }
         result["spec_edits_since_reference"] = spec_edits(previous, result)
         unmeasured = [e for e in result["spec_edits_since_reference"] if e["unmeasured"]]
+        # Report only: registration must not erase the record of an unmeasured edit.
+        result["spec_edits_covered_by_last_reread"] = edits_covered_by_last_reread(
+            {e["declaration"] for e in unmeasured}
+            | set(registration.get("unmeasured_policy_edits") or [])
+        )
         if unmeasured:
             findings.append(
                 {

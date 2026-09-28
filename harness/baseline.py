@@ -122,6 +122,11 @@ def register(source: Path, destination: Path, person: str) -> dict:
             for key, files in gate3.get("changed_files", {}).items()
             if key in {"evaluator", "oracle"}
         },
+        "unmeasured_policy_edits": [
+            edit["declaration"]
+            for edit in result.get("spec_edits_since_reference", [])
+            if edit["unmeasured"]
+        ],
         "previous_reference_classification": gate3.get("classification"),
         "sha256": {name: digest(destination / name) for name in ("results.json", "manifest.json")},
         "observed_gates": {key: value["status"] for key, value in result["gates"].items()},
