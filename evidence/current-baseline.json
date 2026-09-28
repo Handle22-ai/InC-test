@@ -1,44 +1,36 @@
 {
   "version": 2,
   "role": "observed-comparison-reference-not-release-acceptance",
-  "path": "evidence/reference-20260928c",
-  "source_commit": "997ff186f30ca11337177729f934b63e14830f07",
-  "spec_sha256": "a5bb4e2231092d6da4928c346d8d8f3722c8d44299a721de5c58d4be35249e76",
+  "path": "evidence/reference-20260928d",
+  "source_commit": "15d4bdd8bb09ffb06679f8ce8fca180b3d2a6e03",
+  "spec_sha256": "c1f20c1cf233a0ccdd5607c33a443bf653f0e3993b334b806498b55686d4b937",
   "human_review_asserted": false,
   "registered_by": "Thomas Hand",
   "accepted_changes": {
-    "oracle": [
-      "context/authority-reference.json",
-      "requirements/capture-registry.json",
-      "requirements/trading-evidence.json"
-    ],
     "evaluator": [
-      "harness/__main__.py",
+      "harness/adapter.py",
       "harness/baseline.py",
-      "harness/consequences.py",
-      "harness/context.py",
+      "harness/contract_preflight.py",
       "harness/current_evidence.py",
-      "harness/evaluator.py",
-      "harness/evidence.py",
+      "harness/domain_rules.py",
+      "harness/input_contract_checks.py",
+      "harness/live.py",
       "harness/normalized_evaluation.py",
-      "harness/proposals.py",
-      "harness/rule_invariants.py",
+      "harness/preflight.py",
+      "harness/spec_compiler.py",
       "harness/spec_ownership.py",
-      "harness/spec_tables.py",
       "harness/trading_evaluation.py",
-      "tests/test_audit_controls.py",
-      "tests/test_check_registry.py",
-      "tests/test_derivation_integrity.py",
-      "tests/test_feedback_loop.py",
-      "tests/test_spec_owner_review.py",
+      "tests/test_harness.py",
+      "tests/test_release_hardening.py",
       "tests/test_spec_predicates.py",
       "tests/test_spec_source.py"
     ]
   },
+  "unmeasured_policy_edits": [],
   "previous_reference_classification": "EVALUATOR_OR_ORACLE_CHANGED",
   "sha256": {
-    "results.json": "6727cdbe6656dac0f9bb9fcb6689a1510bcdf005d68d557a0a0c582e53430c3a",
-    "manifest.json": "b591ad20c94af93ad2cd91b4775708b2267d983688a5f08f0ea78069a7c528a7"
+    "results.json": "dd0d526ba714d771ca5dd51d1a0ef8c11e9e479e4efd86fbf5f62c285c04fb97",
+    "manifest.json": "259aab6ff03024dda1702b767b3246c8f385831acfb5e358798b70ca8741a4bb"
   },
   "observed_gates": {
     "3": "UNKNOWN",

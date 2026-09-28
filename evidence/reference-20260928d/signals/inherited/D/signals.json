@@ -1,0 +1,55 @@
+[
+  {
+    "notice": {
+      "notice_id": 800002,
+      "tsp_name": "",
+      "pipeline_code": "NGPL",
+      "is_critical": 0,
+      "notice_type": "CAPACITY CONSTRAINT",
+      "notice_subtype": null,
+      "effective_datetime": "2026-01-14T00:00:00",
+      "end_datetime": null,
+      "post_datetime": "2026-01-14T00:00:00",
+      "response_required": 0,
+      "response_due_date": null,
+      "status": "SUPERSEDE",
+      "prior_notice_id": 800001,
+      "subject": "Synthetic controlled notice",
+      "body_text": "LOC 8100 Louisiana Zone. Secondary Firm UNAVAILABLE; current operational capacity restriction until further notice.",
+      "outage_report_ref": null,
+      "tariff_section": null,
+      "information_only": 0,
+      "is_signal": 1,
+      "confidence_score": 0.8,
+      "validity_flags": "[\"VC-1: superseded notice \\u2014 LLM assessed as materially different from prior notice 800001; continuing as potential new signal\", \"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
+      "source_url": null,
+      "scraped_at": "2026-09-28T20:55:41.937408",
+      "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run-final/signals/inherited/D/input.html"
+    },
+    "locations": [
+      {
+        "location_index": 0,
+        "notice_id": 800002,
+        "loc_code": "8100",
+        "loc_name": "Synthetic constraint",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      }
+    ],
+    "restrictions": [
+      {
+        "notice_id": 800002,
+        "location_index": 0,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14T00:00:00+00:00",
+        "end_datetime": "TBD"
+      }
+    ]
+  }
+]

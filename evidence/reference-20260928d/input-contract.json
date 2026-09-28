@@ -1,0 +1,4591 @@
+{
+  "status": "PASS",
+  "fields": [
+    {
+      "id": "INPUT-SOURCE-001",
+      "spec_line": 426,
+      "field": "header.tsp",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-001",
+          "field": "header.tsp",
+          "raw": "retained",
+          "normalized": "retained",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 426
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-001",
+          "field": "header.tsp",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 426
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-001",
+          "field": "header.tsp",
+          "raw": 17,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed text",
+          "spec_line": 426
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-002",
+      "spec_line": 427,
+      "field": "header.critical",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-002",
+          "field": "header.critical",
+          "raw": "retained",
+          "normalized": "retained",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 427
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-002",
+          "field": "header.critical",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 427
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-002",
+          "field": "header.critical",
+          "raw": 17,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed text",
+          "spec_line": 427
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-003",
+      "spec_line": 428,
+      "field": "header.type1",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-003",
+          "field": "header.type1",
+          "raw": "retained",
+          "normalized": "retained",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 428
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-003",
+          "field": "header.type1",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 428
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-003",
+          "field": "header.type1",
+          "raw": 17,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed text",
+          "spec_line": 428
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-004",
+      "spec_line": 429,
+      "field": "header.type2",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-004",
+          "field": "header.type2",
+          "raw": "retained",
+          "normalized": "retained",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 429
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-004",
+          "field": "header.type2",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 429
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-004",
+          "field": "header.type2",
+          "raw": 17,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed text",
+          "spec_line": 429
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-005",
+      "spec_line": 430,
+      "field": "header.notice_effective_date",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-005",
+          "field": "header.notice_effective_date",
+          "raw": "01/14/2026 12:00:00PM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 430
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-005",
+          "field": "header.notice_effective_date",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 430
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-005",
+          "field": "header.notice_effective_date",
+          "raw": "02/30/2026",
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "unrecognized or impossible source date",
+          "spec_line": 430
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-006",
+      "spec_line": 431,
+      "field": "header.notice_end_date",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-006",
+          "field": "header.notice_end_date",
+          "raw": "01/14/2026 12:00:00PM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 431
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-006",
+          "field": "header.notice_end_date",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 431
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-006",
+          "field": "header.notice_end_date",
+          "raw": "02/30/2026",
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "unrecognized or impossible source date",
+          "spec_line": 431
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-007",
+      "spec_line": 432,
+      "field": "header.post_date",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-007",
+          "field": "header.post_date",
+          "raw": "01/14/2026 12:00:00PM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 432
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-007",
+          "field": "header.post_date",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 432
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-007",
+          "field": "header.post_date",
+          "raw": "02/30/2026",
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "unrecognized or impossible source date",
+          "spec_line": 432
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-008",
+      "spec_line": 433,
+      "field": "header.notice_id",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-008",
+          "field": "header.notice_id",
+          "raw": "46624",
+          "normalized": "46624",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 433
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-008",
+          "field": "header.notice_id",
+          "raw": null,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "missing required value",
+          "spec_line": 433
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-008",
+          "field": "header.notice_id",
+          "raw": "12x",
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed identifier",
+          "spec_line": 433
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-009",
+      "spec_line": 434,
+      "field": "header.req_rsp",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-009",
+          "field": "header.req_rsp",
+          "raw": "retained",
+          "normalized": "retained",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 434
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-009",
+          "field": "header.req_rsp",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 434
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-009",
+          "field": "header.req_rsp",
+          "raw": 17,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed text",
+          "spec_line": 434
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-010",
+      "spec_line": 435,
+      "field": "header.rsp_date",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-010",
+          "field": "header.rsp_date",
+          "raw": "01/14/2026 12:00:00PM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 435
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-010",
+          "field": "header.rsp_date",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 435
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-010",
+          "field": "header.rsp_date",
+          "raw": "02/30/2026",
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "unrecognized or impossible source date",
+          "spec_line": 435
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-011",
+      "spec_line": 436,
+      "field": "header.status",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-011",
+          "field": "header.status",
+          "raw": "retained",
+          "normalized": "retained",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 436
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-011",
+          "field": "header.status",
+          "raw": null,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "missing required value",
+          "spec_line": 436
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-011",
+          "field": "header.status",
+          "raw": 17,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed text",
+          "spec_line": 436
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-012",
+      "spec_line": 437,
+      "field": "header.prior_notice_id",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-012",
+          "field": "header.prior_notice_id",
+          "raw": "46624",
+          "normalized": "46624",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 437
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-012",
+          "field": "header.prior_notice_id",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 437
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-012",
+          "field": "header.prior_notice_id",
+          "raw": "12x",
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed identifier",
+          "spec_line": 437
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-013",
+      "spec_line": 438,
+      "field": "header.subject",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-013",
+          "field": "header.subject",
+          "raw": "retained",
+          "normalized": "retained",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 438
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-013",
+          "field": "header.subject",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 438
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-013",
+          "field": "header.subject",
+          "raw": 17,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed text",
+          "spec_line": 438
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-014",
+      "spec_line": 439,
+      "field": "metadata.notice_id",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-014",
+          "field": "metadata.notice_id",
+          "raw": "46624",
+          "normalized": "46624",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 439
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-014",
+          "field": "metadata.notice_id",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 439
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-014",
+          "field": "metadata.notice_id",
+          "raw": "12x",
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed identifier",
+          "spec_line": 439
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-015",
+      "spec_line": 440,
+      "field": "metadata.notice_type",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-015",
+          "field": "metadata.notice_type",
+          "raw": "retained",
+          "normalized": "retained",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 440
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-015",
+          "field": "metadata.notice_type",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 440
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-015",
+          "field": "metadata.notice_type",
+          "raw": 17,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed text",
+          "spec_line": 440
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-016",
+      "spec_line": 441,
+      "field": "metadata.subject",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-016",
+          "field": "metadata.subject",
+          "raw": "retained",
+          "normalized": "retained",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 441
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-016",
+          "field": "metadata.subject",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 441
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-016",
+          "field": "metadata.subject",
+          "raw": 17,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed text",
+          "spec_line": 441
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-017",
+      "spec_line": 442,
+      "field": "metadata.download_date",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-017",
+          "field": "metadata.download_date",
+          "raw": "01/14/2026 12:00:00PM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 442
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-017",
+          "field": "metadata.download_date",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 442
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-017",
+          "field": "metadata.download_date",
+          "raw": "02/30/2026",
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "unrecognized or impossible source date",
+          "spec_line": 442
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-018",
+      "spec_line": 443,
+      "field": "metadata.source_url",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-018",
+          "field": "metadata.source_url",
+          "raw": "retained",
+          "normalized": "retained",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 443
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-018",
+          "field": "metadata.source_url",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 443
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-018",
+          "field": "metadata.source_url",
+          "raw": 17,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed text",
+          "spec_line": 443
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-019",
+      "spec_line": 444,
+      "field": "metadata.html_file",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-019",
+          "field": "metadata.html_file",
+          "raw": "retained",
+          "normalized": "retained",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 444
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-019",
+          "field": "metadata.html_file",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 444
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-019",
+          "field": "metadata.html_file",
+          "raw": 17,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed text",
+          "spec_line": 444
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-020",
+      "spec_line": 445,
+      "field": "body",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-020",
+          "field": "body",
+          "raw": "retained",
+          "normalized": "retained",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 445
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-020",
+          "field": "body",
+          "raw": null,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "missing required value",
+          "spec_line": 445
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-020",
+          "field": "body",
+          "raw": 17,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed text",
+          "spec_line": 445
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-021",
+      "spec_line": 446,
+      "field": "notice.notice_id",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-021",
+          "field": "notice.notice_id",
+          "raw": 1,
+          "normalized": 1,
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 446
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-021",
+          "field": "notice.notice_id",
+          "raw": null,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "missing required value",
+          "spec_line": 446
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-021",
+          "field": "notice.notice_id",
+          "raw": true,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed integer",
+          "spec_line": 446
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-022",
+      "spec_line": 447,
+      "field": "notice.prior_notice_id",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-022",
+          "field": "notice.prior_notice_id",
+          "raw": 1,
+          "normalized": 1,
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 447
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-022",
+          "field": "notice.prior_notice_id",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 447
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-022",
+          "field": "notice.prior_notice_id",
+          "raw": true,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed integer",
+          "spec_line": 447
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-023",
+      "spec_line": 448,
+      "field": "notice.status",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-023",
+          "field": "notice.status",
+          "raw": "retained",
+          "normalized": "retained",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 448
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-023",
+          "field": "notice.status",
+          "raw": null,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "missing required value",
+          "spec_line": 448
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-023",
+          "field": "notice.status",
+          "raw": 17,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed text",
+          "spec_line": 448
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-024",
+      "spec_line": 449,
+      "field": "notice.notice_type",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-024",
+          "field": "notice.notice_type",
+          "raw": "retained",
+          "normalized": "retained",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 449
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-024",
+          "field": "notice.notice_type",
+          "raw": null,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "missing required value",
+          "spec_line": 449
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-024",
+          "field": "notice.notice_type",
+          "raw": 17,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed text",
+          "spec_line": 449
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-025",
+      "spec_line": 450,
+      "field": "notice.information_only",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-025",
+          "field": "notice.information_only",
+          "raw": false,
+          "normalized": false,
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 450
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-025",
+          "field": "notice.information_only",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 450
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-025",
+          "field": "notice.information_only",
+          "raw": "yes",
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed flag",
+          "spec_line": 450
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-026",
+      "spec_line": 451,
+      "field": "notice.body_text",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-026",
+          "field": "notice.body_text",
+          "raw": "retained",
+          "normalized": "retained",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 451
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-026",
+          "field": "notice.body_text",
+          "raw": null,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "missing required value",
+          "spec_line": 451
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-026",
+          "field": "notice.body_text",
+          "raw": 17,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed text",
+          "spec_line": 451
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-027",
+      "spec_line": 452,
+      "field": "notice.effective_datetime",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-027",
+          "field": "notice.effective_datetime",
+          "raw": "01/14/2026 12:00:00PM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 452
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-027",
+          "field": "notice.effective_datetime",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 452
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-027",
+          "field": "notice.effective_datetime",
+          "raw": "02/30/2026",
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "unrecognized or impossible source date",
+          "spec_line": 452
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-028",
+      "spec_line": 453,
+      "field": "notice.end_datetime",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-028",
+          "field": "notice.end_datetime",
+          "raw": "01/14/2026 12:00:00PM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 453
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-028",
+          "field": "notice.end_datetime",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 453
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-028",
+          "field": "notice.end_datetime",
+          "raw": "02/30/2026",
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "unrecognized or impossible source date",
+          "spec_line": 453
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-029",
+      "spec_line": 454,
+      "field": "locations",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-029",
+          "field": "locations",
+          "raw": [],
+          "normalized": [],
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 454
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-029",
+          "field": "locations",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 454
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-029",
+          "field": "locations",
+          "raw": [
+            17
+          ],
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed rows",
+          "spec_line": 454
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-030",
+      "spec_line": 455,
+      "field": "restrictions",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-030",
+          "field": "restrictions",
+          "raw": [],
+          "normalized": [],
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 455
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-030",
+          "field": "restrictions",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 455
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-030",
+          "field": "restrictions",
+          "raw": [
+            17
+          ],
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed rows",
+          "spec_line": 455
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-031",
+      "spec_line": 456,
+      "field": "locations[].loc_code",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-031",
+          "field": "locations[].loc_code",
+          "raw": "24",
+          "normalized": "24",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 456
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-031",
+          "field": "locations[].loc_code",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 456
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-031",
+          "field": "locations[].loc_code",
+          "raw": [],
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed text_or_integer",
+          "spec_line": 456
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-032",
+      "spec_line": 457,
+      "field": "locations[].segment",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-032",
+          "field": "locations[].segment",
+          "raw": "24",
+          "normalized": "24",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 457
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-032",
+          "field": "locations[].segment",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 457
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-032",
+          "field": "locations[].segment",
+          "raw": [],
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed text_or_integer",
+          "spec_line": 457
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-033",
+      "spec_line": 458,
+      "field": "locations[].compressor_station",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-033",
+          "field": "locations[].compressor_station",
+          "raw": "24",
+          "normalized": "24",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 458
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-033",
+          "field": "locations[].compressor_station",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 458
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-033",
+          "field": "locations[].compressor_station",
+          "raw": [],
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed text_or_integer",
+          "spec_line": 458
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-034",
+      "spec_line": 459,
+      "field": "locations[].zone",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-034",
+          "field": "locations[].zone",
+          "raw": "24",
+          "normalized": "24",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 459
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-034",
+          "field": "locations[].zone",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 459
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-034",
+          "field": "locations[].zone",
+          "raw": [],
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed text_or_integer",
+          "spec_line": 459
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-035",
+      "spec_line": 460,
+      "field": "locations[].system",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-035",
+          "field": "locations[].system",
+          "raw": "24",
+          "normalized": "24",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 460
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-035",
+          "field": "locations[].system",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 460
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-035",
+          "field": "locations[].system",
+          "raw": [],
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed text_or_integer",
+          "spec_line": 460
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-036",
+      "spec_line": 461,
+      "field": "restrictions[].service_type",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-036",
+          "field": "restrictions[].service_type",
+          "raw": "retained",
+          "normalized": "retained",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 461
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-036",
+          "field": "restrictions[].service_type",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 461
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-036",
+          "field": "restrictions[].service_type",
+          "raw": 17,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed text",
+          "spec_line": 461
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-037",
+      "spec_line": 462,
+      "field": "restrictions[].restriction_type",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-037",
+          "field": "restrictions[].restriction_type",
+          "raw": "retained",
+          "normalized": "retained",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 462
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-037",
+          "field": "restrictions[].restriction_type",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 462
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-037",
+          "field": "restrictions[].restriction_type",
+          "raw": 17,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed text",
+          "spec_line": 462
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-038",
+      "spec_line": 463,
+      "field": "restrictions[].restriction_value",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-038",
+          "field": "restrictions[].restriction_value",
+          "raw": 0.5,
+          "normalized": 0.5,
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 463
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-038",
+          "field": "restrictions[].restriction_value",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 463
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-038",
+          "field": "restrictions[].restriction_value",
+          "raw": -1,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed number",
+          "spec_line": 463
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-039",
+      "spec_line": 464,
+      "field": "restrictions[].restriction_unit",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-039",
+          "field": "restrictions[].restriction_unit",
+          "raw": "retained",
+          "normalized": "retained",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 464
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-039",
+          "field": "restrictions[].restriction_unit",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 464
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-039",
+          "field": "restrictions[].restriction_unit",
+          "raw": 17,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed text",
+          "spec_line": 464
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-040",
+      "spec_line": 465,
+      "field": "restrictions[].status",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-040",
+          "field": "restrictions[].status",
+          "raw": "retained",
+          "normalized": "retained",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 465
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-040",
+          "field": "restrictions[].status",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 465
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-040",
+          "field": "restrictions[].status",
+          "raw": 17,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed text",
+          "spec_line": 465
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-041",
+      "spec_line": 466,
+      "field": "restrictions[].location_index",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-041",
+          "field": "restrictions[].location_index",
+          "raw": 1,
+          "normalized": 1,
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 466
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-041",
+          "field": "restrictions[].location_index",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 466
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-041",
+          "field": "restrictions[].location_index",
+          "raw": true,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed integer",
+          "spec_line": 466
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-042",
+      "spec_line": 467,
+      "field": "restrictions[].start_datetime",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-042",
+          "field": "restrictions[].start_datetime",
+          "raw": "01/14/2026 12:00:00PM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 467
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-042",
+          "field": "restrictions[].start_datetime",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 467
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-042",
+          "field": "restrictions[].start_datetime",
+          "raw": "02/30/2026",
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "unrecognized or impossible source date",
+          "spec_line": 467
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-043",
+      "spec_line": 468,
+      "field": "restrictions[].end_datetime",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-043",
+          "field": "restrictions[].end_datetime",
+          "raw": "01/14/2026 12:00:00PM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 468
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-043",
+          "field": "restrictions[].end_datetime",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 468
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-043",
+          "field": "restrictions[].end_datetime",
+          "raw": "02/30/2026",
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "unrecognized or impossible source date",
+          "spec_line": 468
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-044",
+      "spec_line": 469,
+      "field": "semantic.extraction_usable",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-044",
+          "field": "semantic.extraction_usable",
+          "raw": true,
+          "normalized": true,
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 469
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-044",
+          "field": "semantic.extraction_usable",
+          "raw": null,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "missing required value",
+          "spec_line": 469
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-044",
+          "field": "semantic.extraction_usable",
+          "raw": 1,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed boolean",
+          "spec_line": 469
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-045",
+      "spec_line": 470,
+      "field": "semantic.execution_error",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-045",
+          "field": "semantic.execution_error",
+          "raw": "retained",
+          "normalized": "retained",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 470
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-045",
+          "field": "semantic.execution_error",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 470
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-045",
+          "field": "semantic.execution_error",
+          "raw": 17,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed text",
+          "spec_line": 470
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-046",
+      "spec_line": 471,
+      "field": "semantic.helpers",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-046",
+          "field": "semantic.helpers",
+          "raw": [
+            [
+              "name",
+              true
+            ]
+          ],
+          "normalized": [
+            [
+              "name",
+              true
+            ]
+          ],
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 471
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-046",
+          "field": "semantic.helpers",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 471
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-046",
+          "field": "semantic.helpers",
+          "raw": [
+            [
+              "name"
+            ]
+          ],
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed helper_pairs",
+          "spec_line": 471
+        }
+      }
+    },
+    {
+      "id": "INPUT-SOURCE-047",
+      "spec_line": 472,
+      "field": "semantic.source_media_type",
+      "status": "PASS",
+      "observations": {
+        "valid": {
+          "id": "INPUT-SOURCE-047",
+          "field": "semantic.source_media_type",
+          "raw": "retained",
+          "normalized": "retained",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 472
+        },
+        "missing": {
+          "id": "INPUT-SOURCE-047",
+          "field": "semantic.source_media_type",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 472
+        },
+        "malformed": {
+          "id": "INPUT-SOURCE-047",
+          "field": "semantic.source_media_type",
+          "raw": 17,
+          "normalized": null,
+          "status": "ERROR",
+          "issue": "malformed text",
+          "spec_line": 472
+        }
+      }
+    }
+  ],
+  "date_formats": [
+    {
+      "raw": "01/14/2026 12:00:00PM",
+      "utc": null,
+      "issue": null
+    },
+    {
+      "raw": "01/14/2026 12:00:00 PM",
+      "utc": null,
+      "issue": null
+    },
+    {
+      "raw": "01/14/2026",
+      "utc": null,
+      "issue": null
+    },
+    {
+      "raw": "2026-01-14",
+      "utc": null,
+      "issue": null
+    },
+    {
+      "raw": "2026-01-14T12:00:00",
+      "utc": null,
+      "issue": null
+    },
+    {
+      "raw": "2026-01-14T12:00:00+00:00",
+      "utc": "2026-01-14T12:00:00+00:00",
+      "issue": null
+    },
+    {
+      "raw": "01/14/2026 01:30:00PM",
+      "expected": "2026-01-14T13:30:00",
+      "readings": {
+        "%m/%d/%Y %I:%M:%S%p": "2026-01-14T13:30:00"
+      },
+      "issue": null
+    },
+    {
+      "raw": "01/14/2026 12:05:00AM",
+      "expected": "2026-01-14T00:05:00",
+      "readings": {
+        "%m/%d/%Y %I:%M:%S%p": "2026-01-14T00:05:00"
+      },
+      "issue": null
+    },
+    {
+      "raw": "01/14/2026 01:30:00 PM",
+      "expected": "2026-01-14T13:30:00",
+      "readings": {
+        "%m/%d/%Y %I:%M:%S %p": "2026-01-14T13:30:00"
+      },
+      "issue": null
+    },
+    {
+      "raw": "01/14/2026 12:05:00 AM",
+      "expected": "2026-01-14T00:05:00",
+      "readings": {
+        "%m/%d/%Y %I:%M:%S %p": "2026-01-14T00:05:00"
+      },
+      "issue": null
+    }
+  ],
+  "source_inventory_complete": true,
+  "header_inventory_complete": true,
+  "captured_headers": [
+    {
+      "path": "inherited/evaluation/notices/46507_CAPACITY CONSTRAINT.html",
+      "sha256": "6cc6c6ea924d52f09130dc83de3d1a65a25f75982750faddb57e77c5d7f6d084",
+      "fields": [
+        {
+          "id": "INPUT-SOURCE-001",
+          "field": "header.tsp",
+          "raw": "6931794-NATURAL GAS PIPELINE CO.",
+          "normalized": "6931794-NATURAL GAS PIPELINE CO.",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 426
+        },
+        {
+          "id": "INPUT-SOURCE-002",
+          "field": "header.critical",
+          "raw": "Non-Critical",
+          "normalized": "Non-Critical",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 427
+        },
+        {
+          "id": "INPUT-SOURCE-003",
+          "field": "header.type1",
+          "raw": "CAPACITY CONSTRAINT",
+          "normalized": "CAPACITY CONSTRAINT",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 428
+        },
+        {
+          "id": "INPUT-SOURCE-004",
+          "field": "header.type2",
+          "raw": "SEGMENTS",
+          "normalized": "SEGMENTS",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 429
+        },
+        {
+          "id": "INPUT-SOURCE-005",
+          "field": "header.notice_effective_date",
+          "raw": "12/01/2025  1:52:24PM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 430
+        },
+        {
+          "id": "INPUT-SOURCE-006",
+          "field": "header.notice_end_date",
+          "raw": "03/31/2026 9:00:00am",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 431
+        },
+        {
+          "id": "INPUT-SOURCE-007",
+          "field": "header.post_date",
+          "raw": "12/1/2025 1:52:24 PM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 432
+        },
+        {
+          "id": "INPUT-SOURCE-008",
+          "field": "header.notice_id",
+          "raw": "46507",
+          "normalized": "46507",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 433
+        },
+        {
+          "id": "INPUT-SOURCE-009",
+          "field": "header.req_rsp",
+          "raw": "1",
+          "normalized": "1",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 434
+        },
+        {
+          "id": "INPUT-SOURCE-010",
+          "field": "header.rsp_date",
+          "raw": "12/1/2025 12:00:00 AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 435
+        },
+        {
+          "id": "INPUT-SOURCE-011",
+          "field": "header.status",
+          "raw": "INITIATE",
+          "normalized": "INITIATE",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 436
+        },
+        {
+          "id": "INPUT-SOURCE-012",
+          "field": "header.prior_notice_id",
+          "raw": "",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 437
+        },
+        {
+          "id": "INPUT-SOURCE-013",
+          "field": "header.subject",
+          "raw": "SEGMENT 14 WB - CS 113 - PRIMARY ONLY",
+          "normalized": "SEGMENT 14 WB - CS 113 - PRIMARY ONLY",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 438
+        },
+        {
+          "id": "INPUT-SOURCE-014",
+          "field": "metadata.notice_id",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 439
+        },
+        {
+          "id": "INPUT-SOURCE-015",
+          "field": "metadata.notice_type",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 440
+        },
+        {
+          "id": "INPUT-SOURCE-016",
+          "field": "metadata.subject",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 441
+        },
+        {
+          "id": "INPUT-SOURCE-017",
+          "field": "metadata.download_date",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 442
+        },
+        {
+          "id": "INPUT-SOURCE-018",
+          "field": "metadata.source_url",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 443
+        },
+        {
+          "id": "INPUT-SOURCE-019",
+          "field": "metadata.html_file",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 444
+        },
+        {
+          "id": "INPUT-SOURCE-020",
+          "field": "body",
+          "raw": "SEGMENT 17 FORCE MAJURE\nSEGMENT 14 WESTBOUND – CS 113 – PRIMARY ONLY\nDue to current operating\nconditions, Natural is at operating capacity for transports\nwestbound\non\nthe Amarillo Mainline System through Compressor Station 113 located in Will\nCounty, IL (Natural's Market Delivery Zone).  Therefore, effective for gas day,\nWednesday, December 3, 2025, Timely Cycle and continuing until further\nnotice\n, only Primary Firm and Secondary in-path Firm transports will be\nscheduled.  AOR/ITS and Secondary out-of-path Firm transports\nwill not\nbe available.\nPlease contact your Account\nDirector or Scheduling Representative if you have any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "normalized": "SEGMENT 17 FORCE MAJURE\nSEGMENT 14 WESTBOUND – CS 113 – PRIMARY ONLY\nDue to current operating\nconditions, Natural is at operating capacity for transports\nwestbound\non\nthe Amarillo Mainline System through Compressor Station 113 located in Will\nCounty, IL (Natural's Market Delivery Zone).  Therefore, effective for gas day,\nWednesday, December 3, 2025, Timely Cycle and continuing until further\nnotice\n, only Primary Firm and Secondary in-path Firm transports will be\nscheduled.  AOR/ITS and Secondary out-of-path Firm transports\nwill not\nbe available.\nPlease contact your Account\nDirector or Scheduling Representative if you have any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 445
+        }
+      ],
+      "header": {
+        "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+        "critical": "Non-Critical",
+        "type1": "CAPACITY CONSTRAINT",
+        "type2": "SEGMENTS",
+        "notice_effective_date": "12/01/2025  1:52:24PM",
+        "notice_end_date": "03/31/2026 9:00:00am",
+        "post_date": "12/1/2025 1:52:24 PM",
+        "notice_id": "46507",
+        "req_rsp": "1",
+        "rsp_date": "12/1/2025 12:00:00 AM",
+        "status": "INITIATE",
+        "prior_notice_id": "",
+        "subject": "SEGMENT 14 WB - CS 113 - PRIMARY ONLY"
+      },
+      "body": "SEGMENT 17 FORCE MAJURE\nSEGMENT 14 WESTBOUND – CS 113 – PRIMARY ONLY\nDue to current operating\nconditions, Natural is at operating capacity for transports\nwestbound\non\nthe Amarillo Mainline System through Compressor Station 113 located in Will\nCounty, IL (Natural's Market Delivery Zone).  Therefore, effective for gas day,\nWednesday, December 3, 2025, Timely Cycle and continuing until further\nnotice\n, only Primary Firm and Secondary in-path Firm transports will be\nscheduled.  AOR/ITS and Secondary out-of-path Firm transports\nwill not\nbe available.\nPlease contact your Account\nDirector or Scheduling Representative if you have any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+      "status": "PARSED_WITH_UNKNOWNS"
+    },
+    {
+      "path": "inherited/evaluation/notices/46528_OPERATIONAL ALERT.html",
+      "sha256": "e0f2e8022373b0efc99840606339e9ce4f12443dd026b198934e28a6aabfca87",
+      "fields": [
+        {
+          "id": "INPUT-SOURCE-001",
+          "field": "header.tsp",
+          "raw": "6931794-NATURAL GAS PIPELINE CO.",
+          "normalized": "6931794-NATURAL GAS PIPELINE CO.",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 426
+        },
+        {
+          "id": "INPUT-SOURCE-002",
+          "field": "header.critical",
+          "raw": "Non-Critical",
+          "normalized": "Non-Critical",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 427
+        },
+        {
+          "id": "INPUT-SOURCE-003",
+          "field": "header.type1",
+          "raw": "OPERATIONAL ALERT",
+          "normalized": "OPERATIONAL ALERT",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 428
+        },
+        {
+          "id": "INPUT-SOURCE-004",
+          "field": "header.type2",
+          "raw": "ADVISORY/DIRECTIONAL NOTICE",
+          "normalized": "ADVISORY/DIRECTIONAL NOTICE",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 429
+        },
+        {
+          "id": "INPUT-SOURCE-005",
+          "field": "header.notice_effective_date",
+          "raw": "12/09/2025  4:10:22PM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 430
+        },
+        {
+          "id": "INPUT-SOURCE-006",
+          "field": "header.notice_end_date",
+          "raw": "02/28/2026 9:00:00am",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 431
+        },
+        {
+          "id": "INPUT-SOURCE-007",
+          "field": "header.post_date",
+          "raw": "12/9/2025 4:10:22 PM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 432
+        },
+        {
+          "id": "INPUT-SOURCE-008",
+          "field": "header.notice_id",
+          "raw": "46528",
+          "normalized": "46528",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 433
+        },
+        {
+          "id": "INPUT-SOURCE-009",
+          "field": "header.req_rsp",
+          "raw": "1",
+          "normalized": "1",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 434
+        },
+        {
+          "id": "INPUT-SOURCE-010",
+          "field": "header.rsp_date",
+          "raw": "12/9/2025 12:00:00 AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 435
+        },
+        {
+          "id": "INPUT-SOURCE-011",
+          "field": "header.status",
+          "raw": "INITIATE",
+          "normalized": "INITIATE",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 436
+        },
+        {
+          "id": "INPUT-SOURCE-012",
+          "field": "header.prior_notice_id",
+          "raw": "",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 437
+        },
+        {
+          "id": "INPUT-SOURCE-013",
+          "field": "header.subject",
+          "raw": "HOURLY TAKES ADVISORY - MARKET DELIVERY",
+          "normalized": "HOURLY TAKES ADVISORY - MARKET DELIVERY",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 438
+        },
+        {
+          "id": "INPUT-SOURCE-014",
+          "field": "metadata.notice_id",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 439
+        },
+        {
+          "id": "INPUT-SOURCE-015",
+          "field": "metadata.notice_type",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 440
+        },
+        {
+          "id": "INPUT-SOURCE-016",
+          "field": "metadata.subject",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 441
+        },
+        {
+          "id": "INPUT-SOURCE-017",
+          "field": "metadata.download_date",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 442
+        },
+        {
+          "id": "INPUT-SOURCE-018",
+          "field": "metadata.source_url",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 443
+        },
+        {
+          "id": "INPUT-SOURCE-019",
+          "field": "metadata.html_file",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 444
+        },
+        {
+          "id": "INPUT-SOURCE-020",
+          "field": "body",
+          "raw": "HOURLY TAKES ADVISORY – MARKET DELIVERY ZONE\nHOURLY TAKES ADVISORY – MARKET\nDELIVERY ZONE\nDue to the impending colder\nweather and current system operating conditions, effective for\nFriday, December\n12, 2025, at 9:00 am., and continuing until further notice\n, per Natural's\ntariff [GT&C Section 7.4],\nShippers and Point Operators\nare advised\nto\nlimit hourly\ntakes\nat\nALL DELIVERY POINTS IN THE MARKET\nDELIVERY ZONE\n.  Additionally, Natural continues to monitor operating\nconditions system wide.  If necessary, Natural will issue Operational Flow\nOrders (OFOs) to address Shipper actions that are\ndetrimental to such\noperating conditions outside the Market Delivery Zone\n.  Should Natural's\nability to provide hourly flexibility decrease, an Operational Flow Order (OFO)\ncondition will occur.\nAs provided in the tariff,\nat each point in the Market Delivery Zone, the hourly rights for each Shipper/Point\nOperator will be limited.  Such hourly rights will be limited by service\npriority and nomination cycle, based on hours remaining in the gas day.\nShippers and Point Operators are responsible for calculating and monitoring\ntheir hourly usage so as not to exceed the limits described herein.\nHourly Rights for Firm\nService – 150%\nIncludes Primary and\nSecondary Confirmed Nominations and Unused No-Notice firm service rights\nTimely/Evening\nCycles\nLimited to\n6.25% (150% / 24 hours)\nof Firm\nService.\nIntra-Day 1 Cycle\nLimited to the hourly rights computed in the previous\ncycle for Firm Service; plus\n7.895%\n(150% / 19 hours)\nof the difference\nof current cycle Firm Service minus prior cycle Firm Service.\nIntra-Day 2 Cycle\nLimited to the hourly rights computed in the previous\ncycle for Firm Service; plus\n10.00% (150% / 15 hours)\nof the difference\nof current cycle Firm Service minus prior cycle Firm Service.\nIntra-Day 3 Cycle\nLimited to the hourly rights computed in the previous\ncycle for Firm Service, plus\n13.64% (150% / 11 hours)\nof the difference\nof current cycle Firm Service minus prior cycle Firm Service.\nHourly Rights for\nInterruptible Service – 105%\nIncludes Interruptible and\nAOR nominations, as well as POA tolerances\nTimely/Evening\nCycles\nLimited to\n4.375% (105% / 24 hours)\nof Interruptible\nService.\nIntra-Day 1 Cycle\nLimited to the hourly rights computed in the previous\ncycle for Interruptible Service; plus\n5.53%\n(105% / 19 hours)\nof\nthe difference of current cycle Interruptible Service minus prior cycle Interruptible\nService.\nIntra-Day 2 Cycle\nLimited to the hourly rights computed in the previous\ncycle for Interruptible Service; plus\n7.0% (105% / 15 hours)\nof the\ndifference of current cycle Interruptible Service minus prior cycle Interruptible\nService.\nIntra-Day 3 Cycle\nLimited to the hourly rights computed in the previous\ncycle for Interruptible Service; plus\n9.55% (105% / 11 hours)\nof the\ndifference of current cycle Interruptible Service minus prior cycle\nInterruptible Service.\nLimitation on\nNominations in All Cycles for Firm and Interruptible Service\nShippers are advised that nominations should be\nreceived by Timely/Evening Cycle in order to utilize full rights over 24 hours,\nto avoid exceeding the 24 hour ratable hourly takes calculation.  In all\ncases, any first time nominations received on Non-Timely Cycles for full MDQ\nutilization rights, plus any scheduled ITS nominations must conform to the 24\nhour ratable calculation.  Shipper's hourly rights based on firm MDQ, plus\ninterruptible nominations, must be adequate enough to accommodate the\ncalculated hourly rights for the remaining hours of the gas day.\nSpecifically, hourly rights cannot exceed 150% / 24 hours of Shipper's MDQ on\nthe nominated contract, plus 105% / 24 hours of Shipper's interruptible\nnominations.\nIn addition, Natural would\nlike to remind point operators to utilize the Operator Point Reports available\non our website to assist you in monitoring your hourly takes.  These reports\nare available by linking to http://pipeline.kindermorgan.com.  Select NGPL >\nCustomer Activities > Log On > Flowing Gas > Additional Reports >\nNGPL/HRZ > NGPL/HRZ – Hourly Nomination Details.\nPlease contact your Account\nDirector or Scheduling Representative if you have any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "normalized": "HOURLY TAKES ADVISORY – MARKET DELIVERY ZONE\nHOURLY TAKES ADVISORY – MARKET\nDELIVERY ZONE\nDue to the impending colder\nweather and current system operating conditions, effective for\nFriday, December\n12, 2025, at 9:00 am., and continuing until further notice\n, per Natural's\ntariff [GT&C Section 7.4],\nShippers and Point Operators\nare advised\nto\nlimit hourly\ntakes\nat\nALL DELIVERY POINTS IN THE MARKET\nDELIVERY ZONE\n.  Additionally, Natural continues to monitor operating\nconditions system wide.  If necessary, Natural will issue Operational Flow\nOrders (OFOs) to address Shipper actions that are\ndetrimental to such\noperating conditions outside the Market Delivery Zone\n.  Should Natural's\nability to provide hourly flexibility decrease, an Operational Flow Order (OFO)\ncondition will occur.\nAs provided in the tariff,\nat each point in the Market Delivery Zone, the hourly rights for each Shipper/Point\nOperator will be limited.  Such hourly rights will be limited by service\npriority and nomination cycle, based on hours remaining in the gas day.\nShippers and Point Operators are responsible for calculating and monitoring\ntheir hourly usage so as not to exceed the limits described herein.\nHourly Rights for Firm\nService – 150%\nIncludes Primary and\nSecondary Confirmed Nominations and Unused No-Notice firm service rights\nTimely/Evening\nCycles\nLimited to\n6.25% (150% / 24 hours)\nof Firm\nService.\nIntra-Day 1 Cycle\nLimited to the hourly rights computed in the previous\ncycle for Firm Service; plus\n7.895%\n(150% / 19 hours)\nof the difference\nof current cycle Firm Service minus prior cycle Firm Service.\nIntra-Day 2 Cycle\nLimited to the hourly rights computed in the previous\ncycle for Firm Service; plus\n10.00% (150% / 15 hours)\nof the difference\nof current cycle Firm Service minus prior cycle Firm Service.\nIntra-Day 3 Cycle\nLimited to the hourly rights computed in the previous\ncycle for Firm Service, plus\n13.64% (150% / 11 hours)\nof the difference\nof current cycle Firm Service minus prior cycle Firm Service.\nHourly Rights for\nInterruptible Service – 105%\nIncludes Interruptible and\nAOR nominations, as well as POA tolerances\nTimely/Evening\nCycles\nLimited to\n4.375% (105% / 24 hours)\nof Interruptible\nService.\nIntra-Day 1 Cycle\nLimited to the hourly rights computed in the previous\ncycle for Interruptible Service; plus\n5.53%\n(105% / 19 hours)\nof\nthe difference of current cycle Interruptible Service minus prior cycle Interruptible\nService.\nIntra-Day 2 Cycle\nLimited to the hourly rights computed in the previous\ncycle for Interruptible Service; plus\n7.0% (105% / 15 hours)\nof the\ndifference of current cycle Interruptible Service minus prior cycle Interruptible\nService.\nIntra-Day 3 Cycle\nLimited to the hourly rights computed in the previous\ncycle for Interruptible Service; plus\n9.55% (105% / 11 hours)\nof the\ndifference of current cycle Interruptible Service minus prior cycle\nInterruptible Service.\nLimitation on\nNominations in All Cycles for Firm and Interruptible Service\nShippers are advised that nominations should be\nreceived by Timely/Evening Cycle in order to utilize full rights over 24 hours,\nto avoid exceeding the 24 hour ratable hourly takes calculation.  In all\ncases, any first time nominations received on Non-Timely Cycles for full MDQ\nutilization rights, plus any scheduled ITS nominations must conform to the 24\nhour ratable calculation.  Shipper's hourly rights based on firm MDQ, plus\ninterruptible nominations, must be adequate enough to accommodate the\ncalculated hourly rights for the remaining hours of the gas day.\nSpecifically, hourly rights cannot exceed 150% / 24 hours of Shipper's MDQ on\nthe nominated contract, plus 105% / 24 hours of Shipper's interruptible\nnominations.\nIn addition, Natural would\nlike to remind point operators to utilize the Operator Point Reports available\non our website to assist you in monitoring your hourly takes.  These reports\nare available by linking to http://pipeline.kindermorgan.com.  Select NGPL >\nCustomer Activities > Log On > Flowing Gas > Additional Reports >\nNGPL/HRZ > NGPL/HRZ – Hourly Nomination Details.\nPlease contact your Account\nDirector or Scheduling Representative if you have any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 445
+        }
+      ],
+      "header": {
+        "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+        "critical": "Non-Critical",
+        "type1": "OPERATIONAL ALERT",
+        "type2": "ADVISORY/DIRECTIONAL NOTICE",
+        "notice_effective_date": "12/09/2025  4:10:22PM",
+        "notice_end_date": "02/28/2026 9:00:00am",
+        "post_date": "12/9/2025 4:10:22 PM",
+        "notice_id": "46528",
+        "req_rsp": "1",
+        "rsp_date": "12/9/2025 12:00:00 AM",
+        "status": "INITIATE",
+        "prior_notice_id": "",
+        "subject": "HOURLY TAKES ADVISORY - MARKET DELIVERY"
+      },
+      "body": "HOURLY TAKES ADVISORY – MARKET DELIVERY ZONE\nHOURLY TAKES ADVISORY – MARKET\nDELIVERY ZONE\nDue to the impending colder\nweather and current system operating conditions, effective for\nFriday, December\n12, 2025, at 9:00 am., and continuing until further notice\n, per Natural's\ntariff [GT&C Section 7.4],\nShippers and Point Operators\nare advised\nto\nlimit hourly\ntakes\nat\nALL DELIVERY POINTS IN THE MARKET\nDELIVERY ZONE\n.  Additionally, Natural continues to monitor operating\nconditions system wide.  If necessary, Natural will issue Operational Flow\nOrders (OFOs) to address Shipper actions that are\ndetrimental to such\noperating conditions outside the Market Delivery Zone\n.  Should Natural's\nability to provide hourly flexibility decrease, an Operational Flow Order (OFO)\ncondition will occur.\nAs provided in the tariff,\nat each point in the Market Delivery Zone, the hourly rights for each Shipper/Point\nOperator will be limited.  Such hourly rights will be limited by service\npriority and nomination cycle, based on hours remaining in the gas day.\nShippers and Point Operators are responsible for calculating and monitoring\ntheir hourly usage so as not to exceed the limits described herein.\nHourly Rights for Firm\nService – 150%\nIncludes Primary and\nSecondary Confirmed Nominations and Unused No-Notice firm service rights\nTimely/Evening\nCycles\nLimited to\n6.25% (150% / 24 hours)\nof Firm\nService.\nIntra-Day 1 Cycle\nLimited to the hourly rights computed in the previous\ncycle for Firm Service; plus\n7.895%\n(150% / 19 hours)\nof the difference\nof current cycle Firm Service minus prior cycle Firm Service.\nIntra-Day 2 Cycle\nLimited to the hourly rights computed in the previous\ncycle for Firm Service; plus\n10.00% (150% / 15 hours)\nof the difference\nof current cycle Firm Service minus prior cycle Firm Service.\nIntra-Day 3 Cycle\nLimited to the hourly rights computed in the previous\ncycle for Firm Service, plus\n13.64% (150% / 11 hours)\nof the difference\nof current cycle Firm Service minus prior cycle Firm Service.\nHourly Rights for\nInterruptible Service – 105%\nIncludes Interruptible and\nAOR nominations, as well as POA tolerances\nTimely/Evening\nCycles\nLimited to\n4.375% (105% / 24 hours)\nof Interruptible\nService.\nIntra-Day 1 Cycle\nLimited to the hourly rights computed in the previous\ncycle for Interruptible Service; plus\n5.53%\n(105% / 19 hours)\nof\nthe difference of current cycle Interruptible Service minus prior cycle Interruptible\nService.\nIntra-Day 2 Cycle\nLimited to the hourly rights computed in the previous\ncycle for Interruptible Service; plus\n7.0% (105% / 15 hours)\nof the\ndifference of current cycle Interruptible Service minus prior cycle Interruptible\nService.\nIntra-Day 3 Cycle\nLimited to the hourly rights computed in the previous\ncycle for Interruptible Service; plus\n9.55% (105% / 11 hours)\nof the\ndifference of current cycle Interruptible Service minus prior cycle\nInterruptible Service.\nLimitation on\nNominations in All Cycles for Firm and Interruptible Service\nShippers are advised that nominations should be\nreceived by Timely/Evening Cycle in order to utilize full rights over 24 hours,\nto avoid exceeding the 24 hour ratable hourly takes calculation.  In all\ncases, any first time nominations received on Non-Timely Cycles for full MDQ\nutilization rights, plus any scheduled ITS nominations must conform to the 24\nhour ratable calculation.  Shipper's hourly rights based on firm MDQ, plus\ninterruptible nominations, must be adequate enough to accommodate the\ncalculated hourly rights for the remaining hours of the gas day.\nSpecifically, hourly rights cannot exceed 150% / 24 hours of Shipper's MDQ on\nthe nominated contract, plus 105% / 24 hours of Shipper's interruptible\nnominations.\nIn addition, Natural would\nlike to remind point operators to utilize the Operator Point Reports available\non our website to assist you in monitoring your hourly takes.  These reports\nare available by linking to http://pipeline.kindermorgan.com.  Select NGPL >\nCustomer Activities > Log On > Flowing Gas > Additional Reports >\nNGPL/HRZ > NGPL/HRZ – Hourly Nomination Details.\nPlease contact your Account\nDirector or Scheduling Representative if you have any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+      "status": "PARSED_WITH_UNKNOWNS"
+    },
+    {
+      "path": "inherited/evaluation/notices/46604_OTHER.html",
+      "sha256": "0161fbbc08714add7d3e3742d05667ba6380e07fe60549471ab3d6f7f758acfc",
+      "fields": [
+        {
+          "id": "INPUT-SOURCE-001",
+          "field": "header.tsp",
+          "raw": "6931794-NATURAL GAS PIPELINE CO.",
+          "normalized": "6931794-NATURAL GAS PIPELINE CO.",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 426
+        },
+        {
+          "id": "INPUT-SOURCE-002",
+          "field": "header.critical",
+          "raw": "Non-Critical",
+          "normalized": "Non-Critical",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 427
+        },
+        {
+          "id": "INPUT-SOURCE-003",
+          "field": "header.type1",
+          "raw": "OTHER",
+          "normalized": "OTHER",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 428
+        },
+        {
+          "id": "INPUT-SOURCE-004",
+          "field": "header.type2",
+          "raw": "TARIFF PROVISIONS/PARAMETERS",
+          "normalized": "TARIFF PROVISIONS/PARAMETERS",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 429
+        },
+        {
+          "id": "INPUT-SOURCE-005",
+          "field": "header.notice_effective_date",
+          "raw": "01/06/2026 11:27:29AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 430
+        },
+        {
+          "id": "INPUT-SOURCE-006",
+          "field": "header.notice_end_date",
+          "raw": "12/31/2049 9:00:00am",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 431
+        },
+        {
+          "id": "INPUT-SOURCE-007",
+          "field": "header.post_date",
+          "raw": "1/6/2026 11:27:29 AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 432
+        },
+        {
+          "id": "INPUT-SOURCE-008",
+          "field": "header.notice_id",
+          "raw": "46604",
+          "normalized": "46604",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 433
+        },
+        {
+          "id": "INPUT-SOURCE-009",
+          "field": "header.req_rsp",
+          "raw": "1",
+          "normalized": "1",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 434
+        },
+        {
+          "id": "INPUT-SOURCE-010",
+          "field": "header.rsp_date",
+          "raw": "1/6/2026 12:00:00 AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 435
+        },
+        {
+          "id": "INPUT-SOURCE-011",
+          "field": "header.status",
+          "raw": "INITIATE",
+          "normalized": "INITIATE",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 436
+        },
+        {
+          "id": "INPUT-SOURCE-012",
+          "field": "header.prior_notice_id",
+          "raw": "",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 437
+        },
+        {
+          "id": "INPUT-SOURCE-013",
+          "field": "header.subject",
+          "raw": "PHMSA MEGA RULE ELIGIBLE PROJ-UPDATE",
+          "normalized": "PHMSA MEGA RULE ELIGIBLE PROJ-UPDATE",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 438
+        },
+        {
+          "id": "INPUT-SOURCE-014",
+          "field": "metadata.notice_id",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 439
+        },
+        {
+          "id": "INPUT-SOURCE-015",
+          "field": "metadata.notice_type",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 440
+        },
+        {
+          "id": "INPUT-SOURCE-016",
+          "field": "metadata.subject",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 441
+        },
+        {
+          "id": "INPUT-SOURCE-017",
+          "field": "metadata.download_date",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 442
+        },
+        {
+          "id": "INPUT-SOURCE-018",
+          "field": "metadata.source_url",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 443
+        },
+        {
+          "id": "INPUT-SOURCE-019",
+          "field": "metadata.html_file",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 444
+        },
+        {
+          "id": "INPUT-SOURCE-020",
+          "field": "body",
+          "raw": "Pursuant to\nits Tariff (GT&C Section 5.2 (c) (5)), Natural has updated its list of\nPHMSA Mega Rule Eligible Projects set forth on Appendix F to its Settlement in\nDocket No. RP22-1222.\nSee the\nlatest posted notice at\nInformational\nPostings :: Natural Gas Pipeline Company of America, L.L.C.\nunder\nRegulatory, which will contain an updated Appendix F.  Any questions or\nconcerns regarding the updated Appendix F should be directed to Rahul Singh,\nDirector of Regulatory, at\nRahul.singh@kindermorgan.com\n.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "normalized": "Pursuant to\nits Tariff (GT&C Section 5.2 (c) (5)), Natural has updated its list of\nPHMSA Mega Rule Eligible Projects set forth on Appendix F to its Settlement in\nDocket No. RP22-1222.\nSee the\nlatest posted notice at\nInformational\nPostings :: Natural Gas Pipeline Company of America, L.L.C.\nunder\nRegulatory, which will contain an updated Appendix F.  Any questions or\nconcerns regarding the updated Appendix F should be directed to Rahul Singh,\nDirector of Regulatory, at\nRahul.singh@kindermorgan.com\n.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 445
+        }
+      ],
+      "header": {
+        "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+        "critical": "Non-Critical",
+        "type1": "OTHER",
+        "type2": "TARIFF PROVISIONS/PARAMETERS",
+        "notice_effective_date": "01/06/2026 11:27:29AM",
+        "notice_end_date": "12/31/2049 9:00:00am",
+        "post_date": "1/6/2026 11:27:29 AM",
+        "notice_id": "46604",
+        "req_rsp": "1",
+        "rsp_date": "1/6/2026 12:00:00 AM",
+        "status": "INITIATE",
+        "prior_notice_id": "",
+        "subject": "PHMSA MEGA RULE ELIGIBLE PROJ-UPDATE"
+      },
+      "body": "Pursuant to\nits Tariff (GT&C Section 5.2 (c) (5)), Natural has updated its list of\nPHMSA Mega Rule Eligible Projects set forth on Appendix F to its Settlement in\nDocket No. RP22-1222.\nSee the\nlatest posted notice at\nInformational\nPostings :: Natural Gas Pipeline Company of America, L.L.C.\nunder\nRegulatory, which will contain an updated Appendix F.  Any questions or\nconcerns regarding the updated Appendix F should be directed to Rahul Singh,\nDirector of Regulatory, at\nRahul.singh@kindermorgan.com\n.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+      "status": "PARSED_WITH_UNKNOWNS"
+    },
+    {
+      "path": "inherited/evaluation/notices/46615_MAINTENANCE.html",
+      "sha256": "59bceaae533f4d516e49ed540211022c32e7af7ec2df37f20a2e17ec0d86f8f3",
+      "fields": [
+        {
+          "id": "INPUT-SOURCE-001",
+          "field": "header.tsp",
+          "raw": "6931794-NATURAL GAS PIPELINE CO.",
+          "normalized": "6931794-NATURAL GAS PIPELINE CO.",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 426
+        },
+        {
+          "id": "INPUT-SOURCE-002",
+          "field": "header.critical",
+          "raw": "Non-Critical",
+          "normalized": "Non-Critical",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 427
+        },
+        {
+          "id": "INPUT-SOURCE-003",
+          "field": "header.type1",
+          "raw": "MAINTENANCE",
+          "normalized": "MAINTENANCE",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 428
+        },
+        {
+          "id": "INPUT-SOURCE-004",
+          "field": "header.type2",
+          "raw": "MAINTENANCE",
+          "normalized": "MAINTENANCE",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 429
+        },
+        {
+          "id": "INPUT-SOURCE-005",
+          "field": "header.notice_effective_date",
+          "raw": "01/08/2026  4:53:39PM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 430
+        },
+        {
+          "id": "INPUT-SOURCE-006",
+          "field": "header.notice_end_date",
+          "raw": "08/31/2026 9:00:00am",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 431
+        },
+        {
+          "id": "INPUT-SOURCE-007",
+          "field": "header.post_date",
+          "raw": "1/8/2026 4:53:39 PM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 432
+        },
+        {
+          "id": "INPUT-SOURCE-008",
+          "field": "header.notice_id",
+          "raw": "46615",
+          "normalized": "46615",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 433
+        },
+        {
+          "id": "INPUT-SOURCE-009",
+          "field": "header.req_rsp",
+          "raw": "1",
+          "normalized": "1",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 434
+        },
+        {
+          "id": "INPUT-SOURCE-010",
+          "field": "header.rsp_date",
+          "raw": "1/8/2026 12:00:00 AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 435
+        },
+        {
+          "id": "INPUT-SOURCE-011",
+          "field": "header.status",
+          "raw": "INITIATE",
+          "normalized": "INITIATE",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 436
+        },
+        {
+          "id": "INPUT-SOURCE-012",
+          "field": "header.prior_notice_id",
+          "raw": "",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 437
+        },
+        {
+          "id": "INPUT-SOURCE-013",
+          "field": "header.subject",
+          "raw": "SEG 25 - STATION MAINT - CS 302",
+          "normalized": "SEG 25 - STATION MAINT - CS 302",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 438
+        },
+        {
+          "id": "INPUT-SOURCE-014",
+          "field": "metadata.notice_id",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 439
+        },
+        {
+          "id": "INPUT-SOURCE-015",
+          "field": "metadata.notice_type",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 440
+        },
+        {
+          "id": "INPUT-SOURCE-016",
+          "field": "metadata.subject",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 441
+        },
+        {
+          "id": "INPUT-SOURCE-017",
+          "field": "metadata.download_date",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 442
+        },
+        {
+          "id": "INPUT-SOURCE-018",
+          "field": "metadata.source_url",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 443
+        },
+        {
+          "id": "INPUT-SOURCE-019",
+          "field": "metadata.html_file",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 444
+        },
+        {
+          "id": "INPUT-SOURCE-020",
+          "field": "body",
+          "raw": "ANR/NGPL SOUTH JOLIET AT CAPACITY\nSEGMENT\n25 – STATION MAINTENANCE – CS 302\nAs\nposted on Natural's Outage Impact Report (X25-1527903), Natural will be\nperforming station maintenance at Compressor Station 302 (CS 302) located in Montgomery\nCounty, Texas (Segment 25 of Natural's Texok Zone).  Natural is required to\nreduce the maximum operating capacity eastbound into Segment 25 from Segment 26\nand Segment 22, thus limiting Natural's throughput capacity eastbound through\nCS 302 during this restriction.\nThe\nscheduling constraint will be at CS 302\n; therefore, any gas received\nwest of CS 302 for delivery east of CS 302 will be impacted for the duration of\nthe restriction.  The Pooling Point - Texok Zone (LOC 10560) is located west of\nthe constraint.  Firm transportation associated with storage withdrawals may be\nimpacted.\nAs\nsuch, effective for gas day\nWednesday, April 1, 2026, Timely Cycle, and\ncontinuing through gas day Friday, May 1, 2026\n, Natural will schedule\nPrimary Firm and Secondary in-path Firm transports to no less than\n55%\nof contract MDQ through CS 302.  AOR/ITS and Secondary out-of-path Firm\ntransports\nwill not\nbe available for the duration of this restriction.\nThe\nstated scheduling percentage is based upon the current level of firm capacity\ncontracted for during this restriction and is subject to change based upon\noperational conditions and Shipper utilization.\nContinue\nto monitor Natural's interactive website for any updates.  Please contact your\nAccount Director or Scheduling Representative if you have any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "normalized": "ANR/NGPL SOUTH JOLIET AT CAPACITY\nSEGMENT\n25 – STATION MAINTENANCE – CS 302\nAs\nposted on Natural's Outage Impact Report (X25-1527903), Natural will be\nperforming station maintenance at Compressor Station 302 (CS 302) located in Montgomery\nCounty, Texas (Segment 25 of Natural's Texok Zone).  Natural is required to\nreduce the maximum operating capacity eastbound into Segment 25 from Segment 26\nand Segment 22, thus limiting Natural's throughput capacity eastbound through\nCS 302 during this restriction.\nThe\nscheduling constraint will be at CS 302\n; therefore, any gas received\nwest of CS 302 for delivery east of CS 302 will be impacted for the duration of\nthe restriction.  The Pooling Point - Texok Zone (LOC 10560) is located west of\nthe constraint.  Firm transportation associated with storage withdrawals may be\nimpacted.\nAs\nsuch, effective for gas day\nWednesday, April 1, 2026, Timely Cycle, and\ncontinuing through gas day Friday, May 1, 2026\n, Natural will schedule\nPrimary Firm and Secondary in-path Firm transports to no less than\n55%\nof contract MDQ through CS 302.  AOR/ITS and Secondary out-of-path Firm\ntransports\nwill not\nbe available for the duration of this restriction.\nThe\nstated scheduling percentage is based upon the current level of firm capacity\ncontracted for during this restriction and is subject to change based upon\noperational conditions and Shipper utilization.\nContinue\nto monitor Natural's interactive website for any updates.  Please contact your\nAccount Director or Scheduling Representative if you have any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 445
+        }
+      ],
+      "header": {
+        "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+        "critical": "Non-Critical",
+        "type1": "MAINTENANCE",
+        "type2": "MAINTENANCE",
+        "notice_effective_date": "01/08/2026  4:53:39PM",
+        "notice_end_date": "08/31/2026 9:00:00am",
+        "post_date": "1/8/2026 4:53:39 PM",
+        "notice_id": "46615",
+        "req_rsp": "1",
+        "rsp_date": "1/8/2026 12:00:00 AM",
+        "status": "INITIATE",
+        "prior_notice_id": "",
+        "subject": "SEG 25 - STATION MAINT - CS 302"
+      },
+      "body": "ANR/NGPL SOUTH JOLIET AT CAPACITY\nSEGMENT\n25 – STATION MAINTENANCE – CS 302\nAs\nposted on Natural's Outage Impact Report (X25-1527903), Natural will be\nperforming station maintenance at Compressor Station 302 (CS 302) located in Montgomery\nCounty, Texas (Segment 25 of Natural's Texok Zone).  Natural is required to\nreduce the maximum operating capacity eastbound into Segment 25 from Segment 26\nand Segment 22, thus limiting Natural's throughput capacity eastbound through\nCS 302 during this restriction.\nThe\nscheduling constraint will be at CS 302\n; therefore, any gas received\nwest of CS 302 for delivery east of CS 302 will be impacted for the duration of\nthe restriction.  The Pooling Point - Texok Zone (LOC 10560) is located west of\nthe constraint.  Firm transportation associated with storage withdrawals may be\nimpacted.\nAs\nsuch, effective for gas day\nWednesday, April 1, 2026, Timely Cycle, and\ncontinuing through gas day Friday, May 1, 2026\n, Natural will schedule\nPrimary Firm and Secondary in-path Firm transports to no less than\n55%\nof contract MDQ through CS 302.  AOR/ITS and Secondary out-of-path Firm\ntransports\nwill not\nbe available for the duration of this restriction.\nThe\nstated scheduling percentage is based upon the current level of firm capacity\ncontracted for during this restriction and is subject to change based upon\noperational conditions and Shipper utilization.\nContinue\nto monitor Natural's interactive website for any updates.  Please contact your\nAccount Director or Scheduling Representative if you have any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+      "status": "PARSED_WITH_UNKNOWNS"
+    },
+    {
+      "path": "inherited/evaluation/notices/46624_CAPACITY CONSTRAINT.html",
+      "sha256": "faf2ec98d47909410928c664ccec1287e449cab56a2b410d2fd1ddf25af0811b",
+      "fields": [
+        {
+          "id": "INPUT-SOURCE-001",
+          "field": "header.tsp",
+          "raw": "6931794-NATURAL GAS PIPELINE CO.",
+          "normalized": "6931794-NATURAL GAS PIPELINE CO.",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 426
+        },
+        {
+          "id": "INPUT-SOURCE-002",
+          "field": "header.critical",
+          "raw": "Non-Critical",
+          "normalized": "Non-Critical",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 427
+        },
+        {
+          "id": "INPUT-SOURCE-003",
+          "field": "header.type1",
+          "raw": "CAPACITY CONSTRAINT",
+          "normalized": "CAPACITY CONSTRAINT",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 428
+        },
+        {
+          "id": "INPUT-SOURCE-004",
+          "field": "header.type2",
+          "raw": "POINTS",
+          "normalized": "POINTS",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 429
+        },
+        {
+          "id": "INPUT-SOURCE-005",
+          "field": "header.notice_effective_date",
+          "raw": "01/12/2026 10:51:37AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 430
+        },
+        {
+          "id": "INPUT-SOURCE-006",
+          "field": "header.notice_end_date",
+          "raw": "03/31/2026 9:00:00am",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 431
+        },
+        {
+          "id": "INPUT-SOURCE-007",
+          "field": "header.post_date",
+          "raw": "1/12/2026 10:51:37 AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 432
+        },
+        {
+          "id": "INPUT-SOURCE-008",
+          "field": "header.notice_id",
+          "raw": "46624",
+          "normalized": "46624",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 433
+        },
+        {
+          "id": "INPUT-SOURCE-009",
+          "field": "header.req_rsp",
+          "raw": "1",
+          "normalized": "1",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 434
+        },
+        {
+          "id": "INPUT-SOURCE-010",
+          "field": "header.rsp_date",
+          "raw": "1/12/2026 12:00:00 AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 435
+        },
+        {
+          "id": "INPUT-SOURCE-011",
+          "field": "header.status",
+          "raw": "INITIATE",
+          "normalized": "INITIATE",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 436
+        },
+        {
+          "id": "INPUT-SOURCE-012",
+          "field": "header.prior_notice_id",
+          "raw": "",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 437
+        },
+        {
+          "id": "INPUT-SOURCE-013",
+          "field": "header.subject",
+          "raw": "FGT VERMILLION (LOC 7936) - PRIMARY ONLY",
+          "normalized": "FGT VERMILLION (LOC 7936) - PRIMARY ONLY",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 438
+        },
+        {
+          "id": "INPUT-SOURCE-014",
+          "field": "metadata.notice_id",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 439
+        },
+        {
+          "id": "INPUT-SOURCE-015",
+          "field": "metadata.notice_type",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 440
+        },
+        {
+          "id": "INPUT-SOURCE-016",
+          "field": "metadata.subject",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 441
+        },
+        {
+          "id": "INPUT-SOURCE-017",
+          "field": "metadata.download_date",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 442
+        },
+        {
+          "id": "INPUT-SOURCE-018",
+          "field": "metadata.source_url",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 443
+        },
+        {
+          "id": "INPUT-SOURCE-019",
+          "field": "metadata.html_file",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 444
+        },
+        {
+          "id": "INPUT-SOURCE-020",
+          "field": "body",
+          "raw": "ANR/NGPL SOUTH JOLIET AT CAPACITY\nFLORIDA\nVERMILION (LOC 7936) – PRIMARY ONLY\nDue\nto current operating conditions, effective for gas day\nWednesday, January 14,\n2026, Timely Cycle and continuing until further notice,\nFlorida Vermilion (LOC\n7936) is at operating capacity.  As such, Natural will only schedule Primary\nFirm transports for deliveries to Florida Vermilion (LOC 7936).  AOR/ITS, Secondary\nout-of-path Firm transports and Secondary in-path Firm transports\nwill\nnot\nbe available.\nFlorida\nVermilion is located in Vermilion Parish, Louisiana (Segment 24), in Natural's Louisiana\nZone.\nPlease\ncontact your Account Director or Scheduling Representative if you have any\nquestions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "normalized": "ANR/NGPL SOUTH JOLIET AT CAPACITY\nFLORIDA\nVERMILION (LOC 7936) – PRIMARY ONLY\nDue\nto current operating conditions, effective for gas day\nWednesday, January 14,\n2026, Timely Cycle and continuing until further notice,\nFlorida Vermilion (LOC\n7936) is at operating capacity.  As such, Natural will only schedule Primary\nFirm transports for deliveries to Florida Vermilion (LOC 7936).  AOR/ITS, Secondary\nout-of-path Firm transports and Secondary in-path Firm transports\nwill\nnot\nbe available.\nFlorida\nVermilion is located in Vermilion Parish, Louisiana (Segment 24), in Natural's Louisiana\nZone.\nPlease\ncontact your Account Director or Scheduling Representative if you have any\nquestions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 445
+        }
+      ],
+      "header": {
+        "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+        "critical": "Non-Critical",
+        "type1": "CAPACITY CONSTRAINT",
+        "type2": "POINTS",
+        "notice_effective_date": "01/12/2026 10:51:37AM",
+        "notice_end_date": "03/31/2026 9:00:00am",
+        "post_date": "1/12/2026 10:51:37 AM",
+        "notice_id": "46624",
+        "req_rsp": "1",
+        "rsp_date": "1/12/2026 12:00:00 AM",
+        "status": "INITIATE",
+        "prior_notice_id": "",
+        "subject": "FGT VERMILLION (LOC 7936) - PRIMARY ONLY"
+      },
+      "body": "ANR/NGPL SOUTH JOLIET AT CAPACITY\nFLORIDA\nVERMILION (LOC 7936) – PRIMARY ONLY\nDue\nto current operating conditions, effective for gas day\nWednesday, January 14,\n2026, Timely Cycle and continuing until further notice,\nFlorida Vermilion (LOC\n7936) is at operating capacity.  As such, Natural will only schedule Primary\nFirm transports for deliveries to Florida Vermilion (LOC 7936).  AOR/ITS, Secondary\nout-of-path Firm transports and Secondary in-path Firm transports\nwill\nnot\nbe available.\nFlorida\nVermilion is located in Vermilion Parish, Louisiana (Segment 24), in Natural's Louisiana\nZone.\nPlease\ncontact your Account Director or Scheduling Representative if you have any\nquestions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+      "status": "PARSED_WITH_UNKNOWNS"
+    },
+    {
+      "path": "inherited/evaluation/notices/46725_OPERATIONAL FLOW ORDER.html",
+      "sha256": "3f7e883fde61c2b23b72324c0dc133885d39513706f57c2e15eeedf1e6f8bd9c",
+      "fields": [
+        {
+          "id": "INPUT-SOURCE-001",
+          "field": "header.tsp",
+          "raw": "6931794-NATURAL GAS PIPELINE CO.",
+          "normalized": "6931794-NATURAL GAS PIPELINE CO.",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 426
+        },
+        {
+          "id": "INPUT-SOURCE-002",
+          "field": "header.critical",
+          "raw": "Non-Critical",
+          "normalized": "Non-Critical",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 427
+        },
+        {
+          "id": "INPUT-SOURCE-003",
+          "field": "header.type1",
+          "raw": "OPERATIONAL FLOW ORDER",
+          "normalized": "OPERATIONAL FLOW ORDER",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 428
+        },
+        {
+          "id": "INPUT-SOURCE-004",
+          "field": "header.type2",
+          "raw": "OFO",
+          "normalized": "OFO",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 429
+        },
+        {
+          "id": "INPUT-SOURCE-005",
+          "field": "header.notice_effective_date",
+          "raw": "02/09/2026  8:15:20AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 430
+        },
+        {
+          "id": "INPUT-SOURCE-006",
+          "field": "header.notice_end_date",
+          "raw": "02/28/2026 9:00:00am",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 431
+        },
+        {
+          "id": "INPUT-SOURCE-007",
+          "field": "header.post_date",
+          "raw": "2/9/2026 8:15:20 AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 432
+        },
+        {
+          "id": "INPUT-SOURCE-008",
+          "field": "header.notice_id",
+          "raw": "46725",
+          "normalized": "46725",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 433
+        },
+        {
+          "id": "INPUT-SOURCE-009",
+          "field": "header.req_rsp",
+          "raw": "1",
+          "normalized": "1",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 434
+        },
+        {
+          "id": "INPUT-SOURCE-010",
+          "field": "header.rsp_date",
+          "raw": "2/9/2026 12:00:00 AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 435
+        },
+        {
+          "id": "INPUT-SOURCE-011",
+          "field": "header.status",
+          "raw": "TERMINATE",
+          "normalized": "TERMINATE",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 436
+        },
+        {
+          "id": "INPUT-SOURCE-012",
+          "field": "header.prior_notice_id",
+          "raw": "46705",
+          "normalized": "46705",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 437
+        },
+        {
+          "id": "INPUT-SOURCE-013",
+          "field": "header.subject",
+          "raw": "OFO - MARKET DELVIERY ZONE - REMOVED",
+          "normalized": "OFO - MARKET DELVIERY ZONE - REMOVED",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 438
+        },
+        {
+          "id": "INPUT-SOURCE-014",
+          "field": "metadata.notice_id",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 439
+        },
+        {
+          "id": "INPUT-SOURCE-015",
+          "field": "metadata.notice_type",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 440
+        },
+        {
+          "id": "INPUT-SOURCE-016",
+          "field": "metadata.subject",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 441
+        },
+        {
+          "id": "INPUT-SOURCE-017",
+          "field": "metadata.download_date",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 442
+        },
+        {
+          "id": "INPUT-SOURCE-018",
+          "field": "metadata.source_url",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 443
+        },
+        {
+          "id": "INPUT-SOURCE-019",
+          "field": "metadata.html_file",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 444
+        },
+        {
+          "id": "INPUT-SOURCE-020",
+          "field": "body",
+          "raw": "Post Date: 01/05/1999 19:01:20\nOPERATIONAL FLOW ORDER\nISSUED - MARKET DELIVERY ZONE – REMOVED\nEffective for gas day\nMonday,\nFebruary 9, 2026\n,\nbeginning 9:00 a.m., Central Clock Time\n,\nNatural is removing the Operational Flow Order (OFO) in the Market Delivery\nZone.  Please continue to monitor Natural's interactive website for updates.\nPlease contact your\nAccount Director for any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "normalized": "Post Date: 01/05/1999 19:01:20\nOPERATIONAL FLOW ORDER\nISSUED - MARKET DELIVERY ZONE – REMOVED\nEffective for gas day\nMonday,\nFebruary 9, 2026\n,\nbeginning 9:00 a.m., Central Clock Time\n,\nNatural is removing the Operational Flow Order (OFO) in the Market Delivery\nZone.  Please continue to monitor Natural's interactive website for updates.\nPlease contact your\nAccount Director for any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 445
+        }
+      ],
+      "header": {
+        "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+        "critical": "Non-Critical",
+        "type1": "OPERATIONAL FLOW ORDER",
+        "type2": "OFO",
+        "notice_effective_date": "02/09/2026  8:15:20AM",
+        "notice_end_date": "02/28/2026 9:00:00am",
+        "post_date": "2/9/2026 8:15:20 AM",
+        "notice_id": "46725",
+        "req_rsp": "1",
+        "rsp_date": "2/9/2026 12:00:00 AM",
+        "status": "TERMINATE",
+        "prior_notice_id": "46705",
+        "subject": "OFO - MARKET DELVIERY ZONE - REMOVED"
+      },
+      "body": "Post Date: 01/05/1999 19:01:20\nOPERATIONAL FLOW ORDER\nISSUED - MARKET DELIVERY ZONE – REMOVED\nEffective for gas day\nMonday,\nFebruary 9, 2026\n,\nbeginning 9:00 a.m., Central Clock Time\n,\nNatural is removing the Operational Flow Order (OFO) in the Market Delivery\nZone.  Please continue to monitor Natural's interactive website for updates.\nPlease contact your\nAccount Director for any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+      "status": "PARSED_WITH_UNKNOWNS"
+    },
+    {
+      "path": "inherited/evaluation/notices/46728_CAPACITY CONSTRAINT.html",
+      "sha256": "6e60efe52cf5dbac74fa1cf5e13c1a06927e73e8e210b2e2421df98b5fea1e41",
+      "fields": [
+        {
+          "id": "INPUT-SOURCE-001",
+          "field": "header.tsp",
+          "raw": "6931794-NATURAL GAS PIPELINE CO.",
+          "normalized": "6931794-NATURAL GAS PIPELINE CO.",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 426
+        },
+        {
+          "id": "INPUT-SOURCE-002",
+          "field": "header.critical",
+          "raw": "Non-Critical",
+          "normalized": "Non-Critical",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 427
+        },
+        {
+          "id": "INPUT-SOURCE-003",
+          "field": "header.type1",
+          "raw": "CAPACITY CONSTRAINT",
+          "normalized": "CAPACITY CONSTRAINT",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 428
+        },
+        {
+          "id": "INPUT-SOURCE-004",
+          "field": "header.type2",
+          "raw": "SEGMENTS",
+          "normalized": "SEGMENTS",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 429
+        },
+        {
+          "id": "INPUT-SOURCE-005",
+          "field": "header.notice_effective_date",
+          "raw": "02/09/2026  8:25:50AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 430
+        },
+        {
+          "id": "INPUT-SOURCE-006",
+          "field": "header.notice_end_date",
+          "raw": "02/28/2026 9:00:00am",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 431
+        },
+        {
+          "id": "INPUT-SOURCE-007",
+          "field": "header.post_date",
+          "raw": "2/9/2026 8:25:50 AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 432
+        },
+        {
+          "id": "INPUT-SOURCE-008",
+          "field": "header.notice_id",
+          "raw": "46728",
+          "normalized": "46728",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 433
+        },
+        {
+          "id": "INPUT-SOURCE-009",
+          "field": "header.req_rsp",
+          "raw": "1",
+          "normalized": "1",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 434
+        },
+        {
+          "id": "INPUT-SOURCE-010",
+          "field": "header.rsp_date",
+          "raw": "2/9/2026 12:00:00 AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 435
+        },
+        {
+          "id": "INPUT-SOURCE-011",
+          "field": "header.status",
+          "raw": "INITIATE",
+          "normalized": "INITIATE",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 436
+        },
+        {
+          "id": "INPUT-SOURCE-012",
+          "field": "header.prior_notice_id",
+          "raw": "",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 437
+        },
+        {
+          "id": "INPUT-SOURCE-013",
+          "field": "header.subject",
+          "raw": "IBS/LPS/SRO - RESTRICTIONS",
+          "normalized": "IBS/LPS/SRO - RESTRICTIONS",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 438
+        },
+        {
+          "id": "INPUT-SOURCE-014",
+          "field": "metadata.notice_id",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 439
+        },
+        {
+          "id": "INPUT-SOURCE-015",
+          "field": "metadata.notice_type",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 440
+        },
+        {
+          "id": "INPUT-SOURCE-016",
+          "field": "metadata.subject",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 441
+        },
+        {
+          "id": "INPUT-SOURCE-017",
+          "field": "metadata.download_date",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 442
+        },
+        {
+          "id": "INPUT-SOURCE-018",
+          "field": "metadata.source_url",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 443
+        },
+        {
+          "id": "INPUT-SOURCE-019",
+          "field": "metadata.html_file",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 444
+        },
+        {
+          "id": "INPUT-SOURCE-020",
+          "field": "body",
+          "raw": "IBS/LPS - RESTRICIONS\nIBS/LPS/SRO – AVAILABILITY\nAMARILLO SYSTEM\nEffective for gas day\nMonday,\nFebruary 9, 2026, Intraday 1 Cycle, and continuing until further notice\n,\nNatural has the following availability for line pack services:\nCategories\n:  (Unavailable; Up to MDQ; Limited Available;\nAvailable)\nAMARILLO\n:\nON to the Pipe\nMarket\nDelivery Zones\nAmarillo Mainline (Up to MDQ)\nIowa-Illinois\n(Up to MDQ)\nProduction\nZones\nMidcontinent (Up to MDQ)\nPermian (Up\nto MDQ\n)\nOFF of the Pipe\nMarket Delivery Zones\nAmarillo\nMainline (Up to MDQ)\nIowa-Illinois (Up to MDQ)\nè\nIowa-Illinois – Segment 29 – (Available)\nProduction Zones\nMidcontinent\n(Up to MDQ)\nPermian (Up to MDQ)\nGULF COAST SYSTEM\nEffective for gas day\nMonday,\nFebruary 9, 2026, Intraday 1 Cycle, and continuing until further notice\n,\nNatural has the following availability for line pack services:\nCategories\n:  (Unavailable; Up to MDQ*; Limited Available;\nAvailable)\nGULF COAST\n:\nON to the Pipe\nMarket Delivery Zones\nGulf Coast Mainline (Up to MDQ)\nIowa-Illinois (Up\nto MDQ)\nProduction Zones\nTexok\nGC (Up to MDQ)\nTexok\nA/G (Up to MDQ)\nSouth Texas (Up to MDQ)\nLouisiana (Up to MDQ)\nOFF of the Pipe\nMarket Delivery Zones\nGulf Coast Mainline (Up to MDQ)\nIowa-Illinois (Up to MDQ)\nè\nIowa-Illinois\n– Segment 39 – (Available)\nè\nIowa-Illinois – Segment 40 – (Available)\nProduction Zones\nTexok GC (Up to MDQ)\nTexok\nA/G (Up to MDQ)\nSouth Texas (Up to MDQ)\nLouisiana\n(Up to MDQ)\nè\nIndicates Change\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "normalized": "IBS/LPS - RESTRICIONS\nIBS/LPS/SRO – AVAILABILITY\nAMARILLO SYSTEM\nEffective for gas day\nMonday,\nFebruary 9, 2026, Intraday 1 Cycle, and continuing until further notice\n,\nNatural has the following availability for line pack services:\nCategories\n:  (Unavailable; Up to MDQ; Limited Available;\nAvailable)\nAMARILLO\n:\nON to the Pipe\nMarket\nDelivery Zones\nAmarillo Mainline (Up to MDQ)\nIowa-Illinois\n(Up to MDQ)\nProduction\nZones\nMidcontinent (Up to MDQ)\nPermian (Up\nto MDQ\n)\nOFF of the Pipe\nMarket Delivery Zones\nAmarillo\nMainline (Up to MDQ)\nIowa-Illinois (Up to MDQ)\nè\nIowa-Illinois – Segment 29 – (Available)\nProduction Zones\nMidcontinent\n(Up to MDQ)\nPermian (Up to MDQ)\nGULF COAST SYSTEM\nEffective for gas day\nMonday,\nFebruary 9, 2026, Intraday 1 Cycle, and continuing until further notice\n,\nNatural has the following availability for line pack services:\nCategories\n:  (Unavailable; Up to MDQ*; Limited Available;\nAvailable)\nGULF COAST\n:\nON to the Pipe\nMarket Delivery Zones\nGulf Coast Mainline (Up to MDQ)\nIowa-Illinois (Up\nto MDQ)\nProduction Zones\nTexok\nGC (Up to MDQ)\nTexok\nA/G (Up to MDQ)\nSouth Texas (Up to MDQ)\nLouisiana (Up to MDQ)\nOFF of the Pipe\nMarket Delivery Zones\nGulf Coast Mainline (Up to MDQ)\nIowa-Illinois (Up to MDQ)\nè\nIowa-Illinois\n– Segment 39 – (Available)\nè\nIowa-Illinois – Segment 40 – (Available)\nProduction Zones\nTexok GC (Up to MDQ)\nTexok\nA/G (Up to MDQ)\nSouth Texas (Up to MDQ)\nLouisiana\n(Up to MDQ)\nè\nIndicates Change\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 445
+        }
+      ],
+      "header": {
+        "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+        "critical": "Non-Critical",
+        "type1": "CAPACITY CONSTRAINT",
+        "type2": "SEGMENTS",
+        "notice_effective_date": "02/09/2026  8:25:50AM",
+        "notice_end_date": "02/28/2026 9:00:00am",
+        "post_date": "2/9/2026 8:25:50 AM",
+        "notice_id": "46728",
+        "req_rsp": "1",
+        "rsp_date": "2/9/2026 12:00:00 AM",
+        "status": "INITIATE",
+        "prior_notice_id": "",
+        "subject": "IBS/LPS/SRO - RESTRICTIONS"
+      },
+      "body": "IBS/LPS - RESTRICIONS\nIBS/LPS/SRO – AVAILABILITY\nAMARILLO SYSTEM\nEffective for gas day\nMonday,\nFebruary 9, 2026, Intraday 1 Cycle, and continuing until further notice\n,\nNatural has the following availability for line pack services:\nCategories\n:  (Unavailable; Up to MDQ; Limited Available;\nAvailable)\nAMARILLO\n:\nON to the Pipe\nMarket\nDelivery Zones\nAmarillo Mainline (Up to MDQ)\nIowa-Illinois\n(Up to MDQ)\nProduction\nZones\nMidcontinent (Up to MDQ)\nPermian (Up\nto MDQ\n)\nOFF of the Pipe\nMarket Delivery Zones\nAmarillo\nMainline (Up to MDQ)\nIowa-Illinois (Up to MDQ)\nè\nIowa-Illinois – Segment 29 – (Available)\nProduction Zones\nMidcontinent\n(Up to MDQ)\nPermian (Up to MDQ)\nGULF COAST SYSTEM\nEffective for gas day\nMonday,\nFebruary 9, 2026, Intraday 1 Cycle, and continuing until further notice\n,\nNatural has the following availability for line pack services:\nCategories\n:  (Unavailable; Up to MDQ*; Limited Available;\nAvailable)\nGULF COAST\n:\nON to the Pipe\nMarket Delivery Zones\nGulf Coast Mainline (Up to MDQ)\nIowa-Illinois (Up\nto MDQ)\nProduction Zones\nTexok\nGC (Up to MDQ)\nTexok\nA/G (Up to MDQ)\nSouth Texas (Up to MDQ)\nLouisiana (Up to MDQ)\nOFF of the Pipe\nMarket Delivery Zones\nGulf Coast Mainline (Up to MDQ)\nIowa-Illinois (Up to MDQ)\nè\nIowa-Illinois\n– Segment 39 – (Available)\nè\nIowa-Illinois – Segment 40 – (Available)\nProduction Zones\nTexok GC (Up to MDQ)\nTexok\nA/G (Up to MDQ)\nSouth Texas (Up to MDQ)\nLouisiana\n(Up to MDQ)\nè\nIndicates Change\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+      "status": "PARSED_WITH_UNKNOWNS"
+    },
+    {
+      "path": "inherited/evaluation/notices/46732_CAPACITY CONSTRAINT.html",
+      "sha256": "72ebe91721ad00e884e84a4bdfe8c193966460b94586d5c645cb625da03022d1",
+      "fields": [
+        {
+          "id": "INPUT-SOURCE-001",
+          "field": "header.tsp",
+          "raw": "6931794-NATURAL GAS PIPELINE CO.",
+          "normalized": "6931794-NATURAL GAS PIPELINE CO.",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 426
+        },
+        {
+          "id": "INPUT-SOURCE-002",
+          "field": "header.critical",
+          "raw": "Non-Critical",
+          "normalized": "Non-Critical",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 427
+        },
+        {
+          "id": "INPUT-SOURCE-003",
+          "field": "header.type1",
+          "raw": "CAPACITY CONSTRAINT",
+          "normalized": "CAPACITY CONSTRAINT",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 428
+        },
+        {
+          "id": "INPUT-SOURCE-004",
+          "field": "header.type2",
+          "raw": "SEGMENTS",
+          "normalized": "SEGMENTS",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 429
+        },
+        {
+          "id": "INPUT-SOURCE-005",
+          "field": "header.notice_effective_date",
+          "raw": "02/09/2026  8:32:30AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 430
+        },
+        {
+          "id": "INPUT-SOURCE-006",
+          "field": "header.notice_end_date",
+          "raw": "02/28/2026 9:00:00am",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 431
+        },
+        {
+          "id": "INPUT-SOURCE-007",
+          "field": "header.post_date",
+          "raw": "2/9/2026 8:32:30 AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 432
+        },
+        {
+          "id": "INPUT-SOURCE-008",
+          "field": "header.notice_id",
+          "raw": "46732",
+          "normalized": "46732",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 433
+        },
+        {
+          "id": "INPUT-SOURCE-009",
+          "field": "header.req_rsp",
+          "raw": "1",
+          "normalized": "1",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 434
+        },
+        {
+          "id": "INPUT-SOURCE-010",
+          "field": "header.rsp_date",
+          "raw": "2/9/2026 12:00:00 AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 435
+        },
+        {
+          "id": "INPUT-SOURCE-011",
+          "field": "header.status",
+          "raw": "TERMINATE",
+          "normalized": "TERMINATE",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 436
+        },
+        {
+          "id": "INPUT-SOURCE-012",
+          "field": "header.prior_notice_id",
+          "raw": "46507",
+          "normalized": "46507",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 437
+        },
+        {
+          "id": "INPUT-SOURCE-013",
+          "field": "header.subject",
+          "raw": "SEG 14 WB - CS 113 - PRIM ONLY LIFTED",
+          "normalized": "SEG 14 WB - CS 113 - PRIM ONLY LIFTED",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 438
+        },
+        {
+          "id": "INPUT-SOURCE-014",
+          "field": "metadata.notice_id",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 439
+        },
+        {
+          "id": "INPUT-SOURCE-015",
+          "field": "metadata.notice_type",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 440
+        },
+        {
+          "id": "INPUT-SOURCE-016",
+          "field": "metadata.subject",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 441
+        },
+        {
+          "id": "INPUT-SOURCE-017",
+          "field": "metadata.download_date",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 442
+        },
+        {
+          "id": "INPUT-SOURCE-018",
+          "field": "metadata.source_url",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 443
+        },
+        {
+          "id": "INPUT-SOURCE-019",
+          "field": "metadata.html_file",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 444
+        },
+        {
+          "id": "INPUT-SOURCE-020",
+          "field": "body",
+          "raw": "SEGMENT 17 FORCE MAJURE\nSEGMENT 14 WESTBOUND – CS 113 – PRIMARY ONLY - LIFTED\nEffective for gas day\nMonday,\nFebruary 9, 2026, Intraday 1 Cycle and continuing thereafter\n, Natural has\noperating capacity available for transports westbound on the Amarillo Mainline\nSystem through Compressor Station 113 located in Will County, IL (Natural's\nMarket Delivery Zone).  Therefore, the Primary only restriction has been\nlifted.  All transport services are available.\nPlease contact your Account\nDirector or Scheduling Representative if you have any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "normalized": "SEGMENT 17 FORCE MAJURE\nSEGMENT 14 WESTBOUND – CS 113 – PRIMARY ONLY - LIFTED\nEffective for gas day\nMonday,\nFebruary 9, 2026, Intraday 1 Cycle and continuing thereafter\n, Natural has\noperating capacity available for transports westbound on the Amarillo Mainline\nSystem through Compressor Station 113 located in Will County, IL (Natural's\nMarket Delivery Zone).  Therefore, the Primary only restriction has been\nlifted.  All transport services are available.\nPlease contact your Account\nDirector or Scheduling Representative if you have any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 445
+        }
+      ],
+      "header": {
+        "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+        "critical": "Non-Critical",
+        "type1": "CAPACITY CONSTRAINT",
+        "type2": "SEGMENTS",
+        "notice_effective_date": "02/09/2026  8:32:30AM",
+        "notice_end_date": "02/28/2026 9:00:00am",
+        "post_date": "2/9/2026 8:32:30 AM",
+        "notice_id": "46732",
+        "req_rsp": "1",
+        "rsp_date": "2/9/2026 12:00:00 AM",
+        "status": "TERMINATE",
+        "prior_notice_id": "46507",
+        "subject": "SEG 14 WB - CS 113 - PRIM ONLY LIFTED"
+      },
+      "body": "SEGMENT 17 FORCE MAJURE\nSEGMENT 14 WESTBOUND – CS 113 – PRIMARY ONLY - LIFTED\nEffective for gas day\nMonday,\nFebruary 9, 2026, Intraday 1 Cycle and continuing thereafter\n, Natural has\noperating capacity available for transports westbound on the Amarillo Mainline\nSystem through Compressor Station 113 located in Will County, IL (Natural's\nMarket Delivery Zone).  Therefore, the Primary only restriction has been\nlifted.  All transport services are available.\nPlease contact your Account\nDirector or Scheduling Representative if you have any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+      "status": "PARSED_WITH_UNKNOWNS"
+    },
+    {
+      "path": "inherited/evaluation/notices/46775_COMPUTER SYSTEM STATUS.html",
+      "sha256": "9bc6d3df53e6848ef4a2936ed86466b65833c67784067075955bd7d198975b58",
+      "fields": [
+        {
+          "id": "INPUT-SOURCE-001",
+          "field": "header.tsp",
+          "raw": "6931794-NATURAL GAS PIPELINE CO.",
+          "normalized": "6931794-NATURAL GAS PIPELINE CO.",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 426
+        },
+        {
+          "id": "INPUT-SOURCE-002",
+          "field": "header.critical",
+          "raw": "Non-Critical",
+          "normalized": "Non-Critical",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 427
+        },
+        {
+          "id": "INPUT-SOURCE-003",
+          "field": "header.type1",
+          "raw": "COMPUTER SYSTEM STATUS",
+          "normalized": "COMPUTER SYSTEM STATUS",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 428
+        },
+        {
+          "id": "INPUT-SOURCE-004",
+          "field": "header.type2",
+          "raw": "DART SYSTEM INFORMATION",
+          "normalized": "DART SYSTEM INFORMATION",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 429
+        },
+        {
+          "id": "INPUT-SOURCE-005",
+          "field": "header.notice_effective_date",
+          "raw": "02/26/2026 10:15:22AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 430
+        },
+        {
+          "id": "INPUT-SOURCE-006",
+          "field": "header.notice_end_date",
+          "raw": "02/27/2026 9:00:00am",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 431
+        },
+        {
+          "id": "INPUT-SOURCE-007",
+          "field": "header.post_date",
+          "raw": "2/26/2026 10:15:22 AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 432
+        },
+        {
+          "id": "INPUT-SOURCE-008",
+          "field": "header.notice_id",
+          "raw": "46775",
+          "normalized": "46775",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 433
+        },
+        {
+          "id": "INPUT-SOURCE-009",
+          "field": "header.req_rsp",
+          "raw": "1",
+          "normalized": "1",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 434
+        },
+        {
+          "id": "INPUT-SOURCE-010",
+          "field": "header.rsp_date",
+          "raw": "2/26/2026 12:00:00 AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 435
+        },
+        {
+          "id": "INPUT-SOURCE-011",
+          "field": "header.status",
+          "raw": "INITIATE",
+          "normalized": "INITIATE",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 436
+        },
+        {
+          "id": "INPUT-SOURCE-012",
+          "field": "header.prior_notice_id",
+          "raw": "",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 437
+        },
+        {
+          "id": "INPUT-SOURCE-013",
+          "field": "header.subject",
+          "raw": "DART Connection Issues",
+          "normalized": "DART Connection Issues",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 438
+        },
+        {
+          "id": "INPUT-SOURCE-014",
+          "field": "metadata.notice_id",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 439
+        },
+        {
+          "id": "INPUT-SOURCE-015",
+          "field": "metadata.notice_type",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 440
+        },
+        {
+          "id": "INPUT-SOURCE-016",
+          "field": "metadata.subject",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 441
+        },
+        {
+          "id": "INPUT-SOURCE-017",
+          "field": "metadata.download_date",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 442
+        },
+        {
+          "id": "INPUT-SOURCE-018",
+          "field": "metadata.source_url",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 443
+        },
+        {
+          "id": "INPUT-SOURCE-019",
+          "field": "metadata.html_file",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 444
+        },
+        {
+          "id": "INPUT-SOURCE-020",
+          "field": "body",
+          "raw": "DART\nTECHNICAL ISSUES – ID-1 NOMINATION DEADLINE EXTENDED FOR 02-26-26\nDART\nexperienced technical issues.  Due to these issues, the ID-1 nomination\ndeadline for February 26, 2026, will be extended until 10:45 am CCT.\nIf you have\nany questions, please call your Scheduler.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "normalized": "DART\nTECHNICAL ISSUES – ID-1 NOMINATION DEADLINE EXTENDED FOR 02-26-26\nDART\nexperienced technical issues.  Due to these issues, the ID-1 nomination\ndeadline for February 26, 2026, will be extended until 10:45 am CCT.\nIf you have\nany questions, please call your Scheduler.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 445
+        }
+      ],
+      "header": {
+        "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+        "critical": "Non-Critical",
+        "type1": "COMPUTER SYSTEM STATUS",
+        "type2": "DART SYSTEM INFORMATION",
+        "notice_effective_date": "02/26/2026 10:15:22AM",
+        "notice_end_date": "02/27/2026 9:00:00am",
+        "post_date": "2/26/2026 10:15:22 AM",
+        "notice_id": "46775",
+        "req_rsp": "1",
+        "rsp_date": "2/26/2026 12:00:00 AM",
+        "status": "INITIATE",
+        "prior_notice_id": "",
+        "subject": "DART Connection Issues"
+      },
+      "body": "DART\nTECHNICAL ISSUES – ID-1 NOMINATION DEADLINE EXTENDED FOR 02-26-26\nDART\nexperienced technical issues.  Due to these issues, the ID-1 nomination\ndeadline for February 26, 2026, will be extended until 10:45 am CCT.\nIf you have\nany questions, please call your Scheduler.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+      "status": "PARSED_WITH_UNKNOWNS"
+    },
+    {
+      "path": "inherited/evaluation/notices/46795_OPERATIONAL FLOW ORDER.html",
+      "sha256": "94c2e2d71aa6409161b6a72c917afdfb6eb7fd8273a4234d71803a9ae40ac051",
+      "fields": [
+        {
+          "id": "INPUT-SOURCE-001",
+          "field": "header.tsp",
+          "raw": "6931794-NATURAL GAS PIPELINE CO.",
+          "normalized": "6931794-NATURAL GAS PIPELINE CO.",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 426
+        },
+        {
+          "id": "INPUT-SOURCE-002",
+          "field": "header.critical",
+          "raw": "Non-Critical",
+          "normalized": "Non-Critical",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 427
+        },
+        {
+          "id": "INPUT-SOURCE-003",
+          "field": "header.type1",
+          "raw": "OPERATIONAL FLOW ORDER",
+          "normalized": "OPERATIONAL FLOW ORDER",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 428
+        },
+        {
+          "id": "INPUT-SOURCE-004",
+          "field": "header.type2",
+          "raw": "OFO",
+          "normalized": "OFO",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 429
+        },
+        {
+          "id": "INPUT-SOURCE-005",
+          "field": "header.notice_effective_date",
+          "raw": "03/04/2026  2:08:29PM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 430
+        },
+        {
+          "id": "INPUT-SOURCE-006",
+          "field": "header.notice_end_date",
+          "raw": "05/31/2026 9:00:00am",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 431
+        },
+        {
+          "id": "INPUT-SOURCE-007",
+          "field": "header.post_date",
+          "raw": "3/4/2026 2:08:29 PM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 432
+        },
+        {
+          "id": "INPUT-SOURCE-008",
+          "field": "header.notice_id",
+          "raw": "46795",
+          "normalized": "46795",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 433
+        },
+        {
+          "id": "INPUT-SOURCE-009",
+          "field": "header.req_rsp",
+          "raw": "1",
+          "normalized": "1",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 434
+        },
+        {
+          "id": "INPUT-SOURCE-010",
+          "field": "header.rsp_date",
+          "raw": "3/4/2026 12:00:00 AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 435
+        },
+        {
+          "id": "INPUT-SOURCE-011",
+          "field": "header.status",
+          "raw": "INITIATE",
+          "normalized": "INITIATE",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 436
+        },
+        {
+          "id": "INPUT-SOURCE-012",
+          "field": "header.prior_notice_id",
+          "raw": "",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 437
+        },
+        {
+          "id": "INPUT-SOURCE-013",
+          "field": "header.subject",
+          "raw": "OPERATIONAL FLOW ORDER - REPORT",
+          "normalized": "OPERATIONAL FLOW ORDER - REPORT",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 438
+        },
+        {
+          "id": "INPUT-SOURCE-014",
+          "field": "metadata.notice_id",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 439
+        },
+        {
+          "id": "INPUT-SOURCE-015",
+          "field": "metadata.notice_type",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 440
+        },
+        {
+          "id": "INPUT-SOURCE-016",
+          "field": "metadata.subject",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 441
+        },
+        {
+          "id": "INPUT-SOURCE-017",
+          "field": "metadata.download_date",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 442
+        },
+        {
+          "id": "INPUT-SOURCE-018",
+          "field": "metadata.source_url",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 443
+        },
+        {
+          "id": "INPUT-SOURCE-019",
+          "field": "metadata.html_file",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 444
+        },
+        {
+          "id": "INPUT-SOURCE-020",
+          "field": "body",
+          "raw": "OPERATIONAL\nFLOW ORDER – MARKET DELIVERY ZONE – REPORT\nOn January 20, 2026, due\nto forecasted colder than normal weather, expected increased load on its\nsystem, anticipated maximum peaking withdrawals from storage facilities, and\nsystem operating conditions, Natural issued an Operational Flow Order (“OFO”) in\nthe Market Delivery Zone effective for Thursday, January 22, 2026 at 9:00 a.m. Central\nClock Time. This action was taken in accordance with Section 23.6 of the\nGeneral Terms and Conditions of Natural's FERC Gas Tariff (“GT&C”).\nThe OFO was issued to\nmaintain and preserve the operational integrity of Natural's system and was in\nresponse to the following operational factors: (1) to maintain pressures for\nfirm transportation deliveries in the Market Delivery Zone; and (2) maintain deliverability\nfrom Natural's market area storage fields for firm storage services.\nThe OFO did not result in\nany curtailment of primary firm service.  During the OFO, Natural implemented\ndaily and hourly take limitations for firm and interruptible Shippers\n(including Point Operators) at all points in the Market Delivery Zone.  The OFO\nlimited Shippers and Point Operators, on a daily basis, from taking volumes in\nexcess of confirmed transportation nominations plus no-notice rights at\ndelivery points in the Market Delivery Zone, and on an hourly basis to 130% of\ntheir firm service rights.  Hourly rights for interruptible nominations were\nlimited to 105% of the Shipper's interruptible nominations. Additionally,\nShippers and Point Operators were required to flow more ratably during the gas\nday based on service priority and nomination cycles.\nThe\nfirm service percentage was reduced to 110% on Tuesday, January 27, 2026 at\n9:00 a.m. Central Clock Time, and then  increased back to 130% on Thursday\nFebruary 5, 2026 at 9:00 am Central Clock Time.\nThese measures were taken\nconsistent with Natural's Tariff due to sustained colder than normal weather in\nthe Market Delivery Zone and anticipated maximum peaking withdrawals from\nstorage facilities.  As the weather conditions moderated and the associated\nhigh gas demand declined, Natural removed the OFO, effective at 9:00 a.m. on\ngas day Monday, February 9, 2026.\nThis posting complies\nwith GT&C Section 23.6(h) of Natural's Tariff to describe the specific\noperational factors which caused the Operational Flow Order to be issued and to\nbe lifted.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "normalized": "OPERATIONAL\nFLOW ORDER – MARKET DELIVERY ZONE – REPORT\nOn January 20, 2026, due\nto forecasted colder than normal weather, expected increased load on its\nsystem, anticipated maximum peaking withdrawals from storage facilities, and\nsystem operating conditions, Natural issued an Operational Flow Order (“OFO”) in\nthe Market Delivery Zone effective for Thursday, January 22, 2026 at 9:00 a.m. Central\nClock Time. This action was taken in accordance with Section 23.6 of the\nGeneral Terms and Conditions of Natural's FERC Gas Tariff (“GT&C”).\nThe OFO was issued to\nmaintain and preserve the operational integrity of Natural's system and was in\nresponse to the following operational factors: (1) to maintain pressures for\nfirm transportation deliveries in the Market Delivery Zone; and (2) maintain deliverability\nfrom Natural's market area storage fields for firm storage services.\nThe OFO did not result in\nany curtailment of primary firm service.  During the OFO, Natural implemented\ndaily and hourly take limitations for firm and interruptible Shippers\n(including Point Operators) at all points in the Market Delivery Zone.  The OFO\nlimited Shippers and Point Operators, on a daily basis, from taking volumes in\nexcess of confirmed transportation nominations plus no-notice rights at\ndelivery points in the Market Delivery Zone, and on an hourly basis to 130% of\ntheir firm service rights.  Hourly rights for interruptible nominations were\nlimited to 105% of the Shipper's interruptible nominations. Additionally,\nShippers and Point Operators were required to flow more ratably during the gas\nday based on service priority and nomination cycles.\nThe\nfirm service percentage was reduced to 110% on Tuesday, January 27, 2026 at\n9:00 a.m. Central Clock Time, and then  increased back to 130% on Thursday\nFebruary 5, 2026 at 9:00 am Central Clock Time.\nThese measures were taken\nconsistent with Natural's Tariff due to sustained colder than normal weather in\nthe Market Delivery Zone and anticipated maximum peaking withdrawals from\nstorage facilities.  As the weather conditions moderated and the associated\nhigh gas demand declined, Natural removed the OFO, effective at 9:00 a.m. on\ngas day Monday, February 9, 2026.\nThis posting complies\nwith GT&C Section 23.6(h) of Natural's Tariff to describe the specific\noperational factors which caused the Operational Flow Order to be issued and to\nbe lifted.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 445
+        }
+      ],
+      "header": {
+        "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+        "critical": "Non-Critical",
+        "type1": "OPERATIONAL FLOW ORDER",
+        "type2": "OFO",
+        "notice_effective_date": "03/04/2026  2:08:29PM",
+        "notice_end_date": "05/31/2026 9:00:00am",
+        "post_date": "3/4/2026 2:08:29 PM",
+        "notice_id": "46795",
+        "req_rsp": "1",
+        "rsp_date": "3/4/2026 12:00:00 AM",
+        "status": "INITIATE",
+        "prior_notice_id": "",
+        "subject": "OPERATIONAL FLOW ORDER - REPORT"
+      },
+      "body": "OPERATIONAL\nFLOW ORDER – MARKET DELIVERY ZONE – REPORT\nOn January 20, 2026, due\nto forecasted colder than normal weather, expected increased load on its\nsystem, anticipated maximum peaking withdrawals from storage facilities, and\nsystem operating conditions, Natural issued an Operational Flow Order (“OFO”) in\nthe Market Delivery Zone effective for Thursday, January 22, 2026 at 9:00 a.m. Central\nClock Time. This action was taken in accordance with Section 23.6 of the\nGeneral Terms and Conditions of Natural's FERC Gas Tariff (“GT&C”).\nThe OFO was issued to\nmaintain and preserve the operational integrity of Natural's system and was in\nresponse to the following operational factors: (1) to maintain pressures for\nfirm transportation deliveries in the Market Delivery Zone; and (2) maintain deliverability\nfrom Natural's market area storage fields for firm storage services.\nThe OFO did not result in\nany curtailment of primary firm service.  During the OFO, Natural implemented\ndaily and hourly take limitations for firm and interruptible Shippers\n(including Point Operators) at all points in the Market Delivery Zone.  The OFO\nlimited Shippers and Point Operators, on a daily basis, from taking volumes in\nexcess of confirmed transportation nominations plus no-notice rights at\ndelivery points in the Market Delivery Zone, and on an hourly basis to 130% of\ntheir firm service rights.  Hourly rights for interruptible nominations were\nlimited to 105% of the Shipper's interruptible nominations. Additionally,\nShippers and Point Operators were required to flow more ratably during the gas\nday based on service priority and nomination cycles.\nThe\nfirm service percentage was reduced to 110% on Tuesday, January 27, 2026 at\n9:00 a.m. Central Clock Time, and then  increased back to 130% on Thursday\nFebruary 5, 2026 at 9:00 am Central Clock Time.\nThese measures were taken\nconsistent with Natural's Tariff due to sustained colder than normal weather in\nthe Market Delivery Zone and anticipated maximum peaking withdrawals from\nstorage facilities.  As the weather conditions moderated and the associated\nhigh gas demand declined, Natural removed the OFO, effective at 9:00 a.m. on\ngas day Monday, February 9, 2026.\nThis posting complies\nwith GT&C Section 23.6(h) of Natural's Tariff to describe the specific\noperational factors which caused the Operational Flow Order to be issued and to\nbe lifted.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+      "status": "PARSED_WITH_UNKNOWNS"
+    },
+    {
+      "path": "inherited/evaluation/notices/46805_MAINTENANCE.html",
+      "sha256": "447dbb9c66febe1170c4f9a11db9cbc56a9ce744791a425befbc850f0741ce5b",
+      "fields": [
+        {
+          "id": "INPUT-SOURCE-001",
+          "field": "header.tsp",
+          "raw": "6931794-NATURAL GAS PIPELINE CO.",
+          "normalized": "6931794-NATURAL GAS PIPELINE CO.",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 426
+        },
+        {
+          "id": "INPUT-SOURCE-002",
+          "field": "header.critical",
+          "raw": "Non-Critical",
+          "normalized": "Non-Critical",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 427
+        },
+        {
+          "id": "INPUT-SOURCE-003",
+          "field": "header.type1",
+          "raw": "MAINTENANCE",
+          "normalized": "MAINTENANCE",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 428
+        },
+        {
+          "id": "INPUT-SOURCE-004",
+          "field": "header.type2",
+          "raw": "MAINTENANCE",
+          "normalized": "MAINTENANCE",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 429
+        },
+        {
+          "id": "INPUT-SOURCE-005",
+          "field": "header.notice_effective_date",
+          "raw": "03/05/2026  2:53:02PM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 430
+        },
+        {
+          "id": "INPUT-SOURCE-006",
+          "field": "header.notice_end_date",
+          "raw": "03/06/2026 9:00:00am",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 431
+        },
+        {
+          "id": "INPUT-SOURCE-007",
+          "field": "header.post_date",
+          "raw": "3/5/2026 2:53:02 PM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 432
+        },
+        {
+          "id": "INPUT-SOURCE-008",
+          "field": "header.notice_id",
+          "raw": "46805",
+          "normalized": "46805",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 433
+        },
+        {
+          "id": "INPUT-SOURCE-009",
+          "field": "header.req_rsp",
+          "raw": "1",
+          "normalized": "1",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 434
+        },
+        {
+          "id": "INPUT-SOURCE-010",
+          "field": "header.rsp_date",
+          "raw": "3/5/2026 12:00:00 AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 435
+        },
+        {
+          "id": "INPUT-SOURCE-011",
+          "field": "header.status",
+          "raw": "INITIATE",
+          "normalized": "INITIATE",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 436
+        },
+        {
+          "id": "INPUT-SOURCE-012",
+          "field": "header.prior_notice_id",
+          "raw": "",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 437
+        },
+        {
+          "id": "INPUT-SOURCE-013",
+          "field": "header.subject",
+          "raw": "PHMSA MEGA-SEG 13 AM#3 107/108-ILI TOOLS",
+          "normalized": "PHMSA MEGA-SEG 13 AM#3 107/108-ILI TOOLS",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 438
+        },
+        {
+          "id": "INPUT-SOURCE-014",
+          "field": "metadata.notice_id",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 439
+        },
+        {
+          "id": "INPUT-SOURCE-015",
+          "field": "metadata.notice_type",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 440
+        },
+        {
+          "id": "INPUT-SOURCE-016",
+          "field": "metadata.subject",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 441
+        },
+        {
+          "id": "INPUT-SOURCE-017",
+          "field": "metadata.download_date",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 442
+        },
+        {
+          "id": "INPUT-SOURCE-018",
+          "field": "metadata.source_url",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 443
+        },
+        {
+          "id": "INPUT-SOURCE-019",
+          "field": "metadata.html_file",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 444
+        },
+        {
+          "id": "INPUT-SOURCE-020",
+          "field": "body",
+          "raw": "STATION 302 – REPLACE REGULATOR – UPDATE\nPHMSA MEGA RULE–- ELIGIBLE\nPROJECT\n- SEGMENT 13 – AMARILLO #3 M/L – CS 107/108 – ILI TOOL\nRUNS\nIn accordance with its FERC\nGas Tariff and as posted on Natural's Outage Impact Report\n(X25-1166550)\n;\nas part of\nNatural's ongoing pipeline Integrity Management Program, Natural will perform a\nseries of ILI tool runs on its Amarillo #3 mainline between Compressor Station 107\n(CS 107) located in Mills County, Iowa and Compressor Station 108 (CS 108)\nlocated in Warren County, Iowa (Segment 13 of Natural's Amarillo Mainline Zone).\nThe tool runs will require Natural to reduce the operating capacity, thus limiting\nNatural's throughput capacity northbound through CS 108.  Once the data\nfrom the tool runs have been analyzed, any remediation work impacting shippers\nwill be posted.\nThis remediation project is\npursuant to the PHMSA Mega Rule and as set forth in its Tariff, is an Eligible\nProject (ID 4819) included on the Eligible Project List posted on Natural's\ninternet website.  See Eligible Project ID, line name and location\nidentified below (Appendix F- Docket No. RP22-1222 Settlement).  This\noutage is subject to the provisions of Section 5.2 (c) (5) of the General\nTerms and Conditions of Natural's FERC Gas Tariff.\nProject\nID          Line\nName\nLocation/Segment\nNo.\n4819                  AMARILLO\n#3 MAINLINE     SEGMENT 13\nThe scheduling\nconstraint will be upstream of CS 108 at the beginning of Segment 13;\ntherefore, any gas received south of Segment 13 for delivery north of Segment\n13 will be impacted for the duration of the restriction.  Receipts from\nTrailblazer Gage (LOC 902900) are south of CS 107 and will be impacted for the\nduration of the restriction.  Northern Natural Mills (LOC 900203) is located\ndownstream of the Segment 13 constraint location.  For scheduling purposes, the\nAmarillo Pool (LOC 10566) is located south of the constraint.\nAdditionally, firm transportation associated with storage withdrawals or\ninjections may be impacted.\nAs such,\neffective on the gas days indicated below, Natural will schedule Primary Firm and\nSecondary in-path Firm transports to no less than\n44%\nof contract\nMDQ northbound through CS 107.  AOR/ITS and Secondary out-of-path Firm\ntransports\nwill not\nbe available for the duration of the restriction.\nTOOL RUN\nDATES\n:\nGas day Friday,\nApril 17, 2026 (Cleaning/ Gauge Tools)\nGas day\nTuesday, April 21, 2026 (Cleaning Tool)\nGas day Thursday,\nApril 23, 2026 (Cleaning Tool)\nGas day Tuesday,\nApril 28, 2026 (Combo Tool)\nGas day Thursday,\nApril 30, 2026 (EMAT Tool)\nGas day\nFriday, May 1, 2026 (EMAT Tool)\nThe stated\nscheduling percentage is based upon the current level of firm capacity\ncontracted for during this restriction and is subject to change based upon\noperational conditions and Shipper utilization.\nContinue to\nmonitor Natural's interactive website for any updates to the end date and/or\nscheduling percentage during this restriction.  Please contact your\nAccount Director or Scheduling Representative if you have any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "normalized": "STATION 302 – REPLACE REGULATOR – UPDATE\nPHMSA MEGA RULE–- ELIGIBLE\nPROJECT\n- SEGMENT 13 – AMARILLO #3 M/L – CS 107/108 – ILI TOOL\nRUNS\nIn accordance with its FERC\nGas Tariff and as posted on Natural's Outage Impact Report\n(X25-1166550)\n;\nas part of\nNatural's ongoing pipeline Integrity Management Program, Natural will perform a\nseries of ILI tool runs on its Amarillo #3 mainline between Compressor Station 107\n(CS 107) located in Mills County, Iowa and Compressor Station 108 (CS 108)\nlocated in Warren County, Iowa (Segment 13 of Natural's Amarillo Mainline Zone).\nThe tool runs will require Natural to reduce the operating capacity, thus limiting\nNatural's throughput capacity northbound through CS 108.  Once the data\nfrom the tool runs have been analyzed, any remediation work impacting shippers\nwill be posted.\nThis remediation project is\npursuant to the PHMSA Mega Rule and as set forth in its Tariff, is an Eligible\nProject (ID 4819) included on the Eligible Project List posted on Natural's\ninternet website.  See Eligible Project ID, line name and location\nidentified below (Appendix F- Docket No. RP22-1222 Settlement).  This\noutage is subject to the provisions of Section 5.2 (c) (5) of the General\nTerms and Conditions of Natural's FERC Gas Tariff.\nProject\nID          Line\nName\nLocation/Segment\nNo.\n4819                  AMARILLO\n#3 MAINLINE     SEGMENT 13\nThe scheduling\nconstraint will be upstream of CS 108 at the beginning of Segment 13;\ntherefore, any gas received south of Segment 13 for delivery north of Segment\n13 will be impacted for the duration of the restriction.  Receipts from\nTrailblazer Gage (LOC 902900) are south of CS 107 and will be impacted for the\nduration of the restriction.  Northern Natural Mills (LOC 900203) is located\ndownstream of the Segment 13 constraint location.  For scheduling purposes, the\nAmarillo Pool (LOC 10566) is located south of the constraint.\nAdditionally, firm transportation associated with storage withdrawals or\ninjections may be impacted.\nAs such,\neffective on the gas days indicated below, Natural will schedule Primary Firm and\nSecondary in-path Firm transports to no less than\n44%\nof contract\nMDQ northbound through CS 107.  AOR/ITS and Secondary out-of-path Firm\ntransports\nwill not\nbe available for the duration of the restriction.\nTOOL RUN\nDATES\n:\nGas day Friday,\nApril 17, 2026 (Cleaning/ Gauge Tools)\nGas day\nTuesday, April 21, 2026 (Cleaning Tool)\nGas day Thursday,\nApril 23, 2026 (Cleaning Tool)\nGas day Tuesday,\nApril 28, 2026 (Combo Tool)\nGas day Thursday,\nApril 30, 2026 (EMAT Tool)\nGas day\nFriday, May 1, 2026 (EMAT Tool)\nThe stated\nscheduling percentage is based upon the current level of firm capacity\ncontracted for during this restriction and is subject to change based upon\noperational conditions and Shipper utilization.\nContinue to\nmonitor Natural's interactive website for any updates to the end date and/or\nscheduling percentage during this restriction.  Please contact your\nAccount Director or Scheduling Representative if you have any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 445
+        }
+      ],
+      "header": {
+        "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+        "critical": "Non-Critical",
+        "type1": "MAINTENANCE",
+        "type2": "MAINTENANCE",
+        "notice_effective_date": "03/05/2026  2:53:02PM",
+        "notice_end_date": "03/06/2026 9:00:00am",
+        "post_date": "3/5/2026 2:53:02 PM",
+        "notice_id": "46805",
+        "req_rsp": "1",
+        "rsp_date": "3/5/2026 12:00:00 AM",
+        "status": "INITIATE",
+        "prior_notice_id": "",
+        "subject": "PHMSA MEGA-SEG 13 AM#3 107/108-ILI TOOLS"
+      },
+      "body": "STATION 302 – REPLACE REGULATOR – UPDATE\nPHMSA MEGA RULE–- ELIGIBLE\nPROJECT\n- SEGMENT 13 – AMARILLO #3 M/L – CS 107/108 – ILI TOOL\nRUNS\nIn accordance with its FERC\nGas Tariff and as posted on Natural's Outage Impact Report\n(X25-1166550)\n;\nas part of\nNatural's ongoing pipeline Integrity Management Program, Natural will perform a\nseries of ILI tool runs on its Amarillo #3 mainline between Compressor Station 107\n(CS 107) located in Mills County, Iowa and Compressor Station 108 (CS 108)\nlocated in Warren County, Iowa (Segment 13 of Natural's Amarillo Mainline Zone).\nThe tool runs will require Natural to reduce the operating capacity, thus limiting\nNatural's throughput capacity northbound through CS 108.  Once the data\nfrom the tool runs have been analyzed, any remediation work impacting shippers\nwill be posted.\nThis remediation project is\npursuant to the PHMSA Mega Rule and as set forth in its Tariff, is an Eligible\nProject (ID 4819) included on the Eligible Project List posted on Natural's\ninternet website.  See Eligible Project ID, line name and location\nidentified below (Appendix F- Docket No. RP22-1222 Settlement).  This\noutage is subject to the provisions of Section 5.2 (c) (5) of the General\nTerms and Conditions of Natural's FERC Gas Tariff.\nProject\nID          Line\nName\nLocation/Segment\nNo.\n4819                  AMARILLO\n#3 MAINLINE     SEGMENT 13\nThe scheduling\nconstraint will be upstream of CS 108 at the beginning of Segment 13;\ntherefore, any gas received south of Segment 13 for delivery north of Segment\n13 will be impacted for the duration of the restriction.  Receipts from\nTrailblazer Gage (LOC 902900) are south of CS 107 and will be impacted for the\nduration of the restriction.  Northern Natural Mills (LOC 900203) is located\ndownstream of the Segment 13 constraint location.  For scheduling purposes, the\nAmarillo Pool (LOC 10566) is located south of the constraint.\nAdditionally, firm transportation associated with storage withdrawals or\ninjections may be impacted.\nAs such,\neffective on the gas days indicated below, Natural will schedule Primary Firm and\nSecondary in-path Firm transports to no less than\n44%\nof contract\nMDQ northbound through CS 107.  AOR/ITS and Secondary out-of-path Firm\ntransports\nwill not\nbe available for the duration of the restriction.\nTOOL RUN\nDATES\n:\nGas day Friday,\nApril 17, 2026 (Cleaning/ Gauge Tools)\nGas day\nTuesday, April 21, 2026 (Cleaning Tool)\nGas day Thursday,\nApril 23, 2026 (Cleaning Tool)\nGas day Tuesday,\nApril 28, 2026 (Combo Tool)\nGas day Thursday,\nApril 30, 2026 (EMAT Tool)\nGas day\nFriday, May 1, 2026 (EMAT Tool)\nThe stated\nscheduling percentage is based upon the current level of firm capacity\ncontracted for during this restriction and is subject to change based upon\noperational conditions and Shipper utilization.\nContinue to\nmonitor Natural's interactive website for any updates to the end date and/or\nscheduling percentage during this restriction.  Please contact your\nAccount Director or Scheduling Representative if you have any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+      "status": "PARSED_WITH_UNKNOWNS"
+    },
+    {
+      "path": "inherited/evaluation/notices/46818_MAINTENANCE.html",
+      "sha256": "961e9bc5f5644ae02fa13578c77c03f07b096aa8b4c684933b2d28f3245582ed",
+      "fields": [
+        {
+          "id": "INPUT-SOURCE-001",
+          "field": "header.tsp",
+          "raw": "6931794-NATURAL GAS PIPELINE CO.",
+          "normalized": "6931794-NATURAL GAS PIPELINE CO.",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 426
+        },
+        {
+          "id": "INPUT-SOURCE-002",
+          "field": "header.critical",
+          "raw": "Non-Critical",
+          "normalized": "Non-Critical",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 427
+        },
+        {
+          "id": "INPUT-SOURCE-003",
+          "field": "header.type1",
+          "raw": "MAINTENANCE",
+          "normalized": "MAINTENANCE",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 428
+        },
+        {
+          "id": "INPUT-SOURCE-004",
+          "field": "header.type2",
+          "raw": "MAINTENANCE",
+          "normalized": "MAINTENANCE",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 429
+        },
+        {
+          "id": "INPUT-SOURCE-005",
+          "field": "header.notice_effective_date",
+          "raw": "03/12/2026 12:38:41PM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 430
+        },
+        {
+          "id": "INPUT-SOURCE-006",
+          "field": "header.notice_end_date",
+          "raw": "03/19/2026 9:00:00am",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 431
+        },
+        {
+          "id": "INPUT-SOURCE-007",
+          "field": "header.post_date",
+          "raw": "3/12/2026 12:38:41 PM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 432
+        },
+        {
+          "id": "INPUT-SOURCE-008",
+          "field": "header.notice_id",
+          "raw": "46818",
+          "normalized": "46818",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 433
+        },
+        {
+          "id": "INPUT-SOURCE-009",
+          "field": "header.req_rsp",
+          "raw": "1",
+          "normalized": "1",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 434
+        },
+        {
+          "id": "INPUT-SOURCE-010",
+          "field": "header.rsp_date",
+          "raw": "3/12/2026 12:00:00 AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 435
+        },
+        {
+          "id": "INPUT-SOURCE-011",
+          "field": "header.status",
+          "raw": "INITIATE",
+          "normalized": "INITIATE",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 436
+        },
+        {
+          "id": "INPUT-SOURCE-012",
+          "field": "header.prior_notice_id",
+          "raw": "",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 437
+        },
+        {
+          "id": "INPUT-SOURCE-013",
+          "field": "header.subject",
+          "raw": "OUTAGE IMPACT REPORT - 3-12-26",
+          "normalized": "OUTAGE IMPACT REPORT - 3-12-26",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 438
+        },
+        {
+          "id": "INPUT-SOURCE-014",
+          "field": "metadata.notice_id",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 439
+        },
+        {
+          "id": "INPUT-SOURCE-015",
+          "field": "metadata.notice_type",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 440
+        },
+        {
+          "id": "INPUT-SOURCE-016",
+          "field": "metadata.subject",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 441
+        },
+        {
+          "id": "INPUT-SOURCE-017",
+          "field": "metadata.download_date",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 442
+        },
+        {
+          "id": "INPUT-SOURCE-018",
+          "field": "metadata.source_url",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 443
+        },
+        {
+          "id": "INPUT-SOURCE-019",
+          "field": "metadata.html_file",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 444
+        },
+        {
+          "id": "INPUT-SOURCE-020",
+          "field": "body",
+          "raw": "REVISED ROLLING 12-MONTH MAINTENANCE PLAN\nOUTAGE\nIMPACT REPORT UPDATE\nNatural\nhas posted an updated Outage Impact Report on its website.\nThe\nreport outlines scheduled projects that may affect customers and includes:\n·\nImpacted\npipeline segments\n·\nEstimated\nstart and finish dates\n·\nBrief\nproject descriptions\n·\nAnticipated\nshipper impacts\nChanges\nto existing projects and newly added projects are highlighted in yellow for\neasy reference.  In addition, Natural will continue to post detailed updates on\nspecific maintenance projects with direct shipper impacts on its interactive\nwebsite as needed.  The full maintenance plan is accessible via Natural's\nportal page or by clicking the link below:\nOutage\nImpact Report - 3-12-26\nIf\nyou have any questions, please contact your Account Director or Scheduling\nRepresentative.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "normalized": "REVISED ROLLING 12-MONTH MAINTENANCE PLAN\nOUTAGE\nIMPACT REPORT UPDATE\nNatural\nhas posted an updated Outage Impact Report on its website.\nThe\nreport outlines scheduled projects that may affect customers and includes:\n·\nImpacted\npipeline segments\n·\nEstimated\nstart and finish dates\n·\nBrief\nproject descriptions\n·\nAnticipated\nshipper impacts\nChanges\nto existing projects and newly added projects are highlighted in yellow for\neasy reference.  In addition, Natural will continue to post detailed updates on\nspecific maintenance projects with direct shipper impacts on its interactive\nwebsite as needed.  The full maintenance plan is accessible via Natural's\nportal page or by clicking the link below:\nOutage\nImpact Report - 3-12-26\nIf\nyou have any questions, please contact your Account Director or Scheduling\nRepresentative.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 445
+        }
+      ],
+      "header": {
+        "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+        "critical": "Non-Critical",
+        "type1": "MAINTENANCE",
+        "type2": "MAINTENANCE",
+        "notice_effective_date": "03/12/2026 12:38:41PM",
+        "notice_end_date": "03/19/2026 9:00:00am",
+        "post_date": "3/12/2026 12:38:41 PM",
+        "notice_id": "46818",
+        "req_rsp": "1",
+        "rsp_date": "3/12/2026 12:00:00 AM",
+        "status": "INITIATE",
+        "prior_notice_id": "",
+        "subject": "OUTAGE IMPACT REPORT - 3-12-26"
+      },
+      "body": "REVISED ROLLING 12-MONTH MAINTENANCE PLAN\nOUTAGE\nIMPACT REPORT UPDATE\nNatural\nhas posted an updated Outage Impact Report on its website.\nThe\nreport outlines scheduled projects that may affect customers and includes:\n·\nImpacted\npipeline segments\n·\nEstimated\nstart and finish dates\n·\nBrief\nproject descriptions\n·\nAnticipated\nshipper impacts\nChanges\nto existing projects and newly added projects are highlighted in yellow for\neasy reference.  In addition, Natural will continue to post detailed updates on\nspecific maintenance projects with direct shipper impacts on its interactive\nwebsite as needed.  The full maintenance plan is accessible via Natural's\nportal page or by clicking the link below:\nOutage\nImpact Report - 3-12-26\nIf\nyou have any questions, please contact your Account Director or Scheduling\nRepresentative.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+      "status": "PARSED_WITH_UNKNOWNS"
+    },
+    {
+      "path": "inherited/evaluation/notices/46864_FORCE MAJEURE.html",
+      "sha256": "aeb686ef2f60a384bdb5965d43499102f8721003060f8436d46312e7aba269db",
+      "fields": [
+        {
+          "id": "INPUT-SOURCE-001",
+          "field": "header.tsp",
+          "raw": "6931794-NATURAL GAS PIPELINE CO.",
+          "normalized": "6931794-NATURAL GAS PIPELINE CO.",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 426
+        },
+        {
+          "id": "INPUT-SOURCE-002",
+          "field": "header.critical",
+          "raw": "Non-Critical",
+          "normalized": "Non-Critical",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 427
+        },
+        {
+          "id": "INPUT-SOURCE-003",
+          "field": "header.type1",
+          "raw": "FORCE MAJEURE",
+          "normalized": "FORCE MAJEURE",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 428
+        },
+        {
+          "id": "INPUT-SOURCE-004",
+          "field": "header.type2",
+          "raw": "FORCE MAJEURE",
+          "normalized": "FORCE MAJEURE",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 429
+        },
+        {
+          "id": "INPUT-SOURCE-005",
+          "field": "header.notice_effective_date",
+          "raw": "04/06/2026  9:21:29AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 430
+        },
+        {
+          "id": "INPUT-SOURCE-006",
+          "field": "header.notice_end_date",
+          "raw": "06/30/2026 9:00:00am",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 431
+        },
+        {
+          "id": "INPUT-SOURCE-007",
+          "field": "header.post_date",
+          "raw": "4/6/2026 9:21:29 AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 432
+        },
+        {
+          "id": "INPUT-SOURCE-008",
+          "field": "header.notice_id",
+          "raw": "46864",
+          "normalized": "46864",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 433
+        },
+        {
+          "id": "INPUT-SOURCE-009",
+          "field": "header.req_rsp",
+          "raw": "1",
+          "normalized": "1",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 434
+        },
+        {
+          "id": "INPUT-SOURCE-010",
+          "field": "header.rsp_date",
+          "raw": "4/6/2026 12:00:00 AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 435
+        },
+        {
+          "id": "INPUT-SOURCE-011",
+          "field": "header.status",
+          "raw": "INITIATE",
+          "normalized": "INITIATE",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 436
+        },
+        {
+          "id": "INPUT-SOURCE-012",
+          "field": "header.prior_notice_id",
+          "raw": "",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 437
+        },
+        {
+          "id": "INPUT-SOURCE-013",
+          "field": "header.subject",
+          "raw": "FORCE MAJEURE-COMP STA 168",
+          "normalized": "FORCE MAJEURE-COMP STA 168",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 438
+        },
+        {
+          "id": "INPUT-SOURCE-014",
+          "field": "metadata.notice_id",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 439
+        },
+        {
+          "id": "INPUT-SOURCE-015",
+          "field": "metadata.notice_type",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 440
+        },
+        {
+          "id": "INPUT-SOURCE-016",
+          "field": "metadata.subject",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 441
+        },
+        {
+          "id": "INPUT-SOURCE-017",
+          "field": "metadata.download_date",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 442
+        },
+        {
+          "id": "INPUT-SOURCE-018",
+          "field": "metadata.source_url",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 443
+        },
+        {
+          "id": "INPUT-SOURCE-019",
+          "field": "metadata.html_file",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 444
+        },
+        {
+          "id": "INPUT-SOURCE-020",
+          "field": "body",
+          "raw": "FORCE MAJEURE – COMPRESSOR STATION 168\nNatural has experienced\nhorsepower issues at Compressor Station 168 (CS 168) located in Bailey County,\nTexas (Segment 8 of Natural's Permian Zone).  This is a Force Majeure\nevent.  Natural is required to reduce the maximum operating capacity\nnorthbound into Segment 8 from Segment 9, thus limiting Natural's throughput\ncapacity northbound through Compressor Station 167 (CS 167).\nThe scheduling constraint\nwill be Segment 9 at CS 167; therefore, any gas received south of CS 167 for\ndelivery north of CS 167 will be impacted for the duration of the\nrestriction.  The Pooling Point - Permian Zone (LOC 25077) is located\nsouth of the constraint.  Firm transportation associated with storage\nwithdrawals may be impacted.\nAs such, effective for gas\nday\nTuesday, April 7, 2026, Timely\nCycle and continuing until further notice\n, Natural will schedule Primary Firm and Secondary in-path Firm\ntransports to no less than\n94%\nof contract MDQ through CS 167.  AOR/ITS and\nSecondary out-of-path Firm transports\nwill not\nbe available for the\nduration of this restriction.\nAdditionally, the unit\nmaintenance referenced on Natural's Outage Impact Report (X26-220667) has been\npostponed until further notice\n.\nThe stated scheduling\npercentage is based upon the current level of firm capacity contracted for\nduring this restriction and is subject to change based upon operational\nconditions and Shipper utilization.\nContinue to monitor Natural's\ninteractive website for any updates to the end date during this\nrestriction.  Please contact your Account Director or Scheduling\nRepresentative if you have any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "normalized": "FORCE MAJEURE – COMPRESSOR STATION 168\nNatural has experienced\nhorsepower issues at Compressor Station 168 (CS 168) located in Bailey County,\nTexas (Segment 8 of Natural's Permian Zone).  This is a Force Majeure\nevent.  Natural is required to reduce the maximum operating capacity\nnorthbound into Segment 8 from Segment 9, thus limiting Natural's throughput\ncapacity northbound through Compressor Station 167 (CS 167).\nThe scheduling constraint\nwill be Segment 9 at CS 167; therefore, any gas received south of CS 167 for\ndelivery north of CS 167 will be impacted for the duration of the\nrestriction.  The Pooling Point - Permian Zone (LOC 25077) is located\nsouth of the constraint.  Firm transportation associated with storage\nwithdrawals may be impacted.\nAs such, effective for gas\nday\nTuesday, April 7, 2026, Timely\nCycle and continuing until further notice\n, Natural will schedule Primary Firm and Secondary in-path Firm\ntransports to no less than\n94%\nof contract MDQ through CS 167.  AOR/ITS and\nSecondary out-of-path Firm transports\nwill not\nbe available for the\nduration of this restriction.\nAdditionally, the unit\nmaintenance referenced on Natural's Outage Impact Report (X26-220667) has been\npostponed until further notice\n.\nThe stated scheduling\npercentage is based upon the current level of firm capacity contracted for\nduring this restriction and is subject to change based upon operational\nconditions and Shipper utilization.\nContinue to monitor Natural's\ninteractive website for any updates to the end date during this\nrestriction.  Please contact your Account Director or Scheduling\nRepresentative if you have any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 445
+        }
+      ],
+      "header": {
+        "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+        "critical": "Non-Critical",
+        "type1": "FORCE MAJEURE",
+        "type2": "FORCE MAJEURE",
+        "notice_effective_date": "04/06/2026  9:21:29AM",
+        "notice_end_date": "06/30/2026 9:00:00am",
+        "post_date": "4/6/2026 9:21:29 AM",
+        "notice_id": "46864",
+        "req_rsp": "1",
+        "rsp_date": "4/6/2026 12:00:00 AM",
+        "status": "INITIATE",
+        "prior_notice_id": "",
+        "subject": "FORCE MAJEURE-COMP STA 168"
+      },
+      "body": "FORCE MAJEURE – COMPRESSOR STATION 168\nNatural has experienced\nhorsepower issues at Compressor Station 168 (CS 168) located in Bailey County,\nTexas (Segment 8 of Natural's Permian Zone).  This is a Force Majeure\nevent.  Natural is required to reduce the maximum operating capacity\nnorthbound into Segment 8 from Segment 9, thus limiting Natural's throughput\ncapacity northbound through Compressor Station 167 (CS 167).\nThe scheduling constraint\nwill be Segment 9 at CS 167; therefore, any gas received south of CS 167 for\ndelivery north of CS 167 will be impacted for the duration of the\nrestriction.  The Pooling Point - Permian Zone (LOC 25077) is located\nsouth of the constraint.  Firm transportation associated with storage\nwithdrawals may be impacted.\nAs such, effective for gas\nday\nTuesday, April 7, 2026, Timely\nCycle and continuing until further notice\n, Natural will schedule Primary Firm and Secondary in-path Firm\ntransports to no less than\n94%\nof contract MDQ through CS 167.  AOR/ITS and\nSecondary out-of-path Firm transports\nwill not\nbe available for the\nduration of this restriction.\nAdditionally, the unit\nmaintenance referenced on Natural's Outage Impact Report (X26-220667) has been\npostponed until further notice\n.\nThe stated scheduling\npercentage is based upon the current level of firm capacity contracted for\nduring this restriction and is subject to change based upon operational\nconditions and Shipper utilization.\nContinue to monitor Natural's\ninteractive website for any updates to the end date during this\nrestriction.  Please contact your Account Director or Scheduling\nRepresentative if you have any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+      "status": "PARSED_WITH_UNKNOWNS"
+    },
+    {
+      "path": "inherited/evaluation/notices/46881_MAINTENANCE.html",
+      "sha256": "e6a24fef1e8d9d9f5d2a8891ce19e19ffbdc44b7865167b4050028ae64d1d563",
+      "fields": [
+        {
+          "id": "INPUT-SOURCE-001",
+          "field": "header.tsp",
+          "raw": "6931794-NATURAL GAS PIPELINE CO.",
+          "normalized": "6931794-NATURAL GAS PIPELINE CO.",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 426
+        },
+        {
+          "id": "INPUT-SOURCE-002",
+          "field": "header.critical",
+          "raw": "Non-Critical",
+          "normalized": "Non-Critical",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 427
+        },
+        {
+          "id": "INPUT-SOURCE-003",
+          "field": "header.type1",
+          "raw": "MAINTENANCE",
+          "normalized": "MAINTENANCE",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 428
+        },
+        {
+          "id": "INPUT-SOURCE-004",
+          "field": "header.type2",
+          "raw": "MAINTENANCE",
+          "normalized": "MAINTENANCE",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 429
+        },
+        {
+          "id": "INPUT-SOURCE-005",
+          "field": "header.notice_effective_date",
+          "raw": "04/15/2026  3:47:10PM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 430
+        },
+        {
+          "id": "INPUT-SOURCE-006",
+          "field": "header.notice_end_date",
+          "raw": "04/16/2026 9:00:00am",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 431
+        },
+        {
+          "id": "INPUT-SOURCE-007",
+          "field": "header.post_date",
+          "raw": "4/15/2026 3:47:10 PM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 432
+        },
+        {
+          "id": "INPUT-SOURCE-008",
+          "field": "header.notice_id",
+          "raw": "46881",
+          "normalized": "46881",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 433
+        },
+        {
+          "id": "INPUT-SOURCE-009",
+          "field": "header.req_rsp",
+          "raw": "1",
+          "normalized": "1",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 434
+        },
+        {
+          "id": "INPUT-SOURCE-010",
+          "field": "header.rsp_date",
+          "raw": "4/15/2026 12:00:00 AM",
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 435
+        },
+        {
+          "id": "INPUT-SOURCE-011",
+          "field": "header.status",
+          "raw": "SUPERSEDE",
+          "normalized": "SUPERSEDE",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 436
+        },
+        {
+          "id": "INPUT-SOURCE-012",
+          "field": "header.prior_notice_id",
+          "raw": "46857",
+          "normalized": "46857",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 437
+        },
+        {
+          "id": "INPUT-SOURCE-013",
+          "field": "header.subject",
+          "raw": "SEG 26 - GC #3 M/L-ILI TOOL RUNS - UPD 1",
+          "normalized": "SEG 26 - GC #3 M/L-ILI TOOL RUNS - UPD 1",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 438
+        },
+        {
+          "id": "INPUT-SOURCE-014",
+          "field": "metadata.notice_id",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 439
+        },
+        {
+          "id": "INPUT-SOURCE-015",
+          "field": "metadata.notice_type",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 440
+        },
+        {
+          "id": "INPUT-SOURCE-016",
+          "field": "metadata.subject",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 441
+        },
+        {
+          "id": "INPUT-SOURCE-017",
+          "field": "metadata.download_date",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 442
+        },
+        {
+          "id": "INPUT-SOURCE-018",
+          "field": "metadata.source_url",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 443
+        },
+        {
+          "id": "INPUT-SOURCE-019",
+          "field": "metadata.html_file",
+          "raw": null,
+          "normalized": null,
+          "status": "UNKNOWN",
+          "issue": null,
+          "spec_line": 444
+        },
+        {
+          "id": "INPUT-SOURCE-020",
+          "field": "body",
+          "raw": "SEGMENT\n26 – GULF COAST #3 M/L - ILI TOOL RUNS – UPDATE 1\nThe\nTool run dates have changed. See previous Notice ID 46857 dated April 2, 2026\nAs previously\nposted on Natural's Outage Impact Report (\nX25-1474603 and X25-147896\n) and as part of\nNatural's ongoing pipeline Integrity Management Program, Natural will perform a\nseries of ILI tool runs on the Gulf Coast #3 Mainline near Compressor Station 394\n(CS 394) located in Cass County, Texas, in Segment 26 of Natural's Texok Zone.\nNatural previously anticipated no customer impact during this pipeline\nintegrity maintenance work at CS 394.  However, due to current operational\nconditions and to maintain system integrity, the scope of the project has been\nchanged and will now impact the receipt locations as noted below.  Once the\ndata from the tool runs have been analyzed, any remediation work impacting\nshippers will be posted.\nAs\nsuch, effective on the gas days indicated below, the receipt locations listed\nbelow will be shut in for the duration of this integrity work.  No transport\nservices will be available.\nLOCATIONS\nUNAVAILABLE FOR RECEIPTS:\nLOC\n42741      ET G&P ETML NACOGDOCHES\nLOC\n45310      BTA ETG EAST TEXAS GATHERING\nLOC 45397      ET G&P NACOGDOCHES\nLOC 46389      TGG NACOGDOGDOCES\nLOC\n55704      MARKWEST HARRISON\nTOOL\nRUN DATES\n:\nGas\nday Thursday, April 9, 2026 (Cleaning Tool)\nGas\nday Tuesday April 14, 2026 and continuing through gas day Tuesday, April 21, 2026\n(Previously Thursday, April 16, 2026) (Cleaning and MFL Tool)\nGas\nday Wednesday April 22, 2026 (Previously Tuesday April 21, 2026) and continuing\nthrough gas day Saturday, April 25, 2026 (Previously Friday April 24, 2026)\n(MFL and EMAT Tool)\nPlease\ncontact your Account Director or Scheduling Representative if you have any\nquestions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "normalized": "SEGMENT\n26 – GULF COAST #3 M/L - ILI TOOL RUNS – UPDATE 1\nThe\nTool run dates have changed. See previous Notice ID 46857 dated April 2, 2026\nAs previously\nposted on Natural's Outage Impact Report (\nX25-1474603 and X25-147896\n) and as part of\nNatural's ongoing pipeline Integrity Management Program, Natural will perform a\nseries of ILI tool runs on the Gulf Coast #3 Mainline near Compressor Station 394\n(CS 394) located in Cass County, Texas, in Segment 26 of Natural's Texok Zone.\nNatural previously anticipated no customer impact during this pipeline\nintegrity maintenance work at CS 394.  However, due to current operational\nconditions and to maintain system integrity, the scope of the project has been\nchanged and will now impact the receipt locations as noted below.  Once the\ndata from the tool runs have been analyzed, any remediation work impacting\nshippers will be posted.\nAs\nsuch, effective on the gas days indicated below, the receipt locations listed\nbelow will be shut in for the duration of this integrity work.  No transport\nservices will be available.\nLOCATIONS\nUNAVAILABLE FOR RECEIPTS:\nLOC\n42741      ET G&P ETML NACOGDOCHES\nLOC\n45310      BTA ETG EAST TEXAS GATHERING\nLOC 45397      ET G&P NACOGDOCHES\nLOC 46389      TGG NACOGDOGDOCES\nLOC\n55704      MARKWEST HARRISON\nTOOL\nRUN DATES\n:\nGas\nday Thursday, April 9, 2026 (Cleaning Tool)\nGas\nday Tuesday April 14, 2026 and continuing through gas day Tuesday, April 21, 2026\n(Previously Thursday, April 16, 2026) (Cleaning and MFL Tool)\nGas\nday Wednesday April 22, 2026 (Previously Tuesday April 21, 2026) and continuing\nthrough gas day Saturday, April 25, 2026 (Previously Friday April 24, 2026)\n(MFL and EMAT Tool)\nPlease\ncontact your Account Director or Scheduling Representative if you have any\nquestions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+          "status": "KNOWN",
+          "issue": null,
+          "spec_line": 445
+        }
+      ],
+      "header": {
+        "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+        "critical": "Non-Critical",
+        "type1": "MAINTENANCE",
+        "type2": "MAINTENANCE",
+        "notice_effective_date": "04/15/2026  3:47:10PM",
+        "notice_end_date": "04/16/2026 9:00:00am",
+        "post_date": "4/15/2026 3:47:10 PM",
+        "notice_id": "46881",
+        "req_rsp": "1",
+        "rsp_date": "4/15/2026 12:00:00 AM",
+        "status": "SUPERSEDE",
+        "prior_notice_id": "46857",
+        "subject": "SEG 26 - GC #3 M/L-ILI TOOL RUNS - UPD 1"
+      },
+      "body": "SEGMENT\n26 – GULF COAST #3 M/L - ILI TOOL RUNS – UPDATE 1\nThe\nTool run dates have changed. See previous Notice ID 46857 dated April 2, 2026\nAs previously\nposted on Natural's Outage Impact Report (\nX25-1474603 and X25-147896\n) and as part of\nNatural's ongoing pipeline Integrity Management Program, Natural will perform a\nseries of ILI tool runs on the Gulf Coast #3 Mainline near Compressor Station 394\n(CS 394) located in Cass County, Texas, in Segment 26 of Natural's Texok Zone.\nNatural previously anticipated no customer impact during this pipeline\nintegrity maintenance work at CS 394.  However, due to current operational\nconditions and to maintain system integrity, the scope of the project has been\nchanged and will now impact the receipt locations as noted below.  Once the\ndata from the tool runs have been analyzed, any remediation work impacting\nshippers will be posted.\nAs\nsuch, effective on the gas days indicated below, the receipt locations listed\nbelow will be shut in for the duration of this integrity work.  No transport\nservices will be available.\nLOCATIONS\nUNAVAILABLE FOR RECEIPTS:\nLOC\n42741      ET G&P ETML NACOGDOCHES\nLOC\n45310      BTA ETG EAST TEXAS GATHERING\nLOC 45397      ET G&P NACOGDOCHES\nLOC 46389      TGG NACOGDOGDOCES\nLOC\n55704      MARKWEST HARRISON\nTOOL\nRUN DATES\n:\nGas\nday Thursday, April 9, 2026 (Cleaning Tool)\nGas\nday Tuesday April 14, 2026 and continuing through gas day Tuesday, April 21, 2026\n(Previously Thursday, April 16, 2026) (Cleaning and MFL Tool)\nGas\nday Wednesday April 22, 2026 (Previously Tuesday April 21, 2026) and continuing\nthrough gas day Saturday, April 25, 2026 (Previously Friday April 24, 2026)\n(MFL and EMAT Tool)\nPlease\ncontact your Account Director or Scheduling Representative if you have any\nquestions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
+      "status": "PARSED_WITH_UNKNOWNS"
+    }
+  ],
+  "ambiguous_dates": [],
+  "unlabeled_samples": {
+    "html_notices": 25,
+    "html_contract_errors": [],
+    "pdf_notices": 7,
+    "pdf_unsupported": 7,
+    "scope": "Header input contract and format support only. Classification needs live extraction, which this offline gate never runs; no label exists for these notices."
+  },
+  "scope": "Bounded parser contract and retained raw fields; not extraction accuracy or inherited parser acceptance",
+  "inherited_known_conflicts": [
+    "Malformed ID digits are stripped; missing status defaults INITIATE; post time can use download/wall clock. These remain inherited failures, never the input contract."
+  ],
+  "findings": []
+}
