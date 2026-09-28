@@ -36,3 +36,5 @@ PASS means the declared check passed on the listed observations, not that the wh
 | STATE-006 | restart | PASS | 2 | initial PASS: 2 |
 
 [Exact observations](run-20260928/results.json)
+
+See also [where the code was read](code_reads.md) and [the fresh-session exercise](fresh_session.md).
