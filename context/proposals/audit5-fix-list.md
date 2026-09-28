@@ -28,7 +28,7 @@ Source: the fifth audit of `3aaba89` (2026-09-28). Finding numbers (#n) refer to
 7. **Done in the commit after `7842059`: #2** Renamed to `labeled_positives_decided_non_signal`, with `labeled_positives_unresolved` added; a test holds that the two sum to Gate 2's missed positives. Originally: **Rename `supplied_label_false_negatives`** to `…_decided_negative`, or count unresolved positives in it.
 8. **Done in the commit after `5bd6c87`: #10** The report now has one headline per refusing stage. Originally: **Name the refusing stage in the consequences headline** (compile, witness or gate).
 9. **Done in the commit after `544708c`: #45** Five tests now derive their mutations from the spec's tables and stay green under the audit's harmless edits. Originally: **Remove string- and count-coupled tests** that fail on harmless edits (the fifth audit's precedence and quantifier mutations).
-10. **#34 Preflight: `helpers_complete` should be false or N/A when extraction failed.**
+10. **Done in the commit after `c1942fa`: #34** `helpers_complete` is None when processing failed before any helper was asked; covered by a synthetic failing-provider test (no new live call). Originally: Preflight: `helpers_complete` should be false or N/A when extraction failed.
 
 ## Tier 2: spec prose (a `proposed` decision row, then the owner approves and rereads)
 

@@ -418,3 +418,12 @@ Missing harness/evidence capability: none new; the fixtures now derive from comp
 Harness improvement made: the five tests were rewritten, each asserting that its mutation changed something. Under the four harmless edits (run as `make check` runs them), the old tests go red and the new ones pass.
 Could the same code read be avoided next time? Yes, if test fixtures are written against compiled tables from the start.
 
+CODE-READ-ID: AUDIT5-TIER1-PREFLIGHT-20260928
+Observed failure: fifth audit #34. A live preflight with a nonexistent model (1 call, MODEL_NOT_FOUND) reported `"helpers_complete": true` although no helper ran.
+Why evidence was insufficient: the record showed the flag, not what it was computed from.
+Source inspected: `harness/preflight.py` (40–150), `tests/test_check_registry.py` (115–165).
+What was learned: the flag was `all()` over an empty helper list when extraction failed.
+Missing harness/evidence capability: none; each flag's meaning is now stated where it is set.
+Harness improvement made: `helpers_complete` is None when processing failed before any helper was asked. A synthetic failing-provider test fails on the old code. No new live call was made.
+Could the same code read be avoided next time? Yes, if the record said N/A whenever a precondition failed, as `output_shape_valid` already does.
+
