@@ -355,3 +355,12 @@ Missing harness/evidence capability: a stated output shape for refusals, and a t
 Harness improvement made: the replay observer reads the key tolerantly and attaches `refused_by` to failing findings; test `test_an_input_refusal_in_the_replay_is_a_finding_not_a_crash`. It is an evaluator change.
 Could the same code read be avoided next time? Yes, if the catch-all kept a traceback under evidence and labeled it HARNESS_EXCEPTION instead of SPECIFICATION_INTEGRITY_ERROR. That is a further Tier 1 item.
 
+CODE-READ-ID: AUDIT5-TIER1-GATE-CODES-20260928
+Observed failure: fifth audit #32. harness.md cited INPUT_DATE_FORMAT_MISMATCH, ROUTINE_ADMIN_SIGNALED, LABELED_MISSED_POSITIVES and LABELED_FALSE_POSITIVES as catches, and MODEL_CONFIG_CHANGED as the model-change signal, but no test raised any of them.
+Why evidence was insufficient: to write a test that raises a code, you need to know where it is emitted and from what input. No evidence file says that.
+Source inspected: `harness/input_contract_checks.py` (48–60, 140–228), `harness/trading_evaluation.py` (268–292, 379–420), `harness/normalized_evaluation.py` (690–720), and the import lines of `rebuilt/signals.py` (to patch `classify` where the publisher calls it). No component logic was read.
+What was learned: the budget comparison is a pure function; the routine code is emitted only from the trading loop, so testing it needs the publisher's classifier patched.
+Missing harness/evidence capability: a registry mapping each gate code to its emitter and a triggering mutation, generated rather than hand-kept.
+Harness improvement made: `tests/test_gate_codes.py` (`fd98aef`). Each test was mutation-checked: breaking its emitter makes it fail.
+Could the same code read be avoided next time? Yes, with that registry.
+
