@@ -304,6 +304,7 @@ def reread(
             1,
             f"{person!r} is not a spec owner; a reread must name one of {listed}",
         )
+    check_acceptance(root, c)  # against the previous receipt, before a new one replaces it
     covered = [] if decision is not None else changes_since_last_read(c, root)
     for other in covered:
         if other["Person"] != person or other["Status"] not in {"approved", "owner-requested"}:

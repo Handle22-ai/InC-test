@@ -291,6 +291,46 @@ class SpecSourceTests(unittest.TestCase):
             else:
                 build(self.root)
 
+    def test_a_reread_cannot_launder_a_loosened_budget(self):
+        """Audit 4 follow-up: reread first, then compile, must still refuse."""
+        import subprocess
+
+        def git(*args):
+            subprocess.run(
+                ["git", "-c", "user.name=t", "-c", "user.email=t@t", *args],
+                cwd=self.root,
+                check=True,
+                capture_output=True,
+            )
+
+        pin = self.root / "context/spec-read-pin.json"
+        path = self.root / "spec.md"
+        text = path.read_text().replace(" | Thomas Hand | ", " | Owner A | ")
+        text = text.replace('"owners": ["Thomas Hand"]', '"owners": ["Owner A"]')
+        path.write_text(text)
+        first = reread("ARCH-SOURCE-001", "Owner A", self.root)
+        git("init", "-q")
+        git("add", "-A")
+        git("commit", "-qm", "reviewed")
+        anchor = next(line for line in text.splitlines() if line.startswith("ARCH-SOURCE-001 |"))
+        looser = text.replace(
+            '"max_missed_positives_per_capture": 2', '"max_missed_positives_per_capture": 4'
+        )
+        row = f"LOOSER-001 | approved | Owner A | {first['spec_sha256']} | Editorial tidy."
+        path.write_text(looser.replace(anchor, anchor + "\n" + row))
+        receipt = pin.read_text()
+        with self.assertRaisesRegex(ValueError, "ACCEPTANCE_LOOSENED"):
+            reread(None, "Owner A", self.root)
+        self.assertEqual(pin.read_text(), receipt)
+        with self.assertRaisesRegex(ValueError, "ACCEPTANCE_LOOSENED"):
+            build(self.root)
+        tagged = (
+            f"LOOSER-001 | approved | Owner A | {first['spec_sha256']} | LOOSENS_ACCEPTANCE: desk."
+        )
+        path.write_text(looser.replace(anchor, anchor + "\n" + tagged))
+        reread(None, "Owner A", self.root)
+        build(self.root)
+
     def test_declared_types_and_dates_refuse_fabrication(self):
         c = compile_spec(self.root)
         self.assertEqual(timestamp("2026-01-14", c), (None, None))
