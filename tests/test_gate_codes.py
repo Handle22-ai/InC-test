@@ -157,7 +157,13 @@ class ContextReviewTests(unittest.TestCase):
             return json.loads((out / "package.json").read_text()), (out / "package.md").read_text()
 
     def test_the_reviewed_spec_carries_no_warning(self):
-        package, text = self.package()
+        # Fix the review state here: the working spec may await a reread (audit 5 #45).
+        spec = (ROOT / "spec.md").read_text()
+        with (
+            patch("harness.context.review_status", return_value={"reviewed": True}),
+            patch("harness.spec_ownership.spec_text_with_hash", return_value=spec),
+        ):
+            package, text = self.package()
         self.assertEqual(package["spec_review"]["edits_since_reread"], [])
         self.assertNotIn("SPEC UNREVIEWED", text)
         self.assertIn("No check reads the assumptions table", text)
