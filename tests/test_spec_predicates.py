@@ -143,8 +143,8 @@ class SpecPredicateTests(unittest.TestCase):
         from harness.captures import store_before, verified_capture
 
         rows = {row["id"]: row for row in consequences.observations(compile_spec(ROOT))}
-        for capture in ("capture-0", "capture-1"):
-            missing = rows[f"{capture}/missing-prior"]["outcome"]
+        for name in ("capture-0", "capture-1"):
+            missing = rows[f"{name}/missing-prior"]["outcome"]
             self.assertEqual(missing["features"]["History"], "GAP")
             self.assertEqual(missing["rule"], "BR-HISTORY")
         registry = json.loads((ROOT / "requirements/trading-evidence.json").read_text())
