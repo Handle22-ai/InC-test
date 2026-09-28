@@ -1,4 +1,4 @@
-# Generated from spec.md; spec-sha256: d0023af06fe3263c3754f42c76465366a452317cce4755073aea4a7dedf72cc2; behavior; DO NOT EDIT
+# Generated from spec.md; spec-sha256: c1f20c1cf233a0ccdd5607c33a443bf653f0e3993b334b806498b55686d4b937; behavior; DO NOT EDIT
 {
   "version": 6,
   "policy_id": "assessment-v4-timezone-separation-20260928",
@@ -1433,7 +1433,7 @@
       "spec_line": 356
     }
   ],
-  "source_spec_sha256": "d0023af06fe3263c3754f42c76465366a452317cce4755073aea4a7dedf72cc2",
+  "source_spec_sha256": "c1f20c1cf233a0ccdd5607c33a443bf653f0e3993b334b806498b55686d4b937",
   "normative_role": "Generated from spec.md; never edit",
   "precedence": "BR-FORMAT > BR-SEMANTICS > BR-CONTRADICTION > BR-HISTORY > BR-UNCHANGED > BR-ROUTINE > BR-HISTORICAL > BR-FIRM > BR-UNRESOLVED",
   "input_contract": [
@@ -1952,7 +1952,7 @@
     },
     {
       "ID": "AUDIT4-001",
-      "Status": "proposed",
+      "Status": "approved",
       "Person": "Thomas Hand",
       "Previous spec SHA256": "a5bb4e2231092d6da4928c346d8d8f3722c8d44299a721de5c58d4be35249e76",
       "Decision": "Fourth audit: `within SET` on an empty list is now false (it was vacuously true), in both the harness oracle and the component; the operator text now states what `overlaps` and `within` mean. The only condition using `within` is History COMPLETE (`history.statuses within LINKED_STATUSES`), so a notice with an empty linked-status list is now History GAP (BR-HISTORY, MISSING_HISTORY) instead of COMPLETE. Measured by gate --proposal on e7541f9: 0 captured decisions change (Gate 3 changed_decisions empty, 91 of 91 captured cases unchanged); no rule, predicate, set or acceptance value changes. Record correction (not a policy change): NNS-FIRM-001's \"desk request\" was a maintenance request posed by the candidate; no desk exists. NNS-FIRM-001 is left as approved and reread.",
