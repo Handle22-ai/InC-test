@@ -54,3 +54,20 @@ Held, with reasons:
 - **#21, unpublished history.** A deliberate choice to publish one commit. The full history and raw transcripts are kept in a bundle and are available on request; the evidence says so and marks every cited commit as pre-publication.
 - **#29 / #30, scope.** `rebuilt/` holds a parser, normalizer, engine, publisher and store. The classifier boundary is the maintained component; the publisher and store are the downstream seam the replay tests exercise. The maintenance exercise was deliberately spec-only, which is what the spec-predicates change was meant to make possible.
 - **#33 / #34, completeness-only checks.** Upstream extraction checks re-check frozen captures, and Gate 3 had not failed alone. Gate 3's distinct value is now naming harness and oracle edits (EVALUATOR_OR_ORACLE_CHANGED); the extraction rows are reported, not relied on.
+
+## Third audit (2026-09-28)
+
+Fixed, with tests:
+- **#1 / #17, reference registration.** `harness register-reference RUN DEST --person OWNER` replaces the undocumented baseline command. It refuses non-owners, records the person and the evaluator/oracle files they accepted, and CURRENT.md shows both. A reference with no owner stops Gate 3 from passing but never hides a regression. Earlier commit messages that said "reviewed run" meant the gate ran in reviewed-spec mode. They are pushed and stay as written; from now on such commits say "observed".
+- **#2, reviewer identity.** `spec-settings.owners` lists who may reread or register; anyone else is refused, and CURRENT.md names the reviewer and the decisions covered.
+- **#3 / #4, circular or partial guards.** New code-owned boundaries: `required_inputs` (identity, status and body stay ERROR when missing) and `refusals_first` (any row refusing on a safety condition precedes every deciding row). Both are keyed on conditions and actions, not rule names.
+- **#5 / #9, consequences.** It now runs the frozen classifier witnesses, so the auditor's routine mutation exits 4. Author-supplied `--inputs` no longer clear UNMEASURED.
+- **#6, #15, #16, report.** Every non-passing finding is listed with requirement and case; coverage shows status per evidence kind; results.json carries its run ID.
+- **#8, baseline.** `make consequences` defaults to the spec you last reread.
+- **#10, #24, spec.** D6's binding to the annotation oracle is declared, and what the normalizer decides is stated.
+- **#14, #30, context.** The manifest is pruned to paths that exist (a test holds this), and the package now carries known failures, decisions and assumptions.
+
+Held, or waiting on you:
+- **#7, review-rate budget.** Needs a number from you or the desk. Setting it to today's 4/7 would repeat #25's problem.
+- **#20, agent attribution.** Every commit is authored as the owner because the owner asked to remove the Claude co-author line. The honest middle ground is a non-contributor trailer such as `Assisted-by: coding agent`. That is the owner's call.
+- **#25–#32 (C).** The budget is still today's measured misses; the brief's factors are still not rules (no labels to measure them); branch protection is not yet evidenced; out-of-scope memory requirements stay out of scope. Each is stated in harness.md "Limits" or above.

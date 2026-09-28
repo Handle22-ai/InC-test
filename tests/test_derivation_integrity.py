@@ -178,6 +178,8 @@ class SpecDecisionTraceTests(unittest.TestCase):
         fields = lines[index].split(" | ")
         fields[2] = "Synthetic Test Person"
         lines[index] = " | ".join(fields)
+        # Synthetic reviewers: drop the owner list so reread checks only row identity.
+        lines = [line for line in lines if not line.startswith('  "owners": [')]
         self.path.write_text("\n".join(lines) + "\n")
         build(self.root)
         self.pin = reread("ARCH-SOURCE-001", "Synthetic Test Person", self.root)

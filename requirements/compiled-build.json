@@ -1,13 +1,13 @@
 {
-  "spec_sha256": "c89f760b3f2167345112801cd7825d26c40c102996239d13a2c788c9c4d363b6",
+  "spec_sha256": "db84f7783bf87381362cd56d947addec0df0358886208999db552a099f4cbd7c",
   "files": {
-    "requirements/behavior.yaml": "136a950500383a9d6ee0898372b3c93ccbdada8c1e5530c8d1490fdb14e5f9e1",
-    "requirements/requirements.yaml": "b06113514eae67134c0befb2f744bda4ac911c01f7c60836dd9666b4a7667227",
-    "requirements/signal-safety.yaml": "7dd9aeb7581e1100dfaf0182b025279e874a91767a9a791b061bd7f4919aa0dc",
-    "requirements/replay-expectations.json": "3d941e3d827b62d1f815f173677786012e1aaa7da901ad0d46266706f9e82919",
+    "requirements/behavior.yaml": "a963f9497e2799c1f0ddf09976bd70222067a0bbf7c18bfa0842065c5cef12be",
+    "requirements/requirements.yaml": "e52db819f13a877cfab2cea5f721903a73e5c113357dab45b97744cea051ff66",
+    "requirements/signal-safety.yaml": "f8e926e7208eab169c9eac88c4f392e9469d011bd9cc46ffb51b9dd29622129c",
+    "requirements/replay-expectations.json": "17d932c7d33fc3ebe3655a8fe17b59fdb62f79051c2fe2a59db17c2214ade835",
     "requirements/normalized-input.schema.json": "a648bc9b58cddda4cdc33e37c19cccd57d815f84387d512bacc1d9f252ebf598",
     "requirements/normalized-output.schema.json": "f1f538f0c39199dd34225ba646faebaad86ee24c6a21c2d7e5305ae4602402bc",
-    "docs/signal-contract.md": "6b7aeb679457128e0344a71648b98ef4e4175ef2cfd857f96f2bf9d4c8710ec1",
-    "docs/system-contract.md": "7e3d49d4d09bfc83ff7c733ff7e6604f7ca69d643c05158de14f0bc8b93e71a1"
+    "docs/signal-contract.md": "dd7c856c1a519e8974cca773365458e7c0b49a6cda0d0bbb0ad0ff1ace294520",
+    "docs/system-contract.md": "f8f659d4dfc5c10a92886b4957bf1d79f5fc4eccafacd44f9bea7e1d43da4844"
   }
 }

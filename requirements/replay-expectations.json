@@ -1,5 +1,5 @@
 {
-  "source_spec_sha256": "c89f760b3f2167345112801cd7825d26c40c102996239d13a2c788c9c4d363b6",
+  "source_spec_sha256": "db84f7783bf87381362cd56d947addec0df0358886208999db552a099f4cbd7c",
   "role": "generated consequences, not independent oracle",
   "normalized": {
     "firm-positive": {
@@ -278,7 +278,7 @@
         "disposition": "INITIAL_RECOMMENDATION"
       },
       "requirement": "STATE-003",
-      "spec_line": 386
+      "spec_line": 389
     },
     {
       "id": "B",
@@ -291,7 +291,7 @@
         "disposition": "SUPPRESSED"
       },
       "requirement": "STATE-003",
-      "spec_line": 387
+      "spec_line": 390
     },
     {
       "id": "C",
@@ -304,7 +304,7 @@
         "disposition": "SUPPRESSED"
       },
       "requirement": "STATE-004",
-      "spec_line": 388
+      "spec_line": 391
     },
     {
       "id": "D",
@@ -317,7 +317,7 @@
         "disposition": "SUPPRESSED"
       },
       "requirement": "STATE-006",
-      "spec_line": 389
+      "spec_line": 392
     },
     {
       "id": "E",
@@ -330,7 +330,7 @@
         "disposition": "INITIAL_RECOMMENDATION"
       },
       "requirement": "STATE-003",
-      "spec_line": 390
+      "spec_line": 393
     },
     {
       "id": "F",
@@ -343,7 +343,7 @@
         "disposition": "SUPPRESSED"
       },
       "requirement": "STATE-006",
-      "spec_line": 391
+      "spec_line": 394
     },
     {
       "id": "unusable-impact",
@@ -357,7 +357,7 @@
         "reason": "SEMANTICS_INCOMPLETE"
       },
       "requirement": "INPUT-002",
-      "spec_line": 392
+      "spec_line": 395
     },
     {
       "id": "unavailable-extraction",
@@ -371,7 +371,7 @@
         "semantic_safety": true
       },
       "requirement": "INPUT-002",
-      "spec_line": 393
+      "spec_line": 396
     },
     {
       "id": "missing-history",
@@ -385,7 +385,7 @@
         "reason": "MISSING_HISTORY"
       },
       "requirement": "HISTORY-002",
-      "spec_line": 394
+      "spec_line": 397
     },
     {
       "id": "missing-authorization",
@@ -399,7 +399,7 @@
         "reason": "AUTHORIZATION_REQUIRED"
       },
       "requirement": "STATE-003",
-      "spec_line": 395
+      "spec_line": 398
     },
     {
       "id": "routine",
@@ -412,7 +412,7 @@
         "disposition": "NO_SIGNAL"
       },
       "requirement": "SIGNAL-002",
-      "spec_line": 396
+      "spec_line": 399
     },
     {
       "id": "unsupported-format",
@@ -426,7 +426,7 @@
         "reason": "UNSUPPORTED_FORMAT"
       },
       "requirement": "SAFETY-002",
-      "spec_line": 397
+      "spec_line": 400
     }
   ]
 }

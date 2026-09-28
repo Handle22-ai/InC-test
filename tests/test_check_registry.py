@@ -35,6 +35,27 @@ class CheckRegistryTests(unittest.TestCase):
         self.assertEqual(broken, [])
 
 
+class ManifestTests(unittest.TestCase):
+    def test_every_manifest_path_exists(self):
+        import re
+
+        import yaml
+
+        def paths(value):
+            if isinstance(value, dict):
+                for item in value.values():
+                    yield from paths(item)
+            elif isinstance(value, list):
+                for item in value:
+                    yield from paths(item)
+            elif isinstance(value, str) and re.fullmatch(r"[\w./-]+\.(md|json|yaml|py|txt)", value):
+                yield value
+
+        manifest = yaml.safe_load((ROOT / "context/manifest.yaml").read_text())
+        missing = [p for p in paths(manifest) if not (ROOT / p).exists()]
+        self.assertEqual(missing, [])
+
+
 class ModelSettingTests(unittest.TestCase):
     def test_only_llm_model_is_read_from_a_dotenv_file(self):
         from harness.credential_guard import model_setting, reject_external_access

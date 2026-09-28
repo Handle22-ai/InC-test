@@ -16,7 +16,7 @@ Two documents: **spec.md**, which they own, and **CURRENT.md** of the latest gat
 | `spec-verification` | which requirement each check covers, and which rows are `out_of_scope` | per-requirement coverage in `coverage.md` |
 | `spec-settings.acceptance` | Gate 2 budgets | per-capture missed-positive and false-positive findings |
 
-What is still hand-written: 23 boundary checks in `harness/rule_invariants.py`, such as "a history gap must be refused before a firm candidate". They stop a table edit from quietly removing a safety refusal, and they change only by code review. The 73 numbered D-sentences are owned prose: they explain intent, and no check claims them.
+What is still hand-written: 25 boundary checks in `harness/rule_invariants.py`, such as "a history gap must be refused before a firm candidate". They stop a table edit from quietly removing a safety refusal, and they change only by code review. The 73 numbered D-sentences are owned prose: they explain intent, and no check claims them.
 
 ## Three gates
 
@@ -50,7 +50,7 @@ The offline gate replays retained captures, so it sees only that the configured 
 
 ## The engineer's first day
 
-Read CURRENT.md top to bottom (ten minutes). Open spec.md at `spec-predicates` and the rule table. That is the whole decision logic, about 40 lines. Pick one missed positive (46732 or 46881), change a condition in a proposal copy, and run consequences. They will see what it recovers and what it costs before anything changes.
+Read CURRENT.md top to bottom (ten minutes). Open spec.md at `spec-predicates` and the rule table: that is the whole decision logic, about 40 lines, over facts the normalizer produces. What the normalizer decides (content kind, scalar availability, service and availability mapping) is stated just above that table and driven by `spec-settings.normalization`; a new extractor vocabulary or unit can still need a normalizer code change. Pick one missed positive (46732 or 46881), change a condition in a proposal copy, and run consequences. They will see what it recovers and what it costs before anything changes.
 
 ## What the harness found in the inherited system
 
@@ -58,9 +58,9 @@ All of this comes from evidence, except where a row says otherwise. Figures are 
 
 | Finding | Evidence | Desk risk |
 |---|---|---|
-| It signals again on an identical replay, an unchanged revision, and after a restart (replay steps B, C, D, F) | inherited replay: 1 initial alert where 0 expected, each step | Duplicate position triggers from one event |
-| A missing or unusable model verdict still produces a signal | replay steps unusable-impact and unavailable-extraction; semantic-safety FAIL | A failed model call looks like a real signal. The cause, a missing impact verdict silently scored "small", was located by a code read (`code_reads.md`, V2 diagnosis). |
-| It signals with a missing prior notice and on a PDF it cannot parse | replay steps missing-history and unsupported-format | Acts on context it does not have |
+| It signals again on an identical replay, an unchanged revision, and after a restart (**synthetic** replay steps B, C, D, F) | inherited replay: 1 initial alert where 0 expected, each step | Duplicate position triggers from one event |
+| A missing or unusable model verdict still produces a signal | **synthetic** replay steps unusable-impact and unavailable-extraction (injected failures); semantic-safety FAIL. The real captured failures (46528, 46864) ended in MODEL_FAILURE, not a signal | A failed model call looks like a real signal. The cause, a missing impact verdict silently scored "small", was located by a code read (`code_reads.md`, V2 diagnosis). |
+| It signals with a missing prior notice and on a PDF it cannot parse (**synthetic** replay steps) | replay steps missing-history and unsupported-format | Acts on context it does not have |
 | MODEL_FAILURE on 46528 and 46864 in the unmodified run. 46864 is the only notice typed FORCE MAJEURE; 46507 and 46732 mention a Segment 17 force majeure in their bodies, and 46732 (the lift) is one of the rebuilt component's two misses | capture-1 executions | The most important notice depends on a call that failed |
 | One false positive per capture: 46725 (an OFO, labeled negative) unmodified; 46528 when the token budget is raised to 512 | label outcomes | A routine notice triggers a position change |
 | Detected 6 of 7 labeled positives unmodified, 7 of 7 with the 512-token variant | label outcomes | Its recall is good; its failures are the silent ones above |
@@ -89,7 +89,7 @@ Moving toward automatic alerts would need:
 ## Limits, stated before a reviewer finds them
 
 - One agent thread still writes the component and runs the evaluator. The gate flags evaluator edits, but it cannot stop a writer from also editing the tests.
-- **The approval step is not agent-proof.** Any process on the owner's machine can add an `approved` decision row, run `harness reread --person 'Thomas Hand'`, and get an accepted run; a second audit did exactly that. The receipt names a person; it does not authenticate one. The control is outside the repository: branch protection on `main` requiring the CI gate and code-owner review (see README). Even then, an agent holding the owner's own credentials can act as the owner. Real separation needs a second reviewer, or a signing key the agent cannot reach.
+- **The approval step is not agent-proof.** Any process on the owner's machine can add an `approved` decision row, run `harness reread --person 'Thomas Hand'`, and get an accepted run; a second audit did exactly that. The receipt names a person; it does not authenticate one. The control is outside the repository: branch protection on `main` requiring the CI gate and code-owner review (see README). Even then, an agent holding the owner's own credentials can act as the owner. Real separation needs a second reviewer, or a signing key the agent cannot reach. The same holds for `register-reference`, which clears Gate 3's EVALUATOR_OR_ORACLE_CHANGED: it names an owner and records the files accepted, and CURRENT.md shows both, but it cannot prove who ran it.
 - 14 labels, correlated across two captures. No geography or Henry Hub/LNG case can be measured yet (spec A-009).
 - Out of scope, and listed as such: durable storage, material-update delivery, out-of-order reconciliation, late-notice actionability, historical decision retrieval.
 - The unlabeled samples get header and format checks only. Classifying them needs a live run.

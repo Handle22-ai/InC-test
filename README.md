@@ -59,12 +59,19 @@ The gate then scores the new capture next to the retained ones, and CURRENT.md l
 ## Change the policy
 
 1. Copy the spec: `cp spec.md context/proposals/proposed-spec.md`, then edit a rule, predicate, set or setting.
-2. `make consequences SPEC=context/proposals/proposed-spec.md BASE=spec.md`, then read the printed `REPORT.md`. It shows every changed notice and the per-capture tradeoffs. Keep the losses visible. Exit 4 and a **WOULD BE REFUSED** headline mean the compiler and gate would reject the proposal. An **UNMEASURED** headline means no captured case or supplied example exercises the edit.
+2. `make consequences SPEC=context/proposals/proposed-spec.md`, then read the printed `REPORT.md`. The baseline defaults to the spec you last reread (pass `BASE=` to override). The report shows every changed notice and the per-capture tradeoffs; keep the losses visible. Exit 4 with a **WOULD BE REFUSED** headline means a compile boundary, the input contract or a frozen classifier witness rejects the proposal; publisher-replay witnesses run only in the gate. **UNMEASURED** means no captured case changes. Examples you supply with `--inputs` are illustrations, not evidence.
 3. To adopt, edit `spec.md` and add a `spec-decisions` row with status `proposed`, then run `make compile`.
-4. The owner reads the new bytes, sets the row to `approved`, and runs `.venv/bin/python -B -m harness reread --person 'Name'`. The receipt covers every decision row added since the last reread, and refuses if any of them is not yet approved. Agents never do this step.
+4. The owner reads the new bytes, sets the row to `approved`, and runs `.venv/bin/python -B -m harness reread --person 'Thomas Hand'`. Only names in `spec-settings.owners` are accepted. The receipt covers every decision row added since the last reread, and refuses if any is not approved. Agents never do this step.
 5. `make gate`.
 
-A change to frozen labels or witnesses (`requirements/*witnesses.json`, `dataset.json`) is an oracle change. Only the owner makes it; Gate 3 reports it as EVALUATOR_OR_ORACLE_CHANGED until a new reference is registered.
+A change to frozen labels or witnesses (`requirements/*witnesses.json`, `dataset.json`) is an oracle change, and a change under `harness/` or `tests/` is an evaluator change. Gate 3 reports either as EVALUATOR_OR_ORACLE_CHANGED, naming the files, until an owner reviews them and registers a new reference from a clean run:
+
+```bash
+.venv/bin/python -B -m harness gate --output evidence/reviewed-run
+.venv/bin/python -B -m harness register-reference evidence/reviewed-run evidence/reference-<date> --person 'Thomas Hand'
+```
+
+The reference records who registered it and which evaluator and oracle files they accepted, and CURRENT.md shows both. Like the reread, this is an assertion, not authentication.
 
 ## Start a fresh agent session
 

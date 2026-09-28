@@ -122,11 +122,44 @@ def evaluate(contract: dict) -> list[dict]:
     checks["no_labels_or_authorization"] = checks["candidate_only"] and not any(
         "label" in c.lower() for r in rules.values() for c in r["when"]
     )
-    checks["no_quantity_checklist"] = set(rules["BR-FIRM"]["when"]) <= {
-        "Service class",
-        "Source clock",
-        "Restriction current",
+    # Keyed on the action, not a rule name: no candidate-producing rule may require a
+    # quantity/volume checklist column (none exists in the grammar today).
+    checks["no_quantity_checklist"] = all(
+        not any("quantity" in c.lower() or "volume" in c.lower() for c in r["when"])
+        for r in rules.values()
+        if r["action"]["classification"] == "SIGNAL_CANDIDATE"
+    )
+    # Every row that refuses on a safety condition precedes every row that can decide
+    # (audit 3 #4). Keyed on conditions and actions, not rule names, so renaming or
+    # adding rules cannot slip past it.
+    guards = {
+        ("Format", "UNSUPPORTED"),
+        ("Oracle answer", "UNUSABLE"),
+        ("Conflict", "YES"),
+        ("History", "GAP"),
     }
+    refusals = [r for r in rules.values() if safe(r["id"]) and guards & set(r["when"].items())]
+    deciders = [r for r in rules.values() if r["action"]["classification"] != "UNRESOLVED"]
+    checks["refusals_first"] = all(
+        a["priority"] < b["priority"] for a in refusals for b in deciders
+    )
+    # Identity, status and body can never become optional (audit 3 #3): the parser
+    # contract check alone compares the parser with the same row it reads.
+    required = {
+        "header.notice_id",
+        "header.status",
+        "body",
+        "notice.notice_id",
+        "notice.status",
+        "notice.notice_type",
+        "notice.body_text",
+        "semantic.extraction_usable",
+    }
+    checks["required_inputs"] = all(
+        r["Missing"] == "ERROR" and r["Malformed"] == "ERROR"
+        for r in contract["input_contract"]
+        if r["Field"] in required
+    ) and required <= {r["Field"] for r in contract["input_contract"]}
     checks["no_absolute_inference"] = (
         contract["normalization"]["quantities"].get("SCHEDULED_TO_PCT_MDQ", {}).get("unit")
         == "PERCENT_MDQ"

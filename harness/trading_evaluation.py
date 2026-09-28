@@ -362,6 +362,7 @@ def run(destination: Path) -> dict:
         "inherited": summaries(cases, inherited=True),
     }
     result["metrics"] = {key: {"count": len(ids), "cases": ids} for key, ids in metrics.items()}
+    result["acceptance"] = acceptance
     if acceptance:
         result["findings"].extend(budget_findings(result, acceptance, requirements))
     result["metric_definitions"] = {

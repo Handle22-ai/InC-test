@@ -104,12 +104,41 @@ def render(destination: Path, result: dict) -> None:
         f"`{source['working_tree_dirty']}` · spec `{identity.get('spec_sha256', 'UNVERIFIED')}`.",
         "",
     ]
+    spec_read = result.get("spec_read", {})
+    if spec_read.get("person"):
+        lines += [
+            f"Reread by **{spec_read['person']}**, covering decisions: "
+            + ", ".join(sorted(spec_read.get("decisions", {}) or [spec_read.get("decision", "-")]))
+            + ".",
+            "",
+        ]
+    reference = result.get("reference_registration") or {}
+    if reference.get("path"):
+        accepted = "; ".join(
+            f"{k}: {', '.join(v)}" for k, v in (reference.get("accepted_changes") or {}).items()
+        )
+        lines += [
+            f"Gate 3 reference `{reference['path']}` (commit `{str(reference.get('source_commit'))[:7]}`), "
+            f"registered by **{reference.get('registered_by') or 'NO OWNER NAMED'}**"
+            + (f"; evaluator/oracle changes it accepted: {accepted}" if accepted else "")
+            + ".",
+            "",
+        ]
+    acceptance = result.get("trading_layer", {}).get("acceptance")
+    if acceptance:
+        lines += [
+            "Gate 2 limits, as declared in spec-settings acceptance (the comparison code is guarded by Gate 3 and the reference owner): "
+            + ", ".join(f"{k} = {v}" for k, v in acceptance.items())
+            + ".",
+            "",
+        ]
     if out_of_scope:
         lines += [
             "**Not claimed by this gate** (spec-verification `out_of_scope`): "
             + ", ".join(out_of_scope)
-            + ". All 73 D prose obligations are unchecked prose; 23 code-owned boundary checks "
-            "constrain the tables.",
+            + f". D prose is unchecked except D6, which scopes the annotation oracle; "
+            f"{sum(r.get('kind') == 'compiled_boundary' for r in result.get('rule_invariants', []))} "
+            "code-owned boundary checks constrain the tables.",
             "",
         ]
     lines += ["## For the desk", ""]
@@ -204,21 +233,28 @@ def render(destination: Path, result: dict) -> None:
         "[Boundary checks](rule-invariants.json) · [Artifact hashes](manifest.json)",
         "",
     ]
-    preflight = [
-        r
-        for r in result.get("findings", [])
-        if r.get("gate") == 1 and r["status"] not in {"PASS", "COUNTED"}
+    nonpassing = [
+        r for r in result.get("findings", []) if r["status"] not in {"PASS", "COUNTED", "N/A"}
     ]
-    if preflight:
-        lines += (
-            ["## Contract refusals", ""]
-            + [
-                f"- {r.get('code', r.get('relation', 'CONTRACT_FAILURE'))}: "
-                f"{r.get('reason', r.get('case', r.get('step', r.get('requirement'))))}"
-                for r in preflight
-            ]
-            + [""]
-        )
+    if nonpassing:
+        lines += [
+            "## Every non-passing finding",
+            "",
+            "| Gate | Status | Requirement | Case | Code | Detail |",
+            "|---|---|---|---|---|---|",
+        ]
+        for r in nonpassing:
+            detail = str(
+                r.get("reason")
+                or {k: r[k] for k in ("expected", "observed") if k in r}
+                or r.get("relation", "")
+            ).replace("|", "/")
+            lines.append(
+                f"| {r.get('gate', '-')} | {r['status']} | {r.get('requirement', '-')} "
+                f"| {r.get('case', r.get('step', '-'))} "
+                f"| {r.get('code', r.get('relation', '-'))} | {detail[:300]} |"
+            )
+        lines.append("")
     coverage = [
         "# Requirement coverage",
         "",
@@ -228,15 +264,14 @@ def render(destination: Path, result: dict) -> None:
         "PASS means the declared check passed on the listed observations, not that the whole "
         "obligation is proven. OUT_OF_SCOPE rows are declared in spec-verification and never gated.",
         "",
-        "| Requirement | Check | Result | Observations | Evidence kinds |",
+        "| Requirement | Check | Result | Observations | Evidence kind and status (count) |",
         "|---|---|---|---:|---|",
     ]
     for key in sorted(set(result.get("component_availability", {})) | set(coverage_rows)):
         row = coverage_rows.get(key, {})
+        mine = [r for r in result.get("findings", []) if r.get("requirement") == key]
         kinds = Counter(
-            r.get("code", r.get("relation", "unspecified"))
-            for r in result.get("findings", [])
-            if r.get("requirement") == key
+            f"{r.get('code', r.get('relation', 'unspecified'))} {r['status']}" for r in mine
         )
         coverage.append(
             f"| {key} | {row.get('declared_check', 'NOT_RUN')} | "

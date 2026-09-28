@@ -30,7 +30,11 @@ class ExactSpecOwnerReviewTests(unittest.TestCase):
         (self.root / "context").mkdir()
         self.name = "context/synthetic-owner-review.json"
         spec = self.root / "spec.md"
-        spec.write_text(spec.read_text().replace(" | Thomas Hand | ", " | PENDING_PERSON | "))
+        spec.write_text(
+            spec.read_text()
+            .replace(" | Thomas Hand | ", " | PENDING_PERSON | ")
+            .replace('  "owners": ["Thomas Hand"],\n', "")
+        )
         self.c = compile_spec(self.root)
         self.record = {
             "kind": "exact-spec-owner-review-v1",

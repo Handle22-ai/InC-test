@@ -154,6 +154,21 @@ class SpecPredicateTests(unittest.TestCase):
             ids = {entry["notice"]["notice_id"] for entry in history}
             self.assertTrue(ids <= set(store_before(case)), case["case_id"])
 
+    def test_audit3_mutations_are_boundary_violations(self):
+        from harness.rule_invariants import enforce
+
+        text = (ROOT / "spec.md").read_text()
+        precedence = next(line for line in text.splitlines() if line.startswith("Precedence:"))
+        swapped = precedence.replace("BR-HISTORY > BR-UNCHANGED", "BR-UNCHANGED > BR-HISTORY")
+        self.assertNotEqual(swapped, precedence)
+        with self.assertRaisesRegex(ValueError, "refusals_first"):
+            enforce(compile_spec(ROOT, text.replace(precedence, swapped)))
+        status = next(line for line in text.splitlines() if "| header.status |" in line)
+        relaxed = status.replace("| text | ERROR | ERROR |", "| text | UNKNOWN | ERROR |")
+        self.assertNotEqual(relaxed, status)
+        with self.assertRaisesRegex(ValueError, "required_inputs"):
+            enforce(compile_spec(ROOT, text.replace(status, relaxed)))
+
     def test_malformed_predicates_name_the_spec_row(self):
         cases = {
             "unknown path": (

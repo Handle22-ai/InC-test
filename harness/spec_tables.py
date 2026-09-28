@@ -50,6 +50,8 @@ SCHEMA_FIELDS = {
     "Meaning": "description",
 }
 BOUNDARY_CHECKS = {
+    "refusals_first",
+    "required_inputs",
     "source_identity",
     "explicit_history",
     "domain_identity",

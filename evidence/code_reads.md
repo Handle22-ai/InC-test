@@ -44,6 +44,29 @@ Missing harness capability: one registry of check names that both paths must cov
 Harness improvement made: `spec_compiler.CHECK_NAMES` plus `tests/test_check_registry.py` (every name needs a live branch, and the live scoring of a retained live capture has no HARNESS_FAILURE); messages kept; preflight refuses blocked calls (tested with budgets 1 and 2); `python -m harness register-capture`; a cross-capture differences table in CURRENT.md. These are evaluator changes, reported by Gate 3 as EVALUATOR_OR_ORACLE_CHANGED until the owner registers a new reference.
 Could the same code read be avoided next time? Yes. A new check name without a live branch now fails `make check` before any live run.
 
+## Reads behind the second- and third-audit fixes (2026-09-28)
+
+CODE-READ-ID: AGENT-AUDIT2-FIXES-20260928
+Observed failure: second audit #4 (missing-prior given a prior it never had), the control-plane findings, and the live-path drift; third audit #1–#9.
+Why evidence was insufficient: the evidence showed the wrong outcome (History=COMPLETE on missing-prior, an accepted gate after a self-registered reference, a relaxed input row passing) but not where the harness built it.
+Source inspected (agent, harness side): `harness/captures.py`, `consequences.py`, `trading_evaluation.py`, `normalized_evaluation.py`, `proposals.py`, `spec_compiler.py`, `current_evidence.py`, `rule_invariants.py`, `baseline.py`, `spec_ownership.py`, `context.py`, `gates.py`, `evaluator.py`, `preflight.py`, `adapter.py`, `live.py`, `offline.py`, `comparison_identity.py`, `input_contract_checks.py`, and the affected tests. Component side: none beyond `rebuilt/signals.py` (earlier entry).
+What was learned: history was accumulated per capture, not per case; registration and reread accepted any name; the input-contract check compared the parser with the same row it reads; precedence was guarded only for named rules.
+Missing harness capability: per-case store isolation; owner-bound registration with recorded accepted changes; code-owned boundaries for required inputs and refusal-first precedence keyed on conditions, not names; consequences running frozen witnesses.
+Harness improvement made: all of the above, with tests. These are evaluator changes, so Gate 3 reports EVALUATOR_OR_ORACLE_CHANGED until the owner registers a new reference.
+Could the same code read be avoided next time? Partly. The new boundaries and tests catch these mutations directly; locating a harness bug from a wrong outcome still needs a read.
+
+CODE-READ-ID: AGENT-AUDIT2-FRESH-20260928
+Observed failure: none; a second audit's fresh session was asked to accept CT/CST/CDT-suffixed timestamps.
+Source inspected (agent, reported by the auditor): `rebuilt/source_input.py` (edited), `rule_engine.py`, `normalization.py`, `normalized_classifier.py`, `classifier.py`, and 7 harness modules: `spec_compiler.py` (5 times), `input_contract_checks.py`, `signal_evaluation.py`, `specification.py`, `captures.py`, `consequences.py`, `domain_rules.py`.
+Missing harness capability: the package did not say how `date_formats` reaches the parser checks. The manifest instructions now say so; see `context/pending-learning/source-format-changes.md`.
+Could the same code read be avoided next time? Partly; format changes still need a parser edit.
+
+CODE-READ-ID: AGENT-AUDIT3-FRESH-20260928
+Observed failure: none; the third audit's fresh session was asked to make absolute Dth/d curtailments candidates and carry the volume on the decision.
+Source inspected (reported by the auditor): `inherited/llm_utils.py`, five in-scope `rebuilt/` files, and `harness/gates.py` (out of scope, to learn why Gate 3 failed).
+What was learned: a D6 prose edit silently took the annotation oracle out of scope (now declared in spec.md). The session moved its rule into the unchecked assumptions table to get green, and its own `--inputs` examples cleared UNMEASURED; examples no longer clear it.
+Could the same code read be avoided next time? The Gate 3 read, yes: CURRENT.md now lists every non-passing finding and the D6 binding is stated in the spec.
+
 ## Detailed entries (retained)
 
 Earlier ledgers:
@@ -259,7 +282,7 @@ Could the same code read be avoided next time? The concrete witnesses and patch 
 CODE-READ-ID: AGENT-NNS-FIRM-20260928
 Observed failure: desk request, not a gate failure. Extracted NGPL rows with service_type NO_NOTICE normalized to UNKNOWN (visible in capture-1/46528 normalization_trace), so a firm No-Notice Service restriction could never satisfy the FIRM_DISRUPTION predicate.
 Why evidence was insufficient: the evidence showed NO_NOTICE -> UNKNOWN but not whether the spec services map is the only path, i.e. whether a spec-only change (new normalized value plus FIRM_SERVICES membership) would work without component code.
-Source inspected: coding-agent reads of rebuilt/normalization.py lines 1-60 (services come from spec-settings normalization.services, defaulting to UNKNOWN), grep of service handling in rebuilt/source_input.py, rule_engine.py and classifier.py, and rebuilt/normalized_classifier.py (CLI and classify). tests/test_spec_predicates.py was read after make check failed. No component source was changed.
+Source inspected: coding-agent reads of rebuilt/normalization.py lines 1-60, one search of harness/consequences.py (out of scope) (services come from spec-settings normalization.services, defaulting to UNKNOWN), grep of service handling in rebuilt/source_input.py, rule_engine.py and classifier.py, and rebuilt/normalized_classifier.py (CLI and classify). tests/test_spec_predicates.py was read after make check failed. No component source was changed.
 What was learned: service vocabulary, FIRM_SERVICES and the interface enums are all spec-owned, so the change is spec-only (NNS-FIRM-001; proposed by the session, later approved by the owner, and covered by the owner's reread). tests/test_spec_predicates.py::test_a_set_edit_in_the_spec_changes_behavior_without_code pins the literal spec text '"FIRM_SERVICES": ["PRIMARY_FIRM", "SECONDARY_FIRM"]' as a fixture, so any legitimate edit of that set fails make check.
 Missing harness/evidence capability: (1) no captured or labeled NNS outage, so the intended positive effect is invisible to make consequences (0/46 changes); the effect was shown only by a scratch metamorphic probe (firm-positive witness with service swapped to NO_NOTICE_FIRM: old spec refuses, new spec BR-FIRM; PARTIAL and INTERRUPTIBLE controls stay BR-UNRESOLVED). (2) the spec-predicate test should derive its fixture from the compiled set rather than from literal spec bytes.
 Harness improvement made: none by the fresh session. Afterwards, the coordinating session fixed the brittle fixture in `tests/test_spec_predicates.py` in the same commit that adopted the NNS policy. That bundled an evaluator change with a policy change; it should have been a separate, separately approved commit.

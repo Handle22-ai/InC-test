@@ -159,6 +159,15 @@ def verify(root: Path = ROOT, contract: dict | None = None) -> dict:
         )
     if pin.get("approval") is not False:
         raise fail("spec-decisions", row["ID"], row["_line"], "read receipt is not approval")
+    listed = c.get("owners", [])
+    if listed and pin.get("person") not in listed:
+        raise fail(
+            "spec-settings",
+            "owners",
+            1,
+            "UNRECORDED_SPEC_CHANGE / STALE_SPEC_PIN: the read receipt names "
+            f"{pin.get('person')!r}, who is not a spec owner ({listed})",
+        )
     return pin
 
 
@@ -195,6 +204,14 @@ def reread(
     previous reread; each must be approved (or owner-requested) and name person.
     """
     c = compile_spec(root)
+    listed = c.get("owners", [])
+    if listed and person not in listed:
+        raise fail(
+            "spec-settings",
+            "owners",
+            1,
+            f"{person!r} is not a spec owner; a reread must name one of {listed}",
+        )
     covered = [] if decision is not None else changes_since_last_read(c, root)
     for other in covered:
         if other["Person"] != person or other["Status"] not in {"approved", "owner-requested"}:

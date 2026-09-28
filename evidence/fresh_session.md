@@ -8,7 +8,7 @@ A new agent session started with no conversation history, on a clean clone of pr
 
 **Requirements and decisions used.** The spec-predicates table and `FIRM_SERVICES`, the interface enums, `normalization.services`, SIGNAL-001/003, and the REMEDIATION decision rows.
 
-**Source opened or searched.** Only files in scope: the five component files above, plus `tests/test_spec_predicates.py` when a test failed, and one search of `harness/consequences.py`. It did not open `harness/domain_rules.py`. Before the remediation, the same request made the session open 14 source files, 9 of them harness modules, to find what "firm" meant.
+**Source opened or searched.** The five component files in scope, plus two out of scope: `tests/test_spec_predicates.py` when a test failed, and one search of `harness/consequences.py`. It did not open `harness/domain_rules.py`. Before the remediation, the same request made the session open 14 source files, 9 of them harness modules, to find what "firm" meant.
 
 **Additional human explanation required.** None.
 

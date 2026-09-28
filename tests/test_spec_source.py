@@ -154,6 +154,7 @@ class SpecSourceTests(unittest.TestCase):
     def test_pin_is_a_read_receipt_and_stales_on_any_edit(self):
         path = self.root / "spec.md"
         text = path.read_text().replace(" | Thomas Hand | ", " | Synthetic Test Person | ")
+        text = text.replace('  "owners": ["Thomas Hand"],\n', "")
         path.write_text(text)
         # This is a synthetic name in a disposable test, not authenticated approval.
         record = reread("ARCH-SOURCE-001", "Synthetic Test Person", self.root)
@@ -168,7 +169,9 @@ class SpecSourceTests(unittest.TestCase):
     def test_reread_without_decision_covers_every_change_since_the_last_read(self):
         path = self.root / "spec.md"
         path.write_text(
-            path.read_text().replace(" | Thomas Hand | ", " | Synthetic Test Person | ")
+            path.read_text()
+            .replace(" | Thomas Hand | ", " | Synthetic Test Person | ")
+            .replace('  "owners": ["Thomas Hand"],\n', "")
         )
         first = reread("ARCH-SOURCE-001", "Synthetic Test Person", self.root)
         text = path.read_text()
@@ -208,6 +211,25 @@ class SpecSourceTests(unittest.TestCase):
             compile_spec(self.root, "not a spec")
         except ValueError as exc:
             self.assertFalse(crashed_in_component(exc))
+
+    def test_only_a_listed_owner_can_reread_or_register(self):
+        from harness import baseline
+
+        path = self.root / "spec.md"
+        text = path.read_text().replace(" | Thomas Hand | ", " | Synthetic Test Person | ")
+        if '"owners"' not in text:
+            text = text.replace(
+                '  "sets": {', '  "owners": ["Synthetic Test Person"],\n  "sets": {', 1
+            )
+        else:
+            text = text.replace('"owners": ["Thomas Hand"]', '"owners": ["Synthetic Test Person"]')
+        path.write_text(text)
+        with self.assertRaisesRegex(ValueError, "not a spec owner"):
+            reread("ARCH-SOURCE-001", "Somebody Else", self.root)
+        reread("ARCH-SOURCE-001", "Synthetic Test Person", self.root)
+        with self.assertRaisesRegex(ValueError, "not a spec owner"):
+            baseline.require_owner("Somebody Else", self.root)
+        baseline.require_owner("Synthetic Test Person", self.root)
 
     def test_declared_types_and_dates_refuse_fabrication(self):
         c = compile_spec(self.root)

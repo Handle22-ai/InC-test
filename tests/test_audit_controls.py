@@ -27,6 +27,7 @@ class AuditControls(unittest.TestCase):
                 spec.read_text()
                 .replace("must not exceed PARAM-INITIAL-001", "must be at least PARAM-INITIAL-001")
                 .replace(" | Thomas Hand | ", " | Synthetic Audit Person | ")
+                .replace('  "owners": ["Thomas Hand"],\n', "")
             )
             (root / PIN).unlink()
             compiled = build(root)

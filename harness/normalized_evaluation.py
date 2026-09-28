@@ -350,6 +350,7 @@ def crashed_in_component(exc: BaseException) -> bool:
 
 def run(destination: Path) -> dict:
     result: dict = {
+        "run_id": destination.name,
         "scope": SCOPE,
         "source": source_identity(),
         "cases": {},
@@ -497,6 +498,7 @@ def run(destination: Path) -> dict:
                 "label_summaries",
                 "tradeoffs",
                 "capture_differences",
+                "acceptance",
                 "checks_not_applicable",
             )
         }
@@ -576,6 +578,14 @@ def run(destination: Path) -> dict:
                 )
         findings.extend(identity_findings(result, invariants, witnesses, requirements))
         previous = registered_baseline()
+        from harness.baseline import owners
+
+        registration = (previous or {}).get("registration", {})
+        listed = owners()
+        result["reference_registration"] = {
+            key: registration.get(key)
+            for key in ("path", "source_commit", "registered_by", "accepted_changes")
+        }
         result["gates"]["3"] = {
             "name": "regression_change",
             **(
@@ -584,6 +594,20 @@ def run(destination: Path) -> dict:
                 else {"status": "UNKNOWN", "classification": "NO_COMPARISON_REFERENCE"}
             ),
         }
+        # An unowned reference can stop a PASS, never hide a regression.
+        if (
+            previous
+            and listed
+            and registration.get("registered_by") not in listed
+            and result["gates"]["3"]["status"] == "PASS"
+        ):
+            result["gates"]["3"] = {
+                "name": "regression_change",
+                "status": "UNKNOWN",
+                "classification": "REFERENCE_NOT_OWNER_REGISTERED",
+                "reason": "The comparison reference names no spec owner; register it with "
+                "python -m harness register-reference RUN DEST --person OWNER",
+            }
         if result["model_configuration"]["status"] != "PASS":
             result["gates"]["3"] = {
                 "name": "regression_change",

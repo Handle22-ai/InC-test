@@ -63,7 +63,7 @@ def registered(root: Path) -> dict | None:
         require_observed_run(result)
     elif result["gates"]["1"]["status"] != "PASS":
         raise ValueError("INVALID_EVIDENCE_IDENTITY: legacy reference contracts did not pass")
-    return result
+    return {**result, "registration": record}
 
 
 def copy_evidence(source: Path, target: Path) -> None:
@@ -78,10 +78,29 @@ def copy_evidence(source: Path, target: Path) -> None:
         shutil.copyfile(source / name, destination)
 
 
-def register(source: Path, destination: Path) -> dict:
+def owners(root: Path = ROOT) -> list[str]:
+    from harness.spec_compiler import compile_spec
+
+    return list(compile_spec(root).get("owners", []))
+
+
+def require_owner(person: str, root: Path = ROOT) -> None:
+    listed = owners(root)
+    if listed and person not in listed:
+        raise ValueError(f"{person!r} is not a spec owner (spec-settings owners: {listed})")
+
+
+def register(source: Path, destination: Path, person: str) -> dict:
+    """Register a reference as a named owner, recording the evaluator/oracle files accepted.
+
+    This is still an assertion by whoever runs it, not authentication; CODEOWNERS
+    review of evidence/current-baseline.json is what makes it an owner action.
+    """
+    require_owner(person)
     result = json.loads((source / "results.json").read_text())
     validate_source(ROOT, result)
     require_observed_run(result)
+    gate3 = result["gates"].get("3", {})
     if result["comparison_identity"]["spec_sha256"] != digest(ROOT / "spec.md"):
         raise ValueError(
             "Reference spec differs from current spec; no automatic comparison mapping"
@@ -94,6 +113,13 @@ def register(source: Path, destination: Path) -> dict:
         "source_commit": result["source"]["revision"],
         "spec_sha256": result["comparison_identity"]["spec_sha256"],
         "human_review_asserted": False,
+        "registered_by": person,
+        "accepted_changes": {
+            key: files
+            for key, files in gate3.get("changed_files", {}).items()
+            if key in {"evaluator", "oracle"}
+        },
+        "previous_reference_classification": gate3.get("classification"),
         "sha256": {name: digest(destination / name) for name in ("results.json", "manifest.json")},
         "observed_gates": {key: value["status"] for key, value in result["gates"].items()},
         "accepted": False,
@@ -104,11 +130,18 @@ def register(source: Path, destination: Path) -> dict:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = argparse.ArgumentParser(
+        prog="python -m harness register-reference", description=register.__doc__
+    )
     parser.add_argument("source", type=Path)
     parser.add_argument("destination", type=Path)
+    parser.add_argument("--person", required=True, help="A spec owner, as in spec-settings owners")
     args = parser.parse_args()
-    print(json.dumps(register(args.source.resolve(), args.destination.resolve()), indent=2))
+    print(
+        json.dumps(
+            register(args.source.resolve(), args.destination.resolve(), args.person), indent=2
+        )
+    )
 
 
 if __name__ == "__main__":

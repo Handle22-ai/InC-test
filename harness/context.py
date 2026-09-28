@@ -115,9 +115,7 @@ def _select(task: str, manifest_path: Path = ROOT / "context/manifest.yaml") -> 
         artifacts.append(
             {
                 "path": name,
-                "status": "historical-reviewed-assumptions-current-scope-in-spec"
-                if name == "context/assumptions.md"
-                else "sole-authority"
+                "status": "sole-authority"
                 if name == "spec.md"
                 else "derived-or-check-implementation",
                 "why": "Spec-source architecture: historical ADRs are not competing active policy",
@@ -156,8 +154,38 @@ def _select(task: str, manifest_path: Path = ROOT / "context/manifest.yaml") -> 
             if r["role"] == "binding"
         ],
         "excluded_context": manifest["excluded_context"],
+        "known_failures": known_failures(),
+        "decisions": [
+            {k: v for k, v in row.items() if k != "_line"} for row in contract["decisions"]
+        ],
+        "assumptions": spec_section("## Assessment assumptions", "## Requirements"),
         "instructions": "Use a proposal copy of spec.md and make consequences first. Check losses as well as improvements. Compile after adopting an authorized edit. A human reread is separate and must not be invented. No live model calls.",
     }
+
+
+def spec_section(start: str, end: str) -> str:
+    text = (ROOT / "spec.md").read_text()
+    return text[text.index(start) : text.index(end)].strip()
+
+
+def known_failures() -> list[str]:
+    """Labeled misses, false positives and capture disagreements from the published run."""
+    path = ROOT / "evidence/run-20260928/results.json"
+    if not path.exists():
+        return ["No published run; run make gate and read CURRENT.md."]
+    trading = json.loads(path.read_text()).get("trading_layer", {})
+    rows = [
+        f"{o['id']}: labeled {'signal' if o['label'] else 'no signal'}, rebuilt "
+        f"{o['classification']} ({o['rule']})"
+        for o in trading.get("label_outcomes", [])
+        if (o["label"] and o["classification"] != "SIGNAL_CANDIDATE")
+        or (o["label"] is False and o["classification"] == "SIGNAL_CANDIDATE")
+    ]
+    rows += [
+        f"notice {d['notice_id']}: inherited runs disagree across captures"
+        for d in trading.get("capture_differences", [])
+    ]
+    return rows or ["None in the published run."]
 
 
 def write_package(task: str, destination: Path) -> dict:
@@ -221,6 +249,11 @@ def write_package(task: str, destination: Path) -> dict:
             "",
         ]
     )
+    lines.extend(["## Known failures (current evidence)", ""])
+    lines.extend(f"- {row}" for row in package["known_failures"])
+    lines.extend(["", "## Decisions (spec-decisions)", ""])
+    lines.extend(f"- {d['ID']} ({d['Status']}): {d['Decision']}" for d in package["decisions"])
+    lines.extend(["", package["assumptions"], ""])
     lines.extend(["## Pending learning — unapproved, not requirements", ""])
     for item in package["pending_learning"]:
         lines.extend(

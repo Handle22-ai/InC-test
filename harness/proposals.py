@@ -222,7 +222,23 @@ def read_spec(name: str) -> tuple[str, str]:
         return path.read_text(), str(path.resolve())
     if name == "HEAD:spec.md":
         return subprocess.check_output(["git", "show", name], cwd=ROOT, text=True), name
-    raise ValueError("Use an existing spec file or HEAD:spec.md as the baseline")
+    if name == "REVIEWED":
+        return reviewed_spec()
+    raise ValueError("Use an existing spec file, HEAD:spec.md or REVIEWED as the baseline")
+
+
+def reviewed_spec() -> tuple[str, str]:
+    """The spec bytes named by the owner's current read receipt, found in Git history."""
+    import hashlib
+
+    pin = json.loads((ROOT / "context/spec-read-pin.json").read_text())
+    for commit in subprocess.check_output(
+        ["git", "log", "--format=%H", "--", "spec.md"], cwd=ROOT, text=True
+    ).split():
+        text = subprocess.check_output(["git", "show", f"{commit}:spec.md"], cwd=ROOT, text=True)
+        if hashlib.sha256(text.encode()).hexdigest() == pin["spec_sha256"]:
+            return text, f"{commit[:7]}:spec.md (last reread)"
+    raise ValueError("The reread spec is not in this repository's history; pass --base")
 
 
 def supplied_inputs(path: Path, contract: dict) -> list[dict]:
@@ -373,14 +389,33 @@ def run(spec: Path, base: str, destination: Path, inputs_path: Path | None = Non
         )
     )
     from harness.rule_invariants import violation
+    from harness.specification import evaluate_witness, fixtures
 
-    result["would_be_refused"] = [violation(r) for r in checks if r["status"] == "FAIL"] + [
-        r["reason"] for r in inputs["findings"]
-    ]
-    supplied_changed = result.get("supplied_inputs", {}).get("changed", [])
+    witness_failures = []
+    for witness in fixtures():
+        try:
+            observed = evaluate_witness(after_contract, witness)
+        except (ValueError, KeyError, TypeError) as exc:
+            witness_failures.append(f"frozen witness {witness['id']}: {exc}")
+            continue
+        if observed["evaluation_status"] == "FAIL":
+            want = witness["prospective_action"]
+            got = observed["active_expectation"]["action"]
+            witness_failures.append(
+                f"CONTRACT_CONTRADICTS_FIXTURE: frozen witness {witness['id']} expects "
+                f"{want['classification']}/{want['disposition']}; the proposal gives "
+                f"{got['classification']}/{got['disposition']} ({observed['active_expectation']['rule']})"
+            )
+    result["would_be_refused"] = (
+        [violation(r) for r in checks if r["status"] == "FAIL"]
+        + [r["reason"] for r in inputs["findings"]]
+        + witness_failures
+    )
+    # Examples supplied with --inputs are the author's own; they illustrate an edit but
+    # do not count as independent evidence (audit 3 #9).
     result["unmeasured_edits"] = (
         []
-        if result["changed_outcomes"] or supplied_changed
+        if result["changed_outcomes"]
         else [
             f"{c['block']} / {c['id']}"
             for c in result["declaration_changes"]
@@ -403,9 +438,10 @@ def run(spec: Path, base: str, destination: Path, inputs_path: Path | None = Non
         ),
         *(
             [
-                "**UNMEASURED:** these edits change no captured outcome and no supplied example, "
-                "so nothing here shows whether they are right. Add a witness or supply examples "
-                "with `--inputs`:",
+                "**UNMEASURED:** these edits change no captured outcome, so no independent "
+                "evidence shows whether they are right. Examples supplied with `--inputs` are "
+                "author-supplied illustrations, not evidence. Add a labeled case or a frozen "
+                "witness (an owner action):",
                 "",
             ]
             + [f"- {edit}" for edit in result["unmeasured_edits"]]
@@ -487,7 +523,11 @@ def run(spec: Path, base: str, destination: Path, inputs_path: Path | None = Non
 def main() -> None:
     parser = argparse.ArgumentParser(prog="python -m harness consequences", description=__doc__)
     parser.add_argument("--spec", type=Path, default=ROOT / "spec.md")
-    parser.add_argument("--base", default="HEAD:spec.md")
+    parser.add_argument(
+        "--base",
+        default="REVIEWED",
+        help="Baseline spec: REVIEWED (the last reread, default), HEAD:spec.md or a file",
+    )
     parser.add_argument("--output", type=Path)
     parser.add_argument(
         "--inputs", type=Path, help="JSON array of unlabeled {id, input} normalized examples"

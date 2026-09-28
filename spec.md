@@ -12,7 +12,7 @@ Read the current evidence, identify an implementation defect, a policy gap or an
 
 ## Approved lifecycle decisions
 
-D1–D6 retain the assessment obligations as an owned list of unchecked prose. The spec-checks table references related code-owned boundary checks for navigation only. Their results are reported separately and cannot certify or reinterpret these sentences. An inverted sentence remains visibly UNCHECKED, never constraint PASS. Changing a boundary requires an explicit reviewed contract/check change, not a prose edit.
+D1–D6 retain the assessment obligations as an owned list of unchecked prose, with one exception: the annotation oracle behind OUTPUT-004/005/006 and STATE-004 was approved for D6 exactly as worded (ADR 011). Editing any D6 sentence takes those four requirements out of scope (UNKNOWN) until the owner re-approves the annotation scope. The spec-checks table references related code-owned boundary checks for navigation only. Their results are reported separately and cannot certify or reinterpret these sentences. An inverted sentence remains visibly UNCHECKED, never constraint PASS. Changing a boundary requires an explicit reviewed contract/check change, not a prose edit.
 
 ### D1 — Already-signaled identity and memory
 
@@ -200,7 +200,7 @@ ID | Meaning | Value | Unit | Requirement
 PARAM-INITIAL-001 | Maximum initial alerts | 1 | initial alerts per resolved event | D1-005
 ```
 
-The no-duplicate assessment boundary permits at most one initial alert per resolved event. The parameter may tighten that maximum but cannot exceed one. The 23 named compiled checks below are code-owned boundaries over table/schema/replay structure, not semantic interpretations of the D prose; all D prose remains UNCHECKED.
+The no-duplicate assessment boundary permits at most one initial alert per resolved event. The parameter may tighten that maximum but cannot exceed one. The 25 named compiled checks below are code-owned boundaries over table/schema/replay structure, not semantic interpretations of the D prose; all D prose remains UNCHECKED.
 
 ```spec-checks
 ID | Check | Sentence coverage
@@ -281,20 +281,21 @@ D6-016 | - | UNCHECKED
 
 ## Spec ownership and decisions
 
-Thomas Hand is the repository owner. Decision ownership records the supplied request; it does not assert that Thomas has reread subsequently edited bytes. Every spec change requires a named decision and makes the old read receipt stale. The hash is not approval; required human review is enforced outside this repository.
+Thomas Hand is the repository owner and the only listed spec owner (`spec-settings.owners`); `harness reread` and `harness register-reference` refuse anyone else. Decision status: `owner-requested` means the owner asked for the change, `approved` means the owner approved the stated result; either counts only once the owner has reread the exact bytes. Every spec change requires a named decision and makes the old read receipt stale. The hash and name are assertions, not authentication; required human review is enforced outside this repository (branch protection and CODEOWNERS).
 
 ```spec-decisions
 ID | Status | Person | Previous spec SHA256 | Decision
 ARCH-SOURCE-001 | owner-requested | Thomas Hand | 1adc8936b31bbe5b142bf18e71338b80bb6d066fa67be3d6f7c8fa2edda9017e | Adopt the spec-source architecture. Its original timezone proposal was subsequently rejected by TZ-NGPL-001; TZ-NGPL-002 is the active timezone ruling.
 TZ-NGPL-001 | rejected | Thomas Hand | - | REJECTED proposal: NGPL posts in Central time; timestamps without a zone are parsed as America/Chicago. No such default is authorized.
 TZ-NGPL-002 | owner-requested | Thomas Hand | 5d4adfff7cb944c6a4ec9e9f17bb0ea7deaed47dfff2eeb35583703786a2245f | Adopt source-grounded SIGNAL_CANDIDATE classification with unknown timezone; prohibit automatic time actionability and recommendation authorization, require REVIEW_REQUIRED, and never infer a zone. Exact ruling: evidence/timezone-separation/20260928/owner-ruling.txt.
-FEEDBACK-001 | owner-requested | Thomas Hand | c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f | Make evidence-driven spec maintenance practical: compact normative tables, preview consequences before adoption, explicit check limits and measured tradeoffs. Preserve classification policy, labels, thresholds and authorization; exact revised spec review remains pending.
+FEEDBACK-001 | owner-requested | Thomas Hand | c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f | Make evidence-driven spec maintenance practical: compact normative tables, preview consequences before adoption, explicit check limits and measured tradeoffs. Preserve classification policy, labels, thresholds and authorization.
 AUDIT-TRUTH-001 | owner-requested | Thomas Hand | c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f | Repair gate exits, read-only validation, execution-failure scoring and honest check coverage. Keep unchecked prose separate from code-owned boundaries; retain assumptions here. No new business policy or exact human reread is asserted.
 REMEDIATION-001 | approved | Thomas Hand | c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f | Predicate meaning moves into spec-predicates. An unusable helper verdict vetoes a decision only when the notice is not a firm disruption; the publisher neither stores nor publishes such a decision (SEMANTICS_INCOMPLETE). Measured: capture-1/46864 ERROR -> SIGNAL_CANDIDATE, no new false positive. The publisher witness unusable-impact was re-frozen to match; spec and witness changed in the same session, so the owner's approval is the independent check.
 REMEDIATION-002 | approved | Thomas Hand | c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f | Approved by Thomas Hand 2026-09-28: a restriction with no stated timezone is ENDED when its latest naive source end plus unresolved_time_margin_hours (at least 14, the largest UTC offset) is at or before the reference time. Labeled captures are scored as of each notice's post time (D3-011). No captured outcome changes; live candidates for long-ended restrictions become HISTORICAL_ONLY.
 REMEDIATION-003 | approved | Thomas Hand | c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f | Approved by Thomas Hand 2026-09-28: Gate 2 acceptance budgets. Per capture, at most 0 labeled negatives may be candidates and at most 2 labeled positives may be missed (a positive sent to review counts as missed). 2 is the measured value on 2026-09-28: a ratchet that may only tighten, not a quality claim. Review is the specified outcome for SIGNAL-002 and SIGNAL-004 cases; an unresolved SIGNAL-003 case fails. Six verification rows that this component cannot observe are declared out_of_scope. OUTPUT-001 and STATE-006 text now describe what their checks observe.
 NNS-FIRM-001 | approved | Thomas Hand | c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f | Approved by Thomas Hand 2026-09-28 (desk request): NGPL No-Notice Service is a firm, storage-backed service. Extracted service_type NO_NOTICE normalizes to a distinct NO_NOTICE_FIRM value (source distinction preserved) and NO_NOTICE_FIRM joins FIRM_SERVICES, so a firm NNS restriction (UNAVAILABLE or PRIMARY_ONLY) is a FIRM_DISRUPTION like other firm services. Measured by make consequences: 0/46 captured outcomes change; the only captured NNS row (46528, labeled negative) is an HOURLY_LIMIT_PCT partial limit and stays non-firm-disruption. No captured or labeled NNS outage exists, so the intended positive effect is unmeasured by frozen labels.
 AUDIT2-001 | approved | Thomas Hand | 4448a6f9e9ee3841e0086a8e556c21bbd584efc9167742a831154f70e3e18a8e | Approved by Thomas Hand 2026-09-28: remove status prose that was false on the reviewed bytes ("awaits an exact-spec human reread", "Exact spec reread still pending"). No rule, predicate, setting or requirement changes; make consequences shows 0 of 46 changed.
+AUDIT3-001 | proposed | Thomas Hand | c89f760b3f2167345112801cd7825d26c40c102996239d13a2c788c9c4d363b6 | Third audit: list the spec owner (only listed owners may reread or register a reference); declare that D6 wording scopes the annotation oracle; state the decision status vocabulary; state what the normalizer decides; remove stale "review remains pending" text from FEEDBACK-001; count 25 code-owned boundaries (adds refusals_first and required_inputs). No rule, predicate, set or acceptance value changes.
 ```
 
 ## Fixed domain rules
@@ -324,6 +325,8 @@ BR-FIRM | ANY | ANY | ANY | ANY | ANY | ANY | ANY | FIRM_DISRUPTION | ANY | FIRM
 BR-UNRESOLVED | ANY | ANY | ANY | ANY | ANY | ANY | ANY | ANY | ANY | UNRESOLVED
 Precedence: BR-FORMAT > BR-SEMANTICS > BR-CONTRADICTION > BR-HISTORY > BR-UNCHANGED > BR-ROUTINE > BR-HISTORICAL > BR-FIRM > BR-UNRESOLVED
 ```
+
+The normalizer (`rebuilt/normalization.py`) turns the retained extraction into the facts these conditions read, using only the maps in `spec-settings.normalization`: `content_kind` is INFORMATIONAL when the extractor set information-only, RESTRICTION when it found restriction rows, otherwise UNKNOWN; scalar `availability` is the one value shared by every row, otherwise UNKNOWN; services and availability map through the `services` and `availability` tables (unmapped values stay UNKNOWN); `evidence.contradictory` is always false from this normalizer, so conflicts reach the rules only through the Conflict condition below. It adds no other judgement; anything else a decision needs belongs in this table.
 
 What each column value means. Rows for a column are tried top to bottom; the first true condition gives the value, and the last row of each column is `otherwise`. A condition reads normalized input fields, the derived observations below, named sets from `spec-settings.sets` (`SUPPORTED_FORMATS`, `ROOT_STATUSES` and `LINKED_STATUSES` come from `formats` and `history_statuses`), and `[Column]` values defined earlier in this table. Operators: `and`, `or`, `not`, parentheses, `in SET`, `overlaps SET`, `within SET`, `= VALUE`, `any facts.restrictions has (...)`. Nothing else parses. Changing a set or a condition here changes behavior; no code edit is needed.
 
@@ -616,6 +619,7 @@ Finite normalization maps, accepted date formats and representation bounds. Thes
   "bound_source": "Existing representation bounds, not materiality cutoffs; compiler validates finite values and gate checks use this spec.",
   "formats": {"supported": ["text/html", "application/vnd.ngpl.normalized+json"], "unsupported": ["application/pdf", "text/plain", "application/octet-stream"], "meaning": "HTML is parsed from saved bytes; no PDF/OCR/attachment extraction. Normalized classifier does not implement HTML ingestion."},
   "history_statuses": {"root": ["INITIATE"], "linked": ["INITIATE", "SUPERSEDE", "TERMINATE"]},
+  "owners": ["Thomas Hand"],
   "unresolved_time_margin_hours": 14,
   "acceptance": {"max_missed_positives_per_capture": 2, "max_false_positives_per_capture": 0, "review_satisfies": ["SIGNAL-002", "SIGNAL-004"]},
   "sets": {"FIRM_SERVICES": ["PRIMARY_FIRM", "SECONDARY_FIRM", "NO_NOTICE_FIRM"], "RESTRICTED_AVAILABILITY": ["UNAVAILABLE", "PRIMARY_ONLY", "PARTIAL"], "INFORMATION_KINDS": ["ADMINISTRATIVE", "INFORMATIONAL"], "UNCHANGED_PREDECESSOR_STATUSES": ["INITIATE", "SUPERSEDE"]},
