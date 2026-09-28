@@ -187,6 +187,12 @@ class SpecPredicateTests(unittest.TestCase):
         self.assertNotEqual(classify(value, within).matched_rule, "BR-FIRM")
         self.assertNotEqual(derive(within, value)["rule"], "BR-FIRM")
 
+    def test_an_unknown_decision_status_does_not_compile(self):
+        text = (ROOT / "spec.md").read_text()
+        row = next(line for line in text.splitlines() if line.startswith("AUDIT3-001 |"))
+        with self.assertRaisesRegex(ValueError, "status must be proposed, approved"):
+            compile_spec(ROOT, text.replace(row, row.replace("| approved |", "| accepted |")))
+
     def test_malformed_predicates_name_the_spec_row(self):
         cases = {
             "unknown path": (
