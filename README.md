@@ -40,7 +40,7 @@ The inherited system needs an Anthropic key: export `ANTHROPIC_API_KEY`, or put 
 
 ```bash
 make preflight          LIVE=1 MAX_CALLS=2    # one real notice: extraction plus its impact helper
-make evaluate-inherited LIVE=1 MAX_CALLS=45   # preflight (2) + 23 cases (39) = 41 calls
+make evaluate-inherited LIVE=1 MAX_CALLS=45   # preflight plus 23 cases, about 40 calls (the one full run made 38)
 make e2e-live           LIVE=1 MAX_CALLS=10   # inherited CLI on freshly fetched NGPL notices
 ```
 
