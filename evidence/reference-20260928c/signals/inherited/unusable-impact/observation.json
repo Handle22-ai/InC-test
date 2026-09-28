@@ -1,0 +1,29 @@
+{
+  "step": "unusable-impact",
+  "machine_latency_ms": 1.545459,
+  "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
+  "initial_count": 1,
+  "disposition": "LEGACY_BINARY",
+  "reason": "NO_EXPLICIT_REFUSAL_CONTRACT",
+  "extraction_scorable": true,
+  "classification_scorable": false,
+  "classification_presented_as_valid": true,
+  "decision": {
+    "disposition": "LEGACY_BINARY",
+    "reason": "NO_EXPLICIT_REFUSAL_CONTRACT",
+    "candidate_classification": true
+  },
+  "authorization": {
+    "actor": "Synthetic fixture adjudicator (not real approval)",
+    "notice_id": 800001,
+    "source_sha256": "4e3014a157f842266f1b8ebebb90fa4d43ae1354e037c12ae075cef90ede25b8",
+    "reference_time": "2026-01-15T12:00:00+00:00",
+    "materiality": "MATERIAL",
+    "actionable": true,
+    "approved": true,
+    "source_evidence": "evidence/reviewed-run/signals/inherited/unusable-impact/input.html",
+    "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+  },
+  "parser_evidence": "unusable-impact/parser.json",
+  "report": "unusable-impact/signals.json"
+}

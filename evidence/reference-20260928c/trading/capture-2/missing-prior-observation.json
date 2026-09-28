@@ -1,0 +1,382 @@
+{
+  "id": "capture-2/missing-prior",
+  "case_id": "missing-prior",
+  "notice_id": 46732,
+  "source_capture": "evidence/legacy/20260928T180936.681804Z/results.json",
+  "source_input": "inherited/evaluation/notices/46732_CAPACITY CONSTRAINT.html",
+  "input_sha256": "72ebe91721ad00e884e84a4bdfe8c193966460b94586d5c645cb625da03022d1",
+  "category": "missing_history",
+  "expected_signal": null,
+  "inherited_signal": 0,
+  "inherited_execution": "SUCCESS",
+  "inherited_system": "inherited",
+  "decision": {
+    "decision_id": "cbac846e-33c5-4f1f-9c9c-b977aa2c7ea1",
+    "notice_id": 46732,
+    "source_sha256": "72ebe91721ad00e884e84a4bdfe8c193966460b94586d5c645cb625da03022d1",
+    "reference_time": "2026-02-09T08:32:30+00:00",
+    "raw_proposal": {
+      "notice": {
+        "notice_id": 46732,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "CAPACITY CONSTRAINT",
+        "notice_subtype": "SEGMENTS",
+        "effective_datetime": "2026-02-09T08:32:30",
+        "end_datetime": "2026-02-28T09:00:00",
+        "post_datetime": "2026-02-09T08:32:30",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "TERMINATE",
+        "prior_notice_id": 46507,
+        "subject": "SEG 14 WB - CS 113 - PRIM ONLY LIFTED",
+        "body_text": "SEGMENT 17 FORCE MAJURE\n\nSEGMENT 14 WESTBOUND – CS 113 – PRIMARY ONLY - LIFTED\n\nEffective for gas day \nMonday,\nFebruary 9, 2026, Intraday 1 Cycle and continuing thereafter\n, Natural has\noperating capacity available for transports westbound on the Amarillo Mainline\nSystem through Compressor Station 113 located in Will County, IL (Natural's\nMarket Delivery Zone).  Therefore, the Primary only restriction has been\nlifted.  All transport services are available.\n\n \n\nPlease contact your Account\nDirector or Scheduling Representative if you have any questions.\n\n..",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 0,
+        "confidence_score": 0.0,
+        "validity_flags": "[\"VC-1: terminated notice \\u2014 prior notice not in DB; cannot assess signal impact of lift; continuing validation\", \"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: small curtailment impact \\u2014 interruptible/lower-priority service only or <10% reduction (+0.10 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T18:13:12.555014",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46732_CAPACITY CONSTRAINT.html"
+      },
+      "locations": [
+        {
+          "location_index": 0,
+          "notice_id": 46732,
+          "loc_code": null,
+          "loc_name": null,
+          "segment": "14",
+          "compressor_station": "113",
+          "zone": "Market Delivery Zone",
+          "system": "Amarillo Mainline System"
+        }
+      ],
+      "restrictions": [
+        {
+          "notice_id": 46732,
+          "location_index": 0,
+          "service_type": "ALL",
+          "restriction_type": "UNAVAILABLE",
+          "restriction_value": null,
+          "restriction_unit": null,
+          "flow_direction": "WESTBOUND",
+          "start_datetime": "2026-02-09",
+          "end_datetime": "2026-02-28"
+        }
+      ]
+    },
+    "semantic_evidence": {
+      "extraction_usable": true,
+      "helpers": [
+        [
+          "llm_assess_curtailment_impact",
+          "small"
+        ]
+      ],
+      "execution_error": null,
+      "source_media_type": "text/html"
+    },
+    "normalized_input": {
+      "version": 1,
+      "normalization_trace": [
+        {
+          "field": "content_kind",
+          "source_basis": "Captured notice.information_only and restrictions; validate against source.fields.body",
+          "source_value": {
+            "information_only": 0,
+            "restriction_count": 1
+          },
+          "normalized_value": "RESTRICTION",
+          "supplied_by": "model",
+          "unknown_handling": "Missing content meaning stays UNKNOWN; information plus a known restriction is contradictory"
+        },
+        {
+          "field": "availability",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [
+            "UNAVAILABLE"
+          ],
+          "normalized_value": "UNAVAILABLE",
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "services",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [
+            "ALL"
+          ],
+          "normalized_value": [
+            "UNKNOWN"
+          ],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "restrictions",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [
+            {
+              "notice_id": 46732,
+              "location_index": 0,
+              "service_type": "ALL",
+              "restriction_type": "UNAVAILABLE",
+              "restriction_value": null,
+              "restriction_unit": null,
+              "flow_direction": "WESTBOUND",
+              "start_datetime": "2026-02-09",
+              "end_datetime": "2026-02-28"
+            }
+          ],
+          "normalized_value": [
+            {
+              "service": "UNKNOWN",
+              "availability": "UNAVAILABLE",
+              "restriction_type": "UNAVAILABLE",
+              "status": "UNKNOWN",
+              "location_index": 0,
+              "source_start": "2026-02-09",
+              "source_end": "2026-02-28",
+              "evidence_ref": "source.fields.body"
+            }
+          ],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "locations",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [
+            {
+              "location_index": 0,
+              "notice_id": 46732,
+              "loc_code": null,
+              "loc_name": null,
+              "segment": "14",
+              "compressor_station": "113",
+              "zone": "Market Delivery Zone",
+              "system": "Amarillo Mainline System"
+            }
+          ],
+          "normalized_value": [
+            {
+              "kind": "SEGMENT",
+              "value": "14",
+              "evidence_ref": "source.fields.body"
+            },
+            {
+              "kind": "COMPRESSOR_STATION",
+              "value": "113",
+              "evidence_ref": "source.fields.body"
+            },
+            {
+              "kind": "ZONE",
+              "value": "Market Delivery Zone",
+              "evidence_ref": "source.fields.body"
+            },
+            {
+              "kind": "SYSTEM",
+              "value": "Amarillo Mainline System",
+              "evidence_ref": "source.fields.body"
+            }
+          ],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "quantities",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [
+            {
+              "notice_id": 46732,
+              "location_index": 0,
+              "service_type": "ALL",
+              "restriction_type": "UNAVAILABLE",
+              "restriction_value": null,
+              "restriction_unit": null,
+              "flow_direction": "WESTBOUND",
+              "start_datetime": "2026-02-09",
+              "end_datetime": "2026-02-28"
+            }
+          ],
+          "normalized_value": [],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "restriction_status",
+          "source_basis": "Notice Stat Desc header retained in notice.status",
+          "source_value": "TERMINATE",
+          "normalized_value": "TERMINATE",
+          "supplied_by": "source_parser",
+          "unknown_handling": "Unrecognized status has no inferred lifecycle semantics"
+        },
+        {
+          "field": "source_time",
+          "source_basis": "Source-parser header strings plus model-extracted restriction intervals; only explicit offsets converted",
+          "source_value": {
+            "effective_datetime": "2026-02-09T08:32:30",
+            "end_datetime": "2026-02-28T09:00:00",
+            "restriction_intervals": [
+              [
+                "2026-02-09",
+                "2026-02-28"
+              ]
+            ]
+          },
+          "normalized_value": {
+            "start_time": null,
+            "end_time": null,
+            "time_basis": "UNRESOLVED",
+            "timezone_known": false
+          },
+          "supplied_by": "normalizer",
+          "unknown_handling": "Naive/date-only strings and mixed intervals remain UNRESOLVED; no gas-day or timezone inference"
+        },
+        {
+          "field": "history",
+          "source_basis": "Explicit source-parser prior header and supplied retained history",
+          "source_value": {
+            "status": "TERMINATE",
+            "prior_notice_id": 46507
+          },
+          "normalized_value": {
+            "prior_notice_id": 46507,
+            "available_notice_ids": []
+          },
+          "supplied_by": "retained_history",
+          "unknown_handling": "Missing, unsupported or conflicting chain remains review; no ID-order inference"
+        }
+      ],
+      "source": {
+        "pipeline": "NGPL",
+        "media_type": "text/html",
+        "sha256": "72ebe91721ad00e884e84a4bdfe8c193966460b94586d5c645cb625da03022d1",
+        "bytes_reference": "sha256:72ebe91721ad00e884e84a4bdfe8c193966460b94586d5c645cb625da03022d1",
+        "fields": {
+          "body": "SEGMENT 17 FORCE MAJURE\n\nSEGMENT 14 WESTBOUND – CS 113 – PRIMARY ONLY - LIFTED\n\nEffective for gas day \nMonday,\nFebruary 9, 2026, Intraday 1 Cycle and continuing thereafter\n, Natural has\noperating capacity available for transports westbound on the Amarillo Mainline\nSystem through Compressor Station 113 located in Will County, IL (Natural's\nMarket Delivery Zone).  Therefore, the Primary only restriction has been\nlifted.  All transport services are available.\n\n \n\nPlease contact your Account\nDirector or Scheduling Representative if you have any questions.\n\n..",
+          "effective_datetime": "2026-02-09T08:32:30",
+          "end_datetime": "2026-02-28T09:00:00",
+          "retained_extraction": "{\"locations\": [{\"compressor_station\": \"113\", \"loc_code\": null, \"loc_name\": null, \"location_index\": 0, \"notice_id\": 46732, \"segment\": \"14\", \"system\": \"Amarillo Mainline System\", \"zone\": \"Market Delivery Zone\"}], \"restrictions\": [{\"end_datetime\": \"2026-02-28\", \"flow_direction\": \"WESTBOUND\", \"location_index\": 0, \"notice_id\": 46732, \"restriction_type\": \"UNAVAILABLE\", \"restriction_unit\": null, \"restriction_value\": null, \"service_type\": \"ALL\", \"start_datetime\": \"2026-02-09\"}]}"
+        }
+      },
+      "notice": {
+        "notice_id": 46732,
+        "prior_notice_id": 46507,
+        "status": "TERMINATE",
+        "notice_type": "CAPACITY CONSTRAINT"
+      },
+      "facts": {
+        "content_kind": "RESTRICTION",
+        "services": [
+          "UNKNOWN"
+        ],
+        "availability": "UNAVAILABLE",
+        "locations": [
+          {
+            "kind": "SEGMENT",
+            "value": "14",
+            "evidence_ref": "source.fields.body"
+          },
+          {
+            "kind": "COMPRESSOR_STATION",
+            "value": "113",
+            "evidence_ref": "source.fields.body"
+          },
+          {
+            "kind": "ZONE",
+            "value": "Market Delivery Zone",
+            "evidence_ref": "source.fields.body"
+          },
+          {
+            "kind": "SYSTEM",
+            "value": "Amarillo Mainline System",
+            "evidence_ref": "source.fields.body"
+          }
+        ],
+        "quantities": [],
+        "operational_assertions": [
+          "SEGMENT 17 FORCE MAJURE SEGMENT 14 WESTBOUND – CS 113 – PRIMARY ONLY - LIFTED Effective for gas day Monday, February 9, 2026, Intraday 1 Cycle and continuing thereafter , Natural has operating capacity available for transports westbound on the Amarillo Mainline System through Compressor Station 113 located in Will County, IL (Natural's Market Delivery Zone). Therefore, the Primary only restriction has been lifted. All transport services are available. Please contact your Account Director or Scheduling Representative if you have any questions. .."
+        ],
+        "start_time": null,
+        "end_time": null,
+        "time_basis": "UNRESOLVED",
+        "restrictions": [
+          {
+            "service": "UNKNOWN",
+            "availability": "UNAVAILABLE",
+            "restriction_type": "UNAVAILABLE",
+            "status": "UNKNOWN",
+            "location_index": 0,
+            "source_start": "2026-02-09",
+            "source_end": "2026-02-28",
+            "evidence_ref": "source.fields.body"
+          }
+        ]
+      },
+      "history": [],
+      "reference_time": "2026-02-09T08:32:30+00:00",
+      "evidence": {
+        "extraction_usable": true,
+        "helpers_usable": true,
+        "contradictory": false,
+        "references": [
+          "source.fields.body"
+        ]
+      }
+    },
+    "normalization_gaps": [
+      "Unresolved source timestamp: 2026-02-09",
+      "Unresolved source timestamp: 2026-02-28",
+      "Unsupported restriction/service vocabulary retained as UNKNOWN"
+    ],
+    "actionability": {
+      "status": "UNRESOLVED",
+      "source_timezone_known": false,
+      "source_timezone_status": "UNKNOWN",
+      "automatic_current_future": false,
+      "recommendation_authorized": false
+    },
+    "classifier_decision": {
+      "notice_id": 46732,
+      "source_sha256": "72ebe91721ad00e884e84a4bdfe8c193966460b94586d5c645cb625da03022d1",
+      "classification": "UNRESOLVED",
+      "disposition": "REVIEW_REQUIRED",
+      "recommendation_allowed": false,
+      "reason_codes": [
+        "BR-HISTORY",
+        "MISSING_HISTORY"
+      ],
+      "evidence_refs": [
+        "sha256:72ebe91721ad00e884e84a4bdfe8c193966460b94586d5c645cb625da03022d1",
+        "source.fields.body"
+      ]
+    },
+    "matched_rule": "BR-HISTORY",
+    "classification": "UNRESOLVED",
+    "disposition": "REVIEW_REQUIRED",
+    "reason": "MISSING_HISTORY",
+    "reason_codes": [
+      "BR-HISTORY",
+      "MISSING_HISTORY"
+    ],
+    "recommendation_allowed": false,
+    "candidate_classification": null,
+    "authorization": null,
+    "publication_disposition": "REVIEW_REQUIRED",
+    "publication_reason": "MISSING_HISTORY",
+    "initial_decision": false,
+    "publication_attempted": false,
+    "delivery_acknowledged": null
+  },
+  "recommendation_count": 0,
+  "replay_recommendation_count": 0,
+  "evaluation_clock": {
+    "reference_time": "2026-02-09T08:32:30+00:00",
+    "basis": "notice post_datetime"
+  },
+  "authorization": "None; evaluation labels never authorize publication"
+}

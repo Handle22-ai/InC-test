@@ -1,0 +1,646 @@
+{
+  "id": "capture-0/46725",
+  "case_id": "46725",
+  "notice_id": 46725,
+  "source_capture": "evidence/candidates/impact-budget-512/full/20260926T191722.363460Z/results.json",
+  "source_input": "inherited/evaluation/notices/46725_OPERATIONAL FLOW ORDER.html",
+  "input_sha256": "3f7e883fde61c2b23b72324c0dc133885d39513706f57c2e15eeedf1e6f8bd9c",
+  "category": "labeled",
+  "expected_signal": false,
+  "inherited_signal": 0,
+  "inherited_execution": "SUCCESS",
+  "inherited_system": "impact-budget-512",
+  "decision": {
+    "decision_id": "35ccaa71-969f-4b68-97a9-89d6e9a5bdd1",
+    "notice_id": 46725,
+    "source_sha256": "3f7e883fde61c2b23b72324c0dc133885d39513706f57c2e15eeedf1e6f8bd9c",
+    "reference_time": "2026-02-09T08:15:20+00:00",
+    "raw_proposal": {
+      "notice": {
+        "notice_id": 46725,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "OPERATIONAL FLOW ORDER",
+        "notice_subtype": "OFO",
+        "effective_datetime": "2026-02-09T08:15:20",
+        "end_datetime": "2026-02-28T09:00:00",
+        "post_datetime": "2026-02-09T08:15:20",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "TERMINATE",
+        "prior_notice_id": 46705,
+        "subject": "OFO - MARKET DELVIERY ZONE - REMOVED",
+        "body_text": "Post Date: 01/05/1999 19:01:20\n\nOPERATIONAL FLOW ORDER\nISSUED - MARKET DELIVERY ZONE – REMOVED\n\n \n\nEffective for gas day \nMonday,\nFebruary 9, 2026\n, \nbeginning 9:00 a.m., Central Clock Time\n,\nNatural is removing the Operational Flow Order (OFO) in the Market Delivery\nZone.  Please continue to monitor Natural's interactive website for updates.\n\n \n\nPlease contact your\nAccount Director for any questions.\n\n..",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 1,
+        "is_signal": 0,
+        "confidence_score": 0.0,
+        "validity_flags": "[\"VC-1: information-only notice \\u2014 Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-26T19:18:22.527761",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46725_OPERATIONAL FLOW ORDER.html"
+      },
+      "locations": [
+        {
+          "location_index": 0,
+          "notice_id": 46725,
+          "loc_code": null,
+          "loc_name": null,
+          "segment": null,
+          "compressor_station": null,
+          "zone": "Market Delivery Zone",
+          "system": null
+        }
+      ],
+      "restrictions": [
+        {
+          "notice_id": 46725,
+          "location_index": 0,
+          "service_type": "ALL",
+          "restriction_type": "UNAVAILABLE",
+          "restriction_value": null,
+          "restriction_unit": null,
+          "flow_direction": "ALL",
+          "start_datetime": "2026-02-09T08:15:20",
+          "end_datetime": "2026-02-09"
+        }
+      ]
+    },
+    "semantic_evidence": {
+      "extraction_usable": true,
+      "helpers": [],
+      "execution_error": null,
+      "source_media_type": "text/html"
+    },
+    "normalized_input": {
+      "version": 1,
+      "normalization_trace": [
+        {
+          "field": "content_kind",
+          "source_basis": "Captured notice.information_only and restrictions; validate against source.fields.body",
+          "source_value": {
+            "information_only": 1,
+            "restriction_count": 1
+          },
+          "normalized_value": "INFORMATIONAL",
+          "supplied_by": "model",
+          "unknown_handling": "Missing content meaning stays UNKNOWN; information plus a known restriction is contradictory"
+        },
+        {
+          "field": "availability",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [
+            "UNAVAILABLE"
+          ],
+          "normalized_value": "UNAVAILABLE",
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "services",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [
+            "ALL"
+          ],
+          "normalized_value": [
+            "UNKNOWN"
+          ],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "restrictions",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [
+            {
+              "notice_id": 46725,
+              "location_index": 0,
+              "service_type": "ALL",
+              "restriction_type": "UNAVAILABLE",
+              "restriction_value": null,
+              "restriction_unit": null,
+              "flow_direction": "ALL",
+              "start_datetime": "2026-02-09T08:15:20",
+              "end_datetime": "2026-02-09"
+            }
+          ],
+          "normalized_value": [
+            {
+              "service": "UNKNOWN",
+              "availability": "UNAVAILABLE",
+              "restriction_type": "UNAVAILABLE",
+              "status": "UNKNOWN",
+              "location_index": 0,
+              "source_start": "2026-02-09T08:15:20",
+              "source_end": "2026-02-09",
+              "evidence_ref": "source.fields.body"
+            }
+          ],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "locations",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [
+            {
+              "location_index": 0,
+              "notice_id": 46725,
+              "loc_code": null,
+              "loc_name": null,
+              "segment": null,
+              "compressor_station": null,
+              "zone": "Market Delivery Zone",
+              "system": null
+            }
+          ],
+          "normalized_value": [
+            {
+              "kind": "ZONE",
+              "value": "Market Delivery Zone",
+              "evidence_ref": "source.fields.body"
+            }
+          ],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "quantities",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [
+            {
+              "notice_id": 46725,
+              "location_index": 0,
+              "service_type": "ALL",
+              "restriction_type": "UNAVAILABLE",
+              "restriction_value": null,
+              "restriction_unit": null,
+              "flow_direction": "ALL",
+              "start_datetime": "2026-02-09T08:15:20",
+              "end_datetime": "2026-02-09"
+            }
+          ],
+          "normalized_value": [],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "restriction_status",
+          "source_basis": "Notice Stat Desc header retained in notice.status",
+          "source_value": "TERMINATE",
+          "normalized_value": "TERMINATE",
+          "supplied_by": "source_parser",
+          "unknown_handling": "Unrecognized status has no inferred lifecycle semantics"
+        },
+        {
+          "field": "source_time",
+          "source_basis": "Source-parser header strings plus model-extracted restriction intervals; only explicit offsets converted",
+          "source_value": {
+            "effective_datetime": "2026-02-09T08:15:20",
+            "end_datetime": "2026-02-28T09:00:00",
+            "restriction_intervals": [
+              [
+                "2026-02-09T08:15:20",
+                "2026-02-09"
+              ]
+            ]
+          },
+          "normalized_value": {
+            "start_time": null,
+            "end_time": null,
+            "time_basis": "UNRESOLVED",
+            "timezone_known": false
+          },
+          "supplied_by": "normalizer",
+          "unknown_handling": "Naive/date-only strings and mixed intervals remain UNRESOLVED; no gas-day or timezone inference"
+        },
+        {
+          "field": "history",
+          "source_basis": "Explicit source-parser prior header and supplied retained history",
+          "source_value": {
+            "status": "TERMINATE",
+            "prior_notice_id": 46705
+          },
+          "normalized_value": {
+            "prior_notice_id": 46705,
+            "available_notice_ids": [
+              46507,
+              46604,
+              46615,
+              46624
+            ]
+          },
+          "supplied_by": "retained_history",
+          "unknown_handling": "Missing, unsupported or conflicting chain remains review; no ID-order inference"
+        }
+      ],
+      "source": {
+        "pipeline": "NGPL",
+        "media_type": "text/html",
+        "sha256": "3f7e883fde61c2b23b72324c0dc133885d39513706f57c2e15eeedf1e6f8bd9c",
+        "bytes_reference": "sha256:3f7e883fde61c2b23b72324c0dc133885d39513706f57c2e15eeedf1e6f8bd9c",
+        "fields": {
+          "body": "Post Date: 01/05/1999 19:01:20\n\nOPERATIONAL FLOW ORDER\nISSUED - MARKET DELIVERY ZONE – REMOVED\n\n \n\nEffective for gas day \nMonday,\nFebruary 9, 2026\n, \nbeginning 9:00 a.m., Central Clock Time\n,\nNatural is removing the Operational Flow Order (OFO) in the Market Delivery\nZone.  Please continue to monitor Natural's interactive website for updates.\n\n \n\nPlease contact your\nAccount Director for any questions.\n\n..",
+          "effective_datetime": "2026-02-09T08:15:20",
+          "end_datetime": "2026-02-28T09:00:00",
+          "retained_extraction": "{\"locations\": [{\"compressor_station\": null, \"loc_code\": null, \"loc_name\": null, \"location_index\": 0, \"notice_id\": 46725, \"segment\": null, \"system\": null, \"zone\": \"Market Delivery Zone\"}], \"restrictions\": [{\"end_datetime\": \"2026-02-09\", \"flow_direction\": \"ALL\", \"location_index\": 0, \"notice_id\": 46725, \"restriction_type\": \"UNAVAILABLE\", \"restriction_unit\": null, \"restriction_value\": null, \"service_type\": \"ALL\", \"start_datetime\": \"2026-02-09T08:15:20\"}]}"
+        }
+      },
+      "notice": {
+        "notice_id": 46725,
+        "prior_notice_id": 46705,
+        "status": "TERMINATE",
+        "notice_type": "OPERATIONAL FLOW ORDER"
+      },
+      "facts": {
+        "content_kind": "INFORMATIONAL",
+        "services": [
+          "UNKNOWN"
+        ],
+        "availability": "UNAVAILABLE",
+        "locations": [
+          {
+            "kind": "ZONE",
+            "value": "Market Delivery Zone",
+            "evidence_ref": "source.fields.body"
+          }
+        ],
+        "quantities": [],
+        "operational_assertions": [
+          "Post Date: 01/05/1999 19:01:20 OPERATIONAL FLOW ORDER ISSUED - MARKET DELIVERY ZONE – REMOVED Effective for gas day Monday, February 9, 2026 , beginning 9:00 a.m., Central Clock Time , Natural is removing the Operational Flow Order (OFO) in the Market Delivery Zone. Please continue to monitor Natural's interactive website for updates. Please contact your Account Director for any questions. .."
+        ],
+        "start_time": null,
+        "end_time": null,
+        "time_basis": "UNRESOLVED",
+        "restrictions": [
+          {
+            "service": "UNKNOWN",
+            "availability": "UNAVAILABLE",
+            "restriction_type": "UNAVAILABLE",
+            "status": "UNKNOWN",
+            "location_index": 0,
+            "source_start": "2026-02-09T08:15:20",
+            "source_end": "2026-02-09",
+            "evidence_ref": "source.fields.body"
+          }
+        ]
+      },
+      "history": [
+        {
+          "facts": {
+            "availability": "UNKNOWN",
+            "content_kind": "RESTRICTION",
+            "end_time": null,
+            "locations": [
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "SEGMENT",
+                "value": "14"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "COMPRESSOR_STATION",
+                "value": "113"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "ZONE",
+                "value": "Market Delivery Zone"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "SYSTEM",
+                "value": "Amarillo Mainline System"
+              }
+            ],
+            "operational_assertions": [
+              "SEGMENT 17 FORCE MAJURE SEGMENT 14 WESTBOUND – CS 113 – PRIMARY ONLY Due to current operating conditions, Natural is at operating capacity for transports westbound on the Amarillo Mainline System through Compressor Station 113 located in Will County, IL (Natural's Market Delivery Zone). Therefore, effective for gas day, Wednesday, December 3, 2025, Timely Cycle and continuing until further notice , only Primary Firm and Secondary in-path Firm transports will be scheduled. AOR/ITS and Secondary out-of-path Firm transports will not be available. Please contact your Account Director or Scheduling Representative if you have any questions. .."
+            ],
+            "quantities": [],
+            "restrictions": [
+              {
+                "availability": "PARTIAL",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+                "service": "PRIMARY_FIRM",
+                "source_end": "TBD",
+                "source_start": "2025-12-03",
+                "status": "UNKNOWN"
+              },
+              {
+                "availability": "PARTIAL",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+                "service": "SECONDARY_FIRM",
+                "source_end": "TBD",
+                "source_start": "2025-12-03",
+                "status": "UNKNOWN"
+              },
+              {
+                "availability": "UNAVAILABLE",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "UNAVAILABLE",
+                "service": "AOR_ITS",
+                "source_end": "TBD",
+                "source_start": "2025-12-03",
+                "status": "UNKNOWN"
+              },
+              {
+                "availability": "UNAVAILABLE",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "UNAVAILABLE",
+                "service": "SECONDARY_FIRM",
+                "source_end": "TBD",
+                "source_start": "2025-12-03",
+                "status": "UNKNOWN"
+              }
+            ],
+            "services": [
+              "AOR_ITS",
+              "PRIMARY_FIRM",
+              "SECONDARY_FIRM"
+            ],
+            "start_time": null,
+            "time_basis": "UNRESOLVED"
+          },
+          "notice": {
+            "notice_id": 46507,
+            "notice_type": "CAPACITY CONSTRAINT",
+            "prior_notice_id": null,
+            "status": "INITIATE"
+          },
+          "source_sha256": "6cc6c6ea924d52f09130dc83de3d1a65a25f75982750faddb57e77c5d7f6d084"
+        },
+        {
+          "facts": {
+            "availability": "UNKNOWN",
+            "content_kind": "INFORMATIONAL",
+            "end_time": null,
+            "locations": [],
+            "operational_assertions": [
+              "Pursuant to its Tariff (GT&C Section 5.2 (c) (5)), Natural has updated its list of PHMSA Mega Rule Eligible Projects set forth on Appendix F to its Settlement in Docket No. RP22-1222. See the latest posted notice at Informational Postings :: Natural Gas Pipeline Company of America, L.L.C. under Regulatory, which will contain an updated Appendix F. Any questions or concerns regarding the updated Appendix F should be directed to Rahul Singh, Director of Regulatory, at Rahul.singh@kindermorgan.com . .."
+            ],
+            "quantities": [],
+            "restrictions": [],
+            "services": [],
+            "start_time": null,
+            "time_basis": "UNRESOLVED"
+          },
+          "notice": {
+            "notice_id": 46604,
+            "notice_type": "OTHER",
+            "prior_notice_id": null,
+            "status": "INITIATE"
+          },
+          "source_sha256": "0161fbbc08714add7d3e3742d05667ba6380e07fe60549471ab3d6f7f758acfc"
+        },
+        {
+          "facts": {
+            "availability": "UNKNOWN",
+            "content_kind": "RESTRICTION",
+            "end_time": null,
+            "locations": [
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "LOC",
+                "value": "10560"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "SEGMENT",
+                "value": "25"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "COMPRESSOR_STATION",
+                "value": "302"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "ZONE",
+                "value": "Texok Zone"
+              }
+            ],
+            "operational_assertions": [
+              "ANR/NGPL SOUTH JOLIET AT CAPACITY SEGMENT 25 – STATION MAINTENANCE – CS 302 As posted on Natural's Outage Impact Report (X25-1527903), Natural will be performing station maintenance at Compressor Station 302 (CS 302) located in Montgomery County, Texas (Segment 25 of Natural's Texok Zone). Natural is required to reduce the maximum operating capacity eastbound into Segment 25 from Segment 26 and Segment 22, thus limiting Natural's throughput capacity eastbound through CS 302 during this restriction. The scheduling constraint will be at CS 302 ; therefore, any gas received west of CS 302 for delivery east of CS 302 will be impacted for the duration of the restriction. The Pooling Point - Texok Zone (LOC 10560) is located west of the constraint. Firm transportation associated with storage withdrawals may be impacted. As such, effective for gas day Wednesday, April 1, 2026, Timely Cycle, and continuing through gas day Friday, May 1, 2026 , Natural will schedule Primary Firm and Secondary in-path Firm transports to no less than 55% of contract MDQ through CS 302. AOR/ITS and Secondary out-of-path Firm transports will not be available for the duration of this restriction. The stated scheduling percentage is based upon the current level of firm capacity contracted for during this restriction and is subject to change based upon operational conditions and Shipper utilization. Continue to monitor Natural's interactive website for any updates. Please contact your Account Director or Scheduling Representative if you have any questions. .."
+            ],
+            "quantities": [
+              {
+                "basis": "PCT_MDQ",
+                "evidence_ref": "source.fields.body",
+                "kind": "SCHEDULED_TO_PCT_MDQ",
+                "unit": "PERCENT_MDQ",
+                "value": 55.0
+              },
+              {
+                "basis": "PCT_MDQ",
+                "evidence_ref": "source.fields.body",
+                "kind": "SCHEDULED_TO_PCT_MDQ",
+                "unit": "PERCENT_MDQ",
+                "value": 55.0
+              }
+            ],
+            "restrictions": [
+              {
+                "availability": "PARTIAL",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+                "service": "PRIMARY_FIRM",
+                "source_end": "2026-05-01",
+                "source_start": "2026-04-01",
+                "status": "UNKNOWN"
+              },
+              {
+                "availability": "PARTIAL",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+                "service": "SECONDARY_FIRM",
+                "source_end": "2026-05-01",
+                "source_start": "2026-04-01",
+                "status": "UNKNOWN"
+              },
+              {
+                "availability": "UNAVAILABLE",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "UNAVAILABLE",
+                "service": "AOR_ITS",
+                "source_end": "2026-05-01",
+                "source_start": "2026-04-01",
+                "status": "UNKNOWN"
+              },
+              {
+                "availability": "UNAVAILABLE",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "UNAVAILABLE",
+                "service": "SECONDARY_FIRM",
+                "source_end": "2026-05-01",
+                "source_start": "2026-04-01",
+                "status": "UNKNOWN"
+              }
+            ],
+            "services": [
+              "AOR_ITS",
+              "PRIMARY_FIRM",
+              "SECONDARY_FIRM"
+            ],
+            "start_time": null,
+            "time_basis": "UNRESOLVED"
+          },
+          "notice": {
+            "notice_id": 46615,
+            "notice_type": "MAINTENANCE",
+            "prior_notice_id": null,
+            "status": "INITIATE"
+          },
+          "source_sha256": "59bceaae533f4d516e49ed540211022c32e7af7ec2df37f20a2e17ec0d86f8f3"
+        },
+        {
+          "facts": {
+            "availability": "UNAVAILABLE",
+            "content_kind": "RESTRICTION",
+            "end_time": null,
+            "locations": [
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "LOC",
+                "value": "7936"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "SEGMENT",
+                "value": "24"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "ZONE",
+                "value": "Louisiana Zone"
+              }
+            ],
+            "operational_assertions": [
+              "ANR/NGPL SOUTH JOLIET AT CAPACITY FLORIDA VERMILION (LOC 7936) – PRIMARY ONLY Due to current operating conditions, effective for gas day Wednesday, January 14, 2026, Timely Cycle and continuing until further notice, Florida Vermilion (LOC 7936) is at operating capacity. As such, Natural will only schedule Primary Firm transports for deliveries to Florida Vermilion (LOC 7936). AOR/ITS, Secondary out-of-path Firm transports and Secondary in-path Firm transports will not be available. Florida Vermilion is located in Vermilion Parish, Louisiana (Segment 24), in Natural's Louisiana Zone. Please contact your Account Director or Scheduling Representative if you have any questions. .."
+            ],
+            "quantities": [],
+            "restrictions": [
+              {
+                "availability": "UNAVAILABLE",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "UNAVAILABLE",
+                "service": "AOR_ITS",
+                "source_end": "TBD",
+                "source_start": "2026-01-14",
+                "status": "UNKNOWN"
+              },
+              {
+                "availability": "UNAVAILABLE",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "UNAVAILABLE",
+                "service": "SECONDARY_FIRM",
+                "source_end": "TBD",
+                "source_start": "2026-01-14",
+                "status": "UNKNOWN"
+              },
+              {
+                "availability": "UNAVAILABLE",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "UNAVAILABLE",
+                "service": "SECONDARY_FIRM",
+                "source_end": "TBD",
+                "source_start": "2026-01-14",
+                "status": "UNKNOWN"
+              }
+            ],
+            "services": [
+              "AOR_ITS",
+              "SECONDARY_FIRM"
+            ],
+            "start_time": null,
+            "time_basis": "UNRESOLVED"
+          },
+          "notice": {
+            "notice_id": 46624,
+            "notice_type": "CAPACITY CONSTRAINT",
+            "prior_notice_id": null,
+            "status": "INITIATE"
+          },
+          "source_sha256": "faf2ec98d47909410928c664ccec1287e449cab56a2b410d2fd1ddf25af0811b"
+        }
+      ],
+      "reference_time": "2026-02-09T08:15:20+00:00",
+      "evidence": {
+        "extraction_usable": true,
+        "helpers_usable": true,
+        "contradictory": false,
+        "references": [
+          "source.fields.body"
+        ]
+      }
+    },
+    "normalization_gaps": [
+      "Unresolved source timestamp: 2026-02-09",
+      "Unresolved source timestamp: 2026-02-09T08:15:20",
+      "Unsupported restriction/service vocabulary retained as UNKNOWN"
+    ],
+    "actionability": {
+      "status": "UNRESOLVED",
+      "source_timezone_known": false,
+      "source_timezone_status": "UNKNOWN",
+      "automatic_current_future": false,
+      "recommendation_authorized": false
+    },
+    "classifier_decision": {
+      "notice_id": 46725,
+      "source_sha256": "3f7e883fde61c2b23b72324c0dc133885d39513706f57c2e15eeedf1e6f8bd9c",
+      "classification": "UNRESOLVED",
+      "disposition": "REVIEW_REQUIRED",
+      "recommendation_allowed": false,
+      "reason_codes": [
+        "BR-CONTRADICTION",
+        "CONTRADICTORY_EVIDENCE"
+      ],
+      "evidence_refs": [
+        "sha256:0161fbbc08714add7d3e3742d05667ba6380e07fe60549471ab3d6f7f758acfc",
+        "sha256:3f7e883fde61c2b23b72324c0dc133885d39513706f57c2e15eeedf1e6f8bd9c",
+        "sha256:59bceaae533f4d516e49ed540211022c32e7af7ec2df37f20a2e17ec0d86f8f3",
+        "sha256:6cc6c6ea924d52f09130dc83de3d1a65a25f75982750faddb57e77c5d7f6d084",
+        "sha256:faf2ec98d47909410928c664ccec1287e449cab56a2b410d2fd1ddf25af0811b",
+        "source.fields.body"
+      ]
+    },
+    "matched_rule": "BR-CONTRADICTION",
+    "classification": "UNRESOLVED",
+    "disposition": "REVIEW_REQUIRED",
+    "reason": "CONTRADICTORY_EVIDENCE",
+    "reason_codes": [
+      "BR-CONTRADICTION",
+      "CONTRADICTORY_EVIDENCE"
+    ],
+    "recommendation_allowed": false,
+    "candidate_classification": null,
+    "authorization": null,
+    "publication_disposition": "REVIEW_REQUIRED",
+    "publication_reason": "CONTRADICTORY_EVIDENCE",
+    "initial_decision": false,
+    "publication_attempted": false,
+    "delivery_acknowledged": null
+  },
+  "recommendation_count": 0,
+  "replay_recommendation_count": 0,
+  "evaluation_clock": {
+    "reference_time": "2026-02-09T08:15:20+00:00",
+    "basis": "notice post_datetime"
+  },
+  "authorization": "None; evaluation labels never authorize publication"
+}

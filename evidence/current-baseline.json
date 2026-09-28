@@ -1,13 +1,44 @@
 {
   "version": 2,
   "role": "observed-comparison-reference-not-release-acceptance",
-  "path": "evidence/reference-20260928",
-  "source_commit": "a6628e458c80c9c2ede5e6c30c1eb4cacab8b998",
-  "spec_sha256": "c89f760b3f2167345112801cd7825d26c40c102996239d13a2c788c9c4d363b6",
+  "path": "evidence/reference-20260928c",
+  "source_commit": "997ff186f30ca11337177729f934b63e14830f07",
+  "spec_sha256": "a5bb4e2231092d6da4928c346d8d8f3722c8d44299a721de5c58d4be35249e76",
   "human_review_asserted": false,
+  "registered_by": "Thomas Hand",
+  "accepted_changes": {
+    "oracle": [
+      "context/authority-reference.json",
+      "requirements/capture-registry.json",
+      "requirements/trading-evidence.json"
+    ],
+    "evaluator": [
+      "harness/__main__.py",
+      "harness/baseline.py",
+      "harness/consequences.py",
+      "harness/context.py",
+      "harness/current_evidence.py",
+      "harness/evaluator.py",
+      "harness/evidence.py",
+      "harness/normalized_evaluation.py",
+      "harness/proposals.py",
+      "harness/rule_invariants.py",
+      "harness/spec_ownership.py",
+      "harness/spec_tables.py",
+      "harness/trading_evaluation.py",
+      "tests/test_audit_controls.py",
+      "tests/test_check_registry.py",
+      "tests/test_derivation_integrity.py",
+      "tests/test_feedback_loop.py",
+      "tests/test_spec_owner_review.py",
+      "tests/test_spec_predicates.py",
+      "tests/test_spec_source.py"
+    ]
+  },
+  "previous_reference_classification": "EVALUATOR_OR_ORACLE_CHANGED",
   "sha256": {
-    "results.json": "cafe92793632fd0cf89b89ed113e564670fb8ff7766e736da714d990bc0cc457",
-    "manifest.json": "465b7899a22b5428f93cdb64615c414b8f9632570c77b8fae47ad6a0c48ec1b9"
+    "results.json": "6727cdbe6656dac0f9bb9fcb6689a1510bcdf005d68d557a0a0c582e53430c3a",
+    "manifest.json": "b591ad20c94af93ad2cd91b4775708b2267d983688a5f08f0ea78069a7c528a7"
   },
   "observed_gates": {
     "3": "UNKNOWN",
