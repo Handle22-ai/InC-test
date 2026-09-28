@@ -1,0 +1,460 @@
+{
+  "policy_id": "assessment-v4-timezone-separation-20260928",
+  "measurement_valid": false,
+  "gates": {
+    "1": "FAIL",
+    "2": "ERROR",
+    "3": "UNKNOWN"
+  },
+  "metrics": {
+    "labeled_total": 14,
+    "labeled_valid": 13,
+    "execution_failures": [
+      {
+        "case": "46528",
+        "domain": "MODEL_FAILURE"
+      },
+      {
+        "case": "restart-replay",
+        "domain": "MODEL_FAILURE"
+      }
+    ],
+    "correct": 13,
+    "false_trading_signals": [],
+    "missed_labeled_signals": [],
+    "missed_critical_unplanned": {
+      "coverage": "scored",
+      "scored_assertions": 1,
+      "failures": []
+    },
+    "routine_notices_incorrectly_signaled": {
+      "coverage": "scored",
+      "scored_assertions": 3,
+      "failures": []
+    },
+    "duplicate_revision_classifications": {
+      "coverage": "scored",
+      "scored_assertions": 2,
+      "failures": []
+    },
+    "duplicate_delivered_signals": "UNKNOWN: no emission interface",
+    "curtailment_volume_extraction_failures": {
+      "coverage": "scored",
+      "scored_assertions": 4,
+      "failures": []
+    },
+    "pipeline_segment_extraction_failures": {
+      "coverage": "scored",
+      "scored_assertions": 10,
+      "failures": []
+    },
+    "geography_extraction_failures": {
+      "coverage": "scored",
+      "scored_assertions": 9,
+      "failures": []
+    },
+    "geographic_price_relevance": "UNKNOWN: no independent price-impact oracle",
+    "ambiguous_unsupported_ood": {
+      "observed_cases": [],
+      "coverage": "unscored"
+    }
+  },
+  "coverage": [
+    {
+      "requirement_id": "INPUT-001",
+      "status": "PASS",
+      "counts": {
+        "PASS": 23
+      },
+      "strategy": "contract",
+      "check": "identity",
+      "governance": "grounded",
+      "approval": "existing-contract",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "executable_scoped"
+    },
+    {
+      "requirement_id": "INPUT-002",
+      "status": "UNKNOWN",
+      "counts": {
+        "N/A": 1
+      },
+      "strategy": "contract",
+      "check": "refusal",
+      "governance": "assessment-assumption",
+      "approval": "owner-approved",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "executable_scoped"
+    },
+    {
+      "requirement_id": "OUTPUT-001",
+      "status": "PASS",
+      "counts": {
+        "PASS": 21,
+        "N/A": 2
+      },
+      "strategy": "contract",
+      "check": "decision_shape",
+      "governance": "grounded",
+      "approval": "owner-approved",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "executable_scoped"
+    },
+    {
+      "requirement_id": "OUTPUT-002",
+      "status": "PASS",
+      "counts": {
+        "PASS": 23
+      },
+      "strategy": "contract",
+      "check": "quantities",
+      "governance": "grounded",
+      "approval": "owner-approved",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "executable_scoped"
+    },
+    {
+      "requirement_id": "OUTPUT-003",
+      "status": "PASS",
+      "counts": {
+        "PASS": 23
+      },
+      "strategy": "invariant",
+      "check": "links",
+      "governance": "grounded",
+      "approval": "owner-approved",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "executable_scoped"
+    },
+    {
+      "requirement_id": "OUTPUT-004",
+      "status": "PASS",
+      "counts": {
+        "PASS": 4
+      },
+      "strategy": "labeled_eval",
+      "check": "field_values",
+      "governance": "assessment-assumption",
+      "approval": "owner-approved",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "executable_scoped"
+    },
+    {
+      "requirement_id": "OUTPUT-005",
+      "status": "PASS",
+      "counts": {
+        "PASS": 10
+      },
+      "strategy": "labeled_eval",
+      "check": "field_values",
+      "governance": "assessment-assumption",
+      "approval": "owner-approved",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "executable_scoped"
+    },
+    {
+      "requirement_id": "OUTPUT-006",
+      "status": "PASS",
+      "counts": {
+        "PASS": 9
+      },
+      "strategy": "labeled_eval",
+      "check": "field_values",
+      "governance": "assessment-assumption",
+      "approval": "owner-approved",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "executable_scoped"
+    },
+    {
+      "requirement_id": "SIGNAL-001",
+      "status": "ERROR",
+      "counts": {
+        "PASS": 13,
+        "ERROR": 1
+      },
+      "strategy": "labeled_eval",
+      "check": "classification",
+      "governance": "grounded",
+      "approval": "owner-approved",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "executable_scoped"
+    },
+    {
+      "requirement_id": "SIGNAL-002",
+      "status": "PASS",
+      "counts": {
+        "PASS": 3
+      },
+      "strategy": "negative_control",
+      "check": "classification",
+      "governance": "grounded",
+      "approval": "owner-approved",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "executable_scoped"
+    },
+    {
+      "requirement_id": "SIGNAL-003",
+      "status": "PASS",
+      "counts": {
+        "PASS": 1
+      },
+      "strategy": "labeled_eval",
+      "check": "classification",
+      "governance": "grounded",
+      "approval": "owner-approved",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "executable_scoped"
+    },
+    {
+      "requirement_id": "SIGNAL-004",
+      "status": "PASS",
+      "counts": {
+        "PASS": 2
+      },
+      "strategy": "labeled_eval",
+      "check": "classification",
+      "governance": "grounded",
+      "approval": "owner-approved",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "executable_scoped"
+    },
+    {
+      "requirement_id": "STATE-001",
+      "status": "UNKNOWN",
+      "counts": {
+        "UNKNOWN": 1
+      },
+      "strategy": "invariant",
+      "check": "out_of_scope",
+      "governance": "grounded",
+      "approval": "existing-contract",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "not_available"
+    },
+    {
+      "requirement_id": "STATE-002",
+      "status": "UNKNOWN",
+      "counts": {
+        "UNKNOWN": 1
+      },
+      "strategy": "metamorphic",
+      "check": "out_of_scope",
+      "governance": "grounded",
+      "approval": "existing-contract",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "not_available"
+    },
+    {
+      "requirement_id": "STATE-003",
+      "status": "UNKNOWN",
+      "counts": {
+        "N/A": 1
+      },
+      "strategy": "metamorphic",
+      "check": "replay",
+      "governance": "assessment-assumption",
+      "approval": "owner-approved",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "executable_scoped"
+    },
+    {
+      "requirement_id": "STATE-004",
+      "status": "PASS",
+      "counts": {
+        "PASS": 2
+      },
+      "strategy": "metamorphic",
+      "check": "revision",
+      "governance": "assessment-assumption",
+      "approval": "owner-approved",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "executable_scoped"
+    },
+    {
+      "requirement_id": "STATE-005",
+      "status": "UNKNOWN",
+      "counts": {
+        "UNKNOWN": 1
+      },
+      "strategy": "metamorphic",
+      "check": "out_of_scope",
+      "governance": "assessment-assumption",
+      "approval": "owner-approved",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "not_available"
+    },
+    {
+      "requirement_id": "STATE-006",
+      "status": "FAIL",
+      "counts": {
+        "FAIL": 1
+      },
+      "strategy": "metamorphic",
+      "check": "restart",
+      "governance": "grounded",
+      "approval": "owner-approved",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "executable_scoped"
+    },
+    {
+      "requirement_id": "HISTORY-001",
+      "status": "UNKNOWN",
+      "counts": {
+        "UNKNOWN": 3,
+        "PASS": 4
+      },
+      "strategy": "invariant",
+      "check": "lineage",
+      "governance": "grounded",
+      "approval": "owner-approved",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "executable_scoped"
+    },
+    {
+      "requirement_id": "HISTORY-002",
+      "status": "UNKNOWN",
+      "counts": {
+        "N/A": 1
+      },
+      "strategy": "metamorphic",
+      "check": "replay",
+      "governance": "assessment-assumption",
+      "approval": "owner-approved",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "executable_scoped"
+    },
+    {
+      "requirement_id": "HISTORY-003",
+      "status": "UNKNOWN",
+      "counts": {
+        "UNKNOWN": 1
+      },
+      "strategy": "metamorphic",
+      "check": "out_of_scope",
+      "governance": "assessment-assumption",
+      "approval": "owner-approved",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "not_available"
+    },
+    {
+      "requirement_id": "HISTORY-004",
+      "status": "UNKNOWN",
+      "counts": {
+        "UNKNOWN": 1
+      },
+      "strategy": "metamorphic",
+      "check": "out_of_scope",
+      "governance": "assessment-assumption",
+      "approval": "owner-approved",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "not_available"
+    },
+    {
+      "requirement_id": "HISTORY-005",
+      "status": "UNKNOWN",
+      "counts": {
+        "UNKNOWN": 1
+      },
+      "strategy": "invariant",
+      "check": "out_of_scope",
+      "governance": "assessment-assumption",
+      "approval": "owner-approved",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "not_available"
+    },
+    {
+      "requirement_id": "SAFETY-001",
+      "status": "FAIL",
+      "counts": {
+        "PASS": 21,
+        "FAIL": 2
+      },
+      "strategy": "contract",
+      "check": "model_proof",
+      "governance": "grounded",
+      "approval": "owner-approved",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "executable_scoped"
+    },
+    {
+      "requirement_id": "SAFETY-002",
+      "status": "UNKNOWN",
+      "counts": {
+        "N/A": 1
+      },
+      "strategy": "negative_control",
+      "check": "refusal",
+      "governance": "assessment-assumption",
+      "approval": "owner-approved",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "executable_scoped"
+    },
+    {
+      "requirement_id": "OBS-001",
+      "status": "PASS",
+      "counts": {
+        "PASS": 1
+      },
+      "strategy": "contract",
+      "check": "provenance",
+      "governance": "grounded",
+      "approval": "owner-approved",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "executable_scoped"
+    },
+    {
+      "requirement_id": "OBS-002",
+      "status": "PASS",
+      "counts": {
+        "PASS": 1
+      },
+      "strategy": "invariant",
+      "check": "integrity",
+      "governance": "grounded",
+      "approval": "existing-contract",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "executable_scoped"
+    },
+    {
+      "requirement_id": "OBS-003",
+      "status": "UNKNOWN",
+      "counts": {
+        "UNKNOWN": 1
+      },
+      "strategy": "invariant",
+      "check": "regression",
+      "governance": "grounded",
+      "approval": "existing-contract",
+      "enforcement": "binding",
+      "implementation_status": "not_established",
+      "check_status": "executable_scoped"
+    }
+  ]
+}

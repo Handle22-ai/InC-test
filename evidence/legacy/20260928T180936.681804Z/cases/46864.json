@@ -1,0 +1,2292 @@
+{
+  "case_id": "46864",
+  "input": "inherited/evaluation/notices/46864_FORCE MAJEURE.html",
+  "input_sha256": "aeb686ef2f60a384bdb5965d43499102f8721003060f8436d46312e7aba269db",
+  "notice_id": 46864,
+  "state_before": {
+    "notices": [
+      {
+        "notice_id": 46507,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "CAPACITY CONSTRAINT",
+        "notice_subtype": "SEGMENTS",
+        "effective_datetime": "2025-12-01T13:52:24",
+        "end_datetime": "2026-03-31T09:00:00",
+        "post_datetime": "2025-12-01T13:52:24",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "SEGMENT 14 WB - CS 113 - PRIMARY ONLY",
+        "body_text": "SEGMENT 17 FORCE MAJURE\n\nSEGMENT 14 WESTBOUND – CS 113 – PRIMARY ONLY\n\n \n\nDue to current operating\nconditions, Natural is at operating capacity for transports \nwestbound\n on\nthe Amarillo Mainline System through Compressor Station 113 located in Will\nCounty, IL (Natural's Market Delivery Zone).  Therefore, effective for gas day,\n\nWednesday, December 3, 2025, Timely Cycle and continuing until further\nnotice\n, only Primary Firm and Secondary in-path Firm transports will be\nscheduled.  AOR/ITS and Secondary out-of-path Firm transports \nwill not\n\nbe available.\n\n \n\nPlease contact your Account\nDirector or Scheduling Representative if you have any questions.\n\n..",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 1,
+        "confidence_score": 0.6,
+        "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T18:10:01.753547",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46507_CAPACITY CONSTRAINT.html"
+      },
+      {
+        "notice_id": 46528,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "OPERATIONAL ALERT",
+        "notice_subtype": "ADVISORY/DIRECTIONAL NOTICE",
+        "effective_datetime": "2025-12-09T16:10:22",
+        "end_datetime": "2026-02-28T09:00:00",
+        "post_datetime": "2025-12-09T16:10:22",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "HOURLY TAKES ADVISORY - MARKET DELIVERY",
+        "body_text": "HOURLY TAKES ADVISORY – MARKET DELIVERY ZONE\n\nHOURLY TAKES ADVISORY – MARKET\nDELIVERY ZONE \n\n \n\nDue to the impending colder\nweather and current system operating conditions, effective for\n Friday, December\n 12, 2025, at 9:00 am., and continuing until further notice\n, per Natural's\ntariff [GT&C Section 7.4], \nShippers and Point Operators\n are advised\nto \nlimit hourly\n \ntakes\n at \nALL DELIVERY POINTS IN THE MARKET\nDELIVERY ZONE\n.  Additionally, Natural continues to monitor operating\nconditions system wide.  If necessary, Natural will issue Operational Flow\nOrders (OFOs) to address Shipper actions that are \ndetrimental to such\noperating conditions outside the Market Delivery Zone\n.  Should Natural's\nability to provide hourly flexibility decrease, an Operational Flow Order (OFO)\ncondition will occur.\n\n \n\nAs provided in the tariff,\nat each point in the Market Delivery Zone, the hourly rights for each Shipper/Point\nOperator will be limited.  Such hourly rights will be limited by service\npriority and nomination cycle, based on hours remaining in the gas day. \nShippers and Point Operators are responsible for calculating and monitoring\ntheir hourly usage so as not to exceed the limits described herein.\n\n \n\nHourly Rights for Firm\nService – 150%\n\nIncludes Primary and\nSecondary Confirmed Nominations and Unused No-Notice firm service rights\n\n \n\n            \nTimely/Evening\nCycles\n\nLimited to \n6.25% (150% / 24 hours)\n of Firm\nService.  \n\n \n\nIntra-Day 1 Cycle\n\nLimited to the hourly rights computed in the previous\ncycle for Firm Service; plus \n7.895%\n \n(150% / 19 hours)\n of the difference\nof current cycle Firm Service minus prior cycle Firm Service.  \n\n \n\nIntra-Day 2 Cycle\n\nLimited to the hourly rights computed in the previous\ncycle for Firm Service; plus\n 10.00% (150% / 15 hours)\n of the difference\nof current cycle Firm Service minus prior cycle Firm Service.  \n\n \n\nIntra-Day 3 Cycle\n\nLimited to the hourly rights computed in the previous\ncycle for Firm Service, plus \n13.64% (150% / 11 hours)\n of the difference\nof current cycle Firm Service minus prior cycle Firm Service.\n\n \n\n \n\nHourly Rights for\nInterruptible Service – 105%\n\nIncludes Interruptible and\nAOR nominations, as well as POA tolerances\n\n \n\nTimely/Evening\nCycles\n\nLimited to \n4.375% (105% / 24 hours)\n of Interruptible\nService.  \n\n \n\nIntra-Day 1 Cycle\n\nLimited to the hourly rights computed in the previous\ncycle for Interruptible Service; plus\n 5.53%\n \n(105% / 19 hours)\n of\nthe difference of current cycle Interruptible Service minus prior cycle Interruptible\nService.  \n\n \n\n \n\nIntra-Day 2 Cycle\n\nLimited to the hourly rights computed in the previous\ncycle for Interruptible Service; plus \n7.0% (105% / 15 hours)\n of the\ndifference of current cycle Interruptible Service minus prior cycle Interruptible\nService.  \n\n \n\nIntra-Day 3 Cycle\n\nLimited to the hourly rights computed in the previous\ncycle for Interruptible Service; plus \n9.55% (105% / 11 hours)\n of the\ndifference of current cycle Interruptible Service minus prior cycle\nInterruptible Service.\n\n \n\nLimitation on\nNominations in All Cycles for Firm and Interruptible Service\n\n \n\nShippers are advised that nominations should be\nreceived by Timely/Evening Cycle in order to utilize full rights over 24 hours,\nto avoid exceeding the 24 hour ratable hourly takes calculation.  In all\ncases, any first time nominations received on Non-Timely Cycles for full MDQ\nutilization rights, plus any scheduled ITS nominations must conform to the 24\nhour ratable calculation.  Shipper's hourly rights based on firm MDQ, plus\ninterruptible nominations, must be adequate enough to accommodate the\ncalculated hourly rights for the remaining hours of the gas day. \nSpecifically, hourly rights cannot exceed 150% / 24 hours of Shipper's MDQ on\nthe nominated contract, plus 105% / 24 hours of Shipper's interruptible\nnominations.\n\n \n\nIn addition, Natural would\nlike to remind point operators to utilize the Operator Point Reports available\non our website to assist you in monitoring your hourly takes.  These reports\nare available by linking to http://pipeline.kindermorgan.com.  Select NGPL >\nCustomer Activities > Log On > Flowing Gas > Additional Reports >\nNGPL/HRZ > NGPL/HRZ – Hourly Nomination Details.\n\n \n\nPlease contact your Account\nDirector or Scheduling Representative if you have any questions.\n\n..",
+        "outage_report_ref": null,
+        "tariff_section": "GT&C Section 7.4",
+        "information_only": 0,
+        "is_signal": 0,
+        "confidence_score": 0.0,
+        "validity_flags": "[\"VC-3: small curtailment impact \\u2014 interruptible/lower-priority service only or <10% reduction (+0.10 confidence)\", \"VC-4: named zone(s) identified \\u2014 regional constraint known (+0.20 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T18:10:18.621059",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46528_OPERATIONAL ALERT.html"
+      },
+      {
+        "notice_id": 46604,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "OTHER",
+        "notice_subtype": "TARIFF PROVISIONS/PARAMETERS",
+        "effective_datetime": "2026-01-06T11:27:29",
+        "end_datetime": "2049-12-31T09:00:00",
+        "post_datetime": "2026-01-06T11:27:29",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "PHMSA MEGA RULE ELIGIBLE PROJ-UPDATE",
+        "body_text": "Pursuant to\nits Tariff (GT&C Section 5.2 (c) (5)), Natural has updated its list of\nPHMSA Mega Rule Eligible Projects set forth on Appendix F to its Settlement in\nDocket No. RP22-1222.  \n\nSee the\nlatest posted notice at \nInformational\nPostings :: Natural Gas Pipeline Company of America, L.L.C.\n under\nRegulatory, which will contain an updated Appendix F.  Any questions or\nconcerns regarding the updated Appendix F should be directed to Rahul Singh,\nDirector of Regulatory, at \nRahul.singh@kindermorgan.com\n.\n\n \n\n..",
+        "outage_report_ref": null,
+        "tariff_section": "GT&C Section 5.2",
+        "information_only": 1,
+        "is_signal": 0,
+        "confidence_score": 0.0,
+        "validity_flags": "[\"VC-1: information-only notice \\u2014 Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T18:10:22.461977",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46604_OTHER.html"
+      },
+      {
+        "notice_id": 46615,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "MAINTENANCE",
+        "notice_subtype": "MAINTENANCE",
+        "effective_datetime": "2026-01-08T16:53:39",
+        "end_datetime": "2026-08-31T09:00:00",
+        "post_datetime": "2026-01-08T16:53:39",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "SEG 25 - STATION MAINT - CS 302",
+        "body_text": "ANR/NGPL SOUTH JOLIET AT CAPACITY\n\nSEGMENT\n25 – STATION MAINTENANCE – CS 302\n\n \n\nAs\nposted on Natural's Outage Impact Report (X25-1527903), Natural will be\nperforming station maintenance at Compressor Station 302 (CS 302) located in Montgomery\nCounty, Texas (Segment 25 of Natural's Texok Zone).  Natural is required to\nreduce the maximum operating capacity eastbound into Segment 25 from Segment 26\nand Segment 22, thus limiting Natural's throughput capacity eastbound through\nCS 302 during this restriction.\n\n \n\nThe\n\nscheduling constraint will be at CS 302\n; therefore, any gas received\nwest of CS 302 for delivery east of CS 302 will be impacted for the duration of\nthe restriction.  The Pooling Point - Texok Zone (LOC 10560) is located west of\nthe constraint.  Firm transportation associated with storage withdrawals may be\nimpacted.\n\n \n\nAs\nsuch, effective for gas day \nWednesday, April 1, 2026, Timely Cycle, and\ncontinuing through gas day Friday, May 1, 2026\n, Natural will schedule\nPrimary Firm and Secondary in-path Firm transports to no less than \n55%\n\nof contract MDQ through CS 302.  AOR/ITS and Secondary out-of-path Firm\ntransports \nwill not\n be available for the duration of this restriction.\n\n \n\nThe\nstated scheduling percentage is based upon the current level of firm capacity\ncontracted for during this restriction and is subject to change based upon\noperational conditions and Shipper utilization.\n\n \n\nContinue\nto monitor Natural's interactive website for any updates.  Please contact your\nAccount Director or Scheduling Representative if you have any questions.\n\n..",
+        "outage_report_ref": "X25-1527903",
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 1,
+        "confidence_score": 0.5,
+        "validity_flags": "[\"VC-2: high-confidence notice type (MAINTENANCE) \\u2014 maintenance outage (+0.10 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T18:10:35.280834",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46615_MAINTENANCE.html"
+      },
+      {
+        "notice_id": 46624,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "CAPACITY CONSTRAINT",
+        "notice_subtype": "POINTS",
+        "effective_datetime": "2026-01-12T10:51:37",
+        "end_datetime": "2026-03-31T09:00:00",
+        "post_datetime": "2026-01-12T10:51:37",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "FGT VERMILLION (LOC 7936) - PRIMARY ONLY",
+        "body_text": "ANR/NGPL SOUTH JOLIET AT CAPACITY\n\nFLORIDA\nVERMILION (LOC 7936) – PRIMARY ONLY\n\n \n\nDue\nto current operating conditions, effective for gas day \nWednesday, January 14,\n2026, Timely Cycle and continuing until further notice,\n Florida Vermilion (LOC\n7936) is at operating capacity.  As such, Natural will only schedule Primary\nFirm transports for deliveries to Florida Vermilion (LOC 7936).  AOR/ITS, Secondary\nout-of-path Firm transports and Secondary in-path Firm transports \nwill\nnot\n be available.\n\n \n\nFlorida\nVermilion is located in Vermilion Parish, Louisiana (Segment 24), in Natural's Louisiana\nZone.\n\n \n\nPlease\ncontact your Account Director or Scheduling Representative if you have any\nquestions.\n\n \n\n..",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 1,
+        "confidence_score": 0.8,
+        "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T18:10:47.810170",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46624_CAPACITY CONSTRAINT.html"
+      },
+      {
+        "notice_id": 46725,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "OPERATIONAL FLOW ORDER",
+        "notice_subtype": "OFO",
+        "effective_datetime": "2026-02-09T08:15:20",
+        "end_datetime": "2026-02-28T09:00:00",
+        "post_datetime": "2026-02-09T08:15:20",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "TERMINATE",
+        "prior_notice_id": 46705,
+        "subject": "OFO - MARKET DELVIERY ZONE - REMOVED",
+        "body_text": "Post Date: 01/05/1999 19:01:20\n\nOPERATIONAL FLOW ORDER\nISSUED - MARKET DELIVERY ZONE – REMOVED\n\n \n\nEffective for gas day \nMonday,\nFebruary 9, 2026\n, \nbeginning 9:00 a.m., Central Clock Time\n,\nNatural is removing the Operational Flow Order (OFO) in the Market Delivery\nZone.  Please continue to monitor Natural's interactive website for updates.\n\n \n\nPlease contact your\nAccount Director for any questions.\n\n..",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 1,
+        "is_signal": 0,
+        "confidence_score": 0.0,
+        "validity_flags": "[\"VC-1: information-only notice \\u2014 Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T18:10:53.002990",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46725_OPERATIONAL FLOW ORDER.html"
+      },
+      {
+        "notice_id": 46728,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "CAPACITY CONSTRAINT",
+        "notice_subtype": "SEGMENTS",
+        "effective_datetime": "2026-02-09T08:25:50",
+        "end_datetime": "2026-02-28T09:00:00",
+        "post_datetime": "2026-02-09T08:25:50",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "IBS/LPS/SRO - RESTRICTIONS",
+        "body_text": "IBS/LPS - RESTRICIONS\n\nIBS/LPS/SRO – AVAILABILITY\n\n \n\nAMARILLO SYSTEM\n\n \n\nEffective for gas day \nMonday,\nFebruary 9, 2026, Intraday 1 Cycle, and continuing until further notice\n,\nNatural has the following availability for line pack services:\n\n \n\nCategories\n:  (Unavailable; Up to MDQ; Limited Available;\nAvailable)\n\n \n\n \n\nAMARILLO\n:\n\n \n\nON to the Pipe\n\nMarket\nDelivery Zones\n\n              \n \nAmarillo Mainline (Up to MDQ)\n\n                Iowa-Illinois\n(Up to MDQ)\n\n            \nProduction\nZones\n\n                \nMidcontinent (Up to MDQ)\n\n                Permian (Up\nto MDQ\n)\n\n \n\nOFF of the Pipe\n\n     \n       \nMarket Delivery Zones\n\n                 Amarillo\nMainline (Up to MDQ)\n\n          \n      Iowa-Illinois (Up to MDQ)\n\nè\n     \nIowa-Illinois – Segment 29 – (Available)\n\n                                                                                                                        \n\n            \nProduction Zones\n\n    Midcontinent\n(Up to MDQ)\n\n   \n       Permian (Up to MDQ)\n\n \n\n \n\nGULF COAST SYSTEM\n\n \n\nEffective for gas day \nMonday,\nFebruary 9, 2026, Intraday 1 Cycle, and continuing until further notice\n,\nNatural has the following availability for line pack services:\n\n \n\nCategories\n:  (Unavailable; Up to MDQ*; Limited Available;\nAvailable)\n\nGULF COAST\n:\n\n \n\nON to the Pipe\n\n     \n       \nMarket Delivery Zones\n\n             \nGulf Coast Mainline (Up to MDQ)\n\n             Iowa-Illinois (Up\nto MDQ)\n\n     \n       \nProduction Zones\n\n Texok\nGC (Up to MDQ)\n\n Texok\nA/G (Up to MDQ)\n\n            \n South Texas (Up to MDQ)\n\n            \n Louisiana (Up to MDQ)\n\n    \n\n \n\n                                \n\n \n\nOFF of the Pipe\n\n     \n       \nMarket Delivery Zones\n\n                \nGulf Coast Mainline (Up to MDQ)\n\n   \n      Iowa-Illinois (Up to MDQ)\n\nè\n      \nIowa-Illinois\n– Segment 39 – (Available)\n\n      \nè\n      Iowa-Illinois – Segment 40 – (Available)\n\n \n\n     \n\n     \n       \nProduction Zones\n\n    \n \n       \nTexok GC (Up to MDQ)\n\n             Texok\nA/G (Up to MDQ)\n\n      \n      South Texas (Up to MDQ)\n\n                    Louisiana\n(Up to MDQ)\n\n \n\n \nè\nIndicates Change\n\n..",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 0,
+        "confidence_score": 0.0,
+        "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: no measurable curtailment \\u2014 no restriction value and no UNAVAILABLE restriction type extracted; advisory notice only (-0.20 confidence)\", \"VC-4: pipeline segment identified \\u2014 constraint point known (+0.15 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T18:11:00.852730",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46728_CAPACITY CONSTRAINT.html"
+      },
+      {
+        "notice_id": 46732,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "CAPACITY CONSTRAINT",
+        "notice_subtype": "SEGMENTS",
+        "effective_datetime": "2026-02-09T08:32:30",
+        "end_datetime": "2026-02-28T09:00:00",
+        "post_datetime": "2026-02-09T08:32:30",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "TERMINATE",
+        "prior_notice_id": 46507,
+        "subject": "SEG 14 WB - CS 113 - PRIM ONLY LIFTED",
+        "body_text": "SEGMENT 17 FORCE MAJURE\n\nSEGMENT 14 WESTBOUND – CS 113 – PRIMARY ONLY - LIFTED\n\nEffective for gas day \nMonday,\nFebruary 9, 2026, Intraday 1 Cycle and continuing thereafter\n, Natural has\noperating capacity available for transports westbound on the Amarillo Mainline\nSystem through Compressor Station 113 located in Will County, IL (Natural's\nMarket Delivery Zone).  Therefore, the Primary only restriction has been\nlifted.  All transport services are available.\n\n \n\nPlease contact your Account\nDirector or Scheduling Representative if you have any questions.\n\n..",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 1,
+        "confidence_score": 0.6,
+        "validity_flags": "[\"VC-1: terminated notice \\u2014 prior notice 46507 was a signal (confidence 0.60); restriction lifted, inheriting confidence as termination signal\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T18:11:06.873984",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46732_CAPACITY CONSTRAINT.html"
+      },
+      {
+        "notice_id": 46775,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "COMPUTER SYSTEM STATUS",
+        "notice_subtype": "DART SYSTEM INFORMATION",
+        "effective_datetime": "2026-02-26T10:15:22",
+        "end_datetime": "2026-02-27T09:00:00",
+        "post_datetime": "2026-02-26T10:15:22",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "DART Connection Issues",
+        "body_text": "DART\nTECHNICAL ISSUES – ID-1 NOMINATION DEADLINE EXTENDED FOR 02-26-26\n\n \n\nDART\nexperienced technical issues.  Due to these issues, the ID-1 nomination\ndeadline for February 26, 2026, will be extended until 10:45 am CCT.  \n\n \n\nIf you have\nany questions, please call your Scheduler.  \n\n..",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 1,
+        "is_signal": 0,
+        "confidence_score": 0.0,
+        "validity_flags": "[\"VC-1: information-only notice \\u2014 Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T18:11:13.063994",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46775_COMPUTER SYSTEM STATUS.html"
+      },
+      {
+        "notice_id": 46795,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "OPERATIONAL FLOW ORDER",
+        "notice_subtype": "OFO",
+        "effective_datetime": "2026-03-04T14:08:29",
+        "end_datetime": "2026-05-31T09:00:00",
+        "post_datetime": "2026-03-04T14:08:29",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "OPERATIONAL FLOW ORDER - REPORT",
+        "body_text": "OPERATIONAL\nFLOW ORDER – MARKET DELIVERY ZONE – REPORT\n\nOn January 20, 2026, due\nto forecasted colder than normal weather, expected increased load on its\nsystem, anticipated maximum peaking withdrawals from storage facilities, and\nsystem operating conditions, Natural issued an Operational Flow Order (“OFO”) in\nthe Market Delivery Zone effective for Thursday, January 22, 2026 at 9:00 a.m. Central\nClock Time. This action was taken in accordance with Section 23.6 of the\nGeneral Terms and Conditions of Natural's FERC Gas Tariff (“GT&C”).\n\nThe OFO was issued to\nmaintain and preserve the operational integrity of Natural's system and was in\nresponse to the following operational factors: (1) to maintain pressures for\nfirm transportation deliveries in the Market Delivery Zone; and (2) maintain deliverability\nfrom Natural's market area storage fields for firm storage services.\n\nThe OFO did not result in\nany curtailment of primary firm service.  During the OFO, Natural implemented\ndaily and hourly take limitations for firm and interruptible Shippers\n(including Point Operators) at all points in the Market Delivery Zone.  The OFO\nlimited Shippers and Point Operators, on a daily basis, from taking volumes in\nexcess of confirmed transportation nominations plus no-notice rights at\ndelivery points in the Market Delivery Zone, and on an hourly basis to 130% of\ntheir firm service rights.  Hourly rights for interruptible nominations were\nlimited to 105% of the Shipper's interruptible nominations. Additionally,\nShippers and Point Operators were required to flow more ratably during the gas\nday based on service priority and nomination cycles.  \nThe\nfirm service percentage was reduced to 110% on Tuesday, January 27, 2026 at\n9:00 a.m. Central Clock Time, and then  increased back to 130% on Thursday\nFebruary 5, 2026 at 9:00 am Central Clock Time. \n \n\nThese measures were taken\nconsistent with Natural's Tariff due to sustained colder than normal weather in\nthe Market Delivery Zone and anticipated maximum peaking withdrawals from\nstorage facilities.  As the weather conditions moderated and the associated\nhigh gas demand declined, Natural removed the OFO, effective at 9:00 a.m. on\ngas day Monday, February 9, 2026.\n\nThis posting complies\nwith GT&C Section 23.6(h) of Natural's Tariff to describe the specific\noperational factors which caused the Operational Flow Order to be issued and to\nbe lifted.\n\n..",
+        "outage_report_ref": null,
+        "tariff_section": "GT&C Section 23.6(h)",
+        "information_only": 1,
+        "is_signal": 0,
+        "confidence_score": 0.0,
+        "validity_flags": "[\"VC-1: information-only notice \\u2014 Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T18:11:23.814793",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46795_OPERATIONAL FLOW ORDER.html"
+      },
+      {
+        "notice_id": 46805,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "MAINTENANCE",
+        "notice_subtype": "MAINTENANCE",
+        "effective_datetime": "2026-03-05T14:53:02",
+        "end_datetime": "2026-03-06T09:00:00",
+        "post_datetime": "2026-03-05T14:53:02",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "PHMSA MEGA-SEG 13 AM#3 107/108-ILI TOOLS",
+        "body_text": "STATION 302 – REPLACE REGULATOR – UPDATE\n\nPHMSA MEGA RULE–- ELIGIBLE\nPROJECT\n - SEGMENT 13 – AMARILLO #3 M/L – CS 107/108 – ILI TOOL\nRUNS\n\n \n\nIn accordance with its FERC\nGas Tariff and as posted on Natural's Outage Impact Report \n(X25-1166550)\n; \nas part of\nNatural's ongoing pipeline Integrity Management Program, Natural will perform a\nseries of ILI tool runs on its Amarillo #3 mainline between Compressor Station 107\n(CS 107) located in Mills County, Iowa and Compressor Station 108 (CS 108)\nlocated in Warren County, Iowa (Segment 13 of Natural's Amarillo Mainline Zone). \nThe tool runs will require Natural to reduce the operating capacity, thus limiting\nNatural's throughput capacity northbound through CS 108.  Once the data\nfrom the tool runs have been analyzed, any remediation work impacting shippers\nwill be posted.\n\n \n\nThis remediation project is\npursuant to the PHMSA Mega Rule and as set forth in its Tariff, is an Eligible\nProject (ID 4819) included on the Eligible Project List posted on Natural's\ninternet website.  See Eligible Project ID, line name and location\nidentified below (Appendix F- Docket No. RP22-1222 Settlement).  This\noutage is subject to the provisions of Section 5.2 (c) (5) of the General\nTerms and Conditions of Natural's FERC Gas Tariff.\n\n \n\nProject\nID          Line\nName                  \n              Location/Segment\nNo.                      \n           \n\n4819                  AMARILLO\n#3 MAINLINE     SEGMENT 13\n\n \n\nThe scheduling\nconstraint will be upstream of CS 108 at the beginning of Segment 13;\ntherefore, any gas received south of Segment 13 for delivery north of Segment\n13 will be impacted for the duration of the restriction.  Receipts from\nTrailblazer Gage (LOC 902900) are south of CS 107 and will be impacted for the\nduration of the restriction.  Northern Natural Mills (LOC 900203) is located\ndownstream of the Segment 13 constraint location.  For scheduling purposes, the\nAmarillo Pool (LOC 10566) is located south of the constraint. \nAdditionally, firm transportation associated with storage withdrawals or\ninjections may be impacted.\n\n \n\nAs such,\neffective on the gas days indicated below, Natural will schedule Primary Firm and\nSecondary in-path Firm transports to no less than \n44%\n of contract\nMDQ northbound through CS 107.  AOR/ITS and Secondary out-of-path Firm\ntransports \nwill not\n be available for the duration of the restriction.\n\n \n\nTOOL RUN\nDATES\n:\n\n \n\nGas day Friday,\nApril 17, 2026 (Cleaning/ Gauge Tools)\n\nGas day\nTuesday, April 21, 2026 (Cleaning Tool)\n\nGas day Thursday,\nApril 23, 2026 (Cleaning Tool)\n\nGas day Tuesday,\nApril 28, 2026 (Combo Tool)\n\nGas day Thursday,\nApril 30, 2026 (EMAT Tool)\n\nGas day\nFriday, May 1, 2026 (EMAT Tool)\n\n \n\nThe stated\nscheduling percentage is based upon the current level of firm capacity\ncontracted for during this restriction and is subject to change based upon\noperational conditions and Shipper utilization.\n\n \n\nContinue to\nmonitor Natural's interactive website for any updates to the end date and/or\nscheduling percentage during this restriction.  Please contact your\nAccount Director or Scheduling Representative if you have any questions.\n\n..",
+        "outage_report_ref": "X25-1166550",
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 1,
+        "confidence_score": 0.5,
+        "validity_flags": "[\"VC-2: high-confidence notice type (MAINTENANCE) \\u2014 maintenance outage (+0.10 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T18:11:37.559899",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46805_MAINTENANCE.html"
+      },
+      {
+        "notice_id": 46818,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "MAINTENANCE",
+        "notice_subtype": "MAINTENANCE",
+        "effective_datetime": "2026-03-12T12:38:41",
+        "end_datetime": "2026-03-19T09:00:00",
+        "post_datetime": "2026-03-12T12:38:41",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "OUTAGE IMPACT REPORT - 3-12-26",
+        "body_text": "REVISED ROLLING 12-MONTH MAINTENANCE PLAN\n\nOUTAGE\nIMPACT REPORT UPDATE\n\n \n\nNatural\nhas posted an updated Outage Impact Report on its website.\n\n \n\nThe\nreport outlines scheduled projects that may affect customers and includes:\n\n \n\n·\n        \n\nImpacted\npipeline segments\n\n·\n        \n\nEstimated\nstart and finish dates\n\n·\n        \n\nBrief\nproject descriptions\n\n·\n        \n\nAnticipated\nshipper impacts\n\n \n\nChanges\nto existing projects and newly added projects are highlighted in yellow for\neasy reference.  In addition, Natural will continue to post detailed updates on\nspecific maintenance projects with direct shipper impacts on its interactive\nwebsite as needed.  The full maintenance plan is accessible via Natural's\nportal page or by clicking the link below:\n\n \n\nOutage\nImpact Report - 3-12-26\n\n \n\nIf\nyou have any questions, please contact your Account Director or Scheduling\nRepresentative.\n\n \n\n \n\n..",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 1,
+        "is_signal": 0,
+        "confidence_score": 0.0,
+        "validity_flags": "[\"VC-1: information-only notice \\u2014 Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T18:11:42.024089",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46818_MAINTENANCE.html"
+      }
+    ],
+    "notice_locations": [
+      {
+        "id": 1,
+        "location_index": 0,
+        "notice_id": 46507,
+        "loc_code": null,
+        "loc_name": null,
+        "segment": "14",
+        "compressor_station": "113",
+        "zone": "Market Delivery Zone",
+        "system": "Amarillo Mainline System"
+      },
+      {
+        "id": 2,
+        "location_index": 0,
+        "notice_id": 46528,
+        "loc_code": null,
+        "loc_name": null,
+        "segment": null,
+        "compressor_station": null,
+        "zone": "Market Delivery Zone",
+        "system": null
+      },
+      {
+        "id": 3,
+        "location_index": 0,
+        "notice_id": 46615,
+        "loc_code": "10560",
+        "loc_name": "Pooling Point - Texok Zone",
+        "segment": "25",
+        "compressor_station": "302",
+        "zone": "Texok Zone",
+        "system": null
+      },
+      {
+        "id": 4,
+        "location_index": 0,
+        "notice_id": 46624,
+        "loc_code": "7936",
+        "loc_name": "Florida Vermilion",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      },
+      {
+        "id": 5,
+        "location_index": 0,
+        "notice_id": 46725,
+        "loc_code": null,
+        "loc_name": null,
+        "segment": null,
+        "compressor_station": null,
+        "zone": "Market Delivery Zone",
+        "system": null
+      },
+      {
+        "id": 6,
+        "location_index": 0,
+        "notice_id": 46728,
+        "loc_code": null,
+        "loc_name": null,
+        "segment": "29",
+        "compressor_station": null,
+        "zone": "Iowa-Illinois",
+        "system": "Amarillo System"
+      },
+      {
+        "id": 7,
+        "location_index": 1,
+        "notice_id": 46728,
+        "loc_code": null,
+        "loc_name": null,
+        "segment": "39",
+        "compressor_station": null,
+        "zone": "Iowa-Illinois",
+        "system": "Gulf Coast System"
+      },
+      {
+        "id": 8,
+        "location_index": 2,
+        "notice_id": 46728,
+        "loc_code": null,
+        "loc_name": null,
+        "segment": "40",
+        "compressor_station": null,
+        "zone": "Iowa-Illinois",
+        "system": "Gulf Coast System"
+      },
+      {
+        "id": 9,
+        "location_index": 0,
+        "notice_id": 46732,
+        "loc_code": null,
+        "loc_name": null,
+        "segment": "14",
+        "compressor_station": "113",
+        "zone": "Market Delivery Zone",
+        "system": "Amarillo Mainline System"
+      },
+      {
+        "id": 10,
+        "location_index": 0,
+        "notice_id": 46795,
+        "loc_code": null,
+        "loc_name": null,
+        "segment": null,
+        "compressor_station": null,
+        "zone": "Market Delivery Zone",
+        "system": null
+      },
+      {
+        "id": 11,
+        "location_index": 0,
+        "notice_id": 46805,
+        "loc_code": "902900",
+        "loc_name": "Trailblazer Gage",
+        "segment": "13",
+        "compressor_station": "107",
+        "zone": "Amarillo Mainline Zone",
+        "system": "Amarillo System"
+      },
+      {
+        "id": 12,
+        "location_index": 1,
+        "notice_id": 46805,
+        "loc_code": "10566",
+        "loc_name": "Amarillo Pool",
+        "segment": "13",
+        "compressor_station": "107",
+        "zone": "Amarillo Mainline Zone",
+        "system": "Amarillo System"
+      }
+    ],
+    "notice_restrictions": [
+      {
+        "id": 1,
+        "location_index": 0,
+        "notice_id": 46507,
+        "service_type": "PRIMARY_FIRM",
+        "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "WESTBOUND",
+        "start_datetime": "2025-12-03",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 2,
+        "location_index": 0,
+        "notice_id": 46507,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "WESTBOUND",
+        "start_datetime": "2025-12-03",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 3,
+        "location_index": 0,
+        "notice_id": 46507,
+        "service_type": "AOR_ITS",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "WESTBOUND",
+        "start_datetime": "2025-12-03",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 4,
+        "location_index": 0,
+        "notice_id": 46507,
+        "service_type": "SECONDARY_OUTPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "WESTBOUND",
+        "start_datetime": "2025-12-03",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 5,
+        "location_index": 0,
+        "notice_id": 46528,
+        "service_type": "PRIMARY_FIRM",
+        "restriction_type": "HOURLY_LIMIT_PCT",
+        "restriction_value": 150.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "OFF_OF_PIPE",
+        "start_datetime": "2025-12-12",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 6,
+        "location_index": 0,
+        "notice_id": 46528,
+        "service_type": "NO_NOTICE",
+        "restriction_type": "HOURLY_LIMIT_PCT",
+        "restriction_value": 150.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "OFF_OF_PIPE",
+        "start_datetime": "2025-12-12",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 7,
+        "location_index": 0,
+        "notice_id": 46528,
+        "service_type": "INTERRUPTIBLE",
+        "restriction_type": "HOURLY_LIMIT_PCT",
+        "restriction_value": 105.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "OFF_OF_PIPE",
+        "start_datetime": "2025-12-12",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 8,
+        "location_index": 0,
+        "notice_id": 46528,
+        "service_type": "AOR_ITS",
+        "restriction_type": "HOURLY_LIMIT_PCT",
+        "restriction_value": 105.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "OFF_OF_PIPE",
+        "start_datetime": "2025-12-12",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 9,
+        "location_index": 0,
+        "notice_id": 46615,
+        "service_type": "PRIMARY_FIRM",
+        "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+        "restriction_value": 55.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "EASTBOUND",
+        "start_datetime": "2026-04-01",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "id": 10,
+        "location_index": 0,
+        "notice_id": 46615,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+        "restriction_value": 55.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "EASTBOUND",
+        "start_datetime": "2026-04-01",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "id": 11,
+        "location_index": 0,
+        "notice_id": 46615,
+        "service_type": "AOR_ITS",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "EASTBOUND",
+        "start_datetime": "2026-04-01",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "id": 12,
+        "location_index": 0,
+        "notice_id": 46615,
+        "service_type": "SECONDARY_OUTPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "EASTBOUND",
+        "start_datetime": "2026-04-01",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "id": 13,
+        "location_index": 0,
+        "notice_id": 46624,
+        "service_type": "PRIMARY_FIRM",
+        "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+        "restriction_value": 100.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 14,
+        "location_index": 0,
+        "notice_id": 46624,
+        "service_type": "AOR_ITS",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 15,
+        "location_index": 0,
+        "notice_id": 46624,
+        "service_type": "SECONDARY_OUTPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 16,
+        "location_index": 0,
+        "notice_id": 46624,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 17,
+        "location_index": 0,
+        "notice_id": 46725,
+        "service_type": "ALL",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "ALL",
+        "start_datetime": "2026-02-09T08:15:20",
+        "end_datetime": "2026-02-09"
+      },
+      {
+        "id": 18,
+        "location_index": 0,
+        "notice_id": 46728,
+        "service_type": "LPS/IBS/SRO",
+        "restriction_type": "AVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "OFF_OF_PIPE",
+        "start_datetime": "2026-02-09",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 19,
+        "location_index": 1,
+        "notice_id": 46728,
+        "service_type": "LPS/IBS/SRO",
+        "restriction_type": "AVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "OFF_OF_PIPE",
+        "start_datetime": "2026-02-09",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 20,
+        "location_index": 2,
+        "notice_id": 46728,
+        "service_type": "LPS/IBS/SRO",
+        "restriction_type": "AVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "OFF_OF_PIPE",
+        "start_datetime": "2026-02-09",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 21,
+        "location_index": 0,
+        "notice_id": 46732,
+        "service_type": "ALL",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "WESTBOUND",
+        "start_datetime": "2026-02-09",
+        "end_datetime": "2026-02-28"
+      },
+      {
+        "id": 22,
+        "location_index": 0,
+        "notice_id": 46795,
+        "service_type": "PRIMARY_FIRM",
+        "restriction_type": "HOURLY_LIMIT_PCT",
+        "restriction_value": 130.0,
+        "restriction_unit": "PCT_HOURLY",
+        "flow_direction": "OFF_OF_PIPE",
+        "start_datetime": "2026-01-22",
+        "end_datetime": "2026-01-27"
+      },
+      {
+        "id": 23,
+        "location_index": 0,
+        "notice_id": 46795,
+        "service_type": "PRIMARY_FIRM",
+        "restriction_type": "HOURLY_LIMIT_PCT",
+        "restriction_value": 110.0,
+        "restriction_unit": "PCT_HOURLY",
+        "flow_direction": "OFF_OF_PIPE",
+        "start_datetime": "2026-01-27",
+        "end_datetime": "2026-02-05"
+      },
+      {
+        "id": 24,
+        "location_index": 0,
+        "notice_id": 46795,
+        "service_type": "PRIMARY_FIRM",
+        "restriction_type": "HOURLY_LIMIT_PCT",
+        "restriction_value": 130.0,
+        "restriction_unit": "PCT_HOURLY",
+        "flow_direction": "OFF_OF_PIPE",
+        "start_datetime": "2026-02-05",
+        "end_datetime": "2026-02-09"
+      },
+      {
+        "id": 25,
+        "location_index": 0,
+        "notice_id": 46795,
+        "service_type": "INTERRUPTIBLE",
+        "restriction_type": "HOURLY_LIMIT_PCT",
+        "restriction_value": 105.0,
+        "restriction_unit": "PCT_HOURLY",
+        "flow_direction": "OFF_OF_PIPE",
+        "start_datetime": "2026-01-22",
+        "end_datetime": "2026-02-09"
+      },
+      {
+        "id": 26,
+        "location_index": 0,
+        "notice_id": 46795,
+        "service_type": "ALL",
+        "restriction_type": "DAILY_LIMIT_PCT",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "OFF_OF_PIPE",
+        "start_datetime": "2026-01-22",
+        "end_datetime": "2026-02-09"
+      },
+      {
+        "id": 27,
+        "location_index": 0,
+        "notice_id": 46805,
+        "service_type": "PRIMARY_FIRM",
+        "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+        "restriction_value": 44.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "NORTHBOUND",
+        "start_datetime": "2026-04-17",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "id": 28,
+        "location_index": 1,
+        "notice_id": 46805,
+        "service_type": "PRIMARY_FIRM",
+        "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+        "restriction_value": 44.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "NORTHBOUND",
+        "start_datetime": "2026-04-17",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "id": 29,
+        "location_index": 0,
+        "notice_id": 46805,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+        "restriction_value": 44.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "NORTHBOUND",
+        "start_datetime": "2026-04-17",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "id": 30,
+        "location_index": 1,
+        "notice_id": 46805,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+        "restriction_value": 44.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "NORTHBOUND",
+        "start_datetime": "2026-04-17",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "id": 31,
+        "location_index": 0,
+        "notice_id": 46805,
+        "service_type": "AOR_ITS",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "NORTHBOUND",
+        "start_datetime": "2026-04-17",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "id": 32,
+        "location_index": 1,
+        "notice_id": 46805,
+        "service_type": "AOR_ITS",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "NORTHBOUND",
+        "start_datetime": "2026-04-17",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "id": 33,
+        "location_index": 0,
+        "notice_id": 46805,
+        "service_type": "SECONDARY_OUTPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "NORTHBOUND",
+        "start_datetime": "2026-04-17",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "id": 34,
+        "location_index": 1,
+        "notice_id": 46805,
+        "service_type": "SECONDARY_OUTPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "NORTHBOUND",
+        "start_datetime": "2026-04-17",
+        "end_datetime": "2026-05-01"
+      }
+    ],
+    "foreign_key_violations": [
+      [
+        "notices",
+        46725,
+        "notices",
+        0
+      ]
+    ]
+  },
+  "outcome": "SUCCESS",
+  "output": {
+    "notice": {
+      "notice_id": 46864,
+      "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+      "pipeline_code": "NGPL",
+      "is_critical": 1,
+      "notice_type": "FORCE MAJEURE",
+      "notice_subtype": "FORCE MAJEURE",
+      "effective_datetime": "2026-04-06T09:21:29",
+      "end_datetime": "2026-06-30T09:00:00",
+      "post_datetime": "2026-04-06T09:21:29",
+      "response_required": 1,
+      "response_due_date": null,
+      "status": "INITIATE",
+      "prior_notice_id": null,
+      "subject": "FORCE MAJEURE-COMP STA 168",
+      "body_text": "FORCE MAJEURE – COMPRESSOR STATION 168\n\n \n\nNatural has experienced\nhorsepower issues at Compressor Station 168 (CS 168) located in Bailey County,\nTexas (Segment 8 of Natural's Permian Zone).  This is a Force Majeure\nevent.  Natural is required to reduce the maximum operating capacity\nnorthbound into Segment 8 from Segment 9, thus limiting Natural's throughput\ncapacity northbound through Compressor Station 167 (CS 167).\n\n \n\nThe scheduling constraint\nwill be Segment 9 at CS 167; therefore, any gas received south of CS 167 for\ndelivery north of CS 167 will be impacted for the duration of the\nrestriction.  The Pooling Point - Permian Zone (LOC 25077) is located\nsouth of the constraint.  Firm transportation associated with storage\nwithdrawals may be impacted.\n\n \n\nAs such, effective for gas\nday \nTuesday, April 7, 2026, Timely\nCycle and continuing until further notice\n, Natural will schedule Primary Firm and Secondary in-path Firm\ntransports to no less than \n94%\n of contract MDQ through CS 167.  AOR/ITS and\nSecondary out-of-path Firm transports \nwill not\n be available for the\nduration of this restriction.\n\n \n\nAdditionally, the unit\nmaintenance referenced on Natural's Outage Impact Report (X26-220667) has been\npostponed until further notice\n.\n\n \n\nThe stated scheduling\npercentage is based upon the current level of firm capacity contracted for\nduring this restriction and is subject to change based upon operational\nconditions and Shipper utilization.\n\n \n\nContinue to monitor Natural's\ninteractive website for any updates to the end date during this\nrestriction.  Please contact your Account Director or Scheduling\nRepresentative if you have any questions.\n\n..",
+      "outage_report_ref": "X26-220667",
+      "tariff_section": null,
+      "information_only": 0,
+      "is_signal": 1,
+      "confidence_score": 0.7,
+      "validity_flags": "[\"VC-2: high-confidence notice type (FORCE MAJEURE) \\u2014 force majeure or OFO (+0.30 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"llm_extraction\"]",
+      "source_url": null,
+      "scraped_at": "2026-09-28T18:11:56.125461",
+      "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46864_FORCE MAJEURE.html"
+    },
+    "locations": [
+      {
+        "location_index": 0,
+        "notice_id": 46864,
+        "loc_code": "25077",
+        "loc_name": "Pooling Point - Permian Zone",
+        "segment": "9",
+        "compressor_station": "167",
+        "zone": "Permian Zone",
+        "system": null
+      }
+    ],
+    "restrictions": [
+      {
+        "notice_id": 46864,
+        "location_index": 0,
+        "service_type": "PRIMARY_FIRM",
+        "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+        "restriction_value": 94.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "NORTHBOUND",
+        "start_datetime": "2026-04-07",
+        "end_datetime": "TBD"
+      },
+      {
+        "notice_id": 46864,
+        "location_index": 0,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+        "restriction_value": 94.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "NORTHBOUND",
+        "start_datetime": "2026-04-07",
+        "end_datetime": "TBD"
+      },
+      {
+        "notice_id": 46864,
+        "location_index": 0,
+        "service_type": "AOR_ITS",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "NORTHBOUND",
+        "start_datetime": "2026-04-07",
+        "end_datetime": "TBD"
+      },
+      {
+        "notice_id": 46864,
+        "location_index": 0,
+        "service_type": "SECONDARY_OUTPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "NORTHBOUND",
+        "start_datetime": "2026-04-07",
+        "end_datetime": "TBD"
+      }
+    ]
+  },
+  "persistence_insert_succeeded": true,
+  "model_calls": [
+    {
+      "provider": "anthropic",
+      "configured_model": "claude-sonnet-4-6",
+      "request_sha256": "9f5cf8c94a02dd317408f43df2798fe106881970cac24b7e1ca39c155431f997",
+      "request": {
+        "model": "claude-sonnet-4-6",
+        "max_tokens": 2048,
+        "system": "You are a structured data extractor for natural gas pipeline EBB (Electronic Bulletin Board) notices.\n\nYour job is to extract locations and their associated capacity restrictions from the notice body into a strict schema.\n\nBefore filling in the schema, reason carefully about the notice:\n1. Is this notice INFORMATION ONLY? Set information_only=true if it is a retrospective post-event report, a weather/demand advisory with no enforceable directive, an administrative update (tariff filing, project list, regulatory notice), or a rolling maintenance plan summary. Set false if it announces or enforces a current or upcoming restriction, curtailment, force majeure, OFO, or maintenance outage with shipper impact.\n2. Does this notice use a CHANGE INDICATOR symbol? Look for a legend line such as \"è Indicates Change\" or \"* Indicates Change\". If found, identify the exact symbol used (e.g. \"è\"). Only rows marked with that specific symbol represent changes — all other rows are unchanged from the prior notice and must be omitted.\n3. What is the ROOT CAUSE of the restriction (e.g. maintenance at CS 343)?\n4. What are the CONSTRAINT POINTS — the specific locations where the capacity limit is enforced? If a change indicator was found in step 2, only include locations that carry that symbol.\n5. Which shippers / service types are SUBJECT TO the restriction at each constraint point?\n6. Does the notice cover multiple named systems (e.g. Amarillo System, Gulf Coast System)? If so, create a separate location object for each system.\n\nSchema structure: restrictions are nested inside each location they apply to. This makes the location↔restriction relationship explicit.\n\nRules:\n- Extract only what is explicitly stated. Do not infer or hallucinate values.\n- Never fabricate LOC codes, compressor station numbers, or segment numbers. If a location identifier does not appear verbatim in the notice text, leave that field null.\n- Use null for any field not present in the text.\n- Change indicators: if the notice uses a symbol such as \"è\" followed by \"Indicates Change\", extract ONLY the entries marked with that symbol. All unmarked rows are unchanged from the prior notice — omit them entirely.\n- For locations: include ONLY the constraint point(s) that are marked as changed (or all impacted locations if no change indicator is used). Do not include locations that are the cause of the restriction, mentioned as positional context, or explicitly stated as unaffected.\n- For system: capture the named pipeline system (e.g. \"Amarillo System\", \"Gulf Coast System\") when stated. Place it as the last identifier field, after zones. Use null if no system name appears.\n- For flow_direction: use ON_TO_PIPE for \"ON to the Pipe\" sections, OFF_OF_PIPE for \"OFF of the Pipe\" sections. Use compass directions (NORTHBOUND etc.) for directional flow. Use RECEIPT/DELIVERY when the notice uses those terms. Use ALL for system-wide. Null if unspecified.\n- For restrictions: nest inside the location they apply to. Only include service types explicitly restricted or unavailable. Include one entry per (service_type, restriction_type, flow_direction) combination.",
+        "tools": [
+          {
+            "name": "extract_notice_data",
+            "description": "Extract changed locations and their associated capacity restrictions from a natural gas pipeline notice. Use only information explicitly stated in the text. Return null for any field not present. Restrictions are nested inside each location they apply to.",
+            "input_schema": {
+              "type": "object",
+              "required": [
+                "locations",
+                "reasoning"
+              ],
+              "properties": {
+                "locations": {
+                  "type": "array",
+                  "description": "Each element is one impacted location group with its own restrictions. IMPORTANT: if the notice uses a change indicator symbol (e.g. 'è Indicates Change'), extract ONLY the locations and restrictions that are marked with that symbol — all unmarked rows are unchanged from the prior notice and must be omitted. If no change indicator is used, extract all impacted locations. Create one location object per distinct (system, zone/segment/CS/LOC) grouping. If a notice covers multiple systems (e.g. Amarillo System and Gulf Coast System), create separate location objects for each system. Nest the restrictions that apply specifically to that location inside it.",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "restrictions"
+                    ],
+                    "properties": {
+                      "loc_codes": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "List of numeric LOC identifiers (numbers only, no 'LOC' prefix) that are directly impacted. e.g. ['3592', '25085']. Empty list if no LOC codes are stated. Do NOT include LOC codes explicitly stated as 'not impacted' or 'not affected'."
+                      },
+                      "loc_names": {
+                        "type": "array",
+                        "items": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "description": "Human-readable names one-to-one with loc_codes. Use null for a code whose name is not stated. Empty list if no LOC codes."
+                      },
+                      "segments": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "Pipeline segment numbers e.g. ['23', '24']. Empty list if none mentioned."
+                      },
+                      "compressor_stations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "Compressor station identifiers, numbers only, no 'CS' prefix. e.g. ['302', '343']. Empty list if none mentioned."
+                      },
+                      "zones": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "Named pipeline zones e.g. ['Louisiana Zone', 'Texok Zone', 'Gulf Coast Mainline', 'Market Delivery Zone']. Empty list if none mentioned."
+                      },
+                      "system": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "description": "The named pipeline system this location belongs to, e.g. 'Amarillo System', 'Gulf Coast System', 'Midcontinent System'. Null if no system name is stated."
+                      },
+                      "restrictions": {
+                        "type": "array",
+                        "description": "All capacity or flow restrictions that apply to THIS location. Include one entry per (service_type, restriction_type, flow_direction) combination.",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "service_type",
+                            "restriction_type"
+                          ],
+                          "properties": {
+                            "service_type": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "Which transportation service type is restricted. Common values: PRIMARY_FIRM, SECONDARY_INPATH_FIRM, SECONDARY_OUTPATH_FIRM, AOR_ITS, INTERRUPTIBLE, NO_NOTICE, ALL. Use the exact wording from the notice if it doesn't fit these categories."
+                            },
+                            "restriction_type": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "The nature of the restriction. Common values: SCHEDULED_TO_PCT_MDQ (scheduled to no less than X% of MDQ), UNAVAILABLE (service completely unavailable), HOURLY_LIMIT_PCT (hourly takes limited to X% of rights), DAILY_LIMIT_PCT (daily takes limited to X%). Use a descriptive string if none of these fit."
+                            },
+                            "restriction_value": {
+                              "type": [
+                                "number",
+                                "null"
+                              ],
+                              "description": "Numeric value of the restriction e.g. 46.0 for 46% MDQ. Null if UNAVAILABLE."
+                            },
+                            "restriction_unit": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "Unit for restriction_value. Common values: PCT_MDQ, PCT_HOURLY, MMBTU, DTH. Null if not applicable."
+                            },
+                            "flow_direction": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "The direction or side this restriction applies to. Use ON_TO_PIPE for gas injected into the pipeline (receipts/injections). Use OFF_OF_PIPE for gas taken off the pipeline (deliveries/withdrawals). Use a compass direction (NORTHBOUND, SOUTHBOUND, EASTBOUND, WESTBOUND) for directional flow restrictions. Use RECEIPT or DELIVERY when the notice uses those terms explicitly. Use ALL if it applies system-wide or direction is unspecified. Use null if not mentioned in the notice."
+                            },
+                            "start_datetime": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "The date this restriction takes effect, extracted from the notice body. Return as YYYY-MM-DD if the date is explicit. Return null if no start date is stated."
+                            },
+                            "end_datetime": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "The date this restriction ends, extracted from the notice body. Return as YYYY-MM-DD if an explicit end date is stated. Return 'TBD' if the notice says 'until further notice' or equivalent. Return null if no end date is mentioned at all."
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "change_indicator": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "description": "The exact change indicator symbol used in this notice (e.g. 'è', '*'), as identified from its legend line (e.g. 'è Indicates Change'). Null if no change indicator legend is present."
+                },
+                "information_only": {
+                  "type": "boolean",
+                  "description": "True if this notice is purely informational and describes no active operational restriction. Set to true for: retrospective post-event reports (describing something that already happened), weather/demand advisories with no enforceable directive, administrative updates (project lists, tariff filings, regulatory notices), and rolling maintenance plan summaries. Set to false if the notice announces or enforces a current or upcoming restriction, curtailment, force majeure, OFO, or maintenance outage with shipper impact."
+                },
+                "reasoning": {
+                  "type": "string",
+                  "description": "One sentence explaining what this notice describes and what the primary operational impact is."
+                }
+              }
+            }
+          }
+        ],
+        "tool_choice": {
+          "type": "tool",
+          "name": "extract_notice_data"
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "## Notice Header (pre-parsed)\nNotice ID: 46864\nNotice Type: FORCE MAJEURE / FORCE MAJEURE\nStatus: INITIATE\nCritical: Y\nEffective: 04/06/2026  9:21:29AM\nEnd: 06/30/2026 9:00:00am\nSubject: FORCE MAJEURE-COMP STA 168\nPrior Notice: None\n\n## Notice Body\nFORCE MAJEURE – COMPRESSOR STATION 168\n\n \n\nNatural has experienced horsepower issues at Compressor Station 168 (CS 168) located in Bailey County, Texas (Segment 8 of Natural's Permian Zone).  This is a Force Majeure event.  Natural is required to reduce the maximum operating capacity northbound into Segment 8 from Segment 9, thus limiting Natural's throughput capacity northbound through Compressor Station 167 (CS 167).\n\n \n\nThe scheduling constraint will be Segment 9 at CS 167; therefore, any gas received south of CS 167 for delivery north of CS 167 will be impacted for the duration of the restriction.  The Pooling Point - Permian Zone (LOC 25077) is located south of the constraint.  Firm transportation associated with storage withdrawals may be impacted.\n\n \n\nAs such, effective for gas day \nTuesday, April 7, 2026, Timely Cycle and continuing until further notice\n, Natural will schedule Primary Firm and Secondary in-path Firm transports to no less than \n94%\n of contract MDQ through CS 167.  AOR/ITS and Secondary out-of-path Firm transports \nwill not be available for the duration of this restriction.\n\n \n\nAdditionally, the unit maintenance referenced on Natural's Outage Impact Report (X26-220667) has been postponed until further notice\n.\n\n \n\nThe stated scheduling percentage is based upon the current level of firm capacity contracted for during this restriction and is subject to change based upon operational conditions and Shipper utilization.\n\n \n\nContinue to monitor Natural's interactive website for any updates to the end date during this restriction.  Please contact your Account Director or Scheduling Representative if you have any questions.\n\n.."
+          }
+        ]
+      },
+      "success": true,
+      "attempted": true,
+      "stage": "extraction",
+      "request_id": "req_011CfWHhq3Cg9fVNteMXyFAm",
+      "response": {
+        "id": "msg_011CfWHhqVjrGudPBmYCB2PF",
+        "container": null,
+        "content": [
+          {
+            "id": "toolu_01PpsLxh3jmhz9UbxGFZV2sx",
+            "caller": {
+              "type": "direct"
+            },
+            "input": {
+              "reasoning": "This notice announces an active Force Majeure event at Compressor Station 168 due to horsepower issues, enforcing a northbound capacity restriction through CS 167 on Segment 9 of the Permian Zone, effective April 7, 2026 until further notice, with Primary Firm and Secondary in-path Firm scheduled to no less than 94% of MDQ and AOR/ITS and Secondary out-of-path Firm unavailable.",
+              "information_only": false,
+              "change_indicator": null,
+              "locations": [
+                {
+                  "system": null,
+                  "zones": [
+                    "Permian Zone"
+                  ],
+                  "segments": [
+                    "9"
+                  ],
+                  "compressor_stations": [
+                    "167"
+                  ],
+                  "loc_codes": [
+                    "25077"
+                  ],
+                  "loc_names": [
+                    "Pooling Point - Permian Zone"
+                  ],
+                  "restrictions": [
+                    {
+                      "service_type": "PRIMARY_FIRM",
+                      "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+                      "restriction_value": 94.0,
+                      "restriction_unit": "PCT_MDQ",
+                      "flow_direction": "NORTHBOUND",
+                      "start_datetime": "2026-04-07",
+                      "end_datetime": "TBD"
+                    },
+                    {
+                      "service_type": "SECONDARY_INPATH_FIRM",
+                      "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+                      "restriction_value": 94.0,
+                      "restriction_unit": "PCT_MDQ",
+                      "flow_direction": "NORTHBOUND",
+                      "start_datetime": "2026-04-07",
+                      "end_datetime": "TBD"
+                    },
+                    {
+                      "service_type": "AOR_ITS",
+                      "restriction_type": "UNAVAILABLE",
+                      "restriction_value": null,
+                      "restriction_unit": null,
+                      "flow_direction": "NORTHBOUND",
+                      "start_datetime": "2026-04-07",
+                      "end_datetime": "TBD"
+                    },
+                    {
+                      "service_type": "SECONDARY_OUTPATH_FIRM",
+                      "restriction_type": "UNAVAILABLE",
+                      "restriction_value": null,
+                      "restriction_unit": null,
+                      "flow_direction": "NORTHBOUND",
+                      "start_datetime": "2026-04-07",
+                      "end_datetime": "TBD"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "extract_notice_data",
+            "type": "tool_use",
+            "toolset_name": null
+          }
+        ],
+        "model": "claude-sonnet-4-6",
+        "role": "assistant",
+        "stop_details": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "type": "message",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 3324,
+          "output_tokens": 661,
+          "output_tokens_details": null,
+          "server_tool_use": null,
+          "service_tier": "standard"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "provider": "anthropic",
+      "configured_model": "claude-sonnet-4-6",
+      "request_sha256": "ef38cfad79ff26b4f53e16e43f7b5e52f6c70add762fc9ec7d46224ae6908665",
+      "request": {
+        "model": "claude-sonnet-4-6",
+        "max_tokens": 200,
+        "messages": [
+          {
+            "role": "user",
+            "content": "You are assessing the volume impact of a natural gas pipeline curtailment notice.\n\n## Extracted restrictions\n[\n  {\n    \"service_type\": \"PRIMARY_FIRM\",\n    \"restriction_type\": \"SCHEDULED_TO_PCT_MDQ\",\n    \"restriction_value\": 94.0,\n    \"restriction_unit\": \"PCT_MDQ\"\n  },\n  {\n    \"service_type\": \"SECONDARY_INPATH_FIRM\",\n    \"restriction_type\": \"SCHEDULED_TO_PCT_MDQ\",\n    \"restriction_value\": 94.0,\n    \"restriction_unit\": \"PCT_MDQ\"\n  },\n  {\n    \"service_type\": \"AOR_ITS\",\n    \"restriction_type\": \"UNAVAILABLE\",\n    \"restriction_value\": null,\n    \"restriction_unit\": null\n  },\n  {\n    \"service_type\": \"SECONDARY_OUTPATH_FIRM\",\n    \"restriction_type\": \"UNAVAILABLE\",\n    \"restriction_value\": null,\n    \"restriction_unit\": null\n  }\n]\n\n## Notice body\nFORCE MAJEURE – COMPRESSOR STATION 168\n\n \n\nNatural has experienced\nhorsepower issues at Compressor Station 168 (CS 168) located in Bailey County,\nTexas (Segment 8 of Natural's Permian Zone).  This is a Force Majeure\nevent.  Natural is required to reduce the maximum operating capacity\nnorthbound into Segment 8 from Segment 9, thus limiting Natural's throughput\ncapacity northbound through Compressor Station 167 (CS 167).\n\n \n\nThe scheduling constraint\nwill be Segment 9 at CS 167; therefore, any gas received south of CS 167 for\ndelivery north of CS 167 will be impacted for the duration of the\nrestriction.  The Pooling Point - Permian Zone (LOC 25077) is located\nsouth of the constraint.  Firm transportation associated with storage\nwithdrawals may be impacted.\n\n \n\nAs such, effective for gas\nday \nTuesday, April 7, 2026, Timely\nCycle and continuing until further notice\n, Natural will schedule Primary Firm and Secondary in-path Firm\ntransports to no less than \n94%\n of contract MDQ through CS 167.  AOR/ITS and\nSecondary out-of-path Firm transports \nwill not\n be available for the\nduration of this restriction.\n\n \n\nAdditionally, the unit\nmaintenance referenced on Natural's Outage Impact Report (X26-220667) has been\npostponed until further notice\n.\n\n \n\nThe stated scheduling\npercentage is based upon the current level of firm capacity contracted for\nduring this restriction and is subject to change based upon operational\nconditions and Shipper utilization.\n\n \n\nContinue to monitor Natural's\ninteractive website for any updates to the end date during this\nrestriction.  Please contact your Account Director or Scheduling\nRepresentative if you have any questions.\n\n..\n\nAssess the curtailment impact using these two criteria:\n1. WHO is affected: Primary Firm and Secondary Firm nominations are the highest-priority service classes. If they are curtailed, the impact is inherently larger. Interruptible and AOR/ITS service are lower priority and their curtailment has less market impact.\n2. HOW MUCH: If the restriction is expressed as a percentage of MDQ or hourly rights, a reduction of more than 30% of normal volumes counts as a large impact. 30% - 10% coutns as a medium impact, <10% counts as a small impact UNAVAILABLE (complete outage) is always a large impact.\n\nDefinitions:\n- large: Primary Firm >10% volume reduction or UNAVAILABLE\n- medium: Firm service affected but <10% reduction, OR interruptible-only with large reduction(or UNAVAILABLE)\n- small: Only interruptible AND/OR service affected with minor OR medium reduction\n\nFirst explain your reasoning in 2-3 sentences, then on the last line write ONLY the verdict word: 'large', 'medium', or 'small'."
+          }
+        ]
+      },
+      "success": true,
+      "attempted": true,
+      "stage": "semantic_helper",
+      "request_id": "req_011CfWHiV5SYDJzhN83VBrT2",
+      "response": {
+        "id": "msg_011CfWHiViPYCiGK6P9wBHFS",
+        "container": null,
+        "content": [
+          {
+            "citations": null,
+            "text": "## Reasoning\n\nPrimary Firm and Secondary In-path Firm services are being scheduled to no less than 94% of contract MDQ, representing a reduction of up to 6% from normal volumes. Since 6% falls below the 10% threshold, this portion of the curtailment on its own would be \"medium\" per the criteria. However, AOR/ITS and Secondary Out-of-path Firm are marked UNAVAILABLE — while AOR/ITS is lower-priority (interruptible-class), Secondary Out-of-path Firm is a firm service class, and a complete outage of any firm service tier qualifies as a large impact under the definition (\"Primary Firm >10% volume reduction or UNAVAILABLE\" applies to firm services broadly, and UNAVAILABLE is always large).\n\nlarge",
+            "type": "text"
+          }
+        ],
+        "model": "claude-sonnet-4-6",
+        "role": "assistant",
+        "stop_details": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "type": "message",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 956,
+          "output_tokens": 179,
+          "output_tokens_details": null,
+          "server_tool_use": null,
+          "service_tier": "standard"
+        },
+        "diagnostics": null
+      }
+    }
+  ],
+  "helper_results": [
+    {
+      "helper": "llm_assess_curtailment_impact",
+      "result": "large"
+    }
+  ],
+  "state_after": {
+    "notices": [
+      {
+        "notice_id": 46507,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "CAPACITY CONSTRAINT",
+        "notice_subtype": "SEGMENTS",
+        "effective_datetime": "2025-12-01T13:52:24",
+        "end_datetime": "2026-03-31T09:00:00",
+        "post_datetime": "2025-12-01T13:52:24",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "SEGMENT 14 WB - CS 113 - PRIMARY ONLY",
+        "body_text": "SEGMENT 17 FORCE MAJURE\n\nSEGMENT 14 WESTBOUND – CS 113 – PRIMARY ONLY\n\n \n\nDue to current operating\nconditions, Natural is at operating capacity for transports \nwestbound\n on\nthe Amarillo Mainline System through Compressor Station 113 located in Will\nCounty, IL (Natural's Market Delivery Zone).  Therefore, effective for gas day,\n\nWednesday, December 3, 2025, Timely Cycle and continuing until further\nnotice\n, only Primary Firm and Secondary in-path Firm transports will be\nscheduled.  AOR/ITS and Secondary out-of-path Firm transports \nwill not\n\nbe available.\n\n \n\nPlease contact your Account\nDirector or Scheduling Representative if you have any questions.\n\n..",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 1,
+        "confidence_score": 0.6,
+        "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T18:10:01.753547",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46507_CAPACITY CONSTRAINT.html"
+      },
+      {
+        "notice_id": 46528,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "OPERATIONAL ALERT",
+        "notice_subtype": "ADVISORY/DIRECTIONAL NOTICE",
+        "effective_datetime": "2025-12-09T16:10:22",
+        "end_datetime": "2026-02-28T09:00:00",
+        "post_datetime": "2025-12-09T16:10:22",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "HOURLY TAKES ADVISORY - MARKET DELIVERY",
+        "body_text": "HOURLY TAKES ADVISORY – MARKET DELIVERY ZONE\n\nHOURLY TAKES ADVISORY – MARKET\nDELIVERY ZONE \n\n \n\nDue to the impending colder\nweather and current system operating conditions, effective for\n Friday, December\n 12, 2025, at 9:00 am., and continuing until further notice\n, per Natural's\ntariff [GT&C Section 7.4], \nShippers and Point Operators\n are advised\nto \nlimit hourly\n \ntakes\n at \nALL DELIVERY POINTS IN THE MARKET\nDELIVERY ZONE\n.  Additionally, Natural continues to monitor operating\nconditions system wide.  If necessary, Natural will issue Operational Flow\nOrders (OFOs) to address Shipper actions that are \ndetrimental to such\noperating conditions outside the Market Delivery Zone\n.  Should Natural's\nability to provide hourly flexibility decrease, an Operational Flow Order (OFO)\ncondition will occur.\n\n \n\nAs provided in the tariff,\nat each point in the Market Delivery Zone, the hourly rights for each Shipper/Point\nOperator will be limited.  Such hourly rights will be limited by service\npriority and nomination cycle, based on hours remaining in the gas day. \nShippers and Point Operators are responsible for calculating and monitoring\ntheir hourly usage so as not to exceed the limits described herein.\n\n \n\nHourly Rights for Firm\nService – 150%\n\nIncludes Primary and\nSecondary Confirmed Nominations and Unused No-Notice firm service rights\n\n \n\n            \nTimely/Evening\nCycles\n\nLimited to \n6.25% (150% / 24 hours)\n of Firm\nService.  \n\n \n\nIntra-Day 1 Cycle\n\nLimited to the hourly rights computed in the previous\ncycle for Firm Service; plus \n7.895%\n \n(150% / 19 hours)\n of the difference\nof current cycle Firm Service minus prior cycle Firm Service.  \n\n \n\nIntra-Day 2 Cycle\n\nLimited to the hourly rights computed in the previous\ncycle for Firm Service; plus\n 10.00% (150% / 15 hours)\n of the difference\nof current cycle Firm Service minus prior cycle Firm Service.  \n\n \n\nIntra-Day 3 Cycle\n\nLimited to the hourly rights computed in the previous\ncycle for Firm Service, plus \n13.64% (150% / 11 hours)\n of the difference\nof current cycle Firm Service minus prior cycle Firm Service.\n\n \n\n \n\nHourly Rights for\nInterruptible Service – 105%\n\nIncludes Interruptible and\nAOR nominations, as well as POA tolerances\n\n \n\nTimely/Evening\nCycles\n\nLimited to \n4.375% (105% / 24 hours)\n of Interruptible\nService.  \n\n \n\nIntra-Day 1 Cycle\n\nLimited to the hourly rights computed in the previous\ncycle for Interruptible Service; plus\n 5.53%\n \n(105% / 19 hours)\n of\nthe difference of current cycle Interruptible Service minus prior cycle Interruptible\nService.  \n\n \n\n \n\nIntra-Day 2 Cycle\n\nLimited to the hourly rights computed in the previous\ncycle for Interruptible Service; plus \n7.0% (105% / 15 hours)\n of the\ndifference of current cycle Interruptible Service minus prior cycle Interruptible\nService.  \n\n \n\nIntra-Day 3 Cycle\n\nLimited to the hourly rights computed in the previous\ncycle for Interruptible Service; plus \n9.55% (105% / 11 hours)\n of the\ndifference of current cycle Interruptible Service minus prior cycle\nInterruptible Service.\n\n \n\nLimitation on\nNominations in All Cycles for Firm and Interruptible Service\n\n \n\nShippers are advised that nominations should be\nreceived by Timely/Evening Cycle in order to utilize full rights over 24 hours,\nto avoid exceeding the 24 hour ratable hourly takes calculation.  In all\ncases, any first time nominations received on Non-Timely Cycles for full MDQ\nutilization rights, plus any scheduled ITS nominations must conform to the 24\nhour ratable calculation.  Shipper's hourly rights based on firm MDQ, plus\ninterruptible nominations, must be adequate enough to accommodate the\ncalculated hourly rights for the remaining hours of the gas day. \nSpecifically, hourly rights cannot exceed 150% / 24 hours of Shipper's MDQ on\nthe nominated contract, plus 105% / 24 hours of Shipper's interruptible\nnominations.\n\n \n\nIn addition, Natural would\nlike to remind point operators to utilize the Operator Point Reports available\non our website to assist you in monitoring your hourly takes.  These reports\nare available by linking to http://pipeline.kindermorgan.com.  Select NGPL >\nCustomer Activities > Log On > Flowing Gas > Additional Reports >\nNGPL/HRZ > NGPL/HRZ – Hourly Nomination Details.\n\n \n\nPlease contact your Account\nDirector or Scheduling Representative if you have any questions.\n\n..",
+        "outage_report_ref": null,
+        "tariff_section": "GT&C Section 7.4",
+        "information_only": 0,
+        "is_signal": 0,
+        "confidence_score": 0.0,
+        "validity_flags": "[\"VC-3: small curtailment impact \\u2014 interruptible/lower-priority service only or <10% reduction (+0.10 confidence)\", \"VC-4: named zone(s) identified \\u2014 regional constraint known (+0.20 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T18:10:18.621059",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46528_OPERATIONAL ALERT.html"
+      },
+      {
+        "notice_id": 46604,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "OTHER",
+        "notice_subtype": "TARIFF PROVISIONS/PARAMETERS",
+        "effective_datetime": "2026-01-06T11:27:29",
+        "end_datetime": "2049-12-31T09:00:00",
+        "post_datetime": "2026-01-06T11:27:29",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "PHMSA MEGA RULE ELIGIBLE PROJ-UPDATE",
+        "body_text": "Pursuant to\nits Tariff (GT&C Section 5.2 (c) (5)), Natural has updated its list of\nPHMSA Mega Rule Eligible Projects set forth on Appendix F to its Settlement in\nDocket No. RP22-1222.  \n\nSee the\nlatest posted notice at \nInformational\nPostings :: Natural Gas Pipeline Company of America, L.L.C.\n under\nRegulatory, which will contain an updated Appendix F.  Any questions or\nconcerns regarding the updated Appendix F should be directed to Rahul Singh,\nDirector of Regulatory, at \nRahul.singh@kindermorgan.com\n.\n\n \n\n..",
+        "outage_report_ref": null,
+        "tariff_section": "GT&C Section 5.2",
+        "information_only": 1,
+        "is_signal": 0,
+        "confidence_score": 0.0,
+        "validity_flags": "[\"VC-1: information-only notice \\u2014 Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T18:10:22.461977",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46604_OTHER.html"
+      },
+      {
+        "notice_id": 46615,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "MAINTENANCE",
+        "notice_subtype": "MAINTENANCE",
+        "effective_datetime": "2026-01-08T16:53:39",
+        "end_datetime": "2026-08-31T09:00:00",
+        "post_datetime": "2026-01-08T16:53:39",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "SEG 25 - STATION MAINT - CS 302",
+        "body_text": "ANR/NGPL SOUTH JOLIET AT CAPACITY\n\nSEGMENT\n25 – STATION MAINTENANCE – CS 302\n\n \n\nAs\nposted on Natural's Outage Impact Report (X25-1527903), Natural will be\nperforming station maintenance at Compressor Station 302 (CS 302) located in Montgomery\nCounty, Texas (Segment 25 of Natural's Texok Zone).  Natural is required to\nreduce the maximum operating capacity eastbound into Segment 25 from Segment 26\nand Segment 22, thus limiting Natural's throughput capacity eastbound through\nCS 302 during this restriction.\n\n \n\nThe\n\nscheduling constraint will be at CS 302\n; therefore, any gas received\nwest of CS 302 for delivery east of CS 302 will be impacted for the duration of\nthe restriction.  The Pooling Point - Texok Zone (LOC 10560) is located west of\nthe constraint.  Firm transportation associated with storage withdrawals may be\nimpacted.\n\n \n\nAs\nsuch, effective for gas day \nWednesday, April 1, 2026, Timely Cycle, and\ncontinuing through gas day Friday, May 1, 2026\n, Natural will schedule\nPrimary Firm and Secondary in-path Firm transports to no less than \n55%\n\nof contract MDQ through CS 302.  AOR/ITS and Secondary out-of-path Firm\ntransports \nwill not\n be available for the duration of this restriction.\n\n \n\nThe\nstated scheduling percentage is based upon the current level of firm capacity\ncontracted for during this restriction and is subject to change based upon\noperational conditions and Shipper utilization.\n\n \n\nContinue\nto monitor Natural's interactive website for any updates.  Please contact your\nAccount Director or Scheduling Representative if you have any questions.\n\n..",
+        "outage_report_ref": "X25-1527903",
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 1,
+        "confidence_score": 0.5,
+        "validity_flags": "[\"VC-2: high-confidence notice type (MAINTENANCE) \\u2014 maintenance outage (+0.10 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T18:10:35.280834",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46615_MAINTENANCE.html"
+      },
+      {
+        "notice_id": 46624,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "CAPACITY CONSTRAINT",
+        "notice_subtype": "POINTS",
+        "effective_datetime": "2026-01-12T10:51:37",
+        "end_datetime": "2026-03-31T09:00:00",
+        "post_datetime": "2026-01-12T10:51:37",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "FGT VERMILLION (LOC 7936) - PRIMARY ONLY",
+        "body_text": "ANR/NGPL SOUTH JOLIET AT CAPACITY\n\nFLORIDA\nVERMILION (LOC 7936) – PRIMARY ONLY\n\n \n\nDue\nto current operating conditions, effective for gas day \nWednesday, January 14,\n2026, Timely Cycle and continuing until further notice,\n Florida Vermilion (LOC\n7936) is at operating capacity.  As such, Natural will only schedule Primary\nFirm transports for deliveries to Florida Vermilion (LOC 7936).  AOR/ITS, Secondary\nout-of-path Firm transports and Secondary in-path Firm transports \nwill\nnot\n be available.\n\n \n\nFlorida\nVermilion is located in Vermilion Parish, Louisiana (Segment 24), in Natural's Louisiana\nZone.\n\n \n\nPlease\ncontact your Account Director or Scheduling Representative if you have any\nquestions.\n\n \n\n..",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 1,
+        "confidence_score": 0.8,
+        "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T18:10:47.810170",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46624_CAPACITY CONSTRAINT.html"
+      },
+      {
+        "notice_id": 46725,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "OPERATIONAL FLOW ORDER",
+        "notice_subtype": "OFO",
+        "effective_datetime": "2026-02-09T08:15:20",
+        "end_datetime": "2026-02-28T09:00:00",
+        "post_datetime": "2026-02-09T08:15:20",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "TERMINATE",
+        "prior_notice_id": 46705,
+        "subject": "OFO - MARKET DELVIERY ZONE - REMOVED",
+        "body_text": "Post Date: 01/05/1999 19:01:20\n\nOPERATIONAL FLOW ORDER\nISSUED - MARKET DELIVERY ZONE – REMOVED\n\n \n\nEffective for gas day \nMonday,\nFebruary 9, 2026\n, \nbeginning 9:00 a.m., Central Clock Time\n,\nNatural is removing the Operational Flow Order (OFO) in the Market Delivery\nZone.  Please continue to monitor Natural's interactive website for updates.\n\n \n\nPlease contact your\nAccount Director for any questions.\n\n..",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 1,
+        "is_signal": 0,
+        "confidence_score": 0.0,
+        "validity_flags": "[\"VC-1: information-only notice \\u2014 Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T18:10:53.002990",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46725_OPERATIONAL FLOW ORDER.html"
+      },
+      {
+        "notice_id": 46728,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "CAPACITY CONSTRAINT",
+        "notice_subtype": "SEGMENTS",
+        "effective_datetime": "2026-02-09T08:25:50",
+        "end_datetime": "2026-02-28T09:00:00",
+        "post_datetime": "2026-02-09T08:25:50",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "IBS/LPS/SRO - RESTRICTIONS",
+        "body_text": "IBS/LPS - RESTRICIONS\n\nIBS/LPS/SRO – AVAILABILITY\n\n \n\nAMARILLO SYSTEM\n\n \n\nEffective for gas day \nMonday,\nFebruary 9, 2026, Intraday 1 Cycle, and continuing until further notice\n,\nNatural has the following availability for line pack services:\n\n \n\nCategories\n:  (Unavailable; Up to MDQ; Limited Available;\nAvailable)\n\n \n\n \n\nAMARILLO\n:\n\n \n\nON to the Pipe\n\nMarket\nDelivery Zones\n\n              \n \nAmarillo Mainline (Up to MDQ)\n\n                Iowa-Illinois\n(Up to MDQ)\n\n            \nProduction\nZones\n\n                \nMidcontinent (Up to MDQ)\n\n                Permian (Up\nto MDQ\n)\n\n \n\nOFF of the Pipe\n\n     \n       \nMarket Delivery Zones\n\n                 Amarillo\nMainline (Up to MDQ)\n\n          \n      Iowa-Illinois (Up to MDQ)\n\nè\n     \nIowa-Illinois – Segment 29 – (Available)\n\n                                                                                                                        \n\n            \nProduction Zones\n\n    Midcontinent\n(Up to MDQ)\n\n   \n       Permian (Up to MDQ)\n\n \n\n \n\nGULF COAST SYSTEM\n\n \n\nEffective for gas day \nMonday,\nFebruary 9, 2026, Intraday 1 Cycle, and continuing until further notice\n,\nNatural has the following availability for line pack services:\n\n \n\nCategories\n:  (Unavailable; Up to MDQ*; Limited Available;\nAvailable)\n\nGULF COAST\n:\n\n \n\nON to the Pipe\n\n     \n       \nMarket Delivery Zones\n\n             \nGulf Coast Mainline (Up to MDQ)\n\n             Iowa-Illinois (Up\nto MDQ)\n\n     \n       \nProduction Zones\n\n Texok\nGC (Up to MDQ)\n\n Texok\nA/G (Up to MDQ)\n\n            \n South Texas (Up to MDQ)\n\n            \n Louisiana (Up to MDQ)\n\n    \n\n \n\n                                \n\n \n\nOFF of the Pipe\n\n     \n       \nMarket Delivery Zones\n\n                \nGulf Coast Mainline (Up to MDQ)\n\n   \n      Iowa-Illinois (Up to MDQ)\n\nè\n      \nIowa-Illinois\n– Segment 39 – (Available)\n\n      \nè\n      Iowa-Illinois – Segment 40 – (Available)\n\n \n\n     \n\n     \n       \nProduction Zones\n\n    \n \n       \nTexok GC (Up to MDQ)\n\n             Texok\nA/G (Up to MDQ)\n\n      \n      South Texas (Up to MDQ)\n\n                    Louisiana\n(Up to MDQ)\n\n \n\n \nè\nIndicates Change\n\n..",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 0,
+        "confidence_score": 0.0,
+        "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: no measurable curtailment \\u2014 no restriction value and no UNAVAILABLE restriction type extracted; advisory notice only (-0.20 confidence)\", \"VC-4: pipeline segment identified \\u2014 constraint point known (+0.15 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T18:11:00.852730",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46728_CAPACITY CONSTRAINT.html"
+      },
+      {
+        "notice_id": 46732,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "CAPACITY CONSTRAINT",
+        "notice_subtype": "SEGMENTS",
+        "effective_datetime": "2026-02-09T08:32:30",
+        "end_datetime": "2026-02-28T09:00:00",
+        "post_datetime": "2026-02-09T08:32:30",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "TERMINATE",
+        "prior_notice_id": 46507,
+        "subject": "SEG 14 WB - CS 113 - PRIM ONLY LIFTED",
+        "body_text": "SEGMENT 17 FORCE MAJURE\n\nSEGMENT 14 WESTBOUND – CS 113 – PRIMARY ONLY - LIFTED\n\nEffective for gas day \nMonday,\nFebruary 9, 2026, Intraday 1 Cycle and continuing thereafter\n, Natural has\noperating capacity available for transports westbound on the Amarillo Mainline\nSystem through Compressor Station 113 located in Will County, IL (Natural's\nMarket Delivery Zone).  Therefore, the Primary only restriction has been\nlifted.  All transport services are available.\n\n \n\nPlease contact your Account\nDirector or Scheduling Representative if you have any questions.\n\n..",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 1,
+        "confidence_score": 0.6,
+        "validity_flags": "[\"VC-1: terminated notice \\u2014 prior notice 46507 was a signal (confidence 0.60); restriction lifted, inheriting confidence as termination signal\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T18:11:06.873984",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46732_CAPACITY CONSTRAINT.html"
+      },
+      {
+        "notice_id": 46775,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "COMPUTER SYSTEM STATUS",
+        "notice_subtype": "DART SYSTEM INFORMATION",
+        "effective_datetime": "2026-02-26T10:15:22",
+        "end_datetime": "2026-02-27T09:00:00",
+        "post_datetime": "2026-02-26T10:15:22",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "DART Connection Issues",
+        "body_text": "DART\nTECHNICAL ISSUES – ID-1 NOMINATION DEADLINE EXTENDED FOR 02-26-26\n\n \n\nDART\nexperienced technical issues.  Due to these issues, the ID-1 nomination\ndeadline for February 26, 2026, will be extended until 10:45 am CCT.  \n\n \n\nIf you have\nany questions, please call your Scheduler.  \n\n..",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 1,
+        "is_signal": 0,
+        "confidence_score": 0.0,
+        "validity_flags": "[\"VC-1: information-only notice \\u2014 Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T18:11:13.063994",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46775_COMPUTER SYSTEM STATUS.html"
+      },
+      {
+        "notice_id": 46795,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "OPERATIONAL FLOW ORDER",
+        "notice_subtype": "OFO",
+        "effective_datetime": "2026-03-04T14:08:29",
+        "end_datetime": "2026-05-31T09:00:00",
+        "post_datetime": "2026-03-04T14:08:29",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "OPERATIONAL FLOW ORDER - REPORT",
+        "body_text": "OPERATIONAL\nFLOW ORDER – MARKET DELIVERY ZONE – REPORT\n\nOn January 20, 2026, due\nto forecasted colder than normal weather, expected increased load on its\nsystem, anticipated maximum peaking withdrawals from storage facilities, and\nsystem operating conditions, Natural issued an Operational Flow Order (“OFO”) in\nthe Market Delivery Zone effective for Thursday, January 22, 2026 at 9:00 a.m. Central\nClock Time. This action was taken in accordance with Section 23.6 of the\nGeneral Terms and Conditions of Natural's FERC Gas Tariff (“GT&C”).\n\nThe OFO was issued to\nmaintain and preserve the operational integrity of Natural's system and was in\nresponse to the following operational factors: (1) to maintain pressures for\nfirm transportation deliveries in the Market Delivery Zone; and (2) maintain deliverability\nfrom Natural's market area storage fields for firm storage services.\n\nThe OFO did not result in\nany curtailment of primary firm service.  During the OFO, Natural implemented\ndaily and hourly take limitations for firm and interruptible Shippers\n(including Point Operators) at all points in the Market Delivery Zone.  The OFO\nlimited Shippers and Point Operators, on a daily basis, from taking volumes in\nexcess of confirmed transportation nominations plus no-notice rights at\ndelivery points in the Market Delivery Zone, and on an hourly basis to 130% of\ntheir firm service rights.  Hourly rights for interruptible nominations were\nlimited to 105% of the Shipper's interruptible nominations. Additionally,\nShippers and Point Operators were required to flow more ratably during the gas\nday based on service priority and nomination cycles.  \nThe\nfirm service percentage was reduced to 110% on Tuesday, January 27, 2026 at\n9:00 a.m. Central Clock Time, and then  increased back to 130% on Thursday\nFebruary 5, 2026 at 9:00 am Central Clock Time. \n \n\nThese measures were taken\nconsistent with Natural's Tariff due to sustained colder than normal weather in\nthe Market Delivery Zone and anticipated maximum peaking withdrawals from\nstorage facilities.  As the weather conditions moderated and the associated\nhigh gas demand declined, Natural removed the OFO, effective at 9:00 a.m. on\ngas day Monday, February 9, 2026.\n\nThis posting complies\nwith GT&C Section 23.6(h) of Natural's Tariff to describe the specific\noperational factors which caused the Operational Flow Order to be issued and to\nbe lifted.\n\n..",
+        "outage_report_ref": null,
+        "tariff_section": "GT&C Section 23.6(h)",
+        "information_only": 1,
+        "is_signal": 0,
+        "confidence_score": 0.0,
+        "validity_flags": "[\"VC-1: information-only notice \\u2014 Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T18:11:23.814793",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46795_OPERATIONAL FLOW ORDER.html"
+      },
+      {
+        "notice_id": 46805,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "MAINTENANCE",
+        "notice_subtype": "MAINTENANCE",
+        "effective_datetime": "2026-03-05T14:53:02",
+        "end_datetime": "2026-03-06T09:00:00",
+        "post_datetime": "2026-03-05T14:53:02",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "PHMSA MEGA-SEG 13 AM#3 107/108-ILI TOOLS",
+        "body_text": "STATION 302 – REPLACE REGULATOR – UPDATE\n\nPHMSA MEGA RULE–- ELIGIBLE\nPROJECT\n - SEGMENT 13 – AMARILLO #3 M/L – CS 107/108 – ILI TOOL\nRUNS\n\n \n\nIn accordance with its FERC\nGas Tariff and as posted on Natural's Outage Impact Report \n(X25-1166550)\n; \nas part of\nNatural's ongoing pipeline Integrity Management Program, Natural will perform a\nseries of ILI tool runs on its Amarillo #3 mainline between Compressor Station 107\n(CS 107) located in Mills County, Iowa and Compressor Station 108 (CS 108)\nlocated in Warren County, Iowa (Segment 13 of Natural's Amarillo Mainline Zone). \nThe tool runs will require Natural to reduce the operating capacity, thus limiting\nNatural's throughput capacity northbound through CS 108.  Once the data\nfrom the tool runs have been analyzed, any remediation work impacting shippers\nwill be posted.\n\n \n\nThis remediation project is\npursuant to the PHMSA Mega Rule and as set forth in its Tariff, is an Eligible\nProject (ID 4819) included on the Eligible Project List posted on Natural's\ninternet website.  See Eligible Project ID, line name and location\nidentified below (Appendix F- Docket No. RP22-1222 Settlement).  This\noutage is subject to the provisions of Section 5.2 (c) (5) of the General\nTerms and Conditions of Natural's FERC Gas Tariff.\n\n \n\nProject\nID          Line\nName                  \n              Location/Segment\nNo.                      \n           \n\n4819                  AMARILLO\n#3 MAINLINE     SEGMENT 13\n\n \n\nThe scheduling\nconstraint will be upstream of CS 108 at the beginning of Segment 13;\ntherefore, any gas received south of Segment 13 for delivery north of Segment\n13 will be impacted for the duration of the restriction.  Receipts from\nTrailblazer Gage (LOC 902900) are south of CS 107 and will be impacted for the\nduration of the restriction.  Northern Natural Mills (LOC 900203) is located\ndownstream of the Segment 13 constraint location.  For scheduling purposes, the\nAmarillo Pool (LOC 10566) is located south of the constraint. \nAdditionally, firm transportation associated with storage withdrawals or\ninjections may be impacted.\n\n \n\nAs such,\neffective on the gas days indicated below, Natural will schedule Primary Firm and\nSecondary in-path Firm transports to no less than \n44%\n of contract\nMDQ northbound through CS 107.  AOR/ITS and Secondary out-of-path Firm\ntransports \nwill not\n be available for the duration of the restriction.\n\n \n\nTOOL RUN\nDATES\n:\n\n \n\nGas day Friday,\nApril 17, 2026 (Cleaning/ Gauge Tools)\n\nGas day\nTuesday, April 21, 2026 (Cleaning Tool)\n\nGas day Thursday,\nApril 23, 2026 (Cleaning Tool)\n\nGas day Tuesday,\nApril 28, 2026 (Combo Tool)\n\nGas day Thursday,\nApril 30, 2026 (EMAT Tool)\n\nGas day\nFriday, May 1, 2026 (EMAT Tool)\n\n \n\nThe stated\nscheduling percentage is based upon the current level of firm capacity\ncontracted for during this restriction and is subject to change based upon\noperational conditions and Shipper utilization.\n\n \n\nContinue to\nmonitor Natural's interactive website for any updates to the end date and/or\nscheduling percentage during this restriction.  Please contact your\nAccount Director or Scheduling Representative if you have any questions.\n\n..",
+        "outage_report_ref": "X25-1166550",
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 1,
+        "confidence_score": 0.5,
+        "validity_flags": "[\"VC-2: high-confidence notice type (MAINTENANCE) \\u2014 maintenance outage (+0.10 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T18:11:37.559899",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46805_MAINTENANCE.html"
+      },
+      {
+        "notice_id": 46818,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "MAINTENANCE",
+        "notice_subtype": "MAINTENANCE",
+        "effective_datetime": "2026-03-12T12:38:41",
+        "end_datetime": "2026-03-19T09:00:00",
+        "post_datetime": "2026-03-12T12:38:41",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "OUTAGE IMPACT REPORT - 3-12-26",
+        "body_text": "REVISED ROLLING 12-MONTH MAINTENANCE PLAN\n\nOUTAGE\nIMPACT REPORT UPDATE\n\n \n\nNatural\nhas posted an updated Outage Impact Report on its website.\n\n \n\nThe\nreport outlines scheduled projects that may affect customers and includes:\n\n \n\n·\n        \n\nImpacted\npipeline segments\n\n·\n        \n\nEstimated\nstart and finish dates\n\n·\n        \n\nBrief\nproject descriptions\n\n·\n        \n\nAnticipated\nshipper impacts\n\n \n\nChanges\nto existing projects and newly added projects are highlighted in yellow for\neasy reference.  In addition, Natural will continue to post detailed updates on\nspecific maintenance projects with direct shipper impacts on its interactive\nwebsite as needed.  The full maintenance plan is accessible via Natural's\nportal page or by clicking the link below:\n\n \n\nOutage\nImpact Report - 3-12-26\n\n \n\nIf\nyou have any questions, please contact your Account Director or Scheduling\nRepresentative.\n\n \n\n \n\n..",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 1,
+        "is_signal": 0,
+        "confidence_score": 0.0,
+        "validity_flags": "[\"VC-1: information-only notice \\u2014 Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T18:11:42.024089",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46818_MAINTENANCE.html"
+      },
+      {
+        "notice_id": 46864,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "FORCE MAJEURE",
+        "notice_subtype": "FORCE MAJEURE",
+        "effective_datetime": "2026-04-06T09:21:29",
+        "end_datetime": "2026-06-30T09:00:00",
+        "post_datetime": "2026-04-06T09:21:29",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "FORCE MAJEURE-COMP STA 168",
+        "body_text": "FORCE MAJEURE – COMPRESSOR STATION 168\n\n \n\nNatural has experienced\nhorsepower issues at Compressor Station 168 (CS 168) located in Bailey County,\nTexas (Segment 8 of Natural's Permian Zone).  This is a Force Majeure\nevent.  Natural is required to reduce the maximum operating capacity\nnorthbound into Segment 8 from Segment 9, thus limiting Natural's throughput\ncapacity northbound through Compressor Station 167 (CS 167).\n\n \n\nThe scheduling constraint\nwill be Segment 9 at CS 167; therefore, any gas received south of CS 167 for\ndelivery north of CS 167 will be impacted for the duration of the\nrestriction.  The Pooling Point - Permian Zone (LOC 25077) is located\nsouth of the constraint.  Firm transportation associated with storage\nwithdrawals may be impacted.\n\n \n\nAs such, effective for gas\nday \nTuesday, April 7, 2026, Timely\nCycle and continuing until further notice\n, Natural will schedule Primary Firm and Secondary in-path Firm\ntransports to no less than \n94%\n of contract MDQ through CS 167.  AOR/ITS and\nSecondary out-of-path Firm transports \nwill not\n be available for the\nduration of this restriction.\n\n \n\nAdditionally, the unit\nmaintenance referenced on Natural's Outage Impact Report (X26-220667) has been\npostponed until further notice\n.\n\n \n\nThe stated scheduling\npercentage is based upon the current level of firm capacity contracted for\nduring this restriction and is subject to change based upon operational\nconditions and Shipper utilization.\n\n \n\nContinue to monitor Natural's\ninteractive website for any updates to the end date during this\nrestriction.  Please contact your Account Director or Scheduling\nRepresentative if you have any questions.\n\n..",
+        "outage_report_ref": "X26-220667",
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 1,
+        "confidence_score": 0.7,
+        "validity_flags": "[\"VC-2: high-confidence notice type (FORCE MAJEURE) \\u2014 force majeure or OFO (+0.30 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-28T18:11:56.125461",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46864_FORCE MAJEURE.html"
+      }
+    ],
+    "notice_locations": [
+      {
+        "id": 1,
+        "location_index": 0,
+        "notice_id": 46507,
+        "loc_code": null,
+        "loc_name": null,
+        "segment": "14",
+        "compressor_station": "113",
+        "zone": "Market Delivery Zone",
+        "system": "Amarillo Mainline System"
+      },
+      {
+        "id": 2,
+        "location_index": 0,
+        "notice_id": 46528,
+        "loc_code": null,
+        "loc_name": null,
+        "segment": null,
+        "compressor_station": null,
+        "zone": "Market Delivery Zone",
+        "system": null
+      },
+      {
+        "id": 3,
+        "location_index": 0,
+        "notice_id": 46615,
+        "loc_code": "10560",
+        "loc_name": "Pooling Point - Texok Zone",
+        "segment": "25",
+        "compressor_station": "302",
+        "zone": "Texok Zone",
+        "system": null
+      },
+      {
+        "id": 4,
+        "location_index": 0,
+        "notice_id": 46624,
+        "loc_code": "7936",
+        "loc_name": "Florida Vermilion",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      },
+      {
+        "id": 5,
+        "location_index": 0,
+        "notice_id": 46725,
+        "loc_code": null,
+        "loc_name": null,
+        "segment": null,
+        "compressor_station": null,
+        "zone": "Market Delivery Zone",
+        "system": null
+      },
+      {
+        "id": 6,
+        "location_index": 0,
+        "notice_id": 46728,
+        "loc_code": null,
+        "loc_name": null,
+        "segment": "29",
+        "compressor_station": null,
+        "zone": "Iowa-Illinois",
+        "system": "Amarillo System"
+      },
+      {
+        "id": 7,
+        "location_index": 1,
+        "notice_id": 46728,
+        "loc_code": null,
+        "loc_name": null,
+        "segment": "39",
+        "compressor_station": null,
+        "zone": "Iowa-Illinois",
+        "system": "Gulf Coast System"
+      },
+      {
+        "id": 8,
+        "location_index": 2,
+        "notice_id": 46728,
+        "loc_code": null,
+        "loc_name": null,
+        "segment": "40",
+        "compressor_station": null,
+        "zone": "Iowa-Illinois",
+        "system": "Gulf Coast System"
+      },
+      {
+        "id": 9,
+        "location_index": 0,
+        "notice_id": 46732,
+        "loc_code": null,
+        "loc_name": null,
+        "segment": "14",
+        "compressor_station": "113",
+        "zone": "Market Delivery Zone",
+        "system": "Amarillo Mainline System"
+      },
+      {
+        "id": 10,
+        "location_index": 0,
+        "notice_id": 46795,
+        "loc_code": null,
+        "loc_name": null,
+        "segment": null,
+        "compressor_station": null,
+        "zone": "Market Delivery Zone",
+        "system": null
+      },
+      {
+        "id": 11,
+        "location_index": 0,
+        "notice_id": 46805,
+        "loc_code": "902900",
+        "loc_name": "Trailblazer Gage",
+        "segment": "13",
+        "compressor_station": "107",
+        "zone": "Amarillo Mainline Zone",
+        "system": "Amarillo System"
+      },
+      {
+        "id": 12,
+        "location_index": 1,
+        "notice_id": 46805,
+        "loc_code": "10566",
+        "loc_name": "Amarillo Pool",
+        "segment": "13",
+        "compressor_station": "107",
+        "zone": "Amarillo Mainline Zone",
+        "system": "Amarillo System"
+      },
+      {
+        "id": 13,
+        "location_index": 0,
+        "notice_id": 46864,
+        "loc_code": "25077",
+        "loc_name": "Pooling Point - Permian Zone",
+        "segment": "9",
+        "compressor_station": "167",
+        "zone": "Permian Zone",
+        "system": null
+      }
+    ],
+    "notice_restrictions": [
+      {
+        "id": 1,
+        "location_index": 0,
+        "notice_id": 46507,
+        "service_type": "PRIMARY_FIRM",
+        "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "WESTBOUND",
+        "start_datetime": "2025-12-03",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 2,
+        "location_index": 0,
+        "notice_id": 46507,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "WESTBOUND",
+        "start_datetime": "2025-12-03",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 3,
+        "location_index": 0,
+        "notice_id": 46507,
+        "service_type": "AOR_ITS",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "WESTBOUND",
+        "start_datetime": "2025-12-03",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 4,
+        "location_index": 0,
+        "notice_id": 46507,
+        "service_type": "SECONDARY_OUTPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "WESTBOUND",
+        "start_datetime": "2025-12-03",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 5,
+        "location_index": 0,
+        "notice_id": 46528,
+        "service_type": "PRIMARY_FIRM",
+        "restriction_type": "HOURLY_LIMIT_PCT",
+        "restriction_value": 150.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "OFF_OF_PIPE",
+        "start_datetime": "2025-12-12",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 6,
+        "location_index": 0,
+        "notice_id": 46528,
+        "service_type": "NO_NOTICE",
+        "restriction_type": "HOURLY_LIMIT_PCT",
+        "restriction_value": 150.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "OFF_OF_PIPE",
+        "start_datetime": "2025-12-12",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 7,
+        "location_index": 0,
+        "notice_id": 46528,
+        "service_type": "INTERRUPTIBLE",
+        "restriction_type": "HOURLY_LIMIT_PCT",
+        "restriction_value": 105.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "OFF_OF_PIPE",
+        "start_datetime": "2025-12-12",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 8,
+        "location_index": 0,
+        "notice_id": 46528,
+        "service_type": "AOR_ITS",
+        "restriction_type": "HOURLY_LIMIT_PCT",
+        "restriction_value": 105.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "OFF_OF_PIPE",
+        "start_datetime": "2025-12-12",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 9,
+        "location_index": 0,
+        "notice_id": 46615,
+        "service_type": "PRIMARY_FIRM",
+        "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+        "restriction_value": 55.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "EASTBOUND",
+        "start_datetime": "2026-04-01",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "id": 10,
+        "location_index": 0,
+        "notice_id": 46615,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+        "restriction_value": 55.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "EASTBOUND",
+        "start_datetime": "2026-04-01",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "id": 11,
+        "location_index": 0,
+        "notice_id": 46615,
+        "service_type": "AOR_ITS",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "EASTBOUND",
+        "start_datetime": "2026-04-01",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "id": 12,
+        "location_index": 0,
+        "notice_id": 46615,
+        "service_type": "SECONDARY_OUTPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "EASTBOUND",
+        "start_datetime": "2026-04-01",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "id": 13,
+        "location_index": 0,
+        "notice_id": 46624,
+        "service_type": "PRIMARY_FIRM",
+        "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+        "restriction_value": 100.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 14,
+        "location_index": 0,
+        "notice_id": 46624,
+        "service_type": "AOR_ITS",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 15,
+        "location_index": 0,
+        "notice_id": 46624,
+        "service_type": "SECONDARY_OUTPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 16,
+        "location_index": 0,
+        "notice_id": 46624,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 17,
+        "location_index": 0,
+        "notice_id": 46725,
+        "service_type": "ALL",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "ALL",
+        "start_datetime": "2026-02-09T08:15:20",
+        "end_datetime": "2026-02-09"
+      },
+      {
+        "id": 18,
+        "location_index": 0,
+        "notice_id": 46728,
+        "service_type": "LPS/IBS/SRO",
+        "restriction_type": "AVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "OFF_OF_PIPE",
+        "start_datetime": "2026-02-09",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 19,
+        "location_index": 1,
+        "notice_id": 46728,
+        "service_type": "LPS/IBS/SRO",
+        "restriction_type": "AVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "OFF_OF_PIPE",
+        "start_datetime": "2026-02-09",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 20,
+        "location_index": 2,
+        "notice_id": 46728,
+        "service_type": "LPS/IBS/SRO",
+        "restriction_type": "AVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "OFF_OF_PIPE",
+        "start_datetime": "2026-02-09",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 21,
+        "location_index": 0,
+        "notice_id": 46732,
+        "service_type": "ALL",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "WESTBOUND",
+        "start_datetime": "2026-02-09",
+        "end_datetime": "2026-02-28"
+      },
+      {
+        "id": 22,
+        "location_index": 0,
+        "notice_id": 46795,
+        "service_type": "PRIMARY_FIRM",
+        "restriction_type": "HOURLY_LIMIT_PCT",
+        "restriction_value": 130.0,
+        "restriction_unit": "PCT_HOURLY",
+        "flow_direction": "OFF_OF_PIPE",
+        "start_datetime": "2026-01-22",
+        "end_datetime": "2026-01-27"
+      },
+      {
+        "id": 23,
+        "location_index": 0,
+        "notice_id": 46795,
+        "service_type": "PRIMARY_FIRM",
+        "restriction_type": "HOURLY_LIMIT_PCT",
+        "restriction_value": 110.0,
+        "restriction_unit": "PCT_HOURLY",
+        "flow_direction": "OFF_OF_PIPE",
+        "start_datetime": "2026-01-27",
+        "end_datetime": "2026-02-05"
+      },
+      {
+        "id": 24,
+        "location_index": 0,
+        "notice_id": 46795,
+        "service_type": "PRIMARY_FIRM",
+        "restriction_type": "HOURLY_LIMIT_PCT",
+        "restriction_value": 130.0,
+        "restriction_unit": "PCT_HOURLY",
+        "flow_direction": "OFF_OF_PIPE",
+        "start_datetime": "2026-02-05",
+        "end_datetime": "2026-02-09"
+      },
+      {
+        "id": 25,
+        "location_index": 0,
+        "notice_id": 46795,
+        "service_type": "INTERRUPTIBLE",
+        "restriction_type": "HOURLY_LIMIT_PCT",
+        "restriction_value": 105.0,
+        "restriction_unit": "PCT_HOURLY",
+        "flow_direction": "OFF_OF_PIPE",
+        "start_datetime": "2026-01-22",
+        "end_datetime": "2026-02-09"
+      },
+      {
+        "id": 26,
+        "location_index": 0,
+        "notice_id": 46795,
+        "service_type": "ALL",
+        "restriction_type": "DAILY_LIMIT_PCT",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "OFF_OF_PIPE",
+        "start_datetime": "2026-01-22",
+        "end_datetime": "2026-02-09"
+      },
+      {
+        "id": 27,
+        "location_index": 0,
+        "notice_id": 46805,
+        "service_type": "PRIMARY_FIRM",
+        "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+        "restriction_value": 44.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "NORTHBOUND",
+        "start_datetime": "2026-04-17",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "id": 28,
+        "location_index": 1,
+        "notice_id": 46805,
+        "service_type": "PRIMARY_FIRM",
+        "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+        "restriction_value": 44.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "NORTHBOUND",
+        "start_datetime": "2026-04-17",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "id": 29,
+        "location_index": 0,
+        "notice_id": 46805,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+        "restriction_value": 44.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "NORTHBOUND",
+        "start_datetime": "2026-04-17",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "id": 30,
+        "location_index": 1,
+        "notice_id": 46805,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+        "restriction_value": 44.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "NORTHBOUND",
+        "start_datetime": "2026-04-17",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "id": 31,
+        "location_index": 0,
+        "notice_id": 46805,
+        "service_type": "AOR_ITS",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "NORTHBOUND",
+        "start_datetime": "2026-04-17",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "id": 32,
+        "location_index": 1,
+        "notice_id": 46805,
+        "service_type": "AOR_ITS",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "NORTHBOUND",
+        "start_datetime": "2026-04-17",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "id": 33,
+        "location_index": 0,
+        "notice_id": 46805,
+        "service_type": "SECONDARY_OUTPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "NORTHBOUND",
+        "start_datetime": "2026-04-17",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "id": 34,
+        "location_index": 1,
+        "notice_id": 46805,
+        "service_type": "SECONDARY_OUTPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "NORTHBOUND",
+        "start_datetime": "2026-04-17",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "id": 35,
+        "location_index": 0,
+        "notice_id": 46864,
+        "service_type": "PRIMARY_FIRM",
+        "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+        "restriction_value": 94.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "NORTHBOUND",
+        "start_datetime": "2026-04-07",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 36,
+        "location_index": 0,
+        "notice_id": 46864,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+        "restriction_value": 94.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "NORTHBOUND",
+        "start_datetime": "2026-04-07",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 37,
+        "location_index": 0,
+        "notice_id": 46864,
+        "service_type": "AOR_ITS",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "NORTHBOUND",
+        "start_datetime": "2026-04-07",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 38,
+        "location_index": 0,
+        "notice_id": 46864,
+        "service_type": "SECONDARY_OUTPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "NORTHBOUND",
+        "start_datetime": "2026-04-07",
+        "end_datetime": "TBD"
+      }
+    ],
+    "foreign_key_violations": [
+      [
+        "notices",
+        46725,
+        "notices",
+        0
+      ]
+    ]
+  },
+  "stages": {
+    "extraction": {
+      "scorable": true,
+      "provenance_flags": [
+        "VC-2: high-confidence notice type (FORCE MAJEURE) — force majeure or OFO (+0.30 confidence)",
+        "VC-3: large curtailment impact — primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)",
+        "VC-4: specific LOC code(s) or compressor station identified — precise constraint point known (+0.10 confidence)",
+        "llm_extraction"
+      ]
+    },
+    "classification": {
+      "scorable": true
+    },
+    "persistence": {
+      "observable": true,
+      "insert_succeeded": true
+    }
+  },
+  "notice_chain": [
+    {
+      "notice_id": 46864,
+      "subject": "FORCE MAJEURE-COMP STA 168",
+      "status": "INITIATE",
+      "prior_notice_id": null,
+      "depth": 1
+    }
+  ],
+  "reopened_state_equal": true,
+  "category": "labeled",
+  "annotations": {
+    "notice_id": 46864,
+    "path": "inherited/evaluation/notices/46864_FORCE MAJEURE.html",
+    "expected_signal": true,
+    "fields": {
+      "firm_mdq": 94,
+      "segments": [
+        "9"
+      ],
+      "zones": [
+        "Permian Zone"
+      ]
+    }
+  },
+  "transformation": null,
+  "evidence_ref": "cases/46864.json",
+  "database": "labeled.db"
+}
