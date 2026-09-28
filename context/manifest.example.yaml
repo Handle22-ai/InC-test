@@ -1,0 +1,20 @@
+version: 1
+
+artifacts:
+  decisions: context/decisions/
+  failures: context/failures/
+  regressions: context/regressions/
+  proposals: context/proposals/
+  assumptions: context/assumptions.md
+  domain: context/domain.md
+
+selection:
+  include_requirements: true
+  include_related_failures: true
+  include_related_decisions: true
+  include_related_regressions: true
+  include_assumptions_when_relevant: true
+
+conflict_policy:
+  require_explicit_supersession: true
+  never_silently_choose_latest: true

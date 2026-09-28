@@ -1,0 +1,89 @@
+{
+  "audit_request": "Audit existing submission against original Technical Challenge \u2014 The Harness v5; preserve submitted work; offline only.",
+  "prior_chat_supplied": false,
+  "compacted_summary_supplied": false,
+  "cross_thread_or_previous_agent_tools_used": false,
+  "repository_persisted_historical_requests_and_reports_read_as_evidence_only": true,
+  "entry_documents": [
+    "AGENTS.md",
+    "README.md"
+  ],
+  "original_challenge": "Not found in repository; requested path asynchronously; no response received as of report creation.",
+  "task_profiles_available": [
+    "notice-snapshot-rebuild",
+    "notice-snapshot-maintenance"
+  ],
+  "profile_used": "notice-snapshot-maintenance",
+  "selector_command_record": "commands/context.json",
+  "selected_artifact_count": 38,
+  "selected_content_and_paths": "selected_context/package.json",
+  "hash_verification": "context_verification.json",
+  "applicable_requirements": [
+    "INPUT-001",
+    "OUTPUT-003",
+    "STATE-001",
+    "STATE-002",
+    "STATE-006",
+    "HISTORY-001",
+    "OBS-001",
+    "OBS-002",
+    "OBS-003"
+  ],
+  "unresolved_requirements": [
+    "STATE-003",
+    "STATE-005",
+    "HISTORY-002",
+    "HISTORY-003",
+    "HISTORY-004",
+    "HISTORY-005",
+    "SAFETY-002"
+  ],
+  "additional_audit_document_scope": [
+    "harness.md",
+    "evidence/coverage.md",
+    "START_HERE.md",
+    "DELIVERABLES_AND_ACCEPTANCE.md",
+    "artifacts/runtime_requirements.md",
+    "inherited/README.md",
+    "evidence/preflight.md",
+    "evidence/baseline_attempts.md",
+    "evidence/reviews/v2/interpretation.md",
+    "evidence/reviews/v2/report.md",
+    "historical raw cases, manifests, responses, comparisons and SQLite files"
+  ],
+  "additional_agent_source_reads": [
+    {
+      "files": [
+        "Makefile",
+        "pyproject.toml",
+        "harness/context.py",
+        "harness/runtime.py",
+        "harness/adapter.py",
+        "harness/storage_ports.py",
+        "harness/storage_evaluation.py",
+        "inherited/llm_utils.py (configuration section)",
+        "tests/*.py"
+      ],
+      "purpose": "Inspect entry points, credential/network side effects and write locations before offline execution."
+    },
+    {
+      "files": [
+        "harness/requirements.py",
+        "harness/gates.py",
+        "harness/regression.py",
+        "harness/review.py",
+        "harness/evaluator.py",
+        "harness/candidate.py",
+        "rebuilt/snapshot.py",
+        "rebuilt/store.py"
+      ],
+      "purpose": "Verify requirement-to-check derivation, fair adapter protocol, historical result attribution, and scope of maintenance diffs."
+    }
+  ],
+  "human_source_reads_requested": false,
+  "additional_human_explanation": "Original challenge path needed to complete authoritative v5 mapping; no domain explanation needed for completed offline audit.",
+  "approval_claim_scope": "Prior approvals read from persisted ADRs; no attempt to recover original conversations.",
+  "implementation_changes": [],
+  "requirements_labels_threshold_dependency_changes": [],
+  "inspection_limit": "No code-review repair, live provider execution, remote source lookup, completed maintenance re-execution, or isolated-maintenance certification."
+}

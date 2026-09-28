@@ -1,0 +1,55 @@
+I approve BR-FIRM as a bounded assessment rule with the exact
+proposal-only scope described in the current review.
+
+Approval scope:
+
+- BR-FIRM may classify an accepted normalized NGPL notice as
+  SIGNAL_CANDIDATE / CANDIDATE_ONLY when:
+  - content_kind is RESTRICTION;
+  - firm_disruption is true under the documented firm-service semantics;
+  - current_or_future is true under the documented explicit UTC
+    reference-time semantics;
+  - higher-precedence format, semantic, contradiction, history,
+    unchanged-revision, or routine rules do not apply.
+
+- recommendation_allowed remains false.
+
+- BR-FIRM does NOT:
+  - establish D6 MATERIAL adjudication;
+  - authorize an outbound recommendation;
+  - authorize delivery;
+  - create a numeric materiality threshold;
+  - require quantity, geography, critical status, or a particular
+    notice type;
+  - establish general lift or material-update semantics.
+
+- Missing numeric volume alone does not disqualify the candidate.
+- Unknown or unresolved required history remains blocking.
+- Contradictory or unusable semantic evidence remains REVIEW_REQUIRED.
+- Unsupported format remains blocking.
+- Unchanged supersedes remain suppressed before BR-FIRM is considered.
+
+Treat the rule as an owner-approved assessment assumption derived from
+the challenge, supplied calibration examples, validity documentation,
+and existing D1–D6 policy. Do not represent it as an InCommodities or
+trading-desk production policy.
+
+Preserve the current positive, negative, and contradiction examples and
+their synthetic labels.
+
+Apply this approval consistently:
+1. Activate BR-FIRM in the canonical behavior contract.
+2. Regenerate/validate the human-readable decision table.
+3. Record the owner decision and updated contract identity.
+4. Preserve the current pre-approval buildability package and blocked
+   evidence unchanged.
+5. Produce a new frozen buildability package containing the approved rule.
+6. Do not implement the classifier in this session.
+7. Return:
+   - exact changed files;
+   - new contract/package identities;
+   - any resulting check changes;
+   - the exact handoff command/instruction for the separate builder.
+
+Do not alter D1–D6, labels, existing numeric bounds, recommendation
+authorization, or historical results.

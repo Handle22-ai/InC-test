@@ -1,0 +1,16 @@
+{
+  "notice_id": 46881,
+  "notice_type": "MAINTENANCE",
+  "status": "SUPERSEDE",
+  "prior_notice_id": 46857,
+  "information_only": false,
+  "is_signal": true,
+  "confidence_score": 0.5,
+  "validity_flags": [
+    "VC-1: superseded notice — prior notice not in DB, cannot compare; continuing validation",
+    "VC-2: high-confidence notice type (MAINTENANCE) — maintenance outage (+0.10 confidence)",
+    "VC-3: large curtailment impact — primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)",
+    "VC-4: specific LOC code(s) or compressor station identified — precise constraint point known (+0.10 confidence)",
+    "llm_extraction"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "status": "owner-approved",
+  "decision": "context/decisions/010-integrated-release-hardening.md",
+  "owner_record": "evidence/release-hardening/20260928T024253Z/owner-request.txt",
+  "manifest_sha256": "4c4b27bf1b026aca85dd2e483cffc76561c85752de40adc9c004c6c14a18ac14",
+  "core_content_paths": {
+    "notice-snapshot-rebuild": null,
+    "notice-snapshot-maintenance": null,
+    "recommendation-classification-maintenance": [
+      "docs/system-contract.md",
+      "docs/signal-contract.md",
+      "context/decisions/007-br-firm-proposal-classification.md",
+      "context/failures/spec-evidence-current.md",
+      "context/decisions/008-derivation-integrity-correction.md",
+      "context/decisions/009-normalized-harness-hardening.md",
+      "context/decisions/010-integrated-release-hardening.md"
+    ]
+  }
+}

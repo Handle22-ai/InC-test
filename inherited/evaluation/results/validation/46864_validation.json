@@ -1,0 +1,15 @@
+{
+  "notice_id": 46864,
+  "notice_type": "FORCE MAJEURE",
+  "status": "INITIATE",
+  "prior_notice_id": null,
+  "information_only": false,
+  "is_signal": true,
+  "confidence_score": 0.6,
+  "validity_flags": [
+    "VC-2: high-confidence notice type (FORCE MAJEURE) — force majeure or OFO (+0.30 confidence)",
+    "VC-3: medium curtailment impact — firm service affected with 10–30% reduction (+0.20 confidence)",
+    "VC-4: specific LOC code(s) or compressor station identified — precise constraint point known (+0.10 confidence)",
+    "llm_extraction"
+  ]
+}

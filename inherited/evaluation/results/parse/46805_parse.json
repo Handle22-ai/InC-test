@@ -1,0 +1,81 @@
+{
+  "notice_id": 46805,
+  "notice_type": "MAINTENANCE",
+  "html_file": "evaluation/notices/46805_MAINTENANCE.html",
+  "header": {
+    "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+    "critical": "Y",
+    "type1": "MAINTENANCE",
+    "type2": "MAINTENANCE",
+    "notice_effective_date": "03/05/2026  2:53:02PM",
+    "notice_end_date": "03/06/2026 9:00:00am",
+    "post_date": "3/5/2026 2:53:02 PM",
+    "notice_id": "46805",
+    "req_rsp": "1",
+    "rsp_date": "03/05/2026",
+    "status": "INITIATE",
+    "prior_notice_id": "",
+    "subject": "PHMSA MEGA-SEG 13 AM#3 107/108-ILI TOOLS"
+  },
+  "body": "STATION 302 – REPLACE REGULATOR – UPDATE\n\nPHMSA MEGA RULE–- ELIGIBLE\nPROJECT\n - SEGMENT 13 – AMARILLO #3 M/L – CS 107/108 – ILI TOOL\nRUNS\n\n \n\nIn accordance with its FERC\nGas Tariff and as posted on Natural's Outage Impact Report \n(X25-1166550)\n; \nas part of\nNatural's ongoing pipeline Integrity Management Program, Natural will perform a\nseries of ILI tool runs on its Amarillo #3 mainline between Compressor Station 107\n(CS 107) located in Mills County, Iowa and Compressor Station 108 (CS 108)\nlocated in Warren County, Iowa (Segment 13 of Natural's Amarillo Mainline Zone). \nThe tool runs will require Natural to reduce the operating capacity, thus limiting\nNatural's throughput capacity northbound through CS 108.  Once the data\nfrom the tool runs have been analyzed, any remediation work impacting shippers\nwill be posted.\n\n \n\nThis remediation project is\npursuant to the PHMSA Mega Rule and as set forth in its Tariff, is an Eligible\nProject (ID 4819) included on the Eligible Project List posted on Natural's\ninternet website.  See Eligible Project ID, line name and location\nidentified below (Appendix F- Docket No. RP22-1222 Settlement).  This\noutage is subject to the provisions of Section 5.2 (c) (5) of the General\nTerms and Conditions of Natural's FERC Gas Tariff.\n\n \n\nProject\nID          Line\nName                  \n              Location/Segment\nNo.                      \n           \n\n4819                  AMARILLO\n#3 MAINLINE     SEGMENT 13\n\n \n\nThe scheduling\nconstraint will be upstream of CS 108 at the beginning of Segment 13;\ntherefore, any gas received south of Segment 13 for delivery north of Segment\n13 will be impacted for the duration of the restriction.  Receipts from\nTrailblazer Gage (LOC 902900) are south of CS 107 and will be impacted for the\nduration of the restriction.  Northern Natural Mills (LOC 900203) is located\ndownstream of the Segment 13 constraint location.  For scheduling purposes, the\nAmarillo Pool (LOC 10566) is located south of the constraint. \nAdditionally, firm transportation associated with storage withdrawals or\ninjections may be impacted.\n\n \n\nAs such,\neffective on the gas days indicated below, Natural will schedule Primary Firm and\nSecondary in-path Firm transports to no less than \n44%\n of contract\nMDQ northbound through CS 107.  AOR/ITS and Secondary out-of-path Firm\ntransports \nwill not\n be available for the duration of the restriction.\n\n \n\nTOOL RUN\nDATES\n:\n\n \n\nGas day Friday,\nApril 17, 2026 (Cleaning/ Gauge Tools)\n\nGas day\nTuesday, April 21, 2026 (Cleaning Tool)\n\nGas day Thursday,\nApril 23, 2026 (Cleaning Tool)\n\nGas day Tuesday,\nApril 28, 2026 (Combo Tool)\n\nGas day Thursday,\nApril 30, 2026 (EMAT Tool)\n\nGas day\nFriday, May 1, 2026 (EMAT Tool)\n\n \n\nThe stated\nscheduling percentage is based upon the current level of firm capacity\ncontracted for during this restriction and is subject to change based upon\noperational conditions and Shipper utilization.\n\n \n\nContinue to\nmonitor Natural's interactive website for any updates to the end date and/or\nscheduling percentage during this restriction.  Please contact your\nAccount Director or Scheduling Representative if you have any questions.\n\n.",
+  "information_only": false,
+  "locations": [
+    {
+      "location_index": 0,
+      "notice_id": 46805,
+      "loc_code": "902900",
+      "loc_name": "Trailblazer Gage",
+      "segment": "13",
+      "compressor_station": "107",
+      "zone": "Amarillo Mainline Zone",
+      "system": "Amarillo System"
+    }
+  ],
+  "restrictions": [
+    {
+      "notice_id": 46805,
+      "location_index": 0,
+      "service_type": "PRIMARY_FIRM",
+      "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+      "restriction_value": 44.0,
+      "restriction_unit": "PCT_MDQ",
+      "flow_direction": "NORTHBOUND",
+      "start_datetime": "2026-04-17",
+      "end_datetime": "2026-03-06T09:00:00"
+    },
+    {
+      "notice_id": 46805,
+      "location_index": 0,
+      "service_type": "SECONDARY_INPATH_FIRM",
+      "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+      "restriction_value": 44.0,
+      "restriction_unit": "PCT_MDQ",
+      "flow_direction": "NORTHBOUND",
+      "start_datetime": "2026-04-17",
+      "end_datetime": "2026-03-06T09:00:00"
+    },
+    {
+      "notice_id": 46805,
+      "location_index": 0,
+      "service_type": "AOR_ITS",
+      "restriction_type": "UNAVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "NORTHBOUND",
+      "start_datetime": "2026-04-17",
+      "end_datetime": "2026-03-06T09:00:00"
+    },
+    {
+      "notice_id": 46805,
+      "location_index": 0,
+      "service_type": "SECONDARY_OUTPATH_FIRM",
+      "restriction_type": "UNAVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "NORTHBOUND",
+      "start_datetime": "2026-04-17",
+      "end_datetime": "2026-03-06T09:00:00"
+    }
+  ],
+  "provenance": "llm_extraction"
+}

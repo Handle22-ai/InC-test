@@ -1,0 +1,2848 @@
+{
+  "scope": "bounded initial outbound recommendation decisions; not delivery or complete lifecycle acceptance",
+  "kind": "new synthetic-provider execution; no live model accuracy claim",
+  "contract_sha256": "937cbcd1f07815df58eaa826d04f9ebaed1c913a7e7861abc26033c6d8d6bda1",
+  "provenance": {
+    "timestamp": "2026-09-27T22:37:29.296200+00:00",
+    "integrity": {
+      "inherited_file_count": 97,
+      "changed": [],
+      "unexpected_executables": [],
+      "baseline_commit": "765442763efef85b72b1c0abf25c853177684f3a",
+      "env_ignored": true
+    },
+    "python": "3.14.7",
+    "packages": {
+      "ruff": "0.15.1",
+      "webdriver-manager": "4.0.1",
+      "outcome": "1.3.0.post0",
+      "packaging": "26.3",
+      "trio-websocket": "0.12.2",
+      "types-webencodings": "0.6.0.20260907",
+      "charset-normalizer": "3.5.1",
+      "jiter": "0.17.0",
+      "anthropic": "1.8.0",
+      "pydantic_core": "2.46.5",
+      "types-beautifulsoup4": "4.12.0.20250516",
+      "PySocks": "1.7.1",
+      "docstring_parser": "0.18.0",
+      "mypy": "1.19.1",
+      "pip": "26.2.1",
+      "requests": "2.31.0",
+      "urllib3": "2.8.0",
+      "h11": "0.16.0",
+      "pydantic": "2.13.5",
+      "sniffio": "1.3.1",
+      "PyYAML": "6.0.3",
+      "sortedcontainers": "2.4.0",
+      "types-html5lib": "1.1.11.20260518",
+      "soupsieve": "2.10",
+      "beautifulsoup4": "4.12.2",
+      "certifi": "2026.7.22",
+      "librt": "0.15.0",
+      "annotated-types": "0.8.0",
+      "trio": "0.34.0",
+      "typing-inspection": "0.4.4",
+      "python-dotenv": "1.0.0",
+      "attrs": "26.1.0",
+      "pathspec": "1.1.1",
+      "typing_extensions": "4.16.0",
+      "httpx2": "2.13.1",
+      "wsproto": "1.3.2",
+      "truststore": "0.10.4",
+      "types-PyYAML": "6.0.12.20250915",
+      "httpcore2": "2.13.1",
+      "anyio": "4.15.1",
+      "mypy_extensions": "1.1.0",
+      "idna": "3.20",
+      "selenium": "4.15.2"
+    },
+    "files": {
+      "harness/__init__.py": "29f7829d89d3f18af499f0e01f61bf4f2f1866024a7c45e5cd6fe610ef31601e",
+      "harness/acceptance.py": "1a2f19ef64f5a9e6a58fe2489924da74c5dc93c427e4420b3ed24eab1f01d6c8",
+      "harness/adapter.py": "8896536c27b635518125cfe7395b73e611e853daa04865d524ecc86d56bc698c",
+      "harness/authority.py": "040e7d30e437b0e812d6fd8c6e553b9eae87d638dac2489767b5843a91aba8b5",
+      "harness/candidate.py": "d85651837b54a4f0fc2d50ea3a1847f8fff954b01c652776b6bcd92a53700b83",
+      "harness/captures.py": "313badcfcd7e494561dfdda4107ed7cef9630957221b966f1bbcb17b74ba2517",
+      "harness/commands.py": "cc3e3fed7279ac1a608c2a2ac5e1e74714d0d773e6a52055c21a32cdee0d4a35",
+      "harness/context.py": "e959b7897ecf078edca2370ad6e1cd56235f879332840c0ab31b92d5a49f0c92",
+      "harness/demo.py": "c42e14dbeed72aba69fe982c2cc65d1de8a1199f28eeb12c4aa8f72c97108478",
+      "harness/e2e.py": "e56b38830ebdc4ccf3eba57e77e305e64dac4a7b73a1ed61ac2fb2b87859507b",
+      "harness/evaluator.py": "2750eef6ddc4ac6a235dded4cd82c0fb220e7fd2bbb2c78226045448b5215a4b",
+      "harness/evidence.py": "7cfc7bf4c6f1961dd68d35111af110ad8597c03c7d18f429f91f8a4ea41b5ae6",
+      "harness/gates.py": "785fc3902c3aff9a85a79eee5403a0f01010298298131346d4ce332cbf0fcd85",
+      "harness/live.py": "5346b35bd36f058dfa62d002fac5baf5f06d1f47756a912a7c194f5fa03f2975",
+      "harness/offline.py": "ffa457f502eb8d0f24b35a4185478827bf5890550bfd10857a0b33080ae68087",
+      "harness/policy_evaluation.py": "bfc0a09475558d38c3b1604c04ea837edc151376a5a426eea2598cf2b880eb41",
+      "harness/preflight.py": "00056c824f9b2e4840947a0d535882cd2c17c279ff3a8edb7440d4d06f2fa01c",
+      "harness/regression.py": "38b2010d8f52ab3772eaff67f5fc24f8afb0bd33c76be5b2f4c1088561ffe2eb",
+      "harness/requirements.py": "6ddd29374895dd7902e954f591ea2d7e43548bc1dfc7dfb8f75825d64207d058",
+      "harness/review.py": "94146fe6ff94a963d87a1dca9bcbafe1eb42213cb36ac9eab593ba0803c16af4",
+      "harness/runtime.py": "08c5252fe1edd23c70f120755616b8562168af2b4f16465af2a4a4b87f34bdcd",
+      "harness/signal_evaluation.py": "30cded4bf37a862972921998efb9966de109e26ecc476b77d0e6eb44676ae951",
+      "harness/storage_evaluation.py": "b301a105a1f610967112471d062b4babfcd7487583832978505f07a37e8cc260",
+      "harness/storage_integration.py": "77b93216a5f84df61015e1cd2a2814499d0b7e066420dfd30584b059a3e0ad06",
+      "harness/storage_ports.py": "09eb6ad0dc045b24d745395bc302d7275bb09cb8ea34c3434dc8bef91c52ccd6",
+      "requirements/capture-registry.json": "65f575bd5b496bed3757279c7752d02b87171dbf93511b61502d068ec797a9b3",
+      "requirements/dataset.json": "a51147dffc80b69de840865ea01091eee66ad720e334adee9a983179841810ef",
+      "requirements/oracle-support.json": "237d35251aeed2614370812ec175b543e91a5184daca3e5316af544f07f0fe46",
+      "requirements/requirements.example.yaml": "8c766be56a4e72a904d155e9d8be46f425624e4f5977fcddb9c23b920dd7d569",
+      "requirements/requirements.yaml": "a366c4f5447fe492ed4897683aec8df03d593cfa1364ad834370fda390e68652",
+      "requirements/signal-safety.yaml": "937cbcd1f07815df58eaa826d04f9ebaed1c913a7e7861abc26033c6d8d6bda1",
+      "spec.md": "aa427d5f754ba93b4133599d6c2b9a0aca9b51ea097d8f04992206a7e747381d",
+      "artifacts/dependencies.lock.txt": "9b68538bcdc28bc1f46c28865d1316079f241ab1317f43e529794dc94cfcdcb7",
+      "context/authority-reference.json": "bd5c562bce83de10f85930825771fbbdc934d2db295224bb333d4516a5cea4a3"
+    },
+    "inherited_manifest_sha256": "9587f5ec2dac6100084a2e644cd562cf702c7611cb86a5335f16149bf62f4b82",
+    "model_and_prompt_source_sha256": "68448416555956b04b8591a4e1c09c1226ee619005ef293894567430eb834139"
+  },
+  "application_files": {
+    "rebuilt/store.py": "b34372778ddf2c5de2430284a1f8cd2abd2800d65022014ea21c5cae6fbc624c",
+    "rebuilt/signals.py": "be110a66c237406fec90ad61b853aa758285de242d9574ace2d6eb182adcd021",
+    "rebuilt/__init__.py": "9f772f3410262ea916680aa7294f397b77c25e55ea82c470e22d645c9f2893ab",
+    "rebuilt/snapshot.py": "9de7b01ca0b60deda192eca07a1d2b57561c505396ba661fcfb678a34683fc1d"
+  },
+  "implementations": {
+    "inherited": {
+      "observations": [
+        {
+          "step": "A",
+          "initial_count": 1,
+          "disposition": "LEGACY_BINARY",
+          "reason": "NO_EXPLICIT_REFUSAL_CONTRACT",
+          "extraction_scorable": true,
+          "classification_scorable": true,
+          "classification_presented_as_valid": true,
+          "decision": {
+            "disposition": "LEGACY_BINARY",
+            "reason": "NO_EXPLICIT_REFUSAL_CONTRACT",
+            "candidate_classification": true
+          },
+          "authorization": {
+            "actor": "Synthetic fixture adjudicator (not real approval)",
+            "notice_id": 800001,
+            "source_sha256": "4e3014a157f842266f1b8ebebb90fa4d43ae1354e037c12ae075cef90ede25b8",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "materiality": "MATERIAL",
+            "actionable": true,
+            "approved": true,
+            "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/inherited/A/input.html",
+            "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+          },
+          "parser_evidence": "A/parser.json",
+          "report": "A/signals.json"
+        },
+        {
+          "step": "B",
+          "initial_count": 1,
+          "disposition": "LEGACY_BINARY",
+          "reason": "NO_EXPLICIT_REFUSAL_CONTRACT",
+          "extraction_scorable": true,
+          "classification_scorable": true,
+          "classification_presented_as_valid": true,
+          "decision": {
+            "disposition": "LEGACY_BINARY",
+            "reason": "NO_EXPLICIT_REFUSAL_CONTRACT",
+            "candidate_classification": true
+          },
+          "authorization": {
+            "actor": "Synthetic fixture adjudicator (not real approval)",
+            "notice_id": 800001,
+            "source_sha256": "4e3014a157f842266f1b8ebebb90fa4d43ae1354e037c12ae075cef90ede25b8",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "materiality": "MATERIAL",
+            "actionable": true,
+            "approved": true,
+            "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/inherited/B/input.html",
+            "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+          },
+          "parser_evidence": "B/parser.json",
+          "report": "B/signals.json"
+        },
+        {
+          "step": "C",
+          "initial_count": 1,
+          "disposition": "LEGACY_BINARY",
+          "reason": "NO_EXPLICIT_REFUSAL_CONTRACT",
+          "extraction_scorable": true,
+          "classification_scorable": true,
+          "classification_presented_as_valid": true,
+          "decision": {
+            "disposition": "LEGACY_BINARY",
+            "reason": "NO_EXPLICIT_REFUSAL_CONTRACT",
+            "candidate_classification": true
+          },
+          "authorization": {
+            "actor": "Synthetic fixture adjudicator (not real approval)",
+            "notice_id": 800002,
+            "source_sha256": "a7c7d426273bc476c090c699a7a9894eb49e7d99315fb695101a1c1c8dac0cdc",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "materiality": "MATERIAL",
+            "actionable": true,
+            "approved": true,
+            "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/inherited/C/input.html",
+            "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+          },
+          "parser_evidence": "C/parser.json",
+          "report": "C/signals.json"
+        },
+        {
+          "step": "D",
+          "initial_count": 1,
+          "disposition": "LEGACY_BINARY",
+          "reason": "NO_EXPLICIT_REFUSAL_CONTRACT",
+          "extraction_scorable": true,
+          "classification_scorable": true,
+          "classification_presented_as_valid": true,
+          "decision": {
+            "disposition": "LEGACY_BINARY",
+            "reason": "NO_EXPLICIT_REFUSAL_CONTRACT",
+            "candidate_classification": true
+          },
+          "authorization": {
+            "actor": "Synthetic fixture adjudicator (not real approval)",
+            "notice_id": 800002,
+            "source_sha256": "a7c7d426273bc476c090c699a7a9894eb49e7d99315fb695101a1c1c8dac0cdc",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "materiality": "MATERIAL",
+            "actionable": true,
+            "approved": true,
+            "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/inherited/D/input.html",
+            "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+          },
+          "parser_evidence": "D/parser.json",
+          "report": "D/signals.json"
+        },
+        {
+          "step": "E",
+          "initial_count": 1,
+          "disposition": "LEGACY_BINARY",
+          "reason": "NO_EXPLICIT_REFUSAL_CONTRACT",
+          "extraction_scorable": true,
+          "classification_scorable": true,
+          "classification_presented_as_valid": true,
+          "decision": {
+            "disposition": "LEGACY_BINARY",
+            "reason": "NO_EXPLICIT_REFUSAL_CONTRACT",
+            "candidate_classification": true
+          },
+          "authorization": {
+            "actor": "Synthetic fixture adjudicator (not real approval)",
+            "notice_id": 800003,
+            "source_sha256": "719194dd0d3f0d0f1b7e880aa8257aa03173255cd2d343947dfb8dc7316443c5",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "materiality": "MATERIAL",
+            "actionable": true,
+            "approved": true,
+            "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/inherited/E/input.html",
+            "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+          },
+          "parser_evidence": "E/parser.json",
+          "report": "E/signals.json"
+        },
+        {
+          "step": "F",
+          "initial_count": 1,
+          "disposition": "LEGACY_BINARY",
+          "reason": "NO_EXPLICIT_REFUSAL_CONTRACT",
+          "extraction_scorable": true,
+          "classification_scorable": true,
+          "classification_presented_as_valid": true,
+          "decision": {
+            "disposition": "LEGACY_BINARY",
+            "reason": "NO_EXPLICIT_REFUSAL_CONTRACT",
+            "candidate_classification": true
+          },
+          "authorization": {
+            "actor": "Synthetic fixture adjudicator (not real approval)",
+            "notice_id": 800003,
+            "source_sha256": "719194dd0d3f0d0f1b7e880aa8257aa03173255cd2d343947dfb8dc7316443c5",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "materiality": "MATERIAL",
+            "actionable": true,
+            "approved": true,
+            "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/inherited/F/input.html",
+            "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+          },
+          "parser_evidence": "F/parser.json",
+          "report": "F/signals.json"
+        },
+        {
+          "step": "unusable-impact",
+          "initial_count": 1,
+          "disposition": "LEGACY_BINARY",
+          "reason": "NO_EXPLICIT_REFUSAL_CONTRACT",
+          "extraction_scorable": true,
+          "classification_scorable": false,
+          "classification_presented_as_valid": true,
+          "decision": {
+            "disposition": "LEGACY_BINARY",
+            "reason": "NO_EXPLICIT_REFUSAL_CONTRACT",
+            "candidate_classification": true
+          },
+          "authorization": {
+            "actor": "Synthetic fixture adjudicator (not real approval)",
+            "notice_id": 800001,
+            "source_sha256": "4e3014a157f842266f1b8ebebb90fa4d43ae1354e037c12ae075cef90ede25b8",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "materiality": "MATERIAL",
+            "actionable": true,
+            "approved": true,
+            "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/inherited/unusable-impact/input.html",
+            "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+          },
+          "parser_evidence": "unusable-impact/parser.json",
+          "report": "unusable-impact/signals.json"
+        },
+        {
+          "step": "unavailable-extraction",
+          "initial_count": 1,
+          "disposition": "LEGACY_BINARY",
+          "reason": "NO_EXPLICIT_REFUSAL_CONTRACT",
+          "extraction_scorable": false,
+          "classification_scorable": false,
+          "classification_presented_as_valid": true,
+          "decision": {
+            "disposition": "LEGACY_BINARY",
+            "reason": "NO_EXPLICIT_REFUSAL_CONTRACT",
+            "candidate_classification": true
+          },
+          "authorization": {
+            "actor": "Synthetic fixture adjudicator (not real approval)",
+            "notice_id": 800004,
+            "source_sha256": "3903d28efb3fddc0e679b05c8e05a1ec2af1ccd16a7b67c9f1a7e92bacc08b85",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "materiality": "MATERIAL",
+            "actionable": true,
+            "approved": true,
+            "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/inherited/unavailable-extraction/input.html",
+            "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+          },
+          "parser_evidence": "unavailable-extraction/parser.json",
+          "report": "unavailable-extraction/signals.json"
+        },
+        {
+          "step": "missing-history",
+          "initial_count": 1,
+          "disposition": "LEGACY_BINARY",
+          "reason": "NO_EXPLICIT_REFUSAL_CONTRACT",
+          "extraction_scorable": true,
+          "classification_scorable": true,
+          "classification_presented_as_valid": true,
+          "decision": {
+            "disposition": "LEGACY_BINARY",
+            "reason": "NO_EXPLICIT_REFUSAL_CONTRACT",
+            "candidate_classification": true
+          },
+          "authorization": {
+            "actor": "Synthetic fixture adjudicator (not real approval)",
+            "notice_id": 800005,
+            "source_sha256": "795cb39836c958931def1563029c2697e5373bfe7e47a0a073a7628366417f25",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "materiality": "MATERIAL",
+            "actionable": true,
+            "approved": true,
+            "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/inherited/missing-history/input.html",
+            "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+          },
+          "parser_evidence": "missing-history/parser.json",
+          "report": "missing-history/signals.json"
+        },
+        {
+          "step": "missing-authorization",
+          "initial_count": 1,
+          "disposition": "LEGACY_BINARY",
+          "reason": "NO_EXPLICIT_REFUSAL_CONTRACT",
+          "extraction_scorable": true,
+          "classification_scorable": true,
+          "classification_presented_as_valid": true,
+          "decision": {
+            "disposition": "LEGACY_BINARY",
+            "reason": "NO_EXPLICIT_REFUSAL_CONTRACT",
+            "candidate_classification": true
+          },
+          "authorization": null,
+          "parser_evidence": "missing-authorization/parser.json",
+          "report": "missing-authorization/signals.json"
+        },
+        {
+          "step": "routine",
+          "initial_count": 0,
+          "disposition": "LEGACY_BINARY",
+          "reason": "NO_EXPLICIT_REFUSAL_CONTRACT",
+          "extraction_scorable": true,
+          "classification_scorable": true,
+          "classification_presented_as_valid": true,
+          "decision": {
+            "disposition": "LEGACY_BINARY",
+            "reason": "NO_EXPLICIT_REFUSAL_CONTRACT",
+            "candidate_classification": false
+          },
+          "authorization": {
+            "actor": "Synthetic fixture adjudicator (not real approval)",
+            "notice_id": 800007,
+            "source_sha256": "d61a7fd086cfa88045261a1c4a2c5fcf0fe31e637fc295537f13d4de00db7b6b",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "materiality": "MATERIAL",
+            "actionable": true,
+            "approved": true,
+            "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/inherited/routine/input.html",
+            "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+          },
+          "parser_evidence": "routine/parser.json",
+          "report": "routine/signals.json"
+        }
+      ],
+      "findings": [
+        {
+          "step": "A",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 1,
+          "observed": 1,
+          "status": "PASS"
+        },
+        {
+          "step": "A",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "INITIAL_RECOMMENDATION",
+          "observed": "LEGACY_BINARY",
+          "status": "FAIL"
+        },
+        {
+          "step": "B",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 1,
+          "status": "FAIL"
+        },
+        {
+          "step": "B",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "SUPPRESSED",
+          "observed": "LEGACY_BINARY",
+          "status": "FAIL"
+        },
+        {
+          "step": "C",
+          "requirement": "STATE-004",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 1,
+          "status": "FAIL"
+        },
+        {
+          "step": "C",
+          "requirement": "STATE-004",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "SUPPRESSED",
+          "observed": "LEGACY_BINARY",
+          "status": "FAIL"
+        },
+        {
+          "step": "D",
+          "requirement": "STATE-006",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 1,
+          "status": "FAIL"
+        },
+        {
+          "step": "D",
+          "requirement": "STATE-006",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "SUPPRESSED",
+          "observed": "LEGACY_BINARY",
+          "status": "FAIL"
+        },
+        {
+          "step": "E",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 1,
+          "observed": 1,
+          "status": "PASS"
+        },
+        {
+          "step": "E",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "INITIAL_RECOMMENDATION",
+          "observed": "LEGACY_BINARY",
+          "status": "FAIL"
+        },
+        {
+          "step": "F",
+          "requirement": "STATE-006",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 1,
+          "status": "FAIL"
+        },
+        {
+          "step": "F",
+          "requirement": "STATE-006",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "SUPPRESSED",
+          "observed": "LEGACY_BINARY",
+          "status": "FAIL"
+        },
+        {
+          "step": "unusable-impact",
+          "requirement": "INPUT-002",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 1,
+          "status": "FAIL"
+        },
+        {
+          "step": "unusable-impact",
+          "requirement": "INPUT-002",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "ERROR",
+          "observed": "LEGACY_BINARY",
+          "status": "FAIL"
+        },
+        {
+          "step": "unusable-impact",
+          "requirement": "SAFETY-001",
+          "gate": 2,
+          "relation": "extraction",
+          "expected": true,
+          "observed": true,
+          "status": "PASS"
+        },
+        {
+          "step": "unusable-impact",
+          "requirement": "SAFETY-001",
+          "gate": 2,
+          "relation": "classification",
+          "expected": false,
+          "observed": false,
+          "status": "PASS"
+        },
+        {
+          "step": "unavailable-extraction",
+          "requirement": "INPUT-002",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 1,
+          "status": "FAIL"
+        },
+        {
+          "step": "unavailable-extraction",
+          "requirement": "INPUT-002",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "ERROR",
+          "observed": "LEGACY_BINARY",
+          "status": "FAIL"
+        },
+        {
+          "step": "unavailable-extraction",
+          "requirement": "SAFETY-001",
+          "gate": 2,
+          "relation": "extraction",
+          "expected": false,
+          "observed": false,
+          "status": "PASS"
+        },
+        {
+          "step": "unavailable-extraction",
+          "requirement": "SAFETY-001",
+          "gate": 2,
+          "relation": "classification",
+          "expected": false,
+          "observed": false,
+          "status": "PASS"
+        },
+        {
+          "step": "missing-history",
+          "requirement": "HISTORY-002",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 1,
+          "status": "FAIL"
+        },
+        {
+          "step": "missing-history",
+          "requirement": "HISTORY-002",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "REVIEW_REQUIRED",
+          "observed": "LEGACY_BINARY",
+          "status": "FAIL"
+        },
+        {
+          "step": "missing-history",
+          "requirement": "HISTORY-002",
+          "gate": 1,
+          "relation": "reason",
+          "expected": "MISSING_HISTORY",
+          "observed": "NO_EXPLICIT_REFUSAL_CONTRACT",
+          "status": "FAIL"
+        },
+        {
+          "step": "missing-authorization",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 1,
+          "status": "FAIL"
+        },
+        {
+          "step": "missing-authorization",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "REVIEW_REQUIRED",
+          "observed": "LEGACY_BINARY",
+          "status": "FAIL"
+        },
+        {
+          "step": "missing-authorization",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "reason",
+          "expected": "AUTHORIZATION_REQUIRED",
+          "observed": "NO_EXPLICIT_REFUSAL_CONTRACT",
+          "status": "FAIL"
+        },
+        {
+          "step": "routine",
+          "requirement": "SIGNAL-002",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "routine",
+          "requirement": "SIGNAL-002",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "NO_SIGNAL",
+          "observed": "LEGACY_BINARY",
+          "status": "FAIL"
+        }
+      ],
+      "status": "FAIL"
+    },
+    "candidate": {
+      "observations": [
+        {
+          "step": "A",
+          "initial_count": 1,
+          "disposition": "INITIAL_RECOMMENDATION",
+          "reason": "AUTHORIZED_INITIAL",
+          "extraction_scorable": true,
+          "classification_scorable": true,
+          "classification_presented_as_valid": true,
+          "decision": {
+            "decision_id": "0e83b9c0-b6a5-40f1-a714-b198306e6890",
+            "notice_id": 800001,
+            "source_sha256": "4e3014a157f842266f1b8ebebb90fa4d43ae1354e037c12ae075cef90ede25b8",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "raw_proposal": {
+              "notice": {
+                "notice_id": 800001,
+                "tsp_name": "",
+                "pipeline_code": "NGPL",
+                "is_critical": 0,
+                "notice_type": "CAPACITY CONSTRAINT",
+                "notice_subtype": null,
+                "effective_datetime": "2026-01-14T00:00:00",
+                "end_datetime": null,
+                "post_datetime": "2026-01-14T00:00:00",
+                "response_required": 0,
+                "response_due_date": null,
+                "status": "INITIATE",
+                "prior_notice_id": null,
+                "subject": "Synthetic controlled notice",
+                "body_text": "LOC 8100 Louisiana Zone. Secondary Firm UNAVAILABLE; current operational capacity restriction until further notice.",
+                "outage_report_ref": null,
+                "tariff_section": null,
+                "information_only": 0,
+                "is_signal": 1,
+                "confidence_score": 0.8,
+                "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
+                "source_url": null,
+                "scraped_at": "2026-09-27T22:37:29.382764",
+                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/A/input.html"
+              },
+              "locations": [
+                {
+                  "location_index": 0,
+                  "notice_id": 800001,
+                  "loc_code": "8100",
+                  "loc_name": "Synthetic constraint",
+                  "segment": "24",
+                  "compressor_station": null,
+                  "zone": "Louisiana Zone",
+                  "system": null
+                }
+              ],
+              "restrictions": [
+                {
+                  "notice_id": 800001,
+                  "location_index": 0,
+                  "service_type": "SECONDARY_INPATH_FIRM",
+                  "restriction_type": "UNAVAILABLE",
+                  "restriction_value": null,
+                  "restriction_unit": null,
+                  "flow_direction": "DELIVERY",
+                  "start_datetime": "2026-01-14T00:00:00+00:00",
+                  "end_datetime": "TBD"
+                }
+              ]
+            },
+            "semantic_evidence": {
+              "extraction_usable": true,
+              "helpers": [
+                [
+                  "llm_assess_curtailment_impact",
+                  "large"
+                ]
+              ],
+              "execution_error": null
+            },
+            "candidate_classification": true,
+            "authorization": {
+              "actor": "Synthetic fixture adjudicator (not real approval)",
+              "notice_id": 800001,
+              "source_sha256": "4e3014a157f842266f1b8ebebb90fa4d43ae1354e037c12ae075cef90ede25b8",
+              "reference_time": "2026-01-15T12:00:00+00:00",
+              "materiality": "MATERIAL",
+              "actionable": true,
+              "approved": true,
+              "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/A/input.html",
+              "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+            },
+            "disposition": "INITIAL_RECOMMENDATION",
+            "reason": "AUTHORIZED_INITIAL",
+            "initial_decision": true,
+            "publication_attempted": false,
+            "delivery_acknowledged": null,
+            "event_key": "NGPL:800001"
+          },
+          "authorization": {
+            "actor": "Synthetic fixture adjudicator (not real approval)",
+            "notice_id": 800001,
+            "source_sha256": "4e3014a157f842266f1b8ebebb90fa4d43ae1354e037c12ae075cef90ede25b8",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "materiality": "MATERIAL",
+            "actionable": true,
+            "approved": true,
+            "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/A/input.html",
+            "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+          },
+          "parser_evidence": "A/parser.json",
+          "report": "A/signals.json"
+        },
+        {
+          "step": "B",
+          "initial_count": 0,
+          "disposition": "SUPPRESSED",
+          "reason": "INITIAL_ALREADY_RECORDED",
+          "extraction_scorable": true,
+          "classification_scorable": true,
+          "classification_presented_as_valid": true,
+          "decision": {
+            "decision_id": "5dd7d5f9-3f2e-4f52-b3ac-6e35280438ec",
+            "notice_id": 800001,
+            "source_sha256": "4e3014a157f842266f1b8ebebb90fa4d43ae1354e037c12ae075cef90ede25b8",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "raw_proposal": {
+              "notice": {
+                "notice_id": 800001,
+                "tsp_name": "",
+                "pipeline_code": "NGPL",
+                "is_critical": 0,
+                "notice_type": "CAPACITY CONSTRAINT",
+                "notice_subtype": null,
+                "effective_datetime": "2026-01-14T00:00:00",
+                "end_datetime": null,
+                "post_datetime": "2026-01-14T00:00:00",
+                "response_required": 0,
+                "response_due_date": null,
+                "status": "INITIATE",
+                "prior_notice_id": null,
+                "subject": "Synthetic controlled notice",
+                "body_text": "LOC 8100 Louisiana Zone. Secondary Firm UNAVAILABLE; current operational capacity restriction until further notice.",
+                "outage_report_ref": null,
+                "tariff_section": null,
+                "information_only": 0,
+                "is_signal": 1,
+                "confidence_score": 0.8,
+                "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
+                "source_url": null,
+                "scraped_at": "2026-09-27T22:37:29.386439",
+                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/B/input.html"
+              },
+              "locations": [
+                {
+                  "location_index": 0,
+                  "notice_id": 800001,
+                  "loc_code": "8100",
+                  "loc_name": "Synthetic constraint",
+                  "segment": "24",
+                  "compressor_station": null,
+                  "zone": "Louisiana Zone",
+                  "system": null
+                }
+              ],
+              "restrictions": [
+                {
+                  "notice_id": 800001,
+                  "location_index": 0,
+                  "service_type": "SECONDARY_INPATH_FIRM",
+                  "restriction_type": "UNAVAILABLE",
+                  "restriction_value": null,
+                  "restriction_unit": null,
+                  "flow_direction": "DELIVERY",
+                  "start_datetime": "2026-01-14T00:00:00+00:00",
+                  "end_datetime": "TBD"
+                }
+              ]
+            },
+            "semantic_evidence": {
+              "extraction_usable": true,
+              "helpers": [
+                [
+                  "llm_assess_curtailment_impact",
+                  "large"
+                ]
+              ],
+              "execution_error": null
+            },
+            "candidate_classification": true,
+            "authorization": {
+              "actor": "Synthetic fixture adjudicator (not real approval)",
+              "notice_id": 800001,
+              "source_sha256": "4e3014a157f842266f1b8ebebb90fa4d43ae1354e037c12ae075cef90ede25b8",
+              "reference_time": "2026-01-15T12:00:00+00:00",
+              "materiality": "MATERIAL",
+              "actionable": true,
+              "approved": true,
+              "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/B/input.html",
+              "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+            },
+            "disposition": "SUPPRESSED",
+            "reason": "INITIAL_ALREADY_RECORDED",
+            "initial_decision": false,
+            "publication_attempted": false,
+            "delivery_acknowledged": null,
+            "event_key": "NGPL:800001",
+            "initial_decision_reference": "0e83b9c0-b6a5-40f1-a714-b198306e6890"
+          },
+          "authorization": {
+            "actor": "Synthetic fixture adjudicator (not real approval)",
+            "notice_id": 800001,
+            "source_sha256": "4e3014a157f842266f1b8ebebb90fa4d43ae1354e037c12ae075cef90ede25b8",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "materiality": "MATERIAL",
+            "actionable": true,
+            "approved": true,
+            "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/B/input.html",
+            "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+          },
+          "parser_evidence": "B/parser.json",
+          "report": "B/signals.json"
+        },
+        {
+          "step": "C",
+          "initial_count": 0,
+          "disposition": "SUPPRESSED",
+          "reason": "UNCHANGED_REVISION",
+          "extraction_scorable": true,
+          "classification_scorable": true,
+          "classification_presented_as_valid": true,
+          "decision": {
+            "decision_id": "be53b040-1bca-45b9-950c-65d091f1ee6e",
+            "notice_id": 800002,
+            "source_sha256": "a7c7d426273bc476c090c699a7a9894eb49e7d99315fb695101a1c1c8dac0cdc",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "raw_proposal": {
+              "notice": {
+                "notice_id": 800002,
+                "tsp_name": "",
+                "pipeline_code": "NGPL",
+                "is_critical": 0,
+                "notice_type": "CAPACITY CONSTRAINT",
+                "notice_subtype": null,
+                "effective_datetime": "2026-01-14T00:00:00",
+                "end_datetime": null,
+                "post_datetime": "2026-01-14T00:00:00",
+                "response_required": 0,
+                "response_due_date": null,
+                "status": "SUPERSEDE",
+                "prior_notice_id": 800001,
+                "subject": "Synthetic controlled notice",
+                "body_text": "LOC 8100 Louisiana Zone. Secondary Firm UNAVAILABLE; current operational capacity restriction until further notice.",
+                "outage_report_ref": null,
+                "tariff_section": null,
+                "information_only": 0,
+                "is_signal": 1,
+                "confidence_score": 0.8,
+                "validity_flags": "[\"VC-1: superseded notice \\u2014 LLM assessed as materially different from prior notice 800001; continuing as potential new signal\", \"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
+                "source_url": null,
+                "scraped_at": "2026-09-27T22:37:29.390101",
+                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/C/input.html"
+              },
+              "locations": [
+                {
+                  "location_index": 0,
+                  "notice_id": 800002,
+                  "loc_code": "8100",
+                  "loc_name": "Synthetic constraint",
+                  "segment": "24",
+                  "compressor_station": null,
+                  "zone": "Louisiana Zone",
+                  "system": null
+                }
+              ],
+              "restrictions": [
+                {
+                  "notice_id": 800002,
+                  "location_index": 0,
+                  "service_type": "SECONDARY_INPATH_FIRM",
+                  "restriction_type": "UNAVAILABLE",
+                  "restriction_value": null,
+                  "restriction_unit": null,
+                  "flow_direction": "DELIVERY",
+                  "start_datetime": "2026-01-14T00:00:00+00:00",
+                  "end_datetime": "TBD"
+                }
+              ]
+            },
+            "semantic_evidence": {
+              "extraction_usable": true,
+              "helpers": [
+                [
+                  "llm_is_supersede_material",
+                  true
+                ],
+                [
+                  "llm_assess_curtailment_impact",
+                  "large"
+                ]
+              ],
+              "execution_error": null
+            },
+            "candidate_classification": true,
+            "authorization": {
+              "actor": "Synthetic fixture adjudicator (not real approval)",
+              "notice_id": 800002,
+              "source_sha256": "a7c7d426273bc476c090c699a7a9894eb49e7d99315fb695101a1c1c8dac0cdc",
+              "reference_time": "2026-01-15T12:00:00+00:00",
+              "materiality": "MATERIAL",
+              "actionable": true,
+              "approved": true,
+              "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/C/input.html",
+              "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+            },
+            "disposition": "SUPPRESSED",
+            "reason": "UNCHANGED_REVISION",
+            "initial_decision": false,
+            "publication_attempted": false,
+            "delivery_acknowledged": null,
+            "event_key": "NGPL:800001"
+          },
+          "authorization": {
+            "actor": "Synthetic fixture adjudicator (not real approval)",
+            "notice_id": 800002,
+            "source_sha256": "a7c7d426273bc476c090c699a7a9894eb49e7d99315fb695101a1c1c8dac0cdc",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "materiality": "MATERIAL",
+            "actionable": true,
+            "approved": true,
+            "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/C/input.html",
+            "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+          },
+          "parser_evidence": "C/parser.json",
+          "report": "C/signals.json"
+        },
+        {
+          "step": "D",
+          "initial_count": 0,
+          "disposition": "SUPPRESSED",
+          "reason": "UNCHANGED_REVISION",
+          "extraction_scorable": true,
+          "classification_scorable": true,
+          "classification_presented_as_valid": true,
+          "decision": {
+            "decision_id": "5996ceef-8e82-4212-815b-770e83a48bd6",
+            "notice_id": 800002,
+            "source_sha256": "a7c7d426273bc476c090c699a7a9894eb49e7d99315fb695101a1c1c8dac0cdc",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "raw_proposal": {
+              "notice": {
+                "notice_id": 800002,
+                "tsp_name": "",
+                "pipeline_code": "NGPL",
+                "is_critical": 0,
+                "notice_type": "CAPACITY CONSTRAINT",
+                "notice_subtype": null,
+                "effective_datetime": "2026-01-14T00:00:00",
+                "end_datetime": null,
+                "post_datetime": "2026-01-14T00:00:00",
+                "response_required": 0,
+                "response_due_date": null,
+                "status": "SUPERSEDE",
+                "prior_notice_id": 800001,
+                "subject": "Synthetic controlled notice",
+                "body_text": "LOC 8100 Louisiana Zone. Secondary Firm UNAVAILABLE; current operational capacity restriction until further notice.",
+                "outage_report_ref": null,
+                "tariff_section": null,
+                "information_only": 0,
+                "is_signal": 1,
+                "confidence_score": 0.8,
+                "validity_flags": "[\"VC-1: superseded notice \\u2014 LLM assessed as materially different from prior notice 800001; continuing as potential new signal\", \"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
+                "source_url": null,
+                "scraped_at": "2026-09-27T22:37:29.394094",
+                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/D/input.html"
+              },
+              "locations": [
+                {
+                  "location_index": 0,
+                  "notice_id": 800002,
+                  "loc_code": "8100",
+                  "loc_name": "Synthetic constraint",
+                  "segment": "24",
+                  "compressor_station": null,
+                  "zone": "Louisiana Zone",
+                  "system": null
+                }
+              ],
+              "restrictions": [
+                {
+                  "notice_id": 800002,
+                  "location_index": 0,
+                  "service_type": "SECONDARY_INPATH_FIRM",
+                  "restriction_type": "UNAVAILABLE",
+                  "restriction_value": null,
+                  "restriction_unit": null,
+                  "flow_direction": "DELIVERY",
+                  "start_datetime": "2026-01-14T00:00:00+00:00",
+                  "end_datetime": "TBD"
+                }
+              ]
+            },
+            "semantic_evidence": {
+              "extraction_usable": true,
+              "helpers": [
+                [
+                  "llm_is_supersede_material",
+                  true
+                ],
+                [
+                  "llm_assess_curtailment_impact",
+                  "large"
+                ]
+              ],
+              "execution_error": null
+            },
+            "candidate_classification": true,
+            "authorization": {
+              "actor": "Synthetic fixture adjudicator (not real approval)",
+              "notice_id": 800002,
+              "source_sha256": "a7c7d426273bc476c090c699a7a9894eb49e7d99315fb695101a1c1c8dac0cdc",
+              "reference_time": "2026-01-15T12:00:00+00:00",
+              "materiality": "MATERIAL",
+              "actionable": true,
+              "approved": true,
+              "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/D/input.html",
+              "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+            },
+            "disposition": "SUPPRESSED",
+            "reason": "UNCHANGED_REVISION",
+            "initial_decision": false,
+            "publication_attempted": false,
+            "delivery_acknowledged": null,
+            "event_key": "NGPL:800001"
+          },
+          "authorization": {
+            "actor": "Synthetic fixture adjudicator (not real approval)",
+            "notice_id": 800002,
+            "source_sha256": "a7c7d426273bc476c090c699a7a9894eb49e7d99315fb695101a1c1c8dac0cdc",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "materiality": "MATERIAL",
+            "actionable": true,
+            "approved": true,
+            "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/D/input.html",
+            "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+          },
+          "parser_evidence": "D/parser.json",
+          "report": "D/signals.json"
+        },
+        {
+          "step": "E",
+          "initial_count": 1,
+          "disposition": "INITIAL_RECOMMENDATION",
+          "reason": "AUTHORIZED_INITIAL",
+          "extraction_scorable": true,
+          "classification_scorable": true,
+          "classification_presented_as_valid": true,
+          "decision": {
+            "decision_id": "b0f69f16-7fd7-4ea6-8a65-b9ef24c20a8a",
+            "notice_id": 800003,
+            "source_sha256": "719194dd0d3f0d0f1b7e880aa8257aa03173255cd2d343947dfb8dc7316443c5",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "raw_proposal": {
+              "notice": {
+                "notice_id": 800003,
+                "tsp_name": "",
+                "pipeline_code": "NGPL",
+                "is_critical": 0,
+                "notice_type": "CAPACITY CONSTRAINT",
+                "notice_subtype": null,
+                "effective_datetime": "2026-01-14T00:00:00",
+                "end_datetime": null,
+                "post_datetime": "2026-01-14T00:00:00",
+                "response_required": 0,
+                "response_due_date": null,
+                "status": "INITIATE",
+                "prior_notice_id": null,
+                "subject": "Synthetic controlled notice",
+                "body_text": "LOC 8200 Louisiana Zone. Secondary Firm UNAVAILABLE; current operational capacity restriction until further notice.",
+                "outage_report_ref": null,
+                "tariff_section": null,
+                "information_only": 0,
+                "is_signal": 1,
+                "confidence_score": 0.8,
+                "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
+                "source_url": null,
+                "scraped_at": "2026-09-27T22:37:29.398321",
+                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/E/input.html"
+              },
+              "locations": [
+                {
+                  "location_index": 0,
+                  "notice_id": 800003,
+                  "loc_code": "8200",
+                  "loc_name": "Synthetic constraint",
+                  "segment": "24",
+                  "compressor_station": null,
+                  "zone": "Louisiana Zone",
+                  "system": null
+                }
+              ],
+              "restrictions": [
+                {
+                  "notice_id": 800003,
+                  "location_index": 0,
+                  "service_type": "SECONDARY_INPATH_FIRM",
+                  "restriction_type": "UNAVAILABLE",
+                  "restriction_value": null,
+                  "restriction_unit": null,
+                  "flow_direction": "DELIVERY",
+                  "start_datetime": "2026-01-14T00:00:00+00:00",
+                  "end_datetime": "TBD"
+                }
+              ]
+            },
+            "semantic_evidence": {
+              "extraction_usable": true,
+              "helpers": [
+                [
+                  "llm_assess_curtailment_impact",
+                  "large"
+                ]
+              ],
+              "execution_error": null
+            },
+            "candidate_classification": true,
+            "authorization": {
+              "actor": "Synthetic fixture adjudicator (not real approval)",
+              "notice_id": 800003,
+              "source_sha256": "719194dd0d3f0d0f1b7e880aa8257aa03173255cd2d343947dfb8dc7316443c5",
+              "reference_time": "2026-01-15T12:00:00+00:00",
+              "materiality": "MATERIAL",
+              "actionable": true,
+              "approved": true,
+              "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/E/input.html",
+              "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+            },
+            "disposition": "INITIAL_RECOMMENDATION",
+            "reason": "AUTHORIZED_INITIAL",
+            "initial_decision": true,
+            "publication_attempted": false,
+            "delivery_acknowledged": null,
+            "event_key": "NGPL:800003"
+          },
+          "authorization": {
+            "actor": "Synthetic fixture adjudicator (not real approval)",
+            "notice_id": 800003,
+            "source_sha256": "719194dd0d3f0d0f1b7e880aa8257aa03173255cd2d343947dfb8dc7316443c5",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "materiality": "MATERIAL",
+            "actionable": true,
+            "approved": true,
+            "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/E/input.html",
+            "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+          },
+          "parser_evidence": "E/parser.json",
+          "report": "E/signals.json"
+        },
+        {
+          "step": "F",
+          "initial_count": 0,
+          "disposition": "SUPPRESSED",
+          "reason": "INITIAL_ALREADY_RECORDED",
+          "extraction_scorable": true,
+          "classification_scorable": true,
+          "classification_presented_as_valid": true,
+          "decision": {
+            "decision_id": "9607e67d-6a63-4dd5-ae78-dc62714d3c1b",
+            "notice_id": 800003,
+            "source_sha256": "719194dd0d3f0d0f1b7e880aa8257aa03173255cd2d343947dfb8dc7316443c5",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "raw_proposal": {
+              "notice": {
+                "notice_id": 800003,
+                "tsp_name": "",
+                "pipeline_code": "NGPL",
+                "is_critical": 0,
+                "notice_type": "CAPACITY CONSTRAINT",
+                "notice_subtype": null,
+                "effective_datetime": "2026-01-14T00:00:00",
+                "end_datetime": null,
+                "post_datetime": "2026-01-14T00:00:00",
+                "response_required": 0,
+                "response_due_date": null,
+                "status": "INITIATE",
+                "prior_notice_id": null,
+                "subject": "Synthetic controlled notice",
+                "body_text": "LOC 8200 Louisiana Zone. Secondary Firm UNAVAILABLE; current operational capacity restriction until further notice.",
+                "outage_report_ref": null,
+                "tariff_section": null,
+                "information_only": 0,
+                "is_signal": 1,
+                "confidence_score": 0.8,
+                "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
+                "source_url": null,
+                "scraped_at": "2026-09-27T22:37:29.402487",
+                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/F/input.html"
+              },
+              "locations": [
+                {
+                  "location_index": 0,
+                  "notice_id": 800003,
+                  "loc_code": "8200",
+                  "loc_name": "Synthetic constraint",
+                  "segment": "24",
+                  "compressor_station": null,
+                  "zone": "Louisiana Zone",
+                  "system": null
+                }
+              ],
+              "restrictions": [
+                {
+                  "notice_id": 800003,
+                  "location_index": 0,
+                  "service_type": "SECONDARY_INPATH_FIRM",
+                  "restriction_type": "UNAVAILABLE",
+                  "restriction_value": null,
+                  "restriction_unit": null,
+                  "flow_direction": "DELIVERY",
+                  "start_datetime": "2026-01-14T00:00:00+00:00",
+                  "end_datetime": "TBD"
+                }
+              ]
+            },
+            "semantic_evidence": {
+              "extraction_usable": true,
+              "helpers": [
+                [
+                  "llm_assess_curtailment_impact",
+                  "large"
+                ]
+              ],
+              "execution_error": null
+            },
+            "candidate_classification": true,
+            "authorization": {
+              "actor": "Synthetic fixture adjudicator (not real approval)",
+              "notice_id": 800003,
+              "source_sha256": "719194dd0d3f0d0f1b7e880aa8257aa03173255cd2d343947dfb8dc7316443c5",
+              "reference_time": "2026-01-15T12:00:00+00:00",
+              "materiality": "MATERIAL",
+              "actionable": true,
+              "approved": true,
+              "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/F/input.html",
+              "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+            },
+            "disposition": "SUPPRESSED",
+            "reason": "INITIAL_ALREADY_RECORDED",
+            "initial_decision": false,
+            "publication_attempted": false,
+            "delivery_acknowledged": null,
+            "event_key": "NGPL:800003",
+            "initial_decision_reference": "b0f69f16-7fd7-4ea6-8a65-b9ef24c20a8a"
+          },
+          "authorization": {
+            "actor": "Synthetic fixture adjudicator (not real approval)",
+            "notice_id": 800003,
+            "source_sha256": "719194dd0d3f0d0f1b7e880aa8257aa03173255cd2d343947dfb8dc7316443c5",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "materiality": "MATERIAL",
+            "actionable": true,
+            "approved": true,
+            "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/F/input.html",
+            "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+          },
+          "parser_evidence": "F/parser.json",
+          "report": "F/signals.json"
+        },
+        {
+          "step": "unusable-impact",
+          "initial_count": 0,
+          "disposition": "ERROR",
+          "reason": "IMPACT_UNUSABLE",
+          "extraction_scorable": true,
+          "classification_scorable": false,
+          "classification_presented_as_valid": false,
+          "decision": {
+            "decision_id": "52c2b1f8-02be-4d51-8947-5d2ca45ebaa2",
+            "notice_id": 800001,
+            "source_sha256": "4e3014a157f842266f1b8ebebb90fa4d43ae1354e037c12ae075cef90ede25b8",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "raw_proposal": {
+              "notice": {
+                "notice_id": 800001,
+                "tsp_name": "",
+                "pipeline_code": "NGPL",
+                "is_critical": 0,
+                "notice_type": "CAPACITY CONSTRAINT",
+                "notice_subtype": null,
+                "effective_datetime": "2026-01-14T00:00:00",
+                "end_datetime": null,
+                "post_datetime": "2026-01-14T00:00:00",
+                "response_required": 0,
+                "response_due_date": null,
+                "status": "INITIATE",
+                "prior_notice_id": null,
+                "subject": "Synthetic controlled notice",
+                "body_text": "LOC 8100 Louisiana Zone. Secondary Firm UNAVAILABLE; current operational capacity restriction until further notice.",
+                "outage_report_ref": null,
+                "tariff_section": null,
+                "information_only": 0,
+                "is_signal": 1,
+                "confidence_score": 0.6,
+                "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: small curtailment impact \\u2014 interruptible/lower-priority service only or <10% reduction (+0.10 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
+                "source_url": null,
+                "scraped_at": "2026-09-27T22:37:29.406481",
+                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/unusable-impact/input.html"
+              },
+              "locations": [
+                {
+                  "location_index": 0,
+                  "notice_id": 800001,
+                  "loc_code": "8100",
+                  "loc_name": "Synthetic constraint",
+                  "segment": "24",
+                  "compressor_station": null,
+                  "zone": "Louisiana Zone",
+                  "system": null
+                }
+              ],
+              "restrictions": [
+                {
+                  "notice_id": 800001,
+                  "location_index": 0,
+                  "service_type": "SECONDARY_INPATH_FIRM",
+                  "restriction_type": "UNAVAILABLE",
+                  "restriction_value": null,
+                  "restriction_unit": null,
+                  "flow_direction": "DELIVERY",
+                  "start_datetime": "2026-01-14T00:00:00+00:00",
+                  "end_datetime": "TBD"
+                }
+              ]
+            },
+            "semantic_evidence": {
+              "extraction_usable": true,
+              "helpers": [
+                [
+                  "llm_assess_curtailment_impact",
+                  null
+                ]
+              ],
+              "execution_error": "MODEL_FAILURE"
+            },
+            "candidate_classification": null,
+            "authorization": {
+              "actor": "Synthetic fixture adjudicator (not real approval)",
+              "notice_id": 800001,
+              "source_sha256": "4e3014a157f842266f1b8ebebb90fa4d43ae1354e037c12ae075cef90ede25b8",
+              "reference_time": "2026-01-15T12:00:00+00:00",
+              "materiality": "MATERIAL",
+              "actionable": true,
+              "approved": true,
+              "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/unusable-impact/input.html",
+              "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+            },
+            "disposition": "ERROR",
+            "reason": "IMPACT_UNUSABLE",
+            "initial_decision": false,
+            "publication_attempted": false,
+            "delivery_acknowledged": null
+          },
+          "authorization": {
+            "actor": "Synthetic fixture adjudicator (not real approval)",
+            "notice_id": 800001,
+            "source_sha256": "4e3014a157f842266f1b8ebebb90fa4d43ae1354e037c12ae075cef90ede25b8",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "materiality": "MATERIAL",
+            "actionable": true,
+            "approved": true,
+            "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/unusable-impact/input.html",
+            "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+          },
+          "parser_evidence": "unusable-impact/parser.json",
+          "report": "unusable-impact/signals.json"
+        },
+        {
+          "step": "unavailable-extraction",
+          "initial_count": 0,
+          "disposition": "ERROR",
+          "reason": "EXTRACTION_UNAVAILABLE",
+          "extraction_scorable": false,
+          "classification_scorable": false,
+          "classification_presented_as_valid": false,
+          "decision": {
+            "decision_id": "2a34cd10-5572-4f42-bfec-eedde4ed917d",
+            "notice_id": 800004,
+            "source_sha256": "3903d28efb3fddc0e679b05c8e05a1ec2af1ccd16a7b67c9f1a7e92bacc08b85",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "raw_proposal": {
+              "notice": {
+                "notice_id": 800004,
+                "tsp_name": "",
+                "pipeline_code": "NGPL",
+                "is_critical": 0,
+                "notice_type": "CAPACITY CONSTRAINT",
+                "notice_subtype": null,
+                "effective_datetime": "2026-01-14T00:00:00",
+                "end_datetime": null,
+                "post_datetime": "2026-01-14T00:00:00",
+                "response_required": 0,
+                "response_due_date": null,
+                "status": "INITIATE",
+                "prior_notice_id": null,
+                "subject": "Synthetic controlled notice",
+                "body_text": "LOC 8100 Louisiana Zone. Secondary Firm UNAVAILABLE; current operational capacity restriction until further notice.",
+                "outage_report_ref": null,
+                "tariff_section": null,
+                "information_only": 0,
+                "is_signal": 1,
+                "confidence_score": 0.8,
+                "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"regex_fallback\"]",
+                "source_url": null,
+                "scraped_at": "2026-09-27T22:37:29.408489",
+                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/unavailable-extraction/input.html"
+              },
+              "locations": [
+                {
+                  "notice_id": 800004,
+                  "loc_code": "LOC 8100",
+                  "loc_name": "Louisiana Zone. Secondary Firm UNAVAILABLE",
+                  "segment": null,
+                  "compressor_station": null,
+                  "zone": null
+                }
+              ],
+              "restrictions": [
+                {
+                  "notice_id": 800004,
+                  "service_type": "ALL",
+                  "restriction_type": "UNAVAILABLE",
+                  "restriction_value": null,
+                  "restriction_unit": null,
+                  "flow_direction": "ALL",
+                  "start_datetime": "2026-01-14T00:00:00",
+                  "end_datetime": null
+                }
+              ]
+            },
+            "semantic_evidence": {
+              "extraction_usable": false,
+              "helpers": [
+                [
+                  "llm_assess_curtailment_impact",
+                  "large"
+                ]
+              ],
+              "execution_error": "MODEL_FAILURE"
+            },
+            "candidate_classification": null,
+            "authorization": {
+              "actor": "Synthetic fixture adjudicator (not real approval)",
+              "notice_id": 800004,
+              "source_sha256": "3903d28efb3fddc0e679b05c8e05a1ec2af1ccd16a7b67c9f1a7e92bacc08b85",
+              "reference_time": "2026-01-15T12:00:00+00:00",
+              "materiality": "MATERIAL",
+              "actionable": true,
+              "approved": true,
+              "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/unavailable-extraction/input.html",
+              "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+            },
+            "disposition": "ERROR",
+            "reason": "EXTRACTION_UNAVAILABLE",
+            "initial_decision": false,
+            "publication_attempted": false,
+            "delivery_acknowledged": null
+          },
+          "authorization": {
+            "actor": "Synthetic fixture adjudicator (not real approval)",
+            "notice_id": 800004,
+            "source_sha256": "3903d28efb3fddc0e679b05c8e05a1ec2af1ccd16a7b67c9f1a7e92bacc08b85",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "materiality": "MATERIAL",
+            "actionable": true,
+            "approved": true,
+            "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/unavailable-extraction/input.html",
+            "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+          },
+          "parser_evidence": "unavailable-extraction/parser.json",
+          "report": "unavailable-extraction/signals.json"
+        },
+        {
+          "step": "missing-history",
+          "initial_count": 0,
+          "disposition": "REVIEW_REQUIRED",
+          "reason": "MISSING_HISTORY",
+          "extraction_scorable": true,
+          "classification_scorable": true,
+          "classification_presented_as_valid": true,
+          "decision": {
+            "decision_id": "53370663-2502-41c0-8b6a-99037a2664c1",
+            "notice_id": 800005,
+            "source_sha256": "795cb39836c958931def1563029c2697e5373bfe7e47a0a073a7628366417f25",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "raw_proposal": {
+              "notice": {
+                "notice_id": 800005,
+                "tsp_name": "",
+                "pipeline_code": "NGPL",
+                "is_critical": 0,
+                "notice_type": "CAPACITY CONSTRAINT",
+                "notice_subtype": null,
+                "effective_datetime": "2026-01-14T00:00:00",
+                "end_datetime": null,
+                "post_datetime": "2026-01-14T00:00:00",
+                "response_required": 0,
+                "response_due_date": null,
+                "status": "SUPERSEDE",
+                "prior_notice_id": 899999,
+                "subject": "Synthetic controlled notice",
+                "body_text": "LOC 8100 Louisiana Zone. Secondary Firm UNAVAILABLE; current operational capacity restriction until further notice.",
+                "outage_report_ref": null,
+                "tariff_section": null,
+                "information_only": 0,
+                "is_signal": 1,
+                "confidence_score": 0.8,
+                "validity_flags": "[\"VC-1: superseded notice \\u2014 prior notice not in DB, cannot compare; continuing validation\", \"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
+                "source_url": null,
+                "scraped_at": "2026-09-27T22:37:29.410349",
+                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/missing-history/input.html"
+              },
+              "locations": [
+                {
+                  "location_index": 0,
+                  "notice_id": 800005,
+                  "loc_code": "8100",
+                  "loc_name": "Synthetic constraint",
+                  "segment": "24",
+                  "compressor_station": null,
+                  "zone": "Louisiana Zone",
+                  "system": null
+                }
+              ],
+              "restrictions": [
+                {
+                  "notice_id": 800005,
+                  "location_index": 0,
+                  "service_type": "SECONDARY_INPATH_FIRM",
+                  "restriction_type": "UNAVAILABLE",
+                  "restriction_value": null,
+                  "restriction_unit": null,
+                  "flow_direction": "DELIVERY",
+                  "start_datetime": "2026-01-14T00:00:00+00:00",
+                  "end_datetime": "TBD"
+                }
+              ]
+            },
+            "semantic_evidence": {
+              "extraction_usable": true,
+              "helpers": [
+                [
+                  "llm_assess_curtailment_impact",
+                  "large"
+                ]
+              ],
+              "execution_error": null
+            },
+            "candidate_classification": true,
+            "authorization": {
+              "actor": "Synthetic fixture adjudicator (not real approval)",
+              "notice_id": 800005,
+              "source_sha256": "795cb39836c958931def1563029c2697e5373bfe7e47a0a073a7628366417f25",
+              "reference_time": "2026-01-15T12:00:00+00:00",
+              "materiality": "MATERIAL",
+              "actionable": true,
+              "approved": true,
+              "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/missing-history/input.html",
+              "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+            },
+            "disposition": "REVIEW_REQUIRED",
+            "reason": "MISSING_HISTORY",
+            "initial_decision": false,
+            "publication_attempted": false,
+            "delivery_acknowledged": null,
+            "missing_prior_id": 899999
+          },
+          "authorization": {
+            "actor": "Synthetic fixture adjudicator (not real approval)",
+            "notice_id": 800005,
+            "source_sha256": "795cb39836c958931def1563029c2697e5373bfe7e47a0a073a7628366417f25",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "materiality": "MATERIAL",
+            "actionable": true,
+            "approved": true,
+            "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/missing-history/input.html",
+            "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+          },
+          "parser_evidence": "missing-history/parser.json",
+          "report": "missing-history/signals.json"
+        },
+        {
+          "step": "missing-authorization",
+          "initial_count": 0,
+          "disposition": "REVIEW_REQUIRED",
+          "reason": "AUTHORIZATION_REQUIRED",
+          "extraction_scorable": true,
+          "classification_scorable": true,
+          "classification_presented_as_valid": true,
+          "decision": {
+            "decision_id": "c2d38741-de46-4ead-9746-a2a839fbc982",
+            "notice_id": 800006,
+            "source_sha256": "341cf33a9399bc48a6693fa3a0991dc5b947bd86cb27dbc1905533a4eaa3a894",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "raw_proposal": {
+              "notice": {
+                "notice_id": 800006,
+                "tsp_name": "",
+                "pipeline_code": "NGPL",
+                "is_critical": 0,
+                "notice_type": "CAPACITY CONSTRAINT",
+                "notice_subtype": null,
+                "effective_datetime": "2026-01-14T00:00:00",
+                "end_datetime": null,
+                "post_datetime": "2026-01-14T00:00:00",
+                "response_required": 0,
+                "response_due_date": null,
+                "status": "INITIATE",
+                "prior_notice_id": null,
+                "subject": "Synthetic controlled notice",
+                "body_text": "LOC 8100 Louisiana Zone. Secondary Firm UNAVAILABLE; current operational capacity restriction until further notice.",
+                "outage_report_ref": null,
+                "tariff_section": null,
+                "information_only": 0,
+                "is_signal": 1,
+                "confidence_score": 0.8,
+                "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
+                "source_url": null,
+                "scraped_at": "2026-09-27T22:37:29.413413",
+                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/missing-authorization/input.html"
+              },
+              "locations": [
+                {
+                  "location_index": 0,
+                  "notice_id": 800006,
+                  "loc_code": "8100",
+                  "loc_name": "Synthetic constraint",
+                  "segment": "24",
+                  "compressor_station": null,
+                  "zone": "Louisiana Zone",
+                  "system": null
+                }
+              ],
+              "restrictions": [
+                {
+                  "notice_id": 800006,
+                  "location_index": 0,
+                  "service_type": "SECONDARY_INPATH_FIRM",
+                  "restriction_type": "UNAVAILABLE",
+                  "restriction_value": null,
+                  "restriction_unit": null,
+                  "flow_direction": "DELIVERY",
+                  "start_datetime": "2026-01-14T00:00:00+00:00",
+                  "end_datetime": "TBD"
+                }
+              ]
+            },
+            "semantic_evidence": {
+              "extraction_usable": true,
+              "helpers": [
+                [
+                  "llm_assess_curtailment_impact",
+                  "large"
+                ]
+              ],
+              "execution_error": null
+            },
+            "candidate_classification": true,
+            "authorization": null,
+            "disposition": "REVIEW_REQUIRED",
+            "reason": "AUTHORIZATION_REQUIRED",
+            "initial_decision": false,
+            "publication_attempted": false,
+            "delivery_acknowledged": null,
+            "event_key": "NGPL:800006"
+          },
+          "authorization": null,
+          "parser_evidence": "missing-authorization/parser.json",
+          "report": "missing-authorization/signals.json"
+        },
+        {
+          "step": "routine",
+          "initial_count": 0,
+          "disposition": "NO_SIGNAL",
+          "reason": "NEGATIVE_PROPOSAL",
+          "extraction_scorable": true,
+          "classification_scorable": true,
+          "classification_presented_as_valid": true,
+          "decision": {
+            "decision_id": "20202534-4327-432b-b2db-62b96aea2672",
+            "notice_id": 800007,
+            "source_sha256": "d61a7fd086cfa88045261a1c4a2c5fcf0fe31e637fc295537f13d4de00db7b6b",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "raw_proposal": {
+              "notice": {
+                "notice_id": 800007,
+                "tsp_name": "",
+                "pipeline_code": "NGPL",
+                "is_critical": 0,
+                "notice_type": "CAPACITY CONSTRAINT",
+                "notice_subtype": null,
+                "effective_datetime": "2026-01-14T00:00:00",
+                "end_datetime": null,
+                "post_datetime": "2026-01-14T00:00:00",
+                "response_required": 0,
+                "response_due_date": null,
+                "status": "INITIATE",
+                "prior_notice_id": null,
+                "subject": "Synthetic controlled notice",
+                "body_text": "Administrative project list update. No operational restriction or flow change.",
+                "outage_report_ref": null,
+                "tariff_section": null,
+                "information_only": 1,
+                "is_signal": 0,
+                "confidence_score": 0.0,
+                "validity_flags": "[\"VC-1: information-only notice \\u2014 Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction\", \"llm_extraction\"]",
+                "source_url": null,
+                "scraped_at": "2026-09-27T22:37:29.417524",
+                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/routine/input.html"
+              },
+              "locations": [],
+              "restrictions": []
+            },
+            "semantic_evidence": {
+              "extraction_usable": true,
+              "helpers": [],
+              "execution_error": null
+            },
+            "candidate_classification": false,
+            "authorization": {
+              "actor": "Synthetic fixture adjudicator (not real approval)",
+              "notice_id": 800007,
+              "source_sha256": "d61a7fd086cfa88045261a1c4a2c5fcf0fe31e637fc295537f13d4de00db7b6b",
+              "reference_time": "2026-01-15T12:00:00+00:00",
+              "materiality": "MATERIAL",
+              "actionable": true,
+              "approved": true,
+              "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/routine/input.html",
+              "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+            },
+            "disposition": "NO_SIGNAL",
+            "reason": "NEGATIVE_PROPOSAL",
+            "initial_decision": false,
+            "publication_attempted": false,
+            "delivery_acknowledged": null,
+            "event_key": "NGPL:800007"
+          },
+          "authorization": {
+            "actor": "Synthetic fixture adjudicator (not real approval)",
+            "notice_id": 800007,
+            "source_sha256": "d61a7fd086cfa88045261a1c4a2c5fcf0fe31e637fc295537f13d4de00db7b6b",
+            "reference_time": "2026-01-15T12:00:00+00:00",
+            "materiality": "MATERIAL",
+            "actionable": true,
+            "approved": true,
+            "source_evidence": "evidence/correction/20260927T220352.636265Z/final-checks/signals-release/candidate/routine/input.html",
+            "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
+          },
+          "parser_evidence": "routine/parser.json",
+          "report": "routine/signals.json"
+        }
+      ],
+      "findings": [
+        {
+          "step": "A",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 1,
+          "observed": 1,
+          "status": "PASS"
+        },
+        {
+          "step": "A",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "INITIAL_RECOMMENDATION",
+          "observed": "INITIAL_RECOMMENDATION",
+          "status": "PASS"
+        },
+        {
+          "step": "B",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "B",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "SUPPRESSED",
+          "observed": "SUPPRESSED",
+          "status": "PASS"
+        },
+        {
+          "step": "C",
+          "requirement": "STATE-004",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "C",
+          "requirement": "STATE-004",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "SUPPRESSED",
+          "observed": "SUPPRESSED",
+          "status": "PASS"
+        },
+        {
+          "step": "D",
+          "requirement": "STATE-006",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "D",
+          "requirement": "STATE-006",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "SUPPRESSED",
+          "observed": "SUPPRESSED",
+          "status": "PASS"
+        },
+        {
+          "step": "E",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 1,
+          "observed": 1,
+          "status": "PASS"
+        },
+        {
+          "step": "E",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "INITIAL_RECOMMENDATION",
+          "observed": "INITIAL_RECOMMENDATION",
+          "status": "PASS"
+        },
+        {
+          "step": "F",
+          "requirement": "STATE-006",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "F",
+          "requirement": "STATE-006",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "SUPPRESSED",
+          "observed": "SUPPRESSED",
+          "status": "PASS"
+        },
+        {
+          "step": "unusable-impact",
+          "requirement": "INPUT-002",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "unusable-impact",
+          "requirement": "INPUT-002",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "ERROR",
+          "observed": "ERROR",
+          "status": "PASS"
+        },
+        {
+          "step": "unusable-impact",
+          "requirement": "SAFETY-001",
+          "gate": 2,
+          "relation": "extraction",
+          "expected": true,
+          "observed": true,
+          "status": "PASS"
+        },
+        {
+          "step": "unusable-impact",
+          "requirement": "SAFETY-001",
+          "gate": 2,
+          "relation": "classification",
+          "expected": false,
+          "observed": false,
+          "status": "PASS"
+        },
+        {
+          "step": "unavailable-extraction",
+          "requirement": "INPUT-002",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "unavailable-extraction",
+          "requirement": "INPUT-002",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "ERROR",
+          "observed": "ERROR",
+          "status": "PASS"
+        },
+        {
+          "step": "unavailable-extraction",
+          "requirement": "SAFETY-001",
+          "gate": 2,
+          "relation": "extraction",
+          "expected": false,
+          "observed": false,
+          "status": "PASS"
+        },
+        {
+          "step": "unavailable-extraction",
+          "requirement": "SAFETY-001",
+          "gate": 2,
+          "relation": "classification",
+          "expected": false,
+          "observed": false,
+          "status": "PASS"
+        },
+        {
+          "step": "missing-history",
+          "requirement": "HISTORY-002",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "missing-history",
+          "requirement": "HISTORY-002",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "REVIEW_REQUIRED",
+          "observed": "REVIEW_REQUIRED",
+          "status": "PASS"
+        },
+        {
+          "step": "missing-history",
+          "requirement": "HISTORY-002",
+          "gate": 1,
+          "relation": "reason",
+          "expected": "MISSING_HISTORY",
+          "observed": "MISSING_HISTORY",
+          "status": "PASS"
+        },
+        {
+          "step": "missing-authorization",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "missing-authorization",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "REVIEW_REQUIRED",
+          "observed": "REVIEW_REQUIRED",
+          "status": "PASS"
+        },
+        {
+          "step": "missing-authorization",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "reason",
+          "expected": "AUTHORIZATION_REQUIRED",
+          "observed": "AUTHORIZATION_REQUIRED",
+          "status": "PASS"
+        },
+        {
+          "step": "routine",
+          "requirement": "SIGNAL-002",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "routine",
+          "requirement": "SIGNAL-002",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "NO_SIGNAL",
+          "observed": "NO_SIGNAL",
+          "status": "PASS"
+        }
+      ],
+      "status": "PASS"
+    }
+  },
+  "fault_controls": {
+    "duplicate": {
+      "rejected": true,
+      "findings": [
+        {
+          "step": "A",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 1,
+          "observed": 1,
+          "status": "PASS"
+        },
+        {
+          "step": "A",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "INITIAL_RECOMMENDATION",
+          "observed": "INITIAL_RECOMMENDATION",
+          "status": "PASS"
+        },
+        {
+          "step": "B",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 1,
+          "status": "FAIL"
+        },
+        {
+          "step": "B",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "SUPPRESSED",
+          "observed": "SUPPRESSED",
+          "status": "PASS"
+        },
+        {
+          "step": "C",
+          "requirement": "STATE-004",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 1,
+          "status": "FAIL"
+        },
+        {
+          "step": "C",
+          "requirement": "STATE-004",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "SUPPRESSED",
+          "observed": "SUPPRESSED",
+          "status": "PASS"
+        },
+        {
+          "step": "D",
+          "requirement": "STATE-006",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 1,
+          "status": "FAIL"
+        },
+        {
+          "step": "D",
+          "requirement": "STATE-006",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "SUPPRESSED",
+          "observed": "SUPPRESSED",
+          "status": "PASS"
+        },
+        {
+          "step": "E",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 1,
+          "observed": 1,
+          "status": "PASS"
+        },
+        {
+          "step": "E",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "INITIAL_RECOMMENDATION",
+          "observed": "INITIAL_RECOMMENDATION",
+          "status": "PASS"
+        },
+        {
+          "step": "F",
+          "requirement": "STATE-006",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 1,
+          "status": "FAIL"
+        },
+        {
+          "step": "F",
+          "requirement": "STATE-006",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "SUPPRESSED",
+          "observed": "SUPPRESSED",
+          "status": "PASS"
+        },
+        {
+          "step": "unusable-impact",
+          "requirement": "INPUT-002",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "unusable-impact",
+          "requirement": "INPUT-002",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "ERROR",
+          "observed": "ERROR",
+          "status": "PASS"
+        },
+        {
+          "step": "unusable-impact",
+          "requirement": "SAFETY-001",
+          "gate": 2,
+          "relation": "extraction",
+          "expected": true,
+          "observed": true,
+          "status": "PASS"
+        },
+        {
+          "step": "unusable-impact",
+          "requirement": "SAFETY-001",
+          "gate": 2,
+          "relation": "classification",
+          "expected": false,
+          "observed": false,
+          "status": "PASS"
+        },
+        {
+          "step": "unavailable-extraction",
+          "requirement": "INPUT-002",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "unavailable-extraction",
+          "requirement": "INPUT-002",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "ERROR",
+          "observed": "ERROR",
+          "status": "PASS"
+        },
+        {
+          "step": "unavailable-extraction",
+          "requirement": "SAFETY-001",
+          "gate": 2,
+          "relation": "extraction",
+          "expected": false,
+          "observed": false,
+          "status": "PASS"
+        },
+        {
+          "step": "unavailable-extraction",
+          "requirement": "SAFETY-001",
+          "gate": 2,
+          "relation": "classification",
+          "expected": false,
+          "observed": false,
+          "status": "PASS"
+        },
+        {
+          "step": "missing-history",
+          "requirement": "HISTORY-002",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 1,
+          "status": "FAIL"
+        },
+        {
+          "step": "missing-history",
+          "requirement": "HISTORY-002",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "REVIEW_REQUIRED",
+          "observed": "REVIEW_REQUIRED",
+          "status": "PASS"
+        },
+        {
+          "step": "missing-history",
+          "requirement": "HISTORY-002",
+          "gate": 1,
+          "relation": "reason",
+          "expected": "MISSING_HISTORY",
+          "observed": "MISSING_HISTORY",
+          "status": "PASS"
+        },
+        {
+          "step": "missing-authorization",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 1,
+          "status": "FAIL"
+        },
+        {
+          "step": "missing-authorization",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "REVIEW_REQUIRED",
+          "observed": "REVIEW_REQUIRED",
+          "status": "PASS"
+        },
+        {
+          "step": "missing-authorization",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "reason",
+          "expected": "AUTHORIZATION_REQUIRED",
+          "observed": "AUTHORIZATION_REQUIRED",
+          "status": "PASS"
+        },
+        {
+          "step": "routine",
+          "requirement": "SIGNAL-002",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "routine",
+          "requirement": "SIGNAL-002",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "NO_SIGNAL",
+          "observed": "NO_SIGNAL",
+          "status": "PASS"
+        }
+      ]
+    },
+    "never": {
+      "rejected": true,
+      "findings": [
+        {
+          "step": "A",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 1,
+          "observed": 0,
+          "status": "FAIL"
+        },
+        {
+          "step": "A",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "INITIAL_RECOMMENDATION",
+          "observed": "INITIAL_RECOMMENDATION",
+          "status": "PASS"
+        },
+        {
+          "step": "B",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "B",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "SUPPRESSED",
+          "observed": "SUPPRESSED",
+          "status": "PASS"
+        },
+        {
+          "step": "C",
+          "requirement": "STATE-004",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "C",
+          "requirement": "STATE-004",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "SUPPRESSED",
+          "observed": "SUPPRESSED",
+          "status": "PASS"
+        },
+        {
+          "step": "D",
+          "requirement": "STATE-006",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "D",
+          "requirement": "STATE-006",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "SUPPRESSED",
+          "observed": "SUPPRESSED",
+          "status": "PASS"
+        },
+        {
+          "step": "E",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 1,
+          "observed": 0,
+          "status": "FAIL"
+        },
+        {
+          "step": "E",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "INITIAL_RECOMMENDATION",
+          "observed": "INITIAL_RECOMMENDATION",
+          "status": "PASS"
+        },
+        {
+          "step": "F",
+          "requirement": "STATE-006",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "F",
+          "requirement": "STATE-006",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "SUPPRESSED",
+          "observed": "SUPPRESSED",
+          "status": "PASS"
+        },
+        {
+          "step": "unusable-impact",
+          "requirement": "INPUT-002",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "unusable-impact",
+          "requirement": "INPUT-002",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "ERROR",
+          "observed": "ERROR",
+          "status": "PASS"
+        },
+        {
+          "step": "unusable-impact",
+          "requirement": "SAFETY-001",
+          "gate": 2,
+          "relation": "extraction",
+          "expected": true,
+          "observed": true,
+          "status": "PASS"
+        },
+        {
+          "step": "unusable-impact",
+          "requirement": "SAFETY-001",
+          "gate": 2,
+          "relation": "classification",
+          "expected": false,
+          "observed": false,
+          "status": "PASS"
+        },
+        {
+          "step": "unavailable-extraction",
+          "requirement": "INPUT-002",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "unavailable-extraction",
+          "requirement": "INPUT-002",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "ERROR",
+          "observed": "ERROR",
+          "status": "PASS"
+        },
+        {
+          "step": "unavailable-extraction",
+          "requirement": "SAFETY-001",
+          "gate": 2,
+          "relation": "extraction",
+          "expected": false,
+          "observed": false,
+          "status": "PASS"
+        },
+        {
+          "step": "unavailable-extraction",
+          "requirement": "SAFETY-001",
+          "gate": 2,
+          "relation": "classification",
+          "expected": false,
+          "observed": false,
+          "status": "PASS"
+        },
+        {
+          "step": "missing-history",
+          "requirement": "HISTORY-002",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "missing-history",
+          "requirement": "HISTORY-002",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "REVIEW_REQUIRED",
+          "observed": "REVIEW_REQUIRED",
+          "status": "PASS"
+        },
+        {
+          "step": "missing-history",
+          "requirement": "HISTORY-002",
+          "gate": 1,
+          "relation": "reason",
+          "expected": "MISSING_HISTORY",
+          "observed": "MISSING_HISTORY",
+          "status": "PASS"
+        },
+        {
+          "step": "missing-authorization",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "missing-authorization",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "REVIEW_REQUIRED",
+          "observed": "REVIEW_REQUIRED",
+          "status": "PASS"
+        },
+        {
+          "step": "missing-authorization",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "reason",
+          "expected": "AUTHORIZATION_REQUIRED",
+          "observed": "AUTHORIZATION_REQUIRED",
+          "status": "PASS"
+        },
+        {
+          "step": "routine",
+          "requirement": "SIGNAL-002",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "routine",
+          "requirement": "SIGNAL-002",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "NO_SIGNAL",
+          "observed": "NO_SIGNAL",
+          "status": "PASS"
+        }
+      ]
+    },
+    "memory": {
+      "rejected": true,
+      "findings": [
+        {
+          "step": "A",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 1,
+          "observed": 1,
+          "status": "PASS"
+        },
+        {
+          "step": "A",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "INITIAL_RECOMMENDATION",
+          "observed": "INITIAL_RECOMMENDATION",
+          "status": "PASS"
+        },
+        {
+          "step": "B",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "B",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "SUPPRESSED",
+          "observed": "SUPPRESSED",
+          "status": "PASS"
+        },
+        {
+          "step": "C",
+          "requirement": "STATE-004",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "C",
+          "requirement": "STATE-004",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "SUPPRESSED",
+          "observed": "SUPPRESSED",
+          "status": "PASS"
+        },
+        {
+          "step": "D",
+          "requirement": "STATE-006",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "D",
+          "requirement": "STATE-006",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "SUPPRESSED",
+          "observed": "SUPPRESSED",
+          "status": "PASS"
+        },
+        {
+          "step": "E",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 1,
+          "observed": 1,
+          "status": "PASS"
+        },
+        {
+          "step": "E",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "INITIAL_RECOMMENDATION",
+          "observed": "INITIAL_RECOMMENDATION",
+          "status": "PASS"
+        },
+        {
+          "step": "F",
+          "requirement": "STATE-006",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 1,
+          "status": "FAIL"
+        },
+        {
+          "step": "F",
+          "requirement": "STATE-006",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "SUPPRESSED",
+          "observed": "INITIAL_RECOMMENDATION",
+          "status": "FAIL"
+        },
+        {
+          "step": "unusable-impact",
+          "requirement": "INPUT-002",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "unusable-impact",
+          "requirement": "INPUT-002",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "ERROR",
+          "observed": "ERROR",
+          "status": "PASS"
+        },
+        {
+          "step": "unusable-impact",
+          "requirement": "SAFETY-001",
+          "gate": 2,
+          "relation": "extraction",
+          "expected": true,
+          "observed": true,
+          "status": "PASS"
+        },
+        {
+          "step": "unusable-impact",
+          "requirement": "SAFETY-001",
+          "gate": 2,
+          "relation": "classification",
+          "expected": false,
+          "observed": false,
+          "status": "PASS"
+        },
+        {
+          "step": "unavailable-extraction",
+          "requirement": "INPUT-002",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "unavailable-extraction",
+          "requirement": "INPUT-002",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "ERROR",
+          "observed": "ERROR",
+          "status": "PASS"
+        },
+        {
+          "step": "unavailable-extraction",
+          "requirement": "SAFETY-001",
+          "gate": 2,
+          "relation": "extraction",
+          "expected": false,
+          "observed": false,
+          "status": "PASS"
+        },
+        {
+          "step": "unavailable-extraction",
+          "requirement": "SAFETY-001",
+          "gate": 2,
+          "relation": "classification",
+          "expected": false,
+          "observed": false,
+          "status": "PASS"
+        },
+        {
+          "step": "missing-history",
+          "requirement": "HISTORY-002",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "missing-history",
+          "requirement": "HISTORY-002",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "REVIEW_REQUIRED",
+          "observed": "REVIEW_REQUIRED",
+          "status": "PASS"
+        },
+        {
+          "step": "missing-history",
+          "requirement": "HISTORY-002",
+          "gate": 1,
+          "relation": "reason",
+          "expected": "MISSING_HISTORY",
+          "observed": "MISSING_HISTORY",
+          "status": "PASS"
+        },
+        {
+          "step": "missing-authorization",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "missing-authorization",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "REVIEW_REQUIRED",
+          "observed": "REVIEW_REQUIRED",
+          "status": "PASS"
+        },
+        {
+          "step": "missing-authorization",
+          "requirement": "STATE-003",
+          "gate": 1,
+          "relation": "reason",
+          "expected": "AUTHORIZATION_REQUIRED",
+          "observed": "AUTHORIZATION_REQUIRED",
+          "status": "PASS"
+        },
+        {
+          "step": "routine",
+          "requirement": "SIGNAL-002",
+          "gate": 1,
+          "relation": "initial",
+          "expected": 0,
+          "observed": 0,
+          "status": "PASS"
+        },
+        {
+          "step": "routine",
+          "requirement": "SIGNAL-002",
+          "gate": 1,
+          "relation": "disposition",
+          "expected": "NO_SIGNAL",
+          "observed": "NO_SIGNAL",
+          "status": "PASS"
+        }
+      ]
+    }
+  },
+  "integrity_after": {
+    "inherited_file_count": 97,
+    "changed": [],
+    "unexpected_executables": [],
+    "baseline_commit": "765442763efef85b72b1c0abf25c853177684f3a",
+    "env_ignored": true
+  }
+}

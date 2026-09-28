@@ -1,0 +1,247 @@
+Implement a bounded behavioral-improvement pass.
+
+This is an implementation request, not another review or planning-only
+task. Reuse the current repository and completed work.
+
+The objective is to make the documented harness work correctly and
+demonstrate one desk-relevant signal-safety improvement.
+
+Do not import an external audit, its scores, or numbered findings.
+This message is sufficient to proceed.
+
+FIRST: VERIFY THE CURRENT STATE
+
+Pin the actual current revision and any working-tree changes.
+
+Check which requested corrections are already implemented and verified.
+Reuse valid existing evidence instead of repeating completed work.
+
+Preserve the inherited implementation and all historical results.
+Make any application behavior correction in a separately identified
+candidate, not by silently patching the inherited baseline.
+
+Keep one active writer. Do not disturb a running maintenance worker.
+Use new run directories and temporary databases.
+
+1. FIX THE DOCUMENTED EXECUTION PATH
+
+Exercise the actual preflight/live command entry points with:
+- a stubbed provider;
+- real temporary directories;
+- real SQLite initialization;
+- synthetic credentials only.
+
+Correct run-directory creation so it happens exactly once, before
+database creation, without accepting reused/protected destinations.
+
+Demonstrate:
+- successful preflight reaching the provider stub;
+- missing credential refusal;
+- authentication failure;
+- unavailable model;
+- call-budget exhaustion;
+- invalid output and comparator paths.
+
+Historical preflight PASS is historical evidence, not current readiness.
+Current execution must establish its own readiness and account for
+any provider calls within the explicit invocation budget.
+
+Return sanitized, actionable error messages and structured outcomes.
+If the output destination is unsafe, report through stderr rather than
+writing into it.
+
+Keep stage accounting precise:
+- no attempted call is not a model response failure;
+- no usable extraction means extraction accuracy is unscorable;
+- valid extraction may still be scored when a later helper fails;
+- persisted fallback decisions and state remain observable evidence.
+
+Make no real application model calls during these tests.
+Do not claim provider availability was verified by a stubbed test.
+
+2. COMPLETE THE SIGNAL BEHAVIOR CONTRACT
+
+Read the original brief, current approved D1–D6 policies, and supplied
+calibration/validity documentation.
+
+Create a compact, source-referenced decision table covering:
+- routine/administrative notices;
+- new operational disruptions;
+- planned restrictions;
+- unchanged revisions;
+- changed restrictions and lifts/terminations;
+- missing history;
+- insufficient, contradictory, or unusable model evidence.
+
+Separate:
+source facts → candidate classification → history/materiality checks
+→ permission to produce an outbound signal decision.
+
+The 14 labels are an evaluation oracle, never an implementation lookup.
+
+Reuse approved rules. Identify conflicts in the supplied documents
+rather than silently resolving them from the implementation.
+
+Do not invent numeric materiality thresholds or treat every typical
+signal characteristic as mandatory.
+
+Human approval of alerting and model-proposed classification are
+different responsibilities. Do not replace the classifier's entire
+specification with “a human decides,” and do not bypass existing
+human-authorization policy.
+
+For a genuinely new business choice, propose its exact wording and
+request a narrow decision. Continue independent technical fixes rather
+than blocking the whole pass.
+
+3. IMPLEMENT ONE BOUNDED SIGNAL-SAFETY CANDIDATE
+
+Under the existing approved failure and replay policy, implement the
+smallest correction at the real decision/output boundary that:
+
+- preserves an unusable helper result as an explicit error/review
+  disposition instead of treating it as a valid “small impact” answer;
+- prevents an identical replay or operationally unchanged revision from
+  creating another initial signal decision for the same resolved event;
+- preserves that state across close/reopen or process restart;
+- still permits a valid first signal decision for a distinct event;
+- defers unresolved identity/history rather than guessing.
+
+Reuse existing storage where practical. If persistent signal-decision
+state is absent, implement only the minimal state needed for this
+bounded contract. Do not build a general workflow or delivery platform.
+
+Keep candidate classification, authorization, attempted publication,
+and acknowledged delivery distinct.
+
+Use the actual recommendation/publication seam available in the
+application. If there is no external sender, label the result as an
+outbound recommendation or publication decision—not delivered alerts.
+
+A passive recorder may observe every attempt. It must not deduplicate
+on behalf of the application.
+
+Do not implement the repair inside the evaluator or a shared adapter
+and then credit the application with it.
+
+Do not hardcode exceptions for notice IDs such as 46528 or 46725.
+Any classification correction must follow a general, source-backed rule
+with a counterexample that guards against over-suppression.
+
+4. PROVE IT WITH THE SAME SPEC-DERIVED CHECKS
+
+Build a stateful scenario from the approved requirements:
+
+A. A material, actionable event with the required explicit authorization.
+B. Exact replay of A.
+C. An operationally unchanged linked revision.
+D. Restart and replay of that revision.
+E. A distinct material, actionable event with its own authorization.
+
+Hold normalized semantic facts, reference time, and adjudications fixed.
+Use captured inputs or explicitly synthetic provider responses.
+
+Expected at the declared observable boundary:
+- one initial signal decision for the first event;
+- no additional initial decision for replay/revision/restart;
+- one initial signal decision for the distinct event.
+
+The second event is a mandatory positive control. Emitting nothing
+must not pass.
+
+Also exercise:
+- successful extraction followed by an unusable impact verdict;
+- unavailable extraction;
+- missing required prior history;
+- a legitimate root notice.
+
+Derive sequence selection and expected relationships from the supported
+machine-readable contract. Keep synthetic controls clearly identified.
+
+Run applicable scenarios against the inherited path and the candidate.
+Preserve inherited failures.
+
+Prove that:
+- a duplicate-emitting fault is rejected;
+- a never-emitting fault is rejected;
+- losing persisted signal-decision memory across restart is rejected.
+
+Tests of controlled semantic inputs establish state/failure-handling
+behavior, not new live-model accuracy or population reliability.
+
+Do not rescore historical captures and call that execution of the new
+candidate. Actually execute the candidate on the controlled inputs.
+
+5. CLOSE THE REMAINING NARROW HARNESS DEFECTS
+
+Verify the following against the current code and correct only what
+is still broken:
+
+- Derive the expected prior link from trusted input/initial state.
+  An observed output dropping that link must not eliminate the check.
+- Include the exact already-approved D1–D6 wording in the registered
+  consistency check.
+- Use explicit decision-status semantics. An arbitrary “accepted”
+  status must not silently become active approved policy.
+- Verify supersession against known targets.
+- Remove accidental test dependence on YAML row order and hardcoded
+  current parameter values.
+
+Keep the disclosed manual approval boundary. Do not claim protection
+against a writer replacing both the verifier and its reference, and
+do not build an authentication platform.
+
+6. RECOVER THE ALREADY-COMPLETED WORKER EVIDENCE
+
+Inspect completed operator records under:
+
+/private/tmp/incommodities-replay-operator-20260926T231408Z/worker-runs/
+
+A run identified as 20260926T234823.493230Z was reported complete.
+Confirm this from the actual records before changing current status.
+
+Recover the starting request, launch observations, context, implementation
+diff, checks, retained learning, and the blocked earlier launch.
+
+Do not rerun maintenance or transplant the replay source into the
+polished candidate.
+
+If the files are unavailable, record the exact missing path and continue
+the implementation work. Do not invent successful recovery.
+
+7. DELIVER A SMALL, CLEAR EVIDENCE SURFACE
+
+Update current documentation with verified facts.
+
+The first report page should answer:
+- Does the documented execution path work?
+- What happens when a model verdict is unusable?
+- Does replay/revision/restart create another signal decision?
+- Does a distinct actionable event still produce a signal decision?
+- What did the inherited path do under the same checks?
+- What remains unknown?
+- Where is the actual fresh-session evidence?
+
+Retain raw evidence behind links. Do not add another hierarchy of
+approval/status reports or repeat every historical caveat on every page.
+
+Keep code clean and typed within the existing toolchain. Run quality
+checks, affected offline evaluations, and clean-checkout verification
+for the actual successor candidate.
+
+Do not require old test counts or gate colors to remain unchanged.
+Attribute changes to the correct cause: application repair, harness
+correction, policy clarification, or reporting correction.
+
+Return:
+- the actual fixes;
+- failing-before/passing-after evidence;
+- inherited-versus-candidate results;
+- command and quality results;
+- recovered worker status;
+- remaining material gaps;
+- the new candidate identity.
+
+Do not push/share, promise a grade, or declare a proposed test implemented.
+Continue through routine implementation and verification without asking
+for approval at every step.

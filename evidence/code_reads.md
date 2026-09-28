@@ -1,0 +1,253 @@
+# Where the code was read anyway
+
+The human owner reports no direct source reads, and the transcripts agree. Every read below
+was made by an agent: the building agent, an audit, or a fresh maintenance session. The
+question for each read is what the harness could not show without it.
+
+## What the reads say about the harness
+
+| Pattern | Reads | What the harness lacked | Status after remediation (2026-09-28) |
+|---|---|---|---|
+| Finding the inherited system's worst defect | V2 diagnosis: `inherited/llm_utils.py:525–559`, `notice_validator.py:273–309` | Traces showed missing impact verdicts but not that a missing verdict silently scores "small" | Partly closed: the replay's semantic-safety relation exposes the fallback from behavior. Nothing names it without a read. |
+| What a rule column means | Every fresh session opened `harness/domain_rules.py` to learn what FIRM_DISRUPTION is | Predicate meaning lived in harness code, not in spec.md | **Closed:** the spec-predicates table (REMEDIATION-001). A set or condition edit in spec.md changes behavior with no code edit. |
+| The component was the harness | The gate imported the component, and the component imported the harness | No separation between oracle and implementation, so agreement checks were circular | **Closed:** `rebuilt/` imports nothing from `harness/`, and a test enforces it. |
+| The author graded itself | The orchestrating thread wrote `rebuilt/*.py`, then re-read it ~25 times while evaluating it | No independent writer/evaluator split | Open. The gate now flags evaluator/oracle edits (Gate 3 EVALUATOR_OR_ORACLE_CHANGED), but one thread still writes both. |
+| Audits reading on the human's behalf | 10 supplied audits read `inherited/` and `harness/`; 4 of their helper agents read `rebuilt/` | Self-reported evidence did not reveal its own false PASSes | Partly closed: Gates 1–2 now judge declared budgets instead of staying UNKNOWN, and Gate 3 names moved files. |
+
+## Reads missing from the earlier ledger
+
+Reconstructed on 2026-09-28 from the Codex and Claude Code transcripts by an audit agent.
+Times are UTC and approximate. None of these is a human read.
+
+| When | Session | Files | Why | Gap |
+|---|---|---|---|---|
+| 09-26 20:17, 20:37 | Codex a80187497d22 | `rebuilt/` (the two early "fresh" maintenance runs) | Maintenance, run in the same thread that wrote the component ("I can see earlier coding messages") | The "fresh session" was not fresh |
+| 09-26 22:07 | Codex c2bc81cb4ef5 | Edit to `rebuilt/snapshot.py` during finalization | Finalization fix | Component edit outside a recorded maintenance exercise |
+| 09-27 00:07–00:19 | Codex c2bc81cb4ef5 | `inherited/main.py`, `notice_scraper.py`, `notice_parser.py` (NoticeProcessor, lines 528–585) | Building the E2E command | No documented inherited CLI contract |
+| 09-27 00:38 | Evaluator review | R-01…R-08 in `evaluator-reviews/20260927T003830.293495Z/reviewer-source-reads.md` | Independent review | Was not linked from this index |
+| 09-27 23:14 | Codex 577a50af3f44 ("independent verification") | `rebuilt/signals.py` 1–260 | Verification | Verification read the implementation instead of evidence |
+| 09-28 00:47–01:04 | Codex 2fa72f4acba4 | Spec-only build in `/private/tmp`; its ledger says no reads, but the thread already held repository context | "Build from spec only" | The builder was not context-isolated |
+| 09-28 01:50–03:32 | Codex 2fa72f4acba4 | `normalized_classifier.py`, `signals.py`, `normalization.py` (the B9CD042 reads, previously "cannot be reconstructed") | Integration | See the author/evaluator pattern |
+| 09-26 – 09-28 | Claude audits at f7de5a5, 9c75f30, 019de93, b9cd042 (×2), b2c82e9, and one more | `inherited/` and `harness/` file:line citations | Supplied audits (proxy reads) | Only 3 of 10 audits had proxy entries |
+| 09-28 | Claude remediation session (branch `claude/audit-remediation`) | `rebuilt/normalized_classifier.py`, `normalization.py`, `signals.py`; `harness/` modules | Separating the component from the harness; publisher snapshot rule | Implementation work, not diagnosis. The evidence already named what to change. |
+
+## Detailed entries (retained)
+
+Earlier ledgers:
+
+| Record | Evidence gap and learning |
+|---|---|
+| [V2 diagnosis](reviews/v2/code_reads.md) | Traces showed missing impact verdicts but needed a read to identify the silent small-impact fallback; reporting now separates generation, interpretation and acceptance. |
+| [Rebuild](rebuild/20260926T194455.389677Z/code_reads.md) | A fair port needed actual FK invocation protocol; the mistaken first port is retained. Exact readback now supplements counts. |
+| [Optional field](maintenance/20260926T201903.969882Z/code_reads.md) | Shared payload checks cannot prove native metadata; old-writer fixture/native tests were added. |
+| [Alias reader](format-compatibility/20260926T204022.284775Z/code_reads.md) | Decoder/validator boundary needed inspection; separate conflict/type/canonical-write tests retain the learning. |
+| [Audit](audit/20260926T211023.984214Z/context_recovery.json) | Source reads verified command safety, independent derivation and attribution; no repair occurred. |
+| Finalization | Inspected Makefile, adapter import/configuration, context selector, gates/reporters and preserved snapshots. dotenv 1.0.0 still loads credentials for nominally offline commands. Added an isolated offline launcher and two boundary tests; live and business behavior unchanged. Replay baseline is reconstructed by hashes rather than guessed Git history. |
+
+Future agents can recover those boundary facts and evidence without repeating diagnosis.
+Changed boundaries may still require agent source reads. The human's role remains spec,
+evidence and explicit policy approval; this record does not claim zero agent code reads.
+
+Current policy pass: [agent source reads and consistency work](policy/20260927T010449.918426Z/code_reads.md). No human source-read claim is added. Historical entries above retain their original scope.
+
+Current integrity pass: [agent inspection and retained controls](integrity/20260927T021057.685073Z/code_reads.md). No human implementation-read claim or historical recertification is added.
+
+Bounded correction: [agent inspection record](correction/20260927T220352.636265Z/code_reads.md). Recovered worker: [actual source/context/change account](../submission/maintenance-recovery/20260927T220352Z/README.md).
+
+Specification/evidence pass: [same-agent inspection and evidence improvements](specification/20260927T234809.632974Z/code_reads.md). Owner account unchanged.
+
+Evaluator review ledger: [R-01…R-08](evaluator-reviews/20260927T003830.293495Z/reviewer-source-reads.md).
+
+## Agent structural inspection — 2026-09-28 successor
+
+CODE-READ-ID: AGENT-STRUCTURAL-20260928 (agent inspection, not a newly asserted human code read).
+Observed failure: disposable semantic/policy/context mutations were accepted and repeated fixture hashes differed.
+Why evidence was insufficient: original probe results showed the gap; implementation inspection was needed by the coding agent to replace the hard-coded predicate path and connect runtime/gates. No human source-read escalation was requested.
+Source inspected: harness behavior/specification/context/requirements/authority/runtime/commands/live paths, downstream evidence interfaces, affected tests, and normalized schemas.
+What was learned: prose and runtime semantics diverged; policy hashes alone lacked exact decision trace; time metadata contaminated fixture identity.
+Missing harness/evidence capability: executable canonical predicates, independent runtime witnesses, reviewed assumption/index checks and bounded regression acceptance.
+Harness improvement made: documented in [hardening report](derivation-integrity/20260928T011856Z/report.md), with preserved mutation receipts and generated CURRENT.
+Could the same code read be avoided next time? The engineer can inspect runtime mutation and gate evidence; the coding agent still needs source inspection for implementation changes. No new firsthand claim about the owner's source-reading behavior is made.
+
+## Later agent reads and explicit historical gaps
+
+These are agent reads. No additional human implementation-source inspection is asserted. Retrospective entries identify their evidence limits rather than inventing a complete old tool history.
+
+### AGENT-B9CD042-RETROSPECTIVE
+
+CODE-READ-ID: AGENT-B9CD042-RETROSPECTIVE
+
+Observed failure: Supplied audit reports 18 source reads around b9cd042 without a retained read log.
+
+Why evidence was insufficient: No exact source list was found; changed-file lists cannot establish what was read.
+
+Source inspected: UNKNOWN — exact files and read purpose cannot be reconstructed honestly from the supplied audit.
+
+What was learned: The read ledger is incomplete for that pass.
+
+Missing harness/evidence capability: Contemporaneous file/read-purpose inventory.
+
+Harness improvement made: This retrospective gap is explicitly indexed; current reads are recorded below.
+
+Could the same code read be avoided next time?: No; the missing historical account cannot be recovered by rerunning checks. New sessions can avoid this omission by recording reads as they happen.
+
+
+### AGENT-POSITIVE-9450181
+
+CODE-READ-ID: AGENT-POSITIVE-9450181
+
+Observed failure: Lost row associations and classification/actionability coupling; inadequate authority and runtime trace evidence.
+
+Why evidence was insufficient: Audit observations did not identify the reduction, publisher and promotion seams to repair.
+
+Source inspected: harness/requirements.py, policy_trace.py, requirement_trace.py, context_integrity.py, authority.py, context.py, behavior_contract.py, predicates.py, trading_evaluation.py, normalized_evaluation.py, comparison_identity.py, current_evidence.py, signal_evaluation.py, baseline.py, current_snapshot.py, temporal_authority.py; rebuilt/normalization.py, normalized_classifier.py, signals.py; inherited/notice_parser.py header/extraction construction; tests/authority_fixture.py and affected integrity/policy/context/positive-path tests; submission/verify_positive_path.py.
+
+What was learned: Source-header and model suppliers differed; row reduction and scope promotion needed explicit evidence.
+
+Missing harness/evidence capability: Per-field supplier/normalization trace, source-to-proposal traces and temporal controls.
+
+Harness improvement made: See [contemporaneous record](positive-path/20260928-owner-separation/source-reads.md).
+
+Could the same code read be avoided next time?: The engineer can use retained traces; coding-agent edits may still require implementation reads.
+
+
+### AGENT-SPEC-SOURCE-14ACD22
+
+CODE-READ-ID: AGENT-SPEC-SOURCE-14ACD22
+
+Observed failure: Writable policy duplication, missing parser field contract, Rsp Date/Time parser mismatch.
+
+Why evidence was insufficient: Migration needed the exact rule/state inventory; malformed-date evidence did not reveal the header prefix bug.
+
+Source inspected: Compilation/loading/context/gates/reporting/consequence modules; rebuilt normalization/classifier/publisher; inherited parser read fields; affected tests. Exact scope and saved-header diagnosis are in the linked original record.
+
+What was learned: The header prefix consumed the wrong response-date field; compilation could replace manual view synchronization.
+
+Missing harness/evidence capability: Parser read inventory, valid/missing/malformed probes and stable spec-row diagnostics.
+
+Harness improvement made: See [contemporaneous record](spec-source/20260928/source-reads.md).
+
+Could the same code read be avoided next time?: Future similar parser failures should identify the field/capture from gate evidence; implementation repair still may require source.
+
+
+### AGENT-TIMEZONE-4CB4B27
+
+CODE-READ-ID: AGENT-TIMEZONE-4CB4B27
+
+Observed failure: Unknown-clock candidate classification conflicted with the subsequent owner ruling.
+
+Why evidence was insufficient: Evidence showed the veto but implementing the boundary required locating rule and publisher guards.
+
+Source inspected: harness/rule_invariants.py, real-source witness evaluator, compiler/ownership and positive-path tests; rebuilt publisher actionability guard. This reconstructs the scope stated in the historical report, not an exhaustive tool transcript.
+
+What was learned: Classification could be separated while retaining UNKNOWN, null UTC fields and authorization refusal.
+
+Missing harness/evidence capability: Explicit source_timezone_status and boundary observations.
+
+Harness improvement made: See [historical timezone report](timezone-separation/20260928/report.md).
+
+Could the same code read be avoided next time?: Boundary traces support future review; coding changes may still need source reads.
+
+
+### AGENT-OWNER-REVIEW-D9ED00F
+
+CODE-READ-ID: AGENT-OWNER-REVIEW-D9ED00F
+
+Observed failure: Reviewer name was required inside an already reviewed exact-byte spec.
+
+Why evidence was insufficient: Receipt behavior and source-identity exclusions were not fully exposed in the prior gate refusal.
+
+Source inspected: harness/spec_ownership.py, runtime.py, normalized_evaluation.py, baseline.py, offline.py, current_evidence.py, consequences.py, __main__.py, commands.py; tests/authority_fixture.py, test_spec_source.py and ownership/derivation tests; Makefile and entry documents as interfaces.
+
+What was learned: An explicit detached name assertion could bind exact reviewed bytes without changing policy.
+
+Missing harness/evidence capability: Detached identity receipt, stale/tampered record checks, exact source/run verification.
+
+Harness improvement made: See [owner-review report](owner-review/20260928/report.md) and tests/test_spec_owner_review.py.
+
+Could the same code read be avoided next time?: The documented receipt now avoids that diagnostic read for an engineer; it is not authenticated ownership.
+
+
+### AGENT-AUDIT-51B74CA-CORRECTION
+
+CODE-READ-ID: AGENT-AUDIT-51B74CA-CORRECTION
+
+Observed failure: Supplied audit reproduced inverted D1 PASS, unguarded assumptions, misleading provenance and conflicting entry documents.
+
+Why evidence was insufficient: Reports did not reveal check binding, omitted assumption invocation, preflight short-circuiting or duplicate refusal ownership.
+
+Source inspected: harness/rule_invariants.py, spec_compiler.py, spec_ownership.py, normalized_evaluation.py, comparison_identity.py, context.py, context_integrity.py, input_contract_checks.py, current_evidence.py, live.py, preflight.py, offline.py, commands.py, __main__.py, signal_evaluation.py, adapter.py, captures.py, baseline.py, temporal_authority.py; rebuilt/normalization.py, normalized_classifier.py, source_input.py; tests/authority_fixture.py, test_spec_source.py, test_positive_path.py, test_normalized_hardening.py, test_release_hardening.py, test_final_correction.py and related tests inspected by targeted searches.
+
+What was learned: D checks only keyed IDs; active context omitted an existing assumption verifier; synthetic configured model inherited an environment value; wrapper wrote a second refusal.
+
+Missing harness/evidence capability: Exact sentence/check bindings, collected preflight reasons, current run coverage and provenance, one current index.
+
+Harness improvement made: See [audit remediation evidence](audit-remediation/20260928/report.md); current changes and tests record the improvements.
+
+Could the same code read be avoided next time?: The new mutation receipts and structured reasons should avoid repeating diagnosis for the engineer. Agent source reads remain necessary to implement repairs.
+
+## CODE-READ-FEEDBACK-20260928 — evidence-driven maintenance
+
+Observed failure: supplied dfb3f77 audit reports misleading sentence/requirement PASS, hidden tradeoffs, cumbersome proposal workflow and a wrapper masking missing component refusal retention.
+Why evidence was insufficient: existing reports could not distinguish a spec consequence from independent correctness, and the publisher's refusal origin was not observable without a direct probe.
+Source inspected (coding agent, not a claimed human code read): harness compiler/tables, rule invariants, consequences, requirements, context, gate orchestration, reporting, capture/trading evaluation, receipt validation, command dispatch and baseline code; rebuilt normalized_classifier.py, normalization.py and signals.py; associated test fixtures and tests. No live model or original repository outside this checkout was accessed.
+What was learned: status metadata dominated the spec; schemas can be losslessly generated from field tables; the initial-alert maximum was hard-coded; invalid publisher input raised before retention; generated policy drift and a stale human review are distinct from proposal measurement.
+Missing harness/evidence capability: an adoption-free consequence preview with labeled tradeoffs, exact declaration changes and a direct component refusal/reopen probe.
+Harness improvement made: fixed-format compact spec tables, executable maximum parameter, explicit PARTIAL/UNCHECKED scope, read-only proposal reports, source-example coverage, visible inherited/rebuilt tradeoffs, a direct refusal retention control and a short context index.
+Could the same code read be avoided next time? The human can inspect the spec and new evidence. Coding-agent reads remain allowed; arbitrary future business semantics cannot be inferred. No zero-source-read or independent-evaluation claim is made. The fresh-session record lists its own reads separately.
+
+## Supplied audits as code-read escalations by proxy
+
+CODE-READ-ID: AUDIT-PROXY-51b74ca
+Observed failure: supplied audit drove the audit-remediation pass.
+Why evidence was insufficient: author-reported results did not expose all contract/refusal and source-identity gaps.
+Source inspected: the reviewer-reported paths in [the retained supplied audit](audit-remediation/20260928/supplied-audit.txt); this ledger does not invent an exhaustive read list.
+What was learned: evidence claims needed direct source and mutation verification.
+Missing harness/evidence capability: self-reporting did not make its omissions evident.
+Harness improvement made: the dated audit-remediation report records the bounded repairs; later audits show they were insufficient.
+Could the same code read be avoided next time? Only for the specific reproduced controls; complete avoidance is not established.
+
+CODE-READ-ID: AUDIT-PROXY-dfb3f77
+Observed failure: [the supplied audit](spec-feedback/20260928/supplied-audit.txt) found reporting, ownership and maintained-scope gaps.
+Why evidence was insufficient: raw receipts and passing synthetic coverage obscured source-case failures and proposal tradeoffs.
+Source inspected: reviewer-reported harness/component paths in that audit, not a claim of owner firsthand inspection.
+What was learned: declaration and consequence evidence were missing; author-written checks did not independently validate the grader.
+Missing harness/evidence capability: truthful per-case coverage and zero-reach declaration evidence.
+Harness improvement made: proposal reporting and source-case coverage; the 427c7d7 audit subsequently found false inherited scores and exit/drift defects.
+Could the same code read be avoided next time? The added controls cover reproduced defects, but independent checker review remains necessary.
+
+CODE-READ-ID: AUDIT-PROXY-427c7d7
+Observed failure: [the supplied audit](audit-truth/20260928/supplied-audit.txt) reproduces successful refusal exits, gate-side file writes, credited MODEL_FAILUREs and unobserved checks reported PASS.
+Why evidence was insufficient: headline results were generated by the same incorrect scoring/exit paths they purported to validate.
+Source inspected: reviewer reports harness/ inspection and no direct rebuilt/ read; its separate fresh agent reported component reads. Do not merge those into a fictional owner read or verified exhaustive list.
+What was learned: executable mutations and direct component probes are needed in addition to report assertions.
+Missing harness/evidence capability: read-only gate proof, execution-aware scoring, declared-check coverage accounting, explicit code-owned versus prose scope.
+Harness improvement made: these controls are now exercised by test_audit_truth.py and the retained audit-truth pass; the fresh-session source-read record separately accounts for component maintenance.
+Could the same code read be avoided next time? The specific defects are visible in regression evidence. This does not prove all future grader/source inspection unnecessary.
+
+CODE-READ-ID: AGENT-AUDIT-TRUTH-20260928
+Observed failure: current supplied audit findings required implementation repair.
+Why evidence was insufficient: source inspection was needed to locate the exit override, implicit build, raw signal scoring and duplicated scope inventories.
+Source inspected: normalized_evaluation, spec_compiler/tables/ownership, contract_preflight, proposals/consequences, trading_evaluation, current_evidence, context/manifest, offline/commands, behavior_contract, rule_invariants, signal_evaluation, baseline/comparison_identity, live/preflight, gates, normalized_classifier and normalization; affected tests and documentation.
+What was learned: the gate's successful-looking status could coexist with skipped declared checks, while an old assumption ceiling blocked unrelated maintenance.
+Missing harness/evidence capability: the audit controls listed above and a maintained-component exercise without grader edits.
+Harness improvement made: deterministic regressions, explicit scope/limits and corrected generated evidence. No business policy or human review was inferred.
+Could the same code read be avoided next time? A human can inspect these reproduced failures through the receipts; coding-agent reads remain necessary for repairs.
+
+CODE-READ-ID: AGENT-QUANTITY-PROPOSAL-20260928
+Observed failure: unsupported numeric restriction omitted from normalized quantities without a row-specific explanation; 150 Dth and 2.5 MMcf/d witnesses retained.
+Why evidence was insufficient: raw retained rows did not show exactly which mapping lost the numeric quantity; direct unittest was first blocked by stale review rather than reaching the witness.
+Source inspected: fresh worker read rebuilt/normalization.py, rebuilt/source_input.py, tests/test_positive_path.py and harness/offline.py; exact searches and outputs are retained in [the fresh-session record](audit-truth/20260928/fresh-maintenance/record.md). These are coding-agent reads, not an asserted owner firsthand read or independent evaluation.
+What was learned: raw values already survive; the missing behavior is an explicit row-specific omission trace. No volume conversion or new quantity meaning is justified.
+Missing harness/evidence capability: a usable omission explanation plus documented offline observation testing; the separate OBS-003 coverage binding was also incomplete.
+Harness improvement made: the parent repaired OBS-003 coverage. The component patch and focused tests are prepared but unapplied because automatic approval review rejected that write. All 225 parent-guarded files remained unchanged during the worker exercise.
+Could the same code read be avoided next time? The concrete witnesses and patch expose this omission to the engineer. Repair and validation remain pending, so avoidance is not demonstrated.
+
+CODE-READ-ID: AGENT-NNS-FIRM-20260928
+Observed failure: desk request, not a gate failure. Extracted NGPL rows with service_type NO_NOTICE normalized to UNKNOWN (visible in capture-1/46528 normalization_trace), so a firm No-Notice Service restriction could never satisfy the FIRM_DISRUPTION predicate.
+Why evidence was insufficient: the evidence showed NO_NOTICE -> UNKNOWN but not whether the spec services map is the only path, i.e. whether a spec-only change (new normalized value plus FIRM_SERVICES membership) would work without component code.
+Source inspected: coding-agent reads of rebuilt/normalization.py lines 1-60 (services come from spec-settings normalization.services, defaulting to UNKNOWN), grep of service handling in rebuilt/source_input.py, rule_engine.py and classifier.py, and rebuilt/normalized_classifier.py (CLI and classify). tests/test_spec_predicates.py was read after make check failed. No component source was changed.
+What was learned: service vocabulary, FIRM_SERVICES and the interface enums are all spec-owned, so the change is spec-only (NNS-FIRM-001, proposed). tests/test_spec_predicates.py::test_a_set_edit_in_the_spec_changes_behavior_without_code pins the literal spec text '"FIRM_SERVICES": ["PRIMARY_FIRM", "SECONDARY_FIRM"]' as a fixture, so any legitimate edit of that set fails make check.
+Missing harness/evidence capability: (1) no captured or labeled NNS outage, so the intended positive effect is invisible to make consequences (0/46 changes); the effect was shown only by a scratch metamorphic probe (firm-positive witness with service swapped to NO_NOTICE_FIRM: old spec refuses, new spec BR-FIRM; PARTIAL and INTERRUPTIBLE controls stay BR-UNRESOLVED). (2) the spec-predicate test should derive its fixture from the compiled set rather than from literal spec bytes.
+Harness improvement made: none. tests/ and witnesses are outside this task's source scope, so the brittle fixture and a proposed NNS witness are reported for the owner.
+Could the same code read be avoided next time? Yes, if context packages stated that service mapping and FIRM_SERVICES are spec-owned with no code path, and if an NNS witness existed.

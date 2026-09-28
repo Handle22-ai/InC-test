@@ -1,0 +1,16 @@
+{
+  "notice_id": 46624,
+  "notice_type": "CAPACITY CONSTRAINT",
+  "status": "INITIATE",
+  "prior_notice_id": null,
+  "information_only": false,
+  "is_signal": true,
+  "confidence_score": 0.7,
+  "validity_flags": [
+    "VC-2: high-confidence notice type (CAPACITY CONSTRAINT) — capacity constraint (+0.20 confidence)",
+    "VC-3: medium curtailment impact — firm service affected with 10–30% reduction (+0.20 confidence)",
+    "VC-4: specific LOC code(s) or compressor station identified — precise constraint point known (+0.10 confidence)",
+    "VC-5: Henry Hub / Gulf Coast / Louisiana zone location — direct price impact on NYMEX front-month (+0.20 confidence)",
+    "llm_extraction"
+  ]
+}

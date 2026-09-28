@@ -1,0 +1,115 @@
+I approve R1 and R2 for the bounded assessment, with the exact scope
+and limitations below.
+
+This is a new owner decision. Do not describe it as an earlier approval,
+approval by InCommodities, authenticated ownership, production acceptance,
+or proof that the application passes.
+
+R1 — APPROVED SCOPE
+
+Approve the integrity/reference changes identified by
+owner-review-scope.json with the reported SHA-256:
+
+4376ed60534d1752d5f8f7ba538715fface6639614ac25a8dc73ad6118fbd720
+
+This covers the described requirement/check bindings, explicit existing
+parameters, oracle and capture verification, decision/status consistency,
+and separation of paired comparison, temporal comparison, and acceptance.
+
+D1–D6 business intent and bounds remain unchanged.
+
+I accept local byte/status consistency as the implemented assessment
+boundary. Future normative promotion still requires my explicit review
+outside the implementation worker's writable checkout.
+
+Do not claim this authenticates the owner or prevents a worker from
+replacing both a reference and its verifier. Preserve the successful
+coordinated self-repin result and the documented limitation.
+
+R2 — APPROVED OBSERVATION REGISTRATION
+
+Approve the exact proposed/capture-registry.json bytes with the reported
+SHA-256:
+
+65f575bd5b496bed3757279c7752d02b87171dbf93511b61502d068ec797a9b3
+
+Register only the two identified complete storage results under:
+
+evidence/integrity/20260927T021057.685073Z/storage-release/
+
+They are observed temporal references, not approved releases.
+
+Preserve their FAIL/UNKNOWN outcomes, input identities, evaluator
+identities, and limitations. Registration does not establish application
+correctness or repair the missing lifecycle behavior.
+
+APPLICATION AND VERIFICATION
+
+1. Before applying anything, recompute both supplied file hashes and
+   verify the referenced files against their recorded identities.
+
+   If the scope, proposal, or relevant source/reference bytes have changed,
+   stop and show the discrepancy. Do not silently regenerate the approved
+   hashes or substitute a different proposal.
+
+   These checks establish consistency with this approval's identifiers;
+   do not present them as independent verification by the owner.
+
+2. Record this exact message as the new decision.
+
+   Preserve the original approval request, scope, semantic diff, proposed
+   patch, historical evidence, and original statuses.
+
+   Record the sequence explicitly: R1 approves its identified snapshot;
+   R2 authorizes the separate, specific registry delta. Do not overwrite
+   R1's scope file to make it describe the later state retroactively.
+
+3. Apply only the approved changes.
+
+   Do not change labels, thresholds, application behavior, D1–D6 intent,
+   or prior outcomes. Do not automatically register future runs.
+
+4. Verify the normal CLI path using the newly registered temporal
+   reference, fresh output directories, and captured offline inputs.
+
+   Run the existing quality/test command and relevant demo, context,
+   policy, and scoped acceptance checks.
+
+   Report:
+   - whether the registered reference is accepted and verified;
+   - whether the temporal comparison is comparable;
+   - actual paired and temporal outcomes;
+   - actual scoped acceptance result and exit code.
+
+   A no-change temporal PASS does not erase existing FAIL/UNKNOWN
+   requirements or approve the application. Do not force any particular
+   gate color.
+
+5. Keep the isolated worker separate.
+
+   Do not access or modify its workspace while it is running.
+   Do not rerun its maintenance task in this session.
+
+   Incorporate its actual exported evidence only when available.
+   If unavailable, state that dependency without creating substitute work.
+
+6. Prepare the reviewed local staging/commit set.
+
+   Include the approved changes and their relevant evidence.
+   Preserve previous tested revisions and receipt attribution.
+   Exclude credentials, environments, caches, disposable probes, and the
+   external audit document.
+
+   Do not push, share, or change repository visibility.
+
+Return one concise result:
+- approvals recorded and exact hashes verified;
+- approved changes applied;
+- actual command results;
+- temporal versus acceptance conclusions;
+- remaining manual trust limitation;
+- isolated-worker evidence status;
+- local delivery preparation status.
+
+Do not start another broad audit, rebuild, authentication framework,
+or live-model experiment.

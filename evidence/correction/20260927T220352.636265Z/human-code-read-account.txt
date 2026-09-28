@@ -1,0 +1,8 @@
+No human source reads.
+
+I reviewed specifications, requirements, evaluation reports, and agent
+explanations rather than implementation source. Implementation inspection
+was performed by AI agents and should remain recorded separately.
+
+This is my firsthand account of my own activity, not an independently
+verified claim about every participant.

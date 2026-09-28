@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "source": {
+    "pipeline": "NGPL",
+    "media_type": "application/vnd.ngpl.normalized+json",
+    "sha256": "a28e11f9ba8cc709fdb0b04a90756d1aba52849bc67735ab2cdd9c40085a3846",
+    "bytes_reference": "sources/primary-only-positive.txt",
+    "fields": {
+      "body": "{\"facts\": {\"availability\": \"PRIMARY_ONLY\", \"content_kind\": \"RESTRICTION\", \"end_time\": null, \"locations\": [{\"evidence_ref\": \"sources/primary-only-positive.txt\", \"kind\": \"SEGMENT\", \"value\": \"12\"}], \"operational_assertions\": [\"Only primary firm service available at the stated constraint\"], \"quantities\": [], \"services\": [], \"start_time\": \"2026-01-14T00:00:00+00:00\", \"time_basis\": \"UTC\"}, \"notice\": {\"notice_id\": 710001, \"notice_type\": \"CAPACITY CONSTRAINT\", \"prior_notice_id\": null, \"status\": \"INITIATE\"}}",
+      "timezone": "UTC"
+    }
+  },
+  "notice": {
+    "notice_id": 710001,
+    "prior_notice_id": null,
+    "status": "INITIATE",
+    "notice_type": "CAPACITY CONSTRAINT"
+  },
+  "facts": {
+    "content_kind": "RESTRICTION",
+    "services": [],
+    "availability": "PRIMARY_ONLY",
+    "locations": [
+      {
+        "kind": "SEGMENT",
+        "value": "12",
+        "evidence_ref": "sources/primary-only-positive.txt"
+      }
+    ],
+    "quantities": [],
+    "operational_assertions": [
+      "Only primary firm service available at the stated constraint"
+    ],
+    "start_time": "2026-01-14T00:00:00+00:00",
+    "end_time": null,
+    "time_basis": "UTC"
+  },
+  "history": [],
+  "reference_time": "2026-01-15T12:00:00+00:00",
+  "evidence": {
+    "extraction_usable": true,
+    "helpers_usable": true,
+    "contradictory": false,
+    "references": [
+      "sources/primary-only-positive.txt"
+    ]
+  }
+}

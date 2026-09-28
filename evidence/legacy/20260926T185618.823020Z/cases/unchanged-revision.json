@@ -1,0 +1,849 @@
+{
+  "case_id": "unchanged-revision",
+  "input": "evidence/legacy/20260926T185618.823020Z/inputs/96624_unchanged_supersede.html",
+  "input_sha256": "633b47fd47b5d7dc8472ca827470031f0188eae367cf22da539217f32497b85d",
+  "notice_id": 96624,
+  "state_before": {
+    "notices": [
+      {
+        "notice_id": 46624,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "CAPACITY CONSTRAINT",
+        "notice_subtype": "POINTS",
+        "effective_datetime": "2026-01-12T10:51:37",
+        "end_datetime": "2026-03-31T09:00:00",
+        "post_datetime": "2026-01-12T10:51:37",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "FGT VERMILLION (LOC 7936) - PRIMARY ONLY",
+        "body_text": "ANR/NGPL SOUTH JOLIET AT CAPACITY\n\nFLORIDA\nVERMILION (LOC 7936) – PRIMARY ONLY\n\n \n\nDue\nto current operating conditions, effective for gas day \nWednesday, January 14,\n2026, Timely Cycle and continuing until further notice,\n Florida Vermilion (LOC\n7936) is at operating capacity.  As such, Natural will only schedule Primary\nFirm transports for deliveries to Florida Vermilion (LOC 7936).  AOR/ITS, Secondary\nout-of-path Firm transports and Secondary in-path Firm transports \nwill\nnot\n be available.\n\n \n\nFlorida\nVermilion is located in Vermilion Parish, Louisiana (Segment 24), in Natural's Louisiana\nZone.\n\n \n\nPlease\ncontact your Account Director or Scheduling Representative if you have any\nquestions.\n\n \n\n..",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 1,
+        "confidence_score": 0.7,
+        "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: medium curtailment impact \\u2014 firm service affected with 10\\u201330% reduction (+0.20 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-26T18:59:06.126030",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46624_CAPACITY CONSTRAINT.html"
+      }
+    ],
+    "notice_locations": [
+      {
+        "id": 1,
+        "location_index": 0,
+        "notice_id": 46624,
+        "loc_code": "7936",
+        "loc_name": "Florida Vermilion",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      },
+      {
+        "id": 2,
+        "location_index": 0,
+        "notice_id": 46624,
+        "loc_code": "7936",
+        "loc_name": "Florida Vermilion",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      },
+      {
+        "id": 3,
+        "location_index": 0,
+        "notice_id": 46624,
+        "loc_code": "7936",
+        "loc_name": "Florida Vermilion",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      }
+    ],
+    "notice_restrictions": [
+      {
+        "id": 1,
+        "location_index": 0,
+        "notice_id": 46624,
+        "service_type": "AOR_ITS",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 2,
+        "location_index": 0,
+        "notice_id": 46624,
+        "service_type": "SECONDARY_OUTPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 3,
+        "location_index": 0,
+        "notice_id": 46624,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 4,
+        "location_index": 0,
+        "notice_id": 46624,
+        "service_type": "AOR_ITS",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 5,
+        "location_index": 0,
+        "notice_id": 46624,
+        "service_type": "SECONDARY_OUTPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 6,
+        "location_index": 0,
+        "notice_id": 46624,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 7,
+        "location_index": 0,
+        "notice_id": 46624,
+        "service_type": "AOR_ITS",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 8,
+        "location_index": 0,
+        "notice_id": 46624,
+        "service_type": "SECONDARY_OUTPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 9,
+        "location_index": 0,
+        "notice_id": 46624,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      }
+    ],
+    "foreign_key_violations": []
+  },
+  "outcome": "SUCCESS",
+  "output": {
+    "notice": {
+      "notice_id": 96624,
+      "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+      "pipeline_code": "NGPL",
+      "is_critical": 1,
+      "notice_type": "CAPACITY CONSTRAINT",
+      "notice_subtype": "POINTS",
+      "effective_datetime": "2026-01-12T10:51:37",
+      "end_datetime": "2026-03-31T09:00:00",
+      "post_datetime": "2026-01-12T10:51:37",
+      "response_required": 1,
+      "response_due_date": null,
+      "status": "SUPERSEDE",
+      "prior_notice_id": 46624,
+      "subject": "FGT VERMILLION (LOC 7936) - PRIMARY ONLY",
+      "body_text": "ANR/NGPL SOUTH JOLIET AT CAPACITY\n\nFLORIDA\nVERMILION (LOC 7936) – PRIMARY ONLY\n\n \n\nDue\nto current operating conditions, effective for gas day \nWednesday, January 14,\n2026, Timely Cycle and continuing until further notice,\n Florida Vermilion (LOC\n7936) is at operating capacity.  As such, Natural will only schedule Primary\nFirm transports for deliveries to Florida Vermilion (LOC 7936).  AOR/ITS, Secondary\nout-of-path Firm transports and Secondary in-path Firm transports \nwill\nnot\n be available.\n\n \n\nFlorida\nVermilion is located in Vermilion Parish, Louisiana (Segment 24), in Natural's Louisiana\nZone.\n\n \n\nPlease\ncontact your Account Director or Scheduling Representative if you have any\nquestions.\n\n \n\n..",
+      "outage_report_ref": null,
+      "tariff_section": null,
+      "information_only": 0,
+      "is_signal": 0,
+      "confidence_score": 0.0,
+      "validity_flags": "[\"VC-1: superseded notice \\u2014 LLM assessed as not materially different from prior notice 46624; suppressed to avoid duplicate signal\", \"llm_extraction\"]",
+      "source_url": null,
+      "scraped_at": "2026-09-26T18:59:14.051280",
+      "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/legacy/20260926T185618.823020Z/inputs/96624_unchanged_supersede.html"
+    },
+    "locations": [
+      {
+        "location_index": 0,
+        "notice_id": 96624,
+        "loc_code": "7936",
+        "loc_name": "Florida Vermilion",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      }
+    ],
+    "restrictions": [
+      {
+        "notice_id": 96624,
+        "location_index": 0,
+        "service_type": "AOR_ITS",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "notice_id": 96624,
+        "location_index": 0,
+        "service_type": "SECONDARY_OUTPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "notice_id": 96624,
+        "location_index": 0,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      }
+    ]
+  },
+  "persistence_insert_succeeded": true,
+  "model_calls": [
+    {
+      "provider": "anthropic",
+      "configured_model": "claude-sonnet-4-6",
+      "request_sha256": "1f0aed760bc37c0d9e969bfe6b4810d45c03a553594639524613a97439ecd6c3",
+      "request": {
+        "model": "claude-sonnet-4-6",
+        "max_tokens": 2048,
+        "system": "You are a structured data extractor for natural gas pipeline EBB (Electronic Bulletin Board) notices.\n\nYour job is to extract locations and their associated capacity restrictions from the notice body into a strict schema.\n\nBefore filling in the schema, reason carefully about the notice:\n1. Is this notice INFORMATION ONLY? Set information_only=true if it is a retrospective post-event report, a weather/demand advisory with no enforceable directive, an administrative update (tariff filing, project list, regulatory notice), or a rolling maintenance plan summary. Set false if it announces or enforces a current or upcoming restriction, curtailment, force majeure, OFO, or maintenance outage with shipper impact.\n2. Does this notice use a CHANGE INDICATOR symbol? Look for a legend line such as \"è Indicates Change\" or \"* Indicates Change\". If found, identify the exact symbol used (e.g. \"è\"). Only rows marked with that specific symbol represent changes — all other rows are unchanged from the prior notice and must be omitted.\n3. What is the ROOT CAUSE of the restriction (e.g. maintenance at CS 343)?\n4. What are the CONSTRAINT POINTS — the specific locations where the capacity limit is enforced? If a change indicator was found in step 2, only include locations that carry that symbol.\n5. Which shippers / service types are SUBJECT TO the restriction at each constraint point?\n6. Does the notice cover multiple named systems (e.g. Amarillo System, Gulf Coast System)? If so, create a separate location object for each system.\n\nSchema structure: restrictions are nested inside each location they apply to. This makes the location↔restriction relationship explicit.\n\nRules:\n- Extract only what is explicitly stated. Do not infer or hallucinate values.\n- Never fabricate LOC codes, compressor station numbers, or segment numbers. If a location identifier does not appear verbatim in the notice text, leave that field null.\n- Use null for any field not present in the text.\n- Change indicators: if the notice uses a symbol such as \"è\" followed by \"Indicates Change\", extract ONLY the entries marked with that symbol. All unmarked rows are unchanged from the prior notice — omit them entirely.\n- For locations: include ONLY the constraint point(s) that are marked as changed (or all impacted locations if no change indicator is used). Do not include locations that are the cause of the restriction, mentioned as positional context, or explicitly stated as unaffected.\n- For system: capture the named pipeline system (e.g. \"Amarillo System\", \"Gulf Coast System\") when stated. Place it as the last identifier field, after zones. Use null if no system name appears.\n- For flow_direction: use ON_TO_PIPE for \"ON to the Pipe\" sections, OFF_OF_PIPE for \"OFF of the Pipe\" sections. Use compass directions (NORTHBOUND etc.) for directional flow. Use RECEIPT/DELIVERY when the notice uses those terms. Use ALL for system-wide. Null if unspecified.\n- For restrictions: nest inside the location they apply to. Only include service types explicitly restricted or unavailable. Include one entry per (service_type, restriction_type, flow_direction) combination.",
+        "tools": [
+          {
+            "name": "extract_notice_data",
+            "description": "Extract changed locations and their associated capacity restrictions from a natural gas pipeline notice. Use only information explicitly stated in the text. Return null for any field not present. Restrictions are nested inside each location they apply to.",
+            "input_schema": {
+              "type": "object",
+              "required": [
+                "locations",
+                "reasoning"
+              ],
+              "properties": {
+                "locations": {
+                  "type": "array",
+                  "description": "Each element is one impacted location group with its own restrictions. IMPORTANT: if the notice uses a change indicator symbol (e.g. 'è Indicates Change'), extract ONLY the locations and restrictions that are marked with that symbol — all unmarked rows are unchanged from the prior notice and must be omitted. If no change indicator is used, extract all impacted locations. Create one location object per distinct (system, zone/segment/CS/LOC) grouping. If a notice covers multiple systems (e.g. Amarillo System and Gulf Coast System), create separate location objects for each system. Nest the restrictions that apply specifically to that location inside it.",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "restrictions"
+                    ],
+                    "properties": {
+                      "loc_codes": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "List of numeric LOC identifiers (numbers only, no 'LOC' prefix) that are directly impacted. e.g. ['3592', '25085']. Empty list if no LOC codes are stated. Do NOT include LOC codes explicitly stated as 'not impacted' or 'not affected'."
+                      },
+                      "loc_names": {
+                        "type": "array",
+                        "items": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "description": "Human-readable names one-to-one with loc_codes. Use null for a code whose name is not stated. Empty list if no LOC codes."
+                      },
+                      "segments": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "Pipeline segment numbers e.g. ['23', '24']. Empty list if none mentioned."
+                      },
+                      "compressor_stations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "Compressor station identifiers, numbers only, no 'CS' prefix. e.g. ['302', '343']. Empty list if none mentioned."
+                      },
+                      "zones": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "Named pipeline zones e.g. ['Louisiana Zone', 'Texok Zone', 'Gulf Coast Mainline', 'Market Delivery Zone']. Empty list if none mentioned."
+                      },
+                      "system": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "description": "The named pipeline system this location belongs to, e.g. 'Amarillo System', 'Gulf Coast System', 'Midcontinent System'. Null if no system name is stated."
+                      },
+                      "restrictions": {
+                        "type": "array",
+                        "description": "All capacity or flow restrictions that apply to THIS location. Include one entry per (service_type, restriction_type, flow_direction) combination.",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "service_type",
+                            "restriction_type"
+                          ],
+                          "properties": {
+                            "service_type": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "Which transportation service type is restricted. Common values: PRIMARY_FIRM, SECONDARY_INPATH_FIRM, SECONDARY_OUTPATH_FIRM, AOR_ITS, INTERRUPTIBLE, NO_NOTICE, ALL. Use the exact wording from the notice if it doesn't fit these categories."
+                            },
+                            "restriction_type": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "The nature of the restriction. Common values: SCHEDULED_TO_PCT_MDQ (scheduled to no less than X% of MDQ), UNAVAILABLE (service completely unavailable), HOURLY_LIMIT_PCT (hourly takes limited to X% of rights), DAILY_LIMIT_PCT (daily takes limited to X%). Use a descriptive string if none of these fit."
+                            },
+                            "restriction_value": {
+                              "type": [
+                                "number",
+                                "null"
+                              ],
+                              "description": "Numeric value of the restriction e.g. 46.0 for 46% MDQ. Null if UNAVAILABLE."
+                            },
+                            "restriction_unit": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "Unit for restriction_value. Common values: PCT_MDQ, PCT_HOURLY, MMBTU, DTH. Null if not applicable."
+                            },
+                            "flow_direction": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "The direction or side this restriction applies to. Use ON_TO_PIPE for gas injected into the pipeline (receipts/injections). Use OFF_OF_PIPE for gas taken off the pipeline (deliveries/withdrawals). Use a compass direction (NORTHBOUND, SOUTHBOUND, EASTBOUND, WESTBOUND) for directional flow restrictions. Use RECEIPT or DELIVERY when the notice uses those terms explicitly. Use ALL if it applies system-wide or direction is unspecified. Use null if not mentioned in the notice."
+                            },
+                            "start_datetime": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "The date this restriction takes effect, extracted from the notice body. Return as YYYY-MM-DD if the date is explicit. Return null if no start date is stated."
+                            },
+                            "end_datetime": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "The date this restriction ends, extracted from the notice body. Return as YYYY-MM-DD if an explicit end date is stated. Return 'TBD' if the notice says 'until further notice' or equivalent. Return null if no end date is mentioned at all."
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "change_indicator": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "description": "The exact change indicator symbol used in this notice (e.g. 'è', '*'), as identified from its legend line (e.g. 'è Indicates Change'). Null if no change indicator legend is present."
+                },
+                "information_only": {
+                  "type": "boolean",
+                  "description": "True if this notice is purely informational and describes no active operational restriction. Set to true for: retrospective post-event reports (describing something that already happened), weather/demand advisories with no enforceable directive, administrative updates (project lists, tariff filings, regulatory notices), and rolling maintenance plan summaries. Set to false if the notice announces or enforces a current or upcoming restriction, curtailment, force majeure, OFO, or maintenance outage with shipper impact."
+                },
+                "reasoning": {
+                  "type": "string",
+                  "description": "One sentence explaining what this notice describes and what the primary operational impact is."
+                }
+              }
+            }
+          }
+        ],
+        "tool_choice": {
+          "type": "tool",
+          "name": "extract_notice_data"
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "## Notice Header (pre-parsed)\nNotice ID: 96624\nNotice Type: CAPACITY CONSTRAINT / POINTS\nStatus: SUPERSEDE\nCritical: Y\nEffective: 01/12/2026 10:51:37AM\nEnd: 03/31/2026 9:00:00am\nSubject: FGT VERMILLION (LOC 7936) - PRIMARY ONLY\nPrior Notice: 46624\n\n## Notice Body\nANR/NGPL SOUTH JOLIET AT CAPACITY\n\nFLORIDA VERMILION (LOC 7936) – PRIMARY ONLY\n\n \n\nDue to current operating conditions, effective for gas day \nWednesday, January 14, 2026, Timely Cycle and continuing until further notice, Florida Vermilion (LOC 7936) is at operating capacity.  As such, Natural will only schedule Primary Firm transports for deliveries to Florida Vermilion (LOC 7936).  AOR/ITS, Secondary out-of-path Firm transports and Secondary in-path Firm transports \nwill not be available.\n\n \n\nFlorida Vermilion is located in Vermilion Parish, Louisiana (Segment 24), in Natural's Louisiana Zone.\n\n \n\nPlease contact your Account Director or Scheduling Representative if you have any questions.\n\n \n\n.."
+          }
+        ]
+      },
+      "success": true,
+      "request_id": "req_011CfSZheUZE6HC4BwGfDMVN",
+      "response": {
+        "id": "msg_011CfSZhewq9HQ57eBTWzw43",
+        "container": null,
+        "content": [
+          {
+            "id": "toolu_01Q8UB4h1WA7g58akoRjZNGe",
+            "caller": {
+              "type": "direct"
+            },
+            "input": {
+              "reasoning": "This notice announces that Florida Vermilion (LOC 7936) is at operating capacity effective January 14, 2026, restricting scheduling to Primary Firm transports only — AOR/ITS, Secondary out-of-path Firm, and Secondary in-path Firm transports will not be available. This is an active capacity constraint with shipper impact.",
+              "information_only": false,
+              "change_indicator": null,
+              "locations": [
+                {
+                  "system": null,
+                  "zones": [
+                    "Louisiana Zone"
+                  ],
+                  "segments": [
+                    "24"
+                  ],
+                  "compressor_stations": [],
+                  "loc_codes": [
+                    "7936"
+                  ],
+                  "loc_names": [
+                    "Florida Vermilion"
+                  ],
+                  "restrictions": [
+                    {
+                      "service_type": "AOR_ITS",
+                      "restriction_type": "UNAVAILABLE",
+                      "flow_direction": "DELIVERY",
+                      "restriction_value": null,
+                      "restriction_unit": null,
+                      "start_datetime": "2026-01-14",
+                      "end_datetime": "TBD"
+                    },
+                    {
+                      "service_type": "SECONDARY_OUTPATH_FIRM",
+                      "restriction_type": "UNAVAILABLE",
+                      "flow_direction": "DELIVERY",
+                      "restriction_value": null,
+                      "restriction_unit": null,
+                      "start_datetime": "2026-01-14",
+                      "end_datetime": "TBD"
+                    },
+                    {
+                      "service_type": "SECONDARY_INPATH_FIRM",
+                      "restriction_type": "UNAVAILABLE",
+                      "flow_direction": "DELIVERY",
+                      "restriction_value": null,
+                      "restriction_unit": null,
+                      "start_datetime": "2026-01-14",
+                      "end_datetime": "TBD"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "extract_notice_data",
+            "type": "tool_use",
+            "toolset_name": null
+          }
+        ],
+        "model": "claude-sonnet-4-6",
+        "role": "assistant",
+        "stop_details": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "type": "message",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 3120,
+          "output_tokens": 513,
+          "output_tokens_details": null,
+          "server_tool_use": null,
+          "service_tier": "standard"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "provider": "anthropic",
+      "configured_model": "claude-sonnet-4-6",
+      "request_sha256": "06e8d9597bb611dadc58bd1731d63cde8e8f95de793efd6f6a2cc79ca4340ab2",
+      "request": {
+        "model": "claude-sonnet-4-6",
+        "max_tokens": 5,
+        "messages": [
+          {
+            "role": "user",
+            "content": "You are assessing whether a natural gas pipeline notice update represents a material change that would require energy traders to adjust their positions.\n\nPRIOR NOTICE:\nType: CAPACITY CONSTRAINT\nSubject: FGT VERMILLION (LOC 7936) - PRIMARY ONLY\nBody: ANR/NGPL SOUTH JOLIET AT CAPACITY\n\nFLORIDA\nVERMILION (LOC 7936) – PRIMARY ONLY\n\n \n\nDue\nto current operating conditions, effective for gas day \nWednesday, January 14,\n2026, Timely Cycle and continuing until further notice,\n Florida Vermilion (LOC\n7936) is at operating capacity.  As such, Natural will only schedule Primary\nFirm transports for deliveries to Florida Vermilion (LOC 7936).  AOR/ITS, Secondary\nout-of-path Firm transports and Secondary in-path Firm transports \nwill\nnot\n be available.\n\n \n\nFlorida\nVermilion is located in Vermilion Parish, Louisiana (Segment 24), in Natural's Louisiana\nZone.\n\n \n\nPlease\ncontact your Account Director or Scheduling Representative if you have any\nquestions.\n\n \n\n..\n\nNEW NOTICE (supersedes the prior):\nType: CAPACITY CONSTRAINT\nSubject: FGT VERMILLION (LOC 7936) - PRIMARY ONLY\nBody: ANR/NGPL SOUTH JOLIET AT CAPACITY\n\nFLORIDA\nVERMILION (LOC 7936) – PRIMARY ONLY\n\n \n\nDue\nto current operating conditions, effective for gas day \nWednesday, January 14,\n2026, Timely Cycle and continuing until further notice,\n Florida Vermilion (LOC\n7936) is at operating capacity.  As such, Natural will only schedule Primary\nFirm transports for deliveries to Florida Vermilion (LOC 7936).  AOR/ITS, Secondary\nout-of-path Firm transports and Secondary in-path Firm transports \nwill\nnot\n be available.\n\n \n\nFlorida\nVermilion is located in Vermilion Parish, Louisiana (Segment 24), in Natural's Louisiana\nZone.\n\n \n\nPlease\ncontact your Account Director or Scheduling Representative if you have any\nquestions.\n\n \n\n..\n\nIs the new notice materially different from the prior notice in terms of affected locations, restriction severity, scope, or operational impact? Answer with ONLY 'YES' or 'NO'."
+          }
+        ]
+      },
+      "success": true,
+      "request_id": "req_011CfSZiATMnkgthSt8pctCs",
+      "response": {
+        "id": "msg_011CfSZiAsujFBPU7TgNbsss",
+        "container": null,
+        "content": [
+          {
+            "citations": null,
+            "text": "NO",
+            "type": "text"
+          }
+        ],
+        "model": "claude-sonnet-4-6",
+        "role": "assistant",
+        "stop_details": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "type": "message",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 572,
+          "output_tokens": 4,
+          "output_tokens_details": null,
+          "server_tool_use": null,
+          "service_tier": "standard"
+        },
+        "diagnostics": null
+      }
+    }
+  ],
+  "helper_results": [
+    {
+      "helper": "llm_is_supersede_material",
+      "result": false
+    }
+  ],
+  "state_after": {
+    "notices": [
+      {
+        "notice_id": 46624,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "CAPACITY CONSTRAINT",
+        "notice_subtype": "POINTS",
+        "effective_datetime": "2026-01-12T10:51:37",
+        "end_datetime": "2026-03-31T09:00:00",
+        "post_datetime": "2026-01-12T10:51:37",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "FGT VERMILLION (LOC 7936) - PRIMARY ONLY",
+        "body_text": "ANR/NGPL SOUTH JOLIET AT CAPACITY\n\nFLORIDA\nVERMILION (LOC 7936) – PRIMARY ONLY\n\n \n\nDue\nto current operating conditions, effective for gas day \nWednesday, January 14,\n2026, Timely Cycle and continuing until further notice,\n Florida Vermilion (LOC\n7936) is at operating capacity.  As such, Natural will only schedule Primary\nFirm transports for deliveries to Florida Vermilion (LOC 7936).  AOR/ITS, Secondary\nout-of-path Firm transports and Secondary in-path Firm transports \nwill\nnot\n be available.\n\n \n\nFlorida\nVermilion is located in Vermilion Parish, Louisiana (Segment 24), in Natural's Louisiana\nZone.\n\n \n\nPlease\ncontact your Account Director or Scheduling Representative if you have any\nquestions.\n\n \n\n..",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 1,
+        "confidence_score": 0.7,
+        "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: medium curtailment impact \\u2014 firm service affected with 10\\u201330% reduction (+0.20 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-26T18:59:06.126030",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46624_CAPACITY CONSTRAINT.html"
+      },
+      {
+        "notice_id": 96624,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "CAPACITY CONSTRAINT",
+        "notice_subtype": "POINTS",
+        "effective_datetime": "2026-01-12T10:51:37",
+        "end_datetime": "2026-03-31T09:00:00",
+        "post_datetime": "2026-01-12T10:51:37",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "SUPERSEDE",
+        "prior_notice_id": 46624,
+        "subject": "FGT VERMILLION (LOC 7936) - PRIMARY ONLY",
+        "body_text": "ANR/NGPL SOUTH JOLIET AT CAPACITY\n\nFLORIDA\nVERMILION (LOC 7936) – PRIMARY ONLY\n\n \n\nDue\nto current operating conditions, effective for gas day \nWednesday, January 14,\n2026, Timely Cycle and continuing until further notice,\n Florida Vermilion (LOC\n7936) is at operating capacity.  As such, Natural will only schedule Primary\nFirm transports for deliveries to Florida Vermilion (LOC 7936).  AOR/ITS, Secondary\nout-of-path Firm transports and Secondary in-path Firm transports \nwill\nnot\n be available.\n\n \n\nFlorida\nVermilion is located in Vermilion Parish, Louisiana (Segment 24), in Natural's Louisiana\nZone.\n\n \n\nPlease\ncontact your Account Director or Scheduling Representative if you have any\nquestions.\n\n \n\n..",
+        "outage_report_ref": null,
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 0,
+        "confidence_score": 0.0,
+        "validity_flags": "[\"VC-1: superseded notice \\u2014 LLM assessed as not materially different from prior notice 46624; suppressed to avoid duplicate signal\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-26T18:59:14.051280",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/legacy/20260926T185618.823020Z/inputs/96624_unchanged_supersede.html"
+      }
+    ],
+    "notice_locations": [
+      {
+        "id": 1,
+        "location_index": 0,
+        "notice_id": 46624,
+        "loc_code": "7936",
+        "loc_name": "Florida Vermilion",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      },
+      {
+        "id": 2,
+        "location_index": 0,
+        "notice_id": 46624,
+        "loc_code": "7936",
+        "loc_name": "Florida Vermilion",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      },
+      {
+        "id": 3,
+        "location_index": 0,
+        "notice_id": 46624,
+        "loc_code": "7936",
+        "loc_name": "Florida Vermilion",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      },
+      {
+        "id": 4,
+        "location_index": 0,
+        "notice_id": 96624,
+        "loc_code": "7936",
+        "loc_name": "Florida Vermilion",
+        "segment": "24",
+        "compressor_station": null,
+        "zone": "Louisiana Zone",
+        "system": null
+      }
+    ],
+    "notice_restrictions": [
+      {
+        "id": 1,
+        "location_index": 0,
+        "notice_id": 46624,
+        "service_type": "AOR_ITS",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 2,
+        "location_index": 0,
+        "notice_id": 46624,
+        "service_type": "SECONDARY_OUTPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 3,
+        "location_index": 0,
+        "notice_id": 46624,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 4,
+        "location_index": 0,
+        "notice_id": 46624,
+        "service_type": "AOR_ITS",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 5,
+        "location_index": 0,
+        "notice_id": 46624,
+        "service_type": "SECONDARY_OUTPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 6,
+        "location_index": 0,
+        "notice_id": 46624,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 7,
+        "location_index": 0,
+        "notice_id": 46624,
+        "service_type": "AOR_ITS",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 8,
+        "location_index": 0,
+        "notice_id": 46624,
+        "service_type": "SECONDARY_OUTPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 9,
+        "location_index": 0,
+        "notice_id": 46624,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 10,
+        "location_index": 0,
+        "notice_id": 96624,
+        "service_type": "AOR_ITS",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 11,
+        "location_index": 0,
+        "notice_id": 96624,
+        "service_type": "SECONDARY_OUTPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      },
+      {
+        "id": 12,
+        "location_index": 0,
+        "notice_id": 96624,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "DELIVERY",
+        "start_datetime": "2026-01-14",
+        "end_datetime": "TBD"
+      }
+    ],
+    "foreign_key_violations": []
+  },
+  "notice_chain": [
+    {
+      "notice_id": 46624,
+      "subject": "FGT VERMILLION (LOC 7936) - PRIMARY ONLY",
+      "status": "INITIATE",
+      "prior_notice_id": null,
+      "depth": 2
+    },
+    {
+      "notice_id": 96624,
+      "subject": "FGT VERMILLION (LOC 7936) - PRIMARY ONLY",
+      "status": "SUPERSEDE",
+      "prior_notice_id": 46624,
+      "depth": 1
+    }
+  ],
+  "reopened_state_equal": true,
+  "category": "revision",
+  "annotations": {},
+  "transformation": {
+    "source_notice": 46624,
+    "operation": "identity and supersede linkage only; operational body unchanged"
+  },
+  "evidence_ref": "cases/unchanged-revision.json",
+  "database": "reprocessing.db"
+}

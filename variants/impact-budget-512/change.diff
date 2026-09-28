@@ -1,0 +1,11 @@
+--- inherited/llm_utils.py
++++ variants/impact-budget-512/llm_utils.py
+@@ -536,7 +536,7 @@
+         client = get_client()
+         response = client.messages.create(
+             model=_MODEL,
+-            max_tokens=200,
++            max_tokens=512,
+             messages=[{"role": "user", "content": prompt}],
+         )
+         full_response = response.content[0].text.strip()

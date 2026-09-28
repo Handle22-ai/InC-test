@@ -1,0 +1,34 @@
+[
+  {
+    "id": "real-46624-unknown-timezone",
+    "capture": "evidence/candidates/impact-budget-512/full/20260926T191722.363460Z/results.json",
+    "case_id": "46624",
+    "source_path": "inherited/evaluation/notices/46624_CAPACITY CONSTRAINT.html",
+    "source_sha256": "faf2ec98d47909410928c664ccec1287e449cab56a2b410d2fd1ddf25af0811b",
+    "source_quote": "Secondary",
+    "expected": {
+      "classification": "SIGNAL_CANDIDATE",
+      "recommendation_allowed": false,
+      "time_basis": "UNRESOLVED",
+      "publication_disposition": "REVIEW_REQUIRED",
+      "initial_decision": false
+    },
+    "basis": "Saved source firm-service unavailability, not label or synthetic timezone. Expected candidate only is explicitly authorized by owner request; no materiality authorization."
+  },
+  {
+    "id": "real-46507-unknown-timezone",
+    "capture": "evidence/candidates/impact-budget-512/full/20260926T191722.363460Z/results.json",
+    "case_id": "46507",
+    "source_path": "inherited/evaluation/notices/46507_CAPACITY CONSTRAINT.html",
+    "source_sha256": "6cc6c6ea924d52f09130dc83de3d1a65a25f75982750faddb57e77c5d7f6d084",
+    "source_quote": "will not",
+    "expected": {
+      "classification": "SIGNAL_CANDIDATE",
+      "recommendation_allowed": false,
+      "time_basis": "UNRESOLVED",
+      "publication_disposition": "REVIEW_REQUIRED",
+      "initial_decision": false
+    },
+    "basis": "Saved source firm-service unavailability, not label or synthetic timezone. Expected candidate only is explicitly authorized by owner request; no materiality authorization."
+  }
+]

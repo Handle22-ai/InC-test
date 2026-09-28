@@ -1,0 +1,21 @@
+{
+  "status": "owner-approved",
+  "decision": "context/decisions/012-context-index.md",
+  "owner_record": "evidence/positive-path/20260928-owner-separation/owner-request.txt",
+  "manifest_sha256": "d75d123f3ff5f9b7ec2cfa3575817ebf8e297b77b4df9bf341c30520603a3b4e",
+  "core_content_paths": {
+    "notice-snapshot-rebuild": null,
+    "notice-snapshot-maintenance": null,
+    "recommendation-classification-maintenance": [
+      "docs/system-contract.md",
+      "docs/signal-contract.md",
+      "context/decisions/007-br-firm-proposal-classification.md",
+      "context/failures/spec-evidence-current.md",
+      "context/decisions/008-derivation-integrity-correction.md",
+      "context/decisions/009-normalized-harness-hardening.md",
+      "context/decisions/010-integrated-release-hardening.md",
+      "context/decisions/011-classification-actionability.md",
+      "requirements/real-positive-witnesses.json"
+    ]
+  }
+}

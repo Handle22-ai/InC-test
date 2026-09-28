@@ -1,0 +1,8 @@
+{
+  "requirement": "SAFETY-001",
+  "source": "evidence/reviews/v2/excluded_requests.json",
+  "finding": "Three API-success impact generations exhausted the configured cap without a usable verdict; application persisted normal default-small decisions.",
+  "domain": "generation budget / application error visibility; not observed provider transport fault",
+  "candidate": "512-token variant completes sampled executions; no general semantic-correctness claim",
+  "requirements_changed": false
+}

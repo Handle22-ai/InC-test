@@ -1,0 +1,110 @@
+{
+  "A": {
+    "expected": {
+      "classification": "SIGNAL_CANDIDATE",
+      "disposition": "CANDIDATE_ONLY",
+      "recommendation_allowed": false
+    },
+    "requirement": "SIGNAL-001",
+    "basis": "Independent synthetic boundary witness, owner-requested integrated 12-step sequence; no trading authorization."
+  },
+  "B": {
+    "expected": {
+      "classification": "SIGNAL_CANDIDATE",
+      "disposition": "CANDIDATE_ONLY",
+      "recommendation_allowed": false
+    },
+    "requirement": "SIGNAL-001",
+    "basis": "Independent synthetic boundary witness, owner-requested integrated 12-step sequence; no trading authorization."
+  },
+  "C": {
+    "expected": {
+      "classification": "NON_SIGNAL",
+      "disposition": "SUPPRESSED",
+      "recommendation_allowed": false
+    },
+    "requirement": "STATE-004",
+    "basis": "Independent synthetic boundary witness, owner-requested integrated 12-step sequence; no trading authorization."
+  },
+  "D": {
+    "expected": {
+      "classification": "NON_SIGNAL",
+      "disposition": "SUPPRESSED",
+      "recommendation_allowed": false
+    },
+    "requirement": "STATE-004",
+    "basis": "Independent synthetic boundary witness, owner-requested integrated 12-step sequence; no trading authorization."
+  },
+  "E": {
+    "expected": {
+      "classification": "SIGNAL_CANDIDATE",
+      "disposition": "CANDIDATE_ONLY",
+      "recommendation_allowed": false
+    },
+    "requirement": "SIGNAL-001",
+    "basis": "Independent synthetic boundary witness, owner-requested integrated 12-step sequence; no trading authorization."
+  },
+  "F": {
+    "expected": {
+      "classification": "SIGNAL_CANDIDATE",
+      "disposition": "CANDIDATE_ONLY",
+      "recommendation_allowed": false
+    },
+    "requirement": "SIGNAL-001",
+    "basis": "Independent synthetic boundary witness, owner-requested integrated 12-step sequence; no trading authorization."
+  },
+  "unusable-impact": {
+    "expected": {
+      "classification": "SIGNAL_CANDIDATE",
+      "disposition": "CANDIDATE_ONLY",
+      "recommendation_allowed": false
+    },
+    "requirement": "INPUT-002",
+    "basis": "Re-frozen 2026-09-28 under REMEDIATION-001, approved by Thomas Hand: an unusable impact helper no longer vetoes a firm disruption the rules decide without it (spec D5-008). Previous basis: independent synthetic boundary witness, owner-requested integrated 12-step sequence; no trading authorization."
+  },
+  "unavailable-extraction": {
+    "expected": {
+      "classification": "UNRESOLVED",
+      "disposition": "ERROR",
+      "recommendation_allowed": false
+    },
+    "requirement": "INPUT-002",
+    "basis": "Independent synthetic boundary witness, owner-requested integrated 12-step sequence; no trading authorization."
+  },
+  "missing-history": {
+    "expected": {
+      "classification": "UNRESOLVED",
+      "disposition": "REVIEW_REQUIRED",
+      "recommendation_allowed": false
+    },
+    "requirement": "HISTORY-002",
+    "basis": "Independent synthetic boundary witness, owner-requested integrated 12-step sequence; no trading authorization."
+  },
+  "missing-authorization": {
+    "expected": {
+      "classification": "SIGNAL_CANDIDATE",
+      "disposition": "CANDIDATE_ONLY",
+      "recommendation_allowed": false
+    },
+    "requirement": "SIGNAL-001",
+    "basis": "Independent synthetic boundary witness, owner-requested integrated 12-step sequence; no trading authorization."
+  },
+  "routine": {
+    "expected": {
+      "classification": "NON_SIGNAL",
+      "disposition": "NO_SIGNAL",
+      "recommendation_allowed": false
+    },
+    "requirement": "SIGNAL-002",
+    "basis": "Independent synthetic boundary witness, owner-requested integrated 12-step sequence; no trading authorization."
+  },
+  "unsupported-format": {
+    "expected": {
+      "classification": "UNRESOLVED",
+      "disposition": "REVIEW_REQUIRED",
+      "recommendation_allowed": false
+    },
+    "requirement": "INPUT-002",
+    "basis": "Independent synthetic boundary witness, owner-requested integrated 12-step sequence; no trading authorization."
+  }
+}

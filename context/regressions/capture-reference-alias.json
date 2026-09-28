@@ -1,0 +1,24 @@
+{
+  "scope": "SYNTHETIC rebuilt-native format extension only; shared acceptance unchanged",
+  "contract": "context/decisions/005-synthetic-capture-reference-alias.md",
+  "tests": "tests/test_capture_reference_alias.py",
+  "before_test_evidence": "evidence/format-compatibility/20260926T204022.284775Z/alias_tests_before.json",
+  "after_test_evidence": "evidence/format-compatibility/20260926T204022.284775Z/commands_after.json",
+  "checks": [
+    "alias-only valid string/null read, all and chain without fetching",
+    "canonical-only and absent metadata compatibility",
+    "both spellings equal with valid values",
+    "different values rejected explicitly without writes",
+    "invalid types rejected even when equal",
+    "exact replay and canonical refresh keep receipts and payload unchanged",
+    "source-hash conflict policy unchanged",
+    "mixed spellings retain distinct prior chain and children",
+    "unrelated unknown fields still rejected"
+  ],
+  "shared_pre_change": "evidence/storage/20260926T204023.044793Z",
+  "shared_post_change": "evidence/storage/20260926T204254.418956Z",
+  "comparison": "evidence/format-compatibility/20260926T204022.284775Z/comparison.json",
+  "shared_findings_unchanged_per_system": 157,
+  "new_shared_failures": 0,
+  "known_limits": "46528 false positive; inherited replay defects; missing-prior UNKNOWNs; unverified delivery and broader application acceptance"
+}

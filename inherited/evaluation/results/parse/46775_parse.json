@@ -1,0 +1,25 @@
+{
+  "notice_id": 46775,
+  "notice_type": "COMPUTER SYSTEM STATUS",
+  "html_file": "evaluation/notices/46775_COMPUTER SYSTEM STATUS.html",
+  "header": {
+    "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+    "critical": "Y",
+    "type1": "COMPUTER SYSTEM STATUS",
+    "type2": "DART SYSTEM INFORMATION",
+    "notice_effective_date": "02/26/2026 10:15:22AM",
+    "notice_end_date": "02/27/2026 9:00:00am",
+    "post_date": "2/26/2026 10:15:22 AM",
+    "notice_id": "46775",
+    "req_rsp": "1",
+    "rsp_date": "02/26/2026",
+    "status": "INITIATE",
+    "prior_notice_id": "",
+    "subject": "DART Connection Issues"
+  },
+  "body": "DART\nTECHNICAL ISSUES – ID-1 NOMINATION DEADLINE EXTENDED FOR 02-26-26\n\n \n\nDART\nexperienced technical issues.  Due to these issues, the ID-1 nomination\ndeadline for February 26, 2026, will be extended until 10:45 am CCT.  \n\n \n\nIf you have\nany questions, please call your Scheduler.  \n\n \n\n.",
+  "information_only": true,
+  "locations": [],
+  "restrictions": [],
+  "provenance": "llm_extraction"
+}

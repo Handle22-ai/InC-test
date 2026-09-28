@@ -1,0 +1,189 @@
+I approve D1–D6 as bounded assessment-specification decisions, subject
+to the amendments and scope controls below.
+
+Record this message as the owner decision. Distinguish requirements
+directly supported by the challenge from owner-approved assessment
+assumptions. Do not imply approval by InCommodities or a trading desk.
+
+This authorizes specification/governance completion and the necessary
+consistency verification. It does not authorize implementing the
+deferred event, delivery, reconciliation, or decision-history systems.
+
+D1 — APPROVE WITH EXPLICIT SCOPE
+
+Adopt the proposed explicit-chain event identity, source-version
+identity, persistent alert-key/attempt/acknowledgement requirements,
+same-key retry behavior, and assessment-only retention policy.
+
+Keep storage receipts distinct from delivery acknowledgements.
+Do not claim duplicate-free delivery without the required receiver
+contract and execution evidence.
+
+An incomplete or disputed chain blocks automatic alerting, not retention
+of the input or an explicitly uncertain candidate for review.
+
+D2 — APPROVE WITH AMENDMENTS
+
+Adopt suppression of operationally unchanged revisions and explicit
+materiality adjudication for other changes.
+
+Clarify initial versus update alerts:
+
+- If a resolved event has no prior initial-alert record or attempt,
+  its first material and actionable decision may create the initial alert.
+- If an initial-alert record already exists, a qualifying material
+  revision produces a linked update.
+- An unacknowledged initial attempt reuses its existing key; replay
+  must not create another initial alert.
+
+For the bounded same-ID/different-source-content case:
+retain the conflicting capture as evidence, preserve the last accepted
+snapshot, and require review before the changed content can authorize
+alerting. Do not automatically overwrite, merge, discard, or reconcile
+the conflict.
+
+Automatic reconciliation of that conflict remains outside the
+implemented storage scope. This is a specified refusal boundary,
+not a claim that a complete source-version service exists.
+
+D3 — APPROVE WITH REPRODUCIBILITY CLARIFICATION
+
+Adopt the explicit reference clock, recorded source-time semantics,
+history-gap deferral, reconciliation decisions, historical-only boundary,
+and human review of unresolved actionability.
+
+Define order-independent final-view checks using the same accepted
+source versions, normalized facts, reference time, and approved
+adjudications. Do not expect independently regenerated stochastic model
+outputs to be identical.
+
+Historical delivery attempts remain historical; order independence of
+the final view does not imply identical real-time delivery histories.
+
+Preserve the distinction between historical label evaluation and
+permission to issue a current alert. Do not rescore old labels against
+today's clock.
+
+D4 — APPROVE
+
+Adopt immutable decision identity and retrieval of the context actually
+available at decision time.
+
+Later information and corrections create linked decisions. They must
+not be retroactively presented as facts known during an earlier decision.
+
+Preserve missing-history observations as missingness, rather than
+backfilling later facts into an old explanation.
+
+Keep assessment retention bounded as proposed; make no production
+retention or complete historical-service implementation claim.
+
+D5 — APPROVE WITH SCORING CORRECTION
+
+Adopt explicit uncertain/error dispositions, reason codes, retained
+input evidence, and preservation of the last valid snapshot.
+
+Replace the blanket "unscorable behavior evidence" treatment:
+
+Classification is unscorable only where the necessary semantic result
+is unavailable. Structural, persistence, uncertainty, and failure-handling
+requirements remain evaluable when their required observations exist.
+
+Keep application dispositions distinct from harness PASS/FAIL/ERROR/
+UNKNOWN statuses and execution-domain classifications.
+
+A successful API response with an unusable verdict must not silently
+become a valid negative or "small impact" decision under the new policy.
+
+D6 — APPROVE WITH ORACLE AND AUTHORIZATION SEPARATION
+
+Adopt the proposed bounded human-adjudicated materiality policy and
+source-grounded optional-field treatment.
+
+The supplied 14 labels remain an evaluation oracle only. They do not
+authorize runtime alerts and must not be supplied as the implementation's
+answer to the classification problem.
+
+For the assessment's alerting policy, require recorded approval and
+satisfied identity, history, and actionability conditions. Model proposals
+or a known test label are not approval.
+
+Strong-signal characteristics remain evidence to weigh, not an all-fields
+checklist. Do not invent numeric cutoffs or convert percentages into
+absolute volume without the necessary source basis.
+
+Approve prospective binding use of the narrowly described annotated
+field checks and unchanged-operational supersede checks only within
+their documented scope and preconditions.
+
+Before applying that scope, verify that included annotations have
+traceable source support. Unsupported annotations remain unapproved or
+not evaluated and must be listed. This approval is not a claim that
+the owner personally audited every annotation.
+
+Do not expand narrow checks into proof of complete field extraction,
+geographic relevance, absolute volume accuracy, or real material-update
+handling.
+
+APPLY THE DECISIONS CONSISTENTLY
+
+1. Update the current specification, machine-readable requirements,
+   decisions, assumption statuses, coverage, harness description, and
+   selected context where affected.
+
+2. Use existing requirement IDs where appropriate. D1–D6 are decision
+   labels, not replacements for the requirement identifiers.
+
+3. Separate:
+   - authority/source basis;
+   - approval and enforcement scope;
+   - implementation status;
+   - check/oracle availability;
+   - demonstrated evidence.
+
+   An approved requirement may remain unimplemented or unevaluated.
+   Do not equate approval with proof.
+
+4. Reconcile OUTPUT-004, OUTPUT-005, OUTPUT-006, and STATE-004 so the
+   rules, reporter, coverage, and context selection express the same
+   prospective governance.
+
+   Do not retain a hidden second interpretation that contradicts the
+   current requirement metadata. Use the smallest practical correction,
+   not a new governance framework.
+
+5. Preserve historical source snapshots, requirements, labels, outputs,
+   reports, and acceptance outcomes. New policy applies to new identified
+   evaluations, not retrospective recertification of old runs.
+
+6. Run the affected offline requirement/governance checks and existing
+   quality/test commands. Rerun the relevant captured evaluations under
+   the new identified policy where their inputs and oracles suffice.
+
+   If a summary changes because a previously exploratory check is now
+   approved, attribute that to governance—not an implementation repair.
+
+   Where no executable check or sufficient fixture exists, report
+   NOT IMPLEMENTED / NOT EVALUATED explicitly. Do not fabricate a pass
+   or weaken the intended requirement.
+
+7. Do not modify inherited source, the rebuilt storage behavior, model
+   configuration, supplied labels, or numerical acceptance thresholds
+   as part of this specification pass.
+
+8. Do not modify the prepared or running isolated-replay workspace.
+   That historical exercise does not depend on these new policies.
+   Preserve and describe its original contract and context.
+
+RETURN
+
+- Decisions adopted and any source-support exceptions.
+- Exact requirement and governance changes.
+- Implemented/evaluated versus specified-only coverage.
+- Commands executed and actual results.
+- Any changed gate summaries and their precise cause.
+- New current document/context identities.
+- Remaining fresh-session and delivery work.
+
+Do not begin another broad audit, application rebuild, or live-model
+experiment. Do not push or share the repository.

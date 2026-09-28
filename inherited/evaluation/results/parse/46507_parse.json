@@ -1,0 +1,81 @@
+{
+  "notice_id": 46507,
+  "notice_type": "CAPACITY CONSTRAINT",
+  "html_file": "evaluation/notices/46507_CAPACITY CONSTRAINT_SEGMENTS.html",
+  "header": {
+    "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+    "critical": "Y",
+    "type1": "CAPACITY CONSTRAINT",
+    "type2": "SEGMENTS",
+    "notice_effective_date": "12/01/2025  1:52:24PM",
+    "notice_end_date": "03/31/2026 9:00:00am",
+    "post_date": "12/1/2025 1:52:24 PM",
+    "notice_id": "46507",
+    "req_rsp": "1",
+    "rsp_date": "12/01/2025",
+    "status": "INITIATE",
+    "prior_notice_id": "",
+    "subject": "SEGMENT 14 WB - CS 113 - PRIMARY ONLY"
+  },
+  "body": "SEGMENT 17 FORCE MAJURE\n\nSEGMENT 14 WESTBOUND – CS 113 – PRIMARY ONLY\n\n \n\nDue to current operating\nconditions, Natural is at operating capacity for transports \nwestbound\n on\nthe Amarillo Mainline System through Compressor Station 113 located in Will\nCounty, IL (Natural's Market Delivery Zone).  Therefore, effective for gas day,\n\nWednesday, December 3, 2025, Timely Cycle and continuing until further\nnotice\n, only Primary Firm and Secondary in-path Firm transports will be\nscheduled.  AOR/ITS and Secondary out-of-path Firm transports \nwill not\n\nbe available.\n\n \n\nPlease contact your Account\nDirector or Scheduling Representative if you have any questions.\n\n.",
+  "information_only": false,
+  "locations": [
+    {
+      "location_index": 0,
+      "notice_id": 46507,
+      "loc_code": null,
+      "loc_name": null,
+      "segment": "14",
+      "compressor_station": "113",
+      "zone": "Market Delivery Zone",
+      "system": "Amarillo Mainline System"
+    }
+  ],
+  "restrictions": [
+    {
+      "notice_id": 46507,
+      "location_index": 0,
+      "service_type": "PRIMARY_FIRM",
+      "restriction_type": "SCHEDULED",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "WESTBOUND",
+      "start_datetime": "2025-12-03",
+      "end_datetime": "TBD"
+    },
+    {
+      "notice_id": 46507,
+      "location_index": 0,
+      "service_type": "SECONDARY_INPATH_FIRM",
+      "restriction_type": "SCHEDULED",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "WESTBOUND",
+      "start_datetime": "2025-12-03",
+      "end_datetime": "TBD"
+    },
+    {
+      "notice_id": 46507,
+      "location_index": 0,
+      "service_type": "AOR_ITS",
+      "restriction_type": "UNAVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "WESTBOUND",
+      "start_datetime": "2025-12-03",
+      "end_datetime": "TBD"
+    },
+    {
+      "notice_id": 46507,
+      "location_index": 0,
+      "service_type": "SECONDARY_OUTPATH_FIRM",
+      "restriction_type": "UNAVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "WESTBOUND",
+      "start_datetime": "2025-12-03",
+      "end_datetime": "TBD"
+    }
+  ],
+  "provenance": "llm_extraction"
+}

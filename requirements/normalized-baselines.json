@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "accepted_baseline": {
+    "scope": "bounded-normalized-classifier-v1",
+    "status": "accepted",
+    "path": "evidence/derivation-integrity/20260928T011856Z/qualification-1",
+    "results_sha256": "b9d9c7e540ad15e769d6410fe890a2d1e87bfe33ddc0b4baddb2d173d56297d1",
+    "manifest_sha256": "4670be34e79b4bf90427af2db65cdd8c389549c9a319dac14f1974de138d3085",
+    "registration_authority": "context/decisions/009-context-index.record.json",
+    "basis": "Explicit structural owner request item 12, ADR 009; repeat-qualified bounded regression reference only. Original Gate 3 UNKNOWN is retained, not relabeled.",
+    "repeat_qualification": {
+      "path": "evidence/derivation-integrity/20260928T011856Z/qualification-2",
+      "results_sha256": "b9d9c7e540ad15e769d6410fe890a2d1e87bfe33ddc0b4baddb2d173d56297d1",
+      "manifest_sha256": "4670be34e79b4bf90427af2db65cdd8c389549c9a319dac14f1974de138d3085"
+    }
+  }
+}

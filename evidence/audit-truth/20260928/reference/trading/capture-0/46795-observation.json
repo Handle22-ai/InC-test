@@ -1,0 +1,905 @@
+{
+  "id": "capture-0/46795",
+  "case_id": "46795",
+  "notice_id": 46795,
+  "source_capture": "evidence/candidates/impact-budget-512/full/20260926T191722.363460Z/results.json",
+  "source_input": "inherited/evaluation/notices/46795_OPERATIONAL FLOW ORDER.html",
+  "input_sha256": "94c2e2d71aa6409161b6a72c917afdfb6eb7fd8273a4234d71803a9ae40ac051",
+  "category": "labeled",
+  "expected_signal": false,
+  "inherited_signal": 0,
+  "inherited_execution": "SUCCESS",
+  "inherited_system": "impact-budget-512",
+  "decision": {
+    "decision_id": "900ba9ae-49a9-412f-8b98-a527c17ae39f",
+    "notice_id": 46795,
+    "source_sha256": "94c2e2d71aa6409161b6a72c917afdfb6eb7fd8273a4234d71803a9ae40ac051",
+    "reference_time": "2026-09-26T19:17:22.368165+00:00",
+    "raw_proposal": {
+      "notice": {
+        "notice_id": 46795,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "OPERATIONAL FLOW ORDER",
+        "notice_subtype": "OFO",
+        "effective_datetime": "2026-03-04T14:08:29",
+        "end_datetime": "2026-05-31T09:00:00",
+        "post_datetime": "2026-03-04T14:08:29",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "OPERATIONAL FLOW ORDER - REPORT",
+        "body_text": "OPERATIONAL\nFLOW ORDER – MARKET DELIVERY ZONE – REPORT\n\nOn January 20, 2026, due\nto forecasted colder than normal weather, expected increased load on its\nsystem, anticipated maximum peaking withdrawals from storage facilities, and\nsystem operating conditions, Natural issued an Operational Flow Order (“OFO”) in\nthe Market Delivery Zone effective for Thursday, January 22, 2026 at 9:00 a.m. Central\nClock Time. This action was taken in accordance with Section 23.6 of the\nGeneral Terms and Conditions of Natural's FERC Gas Tariff (“GT&C”).\n\nThe OFO was issued to\nmaintain and preserve the operational integrity of Natural's system and was in\nresponse to the following operational factors: (1) to maintain pressures for\nfirm transportation deliveries in the Market Delivery Zone; and (2) maintain deliverability\nfrom Natural's market area storage fields for firm storage services.\n\nThe OFO did not result in\nany curtailment of primary firm service.  During the OFO, Natural implemented\ndaily and hourly take limitations for firm and interruptible Shippers\n(including Point Operators) at all points in the Market Delivery Zone.  The OFO\nlimited Shippers and Point Operators, on a daily basis, from taking volumes in\nexcess of confirmed transportation nominations plus no-notice rights at\ndelivery points in the Market Delivery Zone, and on an hourly basis to 130% of\ntheir firm service rights.  Hourly rights for interruptible nominations were\nlimited to 105% of the Shipper's interruptible nominations. Additionally,\nShippers and Point Operators were required to flow more ratably during the gas\nday based on service priority and nomination cycles.  \nThe\nfirm service percentage was reduced to 110% on Tuesday, January 27, 2026 at\n9:00 a.m. Central Clock Time, and then  increased back to 130% on Thursday\nFebruary 5, 2026 at 9:00 am Central Clock Time. \n \n\nThese measures were taken\nconsistent with Natural's Tariff due to sustained colder than normal weather in\nthe Market Delivery Zone and anticipated maximum peaking withdrawals from\nstorage facilities.  As the weather conditions moderated and the associated\nhigh gas demand declined, Natural removed the OFO, effective at 9:00 a.m. on\ngas day Monday, February 9, 2026.\n\nThis posting complies\nwith GT&C Section 23.6(h) of Natural's Tariff to describe the specific\noperational factors which caused the Operational Flow Order to be issued and to\nbe lifted.\n\n..",
+        "outage_report_ref": null,
+        "tariff_section": "GT&C Section 23.6(h)",
+        "information_only": 1,
+        "is_signal": 0,
+        "confidence_score": 0.0,
+        "validity_flags": "[\"VC-1: information-only notice \\u2014 Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-26T19:18:50.634026",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46795_OPERATIONAL FLOW ORDER.html"
+      },
+      "locations": [
+        {
+          "location_index": 0,
+          "notice_id": 46795,
+          "loc_code": null,
+          "loc_name": null,
+          "segment": null,
+          "compressor_station": null,
+          "zone": "Market Delivery Zone",
+          "system": null
+        }
+      ],
+      "restrictions": [
+        {
+          "notice_id": 46795,
+          "location_index": 0,
+          "service_type": "PRIMARY_FIRM",
+          "restriction_type": "HOURLY_LIMIT_PCT",
+          "restriction_value": 130.0,
+          "restriction_unit": "PCT_HOURLY",
+          "flow_direction": "OFF_OF_PIPE",
+          "start_datetime": "2026-01-22",
+          "end_datetime": "2026-01-27"
+        },
+        {
+          "notice_id": 46795,
+          "location_index": 0,
+          "service_type": "PRIMARY_FIRM",
+          "restriction_type": "HOURLY_LIMIT_PCT",
+          "restriction_value": 110.0,
+          "restriction_unit": "PCT_HOURLY",
+          "flow_direction": "OFF_OF_PIPE",
+          "start_datetime": "2026-01-27",
+          "end_datetime": "2026-02-05"
+        },
+        {
+          "notice_id": 46795,
+          "location_index": 0,
+          "service_type": "PRIMARY_FIRM",
+          "restriction_type": "HOURLY_LIMIT_PCT",
+          "restriction_value": 130.0,
+          "restriction_unit": "PCT_HOURLY",
+          "flow_direction": "OFF_OF_PIPE",
+          "start_datetime": "2026-02-05",
+          "end_datetime": "2026-02-09"
+        },
+        {
+          "notice_id": 46795,
+          "location_index": 0,
+          "service_type": "INTERRUPTIBLE",
+          "restriction_type": "HOURLY_LIMIT_PCT",
+          "restriction_value": 105.0,
+          "restriction_unit": "PCT_HOURLY",
+          "flow_direction": "OFF_OF_PIPE",
+          "start_datetime": "2026-01-22",
+          "end_datetime": "2026-02-09"
+        }
+      ]
+    },
+    "semantic_evidence": {
+      "extraction_usable": true,
+      "helpers": [],
+      "execution_error": null,
+      "source_media_type": "text/html"
+    },
+    "normalized_input": {
+      "version": 1,
+      "normalization_trace": [
+        {
+          "field": "content_kind",
+          "source_basis": "Captured notice.information_only and restrictions; validate against source.fields.body",
+          "source_value": {
+            "information_only": 1,
+            "restriction_count": 4
+          },
+          "normalized_value": "INFORMATIONAL",
+          "supplied_by": "model",
+          "unknown_handling": "Missing content meaning stays UNKNOWN; information plus a known restriction is contradictory"
+        },
+        {
+          "field": "availability",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [
+            "HOURLY_LIMIT_PCT",
+            "HOURLY_LIMIT_PCT",
+            "HOURLY_LIMIT_PCT",
+            "HOURLY_LIMIT_PCT"
+          ],
+          "normalized_value": "PARTIAL",
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "services",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [
+            "PRIMARY_FIRM",
+            "PRIMARY_FIRM",
+            "PRIMARY_FIRM",
+            "INTERRUPTIBLE"
+          ],
+          "normalized_value": [
+            "INTERRUPTIBLE",
+            "PRIMARY_FIRM"
+          ],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "restrictions",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [
+            {
+              "notice_id": 46795,
+              "location_index": 0,
+              "service_type": "PRIMARY_FIRM",
+              "restriction_type": "HOURLY_LIMIT_PCT",
+              "restriction_value": 130.0,
+              "restriction_unit": "PCT_HOURLY",
+              "flow_direction": "OFF_OF_PIPE",
+              "start_datetime": "2026-01-22",
+              "end_datetime": "2026-01-27"
+            },
+            {
+              "notice_id": 46795,
+              "location_index": 0,
+              "service_type": "PRIMARY_FIRM",
+              "restriction_type": "HOURLY_LIMIT_PCT",
+              "restriction_value": 110.0,
+              "restriction_unit": "PCT_HOURLY",
+              "flow_direction": "OFF_OF_PIPE",
+              "start_datetime": "2026-01-27",
+              "end_datetime": "2026-02-05"
+            },
+            {
+              "notice_id": 46795,
+              "location_index": 0,
+              "service_type": "PRIMARY_FIRM",
+              "restriction_type": "HOURLY_LIMIT_PCT",
+              "restriction_value": 130.0,
+              "restriction_unit": "PCT_HOURLY",
+              "flow_direction": "OFF_OF_PIPE",
+              "start_datetime": "2026-02-05",
+              "end_datetime": "2026-02-09"
+            },
+            {
+              "notice_id": 46795,
+              "location_index": 0,
+              "service_type": "INTERRUPTIBLE",
+              "restriction_type": "HOURLY_LIMIT_PCT",
+              "restriction_value": 105.0,
+              "restriction_unit": "PCT_HOURLY",
+              "flow_direction": "OFF_OF_PIPE",
+              "start_datetime": "2026-01-22",
+              "end_datetime": "2026-02-09"
+            }
+          ],
+          "normalized_value": [
+            {
+              "service": "PRIMARY_FIRM",
+              "availability": "PARTIAL",
+              "restriction_type": "HOURLY_LIMIT_PCT",
+              "status": "UNKNOWN",
+              "location_index": 0,
+              "source_start": "2026-01-22",
+              "source_end": "2026-01-27",
+              "evidence_ref": "source.fields.body"
+            },
+            {
+              "service": "PRIMARY_FIRM",
+              "availability": "PARTIAL",
+              "restriction_type": "HOURLY_LIMIT_PCT",
+              "status": "UNKNOWN",
+              "location_index": 0,
+              "source_start": "2026-01-27",
+              "source_end": "2026-02-05",
+              "evidence_ref": "source.fields.body"
+            },
+            {
+              "service": "PRIMARY_FIRM",
+              "availability": "PARTIAL",
+              "restriction_type": "HOURLY_LIMIT_PCT",
+              "status": "UNKNOWN",
+              "location_index": 0,
+              "source_start": "2026-02-05",
+              "source_end": "2026-02-09",
+              "evidence_ref": "source.fields.body"
+            },
+            {
+              "service": "INTERRUPTIBLE",
+              "availability": "PARTIAL",
+              "restriction_type": "HOURLY_LIMIT_PCT",
+              "status": "UNKNOWN",
+              "location_index": 0,
+              "source_start": "2026-01-22",
+              "source_end": "2026-02-09",
+              "evidence_ref": "source.fields.body"
+            }
+          ],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "locations",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [
+            {
+              "location_index": 0,
+              "notice_id": 46795,
+              "loc_code": null,
+              "loc_name": null,
+              "segment": null,
+              "compressor_station": null,
+              "zone": "Market Delivery Zone",
+              "system": null
+            }
+          ],
+          "normalized_value": [
+            {
+              "kind": "ZONE",
+              "value": "Market Delivery Zone",
+              "evidence_ref": "source.fields.body"
+            }
+          ],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "quantities",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [
+            {
+              "notice_id": 46795,
+              "location_index": 0,
+              "service_type": "PRIMARY_FIRM",
+              "restriction_type": "HOURLY_LIMIT_PCT",
+              "restriction_value": 130.0,
+              "restriction_unit": "PCT_HOURLY",
+              "flow_direction": "OFF_OF_PIPE",
+              "start_datetime": "2026-01-22",
+              "end_datetime": "2026-01-27"
+            },
+            {
+              "notice_id": 46795,
+              "location_index": 0,
+              "service_type": "PRIMARY_FIRM",
+              "restriction_type": "HOURLY_LIMIT_PCT",
+              "restriction_value": 110.0,
+              "restriction_unit": "PCT_HOURLY",
+              "flow_direction": "OFF_OF_PIPE",
+              "start_datetime": "2026-01-27",
+              "end_datetime": "2026-02-05"
+            },
+            {
+              "notice_id": 46795,
+              "location_index": 0,
+              "service_type": "PRIMARY_FIRM",
+              "restriction_type": "HOURLY_LIMIT_PCT",
+              "restriction_value": 130.0,
+              "restriction_unit": "PCT_HOURLY",
+              "flow_direction": "OFF_OF_PIPE",
+              "start_datetime": "2026-02-05",
+              "end_datetime": "2026-02-09"
+            },
+            {
+              "notice_id": 46795,
+              "location_index": 0,
+              "service_type": "INTERRUPTIBLE",
+              "restriction_type": "HOURLY_LIMIT_PCT",
+              "restriction_value": 105.0,
+              "restriction_unit": "PCT_HOURLY",
+              "flow_direction": "OFF_OF_PIPE",
+              "start_datetime": "2026-01-22",
+              "end_datetime": "2026-02-09"
+            }
+          ],
+          "normalized_value": [
+            {
+              "kind": "HOURLY_LIMIT_PCT",
+              "unit": "PERCENT_ENTITLEMENT",
+              "value": 130.0,
+              "basis": "PCT_HOURLY",
+              "evidence_ref": "source.fields.body"
+            },
+            {
+              "kind": "HOURLY_LIMIT_PCT",
+              "unit": "PERCENT_ENTITLEMENT",
+              "value": 110.0,
+              "basis": "PCT_HOURLY",
+              "evidence_ref": "source.fields.body"
+            },
+            {
+              "kind": "HOURLY_LIMIT_PCT",
+              "unit": "PERCENT_ENTITLEMENT",
+              "value": 130.0,
+              "basis": "PCT_HOURLY",
+              "evidence_ref": "source.fields.body"
+            },
+            {
+              "kind": "HOURLY_LIMIT_PCT",
+              "unit": "PERCENT_ENTITLEMENT",
+              "value": 105.0,
+              "basis": "PCT_HOURLY",
+              "evidence_ref": "source.fields.body"
+            }
+          ],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "restriction_status",
+          "source_basis": "Notice Stat Desc header retained in notice.status",
+          "source_value": "INITIATE",
+          "normalized_value": "INITIATE",
+          "supplied_by": "source_parser",
+          "unknown_handling": "Unrecognized status has no inferred lifecycle semantics"
+        },
+        {
+          "field": "source_time",
+          "source_basis": "Source-parser header strings plus model-extracted restriction intervals; only explicit offsets converted",
+          "source_value": {
+            "effective_datetime": "2026-03-04T14:08:29",
+            "end_datetime": "2026-05-31T09:00:00",
+            "restriction_intervals": [
+              [
+                "2026-01-22",
+                "2026-01-27"
+              ],
+              [
+                "2026-01-27",
+                "2026-02-05"
+              ],
+              [
+                "2026-02-05",
+                "2026-02-09"
+              ],
+              [
+                "2026-01-22",
+                "2026-02-09"
+              ]
+            ]
+          },
+          "normalized_value": {
+            "start_time": null,
+            "end_time": null,
+            "time_basis": "UNRESOLVED",
+            "timezone_known": false
+          },
+          "supplied_by": "normalizer",
+          "unknown_handling": "Naive/date-only strings and mixed intervals remain UNRESOLVED; no gas-day or timezone inference"
+        },
+        {
+          "field": "history",
+          "source_basis": "Explicit source-parser prior header and supplied retained history",
+          "source_value": {
+            "status": "INITIATE",
+            "prior_notice_id": null
+          },
+          "normalized_value": {
+            "prior_notice_id": null,
+            "available_notice_ids": [
+              46507,
+              46604,
+              46615,
+              46624,
+              46775
+            ]
+          },
+          "supplied_by": "retained_history",
+          "unknown_handling": "Missing, unsupported or conflicting chain remains review; no ID-order inference"
+        }
+      ],
+      "source": {
+        "pipeline": "NGPL",
+        "media_type": "text/html",
+        "sha256": "94c2e2d71aa6409161b6a72c917afdfb6eb7fd8273a4234d71803a9ae40ac051",
+        "bytes_reference": "sha256:94c2e2d71aa6409161b6a72c917afdfb6eb7fd8273a4234d71803a9ae40ac051",
+        "fields": {
+          "body": "OPERATIONAL\nFLOW ORDER – MARKET DELIVERY ZONE – REPORT\n\nOn January 20, 2026, due\nto forecasted colder than normal weather, expected increased load on its\nsystem, anticipated maximum peaking withdrawals from storage facilities, and\nsystem operating conditions, Natural issued an Operational Flow Order (“OFO”) in\nthe Market Delivery Zone effective for Thursday, January 22, 2026 at 9:00 a.m. Central\nClock Time. This action was taken in accordance with Section 23.6 of the\nGeneral Terms and Conditions of Natural's FERC Gas Tariff (“GT&C”).\n\nThe OFO was issued to\nmaintain and preserve the operational integrity of Natural's system and was in\nresponse to the following operational factors: (1) to maintain pressures for\nfirm transportation deliveries in the Market Delivery Zone; and (2) maintain deliverability\nfrom Natural's market area storage fields for firm storage services.\n\nThe OFO did not result in\nany curtailment of primary firm service.  During the OFO, Natural implemented\ndaily and hourly take limitations for firm and interruptible Shippers\n(including Point Operators) at all points in the Market Delivery Zone.  The OFO\nlimited Shippers and Point Operators, on a daily basis, from taking volumes in\nexcess of confirmed transportation nominations plus no-notice rights at\ndelivery points in the Market Delivery Zone, and on an hourly basis to 130% of\ntheir firm service rights.  Hourly rights for interruptible nominations were\nlimited to 105% of the Shipper's interruptible nominations. Additionally,\nShippers and Point Operators were required to flow more ratably during the gas\nday based on service priority and nomination cycles.  \nThe\nfirm service percentage was reduced to 110% on Tuesday, January 27, 2026 at\n9:00 a.m. Central Clock Time, and then  increased back to 130% on Thursday\nFebruary 5, 2026 at 9:00 am Central Clock Time. \n \n\nThese measures were taken\nconsistent with Natural's Tariff due to sustained colder than normal weather in\nthe Market Delivery Zone and anticipated maximum peaking withdrawals from\nstorage facilities.  As the weather conditions moderated and the associated\nhigh gas demand declined, Natural removed the OFO, effective at 9:00 a.m. on\ngas day Monday, February 9, 2026.\n\nThis posting complies\nwith GT&C Section 23.6(h) of Natural's Tariff to describe the specific\noperational factors which caused the Operational Flow Order to be issued and to\nbe lifted.\n\n..",
+          "effective_datetime": "2026-03-04T14:08:29",
+          "end_datetime": "2026-05-31T09:00:00",
+          "retained_extraction": "{\"locations\": [{\"compressor_station\": null, \"loc_code\": null, \"loc_name\": null, \"location_index\": 0, \"notice_id\": 46795, \"segment\": null, \"system\": null, \"zone\": \"Market Delivery Zone\"}], \"restrictions\": [{\"end_datetime\": \"2026-01-27\", \"flow_direction\": \"OFF_OF_PIPE\", \"location_index\": 0, \"notice_id\": 46795, \"restriction_type\": \"HOURLY_LIMIT_PCT\", \"restriction_unit\": \"PCT_HOURLY\", \"restriction_value\": 130.0, \"service_type\": \"PRIMARY_FIRM\", \"start_datetime\": \"2026-01-22\"}, {\"end_datetime\": \"2026-02-05\", \"flow_direction\": \"OFF_OF_PIPE\", \"location_index\": 0, \"notice_id\": 46795, \"restriction_type\": \"HOURLY_LIMIT_PCT\", \"restriction_unit\": \"PCT_HOURLY\", \"restriction_value\": 110.0, \"service_type\": \"PRIMARY_FIRM\", \"start_datetime\": \"2026-01-27\"}, {\"end_datetime\": \"2026-02-09\", \"flow_direction\": \"OFF_OF_PIPE\", \"location_index\": 0, \"notice_id\": 46795, \"restriction_type\": \"HOURLY_LIMIT_PCT\", \"restriction_unit\": \"PCT_HOURLY\", \"restriction_value\": 130.0, \"service_type\": \"PRIMARY_FIRM\", \"start_datetime\": \"2026-02-05\"}, {\"end_datetime\": \"2026-02-09\", \"flow_direction\": \"OFF_OF_PIPE\", \"location_index\": 0, \"notice_id\": 46795, \"restriction_type\": \"HOURLY_LIMIT_PCT\", \"restriction_unit\": \"PCT_HOURLY\", \"restriction_value\": 105.0, \"service_type\": \"INTERRUPTIBLE\", \"start_datetime\": \"2026-01-22\"}]}"
+        }
+      },
+      "notice": {
+        "notice_id": 46795,
+        "prior_notice_id": null,
+        "status": "INITIATE",
+        "notice_type": "OPERATIONAL FLOW ORDER"
+      },
+      "facts": {
+        "content_kind": "INFORMATIONAL",
+        "services": [
+          "INTERRUPTIBLE",
+          "PRIMARY_FIRM"
+        ],
+        "availability": "PARTIAL",
+        "locations": [
+          {
+            "kind": "ZONE",
+            "value": "Market Delivery Zone",
+            "evidence_ref": "source.fields.body"
+          }
+        ],
+        "quantities": [
+          {
+            "kind": "HOURLY_LIMIT_PCT",
+            "unit": "PERCENT_ENTITLEMENT",
+            "value": 130.0,
+            "basis": "PCT_HOURLY",
+            "evidence_ref": "source.fields.body"
+          },
+          {
+            "kind": "HOURLY_LIMIT_PCT",
+            "unit": "PERCENT_ENTITLEMENT",
+            "value": 110.0,
+            "basis": "PCT_HOURLY",
+            "evidence_ref": "source.fields.body"
+          },
+          {
+            "kind": "HOURLY_LIMIT_PCT",
+            "unit": "PERCENT_ENTITLEMENT",
+            "value": 130.0,
+            "basis": "PCT_HOURLY",
+            "evidence_ref": "source.fields.body"
+          },
+          {
+            "kind": "HOURLY_LIMIT_PCT",
+            "unit": "PERCENT_ENTITLEMENT",
+            "value": 105.0,
+            "basis": "PCT_HOURLY",
+            "evidence_ref": "source.fields.body"
+          }
+        ],
+        "operational_assertions": [
+          "OPERATIONAL FLOW ORDER – MARKET DELIVERY ZONE – REPORT On January 20, 2026, due to forecasted colder than normal weather, expected increased load on its system, anticipated maximum peaking withdrawals from storage facilities, and system operating conditions, Natural issued an Operational Flow Order (“OFO”) in the Market Delivery Zone effective for Thursday, January 22, 2026 at 9:00 a.m. Central Clock Time. This action was taken in accordance with Section 23.6 of the General Terms and Conditions of Natural's FERC Gas Tariff (“GT&C”). The OFO was issued to maintain and preserve the operational integrity of Natural's system and was in response to the following operational factors: (1) to maintain pressures for firm transportation deliveries in the Market Delivery Zone; and (2) maintain deliverability from Natural's market area storage fields for firm storage services. The OFO did not result in any curtailment of primary firm service. During the OFO, Natural implemented daily and hourly take limitations for firm and interruptible Shippers (including Point Operators) at all points in the Market Delivery Zone. The OFO limited Shippers and Point Operators, on a daily basis, from taking volumes in excess of confirmed transportation nominations plus no-notice rights at delivery points in the Market Delivery Zone, and on an hourly basis to 130% of their firm service rights. Hourly rights for interruptible nominations were limited to 105% of the Shipper's interruptible nominations. Additionally, Shippers and Point Operators were required to flow more ratably during the gas day based on service priority and nomination cycles. The firm service percentage was reduced to 110% on Tuesday, January 27, 2026 at 9:00 a.m. Central Clock Time, and then increased back to 130% on Thursday February 5, 2026 at 9:00 am Central Clock Time. These measures were taken consistent with Natural's Tariff due to sustained colder than normal weather in the Market Delivery Zone and anticipated maximum peaking withdrawals from storage facilities. As the weather conditions moderated and the associated high gas demand declined, Natural removed the OFO, effective at 9:00 a.m. on gas day Monday, February 9, 2026. This posting complies with GT&C Section 23.6(h) of Natural's Tariff to describe the specific operational factors which caused the Operational Flow Order to be issued and to be lifted. .."
+        ],
+        "start_time": null,
+        "end_time": null,
+        "time_basis": "UNRESOLVED",
+        "restrictions": [
+          {
+            "service": "PRIMARY_FIRM",
+            "availability": "PARTIAL",
+            "restriction_type": "HOURLY_LIMIT_PCT",
+            "status": "UNKNOWN",
+            "location_index": 0,
+            "source_start": "2026-01-22",
+            "source_end": "2026-01-27",
+            "evidence_ref": "source.fields.body"
+          },
+          {
+            "service": "PRIMARY_FIRM",
+            "availability": "PARTIAL",
+            "restriction_type": "HOURLY_LIMIT_PCT",
+            "status": "UNKNOWN",
+            "location_index": 0,
+            "source_start": "2026-01-27",
+            "source_end": "2026-02-05",
+            "evidence_ref": "source.fields.body"
+          },
+          {
+            "service": "PRIMARY_FIRM",
+            "availability": "PARTIAL",
+            "restriction_type": "HOURLY_LIMIT_PCT",
+            "status": "UNKNOWN",
+            "location_index": 0,
+            "source_start": "2026-02-05",
+            "source_end": "2026-02-09",
+            "evidence_ref": "source.fields.body"
+          },
+          {
+            "service": "INTERRUPTIBLE",
+            "availability": "PARTIAL",
+            "restriction_type": "HOURLY_LIMIT_PCT",
+            "status": "UNKNOWN",
+            "location_index": 0,
+            "source_start": "2026-01-22",
+            "source_end": "2026-02-09",
+            "evidence_ref": "source.fields.body"
+          }
+        ]
+      },
+      "history": [
+        {
+          "facts": {
+            "availability": "UNKNOWN",
+            "content_kind": "RESTRICTION",
+            "end_time": null,
+            "locations": [
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "SEGMENT",
+                "value": "14"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "COMPRESSOR_STATION",
+                "value": "113"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "ZONE",
+                "value": "Market Delivery Zone"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "SYSTEM",
+                "value": "Amarillo Mainline System"
+              }
+            ],
+            "operational_assertions": [
+              "SEGMENT 17 FORCE MAJURE SEGMENT 14 WESTBOUND – CS 113 – PRIMARY ONLY Due to current operating conditions, Natural is at operating capacity for transports westbound on the Amarillo Mainline System through Compressor Station 113 located in Will County, IL (Natural's Market Delivery Zone). Therefore, effective for gas day, Wednesday, December 3, 2025, Timely Cycle and continuing until further notice , only Primary Firm and Secondary in-path Firm transports will be scheduled. AOR/ITS and Secondary out-of-path Firm transports will not be available. Please contact your Account Director or Scheduling Representative if you have any questions. .."
+            ],
+            "quantities": [],
+            "restrictions": [
+              {
+                "availability": "PARTIAL",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+                "service": "PRIMARY_FIRM",
+                "source_end": "TBD",
+                "source_start": "2025-12-03",
+                "status": "UNKNOWN"
+              },
+              {
+                "availability": "PARTIAL",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+                "service": "SECONDARY_FIRM",
+                "source_end": "TBD",
+                "source_start": "2025-12-03",
+                "status": "UNKNOWN"
+              },
+              {
+                "availability": "UNAVAILABLE",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "UNAVAILABLE",
+                "service": "AOR_ITS",
+                "source_end": "TBD",
+                "source_start": "2025-12-03",
+                "status": "UNKNOWN"
+              },
+              {
+                "availability": "UNAVAILABLE",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "UNAVAILABLE",
+                "service": "SECONDARY_FIRM",
+                "source_end": "TBD",
+                "source_start": "2025-12-03",
+                "status": "UNKNOWN"
+              }
+            ],
+            "services": [
+              "AOR_ITS",
+              "PRIMARY_FIRM",
+              "SECONDARY_FIRM"
+            ],
+            "start_time": null,
+            "time_basis": "UNRESOLVED"
+          },
+          "notice": {
+            "notice_id": 46507,
+            "notice_type": "CAPACITY CONSTRAINT",
+            "prior_notice_id": null,
+            "status": "INITIATE"
+          },
+          "source_sha256": "6cc6c6ea924d52f09130dc83de3d1a65a25f75982750faddb57e77c5d7f6d084"
+        },
+        {
+          "facts": {
+            "availability": "UNKNOWN",
+            "content_kind": "INFORMATIONAL",
+            "end_time": null,
+            "locations": [],
+            "operational_assertions": [
+              "Pursuant to its Tariff (GT&C Section 5.2 (c) (5)), Natural has updated its list of PHMSA Mega Rule Eligible Projects set forth on Appendix F to its Settlement in Docket No. RP22-1222. See the latest posted notice at Informational Postings :: Natural Gas Pipeline Company of America, L.L.C. under Regulatory, which will contain an updated Appendix F. Any questions or concerns regarding the updated Appendix F should be directed to Rahul Singh, Director of Regulatory, at Rahul.singh@kindermorgan.com . .."
+            ],
+            "quantities": [],
+            "restrictions": [],
+            "services": [],
+            "start_time": null,
+            "time_basis": "UNRESOLVED"
+          },
+          "notice": {
+            "notice_id": 46604,
+            "notice_type": "OTHER",
+            "prior_notice_id": null,
+            "status": "INITIATE"
+          },
+          "source_sha256": "0161fbbc08714add7d3e3742d05667ba6380e07fe60549471ab3d6f7f758acfc"
+        },
+        {
+          "facts": {
+            "availability": "UNKNOWN",
+            "content_kind": "RESTRICTION",
+            "end_time": null,
+            "locations": [
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "LOC",
+                "value": "10560"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "SEGMENT",
+                "value": "25"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "COMPRESSOR_STATION",
+                "value": "302"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "ZONE",
+                "value": "Texok Zone"
+              }
+            ],
+            "operational_assertions": [
+              "ANR/NGPL SOUTH JOLIET AT CAPACITY SEGMENT 25 – STATION MAINTENANCE – CS 302 As posted on Natural's Outage Impact Report (X25-1527903), Natural will be performing station maintenance at Compressor Station 302 (CS 302) located in Montgomery County, Texas (Segment 25 of Natural's Texok Zone). Natural is required to reduce the maximum operating capacity eastbound into Segment 25 from Segment 26 and Segment 22, thus limiting Natural's throughput capacity eastbound through CS 302 during this restriction. The scheduling constraint will be at CS 302 ; therefore, any gas received west of CS 302 for delivery east of CS 302 will be impacted for the duration of the restriction. The Pooling Point - Texok Zone (LOC 10560) is located west of the constraint. Firm transportation associated with storage withdrawals may be impacted. As such, effective for gas day Wednesday, April 1, 2026, Timely Cycle, and continuing through gas day Friday, May 1, 2026 , Natural will schedule Primary Firm and Secondary in-path Firm transports to no less than 55% of contract MDQ through CS 302. AOR/ITS and Secondary out-of-path Firm transports will not be available for the duration of this restriction. The stated scheduling percentage is based upon the current level of firm capacity contracted for during this restriction and is subject to change based upon operational conditions and Shipper utilization. Continue to monitor Natural's interactive website for any updates. Please contact your Account Director or Scheduling Representative if you have any questions. .."
+            ],
+            "quantities": [
+              {
+                "basis": "PCT_MDQ",
+                "evidence_ref": "source.fields.body",
+                "kind": "SCHEDULED_TO_PCT_MDQ",
+                "unit": "PERCENT_MDQ",
+                "value": 55.0
+              },
+              {
+                "basis": "PCT_MDQ",
+                "evidence_ref": "source.fields.body",
+                "kind": "SCHEDULED_TO_PCT_MDQ",
+                "unit": "PERCENT_MDQ",
+                "value": 55.0
+              }
+            ],
+            "restrictions": [
+              {
+                "availability": "PARTIAL",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+                "service": "PRIMARY_FIRM",
+                "source_end": "2026-05-01",
+                "source_start": "2026-04-01",
+                "status": "UNKNOWN"
+              },
+              {
+                "availability": "PARTIAL",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+                "service": "SECONDARY_FIRM",
+                "source_end": "2026-05-01",
+                "source_start": "2026-04-01",
+                "status": "UNKNOWN"
+              },
+              {
+                "availability": "UNAVAILABLE",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "UNAVAILABLE",
+                "service": "AOR_ITS",
+                "source_end": "2026-05-01",
+                "source_start": "2026-04-01",
+                "status": "UNKNOWN"
+              },
+              {
+                "availability": "UNAVAILABLE",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "UNAVAILABLE",
+                "service": "SECONDARY_FIRM",
+                "source_end": "2026-05-01",
+                "source_start": "2026-04-01",
+                "status": "UNKNOWN"
+              }
+            ],
+            "services": [
+              "AOR_ITS",
+              "PRIMARY_FIRM",
+              "SECONDARY_FIRM"
+            ],
+            "start_time": null,
+            "time_basis": "UNRESOLVED"
+          },
+          "notice": {
+            "notice_id": 46615,
+            "notice_type": "MAINTENANCE",
+            "prior_notice_id": null,
+            "status": "INITIATE"
+          },
+          "source_sha256": "59bceaae533f4d516e49ed540211022c32e7af7ec2df37f20a2e17ec0d86f8f3"
+        },
+        {
+          "facts": {
+            "availability": "UNAVAILABLE",
+            "content_kind": "RESTRICTION",
+            "end_time": null,
+            "locations": [
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "LOC",
+                "value": "7936"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "SEGMENT",
+                "value": "24"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "ZONE",
+                "value": "Louisiana Zone"
+              }
+            ],
+            "operational_assertions": [
+              "ANR/NGPL SOUTH JOLIET AT CAPACITY FLORIDA VERMILION (LOC 7936) – PRIMARY ONLY Due to current operating conditions, effective for gas day Wednesday, January 14, 2026, Timely Cycle and continuing until further notice, Florida Vermilion (LOC 7936) is at operating capacity. As such, Natural will only schedule Primary Firm transports for deliveries to Florida Vermilion (LOC 7936). AOR/ITS, Secondary out-of-path Firm transports and Secondary in-path Firm transports will not be available. Florida Vermilion is located in Vermilion Parish, Louisiana (Segment 24), in Natural's Louisiana Zone. Please contact your Account Director or Scheduling Representative if you have any questions. .."
+            ],
+            "quantities": [],
+            "restrictions": [
+              {
+                "availability": "UNAVAILABLE",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "UNAVAILABLE",
+                "service": "AOR_ITS",
+                "source_end": "TBD",
+                "source_start": "2026-01-14",
+                "status": "UNKNOWN"
+              },
+              {
+                "availability": "UNAVAILABLE",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "UNAVAILABLE",
+                "service": "SECONDARY_FIRM",
+                "source_end": "TBD",
+                "source_start": "2026-01-14",
+                "status": "UNKNOWN"
+              },
+              {
+                "availability": "UNAVAILABLE",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "UNAVAILABLE",
+                "service": "SECONDARY_FIRM",
+                "source_end": "TBD",
+                "source_start": "2026-01-14",
+                "status": "UNKNOWN"
+              }
+            ],
+            "services": [
+              "AOR_ITS",
+              "SECONDARY_FIRM"
+            ],
+            "start_time": null,
+            "time_basis": "UNRESOLVED"
+          },
+          "notice": {
+            "notice_id": 46624,
+            "notice_type": "CAPACITY CONSTRAINT",
+            "prior_notice_id": null,
+            "status": "INITIATE"
+          },
+          "source_sha256": "faf2ec98d47909410928c664ccec1287e449cab56a2b410d2fd1ddf25af0811b"
+        },
+        {
+          "facts": {
+            "availability": "UNKNOWN",
+            "content_kind": "INFORMATIONAL",
+            "end_time": null,
+            "locations": [],
+            "operational_assertions": [
+              "DART TECHNICAL ISSUES – ID-1 NOMINATION DEADLINE EXTENDED FOR 02-26-26 DART experienced technical issues. Due to these issues, the ID-1 nomination deadline for February 26, 2026, will be extended until 10:45 am CCT. If you have any questions, please call your Scheduler. .."
+            ],
+            "quantities": [],
+            "restrictions": [],
+            "services": [],
+            "start_time": null,
+            "time_basis": "UNRESOLVED"
+          },
+          "notice": {
+            "notice_id": 46775,
+            "notice_type": "COMPUTER SYSTEM STATUS",
+            "prior_notice_id": null,
+            "status": "INITIATE"
+          },
+          "source_sha256": "9bc6d3df53e6848ef4a2936ed86466b65833c67784067075955bd7d198975b58"
+        }
+      ],
+      "reference_time": "2026-09-26T19:17:22.368165+00:00",
+      "evidence": {
+        "extraction_usable": true,
+        "helpers_usable": true,
+        "contradictory": false,
+        "references": [
+          "source.fields.body"
+        ]
+      }
+    },
+    "normalization_gaps": [
+      "Unresolved source timestamp: 2026-01-22",
+      "Unresolved source timestamp: 2026-01-27",
+      "Unresolved source timestamp: 2026-02-05",
+      "Unresolved source timestamp: 2026-02-09"
+    ],
+    "actionability": {
+      "status": "UNRESOLVED",
+      "source_timezone_known": false,
+      "source_timezone_status": "UNKNOWN",
+      "automatic_current_future": false,
+      "recommendation_authorized": false
+    },
+    "classifier_decision": {
+      "notice_id": 46795,
+      "source_sha256": "94c2e2d71aa6409161b6a72c917afdfb6eb7fd8273a4234d71803a9ae40ac051",
+      "classification": "UNRESOLVED",
+      "disposition": "REVIEW_REQUIRED",
+      "recommendation_allowed": false,
+      "reason_codes": [
+        "BR-CONTRADICTION",
+        "CONTRADICTORY_EVIDENCE"
+      ],
+      "evidence_refs": [
+        "sha256:0161fbbc08714add7d3e3742d05667ba6380e07fe60549471ab3d6f7f758acfc",
+        "sha256:59bceaae533f4d516e49ed540211022c32e7af7ec2df37f20a2e17ec0d86f8f3",
+        "sha256:6cc6c6ea924d52f09130dc83de3d1a65a25f75982750faddb57e77c5d7f6d084",
+        "sha256:94c2e2d71aa6409161b6a72c917afdfb6eb7fd8273a4234d71803a9ae40ac051",
+        "sha256:9bc6d3df53e6848ef4a2936ed86466b65833c67784067075955bd7d198975b58",
+        "sha256:faf2ec98d47909410928c664ccec1287e449cab56a2b410d2fd1ddf25af0811b",
+        "source.fields.body"
+      ]
+    },
+    "matched_rule": "BR-CONTRADICTION",
+    "classification": "UNRESOLVED",
+    "disposition": "REVIEW_REQUIRED",
+    "reason": "CONTRADICTORY_EVIDENCE",
+    "reason_codes": [
+      "BR-CONTRADICTION",
+      "CONTRADICTORY_EVIDENCE"
+    ],
+    "recommendation_allowed": false,
+    "candidate_classification": null,
+    "authorization": null,
+    "publication_disposition": "REVIEW_REQUIRED",
+    "publication_reason": "CONTRADICTORY_EVIDENCE",
+    "initial_decision": false,
+    "publication_attempted": false,
+    "delivery_acknowledged": null
+  },
+  "recommendation_count": 0,
+  "replay_recommendation_count": 0,
+  "authorization": "None; evaluation labels never authorize publication"
+}

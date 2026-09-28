@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "status": "owner-approved",
+  "decision": "context/decisions/009-normalized-harness-hardening.md",
+  "owner_record": "evidence/derivation-integrity/20260928T011856Z/structural-owner-request.txt",
+  "manifest_sha256": "6e6bdf81cd446d50d2a2e6fbf5c1fae35539ba118e2ebb506a20dcd42a5bee6b",
+  "core_content_paths": {
+    "notice-snapshot-rebuild": null,
+    "notice-snapshot-maintenance": null,
+    "recommendation-classification-maintenance": [
+      "docs/system-contract.md",
+      "docs/signal-contract.md",
+      "context/decisions/007-br-firm-proposal-classification.md",
+      "context/failures/spec-evidence-current.md",
+      "context/decisions/008-derivation-integrity-correction.md",
+      "context/decisions/009-normalized-harness-hardening.md"
+    ]
+  },
+  "scope": "Owner-requested technical context selection; no normative policy or assumption amendment"
+}

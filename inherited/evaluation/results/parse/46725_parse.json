@@ -1,0 +1,25 @@
+{
+  "notice_id": 46725,
+  "notice_type": "OPERATIONAL FLOW ORDER",
+  "html_file": "evaluation/notices/46725_OPERATIONAL FLOW ORDER.html",
+  "header": {
+    "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+    "critical": "Y",
+    "type1": "OPERATIONAL FLOW ORDER",
+    "type2": "OFO",
+    "notice_effective_date": "02/09/2026  8:15:20AM",
+    "notice_end_date": "02/28/2026 9:00:00am",
+    "post_date": "2/9/2026 8:15:20 AM",
+    "notice_id": "46725",
+    "req_rsp": "1",
+    "rsp_date": "02/09/2026",
+    "status": "TERMINATE",
+    "prior_notice_id": "46705",
+    "subject": "OFO - MARKET DELVIERY ZONE - REMOVED"
+  },
+  "body": "Post Date: 01/05/1999 19:01:20\n\nOPERATIONAL FLOW ORDER\nISSUED - MARKET DELIVERY ZONE – REMOVED\n\n \n\nEffective for gas day \nMonday,\nFebruary 9, 2026\n, \nbeginning 9:00 a.m., Central Clock Time\n,\nNatural is removing the Operational Flow Order (OFO) in the Market Delivery\nZone.  Please continue to monitor Natural's interactive website for updates.\n\n \n\nPlease contact your\nAccount Director for any questions.\n\n.",
+  "information_only": true,
+  "locations": [],
+  "restrictions": [],
+  "provenance": "llm_extraction"
+}

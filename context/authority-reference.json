@@ -1,0 +1,343 @@
+{
+  "version": 2,
+  "boundary": "Consistency reference only. The same workspace writer can replace this file; it does not authenticate a human. Owner approval must be checked against the original conversation/attachment outside the worker checkout before promotion.",
+  "owner_reference": "Original owner message supplied to this session; repository copy is evidence, not a protected authorization service.",
+  "registered_context": {
+    "context/decisions/001-baseline-snapshot.md": {
+      "sha256": "73a188dc5e44ea989697e53f57f37ea9229becb80b30cb1dcb93580e511f5ecf",
+      "status": "approved"
+    },
+    "context/decisions/002-controlled-token-experiment.md": {
+      "sha256": "1123c667764cc454e167c62c11a7404d7ee0e327f60625befefc2930c74f8572",
+      "status": "approved"
+    },
+    "context/decisions/003-notice-snapshot-scope.md": {
+      "sha256": "bde7e33cad119159bdfa97f1f850a2538e6f5da6aa4df7a330df80f899ca8947",
+      "status": "historical-approved-scope"
+    },
+    "context/decisions/004-capture-reference-extension.md": {
+      "sha256": "92d30b1a776f2bd21f4b580ac256ac4a5d5f6f0d3f50b74bb570a78eb4048b9f",
+      "status": "approved-technical-extension"
+    },
+    "context/decisions/005-synthetic-capture-reference-alias.md": {
+      "sha256": "6bb139944015eca838b3b5766f5923500bd1731f21665fb4cd2ac2176e4f4ca2",
+      "status": "approved-synthetic-technical-extension"
+    },
+    "context/decisions/006-assessment-lifecycle-policy.md": {
+      "sha256": "28cf6ae126e12952dca8bd2b2dd434455a500c51894a5f60fce8190421426367",
+      "status": "owner-approved"
+    },
+    "evidence/policy/20260927T010449.918426Z/owner-approval.txt": {
+      "sha256": "6c2f3167d93b8593f7712e808e1e77572f46f8160f5b736aadd5b4449e8ae05b",
+      "status": "owner-instruction"
+    },
+    "context/decisions/007-br-firm-proposal-classification.md": {
+      "sha256": "f2b7fcfc77dd1d624ded9f663bff3c0a0087807ca56849baa79c5936a9f2fd63",
+      "status": "owner-approved"
+    },
+    "evidence/br-firm/20260928T003612Z/owner-approval.txt": {
+      "sha256": "dcbad5860e41a79b04670e56dacbc86ebe94e4b14ae827a87e43281a1d919dbe",
+      "status": "owner-instruction"
+    },
+    "context/decisions/008-derivation-integrity-correction.md": {
+      "sha256": "21efaab4554701138465eefd831e7ea0136da42083ad6360c568447b36358adf",
+      "status": "owner-approved"
+    },
+    "context/decisions/006-assessment-lifecycle-policy.record.json": {
+      "sha256": "e8730661dc02196ace5d6fded4bbc13e37b79578be348bd8e932b2682a83bea6",
+      "status": "owner-approved"
+    },
+    "evidence/derivation-integrity/20260928T011856Z/owner-request.txt": {
+      "sha256": "ac2beab80039183d7f5ebb708a964a77b8f57d62b8ac7781e59c4137dd51d94d",
+      "status": "owner-instruction"
+    },
+    "context/decisions/009-normalized-harness-hardening.md": {
+      "sha256": "2ec171637fd9f721a2ab2ef68f1a0337f7f7a8bc9143c850c782d982926d8e34",
+      "status": "owner-approved"
+    },
+    "evidence/derivation-integrity/20260928T011856Z/structural-owner-request.txt": {
+      "sha256": "d75bbd0ef8c99cfe9c3d33296bbcc4cea077c82da9511611f005547a95829050",
+      "status": "owner-instruction"
+    },
+    "context/decisions/006-assumptions.record.json": {
+      "sha256": "af28da71c2348a8acc9651c4ed233c81b3c761098b7e3c43cde11e935ccfda49",
+      "status": "owner-approved"
+    },
+    "context/decisions/009-context-index.record.json": {
+      "sha256": "3bd8d8ea2b3c6b356e969b2c931cb86ab009d8236603dc9bdf98e1d1c4a220d1",
+      "status": "owner-approved"
+    },
+    "context/decisions/010-integrated-release-hardening.md": {
+      "status": "owner-approved",
+      "sha256": "bfa876150083dab76ba420fb8be60a71583f971d0fbd2ec11ad998004dae27c3"
+    },
+    "context/decisions/010-requirement-baseline.record.json": {
+      "status": "owner-approved",
+      "sha256": "c0daa2890acc46dc45ac8b22d63444739b8ab0e7993afa0f85ba73b27ce3c80f"
+    },
+    "context/decisions/010-context-index.record.json": {
+      "status": "owner-approved",
+      "sha256": "961e831681dcee1202c1656aa5a54e87bb1e2138822624b57d17ddbe2e599e29"
+    },
+    "evidence/release-hardening/20260928T024253Z/owner-request.txt": {
+      "status": "owner-instruction",
+      "sha256": "a2c5777910ed2d777215f12a42651f167e81f8746110f6a83b9f5b70782a1444"
+    },
+    "context/decisions/011-classification-actionability.record.json": {
+      "status": "owner-approved",
+      "sha256": "c20e0aa5e666539f500bcde8e7e4864f455506df26ab0967f5a911ed9142fcab"
+    },
+    "context/decisions/011-classification-actionability.md": {
+      "status": "owner-approved",
+      "sha256": "e803148ea7e018ca9dc35e7e4d0a8b853c4314331904e8f2dae83ec90a90ede0"
+    },
+    "context/decisions/011-boundary-approval.json": {
+      "status": "owner-approved",
+      "sha256": "856a35541597d4867fa464c5a66e916788224136d4ecbce4a4be1d5fc16302df"
+    },
+    "evidence/positive-path/20260928-owner-separation/owner-request.txt": {
+      "status": "owner-instruction",
+      "sha256": "4f0e5ebd08ac707bb715ffa93ade16d91bb551d38bd96459ee9010531cbfa516"
+    },
+    "context/decisions/012-context-index.md": {
+      "status": "owner-approved",
+      "sha256": "da84280cb1bf9b5bd67b52cadfcffb1707c6e9fed00e0fcb59e58188595e6783"
+    },
+    "context/decisions/012-context-index.record.json": {
+      "status": "owner-approved",
+      "sha256": "a2b65925333c68e970d85f27280603c6a2d15f6304288c335cd3710c612f0537"
+    }
+  },
+  "required_ids": [
+    "INPUT-001",
+    "INPUT-002",
+    "OUTPUT-001",
+    "OUTPUT-002",
+    "OUTPUT-003",
+    "OUTPUT-004",
+    "OUTPUT-005",
+    "OUTPUT-006",
+    "SIGNAL-001",
+    "SIGNAL-002",
+    "SIGNAL-003",
+    "SIGNAL-004",
+    "STATE-001",
+    "STATE-002",
+    "STATE-003",
+    "STATE-004",
+    "STATE-005",
+    "STATE-006",
+    "HISTORY-001",
+    "HISTORY-002",
+    "HISTORY-003",
+    "HISTORY-004",
+    "HISTORY-005",
+    "SAFETY-001",
+    "SAFETY-002",
+    "OBS-001",
+    "OBS-002",
+    "OBS-003"
+  ],
+  "bindings": {
+    "INPUT-001": {
+      "type": "contract",
+      "check": "identity",
+      "gate": 1
+    },
+    "INPUT-002": {
+      "type": "contract",
+      "check": "deferred",
+      "gate": 1
+    },
+    "OUTPUT-001": {
+      "type": "contract",
+      "check": "decision_shape",
+      "gate": 1
+    },
+    "OUTPUT-002": {
+      "type": "contract",
+      "check": "quantities",
+      "gate": 1
+    },
+    "OUTPUT-003": {
+      "type": "invariant",
+      "check": "links",
+      "gate": 1
+    },
+    "OUTPUT-004": {
+      "type": "labeled_eval",
+      "check": "field_values",
+      "gate": 2
+    },
+    "OUTPUT-005": {
+      "type": "labeled_eval",
+      "check": "field_values",
+      "gate": 2
+    },
+    "OUTPUT-006": {
+      "type": "labeled_eval",
+      "check": "field_values",
+      "gate": 2
+    },
+    "SIGNAL-001": {
+      "type": "labeled_eval",
+      "check": "classification",
+      "gate": 2
+    },
+    "SIGNAL-002": {
+      "type": "negative_control",
+      "check": "classification",
+      "gate": 2
+    },
+    "SIGNAL-003": {
+      "type": "labeled_eval",
+      "check": "classification",
+      "gate": 2
+    },
+    "SIGNAL-004": {
+      "type": "labeled_eval",
+      "check": "classification",
+      "gate": 2
+    },
+    "STATE-001": {
+      "type": "invariant",
+      "check": "persistence",
+      "gate": 1
+    },
+    "STATE-002": {
+      "type": "metamorphic",
+      "check": "stored_idempotency",
+      "gate": 1
+    },
+    "STATE-003": {
+      "type": "metamorphic",
+      "check": "deferred",
+      "gate": 1
+    },
+    "STATE-004": {
+      "type": "metamorphic",
+      "check": "revision",
+      "gate": 2
+    },
+    "STATE-005": {
+      "type": "metamorphic",
+      "check": "deferred",
+      "gate": 2
+    },
+    "STATE-006": {
+      "type": "metamorphic",
+      "check": "restart",
+      "gate": 1
+    },
+    "HISTORY-001": {
+      "type": "invariant",
+      "check": "lineage",
+      "gate": 1
+    },
+    "HISTORY-002": {
+      "type": "metamorphic",
+      "check": "deferred",
+      "gate": 1
+    },
+    "HISTORY-003": {
+      "type": "metamorphic",
+      "check": "deferred",
+      "gate": 1
+    },
+    "HISTORY-004": {
+      "type": "metamorphic",
+      "check": "deferred",
+      "gate": 2
+    },
+    "HISTORY-005": {
+      "type": "invariant",
+      "check": "deferred",
+      "gate": 1
+    },
+    "SAFETY-001": {
+      "type": "contract",
+      "check": "model_proof",
+      "gate": 1
+    },
+    "SAFETY-002": {
+      "type": "negative_control",
+      "check": "deferred",
+      "gate": 2
+    },
+    "OBS-001": {
+      "type": "contract",
+      "check": "provenance",
+      "gate": 1
+    },
+    "OBS-002": {
+      "type": "invariant",
+      "check": "integrity",
+      "gate": 1
+    },
+    "OBS-003": {
+      "type": "invariant",
+      "check": "regression",
+      "gate": 3
+    }
+  },
+  "policy_id": "assessment-v3-owner-20260928",
+  "registered_row_sha256": {
+    "INPUT-001": "33638631864b2485f55c5598e3b67d43d6f97ffa96f67227ec3b219a38e00c1c",
+    "INPUT-002": "517c2338bfbc4cdf519ebbe6434e3346a63ec03d4ce3106f92b85728500c4420",
+    "OUTPUT-001": "8d5c68f408688ebafd3060fb3d3605bcdbc545abdbb6fb6713843f214c5200a6",
+    "OUTPUT-002": "d0fe0067e7b36a01ef951b362d14bdf96bd7b9f064278433a2b6de00317c711b",
+    "OUTPUT-003": "c6c77a8c998986da2b425aa9fe2ae2016930726bb5304ce333e44beab9aa9c90",
+    "OUTPUT-004": "09b74756719fd29503f712d220e1eca6fc43794b579dc0c54c54e972442c36bf",
+    "OUTPUT-005": "e35d5f6eff20a5d6c910d9a70fa940d04c3362e1f2176d1374ac03afa86f7f53",
+    "OUTPUT-006": "a5260b9339f09b19c1ab1e180d6f00077277af3b74859d146353adb088801b46",
+    "SIGNAL-001": "7cea3afa7d8c0a53581f7e9178f9c6b32616cb1799928813f6c0b1597a2d7d08",
+    "SIGNAL-002": "960d151adfd42ac4d35712b57805d99b10f5da4fe191ed75a49ee45ab3a2338f",
+    "SIGNAL-003": "4868bf8877362d30b770dff88fde22a60c909cdae6e6411c3cc71169b13f2bd4",
+    "SIGNAL-004": "8d255f95e24f299090fa40740d83001d260f3126a7828e7eb4f97a29bae9ca37",
+    "STATE-001": "347c78132355778acda635848fb3d978231c33d908c994f87ffd5efe55c7ea74",
+    "STATE-002": "eeb8b11177ccb2ed409eb34bc1e6d531ea90624f8208189dab103ef5049d43c5",
+    "STATE-003": "37faf1b9d48579783b3edfe0992f5db4877b059f142fc816a820f9df88b0690f",
+    "STATE-004": "4d5974e4bbe42c5e84c072fbf66d0a654e9819a73b3b07bdfac9b8e6d03e08ad",
+    "STATE-005": "ee5ee56a628ed2c9c938c4f0afe72b447602aab7f2d5be614d5a0a3f4c95a16c",
+    "STATE-006": "d44c5e1ff69895a9912d1a37db4a1bda5595158c4efac7be03352d1335e24b18",
+    "HISTORY-001": "deff2e8d7a93854c8441db1c75be9941f09fed87853dde04fcd3564992a1b002",
+    "HISTORY-002": "bf70a4f3071d49906b7019aba63f9afb9178209bff69ff8bd8832bda1dc4c995",
+    "HISTORY-003": "6f051a28342840a9826be0d6293beadebb9db6461a40875396f7b7c994bb18cc",
+    "HISTORY-004": "8a5d186af2a36ef37fc744a3a033d29aa172e744c5f10f81ac5e3b245b1c63ad",
+    "HISTORY-005": "f9f3a80b7f699257cb9bfb887f14955fb2245d0773784c97ab294e915b2bc593",
+    "SAFETY-001": "35245f2cf164a73774f7b4011873cd7a5af7dfa4c36864a894806d0e3da1820c",
+    "SAFETY-002": "68117d447287d079425935e030060d149ad1dc45e60dd81645780b19a2db6ab9",
+    "OBS-001": "52bd5261521912bc9ce798726d482ae1dda7862659251dfa552b71ab7d2ee663",
+    "OBS-002": "9441fda15b28a1e14a3a04bb7fd7b5187853eaa7ef9721e85b8b93417a59ceb0",
+    "OBS-003": "67a698ba3608be2ec0b4c14469cdc7f2172a5a3ea003cd53c335d746f43261b8"
+  },
+  "reference_update": "A coordinated spec/rule change requires a separately reviewed update of this consistency reference. The workspace cannot authenticate that reviewer; the owner must review the exact diff outside the implementation worker before promotion.",
+  "registered_policy_sha256": {
+    "D1": "31368c1668fbb957b508865419a7b7a98e8daced34f800a4bc87f1f0597d50eb",
+    "D2": "a750577aea97b38d0aaa5ee34554c687742dc22545b299dae3f3b3215be06536",
+    "D3": "9a9c3e8cd8130f10bf7280d78b8f65a8c8f55fdb49fd0760dd21fcaa5df7484a",
+    "D4": "0cda0eba97597b05fa92733a09c81297643552d5dff9ea5d634cc16ca1a05984",
+    "D5": "8df39254cfcd7bd9cbad899133772cf4515754c4e943d0e9deadedc38601370a",
+    "D6": "2b26dd9e2a9368f74552944ee5697005c1ef76057f0983dadfecb020ef25a08d"
+  },
+  "policy_reference_basis": "Exact existing D1-D6 text already approved in ADR 006 and the retained owner instruction. This consistency addition is authorized by evidence/correction/20260927T220352.636265Z/owner-request.txt; no normative wording is changed and no new approval is asserted.",
+  "registered_supersessions": {},
+  "signal_safety_contract_sha256": "806ca157a16cda6cefc7dc753efcf0c179a3999cd44bf18960fc8860b723df55",
+  "signal_safety_basis": "User behavioral-improvement request, evidence/correction/20260927T220352.636265Z/behavior-start/owner-request.txt; executable partial proof and implementation status only; D1\u2013D6 unchanged.",
+  "behavior_contract_sha256": "9b4af7045fbc1cef6858429c1703e792159c77276ed4530fd2c6e077e4f1a837",
+  "behavior_basis": "context/decisions/007-br-firm-proposal-classification.md and context/decisions/008-derivation-integrity-correction.md; BR-FIRM candidate-only approval retained, unauthorized BR-SEMANTICS change restored, predicates structurally represented without changing D1-D6.",
+  "normalized_witnesses_sha256": "904b6dd551678fecbbd4add561359e4872037e587eaa5c454d92a0a53a454be1",
+  "normalized_witnesses_basis": "Eight preserved synthetic source assertions/prospective classifications plus the owner-requested PRIMARY_ONLY distinguishing witness; dispositions frozen independently against the approved pre-approval semantics and BR-FIRM scope. Never auto-rewrite expectations from changed rules.; unchanged-revision synthetic relation added under ADR 009.",
+  "policy_version": 3,
+  "active_policy_decision": "context/decisions/011-classification-actionability.record.json",
+  "policy_baseline_decision": "context/decisions/006-assessment-lifecycle-policy.record.json",
+  "assumptions_view_sha256": "55a9be8a2ca2177e5292dd60e6b6ddefa127d480b230bea2e75b70375c14397e",
+  "authoritative_manifest": {
+    "sha256": "d75d123f3ff5f9b7ec2cfa3575817ebf8e297b77b4df9bf341c30520603a3b4e",
+    "review_record": "context/decisions/012-context-index.record.json"
+  },
+  "normalized_baselines_sha256": "2ca542545dd2d31365b1ab9f307357ce3abbf3c4b35388824e0ffe90da56db0e",
+  "publisher_witnesses_sha256": "abbf2b834ca282ca3cc47d5acfc3a9a499b8f1238885daf67296f11288581345",
+  "requirement_revisions_sha256": "7373164e7d355f27ac83ed17c9f75fcd26f0c2221c1e37fcd48b90530457843e",
+  "trading_evidence_sha256": "a5075550e7115dd5b452ca686336432d7a50f5b4712673e9feb89ff8cc52c7ff"
+}

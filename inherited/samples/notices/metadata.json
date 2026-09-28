@@ -1,0 +1,209 @@
+[
+  {
+    "notice_id": "47215",
+    "notice_type": "MAINTENANCE",
+    "subject": "OUTAGE IMPACT REPORT 9-10-26",
+    "html_file": "evaluation\\notices\\47215_MAINTENANCE.html",
+    "download_date": "2026-09-11T16:22:08.318648",
+    "source_url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type={notice_type}&code=NGPL",
+    "impact_report_file": "evaluation\\notices\\47215_OUTAGE_IMPACT_REPORT.pdf"
+  },
+  {
+    "notice_id": "47213",
+    "notice_type": "MAINTENANCE",
+    "subject": "SEGMENT 15-CS801-STA MAINT UPD2",
+    "html_file": "evaluation\\notices\\47213_MAINTENANCE.html",
+    "download_date": "2026-09-11T16:22:13.769003",
+    "source_url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type={notice_type}&code=NGPL"
+  },
+  {
+    "notice_id": "47202",
+    "notice_type": "MAINTENANCE",
+    "subject": "SEGMENT 20 - GC #1 M/L -ILI TOOL RUNS",
+    "html_file": "evaluation\\notices\\47202_MAINTENANCE.html",
+    "download_date": "2026-09-11T16:22:19.284556",
+    "source_url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type={notice_type}&code=NGPL"
+  },
+  {
+    "notice_id": "47200",
+    "notice_type": "MAINTENANCE",
+    "subject": "OUTAGE IMPACT REPORT 9-3-26",
+    "html_file": "evaluation\\notices\\47200_MAINTENANCE.html",
+    "download_date": "2026-09-11T16:22:25.648574",
+    "source_url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type={notice_type}&code=NGPL",
+    "impact_report_file": "evaluation\\notices\\47200_OUTAGE_IMPACT_REPORT.pdf"
+  },
+  {
+    "notice_id": "47192",
+    "notice_type": "FORCE MAJEURE",
+    "subject": "FORCE MAJEURE - COMP STA 168 LIFTED",
+    "html_file": "evaluation\\notices\\47192_FORCE MAJEURE.html",
+    "download_date": "2026-09-11T16:22:32.119474",
+    "source_url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type={notice_type}&code=NGPL"
+  },
+  {
+    "notice_id": "47187",
+    "notice_type": "MAINTENANCE",
+    "subject": "OUTAGE IMPACT REPORT 8-27-26",
+    "html_file": "evaluation\\notices\\47187_MAINTENANCE.html",
+    "download_date": "2026-09-11T16:22:38.322416",
+    "source_url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type={notice_type}&code=NGPL",
+    "impact_report_file": "evaluation\\notices\\47187_OUTAGE_IMPACT_REPORT.pdf"
+  },
+  {
+    "notice_id": "47180",
+    "notice_type": "GAS QUALITY",
+    "subject": "GAS QUALITY-ONEOK CUSTER(LOC5388)-LIFTED",
+    "html_file": "evaluation\\notices\\47180_GAS QUALITY.html",
+    "download_date": "2026-09-11T16:22:43.801599",
+    "source_url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type={notice_type}&code=NGPL"
+  },
+  {
+    "notice_id": "47175",
+    "notice_type": "OPERATIONAL ALERT",
+    "subject": "SEG 39 - MORAINE LAT PIPE INTEG",
+    "html_file": "evaluation\\notices\\47175_OPERATIONAL ALERT.html",
+    "download_date": "2026-09-11T16:22:49.255822",
+    "source_url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type={notice_type}&code=NGPL"
+  },
+  {
+    "notice_id": "47173",
+    "notice_type": "MAINTENANCE",
+    "subject": "OUTAGE IMPACT REPORT 8-20-26",
+    "html_file": "evaluation\\notices\\47173_MAINTENANCE.html",
+    "download_date": "2026-09-11T16:22:55.480181",
+    "source_url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type={notice_type}&code=NGPL",
+    "impact_report_file": "evaluation\\notices\\47173_OUTAGE_IMPACT_REPORT.pdf"
+  },
+  {
+    "notice_id": "47168",
+    "notice_type": "FORCE MAJEURE",
+    "subject": "FORCE MAJEURE - COMP STA 168",
+    "html_file": "evaluation\\notices\\47168_FORCE MAJEURE.html",
+    "download_date": "2026-09-11T16:23:01.067122",
+    "source_url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type={notice_type}&code=NGPL"
+  },
+  {
+    "notice_id": "47166",
+    "notice_type": "GAS QUALITY",
+    "subject": "GAS QUALITY - ONEOK CUSTER (LOC 5388)",
+    "html_file": "evaluation\\notices\\47166_GAS QUALITY.html",
+    "download_date": "2026-09-11T16:23:06.529690",
+    "source_url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type={notice_type}&code=NGPL"
+  },
+  {
+    "notice_id": "47158",
+    "notice_type": "MAINTENANCE",
+    "subject": "OUTAGE IMPACT REPORT 8-13-26",
+    "html_file": "evaluation\\notices\\47158_MAINTENANCE.html",
+    "download_date": "2026-09-11T16:23:13.207810",
+    "source_url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type={notice_type}&code=NGPL",
+    "impact_report_file": "evaluation\\notices\\47158_OUTAGE_IMPACT_REPORT.pdf"
+  },
+  {
+    "notice_id": "47157",
+    "notice_type": "MAINTENANCE",
+    "subject": "SEGMENT 15-CS801-STA MAINT UPD1",
+    "html_file": "evaluation\\notices\\47157_MAINTENANCE.html",
+    "download_date": "2026-09-11T16:23:18.611043",
+    "source_url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type={notice_type}&code=NGPL"
+  },
+  {
+    "notice_id": "47154",
+    "notice_type": "MAINTENANCE",
+    "subject": "SEGMENT 3 - M\\u0026M LATERAL - PRIM ONLY",
+    "html_file": "evaluation\\notices\\47154_MAINTENANCE.html",
+    "download_date": "2026-09-11T16:23:24.045936",
+    "source_url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type={notice_type}&code=NGPL"
+  },
+  {
+    "notice_id": "47153",
+    "notice_type": "FORCE MAJEURE",
+    "subject": "FORCE MAJEURE-M\\u0026M LAT MLV2-3 LIFT",
+    "html_file": "evaluation\\notices\\47153_FORCE MAJEURE.html",
+    "download_date": "2026-09-11T16:23:29.543796",
+    "source_url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type={notice_type}&code=NGPL"
+  },
+  {
+    "notice_id": "47147",
+    "notice_type": "MAINTENANCE",
+    "subject": "OUTAGE IMPACT REPORT 8-6-26",
+    "html_file": "evaluation\\notices\\47147_MAINTENANCE.html",
+    "download_date": "2026-09-11T16:23:35.801734",
+    "source_url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type={notice_type}&code=NGPL",
+    "impact_report_file": "evaluation\\notices\\47147_OUTAGE_IMPACT_REPORT.pdf"
+  },
+  {
+    "notice_id": "47145",
+    "notice_type": "MAINTENANCE",
+    "subject": "SEG 8 - UNIT MAINT - CS 168",
+    "html_file": "evaluation\\notices\\47145_MAINTENANCE.html",
+    "download_date": "2026-09-11T16:23:41.292758",
+    "source_url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type={notice_type}&code=NGPL"
+  },
+  {
+    "notice_id": "47144",
+    "notice_type": "MAINTENANCE",
+    "subject": "SEG 13 - STATION MAINT - CS 108",
+    "html_file": "evaluation\\notices\\47144_MAINTENANCE.html",
+    "download_date": "2026-09-11T16:23:46.745338",
+    "source_url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type={notice_type}&code=NGPL"
+  },
+  {
+    "notice_id": "47143",
+    "notice_type": "RATES AND CHARGES",
+    "subject": "Fuel/GLU Retention Factors",
+    "html_file": "evaluation\\notices\\47143_RATES AND CHARGES.html",
+    "download_date": "2026-09-11T16:23:52.155358",
+    "source_url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type={notice_type}&code=NGPL"
+  },
+  {
+    "notice_id": "47137",
+    "notice_type": "OPERATIONAL ALERT",
+    "subject": "SEG 14 - DEPUE LATERAL - PIPE INTEG",
+    "html_file": "evaluation\\notices\\47137_OPERATIONAL ALERT.html",
+    "download_date": "2026-09-11T16:23:57.522656",
+    "source_url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type={notice_type}&code=NGPL"
+  },
+  {
+    "notice_id": "47125",
+    "notice_type": "MAINTENANCE",
+    "subject": "OUTAGE IMPACT REPORT 7-30-26",
+    "html_file": "evaluation\\notices\\47125_MAINTENANCE.html",
+    "download_date": "2026-09-11T16:24:03.452707",
+    "source_url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type={notice_type}&code=NGPL",
+    "impact_report_file": "evaluation\\notices\\47125_OUTAGE_IMPACT_REPORT.pdf"
+  },
+  {
+    "notice_id": "47124",
+    "notice_type": "FORCE MAJEURE",
+    "subject": "FORCE MAJEURE-M\\u0026M LAT MLV2 TO MLV3-PT",
+    "html_file": "evaluation\\notices\\47124_FORCE MAJEURE.html",
+    "download_date": "2026-09-11T16:24:08.823182",
+    "source_url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type={notice_type}&code=NGPL"
+  },
+  {
+    "notice_id": "47123",
+    "notice_type": "OPERATIONAL ALERT",
+    "subject": "SEG 18 - THOMPSONVILLE LAT - PIPE INTEG",
+    "html_file": "evaluation\\notices\\47123_OPERATIONAL ALERT.html",
+    "download_date": "2026-09-11T16:24:14.159943",
+    "source_url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type={notice_type}&code=NGPL"
+  },
+  {
+    "notice_id": "47122",
+    "notice_type": "MAINTENANCE",
+    "subject": "SEG 26-GC#3 ML-ILI TOOL RUNS-POSTPONE",
+    "html_file": "evaluation\\notices\\47122_MAINTENANCE.html",
+    "download_date": "2026-09-11T16:24:19.467990",
+    "source_url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type={notice_type}&code=NGPL"
+  },
+  {
+    "notice_id": "47121",
+    "notice_type": "FORCE MAJEURE",
+    "subject": "FORCE MAJEURE-M\\u0026M LATERAL-SEG3-LIFTED",
+    "html_file": "evaluation\\notices\\47121_FORCE MAJEURE.html",
+    "download_date": "2026-09-11T16:24:24.857350",
+    "source_url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type={notice_type}&code=NGPL"
+  }
+]

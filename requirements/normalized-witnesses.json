@@ -1,0 +1,680 @@
+[
+  {
+    "id": "firm-positive",
+    "kind": "synthetic normalized semantics; not out-of-sample accuracy",
+    "input": {
+      "version": 1,
+      "source": {
+        "pipeline": "NGPL",
+        "media_type": "application/vnd.ngpl.normalized+json",
+        "sha256": "fb0747bcc3930527949799acde747621a59307b158e129be546c061532164f4b",
+        "bytes_reference": "sources/firm-positive.txt",
+        "fields": {
+          "body": "{\"facts\": {\"availability\": \"UNAVAILABLE\", \"content_kind\": \"RESTRICTION\", \"end_time\": null, \"locations\": [{\"evidence_ref\": \"synthetic-source.txt\", \"kind\": \"SEGMENT\", \"value\": \"24\"}], \"operational_assertions\": [\"Firm service unavailable at the constraint\"], \"quantities\": [], \"services\": [\"SECONDARY_FIRM\"], \"start_time\": \"2026-01-14T00:00:00+00:00\", \"time_basis\": \"UTC\"}, \"notice\": {\"notice_id\": 710001, \"notice_type\": \"CAPACITY CONSTRAINT\", \"prior_notice_id\": null, \"status\": \"INITIATE\"}}",
+          "timezone": "UTC"
+        }
+      },
+      "notice": {
+        "notice_id": 710001,
+        "prior_notice_id": null,
+        "status": "INITIATE",
+        "notice_type": "CAPACITY CONSTRAINT"
+      },
+      "facts": {
+        "content_kind": "RESTRICTION",
+        "services": [
+          "SECONDARY_FIRM"
+        ],
+        "availability": "UNAVAILABLE",
+        "locations": [
+          {
+            "kind": "SEGMENT",
+            "value": "24",
+            "evidence_ref": "sources/firm-positive.txt"
+          }
+        ],
+        "quantities": [],
+        "operational_assertions": [
+          "Firm service unavailable at the constraint"
+        ],
+        "start_time": "2026-01-14T00:00:00+00:00",
+        "end_time": null,
+        "time_basis": "UTC"
+      },
+      "history": [],
+      "reference_time": "2026-01-15T12:00:00+00:00",
+      "evidence": {
+        "extraction_usable": true,
+        "helpers_usable": true,
+        "contradictory": false,
+        "references": [
+          "sources/firm-positive.txt"
+        ]
+      }
+    },
+    "basis": "Challenge p.5; supplied capacity-constraint examples; pending narrow owner choice",
+    "prospective_expectation": "SIGNAL_CANDIDATE",
+    "prospective_action": {
+      "classification": "SIGNAL_CANDIDATE",
+      "disposition": "CANDIDATE_ONLY",
+      "recommendation_allowed": false
+    },
+    "requirements": [
+      "SIGNAL-001",
+      "SIGNAL-003"
+    ]
+  },
+  {
+    "id": "planned-positive",
+    "kind": "synthetic normalized semantics; not out-of-sample accuracy",
+    "input": {
+      "version": 1,
+      "source": {
+        "pipeline": "NGPL",
+        "media_type": "application/vnd.ngpl.normalized+json",
+        "sha256": "842b065f109352588377d58381d1a12935ca976a265e29dd0e5ed2f716041858",
+        "bytes_reference": "sources/planned-positive.txt",
+        "fields": {
+          "body": "{\"facts\": {\"availability\": \"UNAVAILABLE\", \"content_kind\": \"RESTRICTION\", \"end_time\": null, \"locations\": [{\"evidence_ref\": \"synthetic-source.txt\", \"kind\": \"SEGMENT\", \"value\": \"24\"}], \"operational_assertions\": [\"Firm service unavailable at the constraint\"], \"quantities\": [], \"services\": [\"SECONDARY_FIRM\"], \"start_time\": \"2026-01-14T00:00:00+00:00\", \"time_basis\": \"UTC\"}, \"notice\": {\"notice_id\": 710001, \"notice_type\": \"MAINTENANCE\", \"prior_notice_id\": null, \"status\": \"INITIATE\"}}",
+          "timezone": "UTC"
+        }
+      },
+      "notice": {
+        "notice_id": 710001,
+        "prior_notice_id": null,
+        "status": "INITIATE",
+        "notice_type": "MAINTENANCE"
+      },
+      "facts": {
+        "content_kind": "RESTRICTION",
+        "services": [
+          "SECONDARY_FIRM"
+        ],
+        "availability": "UNAVAILABLE",
+        "locations": [
+          {
+            "kind": "SEGMENT",
+            "value": "24",
+            "evidence_ref": "sources/planned-positive.txt"
+          }
+        ],
+        "quantities": [],
+        "operational_assertions": [
+          "Firm service unavailable at the constraint"
+        ],
+        "start_time": "2026-01-14T00:00:00+00:00",
+        "end_time": null,
+        "time_basis": "UTC"
+      },
+      "history": [],
+      "reference_time": "2026-01-15T12:00:00+00:00",
+      "evidence": {
+        "extraction_usable": true,
+        "helpers_usable": true,
+        "contradictory": false,
+        "references": [
+          "sources/planned-positive.txt"
+        ]
+      }
+    },
+    "basis": "Brief p.5 planned material outages; same normalized firm unavailability",
+    "prospective_expectation": "SIGNAL_CANDIDATE",
+    "prospective_action": {
+      "classification": "SIGNAL_CANDIDATE",
+      "disposition": "CANDIDATE_ONLY",
+      "recommendation_allowed": false
+    },
+    "requirements": [
+      "SIGNAL-001",
+      "SIGNAL-003"
+    ]
+  },
+  {
+    "id": "routine-negative",
+    "kind": "synthetic normalized semantics; not out-of-sample accuracy",
+    "input": {
+      "version": 1,
+      "source": {
+        "pipeline": "NGPL",
+        "media_type": "application/vnd.ngpl.normalized+json",
+        "sha256": "ca64231f1a80fa86c12b83d83e9d4beedead77399d3762b96fbb6f4b07f9eea4",
+        "bytes_reference": "sources/routine-negative.txt",
+        "fields": {
+          "body": "{\"facts\": {\"availability\": \"AVAILABLE\", \"content_kind\": \"ADMINISTRATIVE\", \"end_time\": null, \"locations\": [{\"evidence_ref\": \"synthetic-source.txt\", \"kind\": \"SEGMENT\", \"value\": \"24\"}], \"operational_assertions\": [\"Administrative project list; no restriction\"], \"quantities\": [], \"services\": [], \"start_time\": \"2026-01-14T00:00:00+00:00\", \"time_basis\": \"UTC\"}, \"notice\": {\"notice_id\": 710001, \"notice_type\": \"CAPACITY CONSTRAINT\", \"prior_notice_id\": null, \"status\": \"INITIATE\"}}",
+          "timezone": "UTC"
+        }
+      },
+      "notice": {
+        "notice_id": 710001,
+        "prior_notice_id": null,
+        "status": "INITIATE",
+        "notice_type": "CAPACITY CONSTRAINT"
+      },
+      "facts": {
+        "content_kind": "ADMINISTRATIVE",
+        "services": [],
+        "availability": "AVAILABLE",
+        "locations": [
+          {
+            "kind": "SEGMENT",
+            "value": "24",
+            "evidence_ref": "sources/routine-negative.txt"
+          }
+        ],
+        "quantities": [],
+        "operational_assertions": [
+          "Administrative project list; no restriction"
+        ],
+        "start_time": "2026-01-14T00:00:00+00:00",
+        "end_time": null,
+        "time_basis": "UTC"
+      },
+      "history": [],
+      "reference_time": "2026-01-15T12:00:00+00:00",
+      "evidence": {
+        "extraction_usable": true,
+        "helpers_usable": true,
+        "contradictory": false,
+        "references": [
+          "sources/routine-negative.txt"
+        ]
+      }
+    },
+    "basis": "Brief p.5; D6 administrative control",
+    "prospective_expectation": "NON_SIGNAL",
+    "prospective_action": {
+      "classification": "NON_SIGNAL",
+      "disposition": "NO_SIGNAL",
+      "recommendation_allowed": false
+    },
+    "requirements": [
+      "SIGNAL-002"
+    ]
+  },
+  {
+    "id": "insufficient",
+    "kind": "synthetic normalized semantics; not out-of-sample accuracy",
+    "input": {
+      "version": 1,
+      "source": {
+        "pipeline": "NGPL",
+        "media_type": "application/vnd.ngpl.normalized+json",
+        "sha256": "8ab4d8693d050fd111f33640d4bc0a30381392299afbc16d7ef1940fdeac9c71",
+        "bytes_reference": "sources/insufficient.txt",
+        "fields": {
+          "body": "{\"facts\": {\"availability\": \"PARTIAL\", \"content_kind\": \"RESTRICTION\", \"end_time\": null, \"locations\": [{\"evidence_ref\": \"synthetic-source.txt\", \"kind\": \"SEGMENT\", \"value\": \"24\"}], \"operational_assertions\": [\"Firm service unavailable at the constraint\"], \"quantities\": [], \"services\": [\"INTERRUPTIBLE\"], \"start_time\": \"2026-01-14T00:00:00+00:00\", \"time_basis\": \"UTC\"}, \"notice\": {\"notice_id\": 710001, \"notice_type\": \"CAPACITY CONSTRAINT\", \"prior_notice_id\": null, \"status\": \"INITIATE\"}}",
+          "timezone": "UTC"
+        }
+      },
+      "notice": {
+        "notice_id": 710001,
+        "prior_notice_id": null,
+        "status": "INITIATE",
+        "notice_type": "CAPACITY CONSTRAINT"
+      },
+      "facts": {
+        "content_kind": "RESTRICTION",
+        "services": [
+          "INTERRUPTIBLE"
+        ],
+        "availability": "PARTIAL",
+        "locations": [
+          {
+            "kind": "SEGMENT",
+            "value": "24",
+            "evidence_ref": "sources/insufficient.txt"
+          }
+        ],
+        "quantities": [],
+        "operational_assertions": [
+          "Firm service unavailable at the constraint"
+        ],
+        "start_time": "2026-01-14T00:00:00+00:00",
+        "end_time": null,
+        "time_basis": "UTC"
+      },
+      "history": [],
+      "reference_time": "2026-01-15T12:00:00+00:00",
+      "evidence": {
+        "extraction_usable": true,
+        "helpers_usable": true,
+        "contradictory": false,
+        "references": [
+          "sources/insufficient.txt"
+        ]
+      }
+    },
+    "basis": "D6: no invented numeric materiality cutoff",
+    "prospective_expectation": "UNRESOLVED",
+    "prospective_action": {
+      "classification": "UNRESOLVED",
+      "disposition": "REVIEW_REQUIRED",
+      "recommendation_allowed": false
+    },
+    "requirements": [
+      "SIGNAL-004"
+    ]
+  },
+  {
+    "id": "overlap-unusable-routine",
+    "kind": "synthetic normalized semantics; not out-of-sample accuracy",
+    "input": {
+      "version": 1,
+      "source": {
+        "pipeline": "NGPL",
+        "media_type": "application/vnd.ngpl.normalized+json",
+        "sha256": "840ff79fe9b29530374523eaf9efe5dbdeb0c858a485ead54d043d4559f0e0fb",
+        "bytes_reference": "sources/overlap-unusable-routine.txt",
+        "fields": {
+          "body": "{\"facts\": {\"availability\": \"AVAILABLE\", \"content_kind\": \"ADMINISTRATIVE\", \"end_time\": null, \"locations\": [{\"evidence_ref\": \"synthetic-source.txt\", \"kind\": \"SEGMENT\", \"value\": \"24\"}], \"operational_assertions\": [\"Firm service unavailable at the constraint\"], \"quantities\": [], \"services\": [\"SECONDARY_FIRM\"], \"start_time\": \"2026-01-14T00:00:00+00:00\", \"time_basis\": \"UTC\"}, \"notice\": {\"notice_id\": 710001, \"notice_type\": \"CAPACITY CONSTRAINT\", \"prior_notice_id\": null, \"status\": \"INITIATE\"}}",
+          "timezone": "UTC"
+        }
+      },
+      "notice": {
+        "notice_id": 710001,
+        "prior_notice_id": null,
+        "status": "INITIATE",
+        "notice_type": "CAPACITY CONSTRAINT"
+      },
+      "facts": {
+        "content_kind": "ADMINISTRATIVE",
+        "services": [
+          "SECONDARY_FIRM"
+        ],
+        "availability": "AVAILABLE",
+        "locations": [
+          {
+            "kind": "SEGMENT",
+            "value": "24",
+            "evidence_ref": "sources/overlap-unusable-routine.txt"
+          }
+        ],
+        "quantities": [],
+        "operational_assertions": [
+          "Firm service unavailable at the constraint"
+        ],
+        "start_time": "2026-01-14T00:00:00+00:00",
+        "end_time": null,
+        "time_basis": "UTC"
+      },
+      "history": [],
+      "reference_time": "2026-01-15T12:00:00+00:00",
+      "evidence": {
+        "extraction_usable": true,
+        "helpers_usable": false,
+        "contradictory": false,
+        "references": [
+          "sources/overlap-unusable-routine.txt"
+        ]
+      }
+    },
+    "basis": "D5 refusal precedes normal-looking negative",
+    "prospective_expectation": "UNRESOLVED",
+    "prospective_action": {
+      "classification": "UNRESOLVED",
+      "disposition": "ERROR",
+      "recommendation_allowed": false
+    },
+    "requirements": [
+      "SAFETY-001",
+      "INPUT-002"
+    ]
+  },
+  {
+    "id": "overlap-contradiction",
+    "kind": "synthetic normalized semantics; not out-of-sample accuracy",
+    "input": {
+      "version": 1,
+      "source": {
+        "pipeline": "NGPL",
+        "media_type": "application/vnd.ngpl.normalized+json",
+        "sha256": "eb4255b2f598d9bc3cde66639ac3ec8b828753ff2e74e90d576337fdf452a258",
+        "bytes_reference": "sources/overlap-contradiction.txt",
+        "fields": {
+          "body": "{\"facts\": {\"availability\": \"UNAVAILABLE\", \"content_kind\": \"ADMINISTRATIVE\", \"end_time\": null, \"locations\": [{\"evidence_ref\": \"synthetic-source.txt\", \"kind\": \"SEGMENT\", \"value\": \"24\"}], \"operational_assertions\": [\"Firm service unavailable at the constraint\"], \"quantities\": [], \"services\": [\"SECONDARY_FIRM\"], \"start_time\": \"2026-01-14T00:00:00+00:00\", \"time_basis\": \"UTC\"}, \"notice\": {\"notice_id\": 710001, \"notice_type\": \"CAPACITY CONSTRAINT\", \"prior_notice_id\": null, \"status\": \"INITIATE\"}}",
+          "timezone": "UTC"
+        }
+      },
+      "notice": {
+        "notice_id": 710001,
+        "prior_notice_id": null,
+        "status": "INITIATE",
+        "notice_type": "CAPACITY CONSTRAINT"
+      },
+      "facts": {
+        "content_kind": "ADMINISTRATIVE",
+        "services": [
+          "SECONDARY_FIRM"
+        ],
+        "availability": "UNAVAILABLE",
+        "locations": [
+          {
+            "kind": "SEGMENT",
+            "value": "24",
+            "evidence_ref": "sources/overlap-contradiction.txt"
+          }
+        ],
+        "quantities": [],
+        "operational_assertions": [
+          "Firm service unavailable at the constraint"
+        ],
+        "start_time": "2026-01-14T00:00:00+00:00",
+        "end_time": null,
+        "time_basis": "UTC"
+      },
+      "history": [],
+      "reference_time": "2026-01-15T12:00:00+00:00",
+      "evidence": {
+        "extraction_usable": true,
+        "helpers_usable": true,
+        "contradictory": false,
+        "references": [
+          "sources/overlap-contradiction.txt"
+        ]
+      }
+    },
+    "basis": "D5 incompatible administrative/no-restriction and active service restriction",
+    "prospective_expectation": "UNRESOLVED",
+    "prospective_action": {
+      "classification": "UNRESOLVED",
+      "disposition": "REVIEW_REQUIRED",
+      "recommendation_allowed": false
+    },
+    "requirements": [
+      "INPUT-002"
+    ]
+  },
+  {
+    "id": "missing-prior",
+    "kind": "synthetic normalized semantics; not out-of-sample accuracy",
+    "input": {
+      "version": 1,
+      "source": {
+        "pipeline": "NGPL",
+        "media_type": "application/vnd.ngpl.normalized+json",
+        "sha256": "5b1259db2ac264dc52ba053c1cadde310d9095c0e78bead54af9cc1d352df825",
+        "bytes_reference": "sources/missing-prior.txt",
+        "fields": {
+          "body": "{\"facts\": {\"availability\": \"UNAVAILABLE\", \"content_kind\": \"RESTRICTION\", \"end_time\": null, \"locations\": [{\"evidence_ref\": \"synthetic-source.txt\", \"kind\": \"SEGMENT\", \"value\": \"24\"}], \"operational_assertions\": [\"Firm service unavailable at the constraint\"], \"quantities\": [], \"services\": [\"SECONDARY_FIRM\"], \"start_time\": \"2026-01-14T00:00:00+00:00\", \"time_basis\": \"UTC\"}, \"notice\": {\"notice_id\": 710001, \"notice_type\": \"CAPACITY CONSTRAINT\", \"prior_notice_id\": 719999, \"status\": \"SUPERSEDE\"}}",
+          "timezone": "UTC"
+        }
+      },
+      "notice": {
+        "notice_id": 710001,
+        "prior_notice_id": 719999,
+        "status": "SUPERSEDE",
+        "notice_type": "CAPACITY CONSTRAINT"
+      },
+      "facts": {
+        "content_kind": "RESTRICTION",
+        "services": [
+          "SECONDARY_FIRM"
+        ],
+        "availability": "UNAVAILABLE",
+        "locations": [
+          {
+            "kind": "SEGMENT",
+            "value": "24",
+            "evidence_ref": "sources/missing-prior.txt"
+          }
+        ],
+        "quantities": [],
+        "operational_assertions": [
+          "Firm service unavailable at the constraint"
+        ],
+        "start_time": "2026-01-14T00:00:00+00:00",
+        "end_time": null,
+        "time_basis": "UTC"
+      },
+      "history": [],
+      "reference_time": "2026-01-15T12:00:00+00:00",
+      "evidence": {
+        "extraction_usable": true,
+        "helpers_usable": true,
+        "contradictory": false,
+        "references": [
+          "sources/missing-prior.txt"
+        ]
+      }
+    },
+    "basis": "D1/D3 explicit prior missing",
+    "prospective_expectation": "UNRESOLVED",
+    "prospective_action": {
+      "classification": "UNRESOLVED",
+      "disposition": "REVIEW_REQUIRED",
+      "recommendation_allowed": false
+    },
+    "requirements": [
+      "HISTORY-002"
+    ]
+  },
+  {
+    "id": "unsupported-pdf",
+    "kind": "synthetic normalized semantics; not out-of-sample accuracy",
+    "input": {
+      "version": 1,
+      "source": {
+        "pipeline": "NGPL",
+        "media_type": "application/pdf",
+        "sha256": "fb0747bcc3930527949799acde747621a59307b158e129be546c061532164f4b",
+        "bytes_reference": "sources/unsupported-pdf.txt",
+        "fields": {
+          "body": "{\"facts\": {\"availability\": \"UNAVAILABLE\", \"content_kind\": \"RESTRICTION\", \"end_time\": null, \"locations\": [{\"evidence_ref\": \"synthetic-source.txt\", \"kind\": \"SEGMENT\", \"value\": \"24\"}], \"operational_assertions\": [\"Firm service unavailable at the constraint\"], \"quantities\": [], \"services\": [\"SECONDARY_FIRM\"], \"start_time\": \"2026-01-14T00:00:00+00:00\", \"time_basis\": \"UTC\"}, \"notice\": {\"notice_id\": 710001, \"notice_type\": \"CAPACITY CONSTRAINT\", \"prior_notice_id\": null, \"status\": \"INITIATE\"}}",
+          "timezone": "UTC"
+        }
+      },
+      "notice": {
+        "notice_id": 710001,
+        "prior_notice_id": null,
+        "status": "INITIATE",
+        "notice_type": "CAPACITY CONSTRAINT"
+      },
+      "facts": {
+        "content_kind": "RESTRICTION",
+        "services": [
+          "SECONDARY_FIRM"
+        ],
+        "availability": "UNAVAILABLE",
+        "locations": [
+          {
+            "kind": "SEGMENT",
+            "value": "24",
+            "evidence_ref": "sources/unsupported-pdf.txt"
+          }
+        ],
+        "quantities": [],
+        "operational_assertions": [
+          "Firm service unavailable at the constraint"
+        ],
+        "start_time": "2026-01-14T00:00:00+00:00",
+        "end_time": null,
+        "time_basis": "UTC"
+      },
+      "history": [],
+      "reference_time": "2026-01-15T12:00:00+00:00",
+      "evidence": {
+        "extraction_usable": true,
+        "helpers_usable": true,
+        "contradictory": false,
+        "references": [
+          "sources/unsupported-pdf.txt"
+        ]
+      }
+    },
+    "basis": "D5 unsupported format; no PDF extraction",
+    "prospective_expectation": "UNRESOLVED",
+    "prospective_action": {
+      "classification": "UNRESOLVED",
+      "disposition": "REVIEW_REQUIRED",
+      "recommendation_allowed": false
+    },
+    "requirements": [
+      "INPUT-002"
+    ]
+  },
+  {
+    "id": "primary-only-positive",
+    "kind": "synthetic normalized semantics; not out-of-sample accuracy",
+    "input": {
+      "version": 1,
+      "source": {
+        "pipeline": "NGPL",
+        "media_type": "application/vnd.ngpl.normalized+json",
+        "sha256": "a28e11f9ba8cc709fdb0b04a90756d1aba52849bc67735ab2cdd9c40085a3846",
+        "bytes_reference": "sources/primary-only-positive.txt",
+        "fields": {
+          "body": "{\"facts\": {\"availability\": \"PRIMARY_ONLY\", \"content_kind\": \"RESTRICTION\", \"end_time\": null, \"locations\": [{\"evidence_ref\": \"sources/primary-only-positive.txt\", \"kind\": \"SEGMENT\", \"value\": \"12\"}], \"operational_assertions\": [\"Only primary firm service available at the stated constraint\"], \"quantities\": [], \"services\": [], \"start_time\": \"2026-01-14T00:00:00+00:00\", \"time_basis\": \"UTC\"}, \"notice\": {\"notice_id\": 710001, \"notice_type\": \"CAPACITY CONSTRAINT\", \"prior_notice_id\": null, \"status\": \"INITIATE\"}}",
+          "timezone": "UTC"
+        }
+      },
+      "notice": {
+        "notice_id": 710001,
+        "prior_notice_id": null,
+        "status": "INITIATE",
+        "notice_type": "CAPACITY CONSTRAINT"
+      },
+      "facts": {
+        "content_kind": "RESTRICTION",
+        "services": [],
+        "availability": "PRIMARY_ONLY",
+        "locations": [
+          {
+            "kind": "SEGMENT",
+            "value": "12",
+            "evidence_ref": "sources/primary-only-positive.txt"
+          }
+        ],
+        "quantities": [],
+        "operational_assertions": [
+          "Only primary firm service available at the stated constraint"
+        ],
+        "start_time": "2026-01-14T00:00:00+00:00",
+        "end_time": null,
+        "time_basis": "UTC"
+      },
+      "history": [],
+      "reference_time": "2026-01-15T12:00:00+00:00",
+      "evidence": {
+        "extraction_usable": true,
+        "helpers_usable": true,
+        "contradictory": false,
+        "references": [
+          "sources/primary-only-positive.txt"
+        ]
+      }
+    },
+    "basis": "ADR 007 approved PRIMARY_ONLY branch; synthetic normalized witness grounded by inherited/samples/notices/47144_MAINTENANCE.html SEGMENT PRIMARY ONLY NORTHBOUND, SEGMENT 12.",
+    "prospective_expectation": "SIGNAL_CANDIDATE",
+    "prospective_action": {
+      "classification": "SIGNAL_CANDIDATE",
+      "disposition": "CANDIDATE_ONLY",
+      "recommendation_allowed": false
+    },
+    "requirements": [
+      "SIGNAL-001",
+      "SIGNAL-003"
+    ],
+    "source_support": {
+      "path": "inherited/samples/notices/47144_MAINTENANCE.html",
+      "sha256": "78b176740f79c0e0ce2578146bc0cfdbe0056f5024237d089e04158721c2025a",
+      "assertion": "SEGMENT PRIMARY ONLY NORTHBOUND: SEGMENT 12 - COMPRESSOR STATION 106 (CS 106)",
+      "scope": "Supports the PRIMARY_ONLY service predicate only; synthetic input identity/times are not represented as a captured market example."
+    }
+  },
+  {
+    "id": "unchanged-revision",
+    "kind": "synthetic normalized semantics; not out-of-sample accuracy",
+    "input": {
+      "version": 1,
+      "source": {
+        "pipeline": "NGPL",
+        "media_type": "application/vnd.ngpl.normalized+json",
+        "sha256": "2e38a2e5ee06b034fe7614d7aa488698e5ccefd238c1cc70995d0fd5c569c921",
+        "bytes_reference": "sources/firm-positive.txt",
+        "fields": {
+          "body": "{\"facts\": {\"availability\": \"UNAVAILABLE\", \"content_kind\": \"RESTRICTION\", \"end_time\": null, \"locations\": [{\"evidence_ref\": \"sources/firm-positive.txt\", \"kind\": \"SEGMENT\", \"value\": \"24\"}], \"operational_assertions\": [\"Firm service unavailable at the constraint\"], \"quantities\": [], \"services\": [\"SECONDARY_FIRM\"], \"start_time\": \"2026-01-14T00:00:00+00:00\", \"time_basis\": \"UTC\"}, \"notice\": {\"notice_id\": 710002, \"notice_type\": \"CAPACITY CONSTRAINT\", \"prior_notice_id\": 710001, \"status\": \"SUPERSEDE\"}}",
+          "timezone": "UTC"
+        }
+      },
+      "notice": {
+        "notice_id": 710002,
+        "prior_notice_id": 710001,
+        "status": "SUPERSEDE",
+        "notice_type": "CAPACITY CONSTRAINT"
+      },
+      "facts": {
+        "content_kind": "RESTRICTION",
+        "services": [
+          "SECONDARY_FIRM"
+        ],
+        "availability": "UNAVAILABLE",
+        "locations": [
+          {
+            "kind": "SEGMENT",
+            "value": "24",
+            "evidence_ref": "sources/firm-positive.txt"
+          }
+        ],
+        "quantities": [],
+        "operational_assertions": [
+          "Firm service unavailable at the constraint"
+        ],
+        "start_time": "2026-01-14T00:00:00+00:00",
+        "end_time": null,
+        "time_basis": "UTC"
+      },
+      "history": [
+        {
+          "notice": {
+            "notice_id": 710001,
+            "prior_notice_id": null,
+            "status": "INITIATE",
+            "notice_type": "CAPACITY CONSTRAINT"
+          },
+          "facts": {
+            "content_kind": "RESTRICTION",
+            "services": [
+              "SECONDARY_FIRM"
+            ],
+            "availability": "UNAVAILABLE",
+            "locations": [
+              {
+                "kind": "SEGMENT",
+                "value": "24",
+                "evidence_ref": "sources/firm-positive.txt"
+              }
+            ],
+            "quantities": [],
+            "operational_assertions": [
+              "Firm service unavailable at the constraint"
+            ],
+            "start_time": "2026-01-14T00:00:00+00:00",
+            "end_time": null,
+            "time_basis": "UTC"
+          },
+          "source_sha256": "fb0747bcc3930527949799acde747621a59307b158e129be546c061532164f4b"
+        }
+      ],
+      "reference_time": "2026-01-15T12:00:00+00:00",
+      "evidence": {
+        "extraction_usable": true,
+        "helpers_usable": true,
+        "contradictory": false,
+        "references": [
+          "sources/firm-positive.txt"
+        ]
+      }
+    },
+    "basis": "D2 / BR-UNCHANGED: synthetic metadata-only revision of the preserved firm-positive witness, with the exact predecessor facts and explicit source identity. No new market truth.",
+    "prospective_expectation": "NON_SIGNAL",
+    "prospective_action": {
+      "classification": "NON_SIGNAL",
+      "disposition": "SUPPRESSED",
+      "recommendation_allowed": false
+    },
+    "requirements": [
+      "STATE-004",
+      "HISTORY-001"
+    ]
+  }
+]

@@ -1,0 +1,683 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NGPL normalized classifier input v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "source",
+    "notice",
+    "facts",
+    "history",
+    "reference_time",
+    "evidence"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pipeline",
+        "media_type",
+        "sha256",
+        "bytes_reference",
+        "fields"
+      ],
+      "properties": {
+        "pipeline": {
+          "const": "NGPL"
+        },
+        "media_type": {
+          "type": "string",
+          "description": "text/html or application/vnd.ngpl.normalized+json supported; other types yield review without extraction claim."
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "bytes_reference": {
+          "type": "string",
+          "description": "Immutable relative source byte artifact, not a URL standing in for retained content."
+        },
+        "fields": {
+          "type": "object",
+          "description": "Verbatim source header values, source timezone text, body/source spans, and ingestion timestamp. Inferred facts stay in facts, never rewrite raw fields.",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "notice": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "notice_id",
+        "prior_notice_id",
+        "status",
+        "notice_type"
+      ],
+      "properties": {
+        "notice_id": {
+          "type": "integer"
+        },
+        "prior_notice_id": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "INITIATE",
+            "SUPERSEDE",
+            "TERMINATE"
+          ],
+          "description": "Source notice status."
+        },
+        "notice_type": {
+          "type": "string",
+          "description": "Source Notice Type Desc (1), with subtype retained in source fields."
+        }
+      }
+    },
+    "facts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "content_kind",
+        "services",
+        "availability",
+        "locations",
+        "quantities",
+        "operational_assertions",
+        "start_time",
+        "end_time",
+        "time_basis"
+      ],
+      "properties": {
+        "content_kind": {
+          "type": "string",
+          "enum": [
+            "ADMINISTRATIVE",
+            "INFORMATIONAL",
+            "RESTRICTION",
+            "RESTORATION",
+            "UNKNOWN"
+          ],
+          "description": "Normalized source content, not materiality or a signal label."
+        },
+        "services": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "PRIMARY_FIRM",
+              "SECONDARY_FIRM",
+              "INTERRUPTIBLE",
+              "AOR_ITS",
+              "UNKNOWN"
+            ],
+            "description": "Service affected; preserve source distinctions in assertions."
+          }
+        },
+        "availability": {
+          "type": "string",
+          "enum": [
+            "UNAVAILABLE",
+            "PRIMARY_ONLY",
+            "PARTIAL",
+            "AVAILABLE",
+            "UNKNOWN"
+          ],
+          "description": "Source restriction, not an impact score."
+        },
+        "locations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "value",
+              "evidence_ref"
+            ],
+            "properties": {
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "SEGMENT",
+                  "ZONE",
+                  "SYSTEM",
+                  "LOC",
+                  "COMPRESSOR_STATION"
+                ],
+                "description": "Source identifier kind, never proof of curtailment by itself."
+              },
+              "value": {
+                "type": "string",
+                "description": "Exact identifier; constraint point distinguished from root cause."
+              },
+              "evidence_ref": {
+                "type": "string",
+                "description": "Source span/page/field reference."
+              }
+            }
+          }
+        },
+        "quantities": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "value",
+              "unit",
+              "basis",
+              "evidence_ref"
+            ],
+            "properties": {
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "SCHEDULED_TO_PCT_MDQ",
+                  "HOURLY_LIMIT_PCT",
+                  "ABSOLUTE_CURTAILMENT",
+                  "UNAVAILABLE"
+                ],
+                "description": "Kinds must not be interchanged."
+              },
+              "value": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "unit": {
+                "type": "string",
+                "enum": [
+                  "PERCENT_MDQ",
+                  "PERCENT_ENTITLEMENT",
+                  "MMBtu",
+                  "Dth",
+                  "NONE"
+                ],
+                "description": "Null quantity for categorical UNAVAILABLE uses NONE; absolute energy needs stated basis."
+              },
+              "basis": {
+                "type": "string",
+                "description": "Scheduled-to percentage is remaining allowed capacity; never infer absolute volume without source capacity/time basis."
+              },
+              "evidence_ref": {
+                "type": "string",
+                "description": "Exact supporting source span."
+              }
+            }
+          }
+        },
+        "operational_assertions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Source-grounded operational assertion with source span; preserve material body facts, not capture metadata."
+          }
+        },
+        "start_time": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "ISO 8601 with explicit UTC offset when known; null means absent/unresolved; never silently assume local timezone."
+        },
+        "end_time": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "ISO 8601 with explicit UTC offset when known; null means absent/unresolved; never silently assume local timezone."
+        },
+        "time_basis": {
+          "type": "string",
+          "enum": [
+            "UTC",
+            "UNRESOLVED"
+          ],
+          "description": "Explicit accepted time interpretation; source timezone retained in source fields."
+        },
+        "restrictions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "service",
+              "availability",
+              "restriction_type",
+              "status",
+              "location_index",
+              "source_start",
+              "source_end",
+              "evidence_ref"
+            ],
+            "properties": {
+              "service": {
+                "type": "string",
+                "enum": [
+                  "PRIMARY_FIRM",
+                  "SECONDARY_FIRM",
+                  "INTERRUPTIBLE",
+                  "AOR_ITS",
+                  "UNKNOWN"
+                ]
+              },
+              "availability": {
+                "type": "string",
+                "enum": [
+                  "UNAVAILABLE",
+                  "PRIMARY_ONLY",
+                  "PARTIAL",
+                  "AVAILABLE",
+                  "UNKNOWN"
+                ]
+              },
+              "restriction_type": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              },
+              "location_index": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "source_start": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "source_end": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "evidence_ref": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "Per-row source associations. Optional for prior v1 normalized witnesses; required from the retained-capture normalizer."
+        }
+      }
+    },
+    "history": {
+      "type": "array",
+      "description": "Accepted prior versions, explicit links only. Empty is a valid root history; absent referenced ID is missing proof. Each entry represents one accepted immutable source version.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source_sha256",
+          "notice",
+          "facts"
+        ],
+        "properties": {
+          "source_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "notice": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "notice_id",
+              "prior_notice_id",
+              "status",
+              "notice_type"
+            ],
+            "properties": {
+              "notice_id": {
+                "type": "integer"
+              },
+              "prior_notice_id": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "INITIATE",
+                  "SUPERSEDE",
+                  "TERMINATE"
+                ],
+                "description": "Source notice status."
+              },
+              "notice_type": {
+                "type": "string",
+                "description": "Source Notice Type Desc (1), with subtype retained in source fields."
+              }
+            }
+          },
+          "facts": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "content_kind",
+              "services",
+              "availability",
+              "locations",
+              "quantities",
+              "operational_assertions",
+              "start_time",
+              "end_time",
+              "time_basis"
+            ],
+            "properties": {
+              "content_kind": {
+                "type": "string",
+                "enum": [
+                  "ADMINISTRATIVE",
+                  "INFORMATIONAL",
+                  "RESTRICTION",
+                  "RESTORATION",
+                  "UNKNOWN"
+                ],
+                "description": "Normalized source content, not materiality or a signal label."
+              },
+              "services": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "PRIMARY_FIRM",
+                    "SECONDARY_FIRM",
+                    "INTERRUPTIBLE",
+                    "AOR_ITS",
+                    "UNKNOWN"
+                  ],
+                  "description": "Service affected; preserve source distinctions in assertions."
+                }
+              },
+              "availability": {
+                "type": "string",
+                "enum": [
+                  "UNAVAILABLE",
+                  "PRIMARY_ONLY",
+                  "PARTIAL",
+                  "AVAILABLE",
+                  "UNKNOWN"
+                ],
+                "description": "Source restriction, not an impact score."
+              },
+              "locations": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "kind",
+                    "value",
+                    "evidence_ref"
+                  ],
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "enum": [
+                        "SEGMENT",
+                        "ZONE",
+                        "SYSTEM",
+                        "LOC",
+                        "COMPRESSOR_STATION"
+                      ],
+                      "description": "Source identifier kind, never proof of curtailment by itself."
+                    },
+                    "value": {
+                      "type": "string",
+                      "description": "Exact identifier; constraint point distinguished from root cause."
+                    },
+                    "evidence_ref": {
+                      "type": "string",
+                      "description": "Source span/page/field reference."
+                    }
+                  }
+                }
+              },
+              "quantities": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "kind",
+                    "value",
+                    "unit",
+                    "basis",
+                    "evidence_ref"
+                  ],
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "enum": [
+                        "SCHEDULED_TO_PCT_MDQ",
+                        "HOURLY_LIMIT_PCT",
+                        "ABSOLUTE_CURTAILMENT",
+                        "UNAVAILABLE"
+                      ],
+                      "description": "Kinds must not be interchanged."
+                    },
+                    "value": {
+                      "type": [
+                        "number",
+                        "null"
+                      ],
+                      "minimum": 0
+                    },
+                    "unit": {
+                      "type": "string",
+                      "enum": [
+                        "PERCENT_MDQ",
+                        "PERCENT_ENTITLEMENT",
+                        "MMBtu",
+                        "Dth",
+                        "NONE"
+                      ],
+                      "description": "Null quantity for categorical UNAVAILABLE uses NONE; absolute energy needs stated basis."
+                    },
+                    "basis": {
+                      "type": "string",
+                      "description": "Scheduled-to percentage is remaining allowed capacity; never infer absolute volume without source capacity/time basis."
+                    },
+                    "evidence_ref": {
+                      "type": "string",
+                      "description": "Exact supporting source span."
+                    }
+                  }
+                }
+              },
+              "operational_assertions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "description": "Source-grounded operational assertion with source span; preserve material body facts, not capture metadata."
+                }
+              },
+              "start_time": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "ISO 8601 with explicit UTC offset when known; null means absent/unresolved; never silently assume local timezone."
+              },
+              "end_time": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "ISO 8601 with explicit UTC offset when known; null means absent/unresolved; never silently assume local timezone."
+              },
+              "time_basis": {
+                "type": "string",
+                "enum": [
+                  "UTC",
+                  "UNRESOLVED"
+                ],
+                "description": "Explicit accepted time interpretation; source timezone retained in source fields."
+              },
+              "restrictions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "service",
+                    "availability",
+                    "restriction_type",
+                    "status",
+                    "location_index",
+                    "source_start",
+                    "source_end",
+                    "evidence_ref"
+                  ],
+                  "properties": {
+                    "service": {
+                      "type": "string",
+                      "enum": [
+                        "PRIMARY_FIRM",
+                        "SECONDARY_FIRM",
+                        "INTERRUPTIBLE",
+                        "AOR_ITS",
+                        "UNKNOWN"
+                      ]
+                    },
+                    "availability": {
+                      "type": "string",
+                      "enum": [
+                        "UNAVAILABLE",
+                        "PRIMARY_ONLY",
+                        "PARTIAL",
+                        "AVAILABLE",
+                        "UNKNOWN"
+                      ]
+                    },
+                    "restriction_type": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "location_index": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ]
+                    },
+                    "source_start": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "source_end": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "evidence_ref": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "description": "Per-row source associations. Optional for prior v1 normalized witnesses; required from the retained-capture normalizer."
+              }
+            }
+          }
+        }
+      }
+    },
+    "reference_time": {
+      "type": "string",
+      "description": "Required ISO 8601 UTC timestamp supplied by caller; never substitute machine clock."
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "extraction_usable",
+        "helpers_usable",
+        "contradictory",
+        "references"
+      ],
+      "properties": {
+        "extraction_usable": {
+          "type": "boolean"
+        },
+        "helpers_usable": {
+          "type": "boolean",
+          "description": "Necessary helper result available; not a supplied impact/materiality answer."
+        },
+        "contradictory": {
+          "type": "boolean",
+          "description": "Known unresolved source conflicts, not permission to skip the classifier checking obvious conflicts."
+        },
+        "references": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Retained extraction/model/tool request/response or source evidence references, sanitized."
+          }
+        }
+      }
+    },
+    "normalization_trace": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": [
+          "field",
+          "source_basis",
+          "source_value",
+          "normalized_value",
+          "supplied_by",
+          "unknown_handling"
+        ],
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "source_basis": {
+            "type": "string"
+          },
+          "source_value": {},
+          "normalized_value": {},
+          "supplied_by": {
+            "type": "string",
+            "enum": [
+              "model",
+              "source_parser",
+              "human",
+              "normalizer",
+              "retained_history",
+              "unknown"
+            ]
+          },
+          "unknown_handling": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

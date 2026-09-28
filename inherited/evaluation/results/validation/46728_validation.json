@@ -1,0 +1,16 @@
+{
+  "notice_id": 46728,
+  "notice_type": "CAPACITY CONSTRAINT",
+  "status": "INITIATE",
+  "prior_notice_id": null,
+  "information_only": false,
+  "is_signal": false,
+  "confidence_score": 0.0,
+  "validity_flags": [
+    "VC-2: high-confidence notice type (CAPACITY CONSTRAINT) — capacity constraint (+0.20 confidence)",
+    "VC-3: no measurable curtailment — no restriction value and no UNAVAILABLE restriction type extracted; advisory notice only (-0.20 confidence)",
+    "VC-4: pipeline segment identified — constraint point known (+0.15 confidence)",
+    "VC-5: Henry Hub / Gulf Coast / Louisiana zone location — direct price impact on NYMEX front-month (+0.20 confidence)",
+    "llm_extraction"
+  ]
+}

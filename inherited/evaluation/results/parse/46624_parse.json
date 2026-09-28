@@ -1,0 +1,70 @@
+{
+  "notice_id": 46624,
+  "notice_type": "CAPACITY CONSTRAINT",
+  "html_file": "evaluation/notices/46624_CAPACITY CONSTRAINT.html",
+  "header": {
+    "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+    "critical": "Y",
+    "type1": "CAPACITY CONSTRAINT",
+    "type2": "POINTS",
+    "notice_effective_date": "01/12/2026 10:51:37AM",
+    "notice_end_date": "03/31/2026 9:00:00am",
+    "post_date": "1/12/2026 10:51:37 AM",
+    "notice_id": "46624",
+    "req_rsp": "1",
+    "rsp_date": "01/12/2026",
+    "status": "INITIATE",
+    "prior_notice_id": "",
+    "subject": "FGT VERMILLION (LOC 7936) - PRIMARY ONLY"
+  },
+  "body": "ANR/NGPL SOUTH JOLIET AT CAPACITY\n\nFLORIDA\nVERMILION (LOC 7936) – PRIMARY ONLY\n\n \n\nDue\nto current operating conditions, effective for gas day \nWednesday, January 14,\n2026, Timely Cycle and continuing until further notice,\n Florida Vermilion (LOC\n7936) is at operating capacity.  As such, Natural will only schedule Primary\nFirm transports for deliveries to Florida Vermilion (LOC 7936).  AOR/ITS, Secondary\nout-of-path Firm transports and Secondary in-path Firm transports \nwill\nnot\n be available.\n\n \n\nFlorida\nVermilion is located in Vermilion Parish, Louisiana (Segment 24), in Natural's Louisiana\nZone.\n\n \n\nPlease\ncontact your Account Director or Scheduling Representative if you have any\nquestions.\n\n \n\n.",
+  "information_only": false,
+  "locations": [
+    {
+      "location_index": 0,
+      "notice_id": 46624,
+      "loc_code": "7936",
+      "loc_name": "Florida Vermilion",
+      "segment": "24",
+      "compressor_station": null,
+      "zone": "Louisiana Zone",
+      "system": null
+    }
+  ],
+  "restrictions": [
+    {
+      "notice_id": 46624,
+      "location_index": 0,
+      "service_type": "AOR_ITS",
+      "restriction_type": "UNAVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "OFF_OF_PIPE",
+      "start_datetime": "2026-01-14",
+      "end_datetime": "TBD"
+    },
+    {
+      "notice_id": 46624,
+      "location_index": 0,
+      "service_type": "SECONDARY_OUTPATH_FIRM",
+      "restriction_type": "UNAVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "OFF_OF_PIPE",
+      "start_datetime": "2026-01-14",
+      "end_datetime": "TBD"
+    },
+    {
+      "notice_id": 46624,
+      "location_index": 0,
+      "service_type": "SECONDARY_INPATH_FIRM",
+      "restriction_type": "UNAVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "OFF_OF_PIPE",
+      "start_datetime": "2026-01-14",
+      "end_datetime": "TBD"
+    }
+  ],
+  "provenance": "llm_extraction"
+}

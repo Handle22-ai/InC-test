@@ -1,0 +1,2303 @@
+# Generated from spec.md; spec-sha256: 4448a6f9e9ee3841e0086a8e556c21bbd584efc9167742a831154f70e3e18a8e; behavior; DO NOT EDIT
+{
+  "version": 6,
+  "policy_id": "assessment-v4-timezone-separation-20260928",
+  "bounds": {
+    "OUTPUT-002.maximum_mdq": 100,
+    "OUTPUT-002.minimum": 0,
+    "OUTPUT-001.confidence_max": 1
+  },
+  "bound_source": "Existing representation bounds, not materiality cutoffs; compiler validates finite values and gate checks use this spec.",
+  "formats": {
+    "supported": [
+      "text/html",
+      "application/vnd.ngpl.normalized+json"
+    ],
+    "unsupported": [
+      "application/pdf",
+      "text/plain",
+      "application/octet-stream"
+    ],
+    "meaning": "HTML is parsed from saved bytes; no PDF/OCR/attachment extraction. Normalized classifier does not implement HTML ingestion."
+  },
+  "history_statuses": {
+    "root": [
+      "INITIATE"
+    ],
+    "linked": [
+      "INITIATE",
+      "SUPERSEDE",
+      "TERMINATE"
+    ]
+  },
+  "unresolved_time_margin_hours": 14,
+  "acceptance": {
+    "max_missed_positives_per_capture": 2,
+    "max_false_positives_per_capture": 0,
+    "review_satisfies": [
+      "SIGNAL-002",
+      "SIGNAL-004"
+    ]
+  },
+  "sets": {
+    "FIRM_SERVICES": [
+      "PRIMARY_FIRM",
+      "SECONDARY_FIRM",
+      "NO_NOTICE_FIRM"
+    ],
+    "RESTRICTED_AVAILABILITY": [
+      "UNAVAILABLE",
+      "PRIMARY_ONLY",
+      "PARTIAL"
+    ],
+    "INFORMATION_KINDS": [
+      "ADMINISTRATIVE",
+      "INFORMATIONAL"
+    ],
+    "UNCHANGED_PREDECESSOR_STATUSES": [
+      "INITIATE",
+      "SUPERSEDE"
+    ],
+    "SUPPORTED_FORMATS": [
+      "text/html",
+      "application/vnd.ngpl.normalized+json"
+    ],
+    "ROOT_STATUSES": [
+      "INITIATE"
+    ],
+    "LINKED_STATUSES": [
+      "INITIATE",
+      "SUPERSEDE",
+      "TERMINATE"
+    ]
+  },
+  "normalization": {
+    "boundary": "Map retained extracted assertions with provenance. Preserve each service/restriction/location/interval association, including unknown rows. Scalar mixed availability remains UNKNOWN, but known per-row evidence is never erased. Never use is_signal, confidence, labels or a classification as input evidence. No timezone inferred.",
+    "services": {
+      "PRIMARY_FIRM": "PRIMARY_FIRM",
+      "SECONDARY_FIRM": "SECONDARY_FIRM",
+      "SECONDARY_INPATH_FIRM": "SECONDARY_FIRM",
+      "SECONDARY_OUTPATH_FIRM": "SECONDARY_FIRM",
+      "NO_NOTICE": "NO_NOTICE_FIRM",
+      "INTERRUPTIBLE": "INTERRUPTIBLE",
+      "AOR_ITS": "AOR_ITS"
+    },
+    "availability": {
+      "UNAVAILABLE": "UNAVAILABLE",
+      "PRIMARY_ONLY": "PRIMARY_ONLY",
+      "SCHEDULED_TO_PCT_MDQ": "PARTIAL",
+      "HOURLY_LIMIT_PCT": "PARTIAL"
+    },
+    "locations": {
+      "loc_code": "LOC",
+      "segment": "SEGMENT",
+      "compressor_station": "COMPRESSOR_STATION",
+      "zone": "ZONE",
+      "system": "SYSTEM"
+    },
+    "quantities": {
+      "SCHEDULED_TO_PCT_MDQ": {
+        "kind": "SCHEDULED_TO_PCT_MDQ",
+        "unit": "PERCENT_MDQ"
+      },
+      "HOURLY_LIMIT_PCT": {
+        "kind": "HOURLY_LIMIT_PCT",
+        "unit": "PERCENT_ENTITLEMENT"
+      }
+    },
+    "content": {
+      "information_only": "INFORMATIONAL",
+      "restrictions": "RESTRICTION",
+      "otherwise": "UNKNOWN"
+    },
+    "helper_values": {
+      "llm_assess_curtailment_impact": [
+        "large",
+        "medium",
+        "small"
+      ],
+      "llm_is_supersede_material": [
+        true,
+        false
+      ]
+    }
+  },
+  "quantity_units": {
+    "SCHEDULED_TO_PCT_MDQ": [
+      "PERCENT_MDQ"
+    ],
+    "HOURLY_LIMIT_PCT": [
+      "PERCENT_ENTITLEMENT"
+    ],
+    "ABSOLUTE_CURTAILMENT": [
+      "MMBtu",
+      "Dth"
+    ],
+    "UNAVAILABLE": [
+      "NONE"
+    ]
+  },
+  "boundary": "Source-grounded normalized facts -> candidate only, including when source timezone is UNKNOWN. Unknown timezone blocks automatic current/future actionability and recommendation authorization, requiring REVIEW_REQUIRED. No timezone is inferred.",
+  "rule_requirements": {
+    "BR-FORMAT": [
+      "INPUT-002"
+    ],
+    "BR-SEMANTICS": [
+      "SAFETY-001",
+      "INPUT-002"
+    ],
+    "BR-CONTRADICTION": [
+      "INPUT-002"
+    ],
+    "BR-HISTORY": [
+      "HISTORY-002"
+    ],
+    "BR-UNCHANGED": [
+      "STATE-004"
+    ],
+    "BR-ROUTINE": [
+      "SIGNAL-002"
+    ],
+    "BR-HISTORICAL": [
+      "SIGNAL-003"
+    ],
+    "BR-FIRM": [
+      "SIGNAL-001",
+      "SIGNAL-003"
+    ],
+    "BR-UNRESOLVED": [
+      "SIGNAL-001",
+      "SIGNAL-004"
+    ]
+  },
+  "state_safety": {
+    "version": 1,
+    "policy_id": "assessment-v4-timezone-separation-20260928",
+    "scope": "bounded initial outbound recommendation decisions; not delivery or complete lifecycle acceptance",
+    "basis": "spec.md D1-D3/D5-D6; owner behavioral-improvement request",
+    "reference_time": "2026-01-15T12:00:00+00:00",
+    "synthetic": true,
+    "requirements": [
+      "INPUT-002",
+      "STATE-003",
+      "STATE-004",
+      "STATE-006",
+      "HISTORY-002",
+      "SAFETY-001",
+      "SIGNAL-002"
+    ],
+    "relations": {
+      "initial": {
+        "field": "initial_count",
+        "kind": "behavior"
+      },
+      "disposition": {
+        "requirement": "OUTPUT-001",
+        "field": "disposition",
+        "kind": "output_contract"
+      },
+      "reason": {
+        "requirement": "OUTPUT-001",
+        "field": "reason",
+        "kind": "output_contract"
+      },
+      "semantic_safety": {
+        "requirement": "SAFETY-001",
+        "field": "semantic_safety",
+        "kind": "behavior"
+      }
+    },
+    "steps": [
+      {
+        "id": "A",
+        "notice": "root",
+        "restart": false,
+        "provider": "valid",
+        "authorization": true,
+        "expected": {
+          "initial": 1,
+          "disposition": "INITIAL_RECOMMENDATION"
+        },
+        "requirement": "STATE-003",
+        "spec_line": 385
+      },
+      {
+        "id": "B",
+        "notice": "root",
+        "restart": false,
+        "provider": "valid",
+        "authorization": true,
+        "expected": {
+          "initial": 0,
+          "disposition": "SUPPRESSED"
+        },
+        "requirement": "STATE-003",
+        "spec_line": 386
+      },
+      {
+        "id": "C",
+        "notice": "unchanged_revision",
+        "restart": false,
+        "provider": "valid",
+        "authorization": true,
+        "expected": {
+          "initial": 0,
+          "disposition": "SUPPRESSED"
+        },
+        "requirement": "STATE-004",
+        "spec_line": 387
+      },
+      {
+        "id": "D",
+        "notice": "unchanged_revision",
+        "restart": true,
+        "provider": "valid",
+        "authorization": true,
+        "expected": {
+          "initial": 0,
+          "disposition": "SUPPRESSED"
+        },
+        "requirement": "STATE-006",
+        "spec_line": 388
+      },
+      {
+        "id": "E",
+        "notice": "distinct",
+        "restart": false,
+        "provider": "valid",
+        "authorization": true,
+        "expected": {
+          "initial": 1,
+          "disposition": "INITIAL_RECOMMENDATION"
+        },
+        "requirement": "STATE-003",
+        "spec_line": 389
+      },
+      {
+        "id": "F",
+        "notice": "distinct",
+        "restart": true,
+        "provider": "valid",
+        "authorization": true,
+        "expected": {
+          "initial": 0,
+          "disposition": "SUPPRESSED"
+        },
+        "requirement": "STATE-006",
+        "spec_line": 390
+      },
+      {
+        "id": "unusable-impact",
+        "notice": "root",
+        "restart": false,
+        "provider": "unusable_impact",
+        "authorization": true,
+        "expected": {
+          "initial": 0,
+          "disposition": "REVIEW_REQUIRED",
+          "reason": "SEMANTICS_INCOMPLETE"
+        },
+        "requirement": "INPUT-002",
+        "spec_line": 391
+      },
+      {
+        "id": "unavailable-extraction",
+        "notice": "extraction_failure",
+        "restart": false,
+        "provider": "unavailable_extraction",
+        "authorization": true,
+        "expected": {
+          "initial": 0,
+          "disposition": "ERROR",
+          "semantic_safety": true
+        },
+        "requirement": "INPUT-002",
+        "spec_line": 392
+      },
+      {
+        "id": "missing-history",
+        "notice": "missing_history",
+        "restart": false,
+        "provider": "valid",
+        "authorization": true,
+        "expected": {
+          "initial": 0,
+          "disposition": "REVIEW_REQUIRED",
+          "reason": "MISSING_HISTORY"
+        },
+        "requirement": "HISTORY-002",
+        "spec_line": 393
+      },
+      {
+        "id": "missing-authorization",
+        "notice": "unauthorized",
+        "restart": false,
+        "provider": "valid",
+        "authorization": false,
+        "expected": {
+          "initial": 0,
+          "disposition": "REVIEW_REQUIRED",
+          "reason": "AUTHORIZATION_REQUIRED"
+        },
+        "requirement": "STATE-003",
+        "spec_line": 394
+      },
+      {
+        "id": "routine",
+        "notice": "routine",
+        "restart": false,
+        "provider": "information_only",
+        "authorization": true,
+        "expected": {
+          "initial": 0,
+          "disposition": "NO_SIGNAL"
+        },
+        "requirement": "SIGNAL-002",
+        "spec_line": 395
+      },
+      {
+        "id": "unsupported-format",
+        "notice": "unsupported_format",
+        "restart": false,
+        "provider": "valid",
+        "authorization": true,
+        "expected": {
+          "initial": 0,
+          "disposition": "REVIEW_REQUIRED",
+          "reason": "UNSUPPORTED_FORMAT"
+        },
+        "requirement": "SAFETY-002",
+        "spec_line": 396
+      }
+    ]
+  },
+  "timezone": {
+    "decision": "TZ-NGPL-002",
+    "status": "owner-requested-no-inference",
+    "rejected_proposal": "TZ-NGPL-001",
+    "rule": "Unknown source timezone permits source-grounded candidate classification only; actionability and authorization require review. Explicit trusted source offsets permit temporal evaluation.",
+    "active_default": null
+  },
+  "date_formats": [
+    "%m/%d/%Y %I:%M:%S%p",
+    "%m/%d/%Y %I:%M:%S %p",
+    "%m/%d/%Y",
+    "ISO8601"
+  ],
+  "parameters": {
+    "max_initial_alerts_per_event": 1
+  },
+  "parameter_rows": [
+    {
+      "ID": "PARAM-INITIAL-001",
+      "Meaning": "Maximum initial alerts",
+      "Value": "1",
+      "Unit": "initial alerts per resolved event",
+      "Requirement": "D1-005",
+      "_line": 200
+    }
+  ],
+  "check_declarations": [
+    {
+      "ID": "D1-001",
+      "Check": "source_identity",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 207
+    },
+    {
+      "ID": "D1-002",
+      "Check": "explicit_history",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 208
+    },
+    {
+      "ID": "D1-003",
+      "Check": "domain_identity",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 209
+    },
+    {
+      "ID": "D1-004",
+      "Check": "history_refusal",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 210
+    },
+    {
+      "ID": "D1-005",
+      "Check": "one_initial",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 211
+    },
+    {
+      "ID": "D1-006",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 212
+    },
+    {
+      "ID": "D1-007",
+      "Check": "replay_suppression",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 213
+    },
+    {
+      "ID": "D1-008",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 214
+    },
+    {
+      "ID": "D1-009",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 215
+    },
+    {
+      "ID": "D1-010",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 216
+    },
+    {
+      "ID": "D1-011",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 217
+    },
+    {
+      "ID": "D2-001",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 218
+    },
+    {
+      "ID": "D2-002",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 219
+    },
+    {
+      "ID": "D2-003",
+      "Check": "unchanged_suppression",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 220
+    },
+    {
+      "ID": "D2-004",
+      "Check": "unresolved_refusal",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 221
+    },
+    {
+      "ID": "D2-005",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 222
+    },
+    {
+      "ID": "D2-006",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 223
+    },
+    {
+      "ID": "D2-007",
+      "Check": "replay_suppression",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 224
+    },
+    {
+      "ID": "D2-008",
+      "Check": "unresolved_refusal",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 225
+    },
+    {
+      "ID": "D2-009",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 226
+    },
+    {
+      "ID": "D2-010",
+      "Check": "conflict_refusal",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 227
+    },
+    {
+      "ID": "D2-011",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 228
+    },
+    {
+      "ID": "D2-012",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 229
+    },
+    {
+      "ID": "D3-001",
+      "Check": "time_schema",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 230
+    },
+    {
+      "ID": "D3-002",
+      "Check": "no_timezone_inference",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 231
+    },
+    {
+      "ID": "D3-003",
+      "Check": "history_refusal",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 232
+    },
+    {
+      "ID": "D3-004",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 233
+    },
+    {
+      "ID": "D3-005",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 234
+    },
+    {
+      "ID": "D3-006",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 235
+    },
+    {
+      "ID": "D3-007",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 236
+    },
+    {
+      "ID": "D3-008",
+      "Check": "historical_precedence",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 237
+    },
+    {
+      "ID": "D3-009",
+      "Check": "no_age_cutoff",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 238
+    },
+    {
+      "ID": "D3-010",
+      "Check": "clock_boundary",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 239
+    },
+    {
+      "ID": "D3-011",
+      "Check": "no_labels_or_authorization",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 240
+    },
+    {
+      "ID": "D3-012",
+      "Check": "clock_boundary",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 241
+    },
+    {
+      "ID": "D3-013",
+      "Check": "clock_boundary",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 242
+    },
+    {
+      "ID": "D3-014",
+      "Check": "no_timezone_inference",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 243
+    },
+    {
+      "ID": "D3-015",
+      "Check": "historical_precedence",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 244
+    },
+    {
+      "ID": "D4-001",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 245
+    },
+    {
+      "ID": "D4-002",
+      "Check": "output_provenance",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 246
+    },
+    {
+      "ID": "D4-003",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 247
+    },
+    {
+      "ID": "D4-004",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 248
+    },
+    {
+      "ID": "D4-005",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 249
+    },
+    {
+      "ID": "D4-006",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 250
+    },
+    {
+      "ID": "D4-007",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 251
+    },
+    {
+      "ID": "D4-008",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 252
+    },
+    {
+      "ID": "D5-001",
+      "Check": "invalid_refusal",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 253
+    },
+    {
+      "ID": "D5-002",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 254
+    },
+    {
+      "ID": "D5-003",
+      "Check": "invalid_refusal",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 255
+    },
+    {
+      "ID": "D5-004",
+      "Check": "optional_unknown",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 256
+    },
+    {
+      "ID": "D5-005",
+      "Check": "conflict_refusal",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 257
+    },
+    {
+      "ID": "D5-006",
+      "Check": "clock_boundary",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 258
+    },
+    {
+      "ID": "D5-007",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 259
+    },
+    {
+      "ID": "D5-008",
+      "Check": "semantics_refusal",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 260
+    },
+    {
+      "ID": "D5-009",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 261
+    },
+    {
+      "ID": "D5-010",
+      "Check": "disposition_vocabulary",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 262
+    },
+    {
+      "ID": "D5-011",
+      "Check": "semantics_refusal",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 263
+    },
+    {
+      "ID": "D6-001",
+      "Check": "candidate_only",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 264
+    },
+    {
+      "ID": "D6-002",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 265
+    },
+    {
+      "ID": "D6-003",
+      "Check": "unresolved_refusal",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 266
+    },
+    {
+      "ID": "D6-004",
+      "Check": "candidate_only",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 267
+    },
+    {
+      "ID": "D6-005",
+      "Check": "no_quantity_checklist",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 268
+    },
+    {
+      "ID": "D6-006",
+      "Check": "optional_unknown",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 269
+    },
+    {
+      "ID": "D6-007",
+      "Check": "no_absolute_inference",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 270
+    },
+    {
+      "ID": "D6-008",
+      "Check": "no_labels_or_authorization",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 271
+    },
+    {
+      "ID": "D6-009",
+      "Check": "no_labels_or_authorization",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 272
+    },
+    {
+      "ID": "D6-010",
+      "Check": "candidate_only",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 273
+    },
+    {
+      "ID": "D6-011",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 274
+    },
+    {
+      "ID": "D6-012",
+      "Check": "unchanged_suppression",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 275
+    },
+    {
+      "ID": "D6-013",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 276
+    },
+    {
+      "ID": "D6-014",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 277
+    },
+    {
+      "ID": "D6-015",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 278
+    },
+    {
+      "ID": "D6-016",
+      "Check": "-",
+      "Sentence coverage": "UNCHECKED",
+      "_line": 279
+    }
+  ],
+  "rules": [
+    {
+      "id": "BR-FORMAT",
+      "priority": 10,
+      "when": {
+        "Format": "UNSUPPORTED"
+      },
+      "action_name": "UNSUPPORTED_FORMAT",
+      "action": {
+        "classification": "UNRESOLVED",
+        "disposition": "REVIEW_REQUIRED",
+        "recommendation_allowed": false
+      },
+      "requirements": [
+        "INPUT-002"
+      ],
+      "status": "spec-recorded",
+      "oracle": "spec-derived, not independent",
+      "basis": "spec.md:315",
+      "output_reason": "UNSUPPORTED_FORMAT",
+      "spec_line": 315
+    },
+    {
+      "id": "BR-SEMANTICS",
+      "priority": 20,
+      "when": {
+        "Oracle answer": "UNUSABLE"
+      },
+      "action_name": "UNUSABLE_SEMANTICS",
+      "action": {
+        "classification": "UNRESOLVED",
+        "disposition": "ERROR",
+        "recommendation_allowed": false
+      },
+      "requirements": [
+        "SAFETY-001",
+        "INPUT-002"
+      ],
+      "status": "spec-recorded",
+      "oracle": "spec-derived, not independent",
+      "basis": "spec.md:316",
+      "output_reason": "UNUSABLE_SEMANTICS",
+      "spec_line": 316
+    },
+    {
+      "id": "BR-CONTRADICTION",
+      "priority": 30,
+      "when": {
+        "Conflict": "YES"
+      },
+      "action_name": "CONTRADICTORY_EVIDENCE",
+      "action": {
+        "classification": "UNRESOLVED",
+        "disposition": "REVIEW_REQUIRED",
+        "recommendation_allowed": false
+      },
+      "requirements": [
+        "INPUT-002"
+      ],
+      "status": "spec-recorded",
+      "oracle": "spec-derived, not independent",
+      "basis": "spec.md:317",
+      "output_reason": "CONTRADICTORY_EVIDENCE",
+      "spec_line": 317
+    },
+    {
+      "id": "BR-HISTORY",
+      "priority": 40,
+      "when": {
+        "History": "GAP"
+      },
+      "action_name": "MISSING_HISTORY",
+      "action": {
+        "classification": "UNRESOLVED",
+        "disposition": "REVIEW_REQUIRED",
+        "recommendation_allowed": false
+      },
+      "requirements": [
+        "HISTORY-002"
+      ],
+      "status": "spec-recorded",
+      "oracle": "spec-derived, not independent",
+      "basis": "spec.md:318",
+      "output_reason": "MISSING_HISTORY",
+      "spec_line": 318
+    },
+    {
+      "id": "BR-UNCHANGED",
+      "priority": 50,
+      "when": {
+        "Operational change": "UNCHANGED"
+      },
+      "action_name": "UNCHANGED_REVISION",
+      "action": {
+        "classification": "NON_SIGNAL",
+        "disposition": "SUPPRESSED",
+        "recommendation_allowed": false
+      },
+      "requirements": [
+        "STATE-004"
+      ],
+      "status": "spec-recorded",
+      "oracle": "spec-derived, not independent",
+      "basis": "spec.md:319",
+      "output_reason": "UNCHANGED_REVISION",
+      "spec_line": 319
+    },
+    {
+      "id": "BR-ROUTINE",
+      "priority": 60,
+      "when": {
+        "Information-only": "YES",
+        "Restriction": "NONE"
+      },
+      "action_name": "NO_OPERATIONAL_RESTRICTION",
+      "action": {
+        "classification": "NON_SIGNAL",
+        "disposition": "NO_SIGNAL",
+        "recommendation_allowed": false
+      },
+      "requirements": [
+        "SIGNAL-002"
+      ],
+      "status": "spec-recorded",
+      "oracle": "spec-derived, not independent",
+      "basis": "spec.md:320",
+      "output_reason": "NO_OPERATIONAL_RESTRICTION",
+      "spec_line": 320
+    },
+    {
+      "id": "BR-HISTORICAL",
+      "priority": 70,
+      "when": {
+        "Service class": "FIRM_DISRUPTION",
+        "Restriction current": "ENDED"
+      },
+      "action_name": "HISTORICAL_ONLY",
+      "action": {
+        "classification": "NON_SIGNAL",
+        "disposition": "NO_SIGNAL",
+        "recommendation_allowed": false
+      },
+      "requirements": [
+        "SIGNAL-003"
+      ],
+      "status": "spec-recorded",
+      "oracle": "spec-derived, not independent",
+      "basis": "spec.md:321",
+      "output_reason": "HISTORICAL_ONLY",
+      "spec_line": 321
+    },
+    {
+      "id": "BR-FIRM",
+      "priority": 80,
+      "when": {
+        "Service class": "FIRM_DISRUPTION"
+      },
+      "action_name": "FIRM_CANDIDATE",
+      "action": {
+        "classification": "SIGNAL_CANDIDATE",
+        "disposition": "CANDIDATE_ONLY",
+        "recommendation_allowed": false
+      },
+      "requirements": [
+        "SIGNAL-001",
+        "SIGNAL-003"
+      ],
+      "status": "spec-recorded",
+      "oracle": "spec-derived, not independent",
+      "basis": "spec.md:322",
+      "output_reason": "FIRM_CANDIDATE",
+      "spec_line": 322
+    },
+    {
+      "id": "BR-UNRESOLVED",
+      "priority": 90,
+      "when": {},
+      "action_name": "UNRESOLVED",
+      "action": {
+        "classification": "UNRESOLVED",
+        "disposition": "REVIEW_REQUIRED",
+        "recommendation_allowed": false
+      },
+      "requirements": [
+        "SIGNAL-001",
+        "SIGNAL-004"
+      ],
+      "status": "spec-recorded",
+      "oracle": "spec-derived, not independent",
+      "basis": "spec.md:323",
+      "output_reason": "UNRESOLVED",
+      "spec_line": 323
+    }
+  ],
+  "columns": {
+    "Format": [
+      "ANY",
+      "SUPPORTED",
+      "UNSUPPORTED"
+    ],
+    "Oracle answer": [
+      "ANY",
+      "USABLE",
+      "UNUSABLE"
+    ],
+    "Conflict": [
+      "ANY",
+      "YES",
+      "NO"
+    ],
+    "History": [
+      "ANY",
+      "COMPLETE",
+      "GAP"
+    ],
+    "Operational change": [
+      "ANY",
+      "UNCHANGED",
+      "CHANGED",
+      "UNKNOWN"
+    ],
+    "Information-only": [
+      "ANY",
+      "YES",
+      "NO"
+    ],
+    "Restriction": [
+      "ANY",
+      "KNOWN",
+      "NONE",
+      "UNKNOWN"
+    ],
+    "Service class": [
+      "ANY",
+      "FIRM_DISRUPTION",
+      "OTHER"
+    ],
+    "Restriction current": [
+      "ANY",
+      "CURRENT",
+      "ENDED",
+      "UNKNOWN"
+    ]
+  },
+  "predicates": [
+    {
+      "column": "Format",
+      "value": "SUPPORTED",
+      "condition": "source.media_type in SUPPORTED_FORMATS",
+      "ast": {
+        "op": "in",
+        "path": "source.media_type",
+        "set": "SUPPORTED_FORMATS"
+      },
+      "spec_line": 331
+    },
+    {
+      "column": "Format",
+      "value": "UNSUPPORTED",
+      "condition": "otherwise",
+      "ast": {
+        "op": "otherwise"
+      },
+      "spec_line": 332
+    },
+    {
+      "column": "Information-only",
+      "value": "YES",
+      "condition": "facts.content_kind in INFORMATION_KINDS",
+      "ast": {
+        "op": "in",
+        "path": "facts.content_kind",
+        "set": "INFORMATION_KINDS"
+      },
+      "spec_line": 333
+    },
+    {
+      "column": "Information-only",
+      "value": "NO",
+      "condition": "otherwise",
+      "ast": {
+        "op": "otherwise"
+      },
+      "spec_line": 334
+    },
+    {
+      "column": "Restriction",
+      "value": "KNOWN",
+      "condition": "facts.availability in RESTRICTED_AVAILABILITY or any facts.restrictions has (availability in RESTRICTED_AVAILABILITY)",
+      "ast": {
+        "op": "or",
+        "args": [
+          {
+            "op": "in",
+            "path": "facts.availability",
+            "set": "RESTRICTED_AVAILABILITY"
+          },
+          {
+            "op": "any",
+            "path": "facts.restrictions",
+            "cond": {
+              "op": "in",
+              "path": "availability",
+              "set": "RESTRICTED_AVAILABILITY"
+            }
+          }
+        ]
+      },
+      "spec_line": 335
+    },
+    {
+      "column": "Restriction",
+      "value": "NONE",
+      "condition": "[Information-only] = YES",
+      "ast": {
+        "op": "column",
+        "column": "Information-only",
+        "value": "YES"
+      },
+      "spec_line": 336
+    },
+    {
+      "column": "Restriction",
+      "value": "UNKNOWN",
+      "condition": "otherwise",
+      "ast": {
+        "op": "otherwise"
+      },
+      "spec_line": 337
+    },
+    {
+      "column": "Conflict",
+      "value": "YES",
+      "condition": "evidence.contradictory or ([Information-only] = YES and [Restriction] = KNOWN)",
+      "ast": {
+        "op": "or",
+        "args": [
+          {
+            "op": "flag",
+            "path": "evidence.contradictory"
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "column",
+                "column": "Information-only",
+                "value": "YES"
+              },
+              {
+                "op": "column",
+                "column": "Restriction",
+                "value": "KNOWN"
+              }
+            ]
+          }
+        ]
+      },
+      "spec_line": 338
+    },
+    {
+      "column": "Conflict",
+      "value": "NO",
+      "condition": "otherwise",
+      "ast": {
+        "op": "otherwise"
+      },
+      "spec_line": 339
+    },
+    {
+      "column": "History",
+      "value": "COMPLETE",
+      "condition": "history.complete and history.root_status in ROOT_STATUSES and history.statuses within LINKED_STATUSES",
+      "ast": {
+        "op": "and",
+        "args": [
+          {
+            "op": "flag",
+            "path": "history.complete"
+          },
+          {
+            "op": "in",
+            "path": "history.root_status",
+            "set": "ROOT_STATUSES"
+          },
+          {
+            "op": "within",
+            "path": "history.statuses",
+            "set": "LINKED_STATUSES"
+          }
+        ]
+      },
+      "spec_line": 340
+    },
+    {
+      "column": "History",
+      "value": "GAP",
+      "condition": "otherwise",
+      "ast": {
+        "op": "otherwise"
+      },
+      "spec_line": 341
+    },
+    {
+      "column": "Operational change",
+      "value": "UNCHANGED",
+      "condition": "notice.status = SUPERSEDE and predecessor.status in UNCHANGED_PREDECESSOR_STATUSES and predecessor.facts_equal",
+      "ast": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "path": "notice.status",
+            "value": "SUPERSEDE"
+          },
+          {
+            "op": "in",
+            "path": "predecessor.status",
+            "set": "UNCHANGED_PREDECESSOR_STATUSES"
+          },
+          {
+            "op": "flag",
+            "path": "predecessor.facts_equal"
+          }
+        ]
+      },
+      "spec_line": 342
+    },
+    {
+      "column": "Operational change",
+      "value": "CHANGED",
+      "condition": "predecessor.present",
+      "ast": {
+        "op": "flag",
+        "path": "predecessor.present"
+      },
+      "spec_line": 343
+    },
+    {
+      "column": "Operational change",
+      "value": "UNKNOWN",
+      "condition": "otherwise",
+      "ast": {
+        "op": "otherwise"
+      },
+      "spec_line": 344
+    },
+    {
+      "column": "Service class",
+      "value": "FIRM_DISRUPTION",
+      "condition": "facts.content_kind = RESTRICTION and (any facts.restrictions has (service in FIRM_SERVICES and availability = UNAVAILABLE) or facts.availability = PRIMARY_ONLY or (facts.services overlaps FIRM_SERVICES and facts.availability = UNAVAILABLE))",
+      "ast": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "path": "facts.content_kind",
+            "value": "RESTRICTION"
+          },
+          {
+            "op": "or",
+            "args": [
+              {
+                "op": "any",
+                "path": "facts.restrictions",
+                "cond": {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "in",
+                      "path": "service",
+                      "set": "FIRM_SERVICES"
+                    },
+                    {
+                      "op": "eq",
+                      "path": "availability",
+                      "value": "UNAVAILABLE"
+                    }
+                  ]
+                }
+              },
+              {
+                "op": "eq",
+                "path": "facts.availability",
+                "value": "PRIMARY_ONLY"
+              },
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "overlaps",
+                    "path": "facts.services",
+                    "set": "FIRM_SERVICES"
+                  },
+                  {
+                    "op": "eq",
+                    "path": "facts.availability",
+                    "value": "UNAVAILABLE"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "spec_line": 345
+    },
+    {
+      "column": "Service class",
+      "value": "OTHER",
+      "condition": "otherwise",
+      "ast": {
+        "op": "otherwise"
+      },
+      "spec_line": 346
+    },
+    {
+      "column": "Oracle answer",
+      "value": "USABLE",
+      "condition": "evidence.extraction_usable and (evidence.helpers_usable or [Service class] = FIRM_DISRUPTION)",
+      "ast": {
+        "op": "and",
+        "args": [
+          {
+            "op": "flag",
+            "path": "evidence.extraction_usable"
+          },
+          {
+            "op": "or",
+            "args": [
+              {
+                "op": "flag",
+                "path": "evidence.helpers_usable"
+              },
+              {
+                "op": "column",
+                "column": "Service class",
+                "value": "FIRM_DISRUPTION"
+              }
+            ]
+          }
+        ]
+      },
+      "spec_line": 347
+    },
+    {
+      "column": "Oracle answer",
+      "value": "UNUSABLE",
+      "condition": "otherwise",
+      "ast": {
+        "op": "otherwise"
+      },
+      "spec_line": 348
+    },
+    {
+      "column": "Restriction current",
+      "value": "ENDED",
+      "condition": "time.ended or time.ended_in_any_timezone",
+      "ast": {
+        "op": "or",
+        "args": [
+          {
+            "op": "flag",
+            "path": "time.ended"
+          },
+          {
+            "op": "flag",
+            "path": "time.ended_in_any_timezone"
+          }
+        ]
+      },
+      "spec_line": 349
+    },
+    {
+      "column": "Restriction current",
+      "value": "CURRENT",
+      "condition": "time.current",
+      "ast": {
+        "op": "flag",
+        "path": "time.current"
+      },
+      "spec_line": 350
+    },
+    {
+      "column": "Restriction current",
+      "value": "UNKNOWN",
+      "condition": "otherwise",
+      "ast": {
+        "op": "otherwise"
+      },
+      "spec_line": 351
+    }
+  ],
+  "source_spec_sha256": "4448a6f9e9ee3841e0086a8e556c21bbd584efc9167742a831154f70e3e18a8e",
+  "normative_role": "Generated from spec.md; never edit",
+  "precedence": "BR-FORMAT > BR-SEMANTICS > BR-CONTRADICTION > BR-HISTORY > BR-UNCHANGED > BR-ROUTINE > BR-HISTORICAL > BR-FIRM > BR-UNRESOLVED",
+  "input_contract": [
+    {
+      "ID": "INPUT-SOURCE-001",
+      "Field": "header.tsp",
+      "Type": "text",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 421
+    },
+    {
+      "ID": "INPUT-SOURCE-002",
+      "Field": "header.critical",
+      "Type": "text",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 422
+    },
+    {
+      "ID": "INPUT-SOURCE-003",
+      "Field": "header.type1",
+      "Type": "text",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 423
+    },
+    {
+      "ID": "INPUT-SOURCE-004",
+      "Field": "header.type2",
+      "Type": "text",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 424
+    },
+    {
+      "ID": "INPUT-SOURCE-005",
+      "Field": "header.notice_effective_date",
+      "Type": "timestamp",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 425
+    },
+    {
+      "ID": "INPUT-SOURCE-006",
+      "Field": "header.notice_end_date",
+      "Type": "timestamp",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 426
+    },
+    {
+      "ID": "INPUT-SOURCE-007",
+      "Field": "header.post_date",
+      "Type": "timestamp",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 427
+    },
+    {
+      "ID": "INPUT-SOURCE-008",
+      "Field": "header.notice_id",
+      "Type": "identifier",
+      "Missing": "ERROR",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 428
+    },
+    {
+      "ID": "INPUT-SOURCE-009",
+      "Field": "header.req_rsp",
+      "Type": "text",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 429
+    },
+    {
+      "ID": "INPUT-SOURCE-010",
+      "Field": "header.rsp_date",
+      "Type": "timestamp",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 430
+    },
+    {
+      "ID": "INPUT-SOURCE-011",
+      "Field": "header.status",
+      "Type": "text",
+      "Missing": "ERROR",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 431
+    },
+    {
+      "ID": "INPUT-SOURCE-012",
+      "Field": "header.prior_notice_id",
+      "Type": "identifier",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 432
+    },
+    {
+      "ID": "INPUT-SOURCE-013",
+      "Field": "header.subject",
+      "Type": "text",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 433
+    },
+    {
+      "ID": "INPUT-SOURCE-014",
+      "Field": "metadata.notice_id",
+      "Type": "identifier",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 434
+    },
+    {
+      "ID": "INPUT-SOURCE-015",
+      "Field": "metadata.notice_type",
+      "Type": "text",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 435
+    },
+    {
+      "ID": "INPUT-SOURCE-016",
+      "Field": "metadata.subject",
+      "Type": "text",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 436
+    },
+    {
+      "ID": "INPUT-SOURCE-017",
+      "Field": "metadata.download_date",
+      "Type": "timestamp",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 437
+    },
+    {
+      "ID": "INPUT-SOURCE-018",
+      "Field": "metadata.source_url",
+      "Type": "text",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 438
+    },
+    {
+      "ID": "INPUT-SOURCE-019",
+      "Field": "metadata.html_file",
+      "Type": "text",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 439
+    },
+    {
+      "ID": "INPUT-SOURCE-020",
+      "Field": "body",
+      "Type": "text",
+      "Missing": "ERROR",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 440
+    },
+    {
+      "ID": "INPUT-SOURCE-021",
+      "Field": "notice.notice_id",
+      "Type": "integer",
+      "Missing": "ERROR",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 441
+    },
+    {
+      "ID": "INPUT-SOURCE-022",
+      "Field": "notice.prior_notice_id",
+      "Type": "integer",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 442
+    },
+    {
+      "ID": "INPUT-SOURCE-023",
+      "Field": "notice.status",
+      "Type": "text",
+      "Missing": "ERROR",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 443
+    },
+    {
+      "ID": "INPUT-SOURCE-024",
+      "Field": "notice.notice_type",
+      "Type": "text",
+      "Missing": "ERROR",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 444
+    },
+    {
+      "ID": "INPUT-SOURCE-025",
+      "Field": "notice.information_only",
+      "Type": "flag",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "model",
+      "_line": 445
+    },
+    {
+      "ID": "INPUT-SOURCE-026",
+      "Field": "notice.body_text",
+      "Type": "text",
+      "Missing": "ERROR",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 446
+    },
+    {
+      "ID": "INPUT-SOURCE-027",
+      "Field": "notice.effective_datetime",
+      "Type": "timestamp",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 447
+    },
+    {
+      "ID": "INPUT-SOURCE-028",
+      "Field": "notice.end_datetime",
+      "Type": "timestamp",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "source_parser",
+      "_line": 448
+    },
+    {
+      "ID": "INPUT-SOURCE-029",
+      "Field": "locations",
+      "Type": "rows",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "model",
+      "_line": 449
+    },
+    {
+      "ID": "INPUT-SOURCE-030",
+      "Field": "restrictions",
+      "Type": "rows",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "model",
+      "_line": 450
+    },
+    {
+      "ID": "INPUT-SOURCE-031",
+      "Field": "locations[].loc_code",
+      "Type": "text_or_integer",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "model",
+      "_line": 451
+    },
+    {
+      "ID": "INPUT-SOURCE-032",
+      "Field": "locations[].segment",
+      "Type": "text_or_integer",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "model",
+      "_line": 452
+    },
+    {
+      "ID": "INPUT-SOURCE-033",
+      "Field": "locations[].compressor_station",
+      "Type": "text_or_integer",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "model",
+      "_line": 453
+    },
+    {
+      "ID": "INPUT-SOURCE-034",
+      "Field": "locations[].zone",
+      "Type": "text_or_integer",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "model",
+      "_line": 454
+    },
+    {
+      "ID": "INPUT-SOURCE-035",
+      "Field": "locations[].system",
+      "Type": "text_or_integer",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "model",
+      "_line": 455
+    },
+    {
+      "ID": "INPUT-SOURCE-036",
+      "Field": "restrictions[].service_type",
+      "Type": "text",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "model",
+      "_line": 456
+    },
+    {
+      "ID": "INPUT-SOURCE-037",
+      "Field": "restrictions[].restriction_type",
+      "Type": "text",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "model",
+      "_line": 457
+    },
+    {
+      "ID": "INPUT-SOURCE-038",
+      "Field": "restrictions[].restriction_value",
+      "Type": "number",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "model",
+      "_line": 458
+    },
+    {
+      "ID": "INPUT-SOURCE-039",
+      "Field": "restrictions[].restriction_unit",
+      "Type": "text",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "model",
+      "_line": 459
+    },
+    {
+      "ID": "INPUT-SOURCE-040",
+      "Field": "restrictions[].status",
+      "Type": "text",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "model",
+      "_line": 460
+    },
+    {
+      "ID": "INPUT-SOURCE-041",
+      "Field": "restrictions[].location_index",
+      "Type": "integer",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "model",
+      "_line": 461
+    },
+    {
+      "ID": "INPUT-SOURCE-042",
+      "Field": "restrictions[].start_datetime",
+      "Type": "timestamp",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "model",
+      "_line": 462
+    },
+    {
+      "ID": "INPUT-SOURCE-043",
+      "Field": "restrictions[].end_datetime",
+      "Type": "timestamp",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "model",
+      "_line": 463
+    },
+    {
+      "ID": "INPUT-SOURCE-044",
+      "Field": "semantic.extraction_usable",
+      "Type": "boolean",
+      "Missing": "ERROR",
+      "Malformed": "ERROR",
+      "Supplier": "retained_evidence",
+      "_line": 464
+    },
+    {
+      "ID": "INPUT-SOURCE-045",
+      "Field": "semantic.execution_error",
+      "Type": "text",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "retained_evidence",
+      "_line": 465
+    },
+    {
+      "ID": "INPUT-SOURCE-046",
+      "Field": "semantic.helpers",
+      "Type": "helper_pairs",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "retained_evidence",
+      "_line": 466
+    },
+    {
+      "ID": "INPUT-SOURCE-047",
+      "Field": "semantic.source_media_type",
+      "Type": "text",
+      "Missing": "UNKNOWN",
+      "Malformed": "ERROR",
+      "Supplier": "retained_evidence",
+      "_line": 467
+    }
+  ],
+  "decisions": [
+    {
+      "ID": "ARCH-SOURCE-001",
+      "Status": "owner-requested",
+      "Person": "Thomas Hand",
+      "Previous spec SHA256": "1adc8936b31bbe5b142bf18e71338b80bb6d066fa67be3d6f7c8fa2edda9017e",
+      "Decision": "Adopt the spec-source architecture. Its original timezone proposal was subsequently rejected by TZ-NGPL-001; TZ-NGPL-002 is the active timezone ruling.",
+      "_line": 288
+    },
+    {
+      "ID": "TZ-NGPL-001",
+      "Status": "rejected",
+      "Person": "Thomas Hand",
+      "Previous spec SHA256": "-",
+      "Decision": "REJECTED proposal: NGPL posts in Central time; timestamps without a zone are parsed as America/Chicago. No such default is authorized.",
+      "_line": 289
+    },
+    {
+      "ID": "TZ-NGPL-002",
+      "Status": "owner-requested",
+      "Person": "Thomas Hand",
+      "Previous spec SHA256": "5d4adfff7cb944c6a4ec9e9f17bb0ea7deaed47dfff2eeb35583703786a2245f",
+      "Decision": "Adopt source-grounded SIGNAL_CANDIDATE classification with unknown timezone; prohibit automatic time actionability and recommendation authorization, require REVIEW_REQUIRED, and never infer a zone. Exact ruling: evidence/timezone-separation/20260928/owner-ruling.txt.",
+      "_line": 290
+    },
+    {
+      "ID": "FEEDBACK-001",
+      "Status": "owner-requested",
+      "Person": "Thomas Hand",
+      "Previous spec SHA256": "c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f",
+      "Decision": "Make evidence-driven spec maintenance practical: compact normative tables, preview consequences before adoption, explicit check limits and measured tradeoffs. Preserve classification policy, labels, thresholds and authorization; exact revised spec review remains pending.",
+      "_line": 291
+    },
+    {
+      "ID": "AUDIT-TRUTH-001",
+      "Status": "owner-requested",
+      "Person": "Thomas Hand",
+      "Previous spec SHA256": "c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f",
+      "Decision": "Repair gate exits, read-only validation, execution-failure scoring and honest check coverage. Keep unchecked prose separate from code-owned boundaries; retain assumptions here. No new business policy or exact human reread is asserted.",
+      "_line": 292
+    },
+    {
+      "ID": "REMEDIATION-001",
+      "Status": "approved",
+      "Person": "Thomas Hand",
+      "Previous spec SHA256": "c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f",
+      "Decision": "Predicate meaning moves into spec-predicates. An unusable helper verdict vetoes a decision only when the notice is not a firm disruption; the publisher neither stores nor publishes such a decision (SEMANTICS_INCOMPLETE). Measured: capture-1/46864 ERROR -> SIGNAL_CANDIDATE, no new false positive. The publisher witness unusable-impact was re-frozen to match; spec and witness changed in the same session, so the owner's approval is the independent check. Exact spec reread still pending.",
+      "_line": 293
+    },
+    {
+      "ID": "REMEDIATION-002",
+      "Status": "approved",
+      "Person": "Thomas Hand",
+      "Previous spec SHA256": "c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f",
+      "Decision": "Approved by Thomas Hand 2026-09-28: a restriction with no stated timezone is ENDED when its latest naive source end plus unresolved_time_margin_hours (at least 14, the largest UTC offset) is at or before the reference time. Labeled captures are scored as of each notice's post time (D3-011). No captured outcome changes; live candidates for long-ended restrictions become HISTORICAL_ONLY.",
+      "_line": 294
+    },
+    {
+      "ID": "REMEDIATION-003",
+      "Status": "approved",
+      "Person": "Thomas Hand",
+      "Previous spec SHA256": "c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f",
+      "Decision": "Approved by Thomas Hand 2026-09-28: Gate 2 acceptance budgets. Per capture, at most 0 labeled negatives may be candidates and at most 2 labeled positives may be missed (a positive sent to review counts as missed). 2 is the measured value on 2026-09-28: a ratchet that may only tighten, not a quality claim. Review is the specified outcome for SIGNAL-002 and SIGNAL-004 cases; an unresolved SIGNAL-003 case fails. Six verification rows that this component cannot observe are declared out_of_scope. OUTPUT-001 and STATE-006 text now describe what their checks observe.",
+      "_line": 295
+    },
+    {
+      "ID": "NNS-FIRM-001",
+      "Status": "approved",
+      "Person": "Thomas Hand",
+      "Previous spec SHA256": "c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f",
+      "Decision": "Approved by Thomas Hand 2026-09-28 (desk request): NGPL No-Notice Service is a firm, storage-backed service. Extracted service_type NO_NOTICE normalizes to a distinct NO_NOTICE_FIRM value (source distinction preserved) and NO_NOTICE_FIRM joins FIRM_SERVICES, so a firm NNS restriction (UNAVAILABLE or PRIMARY_ONLY) is a FIRM_DISRUPTION like other firm services. Measured by make consequences: 0/46 captured outcomes change; the only captured NNS row (46528, labeled negative) is an HOURLY_LIMIT_PCT partial limit and stays non-firm-disruption. No captured or labeled NNS outage exists, so the intended positive effect is unmeasured by frozen labels.",
+      "_line": 296
+    }
+  ],
+  "sentences": [
+    {
+      "id": "D1-001",
+      "sentence": "Within the bounded NGPL assessment, identify a notice version by pipeline, notice ID and source-content hash.",
+      "spec_line": 19
+    },
+    {
+      "id": "D1-002",
+      "sentence": "Identify an event by pipeline and the root notice ID of its complete, acyclic, explicit prior-notice chain.",
+      "spec_line": 20
+    },
+    {
+      "id": "D1-003",
+      "sentence": "Do not infer identity from ID order, subject or text similarity.",
+      "spec_line": 21
+    },
+    {
+      "id": "D1-004",
+      "sentence": "An incomplete chain or disputed cross-chain identity blocks automatic alerting, but not retention of the input or an explicitly uncertain candidate for review; retain any human-approved correlation and its evidence.",
+      "spec_line": 22
+    },
+    {
+      "id": "D1-005",
+      "sentence": "Initial alerts per resolved event must not exceed PARAM-INITIAL-001.",
+      "spec_line": 23
+    },
+    {
+      "id": "D1-006",
+      "sentence": "Identify a material update by that event and its distinct source notice version.",
+      "spec_line": 24
+    },
+    {
+      "id": "D1-007",
+      "sentence": "Identical replay or same-source re-extraction must not create another alert revision.",
+      "spec_line": 25
+    },
+    {
+      "id": "D1-008",
+      "sentence": "Persist each alert key, decision reference, delivery attempt and acknowledgement across restarts.",
+      "spec_line": 26
+    },
+    {
+      "id": "D1-009",
+      "sentence": "Retry with the same key; unconfirmed delivery stays uncertain.",
+      "spec_line": 27
+    },
+    {
+      "id": "D1-010",
+      "sentence": "Require receiver idempotency before claiming duplicate-free delivery.",
+      "spec_line": 28
+    },
+    {
+      "id": "D1-011",
+      "sentence": "Retain this memory without automatic expiry throughout the assessment; production retention requires separate approval.",
+      "spec_line": 29
+    },
+    {
+      "id": "D2-001",
+      "sentence": "Compare a revision to its explicit predecessor using source-grounded constraints, services/directions, restriction kind/value/unit, operational status, effective interval and operational assertions in the body.",
+      "spec_line": 33
+    },
+    {
+      "id": "D2-002",
+      "sentence": "Ignore IDs, links, capture/scrape metadata and whitespace-only presentation changes for materiality.",
+      "spec_line": 34
+    },
+    {
+      "id": "D2-003",
+      "sentence": "If operational facts are unchanged, classify the supersede as nonmaterial and issue no new alert.",
+      "spec_line": 35
+    },
+    {
+      "id": "D2-004",
+      "sentence": "Other changes require a recorded MATERIAL, NONMATERIAL or UNRESOLVED decision under D6; a changed number alone is not a materiality threshold.",
+      "spec_line": 36
+    },
+    {
+      "id": "D2-005",
+      "sentence": "If a resolved event has no prior initial-alert record or attempt, its first MATERIAL and actionable decision may create the initial alert under D1.",
+      "spec_line": 37
+    },
+    {
+      "id": "D2-006",
+      "sentence": "If an initial-alert record exists, a qualifying material revision produces a linked update.",
+      "spec_line": 38
+    },
+    {
+      "id": "D2-007",
+      "sentence": "An unacknowledged initial attempt reuses its existing key; replay must not create another initial alert.",
+      "spec_line": 39
+    },
+    {
+      "id": "D2-008",
+      "sentence": "UNRESOLVED changes are REVIEW_REQUIRED.",
+      "spec_line": 40
+    },
+    {
+      "id": "D2-009",
+      "sentence": "A lift/termination must compare the prior restriction; do not generalize one rule from the two labeled termination examples.",
+      "spec_line": 41
+    },
+    {
+      "id": "D2-010",
+      "sentence": "For the bounded same-ID/different-source-content case, retain the conflicting capture as evidence, preserve the last accepted snapshot, and require review before changed content can authorize alerting.",
+      "spec_line": 42
+    },
+    {
+      "id": "D2-011",
+      "sentence": "Do not automatically overwrite, merge, discard or reconcile the conflict.",
+      "spec_line": 43
+    },
+    {
+      "id": "D2-012",
+      "sentence": "Automatic reconciliation remains outside the implemented storage scope; this specified refusal boundary does not establish a complete source-version service.",
+      "spec_line": 44
+    },
+    {
+      "id": "D3-001",
+      "sentence": "Record source event/publication times with stated timezone, ingestion time, and an explicitly supplied timezone-aware UTC reference time for each decision.",
+      "spec_line": 48
+    },
+    {
+      "id": "D3-002",
+      "sentence": "Ambiguous time meaning remains unknown; do not substitute the machine/model clock.",
+      "spec_line": 49
+    },
+    {
+      "id": "D3-003",
+      "sentence": "Missing ancestors, cycles or conflicting successor ordering defer alerting and retain the gap.",
+      "spec_line": 50
+    },
+    {
+      "id": "D3-004",
+      "sentence": "When history arrives, create a new reconciliation decision following explicit prior links; retain the original uncertain decision.",
+      "spec_line": 51
+    },
+    {
+      "id": "D3-005",
+      "sentence": "For the same accepted source versions, normalized facts, reference time and approved adjudications, the final event view must be order-independent.",
+      "spec_line": 52
+    },
+    {
+      "id": "D3-006",
+      "sentence": "Do not expect independently regenerated stochastic model outputs to be identical.",
+      "spec_line": 53
+    },
+    {
+      "id": "D3-007",
+      "sentence": "Actual delivery attempts remain historical and use D1 keys; final-view order independence does not imply identical real-time delivery histories.",
+      "spec_line": 54
+    },
+    {
+      "id": "D3-008",
+      "sentence": "A restriction ending at or before the reference time is historical-only for a new disruption alert.",
+      "spec_line": 55
+    },
+    {
+      "id": "D3-009",
+      "sentence": "Current or future intervals may be actionable after D6; assume no arbitrary age or advance-notice cutoff.",
+      "spec_line": 56
+    },
+    {
+      "id": "D3-010",
+      "sentence": "Unknown time bounds and point changes such as a lift require a human actionability decision at that reference time.",
+      "spec_line": 57
+    },
+    {
+      "id": "D3-011",
+      "sentence": "Historical label evaluation stays separate: never rescore it against today or treat it as permission for stale delivery.",
+      "spec_line": 58
+    },
+    {
+      "id": "D3-012",
+      "sentence": "A source-grounded operational disruption may classify as SIGNAL_CANDIDATE even when its source timestamp timezone is unresolved. Unknown source timezone does not veto BR-FIRM classification; its candidate-only scope and all other evidence/history/refusal rules remain unchanged.",
+      "spec_line": 59
+    },
+    {
+      "id": "D3-013",
+      "sentence": "Unresolved source timezone remains explicitly UNKNOWN and prohibits automatic current/future actionability and recommendation authorization; the actionability/authorization boundary returns REVIEW_REQUIRED even if a caller supplies authorization. recommendation_allowed remains false. The normalized time_basis value UNRESOLVED represents this unknown meaning; UTC fields for unzoned timestamps stay null and the actionability record explicitly reports source_timezone_status UNKNOWN.",
+      "spec_line": 60
+    },
+    {
+      "id": "D3-014",
+      "sentence": "No NGPL timezone, UTC conversion, lateness cutoff or desk SLA is inferred.",
+      "spec_line": 61
+    },
+    {
+      "id": "D3-015",
+      "sentence": "Where the source timestamp has an explicit trusted timezone, normal current/future/historical evaluation may proceed. Resolved historical-only intervals and clock-dependent revision/actionability decisions retain time precedence. Classification alone never grants materiality approval, recommendation authorization or delivery permission.",
+      "spec_line": 62
+    },
+    {
+      "id": "D4-001",
+      "sentence": "Give every decision an immutable identity.",
+      "spec_line": 66
+    },
+    {
+      "id": "D4-002",
+      "sentence": "Retrieve by that identity the exact input bytes/hash, extracted facts, prior versions and missing-history observations available then, reference/ingestion times, outcome/reasons, human adjudications, spec/rule/code/ dependency/model/prompt identities, relevant model execution evidence, and delivery key/attempt/acknowledgement when applicable.",
+      "spec_line": 67
+    },
+    {
+      "id": "D4-003",
+      "sentence": "Later information and corrections create linked decisions without replacing their evidence or presenting later facts as known at an earlier decision.",
+      "spec_line": 68
+    },
+    {
+      "id": "D4-004",
+      "sentence": "Preserve missing-history observations as missingness; do not backfill later facts into an old explanation.",
+      "spec_line": 69
+    },
+    {
+      "id": "D4-005",
+      "sentence": "Retain failed/deferred decisions too.",
+      "spec_line": 70
+    },
+    {
+      "id": "D4-006",
+      "sentence": "Do not automatically prune assessment records or retain credentials.",
+      "spec_line": 71
+    },
+    {
+      "id": "D4-007",
+      "sentence": "Production retention or redaction needs separate approval.",
+      "spec_line": 72
+    },
+    {
+      "id": "D4-008",
+      "sentence": "Current snapshot readback alone is not historical decision evidence.",
+      "spec_line": 73
+    },
+    {
+      "id": "D5-001",
+      "sentence": "Empty, structurally invalid, contradictory or unsupported input must yield an explicit uncertain/error disposition, reason code and retained input evidence, not a successful negative classification or alert.",
+      "spec_line": 77
+    },
+    {
+      "id": "D5-002",
+      "sentence": "Validation failure leaves the last valid snapshot unchanged.",
+      "spec_line": 78
+    },
+    {
+      "id": "D5-003",
+      "sentence": "Invalid input or unresolved contradictions use UNKNOWN with a distinguishing reason; model/provider, environment and harness failures retain their separate existing classifications.",
+      "spec_line": 79
+    },
+    {
+      "id": "D5-004",
+      "sentence": "Missing an optional strong-signal field alone is not malformed input.",
+      "spec_line": 80
+    },
+    {
+      "id": "D5-005",
+      "sentence": "Conflicting identity, impossible quantities and incompatible operational assertions require correction/review, not fabricated facts.",
+      "spec_line": 81
+    },
+    {
+      "id": "D5-006",
+      "sentence": "Unresolved timestamp meaning requires REVIEW_REQUIRED at the actionability/authorization boundary under D3. It does not by itself block a source-grounded firm-disruption candidate; malformed timestamps and other invalid evidence retain their existing refusal rules.",
+      "spec_line": 82
+    },
+    {
+      "id": "D5-007",
+      "sentence": "A corrected execution is a new linked decision; retain the failed attempt.",
+      "spec_line": 83
+    },
+    {
+      "id": "D5-008",
+      "sentence": "Classification is unscorable only where the necessary semantic result is unavailable.",
+      "spec_line": 84
+    },
+    {
+      "id": "D5-009",
+      "sentence": "Structural, persistence, uncertainty and failure-handling requirements remain evaluable when their required observations exist.",
+      "spec_line": 85
+    },
+    {
+      "id": "D5-010",
+      "sentence": "Application dispositions are distinct from harness PASS/FAIL/ERROR/UNKNOWN statuses and execution-domain classifications.",
+      "spec_line": 86
+    },
+    {
+      "id": "D5-011",
+      "sentence": "A successful API response with an unusable verdict must not silently become a valid negative or small-impact decision.",
+      "spec_line": 87
+    },
+    {
+      "id": "D6-001",
+      "sentence": "For new assessment cases outside the frozen label oracle, require a named human's recorded MATERIAL/NONMATERIAL/UNRESOLVED adjudication with cited source evidence.",
+      "spec_line": 91
+    },
+    {
+      "id": "D6-002",
+      "sentence": "MATERIAL must identify a meaningful expected effect on gas flow or regional prices; NONMATERIAL must explain routine/administrative content or why a capacity change is minor.",
+      "spec_line": 92
+    },
+    {
+      "id": "D6-003",
+      "sentence": "Unsupported judgement is UNRESOLVED and withholds an alert.",
+      "spec_line": 93
+    },
+    {
+      "id": "D6-004",
+      "sentence": "Models may propose facts/reasons but may not approve this adjudication.",
+      "spec_line": 94
+    },
+    {
+      "id": "D6-005",
+      "sentence": "Critical/unplanned status, planned material impact, segment, quantity and geography are evidence to weigh, not a mandatory all-fields checklist or numeric score cutoff.",
+      "spec_line": 95
+    },
+    {
+      "id": "D6-006",
+      "sentence": "Extract stated values with units and meaning; absent values stay unknown.",
+      "spec_line": 96
+    },
+    {
+      "id": "D6-007",
+      "sentence": "Do not convert scheduled-to MDQ percentages into absolute curtailed volume without the required source capacity/basis.",
+      "spec_line": 97
+    },
+    {
+      "id": "D6-008",
+      "sentence": "Keep the fixed 14 labels as an evaluation oracle only.",
+      "spec_line": 98
+    },
+    {
+      "id": "D6-009",
+      "sentence": "Labels do not authorize runtime alerts and must not be supplied as the implementation's answer to classification.",
+      "spec_line": 99
+    },
+    {
+      "id": "D6-010",
+      "sentence": "Assessment alerting requires recorded approval and satisfied identity, history and actionability conditions; model proposals and known test labels are not approval.",
+      "spec_line": 100
+    },
+    {
+      "id": "D6-011",
+      "sentence": "Under this owner approval, adopt the existing source-based firm scheduled-to MDQ percentage, constraint-segment and named-zone annotations as binding checks only for their annotated cases.",
+      "spec_line": 101
+    },
+    {
+      "id": "D6-012",
+      "sentence": "Adopt unchanged-operational-body supersede checks only when the prior is complete and differences are confined to revision metadata or whitespace.",
+      "spec_line": 102
+    },
+    {
+      "id": "D6-013",
+      "sentence": "Before applying binding scope, verify that included annotations have traceable source support; unsupported annotations remain unapproved or not evaluated and must be listed.",
+      "spec_line": 103
+    },
+    {
+      "id": "D6-014",
+      "sentence": "This approval does not mean the owner personally audited each annotation.",
+      "spec_line": 104
+    },
+    {
+      "id": "D6-015",
+      "sentence": "Neither oracle certifies unannotated fields, absolute curtailed volume or real material revisions.",
+      "spec_line": 105
+    },
+    {
+      "id": "D6-016",
+      "sentence": "Apply the approved scope in new identified runs; old exploratory conclusions keep their original governance and must not be recertified retrospectively.",
+      "spec_line": 106
+    }
+  ],
+  "input_time_line": 470
+}

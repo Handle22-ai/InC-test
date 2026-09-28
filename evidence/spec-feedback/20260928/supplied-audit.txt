@@ -1,0 +1,469 @@
+Audit of the Harness submission at HEAD dfb3f77
+
+The brief is docs/challenge/InC_Challenge_Tech_Lead_The_Harness_v5.pdf, which is byte-identical to ../incommodities-test/brief.pdf. I ran everything in a scratch clone of HEAD, with a separate git worktree for each mutation. I did not open rebuilt/. The fresh session I launched did open files there, and that is recorded below as part of what it did. The original tree is unchanged: the same 11 untracked paths as at the start. Logs are in scratchpad/logs/.
+
+Part 1 — Exercising it
+
+1a. README followed literally from a clean clone (the project .venv was removed from PATH)
+
+┌─────────────────────────────────────────────────────────────┬───────────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                           Command                           │       Exit        │                                        Matches the "current" report?                                         │
+├─────────────────────────────────────────────────────────────┼───────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ (set up inherited/)                                         │ —                 │ Can't be done. README has no step for inherited/ and no way to run the harness against the inherited system. │
+├─────────────────────────────────────────────────────────────┼───────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ make setup                                                  │ 0                 │ Picked ~/.local/bin/python3.14 and installed the lock files from the package index.                          │
+├─────────────────────────────────────────────────────────────┼───────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ make check                                                  │ 0                 │ 185 tests OK, plus ruff and mypy. ✓                                                                          │
+├─────────────────────────────────────────────────────────────┼───────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ make evaluate-spec                                          │ 0                 │ PASS CONTRACT_WITNESSES_AGREE, fixture cc64fa…. ✓                                                            │
+├─────────────────────────────────────────────────────────────┼───────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ make context TASK=recommendation-classification-maintenance │ 0                 │ 20 binding requirements, 7 artifacts, package.md 53,926 B / 568 lines. ✓                                     │
+├─────────────────────────────────────────────────────────────┼───────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ make gate                                                   │ 2 (Python exit 3) │ Gate 1 PASS / Gate 2 UNKNOWN / Gate 3 UNKNOWN (NONCOMPARABLE). 13 CAPTURED_LABEL_UNSCORED. ✓                 │
+└─────────────────────────────────────────────────────────────┴───────────────────┴──────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+Against the documented clean-gate results:
+- Spec hash c7a389… matches.
+- 46 captured cases match.
+- The replay has 12 steps: A–F plus 6 controls.
+- The consequences table matches.
+- requirement_coverage, trading_layer, spec_read, comparison_identity and model_configuration are byte-equal.
+- The only difference is source.revision (dfb3f77 here, e49b478 in the report).
+
+1b. Gate variants
+
+┌────────────────────────────────┬──────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│            Variant             │ Exit │                                                                       What the report says                                                                        │
+├────────────────────────────────┼──────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ --skip-live                    │ 2    │ Usage error: harness.normalized_evaluation: error: unrecognized arguments. The program name doesn't match the command.                                            │
+├────────────────────────────────┼──────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ No ANTHROPIC_API_KEY           │ 3    │ Identical to the clean run. The key is never consulted.                                                                                                           │
+├────────────────────────────────┼──────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ LLM_MODEL=claude-nonexistent-9 │ 3    │ Gate 3 changes from NONCOMPARABLE to MODEL_CONFIG_CHANGED, and model_configuration becomes UNKNOWN. The stdout summary finding_codes still lists only             │
+│                                │      │ CAPTURED_LABEL_UNSCORED. CURRENT.md mentions the change at lines 382 and 603 of 617. A model that doesn't exist looks the same as a legitimate model change.      │
+└────────────────────────────────┴──────┴───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+1c. Mutations: raw edit first, then the "authorized" path (named decision → compile → reread → gate)
+
+┌──────────────────────────────────┬───────────────────────────────────────────────────────────┬─────────────────────────────────────────────────────────────────────────┬─────────────────────────────────┐
+│             Mutation             │                         Raw edit                          │                           After authorization                           │        What stays green         │
+├──────────────────────────────────┼───────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────┼─────────────────────────────────┤
+│                                  │ Exit 5, only UNRECORDED_SPEC_CHANGE. The pointer names    │ Exit 4. Gate 1 FAIL: OUTPUT-001 disposition,                            │ Gate 3 stays                    │
+│ Rule action: BR-ROUTINE →        │ spec.md:1304 row TZ-NGPL-002, not the edited line 1335.   │ CONTRACT_CONTRADICTS_FIXTURE SIGNAL-002. Gate 2 FAIL: 6                 │ UNKNOWN/NONCOMPARABLE with 6    │
+│ FIRM_CANDIDATE                   │ No D-sentence contradiction.                              │ ROUTINE_ADMIN_SIGNALED, 6 label false positives. The consequences table │ outcomes changed.               │
+│                                  │                                                           │  shows all 6 flips.                                                     │                                 │
+├──────────────────────────────────┼───────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────┼─────────────────────────────────┤
+│ Quantifier: D1-005 "at most one" │ Exit 5: D_SENTENCE_CHANGED plus the stale pin             │ Exit 3. Gate 1 UNKNOWN, Gates 2 and 3 NOT_RUN. Same exit code as the    │ Nothing FAILs.                  │
+│  → "at least one"                │                                                           │ clean baseline.                                                         │                                 │
+├──────────────────────────────────┼───────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────┼─────────────────────────────────┤
+│ Input format: %m/%d/%Y →         │ Exit 5: INPUT_DATE_FORMAT_MISMATCH, INPUT-TIME-001, raw   │ Exit 5                                                                  │ —                               │
+│ %d/%m/%Y                         │ '01/14/2026' (no spec line number)                        │                                                                         │                                 │
+├──────────────────────────────────┼───────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────┼─────────────────────────────────┤
+│ Assumption: A-004 "block" →      │ Exit 5: UNAPPROVED_ASSUMPTION_CHANGE A-004                │ Not tested: re-registering the assumption hash was out of scope.        │ —                               │
+│ "allow"                          │                                                           │                                                                         │                                 │
+├──────────────────────────────────┼───────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────┼─────────────────────────────────┤
+│ Precedence: BR-HISTORY moved     │ Exit 5: D_SENTENCE_CONTRADICTION on D1-004 and D3-003     │ Exit 5                                                                  │ —                               │
+│ below BR-FIRM                    │                                                           │                                                                         │                                 │
+├──────────────────────────────────┼───────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────┼─────────────────────────────────┤
+│ Precedence: BR-FIRM moved above  │ Exit 5: six contradictions (D3-008/010/012/013/015,       │                                                                         │                                 │
+│ BR-HISTORICAL (a 0-match rule    │ D5-006)                                                   │ Exit 5                                                                  │ —                               │
+│ becomes unreachable)             │                                                           │                                                                         │                                 │
+└──────────────────────────────────┴───────────────────────────────────────────────────────────┴─────────────────────────────────────────────────────────────────────────┴─────────────────────────────────┘
+
+1d. Generated config, accepted decision, re-pin
+
+1. I edited requirements/behavior.yaml directly. Exit 5, GENERATED_ARTIFACT_DRIFT, pointing at spec.md:1335. ✓
+2. I wrote a five-line ADR context/decisions/099-audit-d1-005.md with Status: accepted, plus a spec-decisions row with status accepted, for the D1-005 inversion. reread refused the row (exit 2). Nothing ever flags the ADR file.
+3. I changed the row status to approved with --person 'Audit Reviewer'. reread exited 0 and the gate exited 3 with D_SENTENCE_CHANGED.
+4. I edited one hash in harness/d_sentence_bindings.json. The gate went back to baseline: exit 3, Gate 1 PASS. D1-005 now shows PASS / D_SENTENCE_CHECKED against the sentence "Issue at least one initial alert…". The check it runs is still one_initial, which enforces at most one.
+   - The first 17 lines of CURRENT.md are identical to the clean run's except the previous-commit hash.
+   - The only difference in the whole report is Tracked working tree dirty: True at line 362 of 617.
+   - context/spec-owner-review.json still attests Thomas Hand for a different spec hash. Nothing flags that.
+
+1e. Fresh session (claude -p, headless, new worktree)
+
+The first message was README's exact text, plus one change the spec doesn't anticipate: "NGPL posts a new status WITHDRAWN (cancels the prior notice before effect)."
+
+- What it loaded: ran make context, read package.md and all 28 requirement rows, and verified 7 artifact hashes, 5 pending-learning hashes and the manifest hash.
+- Source files opened: 5, within about 20 tool calls:
+  - rebuilt/normalized_classifier.py (whole file, via cat)
+  - rebuilt/normalization.py lines 160–248
+  - rebuilt/signals.py lines 1–110
+  - harness/signal_evaluation.py
+  - harness/trading_evaluation.py
+  - plus greps across rebuilt/ and harness/
+- Why it opened them: in its own words, "no harness case, witness or replay step exercises an unrecognized-but-expected source status," and "package excerpts omit the spec-settings status enum."
+- Proposed, did not edit. It wrote context/pending-learning/withdrawn-status.md, a before/after probe, a code_reads.md entry, and four precise questions for the owner.
+- Real defect found. It says RecommendationPublisher.decide raises ValueError and keeps 0 decisions for refused input, and that only the harness wrapper turns this into UNRESOLVED/ERROR. That violates D5-001 and D4-005 (refused input and failed decisions must be retained). I confirmed the retained probe output (raised: ValueError, retained_signal_decisions: 0) but did not read the source myself.
+- Gate: exit 3 before and after; "nothing moved."
+- Human explanation needed: none.
+- Cost: 35 turns, 3.5 minutes, $1.67.
+
+1f. Claims in coverage.md checked against clean-gate/results.json
+
+┌───────────────────────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│             Claim             │                                                                       What the JSON actually shows                                                                       │
+├───────────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ SIGNAL-003 PASS, 3            │ The count matches, but all 3 are synthetic INDEPENDENT_SEMANTIC_WITNESS fixtures: firm-positive, planned-positive, primary-only-positive. The requirement's own          │
+│ observations                  │ parameter ids: [46864] (the force majeure notice) is not among them. 46864 is positive in capture-0 and ERROR (BR-SEMANTICS) in capture-1, and is filed under SIGNAL-001 │
+│                               │  instead.                                                                                                                                                                │
+├───────────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ STATE-003 PASS, 50            │ The count matches. 46 of the 50 are UNAUTHORIZED_PUBLICATION, checked on captured cases where authorization is never supplied, so they cannot fail. Only 4 replay steps  │
+│                               │ carry real content. SAFETY-001 (49) and STATE-002 (46) have the same shape.                                                                                              │
+├───────────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ SIGNAL-001 UNKNOWN, 38 (and   │ 25 PASS and 13 UNKNOWN, which matches. But is_critical=1 on all 14 labeled notices, so the "critical" metric carries no information.                                     │
+│ "13 unscored critical")       │                                                                                                                                                                          │
+└───────────────────────────────┴──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+Rule match count: BR-ROUTINE 6/46 is correct. I recomputed it from the observations: information_only=1 with zero restrictions gives 46604, 46775 and 46818 in each capture. The "Information-only: 37; Restriction: 3" breakdown is also correct.
+
+Part 3 — Findings
+
+#: 1
+Cat: B
+Where: harness/d_sentence_bindings.json; README.md:49; harness.md:23; audit-remediation report.md:36
+What the documents say: A changed D sentence stays UNKNOWN "until the check is reviewed and explicitly rebound"; "inverting D1-005 cannot inherit PASS".
+What is actually true: Rebinding is one unrecorded hash edit. D1-005 then reads "at least one", reports PASS, and the gate returns to baseline. No review record is required or produced.
+How to reproduce: Flip D1-005 → add an approved row → compile → reread --person X → set bindings.D1-005.sentence_sha256 to the sha256 of the new sentence → python -m harness gate
+Proposed fix: Hash the bindings file into the spec-read receipt and owner-review record. Report BINDING_CHANGED_SINCE_REVIEW as ERROR unless the review record names the new binding hash. For checks with a
+quantifier, carry the parameter (max_initial: 1) in a spec table so the check reads it instead of hard-coding it.
+────────────────────────────────────────
+#: 2
+Cat: B
+Where: README.md:27–35 (exit table, "use Python exit in CI")
+What the documents say: Exit 3 means "required UNKNOWN". CI should use it.
+What is actually true: Exit 3 is the permanent steady state, and it is identical for: a clean run; an inverted invariant after reread (Gate 1 UNKNOWN, Gates 2/3 NOT_RUN); a nonexistent model ID. CI can't tell
+them apart.
+How to reproduce: Compare exits from 1b and the 1c quantifier row
+Proposed fix: Keep a reviewed list of accepted UNKNOWN finding IDs (with a hash). Any new UNKNOWN code or any NOT_RUN gate exits non-3.
+────────────────────────────────────────
+#: 3
+Cat: B
+Where: CURRENT.md:36; README.md:35; harness.md:21
+What the documents say: Gate 3 compares actual outputs under compatible identities.
+What is actually true: The registered reference is 9450181 (old semantic identity), so every shipped run is NONCOMPARABLE. With 6 routine→candidate flips, Gate 3 still says UNKNOWN. The only Gate 3 FAIL the
+documents cite needed a temporary reference in a disposable clone (report.md:83).
+How to reproduce: 1c rule-action row, authorized path
+Proposed fix: Register the e49b478 run as the reference under a named decision, or feed the spec-to-spec consequence diff (already computed) into Gate 3 as its FAIL input.
+────────────────────────────────────────
+#: 4
+Cat: B
+Where: model_configuration; stdout summary
+What the documents say: Model changes are reported explicitly as MODEL_CONFIG_CHANGED.
+What is actually true: It is absent from the stdout finding_codes and appears only at CURRENT.md lines 382/603 of 617. A nonexistent model ID is not an ERROR.
+How to reproduce: LLM_MODEL=claude-nonexistent-9 .venv/bin/python -B -m harness gate --output evidence/X
+Proposed fix: Put Gate 3's classification in the summary codes. Validate the model ID against the allowed list and make an unknown one an ERROR.
+────────────────────────────────────────
+#: 5
+Cat: B
+Where: context/spec-owner-review.json; README.md:51
+What the documents say: Thomas Hand's review "covers the exact current … spec identity".
+What is actually true: After any reread under another name, the review file still attests the old hash, and the gate raises nothing (1d step 4: Gate 1 PASS).
+How to reproduce: 1d steps 3–4
+Proposed fix: Gate 1 ERROR when the owner-review spec_sha256 ≠ the current spec hash.
+────────────────────────────────────────
+#: 6
+Cat: B
+Where: Gate 1 provenance
+What the documents say: "What a build has to pass before it is allowed to exist."
+What is actually true: A tracked tree with modified harness code, spec and generated artifacts still gets Gate 1 PASS and exit 3. dirty: True appears only at line 362.
+How to reproduce: Any tracked edit, then gate
+Proposed fix: Dirty tree → ERROR unless an explicit --allow-dirty flag is given, and show it in the summary.
+────────────────────────────────────────
+#: 7
+Cat: B
+Where: Error pointer for UNRECORDED_SPEC_CHANGE
+What the documents say: Refusals "show the full code, sentence/row and spec line" (harness.md:19).
+What is actually true: Every spec edit is reported as spec.md:1304 row TZ-NGPL-002, not the line that changed.
+How to reproduce: 1c rule-action raw edit
+Proposed fix: Diff against the pinned bytes and report the first changed line and row.
+────────────────────────────────────────
+#: 8
+Cat: B
+Where: Publisher refusal path; spec D5-001 and D4-005; coverage INPUT-002 PASS 9
+What the documents say: Invalid input yields a retained disposition and retained evidence.
+What is actually true: Found by the fresh session and confirmed from its probe output: the publisher raises and keeps 0 decisions. The harness wrapper produces the disposition the component should produce, so
+INPUT-002 PASS partly measures the wrapper.
+How to reproduce: evidence/maintenance/20260928T-withdrawn/before/publisher-probe.json (scratch)
+Proposed fix: Make refusal a component output with its own row. Add a replay control that calls the component without the wrapper.
+────────────────────────────────────────
+#: 9
+Cat: A
+Where: README.md:1–21 vs brief p.4 deliverable
+What the documents say: README explains how to run the harness against the inherited system.
+What is actually true: Nothing in README sets up or runs inherited/. evaluate-legacy (live) appears only in make help.
+How to reproduce: Read README
+Proposed fix: Add a section on running inherited live on the 14 labels (about 40 calls), with a budget flag.
+────────────────────────────────────────
+#: 10
+Cat: A
+Where: evidence/CURRENT.md (top-level surface)
+What the documents say: This is the single place to read the current evidence.
+What is actually true: It never mentions the inherited FAIL: 11 behavioral failures, including duplicate recommendations on B/C/D/F and alerts on missing history, missing authorization and unsupported format.
+It also omits the inherited system's own false positives (46528 in capture-0, 46725 in capture-1). That information exists only at line 357/405 of the per-run report.
+How to reproduce: grep -i inherited evidence/CURRENT.md → no match
+Proposed fix: Add an "inherited vs rebuilt" block to CURRENT: recall, false positives, abstentions and lifecycle failures side by side.
+────────────────────────────────────────
+#: 11
+Cat: A
+Where: coverage.md:29 vs spec SIGNAL-003 params ids:[46864] vs pending-learning/audit-critical-informational.md
+What the documents say: SIGNAL-003 PASS (3). The proposal says "surface as an unresolved coverage gap … do not claim … passes".
+What is actually true: The 3 observations are synthetic fixtures. The declared FM case errored in capture-1.
+How to reproduce: 1f claim 1
+Proposed fix: Score SIGNAL-003 only on its declared IDs. With any ERROR it should be FAIL or UNKNOWN, not PASS.
+────────────────────────────────────────
+#: 12
+Cat: A
+Where: context/pending-learning/audit-critical-informational.md
+What the documents say: Critical=Y conflicting with a model "informational" call should go to REVIEW, to fix a silent-negative risk.
+What is actually true: All 14 labeled notices have Critical=1. The amendment would send all 5 info-only labeled negatives to REVIEW, removing every BR-ROUTINE true negative (6/6). The proposal was never run
+through the harness's own consequences engine.
+How to reproduce: 1f critical table
+Proposed fix: Run every proposal through consequences before filing it. Use notice_type=FORCE MAJEURE rather than the header flag.
+────────────────────────────────────────
+#: 13
+Cat: A
+Where: spec.md:1302–1303
+What the documents say: ARCH-SOURCE-001: "keep TZ-NGPL-001 pending".
+What is actually true: The next row says TZ-NGPL-001 is rejected. Every row's Person is PENDING_PERSON, while README:51 says Thomas Hand reviewed this spec.
+How to reproduce: Read the block
+Proposed fix: Supersede ARCH-SOURCE-001's text. Put the reviewer in the spec or state explicitly that the spec never names reviewers.
+────────────────────────────────────────
+#: 14
+Cat: A
+Where: spec.md INPUT-002 row ("Check status: not_available", "Validation: deferred") vs coverage.md INPUT-002 PASS 9. Also context/assumptions.md is titled "policy version 2" while the policy is v4.
+What the documents say: —
+What is actually true: Spec rows carry implementation status that disagrees with the generated coverage.
+How to reproduce: Read both
+Proposed fix: Remove implementation and check status from spec rows; generate them into coverage only.
+────────────────────────────────────────
+#: 15
+Cat: A
+Where: evidence/fresh_session.md; positive-path/…/fresh-session/starting-request.txt
+What the documents say: This record is the fresh-session maintenance exercise.
+What is actually true: Recorded at 9450181 (four code commits ago). The starting request is a 1,692-byte scripted prompt that presupposes the conclusion ("remains unsupported", "disposable ADR promotion
+attempt"), not README's first message. Zero implementation change was made.
+How to reproduce: Read the starting-request file
+Proposed fix: Re-run at HEAD with README's exact message and a change that actually lands.
+────────────────────────────────────────
+#: 16
+Cat: A
+Where: AGENTS.md (the charter loaded into every agent session) and 8 other top-level .md files
+What the documents say: README is the entry point.
+What is actually true: AGENTS.md prescribes make fresh-session and make evaluate-rebuilt, which don't exist. START_HERE.md ("First Codex Prompt"), FRESH_SESSION_TASK.md (a different maintenance request) and
+EVALUATOR_REVIEW.md compete with README.
+How to reproduce: grep fresh-session Makefile → nothing
+Proposed fix: Move the build-time prompts to docs/history/. Make AGENTS.md match README.
+────────────────────────────────────────
+#: 17
+Cat: A
+Where: README.md:57 ("compact reading index")
+What the documents say: package.md is compact.
+What is actually true: 53.9 KB / 568 lines, plus 136 KB of JSON. It still omitted the status enum the fresh agent needed.
+How to reproduce: wc -c evidence/context/*/package.md
+Proposed fix: Target under 10 KB; include the enums the rules test.
+────────────────────────────────────────
+#: 18
+Cat: C
+Where: spec.md:1327–1339, the rule block
+What the documents say: "Complete language."
+What is actually true: 3 of 12 columns (Arriving status, Prior, Source clock) are ANY in every rule. There is no column for FM or critical, the brief's first strong-signal attribute. Settle with a
+consequences run of a rule keyed on notice_type.
+How to reproduce: —
+Proposed fix: Drop the dead columns and add a notice-type column.
+────────────────────────────────────────
+#: 19
+Cat: C
+Where: Gate 1 per-case checks
+What the documents say: —
+What is actually true: 138 of Gate 1's PASS observations come from three checks run on cases where their precondition can't occur. They inflate the counts. Settle with fault injection showing each can FAIL on
+a captured case.
+How to reproduce: —
+Proposed fix: Keep them only where the precondition holds, or report them as N/A.
+────────────────────────────────────────
+#: 20
+Cat: C
+Where: Gate 2 design
+What the documents say: —
+What is actually true: Gate 2 scores the rebuilt classifier on inherited extractions. The trade-off is never stated: inherited 7/7 recall with 1 false positive per capture; rebuilt 5/7 and 4/7 recall with 0
+false positives, and the FM notice errors in one capture. Settle with a desk ruling on the recall-vs-FP trade.
+How to reproduce: —
+Proposed fix: Show both columns and state the policy.
+────────────────────────────────────────
+#: 21
+Cat: C
+Where: Gate 2 reachability
+What the documents say: —
+What is actually true: The 13 unscored cases come from frozen captures, and there is no authorized live path. Gate 2 can't reach PASS, so exit 0 is unreachable. Settle with a live run, or a ruling that
+abstaining on a positive label counts as a false negative.
+How to reproduce: —
+Proposed fix: Pick one of those two.
+────────────────────────────────────────
+#: 22
+Cat: C
+Where: rebuilt/ scope
+What the documents say: "One component."
+What is actually true: rebuilt/ holds 7 modules, including publisher, store and snapshot. The fresh session needed signals.py to answer a classifier question. Settle with an import graph from classifier.py.
+How to reproduce: —
+Proposed fix: Declare the publisher part of the component, or cut it.
+────────────────────────────────────────
+#: 23
+Cat: C
+Where: Size
+What the documents say: —
+What is actually true: Spec 2,389 lines (about 930 of them JSON). Harness 9,029 lines in 45 modules. 21 make targets. Evidence 829 MB / 23,781 files. Commits span 37.7 hours of wall-clock time against an 8–10
+hour brief. Settle by timing the engineer's first day using at most 3 documents.
+How to reproduce: —
+Proposed fix: Archive history out of the tree.
+────────────────────────────────────────
+#: 24
+Cat: C
+Where: SIGNAL-003 wording
+What the documents say: —
+What is actually true: "Detect the labeled unplanned force-majeure disruption" makes the requirement the same thing as the test case.
+How to reproduce: —
+Proposed fix: Write it as a behavioral rule and move 46864 to a regression case.
+────────────────────────────────────────
+#: 25
+Cat: C
+Where: Remediation pattern
+What the documents say: —
+What is actually true: The previous audit's exact probes (D1 inverted, A-004, month/day, generated YAML, --skip-live, bogus model) were each patched, and a neighbouring variant (#1) still defeats the fix.
+Settle by running a mutation suite written by someone other than the author.
+How to reproduce: —
+Proposed fix: Add randomized mutation of rule, D and binding rows to CI.
+
+Part 4 — Grading "What We Pay Attention To"
+
+1. The spec could replace the code: 2/5.
+- For: spec.md cleanly separates D-sentences, a rule table with precedence, replay tables and an input contract, and three of my five mutations produced named, line-cited refusals.
+- Against: the engineer is expected to own 2,389 lines, about 930 of which are JSON schema. The rule language can't express force majeure or criticality. A fresh agent facing one new status value opened 5 source files because the spec and package don't expose the status enum or the refusal-retention behavior.
+- Most limiting: #18.
+
+2. Checks derived from the spec rather than hand-written: 3/5.
+- Genuinely derived: the rule and precedence tables produce the consequences and replay expectations. Behavior-level teeth are real: the routine→candidate change turns Gates 1 and 2 red.
+- Hand-written: 23 hand-authored D-check classes cover 41 of 73 sentences; 32 sentences have no check at all. They are bound to sentences by hashes a writer can re-point unseen, and the check logic doesn't read the sentence's quantifier.
+- Most limiting: #1.
+
+3. How much it finds from evidence, and how openly the gap is described: 3/5.
+- For: it finds 11 lifecycle failures in the inherited system and states UNKNOWN honestly throughout.
+- Against: the top-level surface omits those findings and the inherited false positives. The SIGNAL-003 PASS rests on synthetic fixtures while the declared FM case errored. The "critical" metric has no discriminating power.
+- Most limiting: #10.
+
+4. Fresh-session recovery and learning that persists: 3/5.
+- For: my headless session needed no human explanation, verified the hashes, respected pending-vs-approved, found a real D5 violation, and left a proposal that the next context selection picks up as unapproved.
+- Against: it needed 5 source reads. The recorded exercise is scripted, predates four code commits, and made no change.
+- Most limiting: #15.
+
+5. Sense of which findings matter reflects trading-desk risk: 2/5.
+- Where the effort went: most of it is governance machinery: receipts, detached name bindings, historical-identity preservation.
+- What's missing on trading risk: the FM notice erroring in one capture never appears as a missed critical disruption. The inherited-vs-rebuilt recall and false-positive trade is never stated. The flagship open-risk proposal would remove every true negative in the corpus because Critical=1 everywhere.
+- Most limiting: #12.
+
+6. Working through disagreement: 3/5.
+- For: the response to the previous audit is exemplary in form. The audit is kept verbatim, each finding has a disposition, and the failed first proof attempt is kept rather than hidden.
+- Against: every point was accepted and patched at exactly the probe that was used. Nothing was held and argued; for example, whether Gate 3 should exist at all was never defended or dropped.
+- Most limiting: #25.
+
+Part 4b — The brief's stated preferences
+
+"Three gates with teeth." There are 3 primary gates. Around them sit about 30 finding codes, 23 D-check classes, 6 non-gating side layers (inherited, publisher, real-positive, outside-scope, model-configuration, semantic-contract) and 3 more evaluate commands.
+- Gate 1 can fail on a correct-looking build: it rejected the precedence swaps and the routine→candidate change. It has failed repeatedly, including in the prior audit. Each failure cost one spec review. Without it, spec/implementation drift would go undetected.
+- Gate 2 can fail: 6 routine notices signalled under the rule mutation. It has failed only under injected mutations, never on shipped code, and as shipped it can't pass.
+- Gate 3 has never failed against the shipped reference. It stayed UNKNOWN through a 6-outcome regression that Gates 1 and 2 already caught. Removing it loses nothing observable today. Gate 3 and the three vacuous per-case check classes (#19) exist for completeness, as do the side layers that report a status but never change the exit code.
+
+"Rebuild one component."
+- The declared boundary is NormalizedNotice + EventHistory → SignalDecision, and both contract documents exist.
+- The scope grew past that: a publisher with alert memory, authorization dispositions (INITIAL_RECOMMENDATION), storage and snapshot. The classifier's own contract says it "does not authorize recommendations", yet its replay expectations are recommendation counts.
+- The recorded maintenance change was not a change at all, just a proposal file, so "one small change on the same component" was never demonstrated.
+
+"Candid edge map vs claims."
+- Claims the evidence doesn't fully support: #1 (rebind "requires review"), #3 (Gate 3 "compares"), #5 (review "covers the current spec"), #8 (INPUT-002 PASS), #11 (SIGNAL-003 PASS), #15 (fresh-session exercise), #17 ("compact"), and the "Every hand-authored D check is bound" framing. That is 8.
+- Limitations stated before a reviewer would find them:
+  - the writer can replace names and verifier (README:51)
+  - Make collapses exits to 2
+  - 13 unscored
+  - timezone UNKNOWN
+  - the five-vs-six control count
+  - unused ANY columns
+  - the b9cd042 read gap
+  - no live v4 run
+  - the critical/informational risk
+  - host-level isolation unverified
+
+  That is 10.
+- The self-disclosed list is longer, but its items are mostly limits of scope. The unsupported claims sit in the enforcement mechanisms the design depends on.
+
+"Where did you look at code anyway."
+- The log has an agent entry for each code commit, and it discloses that b9cd042 (18 reads) cannot be reconstructed. Each entry has a "Missing harness/evidence capability" line.
+- The human line is "no human source reads", which is the owner's own assertion. The brief says "nobody gets to zero", and this answer sidesteps the question the brief asks.
+- I can't check completeness against transcripts because none were supplied. Git shows code commits 70c3d98, 9c75f30 and 70cf9e5, and they are covered only through pass-level links, not per-commit entries.
+- My fresh session shows the current edge: an unanticipated status value forces reads of rebuilt/, because no replay step covers component-level refusal retention.
+
+Part 5 — Phase 4 questions
+
+1. "Your gate exits 3 on a clean tree and 3 on an inverted D1-005. What does your CI accept, and why is that safe?"
+   Weak answer: "3 means UNKNOWN, which is honest," or "Make collapses exits anyway."
+2. "Delete Gate 3. What goes undetected tomorrow?"
+   Weak answer: citing the disposable-clone temporary-reference proof, or "it will matter once a reference is registered."
+3. "All 14 labeled notices are Critical=1. Walk me through what your pending critical amendment does to today's true negatives, and who on the desk you'd ask."
+   Weak answer: restating that criticality is "evidence to weigh" without the count, or deferring to the owner process.
+4. "An engineer who wants to keep reading code says: 'I changed one hash in d_sentence_bindings.json and your harness said PASS on the opposite sentence.' Hold, adjust, or drop your position that the engineer needn't read harness/."
+   Weak answer: "The README already says a writer can replace the verifier." A disclaimer doesn't answer that engineer.
+5. "Show me the engineer's first day in three files and thirty minutes. Which of the 829 MB can they ignore, and how do they know?"
+   Weak answer: pointing to CURRENT.md, which links into a 617-line report, or listing more documents.
+
+Advance, narrowly. Gates 1 and 2 have real, demonstrated teeth, the UNKNOWN discipline is honest, and a truly fresh agent recovered context and correctly refused to invent policy. Those are the hard parts of this role. The open questions are parsimony and risk judgment, and the conversation is where they get tested.
+
+What would change my mind: if, in the conversation, the candidate can't name what to cut (Gate 3, the side layers, the check classes that can't fail) and still defends the size, or defends the header-based critical amendment without having counted its consequences. Either would mean the over-building is judgment, not time pressure.
+
+I can also publish this as a shareable page for the candidate if you want one.
+
+✻ Crunched for 18m 2s · done 3:32 AM
+
+❯ what would make the spec go from a 2 to a 5
+
+⏺ The test for a 5 is behavioral: a fresh agent handles an unanticipated change with zero source reads, and every sentence the engineer edits either changes what the harness does or is marked as unchecked. Today's spec fails that in three ways. Each fix below comes from something I observed in the audit.
+
+  Getting to 3: make it say everything the implementation decides
+
+  The WITHDRAWN session opened 5 source files because two facts that govern behavior were only in code.
+
+  - Status vocabulary and chain semantics. The spec buries the INITIATE/SUPERSEDE/TERMINATE enum in JSON, and the package excerpt dropped it. Put every closed value set the rules test into a short table, including what happens to a value outside the set. Today that answer is "exit 2, nothing retained", and it's written down nowhere.
+  - Where refusals are produced. D5-001 says refused input is retained. The publisher raises an exception and the harness wrapper fills in the disposition. The spec needs a component-boundary rule, e.g. "the component, not the caller, emits the refusal decision and retains it", with a replay row that calls the component directly.
+  - Criticality and force majeure. The brief's first strong-signal attribute has no rule column. Add a Notice type column (FORCE MAJEURE / other). Don't key on the Critical header: it is 1 on all 14 labeled notices.
+
+  Getting to 4: remove everything the engineer can't act on
+
+  About 60% of the file is currently noise to its owner.
+
+About 60% of the file is currently noise to its owner.
+
+- Remove implementation status. "Implementation status", "Check status", "Demonstrated evidence" and "Validation: Gate 1 / deferred" appear on every requirement. They already disagree with coverage (INPUT-002 says not_available here, PASS 9 there). Generate them into coverage only.
+- Remove the interface JSON schemas (about 930 lines). Keep them as generated artifacts referenced by hash. The engineer owns the table that produces them, not the schema.
+- Remove the history. That covers the historical promotion boundary, "policy version 2" assumptions, ADR provenance and the timezone-evidence narrative. Keep one line per active decision. Fix ARCH-SOURCE-001, which says "keep TZ-NGPL-001 pending" while the next row says rejected.
+- Delete the dead columns. Arriving status, Prior and Source clock are ANY in every rule. A column no rule uses teaches the reader nothing.
+- Rewrite SIGNAL-003 as a rule, not a test case. "Detect the labeled force-majeure disruption, ids [46864]" is a test fixture. Move 46864 to the regression table.
+
+Target: under 600 lines, readable in 30 minutes, with every paragraph either normative or deleted.
+
+Getting to 5: make the prose itself executable, or visibly unchecked
+
+This is the gap behind finding #1 (the hash rebind that turned PASS on the opposite sentence).
+
+- Parameters in the spec, not the checker. D1-005's "at most one" lives inside a hand-written check called one_initial. Put quantities and quantifiers in a table the check reads (max_initial_alerts_per_event: 1). Then editing the sentence is editing the behavior, and the hash-binding mechanism can go.
+- Mark every D-sentence as one of two kinds. It is either expressed in a table (rules, replays, parameters) or explicitly UNCHECKED with its reason. Today 32 of 73 sentences are silently UNKNOWN. The engineer should see them as a short, owned list.
+- Consequences on proposals, not just commits. The critical amendment would have removed all 6 true negatives, and nobody ran it. A spec at 5 lets the owner run make consequences on a proposed edit and see which labeled notices flip before approving.
+- Decisions that name a person and a desk rationale in the spec. Every row currently has Person: PENDING_PERSON. If the spec is the owned artifact, ownership should be visible in it, not in a detached JSON file.
+
+How to prove it's a 5
+
+Do the audit again, with the owner hands-off:
+
+1. Fresh agent. Run README's first message with the WITHDRAWN change (or any status or format the spec lacks). Pass condition: zero reads of rebuilt/ or harness/. The agent either implements it after an approved spec edit or stops with questions that cite spec rows only.
+2. Random mutations by someone else. Mutate 10 random rows or parameters across the rules, replays, parameters and input tables. Each one must produce a named, line-cited change in gate output or consequences. None may be absorbable by editing a file outside spec.md.
+3. Engineer comprehension. An engineer who didn't write it, given only spec.md, predicts the disposition for 5 unseen notices and matches the harness.
+
+If all three hold, the spec has replaced the code. At a quarter of the current length, it would also score better on parsimony.
+
+✻ Brewed for 21s · done 3:38 AM

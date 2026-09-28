@@ -1,0 +1,22 @@
+{
+  "requirement_id": "SAFETY-001",
+  "case_id": "46528",
+  "gate": 1,
+  "strategy": "contract",
+  "status": "candidate; no diagnosis or repair",
+  "severity": "critical",
+  "expected": "Use BEHAVIORAL_FAILURE, ENVIRONMENT_FAILURE, MODEL_FAILURE, HARNESS_FAILURE or UNKNOWN; require successful real calls for scored cases.",
+  "observed": {
+    "execution_outcome": "MODEL_FAILURE"
+  },
+  "risk": "A fallback can conceal an invalid baseline.",
+  "evidence_refs": [
+    "cases/46528.json"
+  ],
+  "failure_domain": "MODEL_FAILURE",
+  "confidence": "not established",
+  "input": "inherited/evaluation/notices/46528_OPERATIONAL ALERT.html",
+  "evidence_run": "evidence/legacy/20260926T185618.823020Z",
+  "possible_failure_domain": "MODEL_FAILURE",
+  "requirements_changed": false
+}

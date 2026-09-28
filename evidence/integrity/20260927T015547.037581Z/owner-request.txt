@@ -1,0 +1,167 @@
+Pause packaging-only finalization.
+
+A new adversarial audit found potential harness-integrity failures.
+It reviewed f7de5a5, not the later policy-completion changes. Do not assume
+every finding is current, but do not dismiss it merely because the
+snapshot is older.
+
+Read the supplied adversarial audit, including its final amendments,
+and the current owner-approved policy-completion report.
+
+The task is a focused integrity-remediation pass—not implementation of
+all 128 recommendations, another application rewrite, or another broad
+audit.
+
+A. PIN THE CURRENT REVIEW TARGET
+
+Record the exact current source/policy state, including any uncommitted
+overlay. Preserve the original audit and its reviewed revision.
+
+Use disposable copies for destructive/mutation probes. Do not run the
+audit's mutation commands against the authoritative working tree.
+
+Keep one active writer. Do not touch the prepared or running isolated
+maintenance workspace.
+
+B. REPRODUCE THE LOAD-BEARING FINDINGS ON THE CURRENT SNAPSHOT
+
+Prioritize these families:
+
+1. Temporal regression versus paired comparison
+   Audit rows 7–9.
+
+   Test whether replacing rebuilt storage with inherited storage is
+   detected as a regression against the rebuilt system's own pinned
+   prior result.
+
+   Test whether a deterioration shared by both comparison participants
+   can be missed by the paired delta.
+
+   Keep paired differences separate from temporal regression.
+   Preserve explicit noncomparability for changed policies/oracles.
+
+2. Oracle/capture identity and completeness
+   Rows 1–2, 33–34, 39–40.
+
+   Test label tampering in a copied capture, omitted required cases,
+   and altered evidence bytes in disposable copies.
+
+   Establish which approved artifact supplies expected answers.
+   Verify captures and required case inventory before scoring.
+
+   Compare observable persisted decisions separately from semantic
+   scorability. Do not erase an observable output merely because a
+   helper execution was incomplete.
+
+   Attribute 46528 to the correct 512-token capture and 46725 to its
+   actual baseline run. Do not infer token-change causality from
+   stochastic differences.
+
+3. Spec/rule/check consistency
+   Rows 20–26, 29–31.
+
+   Recheck the updated loader and governance work.
+
+   Test missing binding IDs, inconsistent normative metadata, unrelated
+   checker rebinding, old wording hidden in comments, and a supported
+   requirement-parameter change.
+
+   Supported approved changes must affect validation appropriately.
+   Unsupported or inconsistent changes must be explicit—not silently
+   ignored or converted into reduced coverage and PASS.
+
+   Approved-but-unimplemented obligations remain visible as unavailable
+   proof. Do not simply prohibit all deferred requirements.
+
+4. Live-command and output safety
+   Rows 11–19, 95, 100–103.
+
+   Use mocks/stubs and isolated credential-free execution. No live
+   application model calls are authorized by this request.
+
+   Verify current readiness, explicit live invocation, validation of
+   inputs before external work, structured failure reporting, safe
+   argument handling, and fresh output-directory behavior.
+
+   Historical PASS pointers must not establish current readiness.
+   New failed runs must not overwrite historical evidence or corrupt
+   curated current context/status.
+
+   Detect unexpected executable additions to the inherited source
+   inventory, with explicit exclusions for benign generated files.
+
+5. Approval/context authority
+   Rows 46–49 and 56.
+
+   Verify decision-body and manifest consistency, the exact recorded
+   owner approval, and what prevents the implementation worker from
+   promoting its own proposed policy.
+
+   Do not claim editable status text or self-repinned hashes authenticate
+   approval. Identify the actual trusted reference and writable boundary.
+
+   Do not invent approval, signatures, historical provenance, or an
+   enforcement capability the environment does not provide.
+
+Classify each tested issue:
+REPRODUCED_CURRENT
+RESOLVED_IN_LATER_REVISION
+NOT_REPRODUCED
+DOCUMENTATION_OVERCLAIM
+or OUTSIDE_DECLARED_SCOPE.
+
+Retain the actual before-results and relevant artifact identities.
+
+C. FIX CONFIRMED INTEGRITY DEFECTS NARROWLY
+
+You may correct harness implementation and current documentation while
+preserving approved business intent, source labels, and historical
+evidence.
+
+Prefer simple controls:
+- per-ID structured specification consistency;
+- explicit required coverage;
+- authoritative versioned labels and verified capture identity;
+- per-system temporal comparators;
+- run-scoped evidence writes;
+- safe command validation;
+- a truthful operator-approval boundary.
+
+Do not build a natural-language compiler, signing platform, new agent
+framework, or large security subsystem.
+
+If an authorization boundary requires an owner action, identify exactly
+what must be approved or provisioned. Do not silently weaken the claim.
+
+Add focused tests that fail on the reproduced bad behavior and pass
+after correction. Do not obtain green results by changing expected
+counts, deleting failing checks, relabeling examples, or blessing
+tampered fixtures.
+
+Where a check is not supported, report that honestly rather than
+claiming full coverage.
+
+D. VERIFY AND REPORT THE CHANGE
+
+Run existing quality checks and relevant offline evaluations.
+
+Changed findings caused by corrected evaluation must be reported as
+harness corrections, not improvements in the inherited application.
+
+Keep historical reports unchanged. Publish a versioned correction and
+current navigation where an earlier interpretation was misleading.
+
+Return:
+- pinned current review identity;
+- disposition of the targeted audit families;
+- failing-before/passing-after evidence for confirmed fixes;
+- exact source/policy/report changes;
+- current limitations and any required owner action;
+- regression and quality results;
+- the remaining maintenance/delivery steps.
+
+Do not assign an official grade, claim all audit findings are closed,
+push/share the repository, or start a new application feature.
+
+Continue through routine reproduction, narrow fixes, and verification.
+Stop for a genuine policy/authority decision or an access blocker.

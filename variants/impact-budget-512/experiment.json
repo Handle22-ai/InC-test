@@ -1,0 +1,37 @@
+{
+  "variant_id": "impact-budget-512",
+  "identity": "modified_configuration_candidate",
+  "declared_at": "2026-09-26T19:10:09.261018+00:00",
+  "source": "inherited/llm_utils.py",
+  "candidate_source": "variants/impact-budget-512/llm_utils.py",
+  "pristine_source_sha256": "68448416555956b04b8591a4e1c09c1226ee619005ef293894567430eb834139",
+  "candidate_source_sha256": "1ae58890a043534338af44cecea0af19c7795149f6f4a11784f5146135505e0a",
+  "change": {
+    "function": "llm_assess_curtailment_impact",
+    "parameter": "max_tokens",
+    "before": 200,
+    "after": 512
+  },
+  "rationale": "Three retained successful API responses exhausted exactly 200 output tokens without a standalone verdict. 512 provides bounded headroom for the unchanged reasoning-then-verdict format; no claim it fixes semantic accuracy.",
+  "unchanged": [
+    "model claude-sonnet-4-6",
+    "all prompts",
+    "parser",
+    "retry policy",
+    "labels",
+    "thresholds",
+    "business requirements",
+    "shared adapter"
+  ],
+  "targeted_cases": [
+    46528,
+    46624,
+    46864
+  ],
+  "control": 46624,
+  "targeted_max_runs": 1,
+  "full_max_runs": 1,
+  "advance_rule": "All three targeted executions must have usable model/helper results, successful persistence and request limits matching this declaration. Label correctness is not the advancement criterion.",
+  "full_suite": "same 14 labels, 9 probes and fresh state protocol as baseline",
+  "budget_tuning": "No further limits or runs authorized by this experiment."
+}

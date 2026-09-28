@@ -1,0 +1,252 @@
+Implement a bounded specification-and-evidence improvement pass.
+
+Our objective is to satisfy the assessment's central requirements more
+convincingly—not increase test counts, accumulate reports, or obtain
+a predetermined grade.
+
+Preserve candidate:
+9c75f307c2fc6747b374fac4294f800557d76d32
+
+Work on an identified successor. Reuse completed fixes and existing
+infrastructure. Keep one active writer. Do not import external audits,
+their grades, or their commentary into the repository.
+
+The original challenge is authoritative. Read its actual requirements,
+the current approved policies, and the supplied source/calibration
+documentation.
+
+A. COMPLETE THE IMPLEMENTATION-INDEPENDENT SYSTEM SPECIFICATION
+
+Make spec.md and its normative companion contract sufficient to explain:
+
+- Supported NGPL input formats and actual source fields.
+- What is retained from source bytes versus extracted or inferred.
+- The normalized input and output schemas.
+- Quantity types, units, and meaning.
+- Geographic and pipeline-segment evidence.
+- Candidate signal / non-signal / unresolved classification behavior.
+- Initial notices, unchanged revisions, changed restrictions and lifts.
+- Reference time, missing/late history, replay, and past-decision context.
+- Classification versus permission to produce a recommendation.
+- Error/refusal behavior and required observable evidence.
+
+Do not define signal behavior as lists of labeled notice IDs.
+
+The supplied labels remain evaluation data. They are not runtime answers.
+Do not supply final classifications or materiality answers in a stub and
+then claim the classifier interpreted raw notice semantics.
+
+Use source-supported rules. Keep inherited scoring weights and thresholds
+described as inherited behavior unless already approved as intended policy.
+Do not silently canonize a defective scorer.
+
+Do not invent arbitrary numeric materiality or latency thresholds.
+Where a necessary policy choice is genuinely unresolved, give the owner
+one recommended precise choice, its source basis, and its consequence.
+
+Existing owner approval does not authorize novel business rules by
+implication. Continue independent technical work while awaiting only
+those genuinely necessary decisions.
+
+Define timing behavior and measure available machine-processing latency.
+Do not claim measured human-response latency or invent a desk SLA.
+
+The brief's typical strong-signal characteristics are not an all-fields
+eligibility checklist. Missing volume alone must not automatically
+become a negative signal rule.
+
+For formats not actually handled, specify and test an explicit
+unsupported/review disposition rather than implying extraction works.
+
+B. CREATE ONE CANONICAL BEHAVIORAL CONTRACT
+
+Choose one authoritative structured representation for supported signal
+rules. Make its human-readable specification/table generated or strictly
+validated from the same representation.
+
+Document which file the engineer edits and how the other view is produced.
+Do not create another contradictory policy source.
+
+Include, where applicable:
+- stable rule ID;
+- conditions and required evidence;
+- explicit precedence for overlapping conditions;
+- expected action/disposition;
+- requirement mapping;
+- oracle/check availability.
+
+Generate scenario selection, boundary cases, or expected relationships
+from these supported rules using reusable strategies.
+
+Do not build a general natural-language compiler.
+Do not claim all prose becomes executable merely because it is hashed.
+
+Keep application behavior independent from the evaluator. The application
+must not call the evaluator's expected-result function or return its
+fixture's expected answer.
+
+Demonstrate both kinds of control:
+
+1. Inconsistent or unapproved changes are refused with a clear reason.
+2. An explicitly identified derivation-only policy variant changes
+   expectations without editing assertion code.
+
+Include a rule action, an executable bound, and an overlapping-condition
+precedence example where the current contract supports them.
+
+For the bound demonstration, include a witness observation that
+distinguishes the two values. Do not require every valid observation to
+change result when a bound is relaxed.
+
+Keep all alternative policy fixtures synthetic and separate from
+production/assessment approval.
+
+C. CORRECT THE KNOWN EVIDENCE DEFECTS
+
+1. Temporal identity
+
+Read the previous run's actual original identities from its retained
+manifest. Never fill previous.policy with the current specification hash.
+
+Show separately:
+- historical execution policy/oracle/evaluator;
+- any current reinterpretation of historical observations;
+- current execution policy/oracle/evaluator.
+
+An approved policy change must remain visible even if outputs are equal.
+Without a justified comparison mapping, retain descriptive differences
+and mark the policy-sensitive comparison noncomparable.
+
+Do not rewrite the original run or invent missing historical provenance.
+
+2. Invalid semantics presented as valid
+
+Make SAFETY-001 observe the application's actual presented classification
+and recommendation, not only the harness's classification-scorability flag.
+
+The inherited unusable-impact observation with a valid-looking
+classification and a recommendation must fail the appropriate safety
+assertion. The corrected candidate must pass it under equivalent inputs.
+
+Keep extraction scorability independent when extraction actually succeeded.
+
+Inspect retained baseline-B 46864. Present its persisted decision, score,
+threshold margin, unusable helper, and fallback evidence together.
+Do not call it a false positive when the supplied label is positive.
+
+3. Accurate attribution
+
+Separate behavioral failures from missing output-contract fields.
+Do not inflate duplicate-recommendation counts with vocabulary mismatch,
+and do not hide genuine contract failures.
+
+Use a consistent step/relation requirement-mapping rule.
+Align gate assignments with their declared requirements.
+
+Label tests whose classifications are supplied by stubs as downstream
+state/safety tests, not raw-text classification evidence.
+
+Identify frozen classification capture separately from the storage
+implementation consuming it.
+
+D. PROVE A SPECIFICATION USER CAN ACT WITHOUT READING IMPLEMENTATION
+
+Prepare a small, frozen spec-only buildability package containing:
+- the approved normative specification;
+- input/output schemas and field meanings;
+- supported interfaces and dependencies;
+- no inherited or rebuilt classifier implementation;
+- no expected labels, implementation prompts, or solution transcript.
+
+Define the bounded target honestly: a classifier over the specified
+input boundary, not an unimplemented full ingestion system.
+
+Prepare independent evaluation fixtures and source-supported expectations
+before the independent builder runs. Include positive, negative,
+uncertain, and overlapping-condition examples. Clearly identify synthetic
+examples and previously seen labeled cases; do not call them an
+out-of-sample accuracy study.
+
+Do not run a fake fresh session inside this implementation conversation.
+Return the exact short handoff for a separate agent to build from the
+package. That exercise will test whether the specification is sufficient.
+
+Do not weaken tests or supply hidden implementation hints to clear a
+buildability failure. Missing contract information is a real finding.
+
+E. CLOSE THE SMALL HISTORY AND CONTEXT GAPS
+
+Verify the supplied 46507 → 46732 relationship and add a separately
+identified prior-loaded evaluation using traceable input evidence.
+
+Preserve the prior-not-loaded and genuinely corpus-absent scenarios.
+Do not manufacture a model capture or exclude missing obligations merely
+to make acceptance pass.
+
+Ensure context for recommendation/classification maintenance includes
+its actual component interface, parser field-arity limits, affected
+checks, relevant decisions, and linked failures.
+
+Provide a short core package with referenced detail rather than always
+loading every historical report. Do not omit applicable requirements
+just to reduce size.
+
+Keep automatically retained learning/proposals nonbinding until approval.
+Indexing a failure is not the same as authorizing a new requirement.
+
+Prepare one literal fresh-session entry instruction in README.
+
+Do not implement the evaluator's unreviewed multi-prior scratch changes.
+Do not rerun the old alias exercise.
+
+F. MAKE THE EVIDENCE SURFACE ANSWER THE TRADING QUESTIONS
+
+Produce a concise current report derived from actual results:
+
+- False and unsupported normal-looking recommendations.
+- Unusable-verdict fallback and observed decisions.
+- Duplicate recommendations and the distinct-event positive control.
+- Known misses, disagreements, and unscored cases, kept separate.
+- Geography/quantity evidence and its actual coverage.
+- Current runtime autonomy and its latency tradeoff.
+- Bounded storage improvement.
+- Fresh-session evidence and exact limitations.
+
+Keep raw data behind links. Preserve historical reports, but update
+current status/navigation so it does not still call completed work pending.
+
+Provide one concrete engineer workflow:
+change a supported requirement or input, run the existing command,
+inspect the affected finding, and locate retained learning.
+
+Add a minimal input-probe option only if the existing command surface
+cannot exercise a new documented normalized fixture. Reuse the existing
+runner; do not build another framework.
+
+Provide failure evidence locations in command output.
+Document actual Python versus Make exit behavior without pretending
+successful measurement means application acceptance.
+
+G. VERIFICATION AND HANDOFF
+
+Run existing quality checks and affected offline evaluations in a clean
+successor checkout. Make no live application model calls in this pass.
+
+Preserve before/after evidence for reproduced defects.
+Do not count test volume, overlapping assertions, or hash failures as
+independent business requirements covered.
+
+Return:
+- exact successor identity;
+- normative source and derivation direction;
+- source-supported specification changes and any pending owner choices;
+- semantic derivation demonstrations;
+- corrected temporal and safety observations;
+- prior-loaded scenario result;
+- current context/README workflow;
+- actual commands and outcomes;
+- spec-only builder handoff;
+- no more than three remaining material gaps.
+
+Do not push, share, guarantee a score, or claim the independent build
+exercise has happened before it runs.

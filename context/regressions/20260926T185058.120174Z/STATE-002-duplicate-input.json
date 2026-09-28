@@ -1,0 +1,28 @@
+{
+  "requirement_id": "STATE-002",
+  "case_id": "duplicate-input",
+  "gate": 1,
+  "strategy": "metamorphic",
+  "status": "candidate; no diagnosis or repair",
+  "severity": "critical",
+  "expected": {
+    "notices": 1,
+    "locations": 1,
+    "restrictions": 3
+  },
+  "observed": {
+    "notices": 1,
+    "locations": 2,
+    "restrictions": 6
+  },
+  "risk": "Repeated scraping must not multiply state.",
+  "evidence_refs": [
+    "cases/duplicate-input.json"
+  ],
+  "failure_domain": "BEHAVIORAL_FAILURE",
+  "confidence": "direct observation",
+  "input": "inherited/evaluation/notices/46624_CAPACITY CONSTRAINT.html",
+  "evidence_run": "evidence/legacy/20260926T185058.120174Z",
+  "possible_failure_domain": "BEHAVIORAL_FAILURE",
+  "requirements_changed": false
+}

@@ -1,0 +1,13 @@
+{
+  "notice_id": 46732,
+  "notice_type": "CAPACITY CONSTRAINT",
+  "status": "TERMINATE",
+  "prior_notice_id": 46507,
+  "information_only": false,
+  "is_signal": false,
+  "confidence_score": 0.0,
+  "validity_flags": [
+    "VC-1: terminated notice — prior notice 46507 was not a signal; termination has no trading relevance",
+    "llm_extraction"
+  ]
+}

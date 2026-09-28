@@ -1,0 +1,432 @@
+{
+  "source_spec_sha256": "4448a6f9e9ee3841e0086a8e556c21bbd584efc9167742a831154f70e3e18a8e",
+  "role": "generated consequences, not independent oracle",
+  "normalized": {
+    "firm-positive": {
+      "rule": "BR-FIRM",
+      "action": {
+        "classification": "SIGNAL_CANDIDATE",
+        "disposition": "CANDIDATE_ONLY",
+        "recommendation_allowed": false
+      },
+      "matched_rules": [
+        "BR-FIRM",
+        "BR-UNRESOLVED"
+      ],
+      "features": {
+        "Format": "SUPPORTED",
+        "Oracle answer": "USABLE",
+        "Conflict": "NO",
+        "History": "COMPLETE",
+        "Arriving status": "INITIATE",
+        "Prior": "ABSENT",
+        "Operational change": "UNKNOWN",
+        "Information-only": "NO",
+        "Restriction": "KNOWN",
+        "Service class": "FIRM_DISRUPTION",
+        "Source clock": "RESOLVED",
+        "Restriction current": "CURRENT"
+      }
+    },
+    "planned-positive": {
+      "rule": "BR-FIRM",
+      "action": {
+        "classification": "SIGNAL_CANDIDATE",
+        "disposition": "CANDIDATE_ONLY",
+        "recommendation_allowed": false
+      },
+      "matched_rules": [
+        "BR-FIRM",
+        "BR-UNRESOLVED"
+      ],
+      "features": {
+        "Format": "SUPPORTED",
+        "Oracle answer": "USABLE",
+        "Conflict": "NO",
+        "History": "COMPLETE",
+        "Arriving status": "INITIATE",
+        "Prior": "ABSENT",
+        "Operational change": "UNKNOWN",
+        "Information-only": "NO",
+        "Restriction": "KNOWN",
+        "Service class": "FIRM_DISRUPTION",
+        "Source clock": "RESOLVED",
+        "Restriction current": "CURRENT"
+      }
+    },
+    "routine-negative": {
+      "rule": "BR-ROUTINE",
+      "action": {
+        "classification": "NON_SIGNAL",
+        "disposition": "NO_SIGNAL",
+        "recommendation_allowed": false
+      },
+      "matched_rules": [
+        "BR-ROUTINE",
+        "BR-UNRESOLVED"
+      ],
+      "features": {
+        "Format": "SUPPORTED",
+        "Oracle answer": "USABLE",
+        "Conflict": "NO",
+        "History": "COMPLETE",
+        "Arriving status": "INITIATE",
+        "Prior": "ABSENT",
+        "Operational change": "UNKNOWN",
+        "Information-only": "YES",
+        "Restriction": "NONE",
+        "Service class": "OTHER",
+        "Source clock": "RESOLVED",
+        "Restriction current": "CURRENT"
+      }
+    },
+    "insufficient": {
+      "rule": "BR-UNRESOLVED",
+      "action": {
+        "classification": "UNRESOLVED",
+        "disposition": "REVIEW_REQUIRED",
+        "recommendation_allowed": false
+      },
+      "matched_rules": [
+        "BR-UNRESOLVED"
+      ],
+      "features": {
+        "Format": "SUPPORTED",
+        "Oracle answer": "USABLE",
+        "Conflict": "NO",
+        "History": "COMPLETE",
+        "Arriving status": "INITIATE",
+        "Prior": "ABSENT",
+        "Operational change": "UNKNOWN",
+        "Information-only": "NO",
+        "Restriction": "KNOWN",
+        "Service class": "OTHER",
+        "Source clock": "RESOLVED",
+        "Restriction current": "CURRENT"
+      }
+    },
+    "overlap-unusable-routine": {
+      "rule": "BR-SEMANTICS",
+      "action": {
+        "classification": "UNRESOLVED",
+        "disposition": "ERROR",
+        "recommendation_allowed": false
+      },
+      "matched_rules": [
+        "BR-SEMANTICS",
+        "BR-ROUTINE",
+        "BR-UNRESOLVED"
+      ],
+      "features": {
+        "Format": "SUPPORTED",
+        "Oracle answer": "UNUSABLE",
+        "Conflict": "NO",
+        "History": "COMPLETE",
+        "Arriving status": "INITIATE",
+        "Prior": "ABSENT",
+        "Operational change": "UNKNOWN",
+        "Information-only": "YES",
+        "Restriction": "NONE",
+        "Service class": "OTHER",
+        "Source clock": "RESOLVED",
+        "Restriction current": "CURRENT"
+      }
+    },
+    "overlap-contradiction": {
+      "rule": "BR-CONTRADICTION",
+      "action": {
+        "classification": "UNRESOLVED",
+        "disposition": "REVIEW_REQUIRED",
+        "recommendation_allowed": false
+      },
+      "matched_rules": [
+        "BR-CONTRADICTION",
+        "BR-UNRESOLVED"
+      ],
+      "features": {
+        "Format": "SUPPORTED",
+        "Oracle answer": "USABLE",
+        "Conflict": "YES",
+        "History": "COMPLETE",
+        "Arriving status": "INITIATE",
+        "Prior": "ABSENT",
+        "Operational change": "UNKNOWN",
+        "Information-only": "YES",
+        "Restriction": "KNOWN",
+        "Service class": "OTHER",
+        "Source clock": "RESOLVED",
+        "Restriction current": "CURRENT"
+      }
+    },
+    "missing-prior": {
+      "rule": "BR-HISTORY",
+      "action": {
+        "classification": "UNRESOLVED",
+        "disposition": "REVIEW_REQUIRED",
+        "recommendation_allowed": false
+      },
+      "matched_rules": [
+        "BR-HISTORY",
+        "BR-FIRM",
+        "BR-UNRESOLVED"
+      ],
+      "features": {
+        "Format": "SUPPORTED",
+        "Oracle answer": "USABLE",
+        "Conflict": "NO",
+        "History": "GAP",
+        "Arriving status": "SUPERSEDE",
+        "Prior": "ABSENT",
+        "Operational change": "UNKNOWN",
+        "Information-only": "NO",
+        "Restriction": "KNOWN",
+        "Service class": "FIRM_DISRUPTION",
+        "Source clock": "RESOLVED",
+        "Restriction current": "CURRENT"
+      }
+    },
+    "unsupported-pdf": {
+      "rule": "BR-FORMAT",
+      "action": {
+        "classification": "UNRESOLVED",
+        "disposition": "REVIEW_REQUIRED",
+        "recommendation_allowed": false
+      },
+      "matched_rules": [
+        "BR-FORMAT",
+        "BR-FIRM",
+        "BR-UNRESOLVED"
+      ],
+      "features": {
+        "Format": "UNSUPPORTED",
+        "Oracle answer": "USABLE",
+        "Conflict": "NO",
+        "History": "COMPLETE",
+        "Arriving status": "INITIATE",
+        "Prior": "ABSENT",
+        "Operational change": "UNKNOWN",
+        "Information-only": "NO",
+        "Restriction": "KNOWN",
+        "Service class": "FIRM_DISRUPTION",
+        "Source clock": "RESOLVED",
+        "Restriction current": "CURRENT"
+      }
+    },
+    "primary-only-positive": {
+      "rule": "BR-FIRM",
+      "action": {
+        "classification": "SIGNAL_CANDIDATE",
+        "disposition": "CANDIDATE_ONLY",
+        "recommendation_allowed": false
+      },
+      "matched_rules": [
+        "BR-FIRM",
+        "BR-UNRESOLVED"
+      ],
+      "features": {
+        "Format": "SUPPORTED",
+        "Oracle answer": "USABLE",
+        "Conflict": "NO",
+        "History": "COMPLETE",
+        "Arriving status": "INITIATE",
+        "Prior": "ABSENT",
+        "Operational change": "UNKNOWN",
+        "Information-only": "NO",
+        "Restriction": "KNOWN",
+        "Service class": "FIRM_DISRUPTION",
+        "Source clock": "RESOLVED",
+        "Restriction current": "CURRENT"
+      }
+    },
+    "unchanged-revision": {
+      "rule": "BR-UNCHANGED",
+      "action": {
+        "classification": "NON_SIGNAL",
+        "disposition": "SUPPRESSED",
+        "recommendation_allowed": false
+      },
+      "matched_rules": [
+        "BR-UNCHANGED",
+        "BR-FIRM",
+        "BR-UNRESOLVED"
+      ],
+      "features": {
+        "Format": "SUPPORTED",
+        "Oracle answer": "USABLE",
+        "Conflict": "NO",
+        "History": "COMPLETE",
+        "Arriving status": "SUPERSEDE",
+        "Prior": "PRESENT",
+        "Operational change": "UNCHANGED",
+        "Information-only": "NO",
+        "Restriction": "KNOWN",
+        "Service class": "FIRM_DISRUPTION",
+        "Source clock": "RESOLVED",
+        "Restriction current": "CURRENT"
+      }
+    }
+  },
+  "stateful": [
+    {
+      "id": "A",
+      "notice": "root",
+      "restart": false,
+      "provider": "valid",
+      "authorization": true,
+      "expected": {
+        "initial": 1,
+        "disposition": "INITIAL_RECOMMENDATION"
+      },
+      "requirement": "STATE-003",
+      "spec_line": 385
+    },
+    {
+      "id": "B",
+      "notice": "root",
+      "restart": false,
+      "provider": "valid",
+      "authorization": true,
+      "expected": {
+        "initial": 0,
+        "disposition": "SUPPRESSED"
+      },
+      "requirement": "STATE-003",
+      "spec_line": 386
+    },
+    {
+      "id": "C",
+      "notice": "unchanged_revision",
+      "restart": false,
+      "provider": "valid",
+      "authorization": true,
+      "expected": {
+        "initial": 0,
+        "disposition": "SUPPRESSED"
+      },
+      "requirement": "STATE-004",
+      "spec_line": 387
+    },
+    {
+      "id": "D",
+      "notice": "unchanged_revision",
+      "restart": true,
+      "provider": "valid",
+      "authorization": true,
+      "expected": {
+        "initial": 0,
+        "disposition": "SUPPRESSED"
+      },
+      "requirement": "STATE-006",
+      "spec_line": 388
+    },
+    {
+      "id": "E",
+      "notice": "distinct",
+      "restart": false,
+      "provider": "valid",
+      "authorization": true,
+      "expected": {
+        "initial": 1,
+        "disposition": "INITIAL_RECOMMENDATION"
+      },
+      "requirement": "STATE-003",
+      "spec_line": 389
+    },
+    {
+      "id": "F",
+      "notice": "distinct",
+      "restart": true,
+      "provider": "valid",
+      "authorization": true,
+      "expected": {
+        "initial": 0,
+        "disposition": "SUPPRESSED"
+      },
+      "requirement": "STATE-006",
+      "spec_line": 390
+    },
+    {
+      "id": "unusable-impact",
+      "notice": "root",
+      "restart": false,
+      "provider": "unusable_impact",
+      "authorization": true,
+      "expected": {
+        "initial": 0,
+        "disposition": "REVIEW_REQUIRED",
+        "reason": "SEMANTICS_INCOMPLETE"
+      },
+      "requirement": "INPUT-002",
+      "spec_line": 391
+    },
+    {
+      "id": "unavailable-extraction",
+      "notice": "extraction_failure",
+      "restart": false,
+      "provider": "unavailable_extraction",
+      "authorization": true,
+      "expected": {
+        "initial": 0,
+        "disposition": "ERROR",
+        "semantic_safety": true
+      },
+      "requirement": "INPUT-002",
+      "spec_line": 392
+    },
+    {
+      "id": "missing-history",
+      "notice": "missing_history",
+      "restart": false,
+      "provider": "valid",
+      "authorization": true,
+      "expected": {
+        "initial": 0,
+        "disposition": "REVIEW_REQUIRED",
+        "reason": "MISSING_HISTORY"
+      },
+      "requirement": "HISTORY-002",
+      "spec_line": 393
+    },
+    {
+      "id": "missing-authorization",
+      "notice": "unauthorized",
+      "restart": false,
+      "provider": "valid",
+      "authorization": false,
+      "expected": {
+        "initial": 0,
+        "disposition": "REVIEW_REQUIRED",
+        "reason": "AUTHORIZATION_REQUIRED"
+      },
+      "requirement": "STATE-003",
+      "spec_line": 394
+    },
+    {
+      "id": "routine",
+      "notice": "routine",
+      "restart": false,
+      "provider": "information_only",
+      "authorization": true,
+      "expected": {
+        "initial": 0,
+        "disposition": "NO_SIGNAL"
+      },
+      "requirement": "SIGNAL-002",
+      "spec_line": 395
+    },
+    {
+      "id": "unsupported-format",
+      "notice": "unsupported_format",
+      "restart": false,
+      "provider": "valid",
+      "authorization": true,
+      "expected": {
+        "initial": 0,
+        "disposition": "REVIEW_REQUIRED",
+        "reason": "UNSUPPORTED_FORMAT"
+      },
+      "requirement": "SAFETY-002",
+      "spec_line": 396
+    }
+  ]
+}

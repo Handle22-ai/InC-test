@@ -1,0 +1,242 @@
+{
+  "notice_id": 46881,
+  "notice_type": "MAINTENANCE",
+  "html_file": "evaluation/notices/46881_MAINTENANCE.html",
+  "header": {
+    "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+    "critical": "Y",
+    "type1": "MAINTENANCE",
+    "type2": "MAINTENANCE",
+    "notice_effective_date": "04/15/2026  3:47:10PM",
+    "notice_end_date": "04/16/2026 9:00:00am",
+    "post_date": "4/15/2026 3:47:10 PM",
+    "notice_id": "46881",
+    "req_rsp": "1",
+    "rsp_date": "04/15/2026",
+    "status": "SUPERSEDE",
+    "prior_notice_id": "46857",
+    "subject": "SEG 26 - GC #3 M/L-ILI TOOL RUNS - UPD 1"
+  },
+  "body": "SEGMENT\n26 – GULF COAST #3 M/L - ILI TOOL RUNS – UPDATE 1 \n\n \n\nThe\nTool run dates have changed. See previous Notice ID 46857 dated April 2, 2026\n\n \n\nAs previously\nposted on Natural's Outage Impact Report (\nX25-1474603 and X25-147896\n) and as part of\nNatural's ongoing pipeline Integrity Management Program, Natural will perform a\nseries of ILI tool runs on the Gulf Coast #3 Mainline near Compressor Station 394\n(CS 394) located in Cass County, Texas, in Segment 26 of Natural's Texok Zone. \nNatural previously anticipated no customer impact during this pipeline\nintegrity maintenance work at CS 394.  However, due to current operational\nconditions and to maintain system integrity, the scope of the project has been\nchanged and will now impact the receipt locations as noted below.  Once the\ndata from the tool runs have been analyzed, any remediation work impacting\nshippers will be posted.     \n\n \n\nAs\nsuch, effective on the gas days indicated below, the receipt locations listed\nbelow will be shut in for the duration of this integrity work.  No transport\nservices will be available.\n\n \n\nLOCATIONS\nUNAVAILABLE FOR RECEIPTS:\n\n \n\nLOC\n42741      ET G&P ETML NACOGDOCHES\n\nLOC\n45310      BTA ETG EAST TEXAS GATHERING \n\nLOC 45397      ET G&P NACOGDOCHES\n\nLOC 46389      TGG NACOGDOGDOCES\n\nLOC\n55704      MARKWEST HARRISON\n\n \n\nTOOL\nRUN DATES\n:\n\n \n\nGas\nday Thursday, April 9, 2026 (Cleaning Tool)\n\nGas\nday Tuesday April 14, 2026 and continuing through gas day Tuesday, April 21, 2026\n(Previously Thursday, April 16, 2026) (Cleaning and MFL Tool)\n\nGas\nday Wednesday April 22, 2026 (Previously Tuesday April 21, 2026) and continuing\nthrough gas day Saturday, April 25, 2026 (Previously Friday April 24, 2026)\n(MFL and EMAT Tool) \n\n \n\nPlease\ncontact your Account Director or Scheduling Representative if you have any\nquestions.\n\n.",
+  "information_only": false,
+  "locations": [
+    {
+      "location_index": 0,
+      "notice_id": 46881,
+      "loc_code": "42741",
+      "loc_name": "ET G&P ETML NACOGDOCHES",
+      "segment": "26",
+      "compressor_station": "394",
+      "zone": "Texok Zone",
+      "system": null
+    },
+    {
+      "location_index": 1,
+      "notice_id": 46881,
+      "loc_code": "45310",
+      "loc_name": "BTA ETG EAST TEXAS GATHERING",
+      "segment": "26",
+      "compressor_station": "394",
+      "zone": "Texok Zone",
+      "system": null
+    },
+    {
+      "location_index": 2,
+      "notice_id": 46881,
+      "loc_code": "45397",
+      "loc_name": "ET G&P NACOGDOCHES",
+      "segment": "26",
+      "compressor_station": "394",
+      "zone": "Texok Zone",
+      "system": null
+    },
+    {
+      "location_index": 3,
+      "notice_id": 46881,
+      "loc_code": "46389",
+      "loc_name": "TGG NACOGDOGDOCES",
+      "segment": "26",
+      "compressor_station": "394",
+      "zone": "Texok Zone",
+      "system": null
+    },
+    {
+      "location_index": 4,
+      "notice_id": 46881,
+      "loc_code": "55704",
+      "loc_name": "MARKWEST HARRISON",
+      "segment": "26",
+      "compressor_station": "394",
+      "zone": "Texok Zone",
+      "system": null
+    }
+  ],
+  "restrictions": [
+    {
+      "notice_id": 46881,
+      "location_index": 0,
+      "service_type": "ALL",
+      "restriction_type": "UNAVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "ON_TO_PIPE",
+      "start_datetime": "2026-04-09",
+      "end_datetime": "2026-04-09"
+    },
+    {
+      "notice_id": 46881,
+      "location_index": 1,
+      "service_type": "ALL",
+      "restriction_type": "UNAVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "ON_TO_PIPE",
+      "start_datetime": "2026-04-09",
+      "end_datetime": "2026-04-09"
+    },
+    {
+      "notice_id": 46881,
+      "location_index": 2,
+      "service_type": "ALL",
+      "restriction_type": "UNAVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "ON_TO_PIPE",
+      "start_datetime": "2026-04-09",
+      "end_datetime": "2026-04-09"
+    },
+    {
+      "notice_id": 46881,
+      "location_index": 3,
+      "service_type": "ALL",
+      "restriction_type": "UNAVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "ON_TO_PIPE",
+      "start_datetime": "2026-04-09",
+      "end_datetime": "2026-04-09"
+    },
+    {
+      "notice_id": 46881,
+      "location_index": 4,
+      "service_type": "ALL",
+      "restriction_type": "UNAVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "ON_TO_PIPE",
+      "start_datetime": "2026-04-09",
+      "end_datetime": "2026-04-09"
+    },
+    {
+      "notice_id": 46881,
+      "location_index": 0,
+      "service_type": "ALL",
+      "restriction_type": "UNAVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "ON_TO_PIPE",
+      "start_datetime": "2026-04-14",
+      "end_datetime": "2026-04-21"
+    },
+    {
+      "notice_id": 46881,
+      "location_index": 1,
+      "service_type": "ALL",
+      "restriction_type": "UNAVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "ON_TO_PIPE",
+      "start_datetime": "2026-04-14",
+      "end_datetime": "2026-04-21"
+    },
+    {
+      "notice_id": 46881,
+      "location_index": 2,
+      "service_type": "ALL",
+      "restriction_type": "UNAVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "ON_TO_PIPE",
+      "start_datetime": "2026-04-14",
+      "end_datetime": "2026-04-21"
+    },
+    {
+      "notice_id": 46881,
+      "location_index": 3,
+      "service_type": "ALL",
+      "restriction_type": "UNAVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "ON_TO_PIPE",
+      "start_datetime": "2026-04-14",
+      "end_datetime": "2026-04-21"
+    },
+    {
+      "notice_id": 46881,
+      "location_index": 4,
+      "service_type": "ALL",
+      "restriction_type": "UNAVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "ON_TO_PIPE",
+      "start_datetime": "2026-04-14",
+      "end_datetime": "2026-04-21"
+    },
+    {
+      "notice_id": 46881,
+      "location_index": 0,
+      "service_type": "ALL",
+      "restriction_type": "UNAVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "ON_TO_PIPE",
+      "start_datetime": "2026-04-22",
+      "end_datetime": "2026-04-25"
+    },
+    {
+      "notice_id": 46881,
+      "location_index": 1,
+      "service_type": "ALL",
+      "restriction_type": "UNAVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "ON_TO_PIPE",
+      "start_datetime": "2026-04-22",
+      "end_datetime": "2026-04-25"
+    },
+    {
+      "notice_id": 46881,
+      "location_index": 2,
+      "service_type": "ALL",
+      "restriction_type": "UNAVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "ON_TO_PIPE",
+      "start_datetime": "2026-04-22",
+      "end_datetime": "2026-04-25"
+    },
+    {
+      "notice_id": 46881,
+      "location_index": 3,
+      "service_type": "ALL",
+      "restriction_type": "UNAVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "ON_TO_PIPE",
+      "start_datetime": "2026-04-22",
+      "end_datetime": "2026-04-25"
+    },
+    {
+      "notice_id": 46881,
+      "location_index": 4,
+      "service_type": "ALL",
+      "restriction_type": "UNAVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "ON_TO_PIPE",
+      "start_datetime": "2026-04-22",
+      "end_datetime": "2026-04-25"
+    }
+  ],
+  "provenance": "llm_extraction"
+}

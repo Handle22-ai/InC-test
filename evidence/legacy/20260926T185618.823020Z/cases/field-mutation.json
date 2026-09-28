@@ -1,0 +1,546 @@
+{
+  "case_id": "field-mutation",
+  "input": "evidence/legacy/20260926T185618.823020Z/inputs/96615_percentage_mutation.html",
+  "input_sha256": "d53573f667d86cd752f98584073d25ff41777619f104b081faa25c32c2ef804e",
+  "notice_id": 96615,
+  "state_before": {
+    "notices": [],
+    "notice_locations": [],
+    "notice_restrictions": [],
+    "foreign_key_violations": []
+  },
+  "outcome": "SUCCESS",
+  "output": {
+    "notice": {
+      "notice_id": 96615,
+      "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+      "pipeline_code": "NGPL",
+      "is_critical": 1,
+      "notice_type": "MAINTENANCE",
+      "notice_subtype": "MAINTENANCE",
+      "effective_datetime": "2026-01-08T16:53:39",
+      "end_datetime": "2026-08-31T09:00:00",
+      "post_datetime": "2026-01-08T16:53:39",
+      "response_required": 1,
+      "response_due_date": null,
+      "status": "INITIATE",
+      "prior_notice_id": null,
+      "subject": "SEG 25 - STATION MAINT - CS 302",
+      "body_text": "ANR/NGPL SOUTH JOLIET AT CAPACITY\n\nSEGMENT\n25 – STATION MAINTENANCE – CS 302\n\n \n\nAs\nposted on Natural's Outage Impact Report (X25-1527903), Natural will be\nperforming station maintenance at Compressor Station 302 (CS 302) located in Montgomery\nCounty, Texas (Segment 25 of Natural's Texok Zone).  Natural is required to\nreduce the maximum operating capacity eastbound into Segment 25 from Segment 26\nand Segment 22, thus limiting Natural's throughput capacity eastbound through\nCS 302 during this restriction.\n\n \n\nThe\n\nscheduling constraint will be at CS 302\n; therefore, any gas received\nwest of CS 302 for delivery east of CS 302 will be impacted for the duration of\nthe restriction.  The Pooling Point - Texok Zone (LOC 10560) is located west of\nthe constraint.  Firm transportation associated with storage withdrawals may be\nimpacted.\n\n \n\nAs\nsuch, effective for gas day \nWednesday, April 1, 2026, Timely Cycle, and\ncontinuing through gas day Friday, May 1, 2026\n, Natural will schedule\nPrimary Firm and Secondary in-path Firm transports to no less than \n65%\n\nof contract MDQ through CS 302.  AOR/ITS and Secondary out-of-path Firm\ntransports \nwill not\n be available for the duration of this restriction.\n\n \n\nThe\nstated scheduling percentage is based upon the current level of firm capacity\ncontracted for during this restriction and is subject to change based upon\noperational conditions and Shipper utilization.\n\n \n\nContinue\nto monitor Natural's interactive website for any updates.  Please contact your\nAccount Director or Scheduling Representative if you have any questions.\n\n..",
+      "outage_report_ref": "X25-1527903",
+      "tariff_section": null,
+      "information_only": 0,
+      "is_signal": 1,
+      "confidence_score": 0.5,
+      "validity_flags": "[\"VC-2: high-confidence notice type (MAINTENANCE) \\u2014 maintenance outage (+0.10 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"llm_extraction\"]",
+      "source_url": null,
+      "scraped_at": "2026-09-26T19:00:00.333171",
+      "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/legacy/20260926T185618.823020Z/inputs/96615_percentage_mutation.html"
+    },
+    "locations": [
+      {
+        "location_index": 0,
+        "notice_id": 96615,
+        "loc_code": "10560",
+        "loc_name": "Pooling Point - Texok Zone",
+        "segment": "25",
+        "compressor_station": "302",
+        "zone": "Texok Zone",
+        "system": null
+      }
+    ],
+    "restrictions": [
+      {
+        "notice_id": 96615,
+        "location_index": 0,
+        "service_type": "PRIMARY_FIRM",
+        "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+        "restriction_value": 65.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "EASTBOUND",
+        "start_datetime": "2026-04-01",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "notice_id": 96615,
+        "location_index": 0,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+        "restriction_value": 65.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "EASTBOUND",
+        "start_datetime": "2026-04-01",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "notice_id": 96615,
+        "location_index": 0,
+        "service_type": "AOR_ITS",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "EASTBOUND",
+        "start_datetime": "2026-04-01",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "notice_id": 96615,
+        "location_index": 0,
+        "service_type": "SECONDARY_OUTPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "EASTBOUND",
+        "start_datetime": "2026-04-01",
+        "end_datetime": "2026-05-01"
+      }
+    ]
+  },
+  "persistence_insert_succeeded": true,
+  "model_calls": [
+    {
+      "provider": "anthropic",
+      "configured_model": "claude-sonnet-4-6",
+      "request_sha256": "268a178b2785b4333859038e7f4cf437fb6e8c116e118dc162c3771ba7f314ab",
+      "request": {
+        "model": "claude-sonnet-4-6",
+        "max_tokens": 2048,
+        "system": "You are a structured data extractor for natural gas pipeline EBB (Electronic Bulletin Board) notices.\n\nYour job is to extract locations and their associated capacity restrictions from the notice body into a strict schema.\n\nBefore filling in the schema, reason carefully about the notice:\n1. Is this notice INFORMATION ONLY? Set information_only=true if it is a retrospective post-event report, a weather/demand advisory with no enforceable directive, an administrative update (tariff filing, project list, regulatory notice), or a rolling maintenance plan summary. Set false if it announces or enforces a current or upcoming restriction, curtailment, force majeure, OFO, or maintenance outage with shipper impact.\n2. Does this notice use a CHANGE INDICATOR symbol? Look for a legend line such as \"è Indicates Change\" or \"* Indicates Change\". If found, identify the exact symbol used (e.g. \"è\"). Only rows marked with that specific symbol represent changes — all other rows are unchanged from the prior notice and must be omitted.\n3. What is the ROOT CAUSE of the restriction (e.g. maintenance at CS 343)?\n4. What are the CONSTRAINT POINTS — the specific locations where the capacity limit is enforced? If a change indicator was found in step 2, only include locations that carry that symbol.\n5. Which shippers / service types are SUBJECT TO the restriction at each constraint point?\n6. Does the notice cover multiple named systems (e.g. Amarillo System, Gulf Coast System)? If so, create a separate location object for each system.\n\nSchema structure: restrictions are nested inside each location they apply to. This makes the location↔restriction relationship explicit.\n\nRules:\n- Extract only what is explicitly stated. Do not infer or hallucinate values.\n- Never fabricate LOC codes, compressor station numbers, or segment numbers. If a location identifier does not appear verbatim in the notice text, leave that field null.\n- Use null for any field not present in the text.\n- Change indicators: if the notice uses a symbol such as \"è\" followed by \"Indicates Change\", extract ONLY the entries marked with that symbol. All unmarked rows are unchanged from the prior notice — omit them entirely.\n- For locations: include ONLY the constraint point(s) that are marked as changed (or all impacted locations if no change indicator is used). Do not include locations that are the cause of the restriction, mentioned as positional context, or explicitly stated as unaffected.\n- For system: capture the named pipeline system (e.g. \"Amarillo System\", \"Gulf Coast System\") when stated. Place it as the last identifier field, after zones. Use null if no system name appears.\n- For flow_direction: use ON_TO_PIPE for \"ON to the Pipe\" sections, OFF_OF_PIPE for \"OFF of the Pipe\" sections. Use compass directions (NORTHBOUND etc.) for directional flow. Use RECEIPT/DELIVERY when the notice uses those terms. Use ALL for system-wide. Null if unspecified.\n- For restrictions: nest inside the location they apply to. Only include service types explicitly restricted or unavailable. Include one entry per (service_type, restriction_type, flow_direction) combination.",
+        "tools": [
+          {
+            "name": "extract_notice_data",
+            "description": "Extract changed locations and their associated capacity restrictions from a natural gas pipeline notice. Use only information explicitly stated in the text. Return null for any field not present. Restrictions are nested inside each location they apply to.",
+            "input_schema": {
+              "type": "object",
+              "required": [
+                "locations",
+                "reasoning"
+              ],
+              "properties": {
+                "locations": {
+                  "type": "array",
+                  "description": "Each element is one impacted location group with its own restrictions. IMPORTANT: if the notice uses a change indicator symbol (e.g. 'è Indicates Change'), extract ONLY the locations and restrictions that are marked with that symbol — all unmarked rows are unchanged from the prior notice and must be omitted. If no change indicator is used, extract all impacted locations. Create one location object per distinct (system, zone/segment/CS/LOC) grouping. If a notice covers multiple systems (e.g. Amarillo System and Gulf Coast System), create separate location objects for each system. Nest the restrictions that apply specifically to that location inside it.",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "restrictions"
+                    ],
+                    "properties": {
+                      "loc_codes": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "List of numeric LOC identifiers (numbers only, no 'LOC' prefix) that are directly impacted. e.g. ['3592', '25085']. Empty list if no LOC codes are stated. Do NOT include LOC codes explicitly stated as 'not impacted' or 'not affected'."
+                      },
+                      "loc_names": {
+                        "type": "array",
+                        "items": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "description": "Human-readable names one-to-one with loc_codes. Use null for a code whose name is not stated. Empty list if no LOC codes."
+                      },
+                      "segments": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "Pipeline segment numbers e.g. ['23', '24']. Empty list if none mentioned."
+                      },
+                      "compressor_stations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "Compressor station identifiers, numbers only, no 'CS' prefix. e.g. ['302', '343']. Empty list if none mentioned."
+                      },
+                      "zones": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "Named pipeline zones e.g. ['Louisiana Zone', 'Texok Zone', 'Gulf Coast Mainline', 'Market Delivery Zone']. Empty list if none mentioned."
+                      },
+                      "system": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "description": "The named pipeline system this location belongs to, e.g. 'Amarillo System', 'Gulf Coast System', 'Midcontinent System'. Null if no system name is stated."
+                      },
+                      "restrictions": {
+                        "type": "array",
+                        "description": "All capacity or flow restrictions that apply to THIS location. Include one entry per (service_type, restriction_type, flow_direction) combination.",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "service_type",
+                            "restriction_type"
+                          ],
+                          "properties": {
+                            "service_type": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "Which transportation service type is restricted. Common values: PRIMARY_FIRM, SECONDARY_INPATH_FIRM, SECONDARY_OUTPATH_FIRM, AOR_ITS, INTERRUPTIBLE, NO_NOTICE, ALL. Use the exact wording from the notice if it doesn't fit these categories."
+                            },
+                            "restriction_type": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "The nature of the restriction. Common values: SCHEDULED_TO_PCT_MDQ (scheduled to no less than X% of MDQ), UNAVAILABLE (service completely unavailable), HOURLY_LIMIT_PCT (hourly takes limited to X% of rights), DAILY_LIMIT_PCT (daily takes limited to X%). Use a descriptive string if none of these fit."
+                            },
+                            "restriction_value": {
+                              "type": [
+                                "number",
+                                "null"
+                              ],
+                              "description": "Numeric value of the restriction e.g. 46.0 for 46% MDQ. Null if UNAVAILABLE."
+                            },
+                            "restriction_unit": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "Unit for restriction_value. Common values: PCT_MDQ, PCT_HOURLY, MMBTU, DTH. Null if not applicable."
+                            },
+                            "flow_direction": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "The direction or side this restriction applies to. Use ON_TO_PIPE for gas injected into the pipeline (receipts/injections). Use OFF_OF_PIPE for gas taken off the pipeline (deliveries/withdrawals). Use a compass direction (NORTHBOUND, SOUTHBOUND, EASTBOUND, WESTBOUND) for directional flow restrictions. Use RECEIPT or DELIVERY when the notice uses those terms explicitly. Use ALL if it applies system-wide or direction is unspecified. Use null if not mentioned in the notice."
+                            },
+                            "start_datetime": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "The date this restriction takes effect, extracted from the notice body. Return as YYYY-MM-DD if the date is explicit. Return null if no start date is stated."
+                            },
+                            "end_datetime": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "The date this restriction ends, extracted from the notice body. Return as YYYY-MM-DD if an explicit end date is stated. Return 'TBD' if the notice says 'until further notice' or equivalent. Return null if no end date is mentioned at all."
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "change_indicator": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "description": "The exact change indicator symbol used in this notice (e.g. 'è', '*'), as identified from its legend line (e.g. 'è Indicates Change'). Null if no change indicator legend is present."
+                },
+                "information_only": {
+                  "type": "boolean",
+                  "description": "True if this notice is purely informational and describes no active operational restriction. Set to true for: retrospective post-event reports (describing something that already happened), weather/demand advisories with no enforceable directive, administrative updates (project lists, tariff filings, regulatory notices), and rolling maintenance plan summaries. Set to false if the notice announces or enforces a current or upcoming restriction, curtailment, force majeure, OFO, or maintenance outage with shipper impact."
+                },
+                "reasoning": {
+                  "type": "string",
+                  "description": "One sentence explaining what this notice describes and what the primary operational impact is."
+                }
+              }
+            }
+          }
+        ],
+        "tool_choice": {
+          "type": "tool",
+          "name": "extract_notice_data"
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "## Notice Header (pre-parsed)\nNotice ID: 96615\nNotice Type: MAINTENANCE / MAINTENANCE\nStatus: INITIATE\nCritical: Y\nEffective: 01/08/2026  4:53:39PM\nEnd: 08/31/2026 9:00:00am\nSubject: SEG 25 - STATION MAINT - CS 302\nPrior Notice: None\n\n## Notice Body\nANR/NGPL SOUTH JOLIET AT CAPACITY\n\nSEGMENT 25 – STATION MAINTENANCE – CS 302\n\n \n\nAs posted on Natural's Outage Impact Report (X25-1527903), Natural will be performing station maintenance at Compressor Station 302 (CS 302) located in Montgomery County, Texas (Segment 25 of Natural's Texok Zone).  Natural is required to reduce the maximum operating capacity eastbound into Segment 25 from Segment 26 and Segment 22, thus limiting Natural's throughput capacity eastbound through CS 302 during this restriction.\n\n \n\nThe\n\nscheduling constraint will be at CS 302\n; therefore, any gas received west of CS 302 for delivery east of CS 302 will be impacted for the duration of the restriction.  The Pooling Point - Texok Zone (LOC 10560) is located west of the constraint.  Firm transportation associated with storage withdrawals may be impacted.\n\n \n\nAs such, effective for gas day \nWednesday, April 1, 2026, Timely Cycle, and continuing through gas day Friday, May 1, 2026\n, Natural will schedule Primary Firm and Secondary in-path Firm transports to no less than \n65%\n\nof contract MDQ through CS 302.  AOR/ITS and Secondary out-of-path Firm transports \nwill not be available for the duration of this restriction.\n\n \n\nThe stated scheduling percentage is based upon the current level of firm capacity contracted for during this restriction and is subject to change based upon operational conditions and Shipper utilization.\n\n \n\nContinue to monitor Natural's interactive website for any updates.  Please contact your Account Director or Scheduling Representative if you have any questions.\n\n.."
+          }
+        ]
+      },
+      "success": true,
+      "request_id": "req_011CfSZknfkmxJRVgUr9HSUb",
+      "response": {
+        "id": "msg_011CfSZko7Z2aX22Sfi7uCHE",
+        "container": null,
+        "content": [
+          {
+            "id": "toolu_019GFbQ7Uo1DS66iXPmVCWWM",
+            "caller": {
+              "type": "direct"
+            },
+            "input": {
+              "reasoning": "This notice announces an upcoming maintenance outage at Compressor Station 302 on Segment 25 of the Texok Zone, effective April 1–May 1, 2026, which restricts eastbound throughput capacity and imposes scheduling limits on Primary Firm, Secondary in-path Firm, AOR/ITS, and Secondary out-of-path Firm services.",
+              "information_only": false,
+              "change_indicator": null,
+              "locations": [
+                {
+                  "system": null,
+                  "zones": [
+                    "Texok Zone"
+                  ],
+                  "segments": [
+                    "25"
+                  ],
+                  "compressor_stations": [
+                    "302"
+                  ],
+                  "loc_codes": [
+                    "10560"
+                  ],
+                  "loc_names": [
+                    "Pooling Point - Texok Zone"
+                  ],
+                  "restrictions": [
+                    {
+                      "service_type": "PRIMARY_FIRM",
+                      "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+                      "restriction_value": 65.0,
+                      "restriction_unit": "PCT_MDQ",
+                      "flow_direction": "EASTBOUND",
+                      "start_datetime": "2026-04-01",
+                      "end_datetime": "2026-05-01"
+                    },
+                    {
+                      "service_type": "SECONDARY_INPATH_FIRM",
+                      "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+                      "restriction_value": 65.0,
+                      "restriction_unit": "PCT_MDQ",
+                      "flow_direction": "EASTBOUND",
+                      "start_datetime": "2026-04-01",
+                      "end_datetime": "2026-05-01"
+                    },
+                    {
+                      "service_type": "AOR_ITS",
+                      "restriction_type": "UNAVAILABLE",
+                      "restriction_value": null,
+                      "restriction_unit": null,
+                      "flow_direction": "EASTBOUND",
+                      "start_datetime": "2026-04-01",
+                      "end_datetime": "2026-05-01"
+                    },
+                    {
+                      "service_type": "SECONDARY_OUTPATH_FIRM",
+                      "restriction_type": "UNAVAILABLE",
+                      "restriction_value": null,
+                      "restriction_unit": null,
+                      "flow_direction": "EASTBOUND",
+                      "start_datetime": "2026-04-01",
+                      "end_datetime": "2026-05-01"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "extract_notice_data",
+            "type": "tool_use",
+            "toolset_name": null
+          }
+        ],
+        "model": "claude-sonnet-4-6",
+        "role": "assistant",
+        "stop_details": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "type": "message",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 3312,
+          "output_tokens": 654,
+          "output_tokens_details": null,
+          "server_tool_use": null,
+          "service_tier": "standard"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "provider": "anthropic",
+      "configured_model": "claude-sonnet-4-6",
+      "request_sha256": "d77a277274fe0c799d98c3ea6e44ae58b54b6a33cee9cbe6ffe6075d7c6b4d3e",
+      "request": {
+        "model": "claude-sonnet-4-6",
+        "max_tokens": 200,
+        "messages": [
+          {
+            "role": "user",
+            "content": "You are assessing the volume impact of a natural gas pipeline curtailment notice.\n\n## Extracted restrictions\n[\n  {\n    \"service_type\": \"PRIMARY_FIRM\",\n    \"restriction_type\": \"SCHEDULED_TO_PCT_MDQ\",\n    \"restriction_value\": 65.0,\n    \"restriction_unit\": \"PCT_MDQ\"\n  },\n  {\n    \"service_type\": \"SECONDARY_INPATH_FIRM\",\n    \"restriction_type\": \"SCHEDULED_TO_PCT_MDQ\",\n    \"restriction_value\": 65.0,\n    \"restriction_unit\": \"PCT_MDQ\"\n  },\n  {\n    \"service_type\": \"AOR_ITS\",\n    \"restriction_type\": \"UNAVAILABLE\",\n    \"restriction_value\": null,\n    \"restriction_unit\": null\n  },\n  {\n    \"service_type\": \"SECONDARY_OUTPATH_FIRM\",\n    \"restriction_type\": \"UNAVAILABLE\",\n    \"restriction_value\": null,\n    \"restriction_unit\": null\n  }\n]\n\n## Notice body\nANR/NGPL SOUTH JOLIET AT CAPACITY\n\nSEGMENT\n25 – STATION MAINTENANCE – CS 302\n\n \n\nAs\nposted on Natural's Outage Impact Report (X25-1527903), Natural will be\nperforming station maintenance at Compressor Station 302 (CS 302) located in Montgomery\nCounty, Texas (Segment 25 of Natural's Texok Zone).  Natural is required to\nreduce the maximum operating capacity eastbound into Segment 25 from Segment 26\nand Segment 22, thus limiting Natural's throughput capacity eastbound through\nCS 302 during this restriction.\n\n \n\nThe\n\nscheduling constraint will be at CS 302\n; therefore, any gas received\nwest of CS 302 for delivery east of CS 302 will be impacted for the duration of\nthe restriction.  The Pooling Point - Texok Zone (LOC 10560) is located west of\nthe constraint.  Firm transportation associated with storage withdrawals may be\nimpacted.\n\n \n\nAs\nsuch, effective for gas day \nWednesday, April 1, 2026, Timely Cycle, and\ncontinuing through gas day Friday, May 1, 2026\n, Natural will schedule\nPrimary Firm and Secondary in-path Firm transports to no less than \n65%\n\nof contract MDQ through CS 302.  AOR/ITS and Secondary out-of-path Firm\ntransports \nwill not\n be available for the duration of this restriction.\n\n \n\nThe\nstated scheduling percentage is based upon the current level of firm capacity\ncontracted for during this restriction and is subject to change based upon\noperational conditions and Shipper utilization.\n\n \n\nContinue\nto monitor Natural's interactive website for any updates.  Please contact your\nAccount Director or Scheduling Representative if you have any questions.\n\n..\n\nAssess the curtailment impact using these two criteria:\n1. WHO is affected: Primary Firm and Secondary Firm nominations are the highest-priority service classes. If they are curtailed, the impact is inherently larger. Interruptible and AOR/ITS service are lower priority and their curtailment has less market impact.\n2. HOW MUCH: If the restriction is expressed as a percentage of MDQ or hourly rights, a reduction of more than 30% of normal volumes counts as a large impact. 30% - 10% coutns as a medium impact, <10% counts as a small impact UNAVAILABLE (complete outage) is always a large impact.\n\nDefinitions:\n- large: Primary Firm >10% volume reduction or UNAVAILABLE\n- medium: Firm service affected but <10% reduction, OR interruptible-only with large reduction(or UNAVAILABLE)\n- small: Only interruptible AND/OR service affected with minor OR medium reduction\n\nFirst explain your reasoning in 2-3 sentences, then on the last line write ONLY the verdict word: 'large', 'medium', or 'small'."
+          }
+        ]
+      },
+      "success": true,
+      "request_id": "req_011CfSZmRdkX5FW8W39cNdGf",
+      "response": {
+        "id": "msg_011CfSZmS5YUYy7U2HCrrUoK",
+        "container": null,
+        "content": [
+          {
+            "citations": null,
+            "text": "## Reasoning\n\nPrimary Firm and Secondary In-path Firm services are restricted to 65% of MDQ, representing a **35% reduction** from normal volumes — which exceeds the 30% threshold for a \"large\" volume reduction. Since these are the highest-priority service classes (Primary Firm and Secondary Firm), their curtailment carries the greatest market impact. Additionally, AOR/ITS and Secondary Out-of-path Firm are completely unavailable, further compounding the overall impact.\n\nlarge",
+            "type": "text"
+          }
+        ],
+        "model": "claude-sonnet-4-6",
+        "role": "assistant",
+        "stop_details": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "type": "message",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "inference_geo": "global",
+          "input_tokens": 942,
+          "output_tokens": 113,
+          "output_tokens_details": null,
+          "server_tool_use": null,
+          "service_tier": "standard"
+        },
+        "diagnostics": null
+      }
+    }
+  ],
+  "helper_results": [
+    {
+      "helper": "llm_assess_curtailment_impact",
+      "result": "large"
+    }
+  ],
+  "state_after": {
+    "notices": [
+      {
+        "notice_id": 96615,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "MAINTENANCE",
+        "notice_subtype": "MAINTENANCE",
+        "effective_datetime": "2026-01-08T16:53:39",
+        "end_datetime": "2026-08-31T09:00:00",
+        "post_datetime": "2026-01-08T16:53:39",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "SEG 25 - STATION MAINT - CS 302",
+        "body_text": "ANR/NGPL SOUTH JOLIET AT CAPACITY\n\nSEGMENT\n25 – STATION MAINTENANCE – CS 302\n\n \n\nAs\nposted on Natural's Outage Impact Report (X25-1527903), Natural will be\nperforming station maintenance at Compressor Station 302 (CS 302) located in Montgomery\nCounty, Texas (Segment 25 of Natural's Texok Zone).  Natural is required to\nreduce the maximum operating capacity eastbound into Segment 25 from Segment 26\nand Segment 22, thus limiting Natural's throughput capacity eastbound through\nCS 302 during this restriction.\n\n \n\nThe\n\nscheduling constraint will be at CS 302\n; therefore, any gas received\nwest of CS 302 for delivery east of CS 302 will be impacted for the duration of\nthe restriction.  The Pooling Point - Texok Zone (LOC 10560) is located west of\nthe constraint.  Firm transportation associated with storage withdrawals may be\nimpacted.\n\n \n\nAs\nsuch, effective for gas day \nWednesday, April 1, 2026, Timely Cycle, and\ncontinuing through gas day Friday, May 1, 2026\n, Natural will schedule\nPrimary Firm and Secondary in-path Firm transports to no less than \n65%\n\nof contract MDQ through CS 302.  AOR/ITS and Secondary out-of-path Firm\ntransports \nwill not\n be available for the duration of this restriction.\n\n \n\nThe\nstated scheduling percentage is based upon the current level of firm capacity\ncontracted for during this restriction and is subject to change based upon\noperational conditions and Shipper utilization.\n\n \n\nContinue\nto monitor Natural's interactive website for any updates.  Please contact your\nAccount Director or Scheduling Representative if you have any questions.\n\n..",
+        "outage_report_ref": "X25-1527903",
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 1,
+        "confidence_score": 0.5,
+        "validity_flags": "[\"VC-2: high-confidence notice type (MAINTENANCE) \\u2014 maintenance outage (+0.10 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-26T19:00:00.333171",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/legacy/20260926T185618.823020Z/inputs/96615_percentage_mutation.html"
+      }
+    ],
+    "notice_locations": [
+      {
+        "id": 1,
+        "location_index": 0,
+        "notice_id": 96615,
+        "loc_code": "10560",
+        "loc_name": "Pooling Point - Texok Zone",
+        "segment": "25",
+        "compressor_station": "302",
+        "zone": "Texok Zone",
+        "system": null
+      }
+    ],
+    "notice_restrictions": [
+      {
+        "id": 1,
+        "location_index": 0,
+        "notice_id": 96615,
+        "service_type": "PRIMARY_FIRM",
+        "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+        "restriction_value": 65.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "EASTBOUND",
+        "start_datetime": "2026-04-01",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "id": 2,
+        "location_index": 0,
+        "notice_id": 96615,
+        "service_type": "SECONDARY_INPATH_FIRM",
+        "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+        "restriction_value": 65.0,
+        "restriction_unit": "PCT_MDQ",
+        "flow_direction": "EASTBOUND",
+        "start_datetime": "2026-04-01",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "id": 3,
+        "location_index": 0,
+        "notice_id": 96615,
+        "service_type": "AOR_ITS",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "EASTBOUND",
+        "start_datetime": "2026-04-01",
+        "end_datetime": "2026-05-01"
+      },
+      {
+        "id": 4,
+        "location_index": 0,
+        "notice_id": 96615,
+        "service_type": "SECONDARY_OUTPATH_FIRM",
+        "restriction_type": "UNAVAILABLE",
+        "restriction_value": null,
+        "restriction_unit": null,
+        "flow_direction": "EASTBOUND",
+        "start_datetime": "2026-04-01",
+        "end_datetime": "2026-05-01"
+      }
+    ],
+    "foreign_key_violations": []
+  },
+  "notice_chain": [
+    {
+      "notice_id": 96615,
+      "subject": "SEG 25 - STATION MAINT - CS 302",
+      "status": "INITIATE",
+      "prior_notice_id": null,
+      "depth": 1
+    }
+  ],
+  "reopened_state_equal": true,
+  "category": "field_mutation",
+  "annotations": {
+    "fields": {
+      "firm_mdq": 65
+    }
+  },
+  "transformation": {
+    "source_notice": 46615,
+    "field": "firm_mdq",
+    "before": 55,
+    "after": 65,
+    "signal_oracle": "No invented signal label for the changed restriction."
+  },
+  "evidence_ref": "cases/field-mutation.json",
+  "database": "field-mutation.db"
+}

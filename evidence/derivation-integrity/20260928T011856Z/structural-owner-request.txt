@@ -1,0 +1,314 @@
+We are no longer doing incremental polish.
+
+Treat the latest adversarial evaluation as a structural penetration test
+of the harness's core claims.
+
+Preserve committed checkpoint:
+019de93564ced1b3b4766316afda0ba106eb9348
+
+Preserve all historical evidence. Work on a successor branch.
+Do not launch the separate builder yet.
+
+GOAL
+
+Make this statement materially true:
+
+"The engineer owns the specification. The bounded normalized classifier
+executes that specification. Independent witnesses check it. A policy
+change cannot silently change both implementation and expected answers."
+
+This is a focused architectural hardening pass, not a broad rewrite.
+
+1. REVERT UNAUTHORIZED BR-SEMANTICS CHANGE
+
+Restore BR-SEMANTICS to its pre-BR-FIRM behavior.
+
+The owner's phrase "remains REVIEW_REQUIRED" did not explicitly authorize
+changing an existing ERROR action.
+
+Record this correction and add a governance regression proving language
+such as "remains X" cannot silently authorize Y→X.
+
+Do not change BR-FIRM approval.
+
+2. STRUCTURE THE CANONICAL BEHAVIOR CONTRACT
+
+Replace prose-only executable feature meanings with a small declarative
+predicate representation in requirements/behavior.yaml.
+
+Support only operators required by current active rules, such as:
+- eq
+- in
+- contains_any
+- exists
+- all
+- any
+- not
+
+Business-specific values and combinations must live in data, not Python.
+
+harness/behavior_contract.py may implement generic expression evaluation,
+but must not contain BR-FIRM/ROUTINE/HISTORY-specific business predicates.
+
+Convert current active rule predicates, including:
+- semantic usability;
+- contradictions;
+- history completeness;
+- unchanged revision;
+- routine/admin;
+- firm disruption;
+- current/future timing.
+
+Do not invent new policy.
+
+3. IMPLEMENT THE BOUNDED NORMALIZED CLASSIFIER
+
+Build the normalized-notice classifier described by the contract.
+
+Input:
+- normalized notice facts;
+- explicit prior/history facts;
+- evidence references;
+- explicit UTC reference time.
+
+Output:
+- matched rule;
+- classification;
+- disposition;
+- reason codes;
+- evidence refs;
+- recommendation_allowed.
+
+The classifier must read the canonical contract at runtime.
+Do not hardcode notice IDs, fixture expected values, or supplied labels.
+
+This is classification only.
+Do not implement model extraction, recommendation delivery or trading.
+
+4. INDEPENDENT WITNESS FIXTURES
+
+Keep evaluator/source-supported witness fixtures outside the runtime
+contract.
+
+Their expectations must not be regenerated from a changed rule.
+
+For active supported behavior, contract/witness disagreement must yield:
+
+CONTRACT_CONTRADICTS_FIXTURE
+
+and a nonzero specification/gate result.
+
+Include witnesses for at least:
+- supported firm candidate;
+- PRIMARY_ONLY firm candidate;
+- routine negative;
+- contradiction;
+- unusable semantics;
+- missing history;
+- unchanged revision;
+- unsupported format.
+
+5. DERIVATION PROOF
+
+In disposable copies demonstrate:
+
+A. Remove SECONDARY_FIRM from firm_disruption.
+   Runtime result changes on its witness with no Python business-logic edit.
+
+B. Remove PRIMARY_ONLY.
+   Its witness changes.
+
+C. BR-ROUTINE → SIGNAL_CANDIDATE.
+   CONTRACT_CONTRADICTS_FIXTURE and nonzero.
+
+D. Move BR-HISTORY below BR-FIRM.
+   Missing-history witness produces contradiction/nonzero.
+
+E. Change a generic predicate operator.
+   Derived runtime result changes as expected.
+
+Retain this as a concise mutation matrix.
+
+6. POLICY GOVERNANCE
+
+A D1–D6 normative change requires:
+- a new policy identity/version;
+- a registered approved decision artifact;
+- exact new wording in that artifact;
+- exact match among decision/spec/canonical policy representation.
+
+Updating a hash alone must never authorize the change.
+
+Test D1 "at most one" → "at most two" with a re-pin only:
+must fail with UNAPPROVED_POLICY_CHANGE.
+
+Do not claim cryptographic owner authentication.
+
+7. ASSUMPTION GOVERNANCE
+
+Register A-001–A-008 individually by exact normative text/status/basis.
+
+Changing A-003 without a matching authorized decision must be refused or
+clearly remain an unapproved proposal.
+
+Do not label changed assumptions owner-approved merely because a worker
+edited the file.
+
+8. MANIFEST / LEARNING GOVERNANCE
+
+Workers may write observed findings and proposed learning but may not make
+their own learning authoritative.
+
+Introduce a pending-learning/proposal queue that is automatically surfaced
+to subsequent context packages.
+
+Promotion into authoritative core context requires an explicit reviewed
+manifest/index record.
+
+Register or otherwise validate the authoritative manifest so a worker
+cannot silently rewrite the next session's core context.
+
+9. CONTEXT VALIDITY
+
+make context must first verify:
+- canonical behavior contract;
+- generated view;
+- policy/decision registration;
+- assumption registration;
+- authoritative manifest/index.
+
+If any are inconsistent, exit nonzero.
+
+Honor include_content truthfully.
+If an item is reference-only, label it reference-only instead of claiming
+its content is embedded.
+
+10. DETERMINISTIC SEMANTIC IDENTITIES
+
+Remove wall-clock/timing/output-path fields from semantic fixture hashes.
+
+Separate:
+- semantic fixture identity;
+- execution metadata.
+
+Running make evaluate-spec twice without changes must produce the same
+semantic fixture hash.
+
+11. REAL BUILD GATE
+
+Keep measurement commands such as make demo able to complete with visible
+FAIL/UNKNOWN results.
+
+Add one documented bounded acceptance command:
+
+make gate
+
+It must evaluate the new normalized classifier and required specification
+integrity and exit nonzero on:
+- contract/witness contradiction;
+- unauthorized policy change;
+- required behavioral FAIL;
+- regression under comparable policy;
+- invalid evidence identity.
+
+Do not make unsupported full-lifecycle obligations disappear.
+Separate NOT_IMPLEMENTED/UNKNOWN from bounded candidate acceptance.
+
+12. GATE 3
+
+Create a registered accepted baseline for the bounded normalized-classifier
+scope.
+
+Under identical policy:
+- unchanged behavior → PASS;
+- regression → FAIL.
+
+Under changed policy without an approved comparison mapping:
+- UNKNOWN / NONCOMPARABLE.
+
+Do not rewrite the old execution identity with today's policy.
+
+13. CURRENT EVIDENCE SURFACE
+
+Create one concise generated current entry point, e.g. evidence/CURRENT.md.
+
+It must show:
+- exact source revision;
+- policy/contract identity;
+- bounded gate outcomes;
+- top trading-risk findings;
+- known FAIL/ERROR/UNKNOWN;
+- current acceptance/refusal;
+- links to raw evidence.
+
+Historical evidence remains immutable.
+
+Correct:
+- A–F terminology everywhere;
+- candidate vs inherited signal-run columns;
+- current report links;
+- first-day command path;
+- BR-FIRM/current-package status.
+
+Do not delete history solely to reduce file count.
+
+14. LIVE FAILURE EVIDENCE
+
+Every refused live entrypoint must write a small report/failure artifact
+containing:
+- error domain;
+- reason;
+- model/config identity;
+- calls consumed;
+- gate status ERROR/NOT_RUN.
+
+Never require a live API call for the default evaluator workflow.
+
+15. SETUP USABILITY
+
+Make the documented setup command work from a clean evaluator shell when a
+supported Python 3.14 installation is discoverable through the project's
+declared tooling.
+
+If automatic discovery cannot be portable, fail with one exact actionable
+command. Verify the literal README quick start in a disposable checkout.
+
+16. TRADING-RISK SURFACE
+
+Rank current findings by desk consequence:
+
+1. force-majeure/unusable-impact fallback and observed decision;
+2. false-positive / unstable classification evidence;
+3. duplicate/replay recommendation behavior;
+4. missing-history uncertainty;
+5. storage duplication.
+
+Do not change labels or invent domain truth.
+
+Add an explicit bounded OFO policy gap/proposal instead of silently
+classifying the class.
+
+If budget/time permits after structural work, run a small repeated
+high-risk stability sample and report per-notice flip rate. Do not let it
+delay the core derivation fixes.
+
+17. VERIFICATION
+
+From a clean successor checkout run the exact documented offline workflow,
+make gate, and the mutation suite above.
+
+Return:
+- successor commit;
+- behavior contract hash;
+- policy identity;
+- deterministic fixture hash from two consecutive runs;
+- exact gate results;
+- mutation matrix;
+- current evidence entry point;
+- literal evaluator commands;
+- remaining material gaps, maximum three.
+
+Do not launch the independent builder yet.
+Do not tune the model or labels.
+Do not broaden into delivery/reconciliation/full history.
+Do not import evaluator grades into the repository.

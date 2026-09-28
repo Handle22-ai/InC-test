@@ -1,0 +1,11 @@
+# Development tools and their additional transitive dependencies.
+# Install together with dependencies.lock.txt; runtime/provider pins are unchanged.
+ruff==0.15.1
+mypy==1.19.1
+types-PyYAML==6.0.12.20250915
+mypy_extensions==1.1.0
+pathspec==1.1.1
+librt==0.15.0
+types-beautifulsoup4==4.12.0.20250516
+types-html5lib==1.1.11.20260518
+types-webencodings==0.6.0.20260907

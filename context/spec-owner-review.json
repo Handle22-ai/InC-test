@@ -1,0 +1,33 @@
+{
+  "kind": "exact-spec-owner-review-v1",
+  "spec_sha256": "c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f",
+  "repository_owner": "Thomas Hand",
+  "reviewer": "Thomas Hand",
+  "status": "reviewed-for-assessment",
+  "decision_bodies": {
+    "ARCH-SOURCE-001": {
+      "ID": "ARCH-SOURCE-001",
+      "Status": "owner-requested",
+      "Person": "PENDING_PERSON",
+      "Previous spec SHA256": "1adc8936b31bbe5b142bf18e71338b80bb6d066fa67be3d6f7c8fa2edda9017e",
+      "Decision": "Adopt this architecture and keep TZ-NGPL-001 pending; exact user request retained in evidence/spec-source/20260928/owner-request.txt."
+    },
+    "TZ-NGPL-002": {
+      "ID": "TZ-NGPL-002",
+      "Status": "owner-requested",
+      "Person": "PENDING_PERSON",
+      "Previous spec SHA256": "5d4adfff7cb944c6a4ec9e9f17bb0ea7deaed47dfff2eeb35583703786a2245f",
+      "Decision": "Adopt source-grounded SIGNAL_CANDIDATE classification with unknown timezone; prohibit automatic time actionability and recommendation authorization, require REVIEW_REQUIRED, and never infer a zone. Exact ruling: evidence/timezone-separation/20260928/owner-ruling.txt."
+    }
+  },
+  "limits": {
+    "incommodities_approval": false,
+    "production_authorization": false,
+    "cryptographic_authentication": false,
+    "materiality_approval": false,
+    "recommendation_authorization": false,
+    "delivery_authorization": false,
+    "unknown_lifecycle_obligations_pass": false
+  },
+  "user_statement": "Record Thomas Hand as the repository owner and named human reviewer for the\ncurrent spec-source architecture and TZ-NGPL-002 ruling.\n\nThis means:\n- Thomas Hand reviewed the current normative spec for this assessment;\n- the review applies to the exact current spec identity;\n- it is not InCommodities approval;\n- it is not production authorization;\n- it is not cryptographic authentication;\n- it does not make UNKNOWN lifecycle obligations pass.\n\nGenerate the exact read receipt from the current spec identity and rerun the\noffline gate from a clean checkout.\n\nDo not change any policy, thresholds, labels, recommendation authorization,\nor generated behavior while recording this review.\n"
+}

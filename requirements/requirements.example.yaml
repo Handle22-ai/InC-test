@@ -1,0 +1,36 @@
+version: 1
+
+requirements:
+  - id: STATE-003
+    title: Duplicate reprocessing does not duplicate signals
+    severity: critical
+    statement: >
+      Reprocessing the same notice must not emit an additional
+      trading signal for the same logical event.
+    validation:
+      type: metamorphic
+      strategy: duplicate_input
+      invariant: signal_count_does_not_increase
+    evidence:
+      - notice_id
+      - logical_event_id
+      - signal_count_before
+      - signal_count_after
+    source: spec.md
+
+  - id: SIGNAL-001
+    title: Routine administrative notices do not produce trading signals
+    severity: critical
+    statement: >
+      Routine or administrative notices without material flow impact
+      must not emit a trading signal.
+    validation:
+      type: labeled_eval
+      strategy: classification
+      expected_field: emit_signal
+    evidence:
+      - notice_id
+      - expected
+      - observed
+      - reason
+    source: spec.md

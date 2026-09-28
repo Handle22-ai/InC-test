@@ -1,0 +1,10 @@
+{
+  "inherited_file_count": 97,
+  "changed": [],
+  "baseline_commit": "765442763efef85b72b1c0abf25c853177684f3a",
+  "env_ignored": true,
+  "secret_found_in_artifacts": false,
+  "files_scanned": 227,
+  "env_tracked": false,
+  "inherited_git_diff_empty": true
+}

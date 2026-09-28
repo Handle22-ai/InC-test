@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "source": {
+    "pipeline": "NGPL",
+    "media_type": "application/vnd.ngpl.normalized+json",
+    "sha256": "840ff79fe9b29530374523eaf9efe5dbdeb0c858a485ead54d043d4559f0e0fb",
+    "bytes_reference": "sources/overlap-unusable-routine.txt",
+    "fields": {
+      "body": "{\"facts\": {\"availability\": \"AVAILABLE\", \"content_kind\": \"ADMINISTRATIVE\", \"end_time\": null, \"locations\": [{\"evidence_ref\": \"synthetic-source.txt\", \"kind\": \"SEGMENT\", \"value\": \"24\"}], \"operational_assertions\": [\"Firm service unavailable at the constraint\"], \"quantities\": [], \"services\": [\"SECONDARY_FIRM\"], \"start_time\": \"2026-01-14T00:00:00+00:00\", \"time_basis\": \"UTC\"}, \"notice\": {\"notice_id\": 710001, \"notice_type\": \"CAPACITY CONSTRAINT\", \"prior_notice_id\": null, \"status\": \"INITIATE\"}}",
+      "timezone": "UTC"
+    }
+  },
+  "notice": {
+    "notice_id": 710001,
+    "prior_notice_id": null,
+    "status": "INITIATE",
+    "notice_type": "CAPACITY CONSTRAINT"
+  },
+  "facts": {
+    "content_kind": "ADMINISTRATIVE",
+    "services": [
+      "SECONDARY_FIRM"
+    ],
+    "availability": "AVAILABLE",
+    "locations": [
+      {
+        "kind": "SEGMENT",
+        "value": "24",
+        "evidence_ref": "sources/overlap-unusable-routine.txt"
+      }
+    ],
+    "quantities": [],
+    "operational_assertions": [
+      "Firm service unavailable at the constraint"
+    ],
+    "start_time": "2026-01-14T00:00:00+00:00",
+    "end_time": null,
+    "time_basis": "UTC"
+  },
+  "history": [],
+  "reference_time": "2026-01-15T12:00:00+00:00",
+  "evidence": {
+    "extraction_usable": true,
+    "helpers_usable": false,
+    "contradictory": false,
+    "references": [
+      "sources/overlap-unusable-routine.txt"
+    ]
+  }
+}

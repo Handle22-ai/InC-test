@@ -1,0 +1,81 @@
+{
+  "notice_id": 46615,
+  "notice_type": "MAINTENANCE",
+  "html_file": "evaluation/notices/46615_MAINTENANCE.html",
+  "header": {
+    "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+    "critical": "Y",
+    "type1": "MAINTENANCE",
+    "type2": "MAINTENANCE",
+    "notice_effective_date": "01/08/2026  4:53:39PM",
+    "notice_end_date": "08/31/2026 9:00:00am",
+    "post_date": "1/8/2026 4:53:39 PM",
+    "notice_id": "46615",
+    "req_rsp": "1",
+    "rsp_date": "01/08/2026",
+    "status": "INITIATE",
+    "prior_notice_id": "",
+    "subject": "SEG 25 - STATION MAINT - CS 302"
+  },
+  "body": "ANR/NGPL SOUTH JOLIET AT CAPACITY\n\nSEGMENT\n25 – STATION MAINTENANCE – CS 302\n\n \n\nAs\nposted on Natural's Outage Impact Report (X25-1527903), Natural will be\nperforming station maintenance at Compressor Station 302 (CS 302) located in Montgomery\nCounty, Texas (Segment 25 of Natural's Texok Zone).  Natural is required to\nreduce the maximum operating capacity eastbound into Segment 25 from Segment 26\nand Segment 22, thus limiting Natural's throughput capacity eastbound through\nCS 302 during this restriction.\n\n \n\nThe\n\nscheduling constraint will be at CS 302\n; therefore, any gas received\nwest of CS 302 for delivery east of CS 302 will be impacted for the duration of\nthe restriction.  The Pooling Point - Texok Zone (LOC 10560) is located west of\nthe constraint.  Firm transportation associated with storage withdrawals may be\nimpacted.\n\n \n\nAs\nsuch, effective for gas day \nWednesday, April 1, 2026, Timely Cycle, and\ncontinuing through gas day Friday, May 1, 2026\n, Natural will schedule\nPrimary Firm and Secondary in-path Firm transports to no less than \n55%\n\nof contract MDQ through CS 302.  AOR/ITS and Secondary out-of-path Firm\ntransports \nwill not\n be available for the duration of this restriction.\n\n \n\nThe\nstated scheduling percentage is based upon the current level of firm capacity\ncontracted for during this restriction and is subject to change based upon\noperational conditions and Shipper utilization.\n\n \n\nContinue\nto monitor Natural's interactive website for any updates.  Please contact your\nAccount Director or Scheduling Representative if you have any questions.\n\n.",
+  "information_only": false,
+  "locations": [
+    {
+      "location_index": 0,
+      "notice_id": 46615,
+      "loc_code": null,
+      "loc_name": null,
+      "segment": "25",
+      "compressor_station": "302",
+      "zone": "Texok Zone",
+      "system": null
+    }
+  ],
+  "restrictions": [
+    {
+      "notice_id": 46615,
+      "location_index": 0,
+      "service_type": "PRIMARY_FIRM",
+      "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+      "restriction_value": 55.0,
+      "restriction_unit": "PCT_MDQ",
+      "flow_direction": "EASTBOUND",
+      "start_datetime": "2026-04-01",
+      "end_datetime": "2026-05-01"
+    },
+    {
+      "notice_id": 46615,
+      "location_index": 0,
+      "service_type": "SECONDARY_INPATH_FIRM",
+      "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+      "restriction_value": 55.0,
+      "restriction_unit": "PCT_MDQ",
+      "flow_direction": "EASTBOUND",
+      "start_datetime": "2026-04-01",
+      "end_datetime": "2026-05-01"
+    },
+    {
+      "notice_id": 46615,
+      "location_index": 0,
+      "service_type": "AOR_ITS",
+      "restriction_type": "UNAVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "EASTBOUND",
+      "start_datetime": "2026-04-01",
+      "end_datetime": "2026-05-01"
+    },
+    {
+      "notice_id": 46615,
+      "location_index": 0,
+      "service_type": "SECONDARY_OUTPATH_FIRM",
+      "restriction_type": "UNAVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "EASTBOUND",
+      "start_datetime": "2026-04-01",
+      "end_datetime": "2026-05-01"
+    }
+  ],
+  "provenance": "llm_extraction"
+}

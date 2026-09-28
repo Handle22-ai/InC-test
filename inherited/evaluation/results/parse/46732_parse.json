@@ -1,0 +1,48 @@
+{
+  "notice_id": 46732,
+  "notice_type": "CAPACITY CONSTRAINT",
+  "html_file": "evaluation/notices/46732_CAPACITY CONSTRAINT.html",
+  "header": {
+    "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+    "critical": "Y",
+    "type1": "CAPACITY CONSTRAINT",
+    "type2": "SEGMENTS",
+    "notice_effective_date": "02/09/2026  8:32:30AM",
+    "notice_end_date": "02/28/2026 9:00:00am",
+    "post_date": "2/9/2026 8:32:30 AM",
+    "notice_id": "46732",
+    "req_rsp": "1",
+    "rsp_date": "02/09/2026",
+    "status": "TERMINATE",
+    "prior_notice_id": "46507",
+    "subject": "SEG 14 WB - CS 113 - PRIM ONLY LIFTED"
+  },
+  "body": "SEGMENT 17 FORCE MAJURE\n\nSEGMENT 14 WESTBOUND – CS 113 – PRIMARY ONLY - LIFTED\n\n \n\nEffective for gas day \nMonday,\nFebruary 9, 2026, Intraday 1 Cycle and continuing thereafter\n, Natural has\noperating capacity available for transports westbound on the Amarillo Mainline\nSystem through Compressor Station 113 located in Will County, IL (Natural's\nMarket Delivery Zone).  Therefore, the Primary only restriction has been\nlifted.  All transport services are available.\n\n \n\nPlease contact your Account\nDirector or Scheduling Representative if you have any questions.\n\n.",
+  "information_only": false,
+  "locations": [
+    {
+      "location_index": 0,
+      "notice_id": 46732,
+      "loc_code": null,
+      "loc_name": null,
+      "segment": "14",
+      "compressor_station": "113",
+      "zone": "Market Delivery Zone",
+      "system": "Amarillo Mainline System"
+    }
+  ],
+  "restrictions": [
+    {
+      "notice_id": 46732,
+      "location_index": 0,
+      "service_type": "ALL",
+      "restriction_type": "LIFTED",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "WESTBOUND",
+      "start_datetime": "2026-02-09",
+      "end_datetime": "2026-02-28T09:00:00"
+    }
+  ],
+  "provenance": "llm_extraction"
+}

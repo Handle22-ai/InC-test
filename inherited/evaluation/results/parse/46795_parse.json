@@ -1,0 +1,25 @@
+{
+  "notice_id": 46795,
+  "notice_type": "OPERATIONAL FLOW ORDER",
+  "html_file": "evaluation/notices/46795_OPERATIONAL FLOW ORDER.html",
+  "header": {
+    "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+    "critical": "Y",
+    "type1": "OPERATIONAL FLOW ORDER",
+    "type2": "OFO",
+    "notice_effective_date": "03/04/2026  2:08:29PM",
+    "notice_end_date": "05/31/2026 9:00:00am",
+    "post_date": "3/4/2026 2:08:29 PM",
+    "notice_id": "46795",
+    "req_rsp": "1",
+    "rsp_date": "03/04/2026",
+    "status": "INITIATE",
+    "prior_notice_id": "",
+    "subject": "OPERATIONAL FLOW ORDER - REPORT"
+  },
+  "body": "OPERATIONAL\nFLOW ORDER – MARKET DELIVERY ZONE – REPORT\n\n \n\nOn January 20, 2026, due\nto forecasted colder than normal weather, expected increased load on its\nsystem, anticipated maximum peaking withdrawals from storage facilities, and\nsystem operating conditions, Natural issued an Operational Flow Order (“OFO”) in\nthe Market Delivery Zone effective for Thursday, January 22, 2026 at 9:00 a.m. Central\nClock Time. This action was taken in accordance with Section 23.6 of the\nGeneral Terms and Conditions of Natural's FERC Gas Tariff (“GT&C”).\n\nThe OFO was issued to\nmaintain and preserve the operational integrity of Natural's system and was in\nresponse to the following operational factors: (1) to maintain pressures for\nfirm transportation deliveries in the Market Delivery Zone; and (2) maintain deliverability\nfrom Natural's market area storage fields for firm storage services.\n\nThe OFO did not result in\nany curtailment of primary firm service.  During the OFO, Natural implemented\ndaily and hourly take limitations for firm and interruptible Shippers\n(including Point Operators) at all points in the Market Delivery Zone.  The OFO\nlimited Shippers and Point Operators, on a daily basis, from taking volumes in\nexcess of confirmed transportation nominations plus no-notice rights at\ndelivery points in the Market Delivery Zone, and on an hourly basis to 130% of\ntheir firm service rights.  Hourly rights for interruptible nominations were\nlimited to 105% of the Shipper's interruptible nominations. Additionally,\nShippers and Point Operators were required to flow more ratably during the gas\nday based on service priority and nomination cycles.  \nThe\nfirm service percentage was reduced to 110% on Tuesday, January 27, 2026 at\n9:00 a.m. Central Clock Time, and then  increased back to 130% on Thursday\nFebruary 5, 2026 at 9:00 am Central Clock Time. \n \n\nThese measures were taken\nconsistent with Natural's Tariff due to sustained colder than normal weather in\nthe Market Delivery Zone and anticipated maximum peaking withdrawals from\nstorage facilities.  As the weather conditions moderated and the associated\nhigh gas demand declined, Natural removed the OFO, effective at 9:00 a.m. on\ngas day Monday, February 9, 2026.\n\nThis posting complies\nwith GT&C Section 23.6(h) of Natural's Tariff to describe the specific\noperational factors which caused the Operational Flow Order to be issued and to\nbe lifted.\n\n.",
+  "information_only": true,
+  "locations": [],
+  "restrictions": [],
+  "provenance": "llm_extraction"
+}

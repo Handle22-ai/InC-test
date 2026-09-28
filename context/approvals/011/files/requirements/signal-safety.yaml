@@ -1,0 +1,114 @@
+version: 1
+policy_id: assessment-v3-owner-20260928
+scope: bounded initial outbound recommendation decisions; not delivery or complete lifecycle acceptance
+basis: spec.md D1-D3/D5-D6; owner behavioral-improvement request
+reference_time: '2026-01-15T12:00:00+00:00'
+synthetic: true
+requirements:
+- INPUT-002
+- STATE-003
+- STATE-004
+- STATE-006
+- HISTORY-002
+- SAFETY-001
+- SIGNAL-002
+relations:
+  initial:
+    field: initial_count
+    kind: behavior
+  disposition:
+    requirement: OUTPUT-001
+    field: disposition
+    kind: output_contract
+  reason:
+    requirement: OUTPUT-001
+    field: reason
+    kind: output_contract
+  semantic_safety:
+    requirement: SAFETY-001
+    field: semantic_safety
+    kind: behavior
+steps:
+- id: A
+  notice: root
+  expected:
+    initial: 1
+    disposition: INITIAL_RECOMMENDATION
+  requirement: STATE-003
+- id: B
+  notice: root
+  expected:
+    initial: 0
+    disposition: SUPPRESSED
+  requirement: STATE-003
+- id: C
+  notice: unchanged_revision
+  expected:
+    initial: 0
+    disposition: SUPPRESSED
+  requirement: STATE-004
+- id: D
+  notice: unchanged_revision
+  restart: true
+  expected:
+    initial: 0
+    disposition: SUPPRESSED
+  requirement: STATE-006
+- id: E
+  notice: distinct
+  expected:
+    initial: 1
+    disposition: INITIAL_RECOMMENDATION
+  requirement: STATE-003
+- id: F
+  notice: distinct
+  restart: true
+  expected:
+    initial: 0
+    disposition: SUPPRESSED
+  requirement: STATE-006
+- id: unusable-impact
+  notice: root
+  provider: unusable_impact
+  expected:
+    initial: 0
+    disposition: ERROR
+    semantic_safety: true
+  requirement: INPUT-002
+- id: unavailable-extraction
+  notice: extraction_failure
+  provider: unavailable_extraction
+  expected:
+    initial: 0
+    disposition: ERROR
+    semantic_safety: true
+  requirement: INPUT-002
+- id: missing-history
+  notice: missing_history
+  expected:
+    initial: 0
+    disposition: REVIEW_REQUIRED
+    reason: MISSING_HISTORY
+  requirement: HISTORY-002
+- id: missing-authorization
+  notice: unauthorized
+  authorization: false
+  expected:
+    initial: 0
+    disposition: REVIEW_REQUIRED
+    reason: AUTHORIZATION_REQUIRED
+  requirement: STATE-003
+- id: routine
+  notice: routine
+  provider: information_only
+  expected:
+    initial: 0
+    disposition: NO_SIGNAL
+  requirement: SIGNAL-002
+- id: unsupported-format
+  notice: unsupported_format
+  expected:
+    initial: 0
+    disposition: REVIEW_REQUIRED
+    reason: UNSUPPORTED_FORMAT
+  requirement: INPUT-002

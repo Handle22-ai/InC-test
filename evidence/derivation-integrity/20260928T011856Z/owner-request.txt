@@ -1,0 +1,150 @@
+Do not launch the builder yet.
+
+Use the current BR-FIRM approval overlay as the starting point, but make
+a narrow derivation-integrity correction before freezing the successor.
+
+Preserve:
+- commit 019de93564ced1b3b4766316afda0ba106eb9348;
+- the pre-approval package and receipts;
+- D1–D6 intent;
+- labels, bounds, schemas and recommendation authorization;
+- BR-FIRM's approved candidate-only meaning.
+
+1. REVERT THE UNAUTHORIZED BR-SEMANTICS CHANGE
+
+The owner said unusable semantic evidence “remains REVIEW_REQUIRED” while
+approving BR-FIRM. That wording did not explicitly authorize changing an
+existing BR-SEMANTICS action from ERROR to REVIEW_REQUIRED.
+
+Restore BR-SEMANTICS to its pre-approval behavior unless an existing,
+separate owner decision explicitly changed it.
+
+Record that this correction prevents owner wording such as “remains X”
+from silently changing X.
+
+Do not alter the downstream publisher's existing execution-error behavior.
+
+2. MAKE FEATURE PREDICATES CANONICAL DATA, NOT PYTHON SEMANTICS
+
+The current behavior.yaml feature_meanings are prose while
+harness/behavior_contract.py hard-codes predicates such as firm_disruption.
+
+Refactor only the bounded normalized classifier contract so the relevant
+predicate semantics are represented structurally in behavior.yaml and
+interpreted by generic code.
+
+For example, represent conditions using a small supported expression
+vocabulary such as:
+- field
+- operator: eq / in / contains_any / all / any
+- value / values
+
+Support only what the current approved rules need. Do not build a general
+expression language.
+
+The Python interpreter may implement generic operators, but it must not
+contain BR-FIRM-specific SECONDARY_FIRM / PRIMARY_ONLY business meaning.
+
+A semantic edit to the canonical data must change derived fixture outcomes
+without editing assertion code or Python business logic.
+
+Add mutation tests proving:
+- removing SECONDARY_FIRM from firm_disruption changes the corresponding
+  witness fixture;
+- removing PRIMARY_ONLY changes its witness fixture;
+- changing a generic operator behaves predictably.
+
+3. MAKE CONTRACT/FIXTURE CONTRADICTIONS A HARD FAILURE
+
+The evaluator fixtures are independent witnesses, not definitions of the
+contract.
+
+If an approved active rule causes a frozen source-supported witness to
+contradict its prospective expectation, evaluate-spec must emit a named
+FAIL such as:
+
+CONTRACT_CONTRADICTS_FIXTURE
+
+and exit nonzero.
+
+Examples:
+- BR-ROUTINE changed to SIGNAL_CANDIDATE must fail against the routine
+  negative witness;
+- moving BR-HISTORY below BR-FIRM must fail the missing-history witness;
+- changing a BR-FIRM predicate must affect the relevant positive witness.
+
+Do not automatically rewrite fixture expectations from the modified rule.
+Do not weaken or relabel fixtures merely to regain green status.
+
+Move non-semantic timing fields such as derivation_ms outside the hashed
+fixture identity so repeated evaluate-spec runs produce the same fixture
+hash for identical inputs/expectations.
+
+4. REQUIRE POLICY CHANGES TO HAVE A MATCHING OWNER DECISION
+
+A change to D1–D6 must not become valid merely by replacing a hash.
+
+Require every changed D-rule to reference a registered decision artifact
+whose approved body contains the exact new normative wording.
+
+On any D-rule change:
+- policy_id/version must change;
+- the referenced ADR/owner record must be registered;
+- the exact wording must match;
+- missing, stale, mismatched or merely “accepted” records must refuse.
+
+A standalone re-pin of D1 from “at most one” to “at most two” must fail.
+
+Do not attempt cryptographic owner authentication. Continue to disclose
+that local files are writable by the same worker. The goal is semantic
+approval traceability, not pretending the repository provides identity
+security.
+
+5. CONTEXT CONSISTENCY
+
+make context must refuse unregistered canonical-contract/view drift rather
+than handing the next agent stale generated text.
+
+Do not broaden this into a context-system rewrite.
+
+6. VERIFY THE EXACT MUTATIONS
+
+In disposable copies, verify at least:
+
+A. BR-ROUTINE → SIGNAL_CANDIDATE
+   Expected: nonzero CONTRACT_CONTRADICTS_FIXTURE.
+
+B. Remove SECONDARY_FIRM from firm_disruption.
+   Expected: corresponding positive witness changes/fails without any
+   Python business-logic edit.
+
+C. Move BR-HISTORY after BR-FIRM.
+   Expected: missing-history witness fails/refuses.
+
+D. Change D1 “at most one” → “at most two” and re-pin only.
+   Expected: refusal for missing matching approved decision / policy bump.
+
+E. Run evaluate-spec twice without changes.
+   Expected: identical semantic fixture hash.
+
+7. FINISH
+
+Run:
+- make evaluate-spec
+- make check
+- make context TASK=recommendation-classification-maintenance
+- the affected signal/spec mutation tests
+
+Then create a successor commit and fresh spec-only buildability package.
+
+Return:
+- exact successor SHA;
+- exact canonical contract hash;
+- exact package hash;
+- mutation matrix before/after;
+- confirmation BR-SEMANTICS was restored;
+- exact separate-builder handoff.
+
+Do not launch the builder, add unrelated features, tune labels/models,
+change D1–D6 business intent, or import the evaluator's report into the
+repository.

@@ -1,0 +1,11 @@
+{
+  "requirements": [
+    "STATE-002",
+    "STATE-006"
+  ],
+  "source": "evidence/reviews/v2/storage_findings.json",
+  "candidate_source": "evidence/reviews/v2/candidate/20260926T191722.363460Z/storage_audit.json",
+  "finding": "Reprocessing, repeated revision and restart accumulate per-notice location/restriction observations.",
+  "delivery_deduplication": "UNVERIFIED",
+  "status": "retained regression candidates; no inherited repair"
+}

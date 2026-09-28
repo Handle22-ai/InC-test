@@ -1,0 +1,465 @@
+Audit of the submission at HEAD 51b74ca ("retain clean gate evidence for Thomas Hand spec review")
+
+I ran everything in three throwaway clones of HEAD inside the scratchpad: clean/ for the README steps, mut/ for the mutations and fresh/ for the fresh session. The original working tree ends exactly as I found it: HEAD 51b74ca, the same 11 untracked paths, no diff. I did not open rebuilt/. I did read harness/ source where I needed to find flags and statuses. The fresh-session subagent was allowed to open anything; it opened no source files.
+
+---
+
+Part 1 — Exercising it
+
+1a. README, followed literally from a clean clone
+
+I removed the candidate's .venv from PATH and had no ANTHROPIC_API_KEY set. The README says nothing about setting up inherited/ separately: make setup installs the harness lock, and that lock covers the inherited system's dependencies.
+
+"Docs" below means the reports the documents call current: evidence/CURRENT.md and evidence/owner-review/20260928/report.md, plus README line 43.
+
+┌─────┬─────────────────────────────────────────────────────┬──────┬─────────────────────────────────────────────────────────────────────────────┬─────────────────────────────────────────────────────────┐
+│  #  │                       Command                       │ Exit │                               What it printed                               │                    Matches the docs?                    │
+├─────┼─────────────────────────────────────────────────────┼──────┼─────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────┤
+│ 1   │ make setup                                          │ 0    │ Found ~/.local/bin/python3.14, installed the locks, pip check clean         │ yes                                                     │
+├─────┼─────────────────────────────────────────────────────┼──────┼─────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────┤
+│ 2   │ make check                                          │ 0    │ 179 tests OK; ruff and mypy clean                                           │ yes (docs say 179)                                      │
+├─────┼─────────────────────────────────────────────────────┼──────┼─────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────┤
+│ 3   │ make evaluate-spec                                  │ 0    │ PASS, CONTRACT_WITNESSES_AGREE, fixture cc64faba…1197                       │ Self-consistent. No document records this hash, so      │
+│     │                                                     │      │                                                                             │ nothing to compare it to.                               │
+├─────┼─────────────────────────────────────────────────────┼──────┼─────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────┤
+│ 4   │ make evaluate-spec                                  │ 0    │ Same fixture hash                                                           │ yes                                                     │
+├─────┼─────────────────────────────────────────────────────┼──────┼─────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────┤
+│ 5   │ make context                                        │ 0    │ 20 binding requirements, 6 artifacts. package.md is 251 KB / 6,290 lines    │ —                                                       │
+│     │ TASK=recommendation-classification-maintenance      │      │                                                                             │                                                         │
+├─────┼─────────────────────────────────────────────────────┼──────┼─────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────┤
+│ 6   │ make demo                                           │ 0    │ inherited FAIL/FAIL/UNKNOWN; rebuilt UNKNOWN/FAIL/UNKNOWN                   │ yes (coverage.md:38)                                    │
+├─────┼─────────────────────────────────────────────────────┼──────┼─────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────┤
+│ 7   │ make evaluate-signals                               │ 0    │ inherited FAIL, candidate PASS, 3 of 3 faults rejected                      │ yes                                                     │
+├─────┼─────────────────────────────────────────────────────┼──────┼─────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────┤
+│     │                                                     │      │ spec c7a3898d…, 46 cases, 12 synthetic steps (A–F plus 6), D-lines 41 PASS  │ Matches CURRENT.md and the owner-review report.         │
+│ 8   │ make gate                                           │ 2    │ / 0 FAIL / 32 UNKNOWN. Gates: 1 PASS / 2 UNKNOWN / 3 UNKNOWN                │ Contradicts README:43, which says the normal outcome is │
+│     │                                                     │      │ (NONCOMPARABLE)                                                             │  Gate 3 PASS.                                           │
+├─────┼─────────────────────────────────────────────────────┼──────┼─────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────┤
+│ 9   │ python -m unittest tests.test_positive_path         │ 0    │ 8 tests OK                                                                  │ —                                                       │
+└─────┴─────────────────────────────────────────────────────┴──────┴─────────────────────────────────────────────────────────────────────────────┴─────────────────────────────────────────────────────────┘
+
+1b. Gate with --skip-live, without a key, and with a wrong model ID
+
+┌────────────────────────────────────────┬─────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                  Run                   │    Exit     │                                                               What the report says                                                                │
+├────────────────────────────────────────┼─────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ python -m harness gate --skip-live     │ 2           │ argparse: unrecognized arguments: --skip-live. The flag doesn't exist; the gate is offline-only.                                                  │
+├────────────────────────────────────────┼─────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ make gate with no key                  │ 2           │ Same as the normal result. The key is never consulted.                                                                                            │
+├────────────────────────────────────────┼─────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ LLM_MODEL=claude-does-not-exist-0 make │ 2           │ CURRENT.md is identical to the no-key run apart from the run ID. The synthetic signals/candidate/*/parser.json records "model":                   │
+│  gate                                  │             │ "claude-does-not-exist-0", while comparison-identity.json still shows the captured claude-sonnet-4-6. Nothing flags the difference.               │
+├────────────────────────────────────────┼─────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ make preflight LIVE=1 MAX_CALLS=1, no  │ make 2 /    │ CREDENTIALS_MISSING, 0 calls. It wrote two refusal receipts for one invocation (.823369Z and .823771Z).                                           │
+│ key                                    │ python 1    │                                                                                                                                                   │
+├────────────────────────────────────────┼─────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Same, with the key and a bogus         │ make 2 /    │ MODEL_UNAVAILABLE, 1 call used. The action text says to check the model ID. Correct.                                                              │
+│ LLM_MODEL                              │ python 1    │                                                                                                                                                   │
+└────────────────────────────────────────┴─────────────┴───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+Every run exited 2 for a different reason: a usage error, the normal UNKNOWN result, a missing credential, and a bad model.
+
+1c. Five spec mutations
+
+For each mutation, "pre" is make gate straight after the edit. "post" is after make compile, adding a decision row approved | Audit Person, and harness reread. "Normal state" means the unmutated result: 1 PASS / 2 UNKNOWN / 3 UNKNOWN.
+
+Mutation: Rule action: BR-CONTRADICTION → FIRM_CANDIDATE
+Pre: Gate 1 ERROR
+Post: Gate 1 ERROR
+What it names: spec.md:44 row D2-010 … (conflict_refusal). The finding code is truncated to contradicts D and appears as the Gate 3 classification. Only one refusal is shown, so the stale pin is hidden. It
+names D2-010 rather than D5-001, which is the sentence that actually forbids this.
+Stays green: compile PASS
+────────────────────────────────────────
+Mutation: Quantifier: D1-005 "at most one" → "at least one"
+Pre: Gate 1 ERROR, UNRECORDED_SPEC_CHANGE
+Post: Normal state, 13 findings
+What it names: Nothing. In rule-invariants.json, D1-005 reads "Issue at least one initial alert…" with status PASS from check one_initial. The consequence diff says "No changed outcome observed".
+Stays green: gate, evaluate-spec. make check has 1 failure (test_step_f_weakening_contradicts_named_d1_sentence).
+────────────────────────────────────────
+Mutation: Input-contract format: %m/%d/%Y %I:%M:%S%p → %d/%m/…
+Pre: Gate 1 ERROR
+Post: Gate 1 ERROR
+What it names: row INPUT-PARSER-001: parser contradicts input contract. It doesn't say which field, format or notice.
+Stays green: evaluate-spec PASS after reread
+────────────────────────────────────────
+Mutation: Assumption: A-004 "block automatic alerts on history gaps" → "allow"
+Pre: normal state
+Post: normal state
+What it names: Nothing, anywhere
+Stays green: gate, evaluate-spec, check (179 OK), context, demo
+────────────────────────────────────────
+Mutation: Precedence: BR-FIRM moved above BR-HISTORY
+Pre: Gate 1 ERROR
+Post: Gate 1 ERROR
+What it names: spec.md:24 D1-004 (history_refusal)
+Stays green: — (make check: 45 failures or errors)
+────────────────────────────────────────
+Mutation: Extra: BR-FIRM swapped with BR-HISTORICAL (0 of 46 captured matches)
+Pre: Gate 1 ERROR
+Post: Gate 1 ERROR
+What it names: spec.md:57 D3-008 (historical_precedence). It catches this even though no captured case exercises the rule.
+Stays green: —
+
+1d. Editing generated config, then a self-written decision
+
+- Direct edit of requirements/behavior.yaml (BR-CONTRADICTION classification → SIGNAL_CANDIDATE): Gate 1 ERROR, GENERATED_ARTIFACT_DRIFT. evaluate-spec exits 2. The gate catches it.
+- The D1-005 change plus a five-line context/decisions/013-d1-005-at-least-one.md saying Status: accepted, with a spec row ADR-013 | accepted | Audit Person | c7a3…:
+  - reread exits 2 with "named recorded decision required before reread". The message is misleading: the row is named and recorded. The real cause is that the allowed statuses are only {approved, owner-requested}.
+  - The gate then refuses with UNRECORDED_SPEC_CHANGE.
+- Changing that row to approved:
+  - reread exits 0, and the gate returns to the normal state (Gate 1 PASS).
+  - The next make context package serves "Issue at least one initial alert" as the registered D1 wording, and includes the ADR-013 row.
+  - The ADR file itself is neither loaded nor flagged.
+  - Only make check's one unit test objects, and the gate doesn't run it.
+- Extra, flipping a label in requirements/dataset.json (46604 → true): Gate 1 ERROR, "oracle identity changed; explicit review required". The oracle is protected.
+
+1e. Fresh session
+
+A new general-purpose subagent was given README's verbatim first message plus a change the spec doesn't anticipate: "classify header-only force majeure (Critical=Y, subject 'Force Majeure', no extracted rows) as SIGNAL_CANDIDATE".
+
+- What it loaded: the context package, read in sections because of its size. It re-hashed all 9 hashed artifacts and the manifest (all matched), confirmed that D1–D6 appear verbatim in spec.md, and read ADR 007, the Makefile, the README and the gate CURRENT.md.
+- Source files opened: 0.
+- Outcome: it proposed and did not edit. It wrote a proposal, a pending-learning note, and before-probes under evidence/input-probes/. It confirmed the pending note appears in the next package.
+- Its gates after: the same normal state, and 179 tests OK.
+- What it needed a human for: whether "make this change" counts as owner approval; the matching semantics; and whether "faster review" means a classification change or a queue priority.
+- What it flagged:
+  - README:85 tells you to edit requirements/behavior.yaml, which conflicts with spec.md and harness.md.
+  - Gate 3 is not PASS, contrary to the README.
+  - A silent-miss path. If the model marks the notice information-only, the classifier returns NON_SIGNAL / NO_SIGNAL through BR-ROUTINE: header-only-informational.out.json, reason codes ["BR-ROUTINE","NO_OPERATIONAL_RESTRICTION",…].
+
+1f. Claims checked against their JSON
+
+Three coverage.md claims, checked against evidence/specification/20260927T234809.632974Z/checks:
+- SIGNAL-001, frozen capture: "13 PASS, 1 FAIL". The findings JSON has 13 PASS and 1 FAIL. ✓
+- SIGNAL-001, Baseline B: "11 PASS, 1 FAIL, 2 ERROR". ✓
+- SAFETY-001, Baseline B: "21 PASS, 2 FAIL". ✓
+
+I also checked 7 more rows and the signal-run columns (OUTPUT-001 15 FAIL / 15 PASS; STATE-003 2 FAIL + 2 PASS / 4 PASS). All match.
+
+But policy/summary.json has policy_id: assessment-v2-owner-20260927. That run predates the current spec, which is v4. coverage.md was last changed in 70cf9e5.
+
+Consequences check, BR-ROUTINE 6/46. I recomputed this from the raw captures (impact-budget-512/…/results.json and legacy/…/results.json), not from harness output. Exactly 46604, 46775 and 46818 in each capture have information_only=1 and zero restriction rows. ✓ The 46 is 2 × (14 labeled + 9 scenario cases), so 6/46 means 3 distinct notices.
+
+---
+
+Part 3 — Findings
+
+#: 1
+Cat: B
+Where: spec.md:25 (D1-005); harness.md:20
+What the documents say: "Represented constraints report PASS/FAIL"; each D sentence has a hand-authored check
+What is actually true: Checks are keyed by sentence ID, not by meaning. D1-005 inverted to "at least one" reports PASS, and the gate is unchanged.
+How to reproduce: Replace "at most one" with "at least one", add an approved row, harness reread, make gate
+Proposed fix: Store the sentence hash in each check binding. When the wording changes, report UNKNOWN with "sentence changed since check authored" until a human re-binds it.
+────────────────────────────────────────
+#: 2
+Cat: B
+Where: README:25
+What the documents say: "A new same-change owner-approved ADR plus local hash repinning cannot activate them"
+What is actually true: Adding a same-change approved row with any invented name and running reread activates an inverted D1. The gate returns to its normal state (Gate 1 PASS) and the context package serves
+the new wording.
+How to reproduce: Same as #1
+Proposed fix: Delete the claim (harness.md:176 already calls that scheme historical), or make the gate require the pin's commit to be an ancestor of a protected ref.
+────────────────────────────────────────
+#: 3
+Cat: A
+Where: README:43, README:23
+What the documents say: The normal outcome is "Gate 3 PASS after reference qualification"
+What is actually true: A clean clone gives Gate 3 UNKNOWN / NONCOMPARABLE, and so does the documents' own current report
+How to reproduce: make gate in a fresh clone
+Proposed fix: Correct the README, or register a reference under the v4 policy so PASS can actually be reached
+────────────────────────────────────────
+#: 4
+Cat: B
+Where: harness.md:94 ("model/prompt changes require attributed comparisons")
+What the documents say: Model changes are handled by comparison
+What is actually true: The gate ignores LLM_MODEL and gives an identical report. Synthetic runs record the bogus ID as if it were the model used.
+How to reproduce: LLM_MODEL=claude-does-not-exist-0 make gate, then diff CURRENT.md
+Proposed fix: Compare the effective model config with the capture's configured_model, and when they differ report Gate 3 UNKNOWN with MODEL_CONFIG_CHANGED
+────────────────────────────────────────
+#: 5
+Cat: B
+Where: Makefile:92; README exit table
+What the documents say: Required FAIL/ERROR/UNKNOWN returns nonzero
+What is actually true: Exit 2 covers a usage error, the normal UNKNOWN result, a spec error, oracle tampering, a missing key and a bad model. Automation can't tell them apart.
+How to reproduce: python -m harness gate --skip-live; echo $? versus make gate; echo $?
+Proposed fix: Give each outcome its own exit code (usage, UNKNOWN, FAIL, ERROR) and have make propagate the Python code
+────────────────────────────────────────
+#: 6
+Cat: B
+Where: harness.md:102; spec.md:13 ("Assumption scope")
+What the documents say: Owner-approved assumptions are persistent context
+What is actually true: context/assumptions.md is unpinned, not embedded in the package (only one link, at package.md:1938), and has no check. Flipping A-004 to "allow alerts on history gaps" changes nothing,
+anywhere. The header also still says "policy version 2".
+How to reproduce: Edit A-004, then run gate / check / context / demo
+Proposed fix: Move the assumptions into spec.md, or hash them into the read pin and embed them in the package
+────────────────────────────────────────
+#: 7
+Cat: A
+Where: README:85, README:95
+What the documents say: "edit requirements/behavior.yaml as a proposal"; the "loader… verifies exact consistency against Markdown"
+What is actually true: spec.md:5 and harness.md:11,14 say generated files are never edited and there is no Markdown/YAML sync. The gate refuses such an edit with GENERATED_ARTIFACT_DRIFT. The fresh agent
+tripped on this.
+How to reproduce: Edit behavior.yaml, then make gate
+Proposed fix: Delete the superseded README sections rather than relying on the "superseded" banner at README:9
+────────────────────────────────────────
+#: 8
+Cat: A
+Where: evidence/fresh_session.md:15 versus harness.md:108
+What the documents say: fresh_session.md: "ACTUAL ISOLATED CHANGE AND VERIFICATION PENDING". harness.md: the recovered worker "supports completion".
+What is actually true: There are four exercises. The recovered one was on the snapshot-store alias reader. The only one on the current classifier
+(evidence/positive-path/20260928-owner-separation/fresh-session) isn't linked from fresh_session.md or coverage.md.
+How to reproduce: Read the three files
+Proposed fix: Make fresh_session.md one index that names the exercise which satisfies the brief
+────────────────────────────────────────
+#: 9
+Cat: A
+Where: evidence/coverage.md:1
+What the documents say: "Current requirement coverage"
+What is actually true: Every column comes from a policy-v2 run. Its SIGNAL-001 "13 PASS, 1 FAIL" describes a different classifier from CURRENT's "0 FP, 0 FN, 13 unscored".
+How to reproduce: jq .policy_id evidence/specification/20260927T234809.632974Z/checks/policy/summary.json
+Proposed fix: Generate coverage.md from the gate run and stamp it with the policy ID and run ID
+────────────────────────────────────────
+#: 10
+Cat: A
+Where: README:65; context/decisions/007, 011
+What the documents say: "use the explicit BR-FIRM decision in ADR 007"
+What is actually true: ADR 007 requires "current_or_future… UTC time basis". The spec's BR-FIRM uses ANY clock (D3-012). ADR 011 restates D3/D5 as "revision 3" wording that differs from spec D3-012..015.
+There is no ADR for ARCH-SOURCE-001 or TZ-NGPL-002, so decisions live in two registries.
+How to reproduce: Diff ADR 007 against the spec.md:1331 row
+Proposed fix: Mark 007 and 011 superseded, and point the README at the spec-decisions block
+────────────────────────────────────────
+#: 11
+Cat: A
+Where: harness.md:72, :81; Makefile:20–21
+What the documents say: First day: make setup && make demo, TASK=notice-snapshot-maintenance
+What is actually true: The README uses make gate and recommendation-classification-maintenance. The first-day section describes the storage component, not the current one.
+How to reproduce: Read them side by side
+Proposed fix: Rewrite the first day for the current component
+────────────────────────────────────────
+#: 12
+Cat: A
+Where: evidence/code_reads.md (last changed at 70cf9e5)
+What the documents say: The index of code reads
+What is actually true: It doesn't link the agent reads recorded for commits b9cd042 (18 source files, no record found), 9450181 (positive-path source-reads.md, including inherited/notice_parser.py), 14acd22
+(spec-source source-reads.md; this is where the Rsp Date/Time parser bug was found), 4cb4b27 (timezone report:39) and d9ed00f (owner-review "inspected receipt and harness source"). None of the later entries
+ uses the CODE-READ-ID template.
+How to reproduce: git log -- evidence/code_reads.md compared with git show --stat for those commits
+Proposed fix: Add an entry for every read, in the template, including what the harness lacked
+────────────────────────────────────────
+#: 13
+Cat: B
+Where: spec.md:1333 (BR-ROUTINE); INPUT-SOURCE-002 and -025
+What the documents say: SIGNAL-003 forbids silently missing a critical disruption; coverage shows it "1 PASS"
+What is actually true: A Critical=Y force-majeure notice that the model marks information-only becomes NON_SIGNAL / NO_SIGNAL. header.critical is parsed but no rule column uses it. The routine exit trusts a
+flag supplied by the model.
+How to reproduce: Run classifier.py on the fresh session's header-only-informational.json
+Proposed fix: Add a Critical column, or have BR-ROUTINE require Critical≠Y. Add this probe as a witness.
+────────────────────────────────────────
+#: 14
+Cat: B
+Where: Gate report after a D contradiction (run …072139Z)
+What the documents say: Failures "name the stable sentence and spec line"
+What is actually true: CURRENT.md shows the code truncated to contradicts D, puts it under the Gate 3 classification, lists the identity as UNVERIFIED, and stops at the first refusal, which hides the stale
+pin.
+How to reproduce: Mutation M1, then read CURRENT.md
+Proposed fix: Use a full code (D_SENTENCE_CONTRADICTION), put the reason in the header, and collect every preflight refusal
+────────────────────────────────────────
+#: 15
+Cat: B
+Where: harness/spec_ownership.py reread message
+What the documents say: —
+What is actually true: With status accepted, reread says "named recorded decision required", but the row is named and recorded
+How to reproduce: Test 1d
+Proposed fix: Report the allowed status values in the message
+────────────────────────────────────────
+#: 16
+Cat: B
+Where: evidence/live-refusals
+What the documents say: "appends a minimal failure receipt" (singular)
+What is actually true: Each refusal writes two receipts 0.4 ms apart, and 133 are committed. Refusal counts are doubled.
+How to reproduce: make preflight LIVE=1 MAX_CALLS=1 with no key
+Proposed fix: Write one receipt per invocation, with the cause chained inside it
+────────────────────────────────────────
+#: 17
+Cat: A
+Where: spec.md:1290
+What the documents say: The prose lists five no-outbound controls
+What is actually true: The replay table and the gate have six (unsupported-format is missing from the prose)
+How to reproduce: Compare with spec.md:1363–1376
+Proposed fix: Generate the prose from the table
+────────────────────────────────────────
+#: 18
+Cat: C
+Where: spec.md:1323–1333
+What the documents say: "The following columns are the complete language"
+What is actually true: Arriving status, Prior and Source clock are ANY in all 9 rules. BR-HISTORICAL matches 0 of 46.
+How to reproduce: —
+Proposed fix: What would settle it: a witness where each column decides an outcome, or remove the column.
+────────────────────────────────────────
+#: 19
+Cat: C
+Where: spec.md: 2,389 lines, of which lines 1454–2387 are JSON schemas and settings; every requirement carries implementation, check and evidence status (e.g. :136–146)
+What the documents say: The spec is what the engineer owns
+What is actually true: Implementation state lives in the normative file, so a status change forces a spec edit and re-pin
+How to reproduce: —
+Proposed fix: What would settle it: the inherited system's engineer answers 5 behavior questions from spec.md alone, timed
+────────────────────────────────────────
+#: 20
+Cat: C
+Where: evidence/
+What the documents say: "The engineer reads spec, coverage, summary"
+What is actually true: 15,004 tracked evidence files (810 MB). summary.md has four stacked "Current…" headings, three of which call themselves historical. Reaching the current report takes 3 hops.
+How to reproduce: —
+Proposed fix: What would settle it: time a reviewer answering "is the rebuilt classifier safe to page on today?"
+────────────────────────────────────────
+#: 21
+Cat: C
+Where: Gates 2 and 3
+What the documents say: "Three gates with teeth"
+What is actually true: Gate 2 is structurally UNKNOWN (13 unscored). Gate 3 goes NONCOMPARABLE after any semantic change. Across 69 retained results Gate 3 FAILed once, in a constructed control.
+How to reproduce: —
+Proposed fix: What would settle it: one run where a code-only change moves Gate 2 or Gate 3
+────────────────────────────────────────
+#: 22
+Cat: C
+Where: Rebuilt scope (ADRs 003, 004, 005, 007; harness.md:172)
+What the documents say: "Rebuild one component"
+What is actually true: Snapshot store, reference field, alias reader, normalizer, classifier, and a publisher with a ledger. Four maintenance exercises across two components.
+How to reproduce: —
+Proposed fix: What would settle it: one named component with an upstream and a downstream contract file
+────────────────────────────────────────
+#: 23
+Cat: C
+Where: CURRENT.md; D3-013
+What the documents say: "Traders need fast awareness"
+What is actually true: All 19 candidates are REVIEW_REQUIRED and recommendation_allowed is always false. The system is a review queue and never signals.
+How to reproduce: —
+Proposed fix: What would settle it: a desk latency requirement, and a count of how many true positives a reviewer sees, and how fast
+────────────────────────────────────────
+#: 24
+Cat: C
+Where: README:3; context/spec-owner-review.json
+What the documents say: "owner-approved" throughout
+What is actually true: The only approver is the candidate, so owner approval is self-approval
+How to reproduce: —
+Proposed fix: What would settle it: a second human's review on spec.md via host branch protection
+────────────────────────────────────────
+#: 25
+Cat: C
+Where: The package is 251 KB for one task
+What the documents say: Context "selection"
+What is actually true: The fresh agent had to read it in sections and still hit #7
+How to reproduce: —
+Proposed fix: What would settle it: measure which package sections the agent actually used
+────────────────────────────────────────
+#: 26
+Cat: C
+Where: README ("run against the inherited system")
+What the documents say: The deliverable requires this
+What is actually true: make gate evaluates the inherited system only through captures from 2026-09-26 and synthetic seams. No live run exists under spec v4.
+How to reproduce: —
+Proposed fix: What would settle it: one budgeted make evaluate-legacy LIVE=1 under v4
+
+---
+
+Part 4 — "What We Pay Attention To"
+
+Could the spec replace the code — 2/5. The closed rule table, the precedence line and the 47-field input contract are the right idea. Precedence and action edits are caught with a spec line. But the spec is 93 KB, much of it JSON schemas and implementation-status fields. Its assumptions sit outside the file and are unguarded (#6). Most importantly, its normative sentences are not what the checks read. An owner can invert D1 and the harness says PASS. Most limiting: #1.
+
+Checks derived from the spec, not hand-written — 3/5. The rules generate behavior.yaml, replay expectations and consequences, and generated drift is refused. The 1c mutations on rules, formats and precedence all went red, including one no captured case exercises. The D-layer is 73 hand-authored checks with 32 UNKNOWN. harness.md:20 is honest that they are hand-authored, but #1 shows they aren't anchored to the text. Most limiting: #1.
+
+How much the harness finds, and how openly it describes the gap — 3/5. From evidence it found:
+- duplicate inherited recommendations (steps B, C, D, F);
+- unusable-verdict fallbacks;
+- the 46725 false positive;
+- STATE-002 idempotency failures;
+- the Rsp Date parser bug, found by the gate before anyone read the HTML.
+
+Disclaimers are plentiful ("authenticat…" appears 12 times across README, harness.md and spec.md). But the gap description is contradicted by stale documents: the README's Gate 3 PASS, fresh_session.md saying PENDING, and coverage from policy v2. Most limiting: #3.
+
+Fresh-session recovery and learning retention — 4/5. This is the strongest part:
+- zero source reads;
+- verified hashes;
+- it correctly proposed rather than edited;
+- the pending learning showed up in the next package.
+
+It loses a point for the README instruction that contradicts the spec, and for a 251 KB package that makes "selection" mostly inclusion. Most limiting: #7.
+
+Sense of trading risk — 2/5. Effort went to approval windows, self-promotion refusals and provenance. The desk-relevant results are:
+- the system never signals (#23);
+- the one field the brief puts first, critical or unplanned, isn't in the rule language;
+- a silent-miss path through a model-supplied flag exists (#13).
+
+Most limiting: #13.
+
+Working through disagreement — 3/5, low confidence. Two artifacts support the score:
+- TZ-NGPL-001 (Central time) was rejected with source evidence: none of the 14 HTML notices states a zone.
+- ADR 008 reverted an agent's over-reading of the owner's wording.
+
+That is holding a position on evidence. But every "owner" is the candidate, so no real disagreement is on record. Most limiting: #24.
+
+Part 4b — The brief's stated preferences
+
+"Three gates with teeth." There are 3 primary gates and roughly 15 check classes:
+- identity, shape, links, persistence, lineage, execution proof, provenance;
+- label classification, field annotations, unchanged-revision;
+- change comparison;
+- D-sentences, the parser contract, generated drift, oracle identity, the read pin;
+- 3 fault controls and the 12-step replay.
+
+Gate by gate:
+- Gate 1 fails on correct-looking builds: 1c and 1d, plus 23 ERROR and 97 FAIL in the retained evidence. Each run costs seconds, and it is the only gate whose status moved under my mutations. Removing it would remove every tooth the harness has.
+- Gate 2 cannot PASS on the current captures (13 unscored), so today it can go red but never green. Its 201 retained FAILs come from the earlier storage and demo scope. Removing it would cost the label comparison, but not the red/green signal, because it has none.
+- Gate 3 is NONCOMPARABLE after any semantic change and blind to model changes (#4). It FAILed once, in a constructed control. Removing it would lose nothing observable in the current workflow.
+
+Present for completeness rather than because anything would otherwise go undetected:
+- the 32 UNKNOWN D-sentence rows (harness.md:41 concedes "cheap, not tests");
+- the deferred-requirement rows;
+- the OBS-001/002 hash families;
+- the refusal receipts.
+
+"Rebuild one component." It isn't one component (#22). The upstream contract for the classifier (system-contract.md and the normalized schemas) and the downstream contract (signal-contract.md) are well stated. The maintenance exercise on the current component, table+json, was small. What grew past the brief: the storage rebuild with two extensions, the publisher and ledger, the temporal approval machinery, spec-ownership receipts, and release hardening.
+
+"Candid edge map versus claiming more."
+
+Claims the evidence doesn't fully support (10):
+- #1, #2, #3, #4, #7, #8, #9, #10, #11;
+- SIGNAL-003 "PASS" in coverage (#13).
+
+Limitations stated before a reviewer would find them (about 13):
+- hashes are not authentication;
+- the verifier can be replaced;
+- 14 labels;
+- synthetic runs are not live;
+- UNKNOWN lifecycle;
+- Make returns 2;
+- the offline guard is not a sandbox;
+- partial isolation, including preparer exposure;
+- PDF unsupported;
+- timezone unknown;
+- the 46 cases are not independent;
+- no token-budget causality;
+- scraping not done.
+
+The stated-limitations list is longer. Many of the over-claims sit in the entry documents (README, coverage, fresh_session), which are what a reviewer reads first.
+
+"Where did you look at code anyway." The log is incomplete (#12). Five commits' worth of agent reads aren't indexed, and the later records don't say what the harness lacked. The older entries (V2 diagnosis, rebuild FK protocol, and AGENT-STRUCTURAL-20260928 in the top-level log) do say it well. The human side is one firsthand sentence, "no human source reads". That leaves the brief's question about the builder's own edges essentially unanswered.
+
+Part 5 — Phase 4 questions
+
+1. "I changed D1-005 to 'at least one', named myself, reread, and your gate went back to normal with D1-005 PASS. What does PASS on a D-line mean?" A weak answer: "Hashes aren't authentication; that's documented."
+2. "Your gate exits 2 in every state I produced. What does CI do with that?" A weak answer: "Read the receipt."
+3. "A Critical force-majeure notice the model calls informational produces NO_SIGNAL. Which gate would catch that tomorrow?" A weak answer: "Labels are only 14, so it's out of scope."
+4. "Your README, fresh_session.md and coverage.md each contradict your current report. Which document does the engineer trust on day one, and how would they know?" A weak answer: "The supersession banner explains it."
+5. "Remove Gate 3. What goes undetected that isn't already undetected?" A weak answer: a description of its identity fields instead of a failure it caught.
+
+Advance: yes, narrowly. The fixture and oracle protection, the precedence and format mutations that are caught even with no corpus coverage, and a genuinely clean fresh session show real harness instincts. Against that, the D-layer's decoupling from the spec's own words, and entry documents that contradict their evidence, are exactly the trust problems this role exists to prevent.
+
+What would change my mind:
+- Towards no: in Phase 4 they defend #1 and #3 as "documented" rather than as defects.
+- Towards yes: they fix #1 by binding checks to sentence hashes, collapse the documents to one current index, and are willing to delete Gate 3 or give it teeth.
+
+The logs, the mutation clone and the fresh session's probes are in the scratchpad under logs/, mut/ and fresh/. I can publish the findings table as a private page if the candidate would rather work from that.
+
+✻ Crunched for 22m 21s · done 2:35 AM

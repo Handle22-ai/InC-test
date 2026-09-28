@@ -1,0 +1,206 @@
+Treat the latest exact-commit adversarial evaluation as release-blocking.
+
+Starting commit:
+70cf9e54ec7c349b017eddfaed57195880cb1991
+
+Do not launch the separate builder yet.
+Do not add unrelated features.
+
+We are fixing the remaining structural gaps that keep the submission's
+core claims from being true.
+
+PRIORITY 1 — ONE RUNTIME SEMANTIC PATH
+
+The normalized classifier already consumes requirements/behavior.yaml.
+
+The stateful recommendation publisher must no longer implement a separate
+classification/disposition policy.
+
+Refactor the publisher boundary so it consumes the normalized classifier's
+decision for:
+- classification;
+- disposition;
+- matched rule/reason;
+- recommendation eligibility at the classifier boundary.
+
+Publisher-owned state may still decide:
+- whether an initial recommendation was already reserved;
+- replay/revision suppression;
+- authorization availability;
+- persistent recommendation keys.
+
+It must not independently decide routine vs firm vs history vs semantic
+classification.
+
+Run the existing A–F scenario through this integrated path.
+
+Required proof:
+- changing BR-ROUTINE changes publisher behavior or causes witness/gate
+  failure;
+- moving BR-FIRM ahead of HISTORY cannot leave evaluate-signals green;
+- classifier and publisher dispositions agree on every shared scenario.
+
+Do not change D1–D6, labels or recommendation authorization.
+
+PRIORITY 2 — REQUIREMENT CHANGE AUTHORITY
+
+Extend the policy-trace mechanism from D1–D6 to every binding normative
+requirement row.
+
+A changed binding requirement must require:
+- a new requirement revision/identity;
+- a registered approved decision record;
+- exact new normative text recorded in that decision;
+- exact row/spec match.
+
+Updating registered_row_sha256 alone is never approval.
+
+Reproduce:
+SAFETY-001 "Every execution" → "At least one execution"
+plus row re-pin only.
+
+Required result:
+UNAPPROVED_REQUIREMENT_CHANGE, nonzero.
+
+A valid synthetic approved-change fixture may demonstrate the promotion
+mechanism without changing real assessment policy.
+
+PRIORITY 3 — COMPLETE GATE 3 IDENTITY
+
+Gate 3 comparison identity must include all semantics capable of changing
+observed evaluation:
+
+- spec normative identity;
+- requirement-row identities;
+- behavior contract;
+- schemas;
+- independent witnesses;
+- normalized classifier interpreter;
+- normalized evaluator;
+- publisher behavior adapter/evaluator;
+- relevant model/prompt/config identity for captured model-backed evidence.
+
+Under identical identity:
+behavior regression -> FAIL.
+
+Changed semantic/evaluator identity without explicit approved mapping:
+UNKNOWN / NONCOMPARABLE.
+
+Never stamp current identities onto the historical execution.
+
+Add a test that changes evaluator source without behavior output and proves
+G3 becomes NONCOMPARABLE rather than PASS.
+
+PRIORITY 4 — TRADING BEHAVIOR GATE ON THE ACCEPTED PATH
+
+The accepted candidate must face actual retained trading evidence, not only
+synthetic contract witnesses.
+
+Run the integrated classifier→publisher path over the available bounded
+labeled/captured scenarios without new live calls.
+
+Gate 2 must report separately:
+- supplied-label false positives;
+- supplied-label false negatives;
+- unscored critical cases;
+- routine/admin signaled;
+- duplicate/replay recommendations;
+- semantic/execution refusal cases;
+- history-required review/refusal cases.
+
+Keep independent semantic witnesses as a separate contract layer.
+
+Do not invent population accuracy or change labels.
+
+PRIORITY 5 — CURRENT EVIDENCE MUST BE DERIVED
+
+Remove hard-coded current outcome/risk strings and fixed historical result
+lookups from harness/current_evidence.py.
+
+Every current outcome must come from identified current run artifacts.
+
+Historical findings may appear only with explicit labels:
+"HISTORICAL — run <id>, not re-executed by this gate."
+
+Include:
+- exact source commit;
+- clean/dirty status;
+- spec hash;
+- requirements identity/hash;
+- behavior hash;
+- evaluator/publisher identity;
+- policy identity;
+- current Gate 1/2/3 results;
+- current trading metrics;
+- acceptance scope;
+- raw evidence links.
+
+Do not let make gate rewrite a tracked CURRENT.md in the checkout.
+Generate run-scoped current evidence instead.
+
+PRIORITY 6 — FAIL CLOSED ON NEW STATUS VALUES
+
+Replace status-denylist prior logic with explicit allowed-root semantics.
+
+A notice may have no required predecessor only when its normalized status
+is in an explicitly supported root-status set.
+
+Unknown/new statuses must not silently become history_resolved.
+
+Add a witness using a synthetic WITHDRAWN/new status showing that merely
+adding the enum cannot route it to BR-FIRM.
+
+Do not invent production WITHDRAWN semantics; REVIEW_REQUIRED is sufficient
+until policy exists.
+
+PRIORITY 7 — CONTEXT PACKAGE COMPLETENESS
+
+package.md must contain the normative preconditions/inputs and other fields
+the agent is expected to reason from, not only package.json.
+
+Ensure all binding requirement fields visible to the machine selector are
+also visible in the human/agent package.
+
+Keep pending learning automatically surfaced as UNAPPROVED.
+
+PRIORITY 8 — CLEAN SMALL DEFECTS
+
+- reject unknown extra argv in harness.commands and preflight;
+- make live failure shape-validity N/A when the model never produced a
+  semantic result;
+- write unit-test refusal receipts to temp directories, not evidence/;
+- print deterministic fixture SHA on evaluate-spec stdout;
+- generate the state-safety step listing from the canonical 12-step source;
+- route findings to each requirement's declared gate;
+- make requirement/check status component-specific where necessary.
+
+VERIFICATION
+
+On a clean successor commit run:
+make setup
+make check
+make evaluate-spec
+make context TASK=recommendation-classification-maintenance
+make demo
+make evaluate-signals
+make gate
+
+Then adversarially verify:
+1. SAFETY-001 weakening + repin only -> refused.
+2. BR-ROUTINE mutation -> publisher/gate detects it.
+3. HISTORY/FIRM precedence mutation -> publisher/gate detects it.
+4. Evaluator source change -> G3 NONCOMPARABLE.
+5. Publisher regression on F -> gate nonzero and current evidence shows it.
+6. New unsupported status -> REVIEW_REQUIRED, never firm candidate.
+7. Current evidence changes only from current run data.
+
+Return:
+- successor SHA;
+- exact Gate 1/2/3 results;
+- trading metric table;
+- mutation results;
+- comparison identity contents;
+- generated current evidence path;
+- remaining top 3 gaps.
+
+Do not launch the independent builder or do live model tuning in this pass.

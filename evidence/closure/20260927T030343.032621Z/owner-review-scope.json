@@ -1,0 +1,422 @@
+{
+  "status": "PENDING OWNER REVIEW; not an owner approval record",
+  "comparison_base": {
+    "head": "f7de5a5094a33c3b53cff33cede071e7c79127bd",
+    "overlay_manifest": "8719cddb2403f9ed1560378a8089dcb91f8991c7474d956be8952843784be9fb",
+    "record": "evidence/integrity/20260927T021057.685073Z/starting-identity.json"
+  },
+  "owner_instruction": {
+    "outside_checkout": "Original user conversation and attached Pasted text.txt; no copy newly created",
+    "repository_copy": "evidence/policy/20260927T010449.918426Z/owner-approval.txt",
+    "sha256": "6c2f3167d93b8593f7712e808e1e77572f46f8160f5b736aadd5b4449e8ae05b",
+    "exact_attachment_match": true
+  },
+  "files": [
+    {
+      "path": "Makefile",
+      "before_sha256": "73cbd8f30f6edb7934578da71a61da463b657a37895ca9424e0cef379cd6c7f4",
+      "current_sha256": "095c16f28f82a82889e2b8c31c6fde868e92888fb0cf8a78114a89874758e6dd",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "README.md",
+      "before_sha256": "5effb79a6b0eda71f5d38feb547fe8290200920ef840ed8b4cbd4a3ed8b5baf8",
+      "current_sha256": "a7abc7f8d31cad72119d033f9aef8df9c4f3d936c92a6e14d9f7885de166f6c2",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "context/assumptions.md",
+      "before_sha256": "55a9be8a2ca2177e5292dd60e6b6ddefa127d480b230bea2e75b70375c14397e",
+      "current_sha256": "55a9be8a2ca2177e5292dd60e6b6ddefa127d480b230bea2e75b70375c14397e",
+      "change": "unchanged",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "context/authority-reference.json",
+      "before_sha256": null,
+      "current_sha256": "e6b8a63c9fae1cd44baab8441c8e1089ba84d7643302f779db2c29f369fb1f88",
+      "change": "new",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "context/decisions/001-baseline-snapshot.md",
+      "before_sha256": "73a188dc5e44ea989697e53f57f37ea9229becb80b30cb1dcb93580e511f5ecf",
+      "current_sha256": "73a188dc5e44ea989697e53f57f37ea9229becb80b30cb1dcb93580e511f5ecf",
+      "change": "unchanged",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "context/decisions/002-controlled-token-experiment.md",
+      "before_sha256": "1123c667764cc454e167c62c11a7404d7ee0e327f60625befefc2930c74f8572",
+      "current_sha256": "1123c667764cc454e167c62c11a7404d7ee0e327f60625befefc2930c74f8572",
+      "change": "unchanged",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "context/decisions/003-notice-snapshot-scope.md",
+      "before_sha256": "bde7e33cad119159bdfa97f1f850a2538e6f5da6aa4df7a330df80f899ca8947",
+      "current_sha256": "bde7e33cad119159bdfa97f1f850a2538e6f5da6aa4df7a330df80f899ca8947",
+      "change": "unchanged",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "context/decisions/004-capture-reference-extension.md",
+      "before_sha256": "92d30b1a776f2bd21f4b580ac256ac4a5d5f6f0d3f50b74bb570a78eb4048b9f",
+      "current_sha256": "92d30b1a776f2bd21f4b580ac256ac4a5d5f6f0d3f50b74bb570a78eb4048b9f",
+      "change": "unchanged",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "context/decisions/005-synthetic-capture-reference-alias.md",
+      "before_sha256": "6bb139944015eca838b3b5766f5923500bd1731f21665fb4cd2ac2176e4f4ca2",
+      "current_sha256": "6bb139944015eca838b3b5766f5923500bd1731f21665fb4cd2ac2176e4f4ca2",
+      "change": "unchanged",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "context/decisions/006-assessment-lifecycle-policy.md",
+      "before_sha256": "28cf6ae126e12952dca8bd2b2dd434455a500c51894a5f60fce8190421426367",
+      "current_sha256": "28cf6ae126e12952dca8bd2b2dd434455a500c51894a5f60fce8190421426367",
+      "change": "unchanged",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "context/failures/harness-integrity.md",
+      "before_sha256": null,
+      "current_sha256": "949fd66ffc6fddc2a34427f950614ad5a7ade2cead7f3bf99b78c968d8917210",
+      "change": "new",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "context/manifest.yaml",
+      "before_sha256": "294e89eea171e2278ce5e5434bfa656786b88f3db841df042a3a596451d1e6b4",
+      "current_sha256": "92b4664d5373dc89204bf9cc6f807936648b4fa763f6b3d7c21f14999872d203",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "context/proposals/v5-lifecycle-completion.md",
+      "before_sha256": "f85bacde7d78a08abba357c0b1153100a0e15135d876c94a333dda8c2627bee7",
+      "current_sha256": "f85bacde7d78a08abba357c0b1153100a0e15135d876c94a333dda8c2627bee7",
+      "change": "unchanged",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "evidence/code_reads.md",
+      "before_sha256": "5292e669aa4c38c9053452b338f796c8ee6a35df6aedeeb7b0582381c1a68244",
+      "current_sha256": "f47c0ecc39edcc2d8f6669ca5da69d3a5da8e3e3e9556863f86cd6ed0218c54f",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "evidence/coverage.md",
+      "before_sha256": "4411279379afd8cfed16eb26ddeb0f2e15ceb355a3e438f1467a32f123a81cde",
+      "current_sha256": "843fc0535833afa8d2be9b697061ed6a53498c1fb01781d7b14524946831d3a0",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "evidence/policy/20260927T010449.918426Z/owner-approval.txt",
+      "before_sha256": "6c2f3167d93b8593f7712e808e1e77572f46f8160f5b736aadd5b4449e8ae05b",
+      "current_sha256": "6c2f3167d93b8593f7712e808e1e77572f46f8160f5b736aadd5b4449e8ae05b",
+      "change": "unchanged",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "evidence/summary.md",
+      "before_sha256": "4cd4e9c792699ab536b7c2427c60f882b9b1444595b7a06ee3318a6c35fc6e2c",
+      "current_sha256": "59ced8461bd78f1d25f045aea7f2608397f3d7fa7c8048763cba3d02b339efed",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "harness.md",
+      "before_sha256": "90894a3c21ad32846b15bbfbfab60111c3e5052d295e3bff3ad70e654a41fe52",
+      "current_sha256": "af0990b20bfed9f76f5964424f9e775e551c84771a030d9439aca134ef2ce978",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "harness/acceptance.py",
+      "before_sha256": null,
+      "current_sha256": "1a2f19ef64f5a9e6a58fe2489924da74c5dc93c427e4420b3ed24eab1f01d6c8",
+      "change": "new",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "harness/adapter.py",
+      "before_sha256": "7eae10f4198e74ecd1fcfbd3bec556db8f26920137836e28645036d74e37d794",
+      "current_sha256": "cb92b4647decdf15ee40a0aa6cfbe3337cd20eaacc64e2a0ef31c223530e1c37",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "harness/authority.py",
+      "before_sha256": null,
+      "current_sha256": "0c513a61dfa97ba45be2094241a477bed426fd458b7cca42aaae9a05def57306",
+      "change": "new",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "harness/candidate.py",
+      "before_sha256": "6946b9a7fc977e857a736a205a3b36ef674a54ed1cc61c1ddc92aa19a1fc4c39",
+      "current_sha256": "755d74f57e03c3e0d7aa69eac195364c44f4065f5e07bc6ff0759531fd394f03",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "harness/captures.py",
+      "before_sha256": null,
+      "current_sha256": "313badcfcd7e494561dfdda4107ed7cef9630957221b966f1bbcb17b74ba2517",
+      "change": "new",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "harness/commands.py",
+      "before_sha256": null,
+      "current_sha256": "a0a72fda140958e0be84bf0f659360863a57e406850d3866d0030a76a7e73c1d",
+      "change": "new",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "harness/context.py",
+      "before_sha256": "f71d59707e61bce2523d8581302e3bb3100286467a3c067bb2b5f8ffa449dc6a",
+      "current_sha256": "e959b7897ecf078edca2370ad6e1cd56235f879332840c0ab31b92d5a49f0c92",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "harness/demo.py",
+      "before_sha256": "b07da443da3729786482b6125e7f7faf90a1bdc84fe8fa26c9a663542bd397b4",
+      "current_sha256": "c42e14dbeed72aba69fe982c2cc65d1de8a1199f28eeb12c4aa8f72c97108478",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "harness/e2e.py",
+      "before_sha256": "da1271b091f959f7bb0e10682c4829486f7f1ca11bc218002360d52018e09deb",
+      "current_sha256": "ca52c8f3d6acc15042efb8f5c9347f14c4b6e09c63a92e00dcd95dba09f9075f",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "harness/evaluator.py",
+      "before_sha256": "2e2a55ee6cddefcd3a1d4bd9d6f87edf10d96b81331869e4221952a7d4cf375d",
+      "current_sha256": "0ac8c43a8a4778186fb5806c7224758b30229e1203de9f6041a569d85e79a072",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "harness/evidence.py",
+      "before_sha256": "e6065a5af1172e600d296fb2ddce3a3cad4a29829aa27031d0e7c3a1100327b1",
+      "current_sha256": "7cfc7bf4c6f1961dd68d35111af110ad8597c03c7d18f429f91f8a4ea41b5ae6",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "harness/gates.py",
+      "before_sha256": "f91c4f06c52e962c0e63bf4e9651517bd939caaca1492d8a4e368c68169637ed",
+      "current_sha256": "4599a034ca37a7ded3d2481f50813e808befdbda491bb258b756c5fb7d6938c2",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "harness/live.py",
+      "before_sha256": null,
+      "current_sha256": "33aaf7f39128b427b1303ad55fe5d79396f82bc87b85e3e11c626c2348dfc6d6",
+      "change": "new",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "harness/offline.py",
+      "before_sha256": "899914a76c0c04db08a954bb09b66bc1ec7332c168bfe2fdfad1ae6bf4aedf54",
+      "current_sha256": "d4889b7a9b1f97de03b15178c88fda012dcb7510fd5922063cc34fe13e0bbc6b",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "harness/policy_evaluation.py",
+      "before_sha256": "897ca0dc729b8d60600796b74b3b65da7fdae11edb1e855f0814eaa643720a1d",
+      "current_sha256": "753cef0e08851c016433f2c4181e9bc49995dd2ad519042fa2915adc54353bb7",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "harness/preflight.py",
+      "before_sha256": "f19cde74a53c4ec3cef8a02299dabfc6a68dc1bbb4054f015793f14034118fba",
+      "current_sha256": "1fe0a8cc9643f3a680db8f563839b556e1ddebde6b3be0bf90fd53a7614a343c",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "harness/regression.py",
+      "before_sha256": "c32f277840332f3ad48e90ed085ceeb149bdc8dd758720c1a61c28479e525d2d",
+      "current_sha256": "38b2010d8f52ab3772eaff67f5fc24f8afb0bd33c76be5b2f4c1088561ffe2eb",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "harness/requirements.py",
+      "before_sha256": "6832211f2456ad46e7bec201d646ff1b451f7d15eb51eb8d2fc683657cf08877",
+      "current_sha256": "df2d240bea8884b9f8d0334c68c81c7291937ff2a8299c482b887384f528d94a",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "harness/review.py",
+      "before_sha256": "64779f35e690db031e9110bdc3fbb6a19f5af3a8adc0d49d6d56301748d4bc72",
+      "current_sha256": "1d6ba30dc601d1f39d64cb02c7dd86ac6253ddd970b33cbdb09b678c07e03b41",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "harness/runtime.py",
+      "before_sha256": "91483528efb9b6ddecca4071e806b259823120591177e0bcde2b3a706608a683",
+      "current_sha256": "eb893528774a1ca199b087e12e36082a6924a3ca62c47b68ffb71382ed48030f",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "harness/storage_evaluation.py",
+      "before_sha256": "01fe68380793194ec36746f729271b8754a0d0dea39a3ed158f20ad59b12bf28",
+      "current_sha256": "ece29e69ecefc7bc3683a707aad750633aaa0d029578f1de2189e4d86b196ded",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "harness/storage_integration.py",
+      "before_sha256": "26857be7e658b8d30b2618d97a31ef2d83bea92fd0e5c4e22c4e0b2447d9d5ea",
+      "current_sha256": "f6c48d90ef4ad72918d475d5ab238132abea1fdf3e2966089a27e3f1b3027c91",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "harness/storage_ports.py",
+      "before_sha256": "5677c9868df6cc4fc6927fbd571b1edc062e47c78fa13808ba3b2f22ab35433c",
+      "current_sha256": "09eb6ad0dc045b24d745395bc302d7275bb09cb8ea34c3434dc8bef91c52ccd6",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "requirements/capture-registry.json",
+      "before_sha256": null,
+      "current_sha256": "972ad41564adc5a637e36f59c74f859412998cdb5e0c4e934fe77c87da342f39",
+      "change": "new",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "requirements/dataset.json",
+      "before_sha256": "a51147dffc80b69de840865ea01091eee66ad720e334adee9a983179841810ef",
+      "current_sha256": "a51147dffc80b69de840865ea01091eee66ad720e334adee9a983179841810ef",
+      "change": "unchanged",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "requirements/oracle-support.json",
+      "before_sha256": "237d35251aeed2614370812ec175b543e91a5184daca3e5316af544f07f0fe46",
+      "current_sha256": "237d35251aeed2614370812ec175b543e91a5184daca3e5316af544f07f0fe46",
+      "change": "unchanged",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "requirements/requirements.yaml",
+      "before_sha256": "05aea3d386f07b2c1c1099daaff4ce84f04d6382936657ebb1e13300e91eacab",
+      "current_sha256": "c7b630fa694bd2d448bde78732f58f16197b0d06c6e9854d7fc10a4fa964b311",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "spec.md",
+      "before_sha256": "d54d2347e6c65ac7cb9711dce24290f722a6650a65c555f0154e2983a471c621",
+      "current_sha256": "8ceae06ebf0a5c4a8a8e72fae516cffcd2c3df1fc014c1ff7bc459ed07ba6f25",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "tests/test_harness.py",
+      "before_sha256": "e7e5a4f025ba6edbfb5e3360737e944ce77496df367f51127e1fd1eac80e3b0b",
+      "current_sha256": "3696f7cebdcd89642819f7e9eccd858b430b9fcf37b5df6985721b9b019c9c0e",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "tests/test_integrity.py",
+      "before_sha256": null,
+      "current_sha256": "0d92458cc3e970229fdfcf013223ee5ce294f107ff07659c6061a0f903392833",
+      "change": "new",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "tests/test_offline.py",
+      "before_sha256": "3c84b6c75b3ce72929c3052da5f17ccdd4780aaa48732bee0af17789e0c1e935",
+      "current_sha256": "284b697334ba8beb9de17809aa40db033c83cd651fd47efd3317a0e7e28659b4",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    },
+    {
+      "path": "tests/test_review.py",
+      "before_sha256": "100b4967b59622499b2b5d2095dab14f6afe7c6e9af92d4a89807890b8394b0a",
+      "current_sha256": "0099726bbd71745f5fe7815677ebc7e336b65458cf3dcc475f273d240376fd7f",
+      "change": "changed",
+      "worker_writable": true,
+      "mode": "-rw-r--r--"
+    }
+  ],
+  "optional_registry_proposal": {
+    "file": "proposed/capture-registry.json",
+    "sha256": "65f575bd5b496bed3757279c7752d02b87171dbf93511b61502d068ec797a9b3",
+    "purpose": "Add two complete observed temporal references; never accept or recertify them"
+  },
+  "authentication": "None: current worker can replace all repository references and verifier code. Original session instruction is outside declared checkout write scope; manual comparison is still required."
+}

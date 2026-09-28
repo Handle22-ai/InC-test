@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+.venv/
+.idea/
+__pycache__/
+*.py[cod]
+.DS_Store
+.harness.lock
+evidence/audit/*/sandbox/
+evidence/audit/*/tmp/
+evidence/finalization/*/scratch/
+evidence/polish/*/scratch/
+.ruff_cache/
+.mypy_cache/

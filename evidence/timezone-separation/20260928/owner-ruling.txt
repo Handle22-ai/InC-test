@@ -1,0 +1,22 @@
+I do not approve TZ-NGPL-001 as written.
+
+Do not infer America/Chicago or any other timezone from an unzoned NGPL
+timestamp without source support.
+
+Adopt this bounded rule instead:
+
+A source-grounded operational disruption may classify as SIGNAL_CANDIDATE
+even when the source timestamp timezone is unresolved.
+
+Unresolved source timezone:
+- remains explicitly UNKNOWN;
+- prevents automatic current/future actionability;
+- prevents recommendation authorization;
+- requires REVIEW_REQUIRED at the actionability/authorization boundary;
+- must not be silently converted to UTC, Central Time, or another zone.
+
+Where a source timestamp has an explicit trusted timezone, normal
+current/future/historical evaluation may proceed.
+
+This changes classification/actionability separation only. It does not
+authorize delivery, materiality, or a recommendation.

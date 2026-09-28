@@ -1,0 +1,13 @@
+{
+  "notice_id": 46775,
+  "notice_type": "COMPUTER SYSTEM STATUS",
+  "status": "INITIATE",
+  "prior_notice_id": null,
+  "information_only": true,
+  "is_signal": false,
+  "confidence_score": 0.0,
+  "validity_flags": [
+    "VC-1: information-only notice — Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction",
+    "llm_extraction"
+  ]
+}

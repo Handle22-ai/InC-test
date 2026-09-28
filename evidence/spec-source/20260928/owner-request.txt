@@ -1,0 +1,17 @@
+Architecture change: the spec becomes the only file a person edits; behavior.yaml becomes a build artifact; the spec carries the input contract and its own consequences. No live model calls.
+
+1. Rule block. In spec.md, a structured rule block beside the prose: one line per rule, columns in domain terms only (arriving status, prior present or absent, live, oracle answer, information-only, late, restriction current, service class, and whatever else the current rules need), a named action, and a precedence line ordering all rows. Enumerated allowed values per column; a schema file the compiler validates against; a rule that cannot be said in these columns becomes a prose sentence with an ID and a hand-authored check, never a new operator. Move every rule in behavior.yaml into the block one for one, with readable names in place of predicate paths. Every D-line gets a stable ID.
+
+2. Input contract. A spec section with IDs: every source field the parser reads, its type, the accepted date formats, the timezone rule, and the required behavior on a malformed or missing value. Resolve the timezone: propose "NGPL posts in Central time; timestamps without a zone are parsed as America/Chicago" as a decision for my ruling, with the evidence, and until ruled, state in the spec that the firm-disruption rule is inert on real data and why. The parser is checked against these lines at gate time.
+
+3. harness compile. Deterministic — a parser over the fixed-format block, never a model. Writes behavior.yaml with a generated header carrying the spec hash; the gate fails if the file differs from a fresh compile, lacks the header, or was edited by hand. Delete the spec-to-YAML sync check. Error messages name the block, row ID, and spec.md line, never a YAML path.
+
+4. Rule-level invariants. Each D-line becomes a check evaluated over the compiled rule set at gate time, before any component runs. A weakened rule fails as "contradicts D1", naming the sentence, not by blaming the implementation. Prove it with a step-F-style weakening in scratch.
+
+5. Consequences, generated per run, in the spec's own rendering and at the top of the report: for each rule, how many of the captured notices it matches, and for the ones it doesn't, the first condition that failed. Plus the diff against the previous commit: which notices changed outcome, from what to what. This is the section that would have shown 0 of 46 without anyone reading the JSON.
+
+6. Ownership. Every change to spec.md requires a decision entry with status and a person's name; the pin goes stale until re-read; the gate refuses an unrecorded change. harness.md says plainly that the hash is not approval, and names required review on spec.md as the enforcement that lives outside the repo.
+
+7. Proof, recorded: change one row in the block, run the gate, show that behavior.yaml, the replay expectations, the rendered rule table, and the consequences all changed with nothing retyped; edit behavior.yaml directly and show the gate refuse; weaken a rule and show "contradicts D1".
+
+Commit as "spec is the source: rule block, input contract, deterministic compile, rule-level invariants, consequences". Report every file changed, the three proofs, and the timezone decision text for my ruling.

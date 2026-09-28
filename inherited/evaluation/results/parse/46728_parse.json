@@ -1,0 +1,90 @@
+{
+  "notice_id": 46728,
+  "notice_type": "CAPACITY CONSTRAINT",
+  "html_file": "evaluation/notices/46728_CAPACITY CONSTRAINT.html",
+  "header": {
+    "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+    "critical": "Y",
+    "type1": "CAPACITY CONSTRAINT",
+    "type2": "SEGMENTS",
+    "notice_effective_date": "02/09/2026  8:25:50AM",
+    "notice_end_date": "02/28/2026 9:00:00am",
+    "post_date": "2/9/2026 8:25:50 AM",
+    "notice_id": "46728",
+    "req_rsp": "1",
+    "rsp_date": "02/09/2026",
+    "status": "INITIATE",
+    "prior_notice_id": "",
+    "subject": "IBS/LPS/SRO - RESTRICTIONS"
+  },
+  "body": "IBS/LPS - RESTRICIONS\n\nIBS/LPS/SRO – AVAILABILITY\n\n \n\nAMARILLO SYSTEM\n\n \n\nEffective for gas day \nMonday,\nFebruary 9, 2026, Intraday 1 Cycle, and continuing until further notice\n,\nNatural has the following availability for line pack services:\n\n \n\nCategories\n:  (Unavailable; Up to MDQ; Limited Available;\nAvailable)\n\n \n\n \n\nAMARILLO\n:\n\n \n\nON to the Pipe\n\nMarket\nDelivery Zones\n\n              \n \nAmarillo Mainline (Up to MDQ)\n\n                Iowa-Illinois\n(Up to MDQ)\n\n            \nProduction\nZones\n\n                \nMidcontinent (Up to MDQ)\n\n                Permian (Up\nto MDQ\n)\n\n \n\nOFF of the Pipe\n\n     \n       \nMarket Delivery Zones\n\n                 Amarillo\nMainline (Up to MDQ)\n\n          \n      Iowa-Illinois (Up to MDQ)\n\nè\n     \nIowa-Illinois – Segment 29 – (Available)\n\n                                                                                                                        \n\n            \nProduction Zones\n\n    Midcontinent\n(Up to MDQ)\n\n   \n       Permian (Up to MDQ)\n\n \n\n \n\nGULF COAST SYSTEM\n\n \n\nEffective for gas day \nMonday,\nFebruary 9, 2026, Intraday 1 Cycle, and continuing until further notice\n,\nNatural has the following availability for line pack services:\n\n \n\nCategories\n:  (Unavailable; Up to MDQ*; Limited Available;\nAvailable)\n\n \n\nGULF COAST\n:\n\n \n\nON to the Pipe\n\n     \n       \nMarket Delivery Zones\n\n             \nGulf Coast Mainline (Up to MDQ)\n\n             Iowa-Illinois (Up\nto MDQ)\n\n     \n       \nProduction Zones\n\n Texok\nGC (Up to MDQ)\n\n Texok\nA/G (Up to MDQ)\n\n            \n South Texas (Up to MDQ)\n\n            \n Louisiana (Up to MDQ)\n\n    \n\n \n\n                                \n\n \n\nOFF of the Pipe\n\n     \n       \nMarket Delivery Zones\n\n                \nGulf Coast Mainline (Up to MDQ)\n\n   \n      Iowa-Illinois (Up to MDQ)\n\nè\n      \nIowa-Illinois\n– Segment 39 – (Available)\n\n      \nè\n      Iowa-Illinois – Segment 40 – (Available)\n\n \n\n     \n\n     \n       \nProduction Zones\n\n    \n \n       \nTexok GC (Up to MDQ)\n\n             Texok\nA/G (Up to MDQ)\n\n      \n      South Texas (Up to MDQ)\n\n                    Louisiana\n(Up to MDQ)\n\n \n\n \nè\nIndicates Change\n\n \n\n.",
+  "information_only": false,
+  "locations": [
+    {
+      "location_index": 0,
+      "notice_id": 46728,
+      "loc_code": null,
+      "loc_name": null,
+      "segment": "29",
+      "compressor_station": null,
+      "zone": "Iowa-Illinois",
+      "system": "Amarillo System"
+    },
+    {
+      "location_index": 1,
+      "notice_id": 46728,
+      "loc_code": null,
+      "loc_name": null,
+      "segment": "39",
+      "compressor_station": null,
+      "zone": "Iowa-Illinois",
+      "system": "Gulf Coast System"
+    },
+    {
+      "location_index": 2,
+      "notice_id": 46728,
+      "loc_code": null,
+      "loc_name": null,
+      "segment": "40",
+      "compressor_station": null,
+      "zone": "Iowa-Illinois",
+      "system": "Gulf Coast System"
+    }
+  ],
+  "restrictions": [
+    {
+      "notice_id": 46728,
+      "location_index": 0,
+      "service_type": "LINE_PACK_SERVICE",
+      "restriction_type": "AVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "OFF_OF_PIPE",
+      "start_datetime": "2026-02-09",
+      "end_datetime": "TBD"
+    },
+    {
+      "notice_id": 46728,
+      "location_index": 1,
+      "service_type": "LINE_PACK_SERVICE",
+      "restriction_type": "AVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "OFF_OF_PIPE",
+      "start_datetime": "2026-02-09",
+      "end_datetime": "TBD"
+    },
+    {
+      "notice_id": 46728,
+      "location_index": 2,
+      "service_type": "LINE_PACK_SERVICE",
+      "restriction_type": "AVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "OFF_OF_PIPE",
+      "start_datetime": "2026-02-09",
+      "end_datetime": "TBD"
+    }
+  ],
+  "provenance": "llm_extraction"
+}

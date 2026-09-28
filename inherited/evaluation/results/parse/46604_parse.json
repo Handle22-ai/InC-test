@@ -1,0 +1,25 @@
+{
+  "notice_id": 46604,
+  "notice_type": "OTHER",
+  "html_file": "evaluation/notices/46604_OTHER.html",
+  "header": {
+    "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+    "critical": "Y",
+    "type1": "OTHER",
+    "type2": "TARIFF PROVISIONS/PARAMETERS",
+    "notice_effective_date": "01/06/2026 11:27:29AM",
+    "notice_end_date": "12/31/2049 9:00:00am",
+    "post_date": "1/6/2026 11:27:29 AM",
+    "notice_id": "46604",
+    "req_rsp": "1",
+    "rsp_date": "01/06/2026",
+    "status": "INITIATE",
+    "prior_notice_id": "",
+    "subject": "PHMSA MEGA RULE ELIGIBLE PROJ-UPDATE"
+  },
+  "body": "Pursuant to\nits Tariff (GT&C Section 5.2 (c) (5)), Natural has updated its list of\nPHMSA Mega Rule Eligible Projects set forth on Appendix F to its Settlement in\nDocket No. RP22-1222.  \n\nSee the\nlatest posted notice at \nInformational\nPostings :: Natural Gas Pipeline Company of America, L.L.C.\n under\nRegulatory, which will contain an updated Appendix F.  Any questions or\nconcerns regarding the updated Appendix F should be directed to Rahul Singh,\nDirector of Regulatory, at \nRahul.singh@kindermorgan.com\n.\n\n \n\n.",
+  "information_only": true,
+  "locations": [],
+  "restrictions": [],
+  "provenance": "llm_extraction"
+}

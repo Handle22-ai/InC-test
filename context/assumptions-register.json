@@ -1,0 +1,58 @@
+{
+  "A-001": {
+    "normative_text": "D3: historical label evaluation separate from current alerting; explicit reference clock/time semantics",
+    "remaining_limit": "Actionability engine and time/permutation checks are not implemented/evaluated.",
+    "status": "owner-approved-bounded",
+    "basis": "context/decisions/006-assessment-lifecycle-policy.md; exact adopted D1-D6 and owner amendments",
+    "approval_decision": "context/decisions/006-assumptions.record.json"
+  },
+  "A-002": {
+    "normative_text": "D2/D6: retain the 14 supplied evaluation labels; use prior context and explicit adjudication for new termination decisions",
+    "remaining_limit": "Labels cannot become implementation answers or runtime approval; no universal lift rule inferred.",
+    "status": "owner-approved-bounded",
+    "basis": "context/decisions/006-assessment-lifecycle-policy.md; exact adopted D1-D6 and owner amendments",
+    "approval_decision": "context/decisions/006-assumptions.record.json"
+  },
+  "A-003": {
+    "normative_text": "D2/D6: unchanged operational supersedes are nonmaterial with complete prior and source-verified scope",
+    "remaining_limit": "Narrow synthetic checks only; material-update delivery is unimplemented/unevaluated.",
+    "status": "owner-approved-bounded",
+    "basis": "context/decisions/006-assessment-lifecycle-policy.md; exact adopted D1-D6 and owner amendments",
+    "approval_decision": "context/decisions/006-assumptions.record.json"
+  },
+  "A-004": {
+    "normative_text": "D1/D3: retain uncertain candidates, block automatic alerts on history gaps, reconcile using fixed accepted evidence",
+    "remaining_limit": "Reconciliation/event view is specified only.",
+    "status": "owner-approved-bounded",
+    "basis": "context/decisions/006-assessment-lifecycle-policy.md; exact adopted D1-D6 and owner amendments",
+    "approval_decision": "context/decisions/006-assumptions.record.json"
+  },
+  "A-005": {
+    "normative_text": "D1/D2: classification and storage receipts are distinct from delivery; persistent keys/attempts/acks and receiver contract required",
+    "remaining_limit": "Delivery interface is absent; duplicate-free delivery is not demonstrated.",
+    "status": "owner-approved-bounded",
+    "basis": "context/decisions/006-assessment-lifecycle-policy.md; exact adopted D1-D6 and owner amendments",
+    "approval_decision": "context/decisions/006-assumptions.record.json"
+  },
+  "A-006": {
+    "normative_text": "D6: source-supported firm MDQ/constraint-segment/named-zone annotations prospectively binding only where verified",
+    "remaining_limit": "Unsupported annotations remain unapproved/UNKNOWN; no absolute-volume or complete extraction/relevance claim.",
+    "status": "owner-approved-bounded",
+    "basis": "context/decisions/006-assessment-lifecycle-policy.md; exact adopted D1-D6 and owner amendments",
+    "approval_decision": "context/decisions/006-assumptions.record.json"
+  },
+  "A-007": {
+    "normative_text": "Confidence remains a bounded score, not a calibrated probability; D6 uses named-human adjudication and recorded approval",
+    "remaining_limit": "Existing weights/thresholds are implementation facts, not newly approved domain cutoffs.",
+    "status": "owner-approved-bounded",
+    "basis": "context/decisions/006-assessment-lifecycle-policy.md; exact adopted D1-D6 and owner amendments",
+    "approval_decision": "context/decisions/006-assumptions.record.json"
+  },
+  "A-008": {
+    "normative_text": "D5/D6: explicit unsupported/uncertain disposition and preserved evidence/state",
+    "remaining_limit": "Broader formats/pipelines/OOD execution, production retention and autonomous-trading acceptance remain unimplemented or unapproved.",
+    "status": "owner-approved-bounded",
+    "basis": "context/decisions/006-assessment-lifecycle-policy.md; exact adopted D1-D6 and owner amendments",
+    "approval_decision": "context/decisions/006-assumptions.record.json"
+  }
+}

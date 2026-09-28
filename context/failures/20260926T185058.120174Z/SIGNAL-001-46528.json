@@ -1,0 +1,22 @@
+{
+  "requirement_id": "SIGNAL-001",
+  "case_id": "46528",
+  "gate": 2,
+  "strategy": "labeled_eval",
+  "status": "candidate; no diagnosis or repair",
+  "severity": "critical",
+  "expected": "All 14 explicit labels are reported individually; false positives and false negatives retained.",
+  "observed": {
+    "execution_outcome": "MODEL_FAILURE"
+  },
+  "risk": "Makes baseline behavior independently assessable.",
+  "evidence_refs": [
+    "cases/46528.json"
+  ],
+  "failure_domain": "MODEL_FAILURE",
+  "confidence": "not established",
+  "input": "inherited/evaluation/notices/46528_OPERATIONAL ALERT.html",
+  "evidence_run": "evidence/legacy/20260926T185058.120174Z",
+  "possible_failure_domain": "MODEL_FAILURE",
+  "requirements_changed": false
+}

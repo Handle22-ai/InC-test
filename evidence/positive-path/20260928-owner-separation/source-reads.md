@@ -1,0 +1,19 @@
+# Maintenance source-read record
+
+Starting request: owner attachment beginning “Treat the latest b9cd042 adversarial audit as release-blocking.” Starting implementation b9cd042. Prior audit findings and real source traces were read as release blockers; no new model extraction was requested. The standalone builder was not launched.
+
+Agent implementation reads (no human code-read claim):
+- harness/requirements.py, policy_trace.py, requirement_trace.py, context_integrity.py, authority.py, context.py: existing documents said local hashes were insufficient but did not reveal activation paths, lineage enforcement or context selection. Needed to implement the requested temporal boundary without replacing old approval records.
+- behavior_contract.py, predicates.py, rebuilt/normalization.py, normalized_classifier.py and signals.py: needed to separate classification/time actionability and preserve row associations. Audit evidence identified lost mixed availability and unit-pairing omissions; source showed the exact reduction and publisher seam.
+- harness/trading_evaluation.py, normalized_evaluation.py, comparison_identity.py, current_evidence.py and signal_evaluation.py: needed to route real source witnesses, expose each 14-label denominator, retain inherited failures and define meaningful comparable regression outcomes.
+- inherited/notice_parser.py lines around header parsing and extraction result construction (read only): capture metadata did not state which supplier produced each field. Confirmed source-parser notice headers versus model-supplied information_only, locations and restrictions; no inherited source changed.
+- tests/authority_fixture.py and affected integrity/policy/context tests: earlier positive fixtures explicitly allowed same-change synthetic approval. Owner's new rule requires refusal, while generic checker derivation is still tested separately.
+- README, Makefile, schema/behavior data, selected context and owner records were contract/data reads, not evidence of implementation correctness.
+
+Missing evidence capability addressed: normalization_trace records source basis, raw and normalized values, supplier and UNKNOWN handling; real-positive-traces retain complete source→capture→normalized→proposal/actionability evidence. Temporal controls include uncommitted, same-commit, later evidence commit and two newly manufactured worker commits. A frozen pre-implementation approval window prevents worker-created commits from extending its own authority; verifier replacement remains outside the claimed protection.
+
+Development failures retained: schema visitor initially lacked handling for unconstrained array-valued provenance; generated signal-safety hash required synchronization; copying workflow status into restriction facts broke unchanged-revision equality and was corrected to retain unknown per-restriction status separately from explicit notice status; context required an ancestor-approved successor index; old tests expecting same-change promotion were updated to require refusal. No rule or threshold was weakened to hide a failure.
+
+The fresh worker's own source-read log is retained separately with its exercise and must be assessed on its own evidence.
+
+Verification preparation reads: submission/verify_positive_path.py, harness/baseline.py, current_snapshot.py, current_evidence.py, normalized_evaluation.py, temporal_authority.py and tests/test_positive_path.py were inspected to determine clean-source qualification, snapshot exclusion scope, and exact control seams. Runtime validate_output was read after preparing disposable control paths so their artifacts obey the existing evidence-only destination restriction. Makefile was read to preserve literal required commands. These are agent reads; no human implementation read is asserted.

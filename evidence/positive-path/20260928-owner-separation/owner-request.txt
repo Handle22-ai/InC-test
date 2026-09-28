@@ -1,0 +1,166 @@
+Treat the latest b9cd042 adversarial audit as release-blocking.
+
+Starting commit:
+b9cd042ab7313e6ad519089836768e470922c42b
+
+Do not launch the separate builder yet.
+
+PRIMARY GOAL:
+Fix the real-data positive path and the self-approval boundary without
+inventing unsupported domain facts.
+
+1. SEPARATE CLASSIFICATION FROM TIME ACTIONABILITY
+
+Do not infer an NGPL timezone unless supplied source material explicitly
+supports it.
+
+Amend the bounded classifier contract so a source-grounded operational
+firm-service disruption can classify as SIGNAL_CANDIDATE even when the
+source timestamp lacks a trusted timezone.
+
+Unresolved source timezone must:
+- remain explicitly recorded;
+- prevent automatic current/future actionability;
+- prevent recommendation authorization;
+- produce REVIEW_REQUIRED at the actionability/authorization boundary.
+
+Do not change recommendation_allowed to true.
+Do not invent Central Time, UTC, a lateness cutoff, or a desk SLA.
+
+Keep time precedence for:
+- historical-only determination when time is actually resolved;
+- revision/actionability decisions that require a clock.
+
+Add real captured NGPL positive witnesses using the existing source facts,
+not synthetic +00:00 timestamps.
+
+Required proof:
+- at least one actual positive-labeled captured notice reaches
+  SIGNAL_CANDIDATE from source-supported normalized facts;
+- unresolved timezone is still visible;
+- recommendation_allowed remains false;
+- no timezone is fabricated.
+
+Report positive, negative, unresolved, and error counts over all 14 labels.
+Do not count abstentions as correct predictions.
+
+2. NORMALIZER CONTRACT
+
+Document and execute the normalized-input contract for:
+- content_kind;
+- availability;
+- services;
+- restriction status;
+- segment/geography;
+- quantity/unit;
+- source timestamps and timezone-known/unknown state;
+- history/prior status.
+
+For each semantic field, record:
+- source basis;
+- normalized value;
+- UNKNOWN handling;
+- whether a model/human/source parser supplied it.
+
+Do not let already-classified enums become circular evidence.
+Add a trace from real source/capture → normalized facts → classifier result.
+
+3. STOP SAME-SESSION SELF-APPROVAL
+
+An implementation/maintenance agent may write proposals and pending learning,
+but may not make its own proposal authoritative in the same candidate change.
+
+For any binding requirement/policy/assumption promotion, require:
+- approval record already present in an ancestor committed revision;
+- exact normative wording/hash match;
+- policy/requirement revision identity;
+- implementation commit strictly later than the approval commit.
+
+A newly created approval record in the same working tree or same commit as
+the implementation must not authorize the change.
+
+Do not claim this authenticates a human identity.
+It enforces temporal separation of proposal/approval/implementation.
+
+Reproduce the previous attack:
+fresh worker writes owner-approved ADR + repins hashes.
+Required result:
+UNAPPROVED_SELF_PROMOTION / nonzero.
+
+4. REACHABLE GATE
+
+After the real-data positive path is fixed, create a clean registered
+baseline from a clean commit.
+
+Gate 3 must be:
+- PASS for identical policy/evaluator and unchanged behavior;
+- FAIL for same-policy regression;
+- UNKNOWN/NONCOMPARABLE for semantic/evaluator changes without mapping.
+
+The normal unmutated candidate should have a reachable documented outcome.
+Do not force full-application green if evidence is still missing.
+
+5. CURRENT EVIDENCE
+
+Create one committed current snapshot generated from the exact candidate
+source identity, excluding the report itself from its identity hash.
+
+The tracked current report must not be stale relative to HEAD.
+
+It must lead with:
+- whole-system/inherited status;
+- bounded candidate status;
+- scored denominator over 14 labels;
+- positive/negative/unresolved/error counts;
+- recommendation authorization state;
+- current gate outcomes.
+
+Do not headline “0 false positives” without the denominator.
+
+6. FRESH SESSION CONTROL
+
+Repeat one small genuinely new maintenance exercise on the current
+normalized-classifier/publisher component.
+
+The fresh agent:
+- may write a proposal/pending learning;
+- must be unable to approve/promote it itself;
+- must record every source read and what missing evidence forced it.
+
+Use a simple unseen format/status change.
+Do not give it the solution.
+
+7. VERIFY
+
+Run from a clean successor checkout:
+
+make setup
+make check
+make evaluate-spec
+make context TASK=recommendation-classification-maintenance
+make demo
+make evaluate-signals
+make gate
+
+Then verify:
+- real captured positive reaches SIGNAL_CANDIDATE;
+- unresolved timezone remains explicit;
+- no recommendation authorization;
+- no fabricated timezone;
+- self-approval attack fails;
+- clean baseline gives a meaningful Gate 3 result;
+- tracked current evidence matches candidate identity;
+- 14-label denominator is explicit.
+
+Return:
+- successor SHA;
+- exact owner-policy change wording;
+- real notice trace source→normalized→decision;
+- 14-label outcome table;
+- gate outcomes;
+- self-approval attack result;
+- fresh-session result;
+- top 3 remaining gaps.
+
+Do not add live model tuning, OFO policy, delivery/reconciliation, or
+unrelated features in this pass.

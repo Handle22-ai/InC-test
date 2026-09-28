@@ -1,0 +1,708 @@
+{
+  "id": "capture-0/46615",
+  "case_id": "46615",
+  "notice_id": 46615,
+  "source_capture": "evidence/candidates/impact-budget-512/full/20260926T191722.363460Z/results.json",
+  "source_input": "inherited/evaluation/notices/46615_MAINTENANCE.html",
+  "input_sha256": "59bceaae533f4d516e49ed540211022c32e7af7ec2df37f20a2e17ec0d86f8f3",
+  "category": "labeled",
+  "expected_signal": true,
+  "inherited_signal": 1,
+  "inherited_execution": "SUCCESS",
+  "inherited_system": "impact-budget-512",
+  "decision": {
+    "decision_id": "a27142b6-8675-414c-85b5-35d09c59e4ce",
+    "notice_id": 46615,
+    "source_sha256": "59bceaae533f4d516e49ed540211022c32e7af7ec2df37f20a2e17ec0d86f8f3",
+    "reference_time": "2026-09-26T19:17:22.368165+00:00",
+    "raw_proposal": {
+      "notice": {
+        "notice_id": 46615,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "MAINTENANCE",
+        "notice_subtype": "MAINTENANCE",
+        "effective_datetime": "2026-01-08T16:53:39",
+        "end_datetime": "2026-08-31T09:00:00",
+        "post_datetime": "2026-01-08T16:53:39",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "SEG 25 - STATION MAINT - CS 302",
+        "body_text": "ANR/NGPL SOUTH JOLIET AT CAPACITY\n\nSEGMENT\n25 – STATION MAINTENANCE – CS 302\n\n \n\nAs\nposted on Natural's Outage Impact Report (X25-1527903), Natural will be\nperforming station maintenance at Compressor Station 302 (CS 302) located in Montgomery\nCounty, Texas (Segment 25 of Natural's Texok Zone).  Natural is required to\nreduce the maximum operating capacity eastbound into Segment 25 from Segment 26\nand Segment 22, thus limiting Natural's throughput capacity eastbound through\nCS 302 during this restriction.\n\n \n\nThe\n\nscheduling constraint will be at CS 302\n; therefore, any gas received\nwest of CS 302 for delivery east of CS 302 will be impacted for the duration of\nthe restriction.  The Pooling Point - Texok Zone (LOC 10560) is located west of\nthe constraint.  Firm transportation associated with storage withdrawals may be\nimpacted.\n\n \n\nAs\nsuch, effective for gas day \nWednesday, April 1, 2026, Timely Cycle, and\ncontinuing through gas day Friday, May 1, 2026\n, Natural will schedule\nPrimary Firm and Secondary in-path Firm transports to no less than \n55%\n\nof contract MDQ through CS 302.  AOR/ITS and Secondary out-of-path Firm\ntransports \nwill not\n be available for the duration of this restriction.\n\n \n\nThe\nstated scheduling percentage is based upon the current level of firm capacity\ncontracted for during this restriction and is subject to change based upon\noperational conditions and Shipper utilization.\n\n \n\nContinue\nto monitor Natural's interactive website for any updates.  Please contact your\nAccount Director or Scheduling Representative if you have any questions.\n\n..",
+        "outage_report_ref": "X25-1527903",
+        "tariff_section": null,
+        "information_only": 0,
+        "is_signal": 1,
+        "confidence_score": 0.5,
+        "validity_flags": "[\"VC-2: high-confidence notice type (MAINTENANCE) \\u2014 maintenance outage (+0.10 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-26T19:18:06.356596",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46615_MAINTENANCE.html"
+      },
+      "locations": [
+        {
+          "location_index": 0,
+          "notice_id": 46615,
+          "loc_code": "10560",
+          "loc_name": "Pooling Point - Texok Zone",
+          "segment": "25",
+          "compressor_station": "302",
+          "zone": "Texok Zone",
+          "system": null
+        }
+      ],
+      "restrictions": [
+        {
+          "notice_id": 46615,
+          "location_index": 0,
+          "service_type": "PRIMARY_FIRM",
+          "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+          "restriction_value": 55.0,
+          "restriction_unit": "PCT_MDQ",
+          "flow_direction": "EASTBOUND",
+          "start_datetime": "2026-04-01",
+          "end_datetime": "2026-05-01"
+        },
+        {
+          "notice_id": 46615,
+          "location_index": 0,
+          "service_type": "SECONDARY_INPATH_FIRM",
+          "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+          "restriction_value": 55.0,
+          "restriction_unit": "PCT_MDQ",
+          "flow_direction": "EASTBOUND",
+          "start_datetime": "2026-04-01",
+          "end_datetime": "2026-05-01"
+        },
+        {
+          "notice_id": 46615,
+          "location_index": 0,
+          "service_type": "AOR_ITS",
+          "restriction_type": "UNAVAILABLE",
+          "restriction_value": null,
+          "restriction_unit": null,
+          "flow_direction": "EASTBOUND",
+          "start_datetime": "2026-04-01",
+          "end_datetime": "2026-05-01"
+        },
+        {
+          "notice_id": 46615,
+          "location_index": 0,
+          "service_type": "SECONDARY_OUTPATH_FIRM",
+          "restriction_type": "UNAVAILABLE",
+          "restriction_value": null,
+          "restriction_unit": null,
+          "flow_direction": "EASTBOUND",
+          "start_datetime": "2026-04-01",
+          "end_datetime": "2026-05-01"
+        }
+      ]
+    },
+    "semantic_evidence": {
+      "extraction_usable": true,
+      "helpers": [
+        [
+          "llm_assess_curtailment_impact",
+          "large"
+        ]
+      ],
+      "execution_error": null,
+      "source_media_type": "text/html"
+    },
+    "normalized_input": {
+      "version": 1,
+      "normalization_trace": [
+        {
+          "field": "content_kind",
+          "source_basis": "Captured notice.information_only and restrictions; validate against source.fields.body",
+          "source_value": {
+            "information_only": 0,
+            "restriction_count": 4
+          },
+          "normalized_value": "RESTRICTION",
+          "supplied_by": "model",
+          "unknown_handling": "Missing content meaning stays UNKNOWN; information plus a known restriction is contradictory"
+        },
+        {
+          "field": "availability",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [
+            "SCHEDULED_TO_PCT_MDQ",
+            "SCHEDULED_TO_PCT_MDQ",
+            "UNAVAILABLE",
+            "UNAVAILABLE"
+          ],
+          "normalized_value": "UNKNOWN",
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "services",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [
+            "PRIMARY_FIRM",
+            "SECONDARY_INPATH_FIRM",
+            "AOR_ITS",
+            "SECONDARY_OUTPATH_FIRM"
+          ],
+          "normalized_value": [
+            "AOR_ITS",
+            "PRIMARY_FIRM",
+            "SECONDARY_FIRM"
+          ],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "restrictions",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [
+            {
+              "notice_id": 46615,
+              "location_index": 0,
+              "service_type": "PRIMARY_FIRM",
+              "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+              "restriction_value": 55.0,
+              "restriction_unit": "PCT_MDQ",
+              "flow_direction": "EASTBOUND",
+              "start_datetime": "2026-04-01",
+              "end_datetime": "2026-05-01"
+            },
+            {
+              "notice_id": 46615,
+              "location_index": 0,
+              "service_type": "SECONDARY_INPATH_FIRM",
+              "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+              "restriction_value": 55.0,
+              "restriction_unit": "PCT_MDQ",
+              "flow_direction": "EASTBOUND",
+              "start_datetime": "2026-04-01",
+              "end_datetime": "2026-05-01"
+            },
+            {
+              "notice_id": 46615,
+              "location_index": 0,
+              "service_type": "AOR_ITS",
+              "restriction_type": "UNAVAILABLE",
+              "restriction_value": null,
+              "restriction_unit": null,
+              "flow_direction": "EASTBOUND",
+              "start_datetime": "2026-04-01",
+              "end_datetime": "2026-05-01"
+            },
+            {
+              "notice_id": 46615,
+              "location_index": 0,
+              "service_type": "SECONDARY_OUTPATH_FIRM",
+              "restriction_type": "UNAVAILABLE",
+              "restriction_value": null,
+              "restriction_unit": null,
+              "flow_direction": "EASTBOUND",
+              "start_datetime": "2026-04-01",
+              "end_datetime": "2026-05-01"
+            }
+          ],
+          "normalized_value": [
+            {
+              "service": "PRIMARY_FIRM",
+              "availability": "PARTIAL",
+              "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+              "status": "UNKNOWN",
+              "location_index": 0,
+              "source_start": "2026-04-01",
+              "source_end": "2026-05-01",
+              "evidence_ref": "source.fields.body"
+            },
+            {
+              "service": "SECONDARY_FIRM",
+              "availability": "PARTIAL",
+              "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+              "status": "UNKNOWN",
+              "location_index": 0,
+              "source_start": "2026-04-01",
+              "source_end": "2026-05-01",
+              "evidence_ref": "source.fields.body"
+            },
+            {
+              "service": "AOR_ITS",
+              "availability": "UNAVAILABLE",
+              "restriction_type": "UNAVAILABLE",
+              "status": "UNKNOWN",
+              "location_index": 0,
+              "source_start": "2026-04-01",
+              "source_end": "2026-05-01",
+              "evidence_ref": "source.fields.body"
+            },
+            {
+              "service": "SECONDARY_FIRM",
+              "availability": "UNAVAILABLE",
+              "restriction_type": "UNAVAILABLE",
+              "status": "UNKNOWN",
+              "location_index": 0,
+              "source_start": "2026-04-01",
+              "source_end": "2026-05-01",
+              "evidence_ref": "source.fields.body"
+            }
+          ],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "locations",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [
+            {
+              "location_index": 0,
+              "notice_id": 46615,
+              "loc_code": "10560",
+              "loc_name": "Pooling Point - Texok Zone",
+              "segment": "25",
+              "compressor_station": "302",
+              "zone": "Texok Zone",
+              "system": null
+            }
+          ],
+          "normalized_value": [
+            {
+              "kind": "LOC",
+              "value": "10560",
+              "evidence_ref": "source.fields.body"
+            },
+            {
+              "kind": "SEGMENT",
+              "value": "25",
+              "evidence_ref": "source.fields.body"
+            },
+            {
+              "kind": "COMPRESSOR_STATION",
+              "value": "302",
+              "evidence_ref": "source.fields.body"
+            },
+            {
+              "kind": "ZONE",
+              "value": "Texok Zone",
+              "evidence_ref": "source.fields.body"
+            }
+          ],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "quantities",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [
+            {
+              "notice_id": 46615,
+              "location_index": 0,
+              "service_type": "PRIMARY_FIRM",
+              "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+              "restriction_value": 55.0,
+              "restriction_unit": "PCT_MDQ",
+              "flow_direction": "EASTBOUND",
+              "start_datetime": "2026-04-01",
+              "end_datetime": "2026-05-01"
+            },
+            {
+              "notice_id": 46615,
+              "location_index": 0,
+              "service_type": "SECONDARY_INPATH_FIRM",
+              "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+              "restriction_value": 55.0,
+              "restriction_unit": "PCT_MDQ",
+              "flow_direction": "EASTBOUND",
+              "start_datetime": "2026-04-01",
+              "end_datetime": "2026-05-01"
+            },
+            {
+              "notice_id": 46615,
+              "location_index": 0,
+              "service_type": "AOR_ITS",
+              "restriction_type": "UNAVAILABLE",
+              "restriction_value": null,
+              "restriction_unit": null,
+              "flow_direction": "EASTBOUND",
+              "start_datetime": "2026-04-01",
+              "end_datetime": "2026-05-01"
+            },
+            {
+              "notice_id": 46615,
+              "location_index": 0,
+              "service_type": "SECONDARY_OUTPATH_FIRM",
+              "restriction_type": "UNAVAILABLE",
+              "restriction_value": null,
+              "restriction_unit": null,
+              "flow_direction": "EASTBOUND",
+              "start_datetime": "2026-04-01",
+              "end_datetime": "2026-05-01"
+            }
+          ],
+          "normalized_value": [
+            {
+              "kind": "SCHEDULED_TO_PCT_MDQ",
+              "unit": "PERCENT_MDQ",
+              "value": 55.0,
+              "basis": "PCT_MDQ",
+              "evidence_ref": "source.fields.body"
+            },
+            {
+              "kind": "SCHEDULED_TO_PCT_MDQ",
+              "unit": "PERCENT_MDQ",
+              "value": 55.0,
+              "basis": "PCT_MDQ",
+              "evidence_ref": "source.fields.body"
+            }
+          ],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "restriction_status",
+          "source_basis": "Notice Stat Desc header retained in notice.status",
+          "source_value": "INITIATE",
+          "normalized_value": "INITIATE",
+          "supplied_by": "source_parser",
+          "unknown_handling": "Unrecognized status has no inferred lifecycle semantics"
+        },
+        {
+          "field": "source_time",
+          "source_basis": "Source-parser header strings plus model-extracted restriction intervals; only explicit offsets converted",
+          "source_value": {
+            "effective_datetime": "2026-01-08T16:53:39",
+            "end_datetime": "2026-08-31T09:00:00",
+            "restriction_intervals": [
+              [
+                "2026-04-01",
+                "2026-05-01"
+              ],
+              [
+                "2026-04-01",
+                "2026-05-01"
+              ],
+              [
+                "2026-04-01",
+                "2026-05-01"
+              ],
+              [
+                "2026-04-01",
+                "2026-05-01"
+              ]
+            ]
+          },
+          "normalized_value": {
+            "start_time": null,
+            "end_time": null,
+            "time_basis": "UNRESOLVED",
+            "timezone_known": false
+          },
+          "supplied_by": "normalizer",
+          "unknown_handling": "Naive/date-only strings and mixed intervals remain UNRESOLVED; no gas-day or timezone inference"
+        },
+        {
+          "field": "history",
+          "source_basis": "Explicit source-parser prior header and supplied retained history",
+          "source_value": {
+            "status": "INITIATE",
+            "prior_notice_id": null
+          },
+          "normalized_value": {
+            "prior_notice_id": null,
+            "available_notice_ids": [
+              46507,
+              46604
+            ]
+          },
+          "supplied_by": "retained_history",
+          "unknown_handling": "Missing, unsupported or conflicting chain remains review; no ID-order inference"
+        }
+      ],
+      "source": {
+        "pipeline": "NGPL",
+        "media_type": "text/html",
+        "sha256": "59bceaae533f4d516e49ed540211022c32e7af7ec2df37f20a2e17ec0d86f8f3",
+        "bytes_reference": "sha256:59bceaae533f4d516e49ed540211022c32e7af7ec2df37f20a2e17ec0d86f8f3",
+        "fields": {
+          "body": "ANR/NGPL SOUTH JOLIET AT CAPACITY\n\nSEGMENT\n25 – STATION MAINTENANCE – CS 302\n\n \n\nAs\nposted on Natural's Outage Impact Report (X25-1527903), Natural will be\nperforming station maintenance at Compressor Station 302 (CS 302) located in Montgomery\nCounty, Texas (Segment 25 of Natural's Texok Zone).  Natural is required to\nreduce the maximum operating capacity eastbound into Segment 25 from Segment 26\nand Segment 22, thus limiting Natural's throughput capacity eastbound through\nCS 302 during this restriction.\n\n \n\nThe\n\nscheduling constraint will be at CS 302\n; therefore, any gas received\nwest of CS 302 for delivery east of CS 302 will be impacted for the duration of\nthe restriction.  The Pooling Point - Texok Zone (LOC 10560) is located west of\nthe constraint.  Firm transportation associated with storage withdrawals may be\nimpacted.\n\n \n\nAs\nsuch, effective for gas day \nWednesday, April 1, 2026, Timely Cycle, and\ncontinuing through gas day Friday, May 1, 2026\n, Natural will schedule\nPrimary Firm and Secondary in-path Firm transports to no less than \n55%\n\nof contract MDQ through CS 302.  AOR/ITS and Secondary out-of-path Firm\ntransports \nwill not\n be available for the duration of this restriction.\n\n \n\nThe\nstated scheduling percentage is based upon the current level of firm capacity\ncontracted for during this restriction and is subject to change based upon\noperational conditions and Shipper utilization.\n\n \n\nContinue\nto monitor Natural's interactive website for any updates.  Please contact your\nAccount Director or Scheduling Representative if you have any questions.\n\n..",
+          "effective_datetime": "2026-01-08T16:53:39",
+          "end_datetime": "2026-08-31T09:00:00",
+          "retained_extraction": "{\"locations\": [{\"compressor_station\": \"302\", \"loc_code\": \"10560\", \"loc_name\": \"Pooling Point - Texok Zone\", \"location_index\": 0, \"notice_id\": 46615, \"segment\": \"25\", \"system\": null, \"zone\": \"Texok Zone\"}], \"restrictions\": [{\"end_datetime\": \"2026-05-01\", \"flow_direction\": \"EASTBOUND\", \"location_index\": 0, \"notice_id\": 46615, \"restriction_type\": \"SCHEDULED_TO_PCT_MDQ\", \"restriction_unit\": \"PCT_MDQ\", \"restriction_value\": 55.0, \"service_type\": \"PRIMARY_FIRM\", \"start_datetime\": \"2026-04-01\"}, {\"end_datetime\": \"2026-05-01\", \"flow_direction\": \"EASTBOUND\", \"location_index\": 0, \"notice_id\": 46615, \"restriction_type\": \"SCHEDULED_TO_PCT_MDQ\", \"restriction_unit\": \"PCT_MDQ\", \"restriction_value\": 55.0, \"service_type\": \"SECONDARY_INPATH_FIRM\", \"start_datetime\": \"2026-04-01\"}, {\"end_datetime\": \"2026-05-01\", \"flow_direction\": \"EASTBOUND\", \"location_index\": 0, \"notice_id\": 46615, \"restriction_type\": \"UNAVAILABLE\", \"restriction_unit\": null, \"restriction_value\": null, \"service_type\": \"AOR_ITS\", \"start_datetime\": \"2026-04-01\"}, {\"end_datetime\": \"2026-05-01\", \"flow_direction\": \"EASTBOUND\", \"location_index\": 0, \"notice_id\": 46615, \"restriction_type\": \"UNAVAILABLE\", \"restriction_unit\": null, \"restriction_value\": null, \"service_type\": \"SECONDARY_OUTPATH_FIRM\", \"start_datetime\": \"2026-04-01\"}]}"
+        }
+      },
+      "notice": {
+        "notice_id": 46615,
+        "prior_notice_id": null,
+        "status": "INITIATE",
+        "notice_type": "MAINTENANCE"
+      },
+      "facts": {
+        "content_kind": "RESTRICTION",
+        "services": [
+          "AOR_ITS",
+          "PRIMARY_FIRM",
+          "SECONDARY_FIRM"
+        ],
+        "availability": "UNKNOWN",
+        "locations": [
+          {
+            "kind": "LOC",
+            "value": "10560",
+            "evidence_ref": "source.fields.body"
+          },
+          {
+            "kind": "SEGMENT",
+            "value": "25",
+            "evidence_ref": "source.fields.body"
+          },
+          {
+            "kind": "COMPRESSOR_STATION",
+            "value": "302",
+            "evidence_ref": "source.fields.body"
+          },
+          {
+            "kind": "ZONE",
+            "value": "Texok Zone",
+            "evidence_ref": "source.fields.body"
+          }
+        ],
+        "quantities": [
+          {
+            "kind": "SCHEDULED_TO_PCT_MDQ",
+            "unit": "PERCENT_MDQ",
+            "value": 55.0,
+            "basis": "PCT_MDQ",
+            "evidence_ref": "source.fields.body"
+          },
+          {
+            "kind": "SCHEDULED_TO_PCT_MDQ",
+            "unit": "PERCENT_MDQ",
+            "value": 55.0,
+            "basis": "PCT_MDQ",
+            "evidence_ref": "source.fields.body"
+          }
+        ],
+        "operational_assertions": [
+          "ANR/NGPL SOUTH JOLIET AT CAPACITY SEGMENT 25 – STATION MAINTENANCE – CS 302 As posted on Natural's Outage Impact Report (X25-1527903), Natural will be performing station maintenance at Compressor Station 302 (CS 302) located in Montgomery County, Texas (Segment 25 of Natural's Texok Zone). Natural is required to reduce the maximum operating capacity eastbound into Segment 25 from Segment 26 and Segment 22, thus limiting Natural's throughput capacity eastbound through CS 302 during this restriction. The scheduling constraint will be at CS 302 ; therefore, any gas received west of CS 302 for delivery east of CS 302 will be impacted for the duration of the restriction. The Pooling Point - Texok Zone (LOC 10560) is located west of the constraint. Firm transportation associated with storage withdrawals may be impacted. As such, effective for gas day Wednesday, April 1, 2026, Timely Cycle, and continuing through gas day Friday, May 1, 2026 , Natural will schedule Primary Firm and Secondary in-path Firm transports to no less than 55% of contract MDQ through CS 302. AOR/ITS and Secondary out-of-path Firm transports will not be available for the duration of this restriction. The stated scheduling percentage is based upon the current level of firm capacity contracted for during this restriction and is subject to change based upon operational conditions and Shipper utilization. Continue to monitor Natural's interactive website for any updates. Please contact your Account Director or Scheduling Representative if you have any questions. .."
+        ],
+        "start_time": null,
+        "end_time": null,
+        "time_basis": "UNRESOLVED",
+        "restrictions": [
+          {
+            "service": "PRIMARY_FIRM",
+            "availability": "PARTIAL",
+            "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+            "status": "UNKNOWN",
+            "location_index": 0,
+            "source_start": "2026-04-01",
+            "source_end": "2026-05-01",
+            "evidence_ref": "source.fields.body"
+          },
+          {
+            "service": "SECONDARY_FIRM",
+            "availability": "PARTIAL",
+            "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+            "status": "UNKNOWN",
+            "location_index": 0,
+            "source_start": "2026-04-01",
+            "source_end": "2026-05-01",
+            "evidence_ref": "source.fields.body"
+          },
+          {
+            "service": "AOR_ITS",
+            "availability": "UNAVAILABLE",
+            "restriction_type": "UNAVAILABLE",
+            "status": "UNKNOWN",
+            "location_index": 0,
+            "source_start": "2026-04-01",
+            "source_end": "2026-05-01",
+            "evidence_ref": "source.fields.body"
+          },
+          {
+            "service": "SECONDARY_FIRM",
+            "availability": "UNAVAILABLE",
+            "restriction_type": "UNAVAILABLE",
+            "status": "UNKNOWN",
+            "location_index": 0,
+            "source_start": "2026-04-01",
+            "source_end": "2026-05-01",
+            "evidence_ref": "source.fields.body"
+          }
+        ]
+      },
+      "history": [
+        {
+          "facts": {
+            "availability": "UNKNOWN",
+            "content_kind": "RESTRICTION",
+            "end_time": null,
+            "locations": [
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "SEGMENT",
+                "value": "14"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "COMPRESSOR_STATION",
+                "value": "113"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "ZONE",
+                "value": "Market Delivery Zone"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "SYSTEM",
+                "value": "Amarillo Mainline System"
+              }
+            ],
+            "operational_assertions": [
+              "SEGMENT 17 FORCE MAJURE SEGMENT 14 WESTBOUND – CS 113 – PRIMARY ONLY Due to current operating conditions, Natural is at operating capacity for transports westbound on the Amarillo Mainline System through Compressor Station 113 located in Will County, IL (Natural's Market Delivery Zone). Therefore, effective for gas day, Wednesday, December 3, 2025, Timely Cycle and continuing until further notice , only Primary Firm and Secondary in-path Firm transports will be scheduled. AOR/ITS and Secondary out-of-path Firm transports will not be available. Please contact your Account Director or Scheduling Representative if you have any questions. .."
+            ],
+            "quantities": [],
+            "restrictions": [
+              {
+                "availability": "PARTIAL",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+                "service": "PRIMARY_FIRM",
+                "source_end": "TBD",
+                "source_start": "2025-12-03",
+                "status": "UNKNOWN"
+              },
+              {
+                "availability": "PARTIAL",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+                "service": "SECONDARY_FIRM",
+                "source_end": "TBD",
+                "source_start": "2025-12-03",
+                "status": "UNKNOWN"
+              },
+              {
+                "availability": "UNAVAILABLE",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "UNAVAILABLE",
+                "service": "AOR_ITS",
+                "source_end": "TBD",
+                "source_start": "2025-12-03",
+                "status": "UNKNOWN"
+              },
+              {
+                "availability": "UNAVAILABLE",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "UNAVAILABLE",
+                "service": "SECONDARY_FIRM",
+                "source_end": "TBD",
+                "source_start": "2025-12-03",
+                "status": "UNKNOWN"
+              }
+            ],
+            "services": [
+              "AOR_ITS",
+              "PRIMARY_FIRM",
+              "SECONDARY_FIRM"
+            ],
+            "start_time": null,
+            "time_basis": "UNRESOLVED"
+          },
+          "notice": {
+            "notice_id": 46507,
+            "notice_type": "CAPACITY CONSTRAINT",
+            "prior_notice_id": null,
+            "status": "INITIATE"
+          },
+          "source_sha256": "6cc6c6ea924d52f09130dc83de3d1a65a25f75982750faddb57e77c5d7f6d084"
+        },
+        {
+          "facts": {
+            "availability": "UNKNOWN",
+            "content_kind": "INFORMATIONAL",
+            "end_time": null,
+            "locations": [],
+            "operational_assertions": [
+              "Pursuant to its Tariff (GT&C Section 5.2 (c) (5)), Natural has updated its list of PHMSA Mega Rule Eligible Projects set forth on Appendix F to its Settlement in Docket No. RP22-1222. See the latest posted notice at Informational Postings :: Natural Gas Pipeline Company of America, L.L.C. under Regulatory, which will contain an updated Appendix F. Any questions or concerns regarding the updated Appendix F should be directed to Rahul Singh, Director of Regulatory, at Rahul.singh@kindermorgan.com . .."
+            ],
+            "quantities": [],
+            "restrictions": [],
+            "services": [],
+            "start_time": null,
+            "time_basis": "UNRESOLVED"
+          },
+          "notice": {
+            "notice_id": 46604,
+            "notice_type": "OTHER",
+            "prior_notice_id": null,
+            "status": "INITIATE"
+          },
+          "source_sha256": "0161fbbc08714add7d3e3742d05667ba6380e07fe60549471ab3d6f7f758acfc"
+        }
+      ],
+      "reference_time": "2026-09-26T19:17:22.368165+00:00",
+      "evidence": {
+        "extraction_usable": true,
+        "helpers_usable": true,
+        "contradictory": false,
+        "references": [
+          "source.fields.body"
+        ]
+      }
+    },
+    "normalization_gaps": [
+      "Mixed availability retained per restriction; scalar UNKNOWN",
+      "Unresolved source timestamp: 2026-04-01",
+      "Unresolved source timestamp: 2026-05-01"
+    ],
+    "actionability": {
+      "status": "UNRESOLVED",
+      "source_timezone_known": false,
+      "source_timezone_status": "UNKNOWN",
+      "automatic_current_future": false,
+      "recommendation_authorized": false
+    },
+    "classifier_decision": {
+      "notice_id": 46615,
+      "source_sha256": "59bceaae533f4d516e49ed540211022c32e7af7ec2df37f20a2e17ec0d86f8f3",
+      "classification": "SIGNAL_CANDIDATE",
+      "disposition": "CANDIDATE_ONLY",
+      "recommendation_allowed": false,
+      "reason_codes": [
+        "BR-FIRM",
+        "FIRM_CANDIDATE"
+      ],
+      "evidence_refs": [
+        "sha256:0161fbbc08714add7d3e3742d05667ba6380e07fe60549471ab3d6f7f758acfc",
+        "sha256:59bceaae533f4d516e49ed540211022c32e7af7ec2df37f20a2e17ec0d86f8f3",
+        "sha256:6cc6c6ea924d52f09130dc83de3d1a65a25f75982750faddb57e77c5d7f6d084",
+        "source.fields.body"
+      ]
+    },
+    "matched_rule": "BR-FIRM",
+    "classification": "SIGNAL_CANDIDATE",
+    "disposition": "CANDIDATE_ONLY",
+    "reason": "FIRM_CANDIDATE",
+    "reason_codes": [
+      "BR-FIRM",
+      "FIRM_CANDIDATE"
+    ],
+    "recommendation_allowed": false,
+    "candidate_classification": true,
+    "authorization": null,
+    "publication_disposition": "REVIEW_REQUIRED",
+    "publication_reason": "UNRESOLVED_SOURCE_TIME",
+    "initial_decision": false,
+    "publication_attempted": false,
+    "delivery_acknowledged": null,
+    "event_key": "NGPL:46615"
+  },
+  "recommendation_count": 0,
+  "replay_recommendation_count": 0,
+  "authorization": "None; evaluation labels never authorize publication"
+}

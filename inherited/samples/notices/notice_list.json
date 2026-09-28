@@ -1,0 +1,202 @@
+[
+  {
+    "index": 0,
+    "page_num": 1,
+    "notice_id": "47215",
+    "notice_type": "MAINTENANCE",
+    "subject": "OUTAGE IMPACT REPORT 9-10-26",
+    "element_id": "ctl00_WebSplitter1_tmpl1_ContentPlaceHolder1_DGNotices_it6_1_lnkbtnDownload"
+  },
+  {
+    "index": 1,
+    "page_num": 1,
+    "notice_id": "47213",
+    "notice_type": "MAINTENANCE",
+    "subject": "SEGMENT 15-CS801-STA MAINT UPD2",
+    "element_id": "ctl00_WebSplitter1_tmpl1_ContentPlaceHolder1_DGNotices_it6_3_lnkbtnDownload"
+  },
+  {
+    "index": 2,
+    "page_num": 1,
+    "notice_id": "47202",
+    "notice_type": "MAINTENANCE",
+    "subject": "SEGMENT 20 - GC #1 M/L -ILI TOOL RUNS",
+    "element_id": "ctl00_WebSplitter1_tmpl1_ContentPlaceHolder1_DGNotices_it6_10_lnkbtnDownload"
+  },
+  {
+    "index": 3,
+    "page_num": 1,
+    "notice_id": "47200",
+    "notice_type": "MAINTENANCE",
+    "subject": "OUTAGE IMPACT REPORT 9-3-26",
+    "element_id": "ctl00_WebSplitter1_tmpl1_ContentPlaceHolder1_DGNotices_it6_12_lnkbtnDownload"
+  },
+  {
+    "index": 4,
+    "page_num": 1,
+    "notice_id": "47192",
+    "notice_type": "FORCE MAJEURE",
+    "subject": "FORCE MAJEURE - COMP STA 168 LIFTED",
+    "element_id": "ctl00_WebSplitter1_tmpl1_ContentPlaceHolder1_DGNotices_it6_16_lnkbtnDownload"
+  },
+  {
+    "index": 5,
+    "page_num": 1,
+    "notice_id": "47187",
+    "notice_type": "MAINTENANCE",
+    "subject": "OUTAGE IMPACT REPORT 8-27-26",
+    "element_id": "ctl00_WebSplitter1_tmpl1_ContentPlaceHolder1_DGNotices_it6_21_lnkbtnDownload"
+  },
+  {
+    "index": 6,
+    "page_num": 1,
+    "notice_id": "47180",
+    "notice_type": "GAS QUALITY",
+    "subject": "GAS QUALITY-ONEOK CUSTER(LOC5388)-LIFTED",
+    "element_id": "ctl00_WebSplitter1_tmpl1_ContentPlaceHolder1_DGNotices_it6_27_lnkbtnDownload"
+  },
+  {
+    "index": 7,
+    "page_num": 1,
+    "notice_id": "47175",
+    "notice_type": "OPERATIONAL ALERT",
+    "subject": "SEG 39 - MORAINE LAT PIPE INTEG",
+    "element_id": "ctl00_WebSplitter1_tmpl1_ContentPlaceHolder1_DGNotices_it6_30_lnkbtnDownload"
+  },
+  {
+    "index": 8,
+    "page_num": 1,
+    "notice_id": "47173",
+    "notice_type": "MAINTENANCE",
+    "subject": "OUTAGE IMPACT REPORT 8-20-26",
+    "element_id": "ctl00_WebSplitter1_tmpl1_ContentPlaceHolder1_DGNotices_it6_31_lnkbtnDownload"
+  },
+  {
+    "index": 9,
+    "page_num": 1,
+    "notice_id": "47168",
+    "notice_type": "FORCE MAJEURE",
+    "subject": "FORCE MAJEURE - COMP STA 168",
+    "element_id": "ctl00_WebSplitter1_tmpl1_ContentPlaceHolder1_DGNotices_it6_32_lnkbtnDownload"
+  },
+  {
+    "index": 10,
+    "page_num": 1,
+    "notice_id": "47166",
+    "notice_type": "GAS QUALITY",
+    "subject": "GAS QUALITY - ONEOK CUSTER (LOC 5388)",
+    "element_id": "ctl00_WebSplitter1_tmpl1_ContentPlaceHolder1_DGNotices_it6_34_lnkbtnDownload"
+  },
+  {
+    "index": 11,
+    "page_num": 1,
+    "notice_id": "47158",
+    "notice_type": "MAINTENANCE",
+    "subject": "OUTAGE IMPACT REPORT 8-13-26",
+    "element_id": "ctl00_WebSplitter1_tmpl1_ContentPlaceHolder1_DGNotices_it6_41_lnkbtnDownload"
+  },
+  {
+    "index": 12,
+    "page_num": 1,
+    "notice_id": "47157",
+    "notice_type": "MAINTENANCE",
+    "subject": "SEGMENT 15-CS801-STA MAINT UPD1",
+    "element_id": "ctl00_WebSplitter1_tmpl1_ContentPlaceHolder1_DGNotices_it6_42_lnkbtnDownload"
+  },
+  {
+    "index": 13,
+    "page_num": 1,
+    "notice_id": "47154",
+    "notice_type": "MAINTENANCE",
+    "subject": "SEGMENT 3 - M\\u0026M LATERAL - PRIM ONLY",
+    "element_id": "ctl00_WebSplitter1_tmpl1_ContentPlaceHolder1_DGNotices_it6_45_lnkbtnDownload"
+  },
+  {
+    "index": 14,
+    "page_num": 1,
+    "notice_id": "47153",
+    "notice_type": "FORCE MAJEURE",
+    "subject": "FORCE MAJEURE-M\\u0026M LAT MLV2-3 LIFT",
+    "element_id": "ctl00_WebSplitter1_tmpl1_ContentPlaceHolder1_DGNotices_it6_46_lnkbtnDownload"
+  },
+  {
+    "index": 15,
+    "page_num": 1,
+    "notice_id": "47147",
+    "notice_type": "MAINTENANCE",
+    "subject": "OUTAGE IMPACT REPORT 8-6-26",
+    "element_id": "ctl00_WebSplitter1_tmpl1_ContentPlaceHolder1_DGNotices_it6_52_lnkbtnDownload"
+  },
+  {
+    "index": 16,
+    "page_num": 1,
+    "notice_id": "47145",
+    "notice_type": "MAINTENANCE",
+    "subject": "SEG 8 - UNIT MAINT - CS 168",
+    "element_id": "ctl00_WebSplitter1_tmpl1_ContentPlaceHolder1_DGNotices_it6_53_lnkbtnDownload"
+  },
+  {
+    "index": 17,
+    "page_num": 1,
+    "notice_id": "47144",
+    "notice_type": "MAINTENANCE",
+    "subject": "SEG 13 - STATION MAINT - CS 108",
+    "element_id": "ctl00_WebSplitter1_tmpl1_ContentPlaceHolder1_DGNotices_it6_54_lnkbtnDownload"
+  },
+  {
+    "index": 18,
+    "page_num": 1,
+    "notice_id": "47143",
+    "notice_type": "RATES AND CHARGES",
+    "subject": "Fuel/GLU Retention Factors",
+    "element_id": "ctl00_WebSplitter1_tmpl1_ContentPlaceHolder1_DGNotices_it6_55_lnkbtnDownload"
+  },
+  {
+    "index": 19,
+    "page_num": 1,
+    "notice_id": "47137",
+    "notice_type": "OPERATIONAL ALERT",
+    "subject": "SEG 14 - DEPUE LATERAL - PIPE INTEG",
+    "element_id": "ctl00_WebSplitter1_tmpl1_ContentPlaceHolder1_DGNotices_it6_58_lnkbtnDownload"
+  },
+  {
+    "index": 20,
+    "page_num": 1,
+    "notice_id": "47125",
+    "notice_type": "MAINTENANCE",
+    "subject": "OUTAGE IMPACT REPORT 7-30-26",
+    "element_id": "ctl00_WebSplitter1_tmpl1_ContentPlaceHolder1_DGNotices_it6_64_lnkbtnDownload"
+  },
+  {
+    "index": 21,
+    "page_num": 1,
+    "notice_id": "47124",
+    "notice_type": "FORCE MAJEURE",
+    "subject": "FORCE MAJEURE-M\\u0026M LAT MLV2 TO MLV3-PT",
+    "element_id": "ctl00_WebSplitter1_tmpl1_ContentPlaceHolder1_DGNotices_it6_65_lnkbtnDownload"
+  },
+  {
+    "index": 22,
+    "page_num": 1,
+    "notice_id": "47123",
+    "notice_type": "OPERATIONAL ALERT",
+    "subject": "SEG 18 - THOMPSONVILLE LAT - PIPE INTEG",
+    "element_id": "ctl00_WebSplitter1_tmpl1_ContentPlaceHolder1_DGNotices_it6_66_lnkbtnDownload"
+  },
+  {
+    "index": 23,
+    "page_num": 1,
+    "notice_id": "47122",
+    "notice_type": "MAINTENANCE",
+    "subject": "SEG 26-GC#3 ML-ILI TOOL RUNS-POSTPONE",
+    "element_id": "ctl00_WebSplitter1_tmpl1_ContentPlaceHolder1_DGNotices_it6_67_lnkbtnDownload"
+  },
+  {
+    "index": 24,
+    "page_num": 1,
+    "notice_id": "47121",
+    "notice_type": "FORCE MAJEURE",
+    "subject": "FORCE MAJEURE-M\\u0026M LATERAL-SEG3-LIFTED",
+    "element_id": "ctl00_WebSplitter1_tmpl1_ContentPlaceHolder1_DGNotices_it6_68_lnkbtnDownload"
+  }
+]

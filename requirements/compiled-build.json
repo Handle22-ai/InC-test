@@ -1,0 +1,13 @@
+{
+  "spec_sha256": "4448a6f9e9ee3841e0086a8e556c21bbd584efc9167742a831154f70e3e18a8e",
+  "files": {
+    "requirements/behavior.yaml": "890dd52e70abd3a8258ce424053769824dc3468ab86d0577a53d1d0747dc241a",
+    "requirements/requirements.yaml": "330ad20502efa8d1bcb263cd442e8adb7973acc3c2972dff42e95cfed3766849",
+    "requirements/signal-safety.yaml": "39a379321fd6664486497241a7acabf5877d68dd0d71a743ef83aca36e7574de",
+    "requirements/replay-expectations.json": "f8263ac2396c7041eeeb61463d4a025a1d922c205025a2da25aa688beb3d44f3",
+    "requirements/normalized-input.schema.json": "a648bc9b58cddda4cdc33e37c19cccd57d815f84387d512bacc1d9f252ebf598",
+    "requirements/normalized-output.schema.json": "f1f538f0c39199dd34225ba646faebaad86ee24c6a21c2d7e5305ae4602402bc",
+    "docs/signal-contract.md": "582094e3cffd24de1669eb14c2ac2e42e95a0e8a880c35abc9176519d9563abb",
+    "docs/system-contract.md": "2d9b2c2becad76cec28a56969d592d48a76d79a83061ef5cac1b00b80849b51e"
+  }
+}

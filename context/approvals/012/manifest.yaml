@@ -1,0 +1,684 @@
+version: 14
+checkpoint: Derivation integrity corrected under ADR 008; BR-FIRM candidate-only, BR-SEMANTICS ERROR restored;
+  successor builder not launched
+baseline_commit: 765442763efef85b72b1c0abf25c853177684f3a
+upstream_provenance: unknown; user approved snapshot initialization
+contract: spec.md
+requirements: requirements/requirements.yaml
+dataset: requirements/dataset.json
+runtime: artifacts/runtime_requirements.md
+components: artifacts/repo_map.md
+assumptions: context/assumptions.md
+proposals: context/proposals/v5-lifecycle-completion.md
+preflight: evidence/preflight.md
+summary: evidence/summary.md
+failure_candidates: context/failures/
+regression_candidates: context/regressions/
+code_reads: evidence/code_reads.md
+required_gates:
+- contracts_and_invariants
+- trading_behavior
+- regression_change
+next_phase: Review current evidence and authorize private delivery/access when desired; no automatic maintenance
+  rerun or new implementation cycle.
+context_selection: make context TASK=notice-snapshot-maintenance
+engineering_verification: evidence/integrity/20260927T021057.685073Z/report.md
+live_cli_smoke: evidence/e2e/20260927T000925.415256Z/report.md
+current_review: evidence/evaluator-reviews/20260927T003830.293495Z/report.md
+experiment: variants/impact-budget-512/experiment.json
+candidate_run: evidence/candidates/impact-budget-512/full/20260926T191722.363460Z
+proposed_rebuild: context/proposals/rebuild-notice-snapshot-store.md
+code_read_updates: evidence/code_reads.md
+global_context:
+- path: AGENTS.md
+  status: active
+  why: Operating charter and authority hierarchy.
+  include_content: true
+- path: ARCHITECTURE_AND_CODE_QUALITY.md
+  status: active
+  why: Engineering quality and three-gate evidence responsibilities.
+  include_content: true
+- path: spec.md
+  status: authoritative
+  why: Complete behavioral contract; selected rows below do not override it.
+  include_content: true
+- path: context/assumptions.md
+  status: owner-approved-bounded
+  why: Current approved assessment assumptions, explicit scope and remaining limits; historical proposed
+    wording is preserved.
+  include_content: true
+- path: context/decisions/001-baseline-snapshot.md
+  status: approved
+  why: Preserved inherited provenance and Git approval.
+  include_content: true
+- path: context/decisions/002-controlled-token-experiment.md
+  status: approved
+  why: Separate token experiment and its finite scope.
+  include_content: true
+- path: context/decisions/003-notice-snapshot-scope.md
+  status: historical-approved-scope
+  why: Storage behavior and approved scope remain; its pending lifecycle-policy references are superseded
+    prospectively by ADR 006.
+  include_content: true
+- path: context/decisions/004-capture-reference-extension.md
+  status: approved-technical-extension
+  why: User-authorized optional metadata change; its historical contract is preserved. ADR 006 now governs
+    the current lifecycle policy.
+  include_content: true
+- path: context/decisions/005-synthetic-capture-reference-alias.md
+  status: approved-synthetic-technical-extension
+  why: Explicit user alias-read contract; canonical writes and business requirements unchanged.
+  include_content: true
+- path: docs/challenge/InC_Challenge_Tech_Lead_The_Harness_v5.pdf
+  status: source
+  why: Original v5 submission obligations; optional work is not promoted into mandatory scope.
+  include_content: false
+- path: harness.md
+  status: current
+  why: Current derivation, acceptance, cost/alternatives and first-day workflow.
+  include_content: true
+- path: evidence/summary.md
+  status: current
+  why: Current outcomes and preserved historical links; no full-completion claim.
+  include_content: true
+- path: evidence/coverage.md
+  status: current
+  why: Current requirement coverage and unresolved behavior.
+  include_content: true
+- path: submission/replay-plan.md
+  status: historical-observation
+  why: Historical preparation/closure retained; current recovered worker and correction status is selected
+    separately.
+  include_content: false
+- path: context/proposals/v5-lifecycle-completion.md
+  status: disposition
+  why: Proposal disposition; ADR 006 and current spec supersede the pending wording with approved amendments.
+  include_content: true
+- path: README.md
+  status: current
+  why: Reviewer setup/demo/check commands, offline boundaries, quality scope and limitations.
+  include_content: true
+- path: evidence/e2e/20260927T000925.415256Z/report.md
+  status: observed
+  why: Separately authorized saved-HTML and live-fetch CLI smoke runs; bounded real API execution evidence,
+    inherited store and PDF/provenance limitations; not full application acceptance.
+  include_content: true
+- path: context/decisions/006-assessment-lifecycle-policy.md
+  status: owner-approved
+  why: Exact amended lifecycle authority and prospective enforcement; does not implement deferred subsystems.
+  include_content: true
+- path: requirements/oracle-support.json
+  status: source-verified-scoped
+  why: Traceable narrow annotation support and synthetic revision boundaries; approval is not model correctness.
+  include_content: true
+- path: evidence/policy/20260927T010449.918426Z/owner-approval.txt
+  status: owner-instruction
+  why: Verbatim authorization and amendments; no InCommodities/desk approval and no deferred-subsystem
+    implementation.
+  include_content: true
+- path: context/failures/harness-integrity.md
+  status: observed
+  why: Repeated failure probes and bounded learning; explicitly indexed, not automatic discovery.
+  include_content: true
+- path: evidence/integrity/20260927T021057.685073Z/report.md
+  status: observed
+  why: Current integrity correction, identities, receipts, limitations and authority boundary.
+  include_content: true
+- path: requirements/capture-registry.json
+  status: consistency-reference
+  why: Pinned observed capture/source bytes, separate from the approved label oracle; not authenticated
+    approval.
+  include_content: true
+- path: context/authority-reference.json
+  status: consistency-reference
+  why: Local exact-content/status consistency only; owner review remains outside the worker-writable boundary.
+  include_content: true
+- path: evidence/closure/20260927T030343.032621Z/owner-decision.md
+  status: observed
+  why: New explicit R1 snapshot approval then separate R2 registry delta; local record, not owner authentication.
+  include_content: true
+- path: evidence/closure/20260927T030343.032621Z/owner-approval.txt
+  status: observed
+  why: Exact new owner instruction and bounds; no InCommodities/production acceptance.
+  include_content: true
+- path: evidence/closure/20260927T030343.032621Z/report.md
+  status: historical-observation
+  why: Historical preparation/closure retained; current recovered worker and correction status is selected
+    separately.
+  include_content: false
+- path: context/bounded-correction-learning.md
+  status: observed
+  why: Current bounded corrections, maintenance entry and qualified worker recovery; no new policy.
+  include_content: true
+- path: submission/maintenance-recovery/20260927T220352Z/README.md
+  status: observed
+  why: Actual recovered launch/check/context results and isolation limits; historical replay kept separate.
+  include_content: true
+- path: docs/signal-contract.md
+  status: derived
+  why: Business meaning, conflicts and bounded signal implementation
+  include_content: true
+- path: requirements/signal-safety.yaml
+  status: derived
+  why: Partial executable scenario; full deferred requirements stay unknown
+  include_content: true
+- path: rebuilt/signals.py
+  status: implementation
+  why: Separate candidate owns recommendation state; never transplant worker code
+  include_content: false
+- path: docs/system-contract.md
+  status: derived
+  why: Current supported interface, rule derivation, open choice or linked failure
+  include_content: true
+- path: requirements/behavior.yaml
+  status: derived
+  why: Current supported interface, rule derivation, open choice or linked failure
+  include_content: false
+- path: requirements/normalized-input.schema.json
+  status: derived
+  why: Current supported interface, rule derivation, open choice or linked failure
+  include_content: false
+- path: requirements/normalized-output.schema.json
+  status: derived
+  why: Current supported interface, rule derivation, open choice or linked failure
+  include_content: false
+- path: context/proposals/normalized-classifier-rule.md
+  status: disposition
+  why: Original proposal and new ADR 007 disposition; historical pending evidence preserved.
+  include_content: false
+- path: context/failures/spec-evidence-current.md
+  status: observed
+  why: Current supported interface, rule derivation, open choice or linked failure
+  include_content: true
+- path: context/decisions/007-br-firm-proposal-classification.md
+  status: owner-approved
+  why: BR-FIRM proposal-only approval; unauthorized semantic disposition interpretation corrected by ADR
+    008.
+  include_content: true
+- path: evidence/br-firm/20260928T003612Z/owner-approval.txt
+  status: owner-instruction
+  why: New explicit owner decision; repository copy does not authenticate ownership.
+  include_content: false
+- path: context/decisions/008-derivation-integrity-correction.md
+  status: owner-approved
+  why: Registered exact policy trace or current owner-requested derivation-integrity correction; not authenticated
+    ownership.
+  include_content: true
+- path: context/decisions/006-assessment-lifecycle-policy.record.json
+  status: owner-approved
+  why: Registered exact policy trace or current owner-requested derivation-integrity correction; not authenticated
+    ownership.
+  include_content: false
+- path: evidence/derivation-integrity/20260928T011856Z/owner-request.txt
+  status: owner-instruction
+  why: Registered exact policy trace or current owner-requested derivation-integrity correction; not authenticated
+    ownership.
+  include_content: false
+- path: context/decisions/009-normalized-harness-hardening.md
+  status: owner-approved
+  include_content: true
+  why: Current owner-requested bounded governance and evidence; pending findings cannot promote themselves.
+- path: evidence/derivation-integrity/20260928T011856Z/structural-owner-request.txt
+  status: owner-instruction
+  include_content: false
+  why: Current owner-requested bounded governance and evidence; pending findings cannot promote themselves.
+- path: context/decisions/006-assumptions.record.json
+  status: owner-approved
+  include_content: false
+  why: Current owner-requested bounded governance and evidence; pending findings cannot promote themselves.
+- path: context/decisions/009-context-index.record.json
+  status: owner-approved
+  include_content: false
+  why: Current owner-requested bounded governance and evidence; pending findings cannot promote themselves.
+- path: context/assumptions-register.json
+  status: consistency-reference
+  include_content: false
+  why: Current owner-requested bounded governance and evidence; pending findings cannot promote themselves.
+- path: evidence/CURRENT.md
+  status: historical-observation
+  include_content: false
+  why: Historical pointer retained unchanged; current gate prints its run-scoped CURRENT.md.
+- path: context/decisions/010-integrated-release-hardening.md
+  status: owner-approved
+  include_content: true
+  why: Owner-requested integrated runtime, exact requirement revisions and complete evaluation identity.
+- path: context/decisions/010-requirement-baseline.record.json
+  status: owner-approved
+  include_content: false
+  why: Owner-requested integrated runtime, exact requirement revisions and complete evaluation identity.
+- path: context/decisions/010-context-index.record.json
+  status: owner-approved
+  include_content: false
+  why: Owner-requested integrated runtime, exact requirement revisions and complete evaluation identity.
+- path: evidence/release-hardening/20260928T024253Z/owner-request.txt
+  status: owner-instruction
+  include_content: false
+  why: Owner-requested integrated runtime, exact requirement revisions and complete evaluation identity.
+- path: requirements/requirement-revisions.json
+  status: consistency-reference
+  include_content: false
+  why: Owner-requested integrated runtime, exact requirement revisions and complete evaluation identity.
+- path: requirements/trading-evidence.json
+  status: derived
+  include_content: false
+  why: Owner-requested integrated runtime, exact requirement revisions and complete evaluation identity.
+- path: context/decisions/011-classification-actionability.record.json
+  status: owner-approved
+  why: Exact owner-authorized classification/time policy and temporal approval context.
+  include_content: false
+- path: context/decisions/011-classification-actionability.md
+  status: owner-approved
+  why: Exact owner-authorized classification/time policy and temporal approval context.
+  include_content: false
+- path: context/decisions/011-boundary-approval.json
+  status: owner-approved
+  why: Exact owner-authorized classification/time policy and temporal approval context.
+  include_content: false
+- path: evidence/positive-path/20260928-owner-separation/owner-request.txt
+  status: owner-instruction
+  why: Exact owner-authorized classification/time policy and temporal approval context.
+  include_content: false
+- path: context/decisions/012-context-index.record.json
+  status: owner-approved
+  why: Exact owner-authorized classification/time policy and temporal approval context.
+  include_content: false
+- path: context/decisions/012-context-index.md
+  status: owner-approved
+  why: Exact owner-authorized classification/time policy and temporal approval context.
+  include_content: false
+excluded_context:
+- path: INITIAL_TASK.md
+  reason: First-pass work already completed; do not restart.
+- path: EXECUTION_PLAN.md
+  reason: Sequencing reference only; current approved scope controls this task.
+- path: context/proposals/rebuild-notice-snapshot-store.md
+  reason: Storage approval superseded by ADR 003; current bounded lifecycle-policy decisions are in ADR
+    006.
+- path: FRESH_SESSION_TASK.md
+  reason: Generic original exercise template; current concrete request is context/maintenance-request.md.
+- path: evidence/policy/20260927T010449.918426Z/before/context/proposals/v5-lifecycle-completion.md
+  reason: Original proposal preserved; current approved amendments in ADR 006/spec supersede its pending
+    authority.
+task_profiles:
+  notice-snapshot-rebuild:
+    binding_requirements:
+    - INPUT-001
+    - OUTPUT-003
+    - STATE-001
+    - STATE-002
+    - STATE-006
+    - HISTORY-001
+    - OBS-001
+    - OBS-002
+    - OBS-003
+    requirement_reason: 'Role denotes applicability: binding = available component checks; specified_only
+      = approved but complete checks absent; related = approved semantic scopes outside storage evaluation.
+      Enforcement remains explicit per rule.'
+    source_scope:
+    - rebuilt/snapshot.py (new typed boundary)
+    - rebuilt/store.py (new persistence)
+    - harness/storage_ports.py (new observation ports)
+    - harness/storage_evaluation.py (new paired evaluation)
+    - harness/context.py
+    - harness/gates.py (current policy checks)
+    - inherited/database.py (read-only public API; no copied insert SQL)
+    - inherited/notice_parser.py (read-only parser boundary)
+    instructions: Recover current owner-approved assessment policy and preserved learning. Storage and
+      completed metadata behavior are unchanged. Do not implement deferred subsystems, rerun model experiments,
+      or modify the completed historical replay. Historical pending-policy wording is superseded only
+      by ADR 006 for current work; the replay retains its original policy.
+    artifacts:
+    - path: artifacts/repo_map.md
+      status: observed
+      why: Component and runtime boundaries.
+      include_content: true
+    - path: requirements/requirements.yaml
+      status: derived
+      why: Exact generic strategy bindings.
+      include_content: true
+    - path: evidence/reviews/v2/storage_findings.md
+      status: observed
+      why: Preserved storage failures that motivate this task.
+      include_content: true
+    - path: context/regressions/v2-storage-probes.json
+      status: observed
+      why: Linked duplicate/revision/restart regression examples.
+      include_content: true
+    - path: evidence/reviews/v2/report.md
+      status: historical-observation
+      why: Preserved model/classification limitations and old acceptance interpretation. ADR 006 and the
+        current evidence summary govern prospective policy.
+      include_content: true
+    - path: harness/gates.py
+      status: check-implementation
+      why: Existing checks applied equally to both implementations.
+      include_content: false
+    - path: harness/adapter.py
+      status: observation-only
+      why: Observation boundary with current pre-import inventory and SDK-budget guard; application behavior
+        unchanged.
+      include_content: false
+    specified_only_requirements:
+    - INPUT-002
+    - STATE-003
+    - STATE-005
+    - HISTORY-002
+    - HISTORY-003
+    - HISTORY-004
+    - HISTORY-005
+    - SAFETY-002
+    related_requirements:
+    - OUTPUT-004
+    - OUTPUT-005
+    - OUTPUT-006
+    - STATE-004
+  notice-snapshot-maintenance:
+    binding_requirements:
+    - INPUT-001
+    - OUTPUT-003
+    - STATE-001
+    - STATE-002
+    - STATE-006
+    - HISTORY-001
+    - OBS-001
+    - OBS-002
+    - OBS-003
+    requirement_reason: 'Role denotes applicability: binding = available component checks; specified_only
+      = approved but complete checks absent; related = approved semantic scopes outside storage evaluation.
+      Enforcement remains explicit per rule.'
+    source_scope:
+    - rebuilt/snapshot.py
+    - rebuilt/store.py
+    - harness/storage_ports.py
+    - harness/storage_evaluation.py
+    - harness/context.py
+    - tests/test_storage.py
+    - context/manifest.yaml
+    - tests/test_capture_reference.py
+    - tests/test_capture_reference_alias.py
+    instructions: Recover current owner-approved assessment policy and preserved learning. Storage and
+      completed metadata behavior are unchanged. Do not implement deferred subsystems, rerun model experiments,
+      or modify the completed historical replay. Historical pending-policy wording is superseded only
+      by ADR 006 for current work; the replay retains its original policy.
+    artifacts:
+    - path: artifacts/repo_map.md
+      status: observed
+      why: Component and runtime boundaries.
+      include_content: true
+    - path: requirements/requirements.yaml
+      status: derived
+      why: Exact generic strategy bindings.
+      include_content: true
+    - path: evidence/reviews/v2/storage_findings.md
+      status: observed
+      why: Preserved storage failures that motivate this task.
+      include_content: true
+    - path: context/regressions/v2-storage-probes.json
+      status: observed
+      why: Linked duplicate/revision/restart regression examples.
+      include_content: true
+    - path: evidence/reviews/v2/report.md
+      status: historical-observation
+      why: Preserved model/classification limitations. Its next-phase sequencing is historical; current
+        report governs the checkpoint.
+      include_content: true
+    - path: harness/gates.py
+      status: check-implementation
+      why: Existing checks applied equally to both implementations.
+      include_content: false
+    - path: harness/adapter.py
+      status: observation-only
+      why: Observation boundary with current pre-import inventory and SDK-budget guard; application behavior
+        unchanged.
+      include_content: false
+    - path: context/maintenance-request.md
+      status: historical-observation
+      why: Preserved prior stage; completed-state wording is superseded by the current maintenance record.
+        Behavioral limits remain relevant.
+      include_content: true
+    - path: context/rebuild-learning.md
+      status: historical-observation
+      why: Preserved prior stage; completed-state wording is superseded by the current maintenance record.
+        Behavioral limits remain relevant.
+      include_content: true
+    - path: context/failures/rebuild-harness-protocol.md
+      status: observed
+      why: Avoid repeating harness configuration errors.
+      include_content: true
+    - path: context/regressions/rebuilt-storage.json
+      status: observed
+      why: Prior comparison and regression candidates.
+      include_content: true
+    - path: evidence/rebuild/20260926T194455.389677Z/component-final/summary.json
+      status: historical-observation
+      why: Preserved prior stage; completed-state wording is superseded by the current maintenance record.
+        Behavioral limits remain relevant.
+      include_content: true
+    - path: rebuilt/snapshot.py
+      status: implementation
+      why: Narrow maintained source scope; implementation is not the behavioral authority.
+      include_content: false
+    - path: rebuilt/store.py
+      status: implementation
+      why: Narrow maintained source scope; implementation is not the behavioral authority.
+      include_content: false
+    - path: harness/storage_ports.py
+      status: implementation
+      why: Narrow maintained source scope; implementation is not the behavioral authority.
+      include_content: false
+    - path: harness/storage_evaluation.py
+      status: implementation
+      why: Narrow maintained source scope; implementation is not the behavioral authority.
+      include_content: false
+    - path: tests/test_storage.py
+      status: implementation
+      why: Narrow maintained source scope; implementation is not the behavioral authority.
+      include_content: false
+    - path: evidence/rebuild/20260926T194455.389677Z/report.md
+      status: historical-observation
+      why: Preserved prior stage; completed-state wording is superseded by the current maintenance record.
+        Behavioral limits remain relevant.
+      include_content: true
+    - path: evidence/storage-integration/20260926T200557.123300Z/summary.json
+      status: observed
+      why: Completed single live integration; no authorization to repeat.
+      include_content: true
+    - path: context/maintenance-learning.md
+      status: observed
+      why: Current field semantics, compatibility, regression results and session limitation.
+      include_content: true
+    - path: context/regressions/capture-reference.json
+      status: observed
+      why: Separate rebuilt-only extension checks and unchanged shared regressions.
+      include_content: true
+    - path: evidence/maintenance/20260926T201903.969882Z/fresh_session.md
+      status: historical-observation
+      why: Preserved prior optional-field stage; no retrospective change to its results or session-isolation
+        statement.
+      include_content: true
+    - path: tests/test_capture_reference.py
+      status: implementation
+      why: Isolated synthetic extension checks; does not assert inherited-store support.
+      include_content: false
+    - path: evidence/storage/20260926T202230.821165Z/summary.json
+      status: historical-observation
+      why: Preserved prior optional-field stage; no retrospective change to its results or session-isolation
+        statement.
+      include_content: true
+    - path: context/format-compatibility-learning.md
+      status: observed
+      why: Current synthetic alias compatibility, canonical writes and observed isolation failure.
+      include_content: true
+    - path: context/regressions/capture-reference-alias.json
+      status: observed
+      why: Separate synthetic format checks and preserved shared regression outcomes.
+      include_content: true
+    - path: evidence/format-compatibility/20260926T204022.284775Z/report.md
+      status: observed
+      why: Current maintenance results, session metadata limits and preservation.
+      include_content: true
+    - path: tests/test_capture_reference_alias.py
+      status: implementation
+      why: Targeted rebuilt-only synthetic format compatibility tests.
+      include_content: false
+    - path: evidence/storage/20260926T204254.418956Z/summary.json
+      status: observed
+      why: Current shared gate results including persistent FAIL and UNKNOWN outcomes.
+      include_content: true
+    specified_only_requirements:
+    - INPUT-002
+    - STATE-003
+    - STATE-005
+    - HISTORY-002
+    - HISTORY-003
+    - HISTORY-004
+    - HISTORY-005
+    - SAFETY-002
+    related_requirements:
+    - OUTPUT-004
+    - OUTPUT-005
+    - OUTPUT-006
+    - STATE-004
+  recommendation-classification-maintenance:
+    binding_requirements:
+    - INPUT-001
+    - OUTPUT-001
+    - OUTPUT-002
+    - OUTPUT-003
+    - OUTPUT-004
+    - OUTPUT-005
+    - OUTPUT-006
+    - SIGNAL-001
+    - SIGNAL-002
+    - SIGNAL-003
+    - SIGNAL-004
+    - STATE-001
+    - STATE-002
+    - STATE-004
+    - STATE-006
+    - HISTORY-001
+    - SAFETY-001
+    - OBS-001
+    - OBS-002
+    - OBS-003
+    specified_only_requirements:
+    - INPUT-002
+    - STATE-003
+    - STATE-005
+    - HISTORY-002
+    - HISTORY-003
+    - HISTORY-004
+    - HISTORY-005
+    - SAFETY-002
+    related_requirements: []
+    requirement_reason: Recommendation/classification touches identity, semantics, source fields, state/refusal
+      and provenance; include every applicable obligation even where checks are unavailable.
+    core_content_paths:
+    - docs/system-contract.md
+    - docs/signal-contract.md
+    - context/decisions/007-br-firm-proposal-classification.md
+    - context/failures/spec-evidence-current.md
+    - context/decisions/008-derivation-integrity-correction.md
+    - context/decisions/009-normalized-harness-hardening.md
+    - context/decisions/010-integrated-release-hardening.md
+    - context/decisions/011-classification-actionability.md
+    - requirements/real-positive-witnesses.json
+    source_scope:
+    - rebuilt/signals.py
+    - harness/signal_evaluation.py
+    - harness/behavior_contract.py
+    - inherited/notice_parser.py
+    - inherited/llm_utils.py
+    - harness/predicates.py
+    - harness/policy_trace.py
+    - harness/specification.py
+    - requirements/normalized-witnesses.json
+    - rebuilt/normalized_classifier.py
+    - harness/context_integrity.py
+    - harness/normalized_evaluation.py
+    - harness/current_evidence.py
+    - classifier.py
+    - harness/context.py
+    - tests/test_normalized_hardening.py
+    - tests/test_derivation_integrity.py
+    - rebuilt/normalization.py
+    - harness/requirement_trace.py
+    - harness/trading_evaluation.py
+    - harness/comparison_identity.py
+    artifacts:
+    - path: requirements/real-positive-witnesses.json
+      status: derived
+      why: Source-grounded positive witnesses with unresolved timezone and no authorization.
+      include_content: true
+    instructions: Read the core interface, exact approved D1-D6, requirements and linked failures. Detail
+      artifacts are referenced with hashes rather than all embedded. BR-FIRM is owner-approved for candidate
+      proposals under ADR 007; it does not authorize materiality or recommendations. Run make evaluate-signals
+      and make evaluate-spec plus affected quality/storage checks; no live calls, old alias exercise or
+      multi-prior scratch implementation. Retained learning is nonbinding. ADR 008 restores BR-SEMANTICS
+      ERROR, makes predicates canonical data, and requires hard failure on frozen-witness contradictions.
+      Policy edits need exact matching registered owner decisions plus identity/version changes. Do not
+      silently treat wording such as remains X as permission to change X. Run make gate for bounded normalized
+      acceptance. Pending learning is automatically surfaced as UNAPPROVED, never authoritative. ADR 009
+      registers this reviewed index and the bounded repeat-qualified regression baseline. ADR 010 integrates
+      classifier semantics with publisher state and measures retained trading captures. Gate refusal must
+      stay visible; no baseline mapping or acceptance promotion is implied. Run-scoped CURRENT is generated,
+      and the tracked old CURRENT is historical. ADR 011 separates source-grounded classification from
+      unresolved-time actionability. Read the exact active D3/D5, normalizer traces and real-positive
+      witnesses. An implementation agent cannot promote a new same-change ADR; approval bytes must be
+      committed before activation. Use the primary fixed 14-label capture and report the other capture
+      separately. Baseline registration is comparison evidence, never acceptance. Verify committed current
+      evidence against candidate source content, excluding report outputs.
+storage_evaluation: evidence/correction/20260927T220352.636265Z/registered-demo
+prepared_maintenance: context/maintenance-request.md
+latest_storage_integration: evidence/storage-integration/20260926T200557.123300Z
+maintenance_exercise:
+  record: evidence/maintenance/20260926T201903.969882Z/fresh_session.md
+  implementation_status: complete
+  strict_session_isolation: 'not established: earlier messages present in supplied context'
+  starting_context: evidence/context/20260926T201719.385417Z/package.json
+  selected_prior_baseline: evidence/rebuild/20260926T194455.389677Z/component-final
+  pre_change_run: evidence/storage/20260926T201937.757441Z
+  post_change_run: evidence/storage/20260926T202230.821165Z
+  new_learning: context/maintenance-learning.md
+format_compatibility_exercise:
+  record: evidence/format-compatibility/20260926T204022.284775Z/report.md
+  status: maintenance complete
+  synthetic: true
+  session_metadata: evidence/format-compatibility/20260926T204022.284775Z/session_metadata.json
+  session_isolation: 'not satisfied: earlier coding context visibly supplied'
+  automatic_memory_setting: unknown; not changed
+  selected_prior_baseline: evidence/storage/20260926T202230.821165Z
+  pre_change_run: evidence/storage/20260926T204023.044793Z
+  post_change_run: evidence/storage/20260926T204254.418956Z
+challenge: docs/challenge/InC_Challenge_Tech_Lead_The_Harness_v5.pdf
+prepared_isolated_replay: submission/replay-plan.md
+policy_id: assessment-v2-owner-20260927
+current_policy_evidence: evidence/policy/20260927T010449.918426Z/report.md
+owner_decision: context/decisions/006-assessment-lifecycle-policy.md
+historical_evaluation: evidence/legacy/latest.json
+historical_review_machine_index: evidence/finalization/20260926T213048.692825Z/coverage.json
+historical_storage_evaluation: evidence/storage/20260926T204254.418956Z
+current_policy_evaluation: evidence/correction/20260927T220352.636265Z/policy
+historical_baseline_proposal: context/proposals/baseline-policy.md
+current_integrity_report: evidence/integrity/20260927T021057.685073Z/report.md
+integrity_owner_decision: evidence/closure/20260927T030343.032621Z/owner-decision.md
+current_closure: evidence/correction/20260927T220352.636265Z/report.md
+recovered_maintenance:
+  record: submission/maintenance-recovery/20260927T220352Z/README.md
+  evidence: submission/maintenance-recovery/20260927T220352Z/worker-evidence.zip
+  technical_status: completed reconstructed-baseline replay
+  isolation_status: partially supported by launch/observations; platform isolation unverified
+  source_transplanted: false
+signal_candidate:
+  implementation: rebuilt/signals.py
+  contract: requirements/signal-safety.yaml
+  evidence: evidence/correction/20260927T220352.636265Z/final-checks/signals-release/results.json
+  full_lifecycle_acceptance: false
+current_specification_pass: evidence/specification/20260927T234809.632974Z/report.md
+br_firm_decision: context/decisions/007-br-firm-proposal-classification.md
+current_derivation_integrity: evidence/derivation-integrity/20260928T011856Z/report.md
+current_evidence: Run-scoped CURRENT.md printed by make gate; tracked evidence/CURRENT.md is historical.
+pending_learning:
+  directory: context/pending-learning
+  status: unapproved-proposal
+  promotion: Explicit reviewed manifest/index record required

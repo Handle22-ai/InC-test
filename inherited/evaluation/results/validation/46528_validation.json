@@ -1,0 +1,14 @@
+{
+  "notice_id": 46528,
+  "notice_type": "OPERATIONAL ALERT",
+  "status": "INITIATE",
+  "prior_notice_id": null,
+  "information_only": false,
+  "is_signal": false,
+  "confidence_score": 0.0,
+  "validity_flags": [
+    "VC-3: small curtailment impact — interruptible/lower-priority service only or <10% reduction (+0.10 confidence)",
+    "VC-4: named zone(s) identified — regional constraint known (+0.20 confidence)",
+    "llm_extraction"
+  ]
+}

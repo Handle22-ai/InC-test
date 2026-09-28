@@ -1,0 +1,15 @@
+# ADR 007 — BR-FIRM proposal classification
+
+Status: owner-approved bounded assessment assumption. Authority is the new owner message in the current conversation; [verbatim repository record](../../evidence/br-firm/20260928T003612Z/owner-approval.txt) is an evidence copy, not authenticated ownership. Preserved parent candidate: 019de93564ced1b3b4766316afda0ba106eb9348.
+
+Activate the existing BR-FIRM predicate at priority 70: RESTRICTION content, documented firm_disruption and current_or_future facts, after higher-precedence format, semantic, contradiction, history, unchanged-revision and routine rules. Its only positive output is SIGNAL_CANDIDATE / CANDIDATE_ONLY with recommendation_allowed false. The conditions and precedence do not change.
+
+Firm disruption means PRIMARY_FIRM or SECONDARY_FIRM is UNAVAILABLE, or availability is PRIMARY_ONLY. Current/future means UTC time basis, known start, and absent end or end later than explicit reference time. No quantity, geography, critical status or notice type is required. This proposes a candidate, never D6 MATERIAL adjudication, outbound recommendation authorization, delivery, a numeric materiality threshold, or general lift/material-update semantics. Unknown end still requires D3 actionability before any later publication. D1–D6 text, labels and numeric bounds remain unchanged.
+
+Source basis: challenge page 5, supplied calibration examples and their actual firm-service restriction text, validity documentation's categorical unavailability/service distinctions, and existing D1–D6. Generalizing those facts into this exact finite candidate rule is an assessment assumption; not InCommodities or trading-desk production policy. Inherited weights and fallback behavior are not adopted.
+
+Correction under [ADR 008](008-derivation-integrity-correction.md): the owner's wording that unusable semantics “remains REVIEW_REQUIRED” did not explicitly authorize changing an existing ERROR action. The earlier overlay incorrectly made that change. BR-SEMANTICS is restored to UNRESOLVED / ERROR from preserved commit 019de935; BR-CONTRADICTION remains UNRESOLVED / REVIEW_REQUIRED. BR-FIRM's candidate-only approval is unchanged. The separate publisher's provider/execution-error behavior and downstream state_safety scenario remain unchanged. The original overlay and package are retained as historical evidence, not current authority for the unauthorized interpretation.
+
+Preserve the old package, blocked observations and synthetic examples. Create a new frozen package and new evaluator records with the same inputs and prospective classifications. Activation makes the two positive examples ready for evaluation, not passed by a builder. No classifier is implemented or builder launched in this application step.
+
+The original proposal is retained as [historical wording with disposition](../proposals/normalized-classifier-rule.md). Local consistency references may be updated for these approved bytes; coordinated replacement of reference and verifier remains possible. No authentication infrastructure or new approval framework is claimed.

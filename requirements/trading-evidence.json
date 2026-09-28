@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "scope": "Current integrated replay of two registered retained capture sets; finite correlated scenarios, not population accuracy. No live calls and no authorization inferred from labels.",
+  "captures": [
+    "evidence/candidates/impact-budget-512/full/20260926T191722.363460Z/results.json",
+    "evidence/legacy/20260926T185618.823020Z/results.json"
+  ]
+}

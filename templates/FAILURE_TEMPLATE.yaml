@@ -1,0 +1,23 @@
+id: FAIL-XXX
+status: active
+created: YYYY-MM-DD
+requirement_ids:
+  - STATE-003
+
+case_id: ""
+summary: ""
+
+input_ref: ""
+expected: ""
+observed: ""
+risk: ""
+
+evidence_refs: []
+
+diagnosis:
+  confidence: ""
+  suspected_domain: ""
+
+regression_created: false
+spec_gap: false
+proposal_ref: null

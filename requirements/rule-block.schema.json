@@ -1,0 +1,223 @@
+{
+  "version": 2,
+  "columns": {
+    "Format": [
+      "ANY",
+      "SUPPORTED",
+      "UNSUPPORTED"
+    ],
+    "Oracle answer": [
+      "ANY",
+      "USABLE",
+      "UNUSABLE"
+    ],
+    "Conflict": [
+      "ANY",
+      "YES",
+      "NO"
+    ],
+    "History": [
+      "ANY",
+      "COMPLETE",
+      "GAP"
+    ],
+    "Operational change": [
+      "ANY",
+      "UNCHANGED",
+      "CHANGED",
+      "UNKNOWN"
+    ],
+    "Information-only": [
+      "ANY",
+      "YES",
+      "NO"
+    ],
+    "Restriction": [
+      "ANY",
+      "KNOWN",
+      "NONE",
+      "UNKNOWN"
+    ],
+    "Service class": [
+      "ANY",
+      "FIRM_DISRUPTION",
+      "OTHER"
+    ],
+    "Restriction current": [
+      "ANY",
+      "CURRENT",
+      "ENDED",
+      "UNKNOWN"
+    ]
+  },
+  "rule_ids": [
+    "BR-FORMAT",
+    "BR-SEMANTICS",
+    "BR-CONTRADICTION",
+    "BR-HISTORY",
+    "BR-UNCHANGED",
+    "BR-ROUTINE",
+    "BR-HISTORICAL",
+    "BR-FIRM",
+    "BR-UNRESOLVED"
+  ],
+  "actions": [
+    "UNSUPPORTED_FORMAT",
+    "UNUSABLE_SEMANTICS",
+    "CONTRADICTORY_EVIDENCE",
+    "MISSING_HISTORY",
+    "UNCHANGED_REVISION",
+    "NO_OPERATIONAL_RESTRICTION",
+    "HISTORICAL_ONLY",
+    "FIRM_CANDIDATE",
+    "UNRESOLVED"
+  ],
+  "description": "Closed compiler grammar. Domain extensions require prose IDs and hand-authored checks, not predicate operators.",
+  "input_columns": {
+    "Type": [
+      "text",
+      "timestamp",
+      "identifier",
+      "integer",
+      "flag",
+      "rows",
+      "helper_pairs",
+      "number",
+      "text_or_integer",
+      "boolean"
+    ],
+    "Missing": [
+      "ERROR",
+      "UNKNOWN"
+    ],
+    "Malformed": [
+      "ERROR"
+    ],
+    "Supplier": [
+      "source_parser",
+      "model",
+      "retained_evidence"
+    ]
+  },
+  "replay_columns": {
+    "Arriving notice": [
+      "root",
+      "unchanged_revision",
+      "distinct",
+      "extraction_failure",
+      "missing_history",
+      "unauthorized",
+      "routine",
+      "unsupported_format"
+    ],
+    "Oracle answer": [
+      "valid",
+      "unusable_impact",
+      "unavailable_extraction",
+      "information_only"
+    ],
+    "Restart": [
+      "YES",
+      "NO"
+    ],
+    "Authorization": [
+      "YES",
+      "NO"
+    ]
+  },
+  "replay_ids": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "unusable-impact",
+    "unavailable-extraction",
+    "missing-history",
+    "missing-authorization",
+    "routine",
+    "unsupported-format"
+  ],
+  "replay_actions": [
+    "REPLAY_A",
+    "REPLAY_B",
+    "REPLAY_C",
+    "REPLAY_D",
+    "REPLAY_E",
+    "REPLAY_F",
+    "REPLAY_UNUSABLE_IMPACT",
+    "REPLAY_UNAVAILABLE_EXTRACTION",
+    "REPLAY_MISSING_HISTORY",
+    "REPLAY_MISSING_AUTHORIZATION",
+    "REPLAY_ROUTINE",
+    "REPLAY_UNSUPPORTED_FORMAT"
+  ],
+  "historical_columns": {
+    "Format": [
+      "ANY",
+      "SUPPORTED",
+      "UNSUPPORTED"
+    ],
+    "Oracle answer": [
+      "ANY",
+      "USABLE",
+      "UNUSABLE"
+    ],
+    "Conflict": [
+      "ANY",
+      "YES",
+      "NO"
+    ],
+    "History": [
+      "ANY",
+      "COMPLETE",
+      "GAP"
+    ],
+    "Arriving status": [
+      "ANY",
+      "INITIATE",
+      "SUPERSEDE",
+      "TERMINATE",
+      "UNKNOWN"
+    ],
+    "Prior": [
+      "ANY",
+      "PRESENT",
+      "ABSENT"
+    ],
+    "Operational change": [
+      "ANY",
+      "UNCHANGED",
+      "CHANGED",
+      "UNKNOWN"
+    ],
+    "Information-only": [
+      "ANY",
+      "YES",
+      "NO"
+    ],
+    "Restriction": [
+      "ANY",
+      "KNOWN",
+      "NONE",
+      "UNKNOWN"
+    ],
+    "Service class": [
+      "ANY",
+      "FIRM_DISRUPTION",
+      "OTHER"
+    ],
+    "Source clock": [
+      "ANY",
+      "RESOLVED",
+      "UNRESOLVED"
+    ],
+    "Restriction current": [
+      "ANY",
+      "CURRENT",
+      "ENDED",
+      "UNKNOWN"
+    ]
+  }
+}

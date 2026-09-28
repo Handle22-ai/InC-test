@@ -1,0 +1,183 @@
+Resume with a bounded final correction and evidence-recovery pass.
+
+Preserve 70c3d989019b8acf4ecef7d34f44eac62e4332e6 as the previously
+verified candidate. Do not reset it, rewrite its receipts, or claim
+new fixes were present in that revision.
+
+This message supplies the required work. Do not request, import, commit,
+or index an external audit. Retain only your own engineering findings,
+tests, receipts, and corrections.
+
+Keep one active writer. Use disposable copies for fault/mutation probes.
+No live application model calls, paid evaluations, scraping, new
+maintenance features, or framework changes are authorized.
+
+1. Recover the existing worker run before launching anything new
+
+Inspect completed operator records under:
+
+/private/tmp/incommodities-replay-operator-20260926T231408Z/worker-runs/
+
+A reported initial launch was BLOCKED. A later run with identifier
+20260926T234823.493230Z reportedly exited 0, ran 55 tests, and produced
+evidence/replay-alias/fresh_session.md.
+
+Verify those facts from actual records. Check:
+- worker request and reconstructed baseline;
+- launch/context exposure;
+- selected requirements, decisions, failures, and hashes;
+- actual implementation change;
+- before/after commands and comparisons;
+- retained learning and subsequent context selection;
+- additional human help and isolation limitations.
+
+Confirm the process is finished before accessing its working files.
+Do not rerun or alter the worker task.
+
+Export both launch records and the relevant successful-run evidence into
+a new submission evidence directory. Preserve their historical contract.
+Do not transplant the replay implementation into the polished candidate.
+
+Update current status only to the extent the evidence supports.
+If records are inaccessible, identify the exact missing path and continue
+independent fixes below.
+
+2. Correct and integration-test the actual live command path
+
+Reproduce the reported preflight failure using a synthetic credential,
+a stubbed provider, real temporary filesystem paths, and real SQLite.
+
+The suspected defect is that database initialization occurs before the
+fresh run directory exists. Fix run-directory ownership consistently
+across callers; do not merely add mkdir in several places and introduce
+collisions or overwrite behavior.
+
+Test through the actual entry point, not only a patched work hook:
+- successful stubbed preflight;
+- missing credentials;
+- authentication failure;
+- unavailable model;
+- budget exhaustion;
+- existing/invalid output destination.
+
+A historical preflight record must not satisfy current execution
+readiness. Use a coherent current-invocation readiness path, account
+for its calls within the explicit budget, and retain its provenance.
+
+Return sanitized, actionable errors with root-cause classification.
+If no safe evidence directory can be created, return a structured stderr
+refusal rather than writing into an invalid destination.
+
+Budget-exhausted/not-attempted cases must not be invented model failures.
+After an authentication blocker, do not claim downstream semantic
+evaluations occurred.
+
+Scorability must depend on the relevant stage:
+- unavailable extraction cannot support extraction-accuracy scoring;
+- successful extraction can remain scorable when a later helper fails;
+- observed invalid state or unsafe fallback remains separately evaluable.
+
+Preserve recorded historical results. Publish corrected interpretations
+as new evidence rather than rewriting prior observations.
+
+3. Fix dropped-link verification
+
+Exercise a valid captured revision with an expected prior, then remove
+prior_notice_id from the observed stored result.
+
+The lineage obligation must come from the trusted input and declared
+initial state, not disappear because output omitted the link.
+
+Distinguish:
+- a legitimate root notice;
+- a required available prior that was dropped;
+- a correctly retained reference whose ancestor is unavailable.
+
+Add a regression test for each applicable disposition. Do not equate
+stored lineage with delivered-alert deduplication.
+
+4. Close the remaining policy/status consistency gaps
+
+Verify whether D1–D6 are covered by the current reviewed reference.
+If not, add consistency protection for their exact already-approved
+wording, without changing its meaning or inventing another approval.
+
+Use explicit recognized status semantics, not substring matching on
+"approved". An arbitrary "accepted" status must not activate a policy.
+
+Validate explicit supersession against registered targets. Proposals
+may be retained as proposals without becoming normative.
+
+Retain the disclosed manual trust boundary: these checks do not defeat
+a writer who replaces both the reference and verifier.
+
+Keep implementation status separate from verification status. Missing
+tests do not automatically imply missing implementation, but unsupported
+implementation claims must not be presented as demonstrated evidence.
+
+Remove accidental infrastructure-test dependence on YAML row order and
+the current numeric parameter literal. Preserve intended per-ID and
+parameter-driven behavior.
+
+5. Verify acceptance discrimination without weakening real scope
+
+Using the existing acceptance path and a complete synthetic fixture scope,
+show:
+- a conforming result is acceptable within that scope;
+- the same scope with a required storage failure is refused;
+- required missing proof is refused.
+
+Keep this separate from acceptance of the real application/corpus.
+Do not relabel absent-history cases N/A merely to produce a pass.
+Do not change labels, bounds, or required obligations.
+
+6. Make current documentation accurate and usable
+
+After inspecting actual code and results:
+- include the recovered maintenance status and both launch outcomes;
+- link coverage to human code-read and maintenance records;
+- show frozen SIGNAL findings where they actually contribute to the
+  storage report, with explicit candidate-capture attribution;
+- document Python versus Make exit behavior correctly;
+- state the actual direction of specification/rule synchronization;
+- provide a short current maintenance entry instruction.
+
+Do not invent human code reads. Ask for the owner's actual account if
+it is missing.
+
+Check whether the signal specification describes behavior independently
+of label IDs. Clarify existing approved behavior and the distinction
+between model proposals, evaluation labels, and alert authorization.
+If material policy is genuinely missing, propose the exact smallest
+clarification rather than silently inventing it.
+
+Keep the first reviewer page focused on:
+what works, what fails, why it matters, what is not yet demonstrated,
+and how to reproduce it.
+
+Do not delete historical evidence, build a new UI, add new profiles
+unnecessarily, or load all historical reports by default merely because
+they exist.
+
+7. Verify once and return the corrected handoff
+
+Preserve failing-before/passing-after evidence for reproduced defects.
+Run the normal quality checks, offline demo, policy, context, and
+registered temporal/acceptance commands.
+
+Identify any changed findings as harness corrections, not application
+improvements.
+
+Create a reviewed local successor candidate and verify its relevant
+documented workflow in a clean checkout. No push or sharing.
+
+Return:
+- actual worker evidence recovered and its qualification;
+- reproduced defects, fixes, and executed tests;
+- current command results and remaining known application limits;
+- corrected current reading path;
+- new candidate identity and delivery contents;
+- only material remaining owner actions.
+
+Do not claim all defects are eliminated or promise a grade.
+Do not initiate another broad audit after this pass.

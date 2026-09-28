@@ -1,0 +1,494 @@
+{
+  "captured_at": "2026-09-26T18:28:07.799222+00:00",
+  "classification": "ENVIRONMENT_FAILURE",
+  "commit": null,
+  "scope": "inherited files excluding .venv, .idea, __pycache__, .DS_Store",
+  "file_count": 97,
+  "files": [
+    {
+      "path": "inherited/README.md",
+      "size_bytes": 6498,
+      "sha256": "a29be1b6220ba8ca7f86e85e40a8bd47e974902ccfe3a94732c62a5504e156c0"
+    },
+    {
+      "path": "inherited/calibration.md",
+      "size_bytes": 7691,
+      "sha256": "fae8681ed6ebb8fa83e53f3c8e6813812fb899c73d7469995ee9f0810e8146e3"
+    },
+    {
+      "path": "inherited/database.py",
+      "size_bytes": 8202,
+      "sha256": "04b605bec74234ad0662c4dd813e1c66b280666b3fdb440c954ef878a7b8fd76"
+    },
+    {
+      "path": "inherited/design.md",
+      "size_bytes": 6599,
+      "sha256": "c39812ae7fe0de65cda0c731a56b3df4a672893282f9af82e7eee6de6faf69fb"
+    },
+    {
+      "path": "inherited/evaluation/notices/46507_CAPACITY CONSTRAINT.html",
+      "size_bytes": 142703,
+      "sha256": "6cc6c6ea924d52f09130dc83de3d1a65a25f75982750faddb57e77c5d7f6d084"
+    },
+    {
+      "path": "inherited/evaluation/notices/46528_OPERATIONAL ALERT.html",
+      "size_bytes": 173621,
+      "sha256": "e0f2e8022373b0efc99840606339e9ce4f12443dd026b198934e28a6aabfca87"
+    },
+    {
+      "path": "inherited/evaluation/notices/46604_OTHER.html",
+      "size_bytes": 145187,
+      "sha256": "0161fbbc08714add7d3e3742d05667ba6380e07fe60549471ab3d6f7f758acfc"
+    },
+    {
+      "path": "inherited/evaluation/notices/46615_MAINTENANCE.html",
+      "size_bytes": 149186,
+      "sha256": "59bceaae533f4d516e49ed540211022c32e7af7ec2df37f20a2e17ec0d86f8f3"
+    },
+    {
+      "path": "inherited/evaluation/notices/46624_CAPACITY CONSTRAINT.html",
+      "size_bytes": 144788,
+      "sha256": "faf2ec98d47909410928c664ccec1287e449cab56a2b410d2fd1ddf25af0811b"
+    },
+    {
+      "path": "inherited/evaluation/notices/46725_OPERATIONAL FLOW ORDER.html",
+      "size_bytes": 142093,
+      "sha256": "3f7e883fde61c2b23b72324c0dc133885d39513706f57c2e15eeedf1e6f8bd9c"
+    },
+    {
+      "path": "inherited/evaluation/notices/46728_CAPACITY CONSTRAINT.html",
+      "size_bytes": 170456,
+      "sha256": "6e60efe52cf5dbac74fa1cf5e13c1a06927e73e8e210b2e2421df98b5fea1e41"
+    },
+    {
+      "path": "inherited/evaluation/notices/46732_CAPACITY CONSTRAINT.html",
+      "size_bytes": 142146,
+      "sha256": "72ebe91721ad00e884e84a4bdfe8c193966460b94586d5c645cb625da03022d1"
+    },
+    {
+      "path": "inherited/evaluation/notices/46775_COMPUTER SYSTEM STATUS.html",
+      "size_bytes": 142998,
+      "sha256": "9bc6d3df53e6848ef4a2936ed86466b65833c67784067075955bd7d198975b58"
+    },
+    {
+      "path": "inherited/evaluation/notices/46795_OPERATIONAL FLOW ORDER.html",
+      "size_bytes": 154690,
+      "sha256": "94c2e2d71aa6409161b6a72c917afdfb6eb7fd8273a4234d71803a9ae40ac051"
+    },
+    {
+      "path": "inherited/evaluation/notices/46805_MAINTENANCE.html",
+      "size_bytes": 159952,
+      "sha256": "447dbb9c66febe1170c4f9a11db9cbc56a9ce744791a425befbc850f0741ce5b"
+    },
+    {
+      "path": "inherited/evaluation/notices/46818_MAINTENANCE.html",
+      "size_bytes": 154802,
+      "sha256": "961e9bc5f5644ae02fa13578c77c03f07b096aa8b4c684933b2d28f3245582ed"
+    },
+    {
+      "path": "inherited/evaluation/notices/46864_FORCE MAJEURE.html",
+      "size_bytes": 151722,
+      "sha256": "aeb686ef2f60a384bdb5965d43499102f8721003060f8436d46312e7aba269db"
+    },
+    {
+      "path": "inherited/evaluation/notices/46881_MAINTENANCE.html",
+      "size_bytes": 155230,
+      "sha256": "e6a24fef1e8d9d9f5d2a8891ce19e19ffbdc44b7865167b4050028ae64d1d563"
+    },
+    {
+      "path": "inherited/evaluation/results/eval.db",
+      "size_bytes": 98304,
+      "sha256": "030ccf104a054a19720930c60e12ea4a2c7293316e745d8dcf6157d0b0b4757c"
+    },
+    {
+      "path": "inherited/evaluation/results/parse/46507_parse.json",
+      "size_bytes": 2947,
+      "sha256": "b1b7848f4852f87812ae43e26d31d50a4e0de5800673856ab4388fab78382640"
+    },
+    {
+      "path": "inherited/evaluation/results/parse/46528_parse.json",
+      "size_bytes": 7174,
+      "sha256": "9998f960db84b841b70a841b0954c5efed460989ed9890616c9d7fb6ce1d2c92"
+    },
+    {
+      "path": "inherited/evaluation/results/parse/46604_parse.json",
+      "size_bytes": 1235,
+      "sha256": "0a13452c3bd3b5930f159fde56772ec3b77e71976074c4134c1ef45d070317a1"
+    },
+    {
+      "path": "inherited/evaluation/results/parse/46615_parse.json",
+      "size_bytes": 3895,
+      "sha256": "7aafa55a8fb626148639a22fbfbc843f9bd7194e70e99ee1068b99c379548488"
+    },
+    {
+      "path": "inherited/evaluation/results/parse/46624_parse.json",
+      "size_bytes": 2678,
+      "sha256": "43b4ed580411c75b6c5a2d5a14c13eb2455fabb23ed2fe65f2f8a5bf8335e6dc"
+    },
+    {
+      "path": "inherited/evaluation/results/parse/46725_parse.json",
+      "size_bytes": 1164,
+      "sha256": "cf25e84ced62a3afc24b37aac77998c169f25f0741ed61852e34d2b3742ca7e6"
+    },
+    {
+      "path": "inherited/evaluation/results/parse/46728_parse.json",
+      "size_bytes": 5200,
+      "sha256": "de3765f30998cf2494bebdf1b686649cda5b44978143a48a680b7f794c55a2e4"
+    },
+    {
+      "path": "inherited/evaluation/results/parse/46732_parse.json",
+      "size_bytes": 1892,
+      "sha256": "7fdaffda21f7660d1e7d28b3711c0c002d00a5760c11cd7776494fbb0bd5177b"
+    },
+    {
+      "path": "inherited/evaluation/results/parse/46775_parse.json",
+      "size_bytes": 1046,
+      "sha256": "91285d0667e10b9ba02235e237867a10914d2d447f67686852d698247adbf886"
+    },
+    {
+      "path": "inherited/evaluation/results/parse/46795_parse.json",
+      "size_bytes": 3202,
+      "sha256": "94da82b81533f2061d521d49740f1134ac30c1ff245bba6229014116c2e02869"
+    },
+    {
+      "path": "inherited/evaluation/results/parse/46805_parse.json",
+      "size_bytes": 5728,
+      "sha256": "894c606b941294add8659a07f4a25c5e9007bd08a756bf4d7115f0cd2b4dc296"
+    },
+    {
+      "path": "inherited/evaluation/results/parse/46818_parse.json",
+      "size_bytes": 1705,
+      "sha256": "957dbd55ccd7e720728304911f61031102973668c6fbbf0e87b20e96cef2e9d6"
+    },
+    {
+      "path": "inherited/evaluation/results/parse/46864_parse.json",
+      "size_bytes": 3964,
+      "sha256": "4eaa56a5c65a335ccd6fa0411183059f50e83fffd388474615c51995116aa1c1"
+    },
+    {
+      "path": "inherited/evaluation/results/parse/46881_parse.json",
+      "size_bytes": 8551,
+      "sha256": "85797cb9d48118e77933b592583cb7296eacec2aa24733a0a4dd2c780fe7d49b"
+    },
+    {
+      "path": "inherited/evaluation/results/summary.json",
+      "size_bytes": 7790,
+      "sha256": "18e350d951325ed1291ccb37e262046674c8475998ed0b033f69e856fc845be8"
+    },
+    {
+      "path": "inherited/evaluation/results/validation/46507_validation.json",
+      "size_bytes": 589,
+      "sha256": "d911b337d4facce5ec565e944be8943117bedc9741e5720b4bc78d5612868bb9"
+    },
+    {
+      "path": "inherited/evaluation/results/validation/46528_validation.json",
+      "size_bytes": 447,
+      "sha256": "966532771f38a010eef69cef21022642b594bcc95a5150fd1ceeff19b3c53476"
+    },
+    {
+      "path": "inherited/evaluation/results/validation/46604_validation.json",
+      "size_bytes": 420,
+      "sha256": "a981e11e42ed3d7702c4836112412a475c73f7b36305269bffd9ddda886b2a13"
+    },
+    {
+      "path": "inherited/evaluation/results/validation/46615_validation.json",
+      "size_bytes": 561,
+      "sha256": "763a26728de50c1eab6208fff1e4f4443e8cf6d427c1c30155e5a9f298517014"
+    },
+    {
+      "path": "inherited/evaluation/results/validation/46624_validation.json",
+      "size_bytes": 701,
+      "sha256": "b024b7aec0c2d31952129b5bd7965b2e6ec33eaa817def79487ef3e1b4745c9a"
+    },
+    {
+      "path": "inherited/evaluation/results/validation/46725_validation.json",
+      "size_bytes": 439,
+      "sha256": "ee9aba1c8da8b3e1853616bf744c66e7c1f20fc81c0fa0dec3682f845bf0dabd"
+    },
+    {
+      "path": "inherited/evaluation/results/validation/46728_validation.json",
+      "size_bytes": 711,
+      "sha256": "60660af7d9c50ec27d0349f9599b29b8a69f165e3a3b25cb0341f4fad5141f51"
+    },
+    {
+      "path": "inherited/evaluation/results/validation/46732_validation.json",
+      "size_bytes": 352,
+      "sha256": "e891fb086a33b08223f20c2fc7e7f060a67ba796aa4a3336481d586cf31ee97c"
+    },
+    {
+      "path": "inherited/evaluation/results/validation/46775_validation.json",
+      "size_bytes": 437,
+      "sha256": "8a68c627ee491e1b2f9d70bb1ddb871f7d950401875ef2212fbe522559a31310"
+    },
+    {
+      "path": "inherited/evaluation/results/validation/46795_validation.json",
+      "size_bytes": 437,
+      "sha256": "495270b1e27548eedaa7c79f61f532fe59572f126528a858e73d1362303c8655"
+    },
+    {
+      "path": "inherited/evaluation/results/validation/46805_validation.json",
+      "size_bytes": 583,
+      "sha256": "e5f098ccd43faadeac96f22781c99f105696bce8021efa1df5af240c39d3a8e3"
+    },
+    {
+      "path": "inherited/evaluation/results/validation/46818_validation.json",
+      "size_bytes": 426,
+      "sha256": "7d9caba4c1050c79fb12c0b92f08aa8d3c0547f3581b2e4ca5a5406b12d1aef6"
+    },
+    {
+      "path": "inherited/evaluation/results/validation/46864_validation.json",
+      "size_bytes": 564,
+      "sha256": "2f566ab46a232c2d47af3bda577b3fa034a7c860efe246f7cd2cb7dc1ed4aa2d"
+    },
+    {
+      "path": "inherited/evaluation/results/validation/46881_validation.json",
+      "size_bytes": 682,
+      "sha256": "300c312f6ef0774ff4c2b3b1ce3d977eba8481dbf98767cbe4286dbfb126b427"
+    },
+    {
+      "path": "inherited/evaluation/run_eval.py",
+      "size_bytes": 8315,
+      "sha256": "142b6cd7c40b0771f125cc7b279e0b232156780384b6144f8ccf816578c79b1d"
+    },
+    {
+      "path": "inherited/llm_utils.py",
+      "size_bytes": 28587,
+      "sha256": "68448416555956b04b8591a4e1c09c1226ee619005ef293894567430eb834139"
+    },
+    {
+      "path": "inherited/main.py",
+      "size_bytes": 3585,
+      "sha256": "9f544c91fd32d7a5c70a26016f6e9c78f274a4046b6159919a85be5f510ccf2f"
+    },
+    {
+      "path": "inherited/model_card.md",
+      "size_bytes": 10335,
+      "sha256": "bfe7fa690902fb132ca27ba66471577669d7fdc7bbe6294f709df45d3932bcc5"
+    },
+    {
+      "path": "inherited/notice_parser.py",
+      "size_bytes": 22700,
+      "sha256": "2ad2940a0f58930d56b71554c86ca547d8421b9b69ba8c5edcffe7982a87ddaf"
+    },
+    {
+      "path": "inherited/notice_scraper.py",
+      "size_bytes": 16216,
+      "sha256": "30a03416229f47f2dee7a2df8f0e83c1422918d1e46c6fcc5c4399af2f505e2f"
+    },
+    {
+      "path": "inherited/notice_validator.py",
+      "size_bytes": 13847,
+      "sha256": "459e27c4bfa30e383bb6d0250018d595045b86793652965d3bca4e0847cde8ae"
+    },
+    {
+      "path": "inherited/pyproject.toml",
+      "size_bytes": 108,
+      "sha256": "68e65843a1ea86b70db0430b50488ad85ebaf41a92859ef3853131658fa2f629"
+    },
+    {
+      "path": "inherited/requirements.txt",
+      "size_bytes": 121,
+      "sha256": "a5d167d51c7975b038f71ae3e2ac296c9392e83318dce9c555a6b66d8525dc09"
+    },
+    {
+      "path": "inherited/samples/README.md",
+      "size_bytes": 650,
+      "sha256": "1c0e8856e837e280cefcf346106b200c9ee317d9aafdeefe1a130c13e7ec3e31"
+    },
+    {
+      "path": "inherited/samples/notices/47121_FORCE MAJEURE.html",
+      "size_bytes": 146367,
+      "sha256": "c4fbf5acffde346a81b6668d760672e4da599ac1666b423043563929bf0836b3"
+    },
+    {
+      "path": "inherited/samples/notices/47122_MAINTENANCE.html",
+      "size_bytes": 161111,
+      "sha256": "0a8d3d93ae8749d2b0af825a485e4990805cd457d5008bf5daa0218b0f7720de"
+    },
+    {
+      "path": "inherited/samples/notices/47123_OPERATIONAL ALERT.html",
+      "size_bytes": 145800,
+      "sha256": "4912821a8eff90aafc58ce2810d562aed88b0a0b02627bc0d1819925f000b4ac"
+    },
+    {
+      "path": "inherited/samples/notices/47124_FORCE MAJEURE.html",
+      "size_bytes": 150424,
+      "sha256": "43786f6a58433bffbc609bf368afd726b509b747eccf53f8395a125ad2cf973d"
+    },
+    {
+      "path": "inherited/samples/notices/47125_MAINTENANCE.html",
+      "size_bytes": 154407,
+      "sha256": "3c817ef1d495fd04d07fe2d28c7efe80870849f5e6e0fb4f69a778b112bc8e96"
+    },
+    {
+      "path": "inherited/samples/notices/47125_OUTAGE_IMPACT_REPORT.pdf",
+      "size_bytes": 130553,
+      "sha256": "b7f5dd3218cbad709b38489d62bec70baec71cfd9563f0d64384103caacd6c57"
+    },
+    {
+      "path": "inherited/samples/notices/47137_OPERATIONAL ALERT.html",
+      "size_bytes": 145738,
+      "sha256": "6a56da94d91bd4bfa356f71234a334c255c077438b10026d0a944e2d26346980"
+    },
+    {
+      "path": "inherited/samples/notices/47143_RATES AND CHARGES.html",
+      "size_bytes": 145569,
+      "sha256": "a037484f85dd7dce56102e4118c1e23b787d0bb215c19e36317ac829fd0766fd"
+    },
+    {
+      "path": "inherited/samples/notices/47144_MAINTENANCE.html",
+      "size_bytes": 150174,
+      "sha256": "78b176740f79c0e0ce2578146bc0cfdbe0056f5024237d089e04158721c2025a"
+    },
+    {
+      "path": "inherited/samples/notices/47145_MAINTENANCE.html",
+      "size_bytes": 150503,
+      "sha256": "07191ed6cce83c3006a4dc58cb5a528c5cad3075cf16c38791082f85faefab18"
+    },
+    {
+      "path": "inherited/samples/notices/47147_MAINTENANCE.html",
+      "size_bytes": 154402,
+      "sha256": "bac5ddac71351335ec37f7d13ecc531b9c1dddcfbfae1a68d1ea820ecde476c2"
+    },
+    {
+      "path": "inherited/samples/notices/47147_OUTAGE_IMPACT_REPORT.pdf",
+      "size_bytes": 126880,
+      "sha256": "5aca383ef9a2b54be2932d5936592200eabb27da61c6a272d6053ebcd6db7039"
+    },
+    {
+      "path": "inherited/samples/notices/47153_FORCE MAJEURE.html",
+      "size_bytes": 147934,
+      "sha256": "304fcadd9f615a046bb6304acd78e1c3d41cda9140fa4f66224ca8bd49c6fb38"
+    },
+    {
+      "path": "inherited/samples/notices/47154_MAINTENANCE.html",
+      "size_bytes": 148917,
+      "sha256": "a7fc56317c1159978506436fcadde4b7441756efd651024b1000050fb528ec8b"
+    },
+    {
+      "path": "inherited/samples/notices/47157_MAINTENANCE.html",
+      "size_bytes": 148986,
+      "sha256": "e150b564920edb85900a991ce585aa32f8477e9cc9ae97b4a54831e3638773e1"
+    },
+    {
+      "path": "inherited/samples/notices/47158_MAINTENANCE.html",
+      "size_bytes": 154406,
+      "sha256": "bed216c21f7a89e62004470e6020b551520209444aa1af1b41604cd562a56990"
+    },
+    {
+      "path": "inherited/samples/notices/47158_OUTAGE_IMPACT_REPORT.pdf",
+      "size_bytes": 138896,
+      "sha256": "a82a97d33597c953af6ef898d20a6f6cf6d63ac39e71daca8aa594f0dd19cd71"
+    },
+    {
+      "path": "inherited/samples/notices/47166_GAS QUALITY.html",
+      "size_bytes": 145358,
+      "sha256": "8fb675d56ff351469832b78b548d4fd4200799126726324dbd57b28bb7944a6d"
+    },
+    {
+      "path": "inherited/samples/notices/47168_FORCE MAJEURE.html",
+      "size_bytes": 150502,
+      "sha256": "7dbf26325006c323cbb5506e73182707b7cc7cd95a4c8ca31beff8a1edaa35d0"
+    },
+    {
+      "path": "inherited/samples/notices/47173_MAINTENANCE.html",
+      "size_bytes": 154406,
+      "sha256": "082e434cfeea3e78345a7c6248f5fe40ccd3e331da124c6ce537b8d0ebd9816f"
+    },
+    {
+      "path": "inherited/samples/notices/47173_OUTAGE_IMPACT_REPORT.pdf",
+      "size_bytes": 115669,
+      "sha256": "38c2f80229d34b92c3b86c5e9c9d46defbc2604105e819fcb5b64df0f68f4437"
+    },
+    {
+      "path": "inherited/samples/notices/47175_OPERATIONAL ALERT.html",
+      "size_bytes": 145706,
+      "sha256": "249f66774c8fa51f2301b7c1306dfc4d648bdc056f77fbf9e3896f68477d0809"
+    },
+    {
+      "path": "inherited/samples/notices/47180_GAS QUALITY.html",
+      "size_bytes": 144973,
+      "sha256": "d41942660346d6863104f780a35c182cebf91c78482939e9a3f4b0bea27c111b"
+    },
+    {
+      "path": "inherited/samples/notices/47187_MAINTENANCE.html",
+      "size_bytes": 154407,
+      "sha256": "1c4d918633ef7b245f7d98cbfdae4be92294c3acfc0efaee1a54990aac633031"
+    },
+    {
+      "path": "inherited/samples/notices/47187_OUTAGE_IMPACT_REPORT.pdf",
+      "size_bytes": 121740,
+      "sha256": "5ebba6f66374ee82bbd0f35f3a524918249d789e3fcf9e8172a5bdab4e096757"
+    },
+    {
+      "path": "inherited/samples/notices/47192_FORCE MAJEURE.html",
+      "size_bytes": 146056,
+      "sha256": "03d11b9b18cb7484c149133e267ebd0d814b9d394b8d130c318675c526b8397e"
+    },
+    {
+      "path": "inherited/samples/notices/47200_MAINTENANCE.html",
+      "size_bytes": 154402,
+      "sha256": "7cc20462aca259e94a978f473f3f44e07b97f8f5896c34cd279c36e531487c50"
+    },
+    {
+      "path": "inherited/samples/notices/47200_OUTAGE_IMPACT_REPORT.pdf",
+      "size_bytes": 122320,
+      "sha256": "5109e146e2367479f7f3b7b58b940ff4c87fe0452cc6da1ca59b12920b49ee32"
+    },
+    {
+      "path": "inherited/samples/notices/47202_MAINTENANCE.html",
+      "size_bytes": 154274,
+      "sha256": "81419d6bac11a92eee4ed50eb8cf9bcb2384801b5b480c51953a990fd4f619aa"
+    },
+    {
+      "path": "inherited/samples/notices/47213_MAINTENANCE.html",
+      "size_bytes": 149155,
+      "sha256": "aa1f467d83dbe48eec5e8ba9d747dd5924ccb0da7bd1d94f5a6574ced0a0db04"
+    },
+    {
+      "path": "inherited/samples/notices/47215_MAINTENANCE.html",
+      "size_bytes": 154407,
+      "sha256": "bf613b3dfd2d8f1fdbf2212811b29ddfd55a02fa4f44d1d05d316b043a00ad0e"
+    },
+    {
+      "path": "inherited/samples/notices/47215_OUTAGE_IMPACT_REPORT.pdf",
+      "size_bytes": 128702,
+      "sha256": "c6cbbca78600c93e205ee82466e8f3de7ce58a7c0f3ec8bc4fdd04f8eb6cc995"
+    },
+    {
+      "path": "inherited/samples/notices/metadata.json",
+      "size_bytes": 9370,
+      "sha256": "27e5b668b481b419afdfa5af5939b80175373bcd5a7bf7890f8362cacd1c0f8e"
+    },
+    {
+      "path": "inherited/samples/notices/notice_list.json",
+      "size_bytes": 6575,
+      "sha256": "5b13a0e09ceabb60a384bd0f3d16476401069858d9aef101fa53a6453f498c8e"
+    },
+    {
+      "path": "inherited/tests/test_extraction.py",
+      "size_bytes": 3267,
+      "sha256": "01439ff353f28eee33a182b1deeeeb746b3193d35ca75c7bb45f70af878b1b2b"
+    },
+    {
+      "path": "inherited/tests/test_llm_parser.py",
+      "size_bytes": 2989,
+      "sha256": "172c2dda91e707a861ff9bd034eefe602996c397e62cd8292c6a29dbc478c7f3"
+    },
+    {
+      "path": "inherited/tests/test_scraper.py",
+      "size_bytes": 3039,
+      "sha256": "7e23b1ecd9f5dd1e13deb4525e0d19d6bbd01d1b6446eaee3df72315c35a2210"
+    },
+    {
+      "path": "inherited/tests/test_validator.py",
+      "size_bytes": 2755,
+      "sha256": "4c676d6685b525bab13c72c74f9531f371639ea98d54b204de860dc26d2476a4"
+    },
+    {
+      "path": "inherited/validity.md",
+      "size_bytes": 10071,
+      "sha256": "57d256680e986bab1920807f6df87c08acba2f0045eaed9d6118d59abc4de3ca"
+    }
+  ]
+}

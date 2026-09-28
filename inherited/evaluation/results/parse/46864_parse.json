@@ -1,0 +1,81 @@
+{
+  "notice_id": 46864,
+  "notice_type": "FORCE MAJEURE",
+  "html_file": "evaluation/notices/46864_FORCE MAJEURE.html",
+  "header": {
+    "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+    "critical": "Y",
+    "type1": "FORCE MAJEURE",
+    "type2": "FORCE MAJEURE",
+    "notice_effective_date": "04/06/2026  9:21:29AM",
+    "notice_end_date": "06/30/2026 9:00:00am",
+    "post_date": "4/6/2026 9:21:29 AM",
+    "notice_id": "46864",
+    "req_rsp": "1",
+    "rsp_date": "04/06/2026",
+    "status": "INITIATE",
+    "prior_notice_id": "",
+    "subject": "FORCE MAJEURE-COMP STA 168"
+  },
+  "body": "FORCE MAJEURE – COMPRESSOR STATION 168\n\n \n\nNatural has experienced\nhorsepower issues at Compressor Station 168 (CS 168) located in Bailey County,\nTexas (Segment 8 of Natural's Permian Zone).  This is a Force Majeure\nevent.  Natural is required to reduce the maximum operating capacity\nnorthbound into Segment 8 from Segment 9, thus limiting Natural's throughput\ncapacity northbound through Compressor Station 167 (CS 167).\n\n \n\nThe scheduling constraint\nwill be Segment 9 at CS 167; therefore, any gas received south of CS 167 for\ndelivery north of CS 167 will be impacted for the duration of the\nrestriction.  The Pooling Point - Permian Zone (LOC 25077) is located\nsouth of the constraint.  Firm transportation associated with storage\nwithdrawals may be impacted.\n\n \n\nAs such, effective for gas\nday \nTuesday, April 7, 2026, Timely\nCycle and continuing until further notice\n, Natural will schedule Primary Firm and Secondary in-path Firm\ntransports to no less than \n94%\n of contract MDQ through CS 167.  AOR/ITS and\nSecondary out-of-path Firm transports \nwill not\n be available for the\nduration of this restriction.\n\n \n\nAdditionally, the unit\nmaintenance referenced on Natural's Outage Impact Report (X26-220667) has been\npostponed until further notice\n.\n\n \n\nThe stated scheduling\npercentage is based upon the current level of firm capacity contracted for\nduring this restriction and is subject to change based upon operational\nconditions and Shipper utilization.\n\n \n\nContinue to monitor Natural's\ninteractive website for any updates to the end date during this\nrestriction.  Please contact your Account Director or Scheduling\nRepresentative if you have any questions.\n\n.",
+  "information_only": false,
+  "locations": [
+    {
+      "location_index": 0,
+      "notice_id": 46864,
+      "loc_code": null,
+      "loc_name": null,
+      "segment": "9",
+      "compressor_station": "167",
+      "zone": "Permian Zone",
+      "system": null
+    }
+  ],
+  "restrictions": [
+    {
+      "notice_id": 46864,
+      "location_index": 0,
+      "service_type": "PRIMARY_FIRM",
+      "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+      "restriction_value": 94.0,
+      "restriction_unit": "PCT_MDQ",
+      "flow_direction": "NORTHBOUND",
+      "start_datetime": "2026-04-07",
+      "end_datetime": "TBD"
+    },
+    {
+      "notice_id": 46864,
+      "location_index": 0,
+      "service_type": "SECONDARY_INPATH_FIRM",
+      "restriction_type": "SCHEDULED_TO_PCT_MDQ",
+      "restriction_value": 94.0,
+      "restriction_unit": "PCT_MDQ",
+      "flow_direction": "NORTHBOUND",
+      "start_datetime": "2026-04-07",
+      "end_datetime": "TBD"
+    },
+    {
+      "notice_id": 46864,
+      "location_index": 0,
+      "service_type": "AOR_ITS",
+      "restriction_type": "UNAVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "NORTHBOUND",
+      "start_datetime": "2026-04-07",
+      "end_datetime": "TBD"
+    },
+    {
+      "notice_id": 46864,
+      "location_index": 0,
+      "service_type": "SECONDARY_OUTPATH_FIRM",
+      "restriction_type": "UNAVAILABLE",
+      "restriction_value": null,
+      "restriction_unit": null,
+      "flow_direction": "NORTHBOUND",
+      "start_datetime": "2026-04-07",
+      "end_datetime": "TBD"
+    }
+  ],
+  "provenance": "llm_extraction"
+}

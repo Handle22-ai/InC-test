@@ -1,0 +1,135 @@
+{
+  "source": "inherited/calibration.md label table, cross-checked against run_eval.py LABELS; field expectations read from supplied HTML, not model output",
+  "label_counts": {
+    "positive": 7,
+    "negative": 7
+  },
+  "cases": [
+    {
+      "notice_id": 46507,
+      "path": "inherited/evaluation/notices/46507_CAPACITY CONSTRAINT.html",
+      "expected_signal": true,
+      "fields": {
+        "segments": [
+          "14"
+        ],
+        "zones": [
+          "Market Delivery Zone"
+        ]
+      }
+    },
+    {
+      "notice_id": 46528,
+      "path": "inherited/evaluation/notices/46528_OPERATIONAL ALERT.html",
+      "expected_signal": false,
+      "fields": {}
+    },
+    {
+      "notice_id": 46604,
+      "path": "inherited/evaluation/notices/46604_OTHER.html",
+      "expected_signal": false,
+      "fields": {}
+    },
+    {
+      "notice_id": 46615,
+      "path": "inherited/evaluation/notices/46615_MAINTENANCE.html",
+      "expected_signal": true,
+      "fields": {
+        "firm_mdq": 55,
+        "segments": [
+          "25"
+        ],
+        "zones": [
+          "Texok Zone"
+        ]
+      }
+    },
+    {
+      "notice_id": 46624,
+      "path": "inherited/evaluation/notices/46624_CAPACITY CONSTRAINT.html",
+      "expected_signal": true,
+      "fields": {
+        "segments": [
+          "24"
+        ],
+        "zones": [
+          "Louisiana Zone"
+        ]
+      }
+    },
+    {
+      "notice_id": 46725,
+      "path": "inherited/evaluation/notices/46725_OPERATIONAL FLOW ORDER.html",
+      "expected_signal": false,
+      "fields": {}
+    },
+    {
+      "notice_id": 46728,
+      "path": "inherited/evaluation/notices/46728_CAPACITY CONSTRAINT.html",
+      "expected_signal": false,
+      "fields": {}
+    },
+    {
+      "notice_id": 46732,
+      "path": "inherited/evaluation/notices/46732_CAPACITY CONSTRAINT.html",
+      "expected_signal": true,
+      "fields": {}
+    },
+    {
+      "notice_id": 46775,
+      "path": "inherited/evaluation/notices/46775_COMPUTER SYSTEM STATUS.html",
+      "expected_signal": false,
+      "fields": {}
+    },
+    {
+      "notice_id": 46795,
+      "path": "inherited/evaluation/notices/46795_OPERATIONAL FLOW ORDER.html",
+      "expected_signal": false,
+      "fields": {}
+    },
+    {
+      "notice_id": 46805,
+      "path": "inherited/evaluation/notices/46805_MAINTENANCE.html",
+      "expected_signal": true,
+      "fields": {
+        "firm_mdq": 44,
+        "segments": [
+          "13"
+        ]
+      }
+    },
+    {
+      "notice_id": 46818,
+      "path": "inherited/evaluation/notices/46818_MAINTENANCE.html",
+      "expected_signal": false,
+      "fields": {}
+    },
+    {
+      "notice_id": 46864,
+      "path": "inherited/evaluation/notices/46864_FORCE MAJEURE.html",
+      "expected_signal": true,
+      "fields": {
+        "firm_mdq": 94,
+        "segments": [
+          "9"
+        ],
+        "zones": [
+          "Permian Zone"
+        ]
+      }
+    },
+    {
+      "notice_id": 46881,
+      "path": "inherited/evaluation/notices/46881_MAINTENANCE.html",
+      "expected_signal": true,
+      "fields": {
+        "segments": [
+          "26"
+        ],
+        "zones": [
+          "Texok Zone"
+        ]
+      }
+    }
+  ]
+}

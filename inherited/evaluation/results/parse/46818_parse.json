@@ -1,0 +1,25 @@
+{
+  "notice_id": 46818,
+  "notice_type": "MAINTENANCE",
+  "html_file": "evaluation/notices/46818_MAINTENANCE.html",
+  "header": {
+    "tsp": "6931794-NATURAL GAS PIPELINE CO.",
+    "critical": "Y",
+    "type1": "MAINTENANCE",
+    "type2": "MAINTENANCE",
+    "notice_effective_date": "03/12/2026 12:38:41PM",
+    "notice_end_date": "03/19/2026 9:00:00am",
+    "post_date": "3/12/2026 12:38:41 PM",
+    "notice_id": "46818",
+    "req_rsp": "1",
+    "rsp_date": "03/12/2026",
+    "status": "INITIATE",
+    "prior_notice_id": "",
+    "subject": "OUTAGE IMPACT REPORT - 3-12-26"
+  },
+  "body": "REVISED ROLLING 12-MONTH MAINTENANCE PLAN\n\nOUTAGE\nIMPACT REPORT UPDATE\n\n \n\nNatural\nhas posted an updated Outage Impact Report on its website.\n\n \n\nThe\nreport outlines scheduled projects that may affect customers and includes:\n\n \n\n·\n        \n\nImpacted\npipeline segments\n\n·\n        \n\nEstimated\nstart and finish dates\n\n·\n        \n\nBrief\nproject descriptions\n\n·\n        \n\nAnticipated\nshipper impacts\n\n \n\nChanges\nto existing projects and newly added projects are highlighted in yellow for\neasy reference.  In addition, Natural will continue to post detailed updates on\nspecific maintenance projects with direct shipper impacts on its interactive\nwebsite as needed.  The full maintenance plan is accessible via Natural's\nportal page or by clicking the link below:\n\n \n\nOutage\nImpact Report - 3-12-26\n\n \n\nIf\nyou have any questions, please contact your Account Director or Scheduling\nRepresentative.\n\n \n\n \n\n.",
+  "information_only": true,
+  "locations": [],
+  "restrictions": [],
+  "provenance": "llm_extraction"
+}

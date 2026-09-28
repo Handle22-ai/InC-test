@@ -1,0 +1,170 @@
+{
+  "INPUT-001": {
+    "revision": 1,
+    "identity": "INPUT-001@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "INPUT-002": {
+    "revision": 1,
+    "identity": "INPUT-002@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "OUTPUT-001": {
+    "revision": 1,
+    "identity": "OUTPUT-001@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "OUTPUT-002": {
+    "revision": 1,
+    "identity": "OUTPUT-002@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "OUTPUT-003": {
+    "revision": 1,
+    "identity": "OUTPUT-003@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "OUTPUT-004": {
+    "revision": 1,
+    "identity": "OUTPUT-004@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "OUTPUT-005": {
+    "revision": 1,
+    "identity": "OUTPUT-005@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "OUTPUT-006": {
+    "revision": 1,
+    "identity": "OUTPUT-006@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "SIGNAL-001": {
+    "revision": 1,
+    "identity": "SIGNAL-001@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "SIGNAL-002": {
+    "revision": 1,
+    "identity": "SIGNAL-002@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "SIGNAL-003": {
+    "revision": 1,
+    "identity": "SIGNAL-003@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "SIGNAL-004": {
+    "revision": 1,
+    "identity": "SIGNAL-004@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "STATE-001": {
+    "revision": 1,
+    "identity": "STATE-001@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "STATE-002": {
+    "revision": 1,
+    "identity": "STATE-002@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "STATE-003": {
+    "revision": 1,
+    "identity": "STATE-003@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "STATE-004": {
+    "revision": 1,
+    "identity": "STATE-004@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "STATE-005": {
+    "revision": 1,
+    "identity": "STATE-005@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "STATE-006": {
+    "revision": 1,
+    "identity": "STATE-006@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "HISTORY-001": {
+    "revision": 1,
+    "identity": "HISTORY-001@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "HISTORY-002": {
+    "revision": 1,
+    "identity": "HISTORY-002@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "HISTORY-003": {
+    "revision": 1,
+    "identity": "HISTORY-003@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "HISTORY-004": {
+    "revision": 1,
+    "identity": "HISTORY-004@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "HISTORY-005": {
+    "revision": 1,
+    "identity": "HISTORY-005@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "SAFETY-001": {
+    "revision": 1,
+    "identity": "SAFETY-001@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "SAFETY-002": {
+    "revision": 1,
+    "identity": "SAFETY-002@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "OBS-001": {
+    "revision": 1,
+    "identity": "OBS-001@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "OBS-002": {
+    "revision": 1,
+    "identity": "OBS-002@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  },
+  "OBS-003": {
+    "revision": 1,
+    "identity": "OBS-003@1",
+    "decision_record": "context/decisions/010-requirement-baseline.record.json",
+    "baseline_commit": "70cf9e54ec7c349b017eddfaed57195880cb1991"
+  }
+}

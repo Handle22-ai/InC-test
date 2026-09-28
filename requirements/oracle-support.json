@@ -1,0 +1,205 @@
+{
+  "policy_id": "assessment-v2-owner-20260927",
+  "approval": "ADR 006 / D6; verified by coding agent, not a claim of personal owner annotation audit",
+  "dataset_sha256": "a51147dffc80b69de840865ea01091eee66ad720e334adee9a983179841810ef",
+  "fields": [
+    {
+      "notice_id": 46507,
+      "field": "segments",
+      "expected": [
+        "14"
+      ],
+      "source_path": "inherited/evaluation/notices/46507_CAPACITY CONSTRAINT.html",
+      "input_sha256": "6cc6c6ea924d52f09130dc83de3d1a65a25f75982750faddb57e77c5d7f6d084",
+      "source_excerpt": "ect: SEGMENT 14 WB - CS 113 - PRIMARY ONLY Notice Text: SEGMENT 17 FORCE MAJURE SEGMENT 14 WESTBOUND \u2013 CS 113 \u2013 PRIMARY ONLY Due to current operating conditions, Natural is at operating capacity for transports westbound on the Amarillo Mainline System through Compressor Station 113 located in Will County, IL (Natural's Market De",
+      "status": "source-supported",
+      "synthetic": false
+    },
+    {
+      "notice_id": 46507,
+      "field": "zones",
+      "expected": [
+        "Market Delivery Zone"
+      ],
+      "source_path": "inherited/evaluation/notices/46507_CAPACITY CONSTRAINT.html",
+      "input_sha256": "6cc6c6ea924d52f09130dc83de3d1a65a25f75982750faddb57e77c5d7f6d084",
+      "source_excerpt": "ating capacity for transports westbound on the Amarillo Mainline System through Compressor Station 113 located in Will County, IL (Natural's Market Delivery Zone). Therefore, effective for gas day, Wednesday, December 3, 2025, Timely Cycle and continuing until further notice , only Primary Firm and Secondary in-path Firm transpo",
+      "status": "source-supported",
+      "synthetic": false
+    },
+    {
+      "notice_id": 46615,
+      "field": "firm_mdq",
+      "expected": 55,
+      "source_path": "inherited/evaluation/notices/46615_MAINTENANCE.html",
+      "input_sha256": "59bceaae533f4d516e49ed540211022c32e7af7ec2df37f20a2e17ec0d86f8f3",
+      "source_excerpt": "6 , Natural will schedule Primary Firm and Secondary in-path Firm transports to no less than 55% of contract MDQ through CS 302. AOR/ITS and Secondary out-of-path Firm transports will not be available for the duration of this restriction. The stated scheduling percentage is based upon the current level of firm capacity contracte",
+      "status": "source-supported",
+      "synthetic": false
+    },
+    {
+      "notice_id": 46615,
+      "field": "segments",
+      "expected": [
+        "25"
+      ],
+      "source_path": "inherited/evaluation/notices/46615_MAINTENANCE.html",
+      "input_sha256": "59bceaae533f4d516e49ed540211022c32e7af7ec2df37f20a2e17ec0d86f8f3",
+      "source_excerpt": "be performing station maintenance at Compressor Station 302 (CS 302) located in Montgomery County, Texas (Segment 25 of Natural's Texok Zone). Natural is required to reduce the maximum operating capacity eastbound into Segment 25 from Segment 26 and Segment 22, thus limiting Natural's throughput capacity eastbound through CS 302",
+      "status": "source-supported",
+      "synthetic": false
+    },
+    {
+      "notice_id": 46615,
+      "field": "zones",
+      "expected": [
+        "Texok Zone"
+      ],
+      "source_path": "inherited/evaluation/notices/46615_MAINTENANCE.html",
+      "input_sha256": "59bceaae533f4d516e49ed540211022c32e7af7ec2df37f20a2e17ec0d86f8f3",
+      "source_excerpt": "be performing station maintenance at Compressor Station 302 (CS 302) located in Montgomery County, Texas (Segment 25 of Natural's Texok Zone). Natural is required to reduce the maximum operating capacity eastbound into Segment 25 from Segment 26 and Segment 22, thus limiting Natural's throughput capacity eastbound through CS 302",
+      "status": "source-supported",
+      "synthetic": false
+    },
+    {
+      "notice_id": 46624,
+      "field": "segments",
+      "expected": [
+        "24"
+      ],
+      "source_path": "inherited/evaluation/notices/46624_CAPACITY CONSTRAINT.html",
+      "input_sha256": "faf2ec98d47909410928c664ccec1287e449cab56a2b410d2fd1ddf25af0811b",
+      "source_excerpt": "th Firm transports and Secondary in-path Firm transports will not be available. Florida Vermilion is located in Vermilion Parish, Louisiana (Segment 24), in Natural's Louisiana Zone. Please contact your Account Director or Scheduling Representative if you have any questions. .. Your session will expire in . Click OK to renew you",
+      "status": "source-supported",
+      "synthetic": false
+    },
+    {
+      "notice_id": 46624,
+      "field": "zones",
+      "expected": [
+        "Louisiana Zone"
+      ],
+      "source_path": "inherited/evaluation/notices/46624_CAPACITY CONSTRAINT.html",
+      "input_sha256": "faf2ec98d47909410928c664ccec1287e449cab56a2b410d2fd1ddf25af0811b",
+      "source_excerpt": "th Firm transports and Secondary in-path Firm transports will not be available. Florida Vermilion is located in Vermilion Parish, Louisiana (Segment 24), in Natural's Louisiana Zone. Please contact your Account Director or Scheduling Representative if you have any questions. .. Your session will expire in . Click OK to renew you",
+      "status": "source-supported",
+      "synthetic": false
+    },
+    {
+      "notice_id": 46805,
+      "field": "firm_mdq",
+      "expected": 44,
+      "source_path": "inherited/evaluation/notices/46805_MAINTENANCE.html",
+      "input_sha256": "447dbb9c66febe1170c4f9a11db9cbc56a9ce744791a425befbc850f0741ce5b",
+      "source_excerpt": "ow, Natural will schedule Primary Firm and Secondary in-path Firm transports to no less than 44% of contract MDQ northbound through CS 107. AOR/ITS and Secondary out-of-path Firm transports will not be available for the duration of the restriction. TOOL RUN DATES : Gas day Friday, April 17, 2026 (Cleaning/ Gauge Tools) Gas day T",
+      "status": "source-supported",
+      "synthetic": false
+    },
+    {
+      "notice_id": 46805,
+      "field": "segments",
+      "expected": [
+        "13"
+      ],
+      "source_path": "inherited/evaluation/notices/46805_MAINTENANCE.html",
+      "input_sha256": "447dbb9c66febe1170c4f9a11db9cbc56a9ce744791a425befbc850f0741ce5b",
+      "source_excerpt": " Project ID Line Name Location/Segment No. 4819 AMARILLO #3 MAINLINE SEGMENT 13 The scheduling constraint will be upstream of CS 108 at the beginning of Segment 13; therefore, any gas received south of Segment 13 for delivery north of Segment 13 will be impacted for the duration of the restriction. Receipts from Trailblazer Gage",
+      "status": "source-supported",
+      "synthetic": false
+    },
+    {
+      "notice_id": 46864,
+      "field": "firm_mdq",
+      "expected": 94,
+      "source_path": "inherited/evaluation/notices/46864_FORCE MAJEURE.html",
+      "input_sha256": "aeb686ef2f60a384bdb5965d43499102f8721003060f8436d46312e7aba269db",
+      "source_excerpt": "e , Natural will schedule Primary Firm and Secondary in-path Firm transports to no less than 94% of contract MDQ through CS 167. AOR/ITS and Secondary out-of-path Firm transports will not be available for the duration of this restriction. Additionally, the unit maintenance referenced on Natural's Outage Impact Report (X26-220667",
+      "status": "source-supported",
+      "synthetic": false
+    },
+    {
+      "notice_id": 46864,
+      "field": "segments",
+      "expected": [
+        "9"
+      ],
+      "source_path": "inherited/evaluation/notices/46864_FORCE MAJEURE.html",
+      "input_sha256": "aeb686ef2f60a384bdb5965d43499102f8721003060f8436d46312e7aba269db",
+      "source_excerpt": "tural's throughput capacity northbound through Compressor Station 167 (CS 167). The scheduling constraint will be Segment 9 at CS 167; therefore, any gas received south of CS 167 for delivery north of CS 167 will be impacted for the duration of the restriction. The Pooling Point - Permian Zone (LOC 25077) is located south of the",
+      "status": "source-supported",
+      "synthetic": false
+    },
+    {
+      "notice_id": 46864,
+      "field": "zones",
+      "expected": [
+        "Permian Zone"
+      ],
+      "source_path": "inherited/evaluation/notices/46864_FORCE MAJEURE.html",
+      "input_sha256": "aeb686ef2f60a384bdb5965d43499102f8721003060f8436d46312e7aba269db",
+      "source_excerpt": " delivery north of CS 167 will be impacted for the duration of the restriction. The Pooling Point - Permian Zone (LOC 25077) is located south of the constraint. Firm transportation associated with storage withdrawals may be impacted. As such, effective for gas day Tuesday, April 7, 2026, Timely Cycle and continuing until further",
+      "status": "source-supported",
+      "synthetic": false
+    },
+    {
+      "notice_id": 46881,
+      "field": "segments",
+      "expected": [
+        "26"
+      ],
+      "source_path": "inherited/evaluation/notices/46881_MAINTENANCE.html",
+      "input_sha256": "e6a24fef1e8d9d9f5d2a8891ce19e19ffbdc44b7865167b4050028ae64d1d563",
+      "source_excerpt": "s on the Gulf Coast #3 Mainline near Compressor Station 394 (CS 394) located in Cass County, Texas, in Segment 26 of Natural's Texok Zone. Natural previously anticipated no customer impact during this pipeline integrity maintenance work at CS 394. However, due to current operational conditions and to maintain system integrity, t",
+      "status": "source-supported",
+      "synthetic": false
+    },
+    {
+      "notice_id": 46881,
+      "field": "zones",
+      "expected": [
+        "Texok Zone"
+      ],
+      "source_path": "inherited/evaluation/notices/46881_MAINTENANCE.html",
+      "input_sha256": "e6a24fef1e8d9d9f5d2a8891ce19e19ffbdc44b7865167b4050028ae64d1d563",
+      "source_excerpt": "s on the Gulf Coast #3 Mainline near Compressor Station 394 (CS 394) located in Cass County, Texas, in Segment 26 of Natural's Texok Zone. Natural previously anticipated no customer impact during this pipeline integrity maintenance work at CS 394. However, due to current operational conditions and to maintain system integrity, t",
+      "status": "source-supported",
+      "synthetic": false
+    },
+    {
+      "notice_id": 96615,
+      "field": "firm_mdq",
+      "expected": 65,
+      "source_path": "evidence/candidates/impact-budget-512/full/20260926T191722.363460Z/inputs/96615_percentage_mutation.html",
+      "input_sha256": "d53573f667d86cd752f98584073d25ff41777619f104b081faa25c32c2ef804e",
+      "source_excerpt": "May 1, 2026 , Natural will schedule Primary Firm and Secondary in-path Firm transports to no less than 65% of contract MDQ through CS 302. AOR/ITS and Secondary out-of-path Firm transports will not be available for the duration of this restriction. The stated ",
+      "status": "source-supported",
+      "synthetic": true,
+      "derivation": {
+        "source": "inherited/evaluation/notices/46615_MAINTENANCE.html",
+        "source_sha256": "59bceaae533f4d516e49ed540211022c32e7af7ec2df37f20a2e17ec0d86f8f3",
+        "change": "Notice ID 46615\u219296615 and one explicit 55%\u219265%; rendered text otherwise identical",
+        "not_a_signal_label": true
+      }
+    }
+  ],
+  "revisions": [
+    {
+      "notice_id": 96624,
+      "prior_notice_id": 46624,
+      "source_path": "evidence/candidates/impact-budget-512/full/20260926T191722.363460Z/inputs/96624_unchanged_supersede.html",
+      "input_sha256": "633b47fd47b5d7dc8472ca827470031f0188eae367cf22da539217f32497b85d",
+      "prior_source_path": "inherited/evaluation/notices/46624_CAPACITY CONSTRAINT.html",
+      "prior_source_sha256": "faf2ec98d47909410928c664ccec1287e449cab56a2b410d2fd1ddf25af0811b",
+      "status": "source-supported",
+      "synthetic": true,
+      "source_support": "Rendered operational body including trailing text is identical; explicit ID/prior/status headers verified. Complete runtime prior chain is separately required by the check."
+    }
+  ],
+  "unsupported_annotations": [],
+  "limits": [
+    "No absolute Dth/mmbtu accuracy",
+    "No complete extraction or geographic relevance guarantee",
+    "No real material-update or delivered-alert claim",
+    "Source/body hashes establish bounded source support, not model correctness"
+  ]
+}

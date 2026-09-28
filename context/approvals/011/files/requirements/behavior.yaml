@@ -1,0 +1,537 @@
+version: 5
+policy_id: assessment-v3-owner-20260928
+normative_role: Canonical structured supported behavioral rules, delegated by spec.md; edit this file
+  then render/check the human view. D1-D6 remain governing policy.
+owner_choice:
+  status: owner-approved
+  reference: evidence/positive-path/20260928-owner-separation/owner-request.txt
+  decision: context/decisions/011-classification-actionability.md
+  scope: Source-grounded firm-service candidate classification independent of unresolved timezone; authorization
+    remains false and unresolved actionability requires review.
+boundary: Retained source assertions and explicit history -> candidate classification; explicit reference
+  time is retained for resolved historical/actionability decisions. Unknown source timezone does not prevent
+  a firm-service candidate and never authorizes a recommendation.
+precedence: First matching ACTIVE rule, ascending unique priority; invalid/unsupported evidence precedes
+  other content. All matching rules retained for explanation.
+rules:
+- id: BR-FORMAT
+  priority: 10
+  when:
+    format_supported: false
+  action:
+    classification: UNRESOLVED
+    disposition: REVIEW_REQUIRED
+    recommendation_allowed: false
+  requirements:
+  - INPUT-002
+  basis: D5; current HTML/normalized support, PDF not parsed
+  oracle: executable
+  status: adopted-existing-policy
+  output_reason: UNSUPPORTED_FORMAT
+- id: BR-SEMANTICS
+  priority: 20
+  when:
+    semantic_usable: false
+  action:
+    classification: UNRESOLVED
+    disposition: ERROR
+    recommendation_allowed: false
+  requirements:
+  - SAFETY-001
+  - INPUT-002
+  basis: 'D5: unusable evidence is not valid negative/small impact'
+  oracle: executable
+  status: adopted-existing-policy
+  output_reason: UNUSABLE_SEMANTICS
+- id: BR-CONTRADICTION
+  priority: 30
+  when:
+    contradiction: true
+  action:
+    classification: UNRESOLVED
+    disposition: REVIEW_REQUIRED
+    recommendation_allowed: false
+  requirements:
+  - INPUT-002
+  basis: 'D5: incompatible assertions require review'
+  oracle: executable
+  status: adopted-existing-policy
+  output_reason: CONTRADICTORY_EVIDENCE
+- id: BR-HISTORY
+  priority: 40
+  when:
+    history_resolved: false
+  action:
+    classification: UNRESOLVED
+    disposition: REVIEW_REQUIRED
+    recommendation_allowed: false
+  requirements:
+  - HISTORY-002
+  basis: 'D1/D3: complete explicit links; no guessed identity'
+  oracle: executable
+  status: adopted-existing-policy
+  output_reason: MISSING_HISTORY
+- id: BR-UNCHANGED
+  priority: 50
+  when:
+    unchanged_revision: true
+  action:
+    classification: NON_SIGNAL
+    disposition: SUPPRESSED
+    recommendation_allowed: false
+  requirements:
+  - STATE-004
+  basis: 'D2: unchanged operational facts; metadata alone is not material'
+  oracle: executable
+  status: adopted-existing-policy
+  output_reason: UNCHANGED_REVISION
+- id: BR-ROUTINE
+  priority: 60
+  when:
+    routine_without_restriction: true
+  action:
+    classification: NON_SIGNAL
+    disposition: NO_SIGNAL
+    recommendation_allowed: false
+  requirements:
+  - SIGNAL-002
+  basis: Challenge p.5; D6; supplied administrative examples
+  oracle: executable
+  status: adopted-existing-policy
+  output_reason: NO_OPERATIONAL_RESTRICTION
+- id: BR-HISTORICAL
+  priority: 65
+  when:
+    firm_disruption: true
+    historical_only: true
+  action:
+    classification: NON_SIGNAL
+    disposition: NO_SIGNAL
+    recommendation_allowed: false
+  requirements:
+  - SIGNAL-003
+  basis: 'D3: actually resolved interval ended by reference time; no timezone inference.'
+  oracle: executable
+  status: owner-approved
+  output_reason: HISTORICAL_ONLY
+- id: BR-FIRM
+  priority: 70
+  when:
+    firm_disruption: true
+    historical_only: false
+  action:
+    classification: SIGNAL_CANDIDATE
+    disposition: CANDIDATE_ONLY
+    recommendation_allowed: false
+  requirements:
+  - SIGNAL-001
+  - SIGNAL-003
+  basis: Owner request ADR 011; classification is separate from actionability, unresolved timezone never
+    authorizes publication.
+  oracle: executable
+  status: owner-approved
+  output_reason: FIRM_CANDIDATE
+- id: BR-UNRESOLVED
+  priority: 100
+  when: {}
+  action:
+    classification: UNRESOLVED
+    disposition: REVIEW_REQUIRED
+    recommendation_allowed: false
+  requirements:
+  - SIGNAL-001
+  - SIGNAL-004
+  basis: 'D2/D5/D6: remaining partial restrictions/lifts need supported judgement; no inferred cutoff'
+  oracle: executable
+  status: adopted-existing-policy
+  output_reason: UNRESOLVED
+bounds:
+  OUTPUT-002.maximum_mdq: 100
+  OUTPUT-002.minimum: 0
+  OUTPUT-001.confidence_max: 1
+bound_source: These are existing representation bounds, not materiality cutoffs; loader validates against
+  requirements.yaml.
+state_safety:
+  version: 1
+  policy_id: assessment-v3-owner-20260928
+  scope: bounded initial outbound recommendation decisions; not delivery or complete lifecycle acceptance
+  basis: spec.md D1-D3/D5-D6; owner behavioral-improvement request
+  reference_time: '2026-01-15T12:00:00+00:00'
+  synthetic: true
+  requirements:
+  - INPUT-002
+  - STATE-003
+  - STATE-004
+  - STATE-006
+  - HISTORY-002
+  - SAFETY-001
+  - SIGNAL-002
+  relations:
+    initial:
+      field: initial_count
+      kind: behavior
+    disposition:
+      requirement: OUTPUT-001
+      field: disposition
+      kind: output_contract
+    reason:
+      requirement: OUTPUT-001
+      field: reason
+      kind: output_contract
+    semantic_safety:
+      requirement: SAFETY-001
+      field: semantic_safety
+      kind: behavior
+  steps:
+  - id: A
+    notice: root
+    expected:
+      initial: 1
+      disposition: INITIAL_RECOMMENDATION
+    requirement: STATE-003
+  - id: B
+    notice: root
+    expected:
+      initial: 0
+      disposition: SUPPRESSED
+    requirement: STATE-003
+  - id: C
+    notice: unchanged_revision
+    expected:
+      initial: 0
+      disposition: SUPPRESSED
+    requirement: STATE-004
+  - id: D
+    notice: unchanged_revision
+    restart: true
+    expected:
+      initial: 0
+      disposition: SUPPRESSED
+    requirement: STATE-006
+  - id: E
+    notice: distinct
+    expected:
+      initial: 1
+      disposition: INITIAL_RECOMMENDATION
+    requirement: STATE-003
+  - id: F
+    notice: distinct
+    restart: true
+    expected:
+      initial: 0
+      disposition: SUPPRESSED
+    requirement: STATE-006
+  - id: unusable-impact
+    notice: root
+    provider: unusable_impact
+    expected:
+      initial: 0
+      disposition: ERROR
+      semantic_safety: true
+    requirement: INPUT-002
+  - id: unavailable-extraction
+    notice: extraction_failure
+    provider: unavailable_extraction
+    expected:
+      initial: 0
+      disposition: ERROR
+      semantic_safety: true
+    requirement: INPUT-002
+  - id: missing-history
+    notice: missing_history
+    expected:
+      initial: 0
+      disposition: REVIEW_REQUIRED
+      reason: MISSING_HISTORY
+    requirement: HISTORY-002
+  - id: missing-authorization
+    notice: unauthorized
+    authorization: false
+    expected:
+      initial: 0
+      disposition: REVIEW_REQUIRED
+      reason: AUTHORIZATION_REQUIRED
+    requirement: STATE-003
+  - id: routine
+    notice: routine
+    provider: information_only
+    expected:
+      initial: 0
+      disposition: NO_SIGNAL
+    requirement: SIGNAL-002
+  - id: unsupported-format
+    notice: unsupported_format
+    expected:
+      initial: 0
+      disposition: REVIEW_REQUIRED
+      reason: UNSUPPORTED_FORMAT
+    requirement: INPUT-002
+formats:
+  supported:
+  - text/html
+  - application/vnd.ngpl.normalized+json
+  unsupported:
+  - application/pdf
+  - text/plain
+  - application/octet-stream
+  meaning: HTML is parsed from saved bytes; no PDF/OCR/attachment extraction. Normalized classifier does
+    not implement HTML ingestion.
+feature_meanings:
+  format_supported: source.media_type is one of formats.supported. This is format admission, not proof
+    of extraction.
+  semantic_usable: Both evidence.extraction_usable and evidence.helpers_usable are true. These are availability
+    observations, not supplied classifications.
+  contradiction: Explicit contradiction, or information/administration paired with any retained known
+    operational restriction. Adding unknown rows never erases known restrictions.
+  history_resolved: A complete acyclic explicit chain terminates at a supported root status, and every
+    linked status is explicitly supported. Merely adding a schema enum never supplies lifecycle semantics.
+  unchanged_revision: SUPERSEDE with complete predecessor and identical facts; predecessor must not be
+    TERMINATE. Unresolved clock-dependent actionability remains separate.
+  routine_without_restriction: content_kind is ADMINISTRATIVE or INFORMATIONAL and availability is not
+    UNAVAILABLE, PRIMARY_ONLY or PARTIAL.
+  firm_disruption: RESTRICTION with supported firm unavailability, either a scalar assertion or an explicitly
+    paired per-restriction firm service and UNAVAILABLE. Partial-only meaning remains unresolved.
+  current_or_future: time_basis is UTC, start_time is known, and end_time is either absent or later than
+    reference_time. Unknown end still requires D3 human actionability before publication.
+  historical_only: Source interval is actually resolved in UTC and its nonnull end is at or before reference_time.
+    Unknown source timezone is never historical by inference.
+structural_observations:
+  history.chain_complete: Index history by notice.notice_id; false on duplicate IDs, a cycle through the
+    current explicit prior chain, or a missing referenced ancestor. Walk prior_notice_id links from the
+    current notice to null; no ID-order or similarity inference. Notice statuses have no structural meaning
+    here; the history_resolved expression supplies that policy.
+  history.predecessor: The history entry whose notice.notice_id equals input.notice.prior_notice_id, or
+    null. No inferred predecessor.
+  operators:
+    eq: JSON value equality (booleans are distinct from numbers). Objects compare all fields; arrays retain
+      order.
+    in: The field value equals one member of values or values_field.
+    contains_any: At least one item of the field array equals a member of values or values_field.
+    all: All nonempty conditions are true, evaluated in order with short circuit.
+    any: At least one nonempty condition is true, evaluated in order with short circuit.
+    not: Boolean negation of condition.
+    after: The explicit-offset ISO timestamps named by field and value_field compare strictly later.
+    some: At least one member of the named optional array satisfies condition with item bound to that
+      member. Missing optional array is empty; an existing nonarray is invalid.
+feature_predicates:
+  format_supported:
+    operator: in
+    field: input.source.media_type
+    values_field: contract.formats.supported
+  semantic_usable:
+    operator: all
+    conditions:
+    - operator: eq
+      field: input.evidence.extraction_usable
+      value: true
+    - operator: eq
+      field: input.evidence.helpers_usable
+      value: true
+  contradiction:
+    operator: any
+    conditions:
+    - operator: eq
+      field: input.evidence.contradictory
+      value: true
+    - operator: all
+      conditions:
+      - operator: in
+        field: input.facts.content_kind
+        values:
+        - ADMINISTRATIVE
+        - INFORMATIONAL
+      - operator: any
+        conditions:
+        - operator: in
+          field: input.facts.availability
+          values:
+          - UNAVAILABLE
+          - PRIMARY_ONLY
+          - PARTIAL
+        - &id001
+          operator: some
+          field: input.facts.restrictions
+          condition:
+            operator: in
+            field: item.availability
+            values:
+            - UNAVAILABLE
+            - PRIMARY_ONLY
+            - PARTIAL
+  history_resolved:
+    operator: all
+    conditions:
+    - operator: eq
+      field: history.chain_complete
+      value: true
+    - operator: in
+      field: history.root_status
+      values_field: contract.history_statuses.root
+    - operator: contains_only
+      field: history.statuses
+      values_field: contract.history_statuses.linked
+  unchanged_revision:
+    operator: all
+    conditions:
+    - operator: eq
+      field: input.notice.status
+      value: SUPERSEDE
+    - operator: not
+      condition:
+        operator: eq
+        field: history.predecessor
+        value: null
+    - operator: in
+      field: history.predecessor.notice.status
+      values:
+      - INITIATE
+      - SUPERSEDE
+    - operator: eq
+      field: input.facts
+      value_field: history.predecessor.facts
+  routine_without_restriction:
+    operator: all
+    conditions:
+    - operator: in
+      field: input.facts.content_kind
+      values:
+      - ADMINISTRATIVE
+      - INFORMATIONAL
+    - operator: not
+      condition:
+        operator: in
+        field: input.facts.availability
+        values:
+        - UNAVAILABLE
+        - PRIMARY_ONLY
+        - PARTIAL
+    - operator: not
+      condition: *id001
+  firm_disruption:
+    operator: all
+    conditions:
+    - operator: eq
+      field: input.facts.content_kind
+      value: RESTRICTION
+    - operator: any
+      conditions:
+      - operator: all
+        conditions:
+        - operator: contains_any
+          field: input.facts.services
+          values:
+          - PRIMARY_FIRM
+          - SECONDARY_FIRM
+        - operator: eq
+          field: input.facts.availability
+          value: UNAVAILABLE
+      - operator: eq
+        field: input.facts.availability
+        value: PRIMARY_ONLY
+      - operator: some
+        field: input.facts.restrictions
+        condition:
+          operator: all
+          conditions:
+          - operator: in
+            field: item.service
+            values:
+            - PRIMARY_FIRM
+            - SECONDARY_FIRM
+          - operator: eq
+            field: item.availability
+            value: UNAVAILABLE
+  current_or_future:
+    operator: all
+    conditions:
+    - operator: eq
+      field: input.facts.time_basis
+      value: UTC
+    - operator: not
+      condition:
+        operator: eq
+        field: input.facts.start_time
+        value: null
+    - operator: any
+      conditions:
+      - operator: eq
+        field: input.facts.end_time
+        value: null
+      - operator: after
+        field: input.facts.end_time
+        value_field: input.reference_time
+  historical_only:
+    operator: all
+    conditions:
+    - operator: eq
+      field: input.facts.time_basis
+      value: UTC
+    - operator: not
+      condition:
+        operator: eq
+        field: input.facts.end_time
+        value: null
+    - operator: not
+      condition:
+        operator: after
+        field: input.facts.end_time
+        value_field: input.reference_time
+history_statuses:
+  root:
+  - INITIATE
+  linked:
+  - INITIATE
+  - SUPERSEDE
+  - TERMINATE
+normalization:
+  boundary: Map retained extracted assertions with provenance. Preserve each service/restriction/location/interval
+    association, including unknown rows. Scalar mixed availability remains UNKNOWN, but known per-row
+    evidence is never erased. Never use is_signal, confidence, labels or a classification as input evidence.
+    No timezone inferred.
+  services:
+    PRIMARY_FIRM: PRIMARY_FIRM
+    SECONDARY_FIRM: SECONDARY_FIRM
+    SECONDARY_INPATH_FIRM: SECONDARY_FIRM
+    SECONDARY_OUTPATH_FIRM: SECONDARY_FIRM
+    INTERRUPTIBLE: INTERRUPTIBLE
+    AOR_ITS: AOR_ITS
+  availability:
+    UNAVAILABLE: UNAVAILABLE
+    PRIMARY_ONLY: PRIMARY_ONLY
+    SCHEDULED_TO_PCT_MDQ: PARTIAL
+    HOURLY_LIMIT_PCT: PARTIAL
+  locations:
+    loc_code: LOC
+    segment: SEGMENT
+    compressor_station: COMPRESSOR_STATION
+    zone: ZONE
+    system: SYSTEM
+  quantities:
+    SCHEDULED_TO_PCT_MDQ:
+      kind: SCHEDULED_TO_PCT_MDQ
+      unit: PERCENT_MDQ
+    HOURLY_LIMIT_PCT:
+      kind: HOURLY_LIMIT_PCT
+      unit: PERCENT_ENTITLEMENT
+  content:
+    information_only: INFORMATIONAL
+    restrictions: RESTRICTION
+    otherwise: UNKNOWN
+  helper_values:
+    llm_assess_curtailment_impact:
+    - large
+    - medium
+    - small
+    llm_is_supersede_material:
+    - true
+    - false
+quantity_units:
+  SCHEDULED_TO_PCT_MDQ:
+  - PERCENT_MDQ
+  HOURLY_LIMIT_PCT:
+  - PERCENT_ENTITLEMENT
+  ABSOLUTE_CURTAILMENT:
+  - MMBtu
+  - Dth
+  UNAVAILABLE:
+  - NONE

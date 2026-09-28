@@ -1,0 +1,660 @@
+{
+  "id": "capture-1/46528",
+  "case_id": "46528",
+  "notice_id": 46528,
+  "source_capture": "evidence/legacy/20260926T185618.823020Z/results.json",
+  "source_input": "inherited/evaluation/notices/46528_OPERATIONAL ALERT.html",
+  "input_sha256": "e0f2e8022373b0efc99840606339e9ce4f12443dd026b198934e28a6aabfca87",
+  "category": "labeled",
+  "expected_signal": false,
+  "inherited_signal": 0,
+  "inherited_execution": "MODEL_FAILURE",
+  "inherited_system": "inherited",
+  "decision": {
+    "decision_id": "c9eb2c04-f12d-4201-be59-80bd9b3f7a3b",
+    "notice_id": 46528,
+    "source_sha256": "e0f2e8022373b0efc99840606339e9ce4f12443dd026b198934e28a6aabfca87",
+    "reference_time": "2026-09-26T18:56:18.828240+00:00",
+    "raw_proposal": {
+      "notice": {
+        "notice_id": 46528,
+        "tsp_name": "6931794-NATURAL GAS PIPELINE CO.",
+        "pipeline_code": "NGPL",
+        "is_critical": 1,
+        "notice_type": "OPERATIONAL ALERT",
+        "notice_subtype": "ADVISORY/DIRECTIONAL NOTICE",
+        "effective_datetime": "2025-12-09T16:10:22",
+        "end_datetime": "2026-02-28T09:00:00",
+        "post_datetime": "2025-12-09T16:10:22",
+        "response_required": 1,
+        "response_due_date": null,
+        "status": "INITIATE",
+        "prior_notice_id": null,
+        "subject": "HOURLY TAKES ADVISORY - MARKET DELIVERY",
+        "body_text": "HOURLY TAKES ADVISORY – MARKET DELIVERY ZONE\n\nHOURLY TAKES ADVISORY – MARKET\nDELIVERY ZONE \n\n \n\nDue to the impending colder\nweather and current system operating conditions, effective for\n Friday, December\n 12, 2025, at 9:00 am., and continuing until further notice\n, per Natural's\ntariff [GT&C Section 7.4], \nShippers and Point Operators\n are advised\nto \nlimit hourly\n \ntakes\n at \nALL DELIVERY POINTS IN THE MARKET\nDELIVERY ZONE\n.  Additionally, Natural continues to monitor operating\nconditions system wide.  If necessary, Natural will issue Operational Flow\nOrders (OFOs) to address Shipper actions that are \ndetrimental to such\noperating conditions outside the Market Delivery Zone\n.  Should Natural's\nability to provide hourly flexibility decrease, an Operational Flow Order (OFO)\ncondition will occur.\n\n \n\nAs provided in the tariff,\nat each point in the Market Delivery Zone, the hourly rights for each Shipper/Point\nOperator will be limited.  Such hourly rights will be limited by service\npriority and nomination cycle, based on hours remaining in the gas day. \nShippers and Point Operators are responsible for calculating and monitoring\ntheir hourly usage so as not to exceed the limits described herein.\n\n \n\nHourly Rights for Firm\nService – 150%\n\nIncludes Primary and\nSecondary Confirmed Nominations and Unused No-Notice firm service rights\n\n \n\n            \nTimely/Evening\nCycles\n\nLimited to \n6.25% (150% / 24 hours)\n of Firm\nService.  \n\n \n\nIntra-Day 1 Cycle\n\nLimited to the hourly rights computed in the previous\ncycle for Firm Service; plus \n7.895%\n \n(150% / 19 hours)\n of the difference\nof current cycle Firm Service minus prior cycle Firm Service.  \n\n \n\nIntra-Day 2 Cycle\n\nLimited to the hourly rights computed in the previous\ncycle for Firm Service; plus\n 10.00% (150% / 15 hours)\n of the difference\nof current cycle Firm Service minus prior cycle Firm Service.  \n\n \n\nIntra-Day 3 Cycle\n\nLimited to the hourly rights computed in the previous\ncycle for Firm Service, plus \n13.64% (150% / 11 hours)\n of the difference\nof current cycle Firm Service minus prior cycle Firm Service.\n\n \n\n \n\nHourly Rights for\nInterruptible Service – 105%\n\nIncludes Interruptible and\nAOR nominations, as well as POA tolerances\n\n \n\nTimely/Evening\nCycles\n\nLimited to \n4.375% (105% / 24 hours)\n of Interruptible\nService.  \n\n \n\nIntra-Day 1 Cycle\n\nLimited to the hourly rights computed in the previous\ncycle for Interruptible Service; plus\n 5.53%\n \n(105% / 19 hours)\n of\nthe difference of current cycle Interruptible Service minus prior cycle Interruptible\nService.  \n\n \n\n \n\nIntra-Day 2 Cycle\n\nLimited to the hourly rights computed in the previous\ncycle for Interruptible Service; plus \n7.0% (105% / 15 hours)\n of the\ndifference of current cycle Interruptible Service minus prior cycle Interruptible\nService.  \n\n \n\nIntra-Day 3 Cycle\n\nLimited to the hourly rights computed in the previous\ncycle for Interruptible Service; plus \n9.55% (105% / 11 hours)\n of the\ndifference of current cycle Interruptible Service minus prior cycle\nInterruptible Service.\n\n \n\nLimitation on\nNominations in All Cycles for Firm and Interruptible Service\n\n \n\nShippers are advised that nominations should be\nreceived by Timely/Evening Cycle in order to utilize full rights over 24 hours,\nto avoid exceeding the 24 hour ratable hourly takes calculation.  In all\ncases, any first time nominations received on Non-Timely Cycles for full MDQ\nutilization rights, plus any scheduled ITS nominations must conform to the 24\nhour ratable calculation.  Shipper's hourly rights based on firm MDQ, plus\ninterruptible nominations, must be adequate enough to accommodate the\ncalculated hourly rights for the remaining hours of the gas day. \nSpecifically, hourly rights cannot exceed 150% / 24 hours of Shipper's MDQ on\nthe nominated contract, plus 105% / 24 hours of Shipper's interruptible\nnominations.\n\n \n\nIn addition, Natural would\nlike to remind point operators to utilize the Operator Point Reports available\non our website to assist you in monitoring your hourly takes.  These reports\nare available by linking to http://pipeline.kindermorgan.com.  Select NGPL >\nCustomer Activities > Log On > Flowing Gas > Additional Reports >\nNGPL/HRZ > NGPL/HRZ – Hourly Nomination Details.\n\n \n\nPlease contact your Account\nDirector or Scheduling Representative if you have any questions.\n\n..",
+        "outage_report_ref": null,
+        "tariff_section": "GT&C Section 7.4",
+        "information_only": 0,
+        "is_signal": 0,
+        "confidence_score": 0.0,
+        "validity_flags": "[\"VC-3: small curtailment impact \\u2014 interruptible/lower-priority service only or <10% reduction (+0.10 confidence)\", \"VC-4: named zone(s) identified \\u2014 regional constraint known (+0.20 confidence)\", \"llm_extraction\"]",
+        "source_url": null,
+        "scraped_at": "2026-09-26T18:56:46.528027",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/inherited/evaluation/notices/46528_OPERATIONAL ALERT.html"
+      },
+      "locations": [
+        {
+          "location_index": 0,
+          "notice_id": 46528,
+          "loc_code": null,
+          "loc_name": null,
+          "segment": null,
+          "compressor_station": null,
+          "zone": "Market Delivery Zone",
+          "system": null
+        }
+      ],
+      "restrictions": [
+        {
+          "notice_id": 46528,
+          "location_index": 0,
+          "service_type": "PRIMARY_FIRM",
+          "restriction_type": "HOURLY_LIMIT_PCT",
+          "restriction_value": 150.0,
+          "restriction_unit": "PCT_MDQ",
+          "flow_direction": "OFF_OF_PIPE",
+          "start_datetime": "2025-12-12",
+          "end_datetime": "TBD"
+        },
+        {
+          "notice_id": 46528,
+          "location_index": 0,
+          "service_type": "NO_NOTICE",
+          "restriction_type": "HOURLY_LIMIT_PCT",
+          "restriction_value": 150.0,
+          "restriction_unit": "PCT_MDQ",
+          "flow_direction": "OFF_OF_PIPE",
+          "start_datetime": "2025-12-12",
+          "end_datetime": "TBD"
+        },
+        {
+          "notice_id": 46528,
+          "location_index": 0,
+          "service_type": "INTERRUPTIBLE",
+          "restriction_type": "HOURLY_LIMIT_PCT",
+          "restriction_value": 105.0,
+          "restriction_unit": "PCT_MDQ",
+          "flow_direction": "OFF_OF_PIPE",
+          "start_datetime": "2025-12-12",
+          "end_datetime": "TBD"
+        },
+        {
+          "notice_id": 46528,
+          "location_index": 0,
+          "service_type": "AOR_ITS",
+          "restriction_type": "HOURLY_LIMIT_PCT",
+          "restriction_value": 105.0,
+          "restriction_unit": "PCT_MDQ",
+          "flow_direction": "OFF_OF_PIPE",
+          "start_datetime": "2025-12-12",
+          "end_datetime": "TBD"
+        }
+      ]
+    },
+    "semantic_evidence": {
+      "extraction_usable": true,
+      "helpers": [
+        [
+          "llm_assess_curtailment_impact",
+          null
+        ]
+      ],
+      "execution_error": "MODEL_FAILURE",
+      "source_media_type": "text/html"
+    },
+    "normalized_input": {
+      "version": 1,
+      "normalization_trace": [
+        {
+          "field": "content_kind",
+          "source_basis": "Captured notice.information_only and restrictions; validate against source.fields.body",
+          "source_value": {
+            "information_only": 0,
+            "restriction_count": 4
+          },
+          "normalized_value": "RESTRICTION",
+          "supplied_by": "model",
+          "unknown_handling": "Missing content meaning stays UNKNOWN; information plus a known restriction is contradictory"
+        },
+        {
+          "field": "availability",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [
+            "HOURLY_LIMIT_PCT",
+            "HOURLY_LIMIT_PCT",
+            "HOURLY_LIMIT_PCT",
+            "HOURLY_LIMIT_PCT"
+          ],
+          "normalized_value": "PARTIAL",
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "services",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [
+            "PRIMARY_FIRM",
+            "NO_NOTICE",
+            "INTERRUPTIBLE",
+            "AOR_ITS"
+          ],
+          "normalized_value": [
+            "AOR_ITS",
+            "INTERRUPTIBLE",
+            "PRIMARY_FIRM",
+            "UNKNOWN"
+          ],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "restrictions",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [
+            {
+              "notice_id": 46528,
+              "location_index": 0,
+              "service_type": "PRIMARY_FIRM",
+              "restriction_type": "HOURLY_LIMIT_PCT",
+              "restriction_value": 150.0,
+              "restriction_unit": "PCT_MDQ",
+              "flow_direction": "OFF_OF_PIPE",
+              "start_datetime": "2025-12-12",
+              "end_datetime": "TBD"
+            },
+            {
+              "notice_id": 46528,
+              "location_index": 0,
+              "service_type": "NO_NOTICE",
+              "restriction_type": "HOURLY_LIMIT_PCT",
+              "restriction_value": 150.0,
+              "restriction_unit": "PCT_MDQ",
+              "flow_direction": "OFF_OF_PIPE",
+              "start_datetime": "2025-12-12",
+              "end_datetime": "TBD"
+            },
+            {
+              "notice_id": 46528,
+              "location_index": 0,
+              "service_type": "INTERRUPTIBLE",
+              "restriction_type": "HOURLY_LIMIT_PCT",
+              "restriction_value": 105.0,
+              "restriction_unit": "PCT_MDQ",
+              "flow_direction": "OFF_OF_PIPE",
+              "start_datetime": "2025-12-12",
+              "end_datetime": "TBD"
+            },
+            {
+              "notice_id": 46528,
+              "location_index": 0,
+              "service_type": "AOR_ITS",
+              "restriction_type": "HOURLY_LIMIT_PCT",
+              "restriction_value": 105.0,
+              "restriction_unit": "PCT_MDQ",
+              "flow_direction": "OFF_OF_PIPE",
+              "start_datetime": "2025-12-12",
+              "end_datetime": "TBD"
+            }
+          ],
+          "normalized_value": [
+            {
+              "service": "PRIMARY_FIRM",
+              "availability": "PARTIAL",
+              "restriction_type": "HOURLY_LIMIT_PCT",
+              "status": "UNKNOWN",
+              "location_index": 0,
+              "source_start": "2025-12-12",
+              "source_end": "TBD",
+              "evidence_ref": "source.fields.body"
+            },
+            {
+              "service": "UNKNOWN",
+              "availability": "PARTIAL",
+              "restriction_type": "HOURLY_LIMIT_PCT",
+              "status": "UNKNOWN",
+              "location_index": 0,
+              "source_start": "2025-12-12",
+              "source_end": "TBD",
+              "evidence_ref": "source.fields.body"
+            },
+            {
+              "service": "INTERRUPTIBLE",
+              "availability": "PARTIAL",
+              "restriction_type": "HOURLY_LIMIT_PCT",
+              "status": "UNKNOWN",
+              "location_index": 0,
+              "source_start": "2025-12-12",
+              "source_end": "TBD",
+              "evidence_ref": "source.fields.body"
+            },
+            {
+              "service": "AOR_ITS",
+              "availability": "PARTIAL",
+              "restriction_type": "HOURLY_LIMIT_PCT",
+              "status": "UNKNOWN",
+              "location_index": 0,
+              "source_start": "2025-12-12",
+              "source_end": "TBD",
+              "evidence_ref": "source.fields.body"
+            }
+          ],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "locations",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [
+            {
+              "location_index": 0,
+              "notice_id": 46528,
+              "loc_code": null,
+              "loc_name": null,
+              "segment": null,
+              "compressor_station": null,
+              "zone": "Market Delivery Zone",
+              "system": null
+            }
+          ],
+          "normalized_value": [
+            {
+              "kind": "ZONE",
+              "value": "Market Delivery Zone",
+              "evidence_ref": "source.fields.body"
+            }
+          ],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "quantities",
+          "source_basis": "Retained extraction rows and source.fields.body; deterministic canonical mapping",
+          "source_value": [
+            {
+              "notice_id": 46528,
+              "location_index": 0,
+              "service_type": "PRIMARY_FIRM",
+              "restriction_type": "HOURLY_LIMIT_PCT",
+              "restriction_value": 150.0,
+              "restriction_unit": "PCT_MDQ",
+              "flow_direction": "OFF_OF_PIPE",
+              "start_datetime": "2025-12-12",
+              "end_datetime": "TBD"
+            },
+            {
+              "notice_id": 46528,
+              "location_index": 0,
+              "service_type": "NO_NOTICE",
+              "restriction_type": "HOURLY_LIMIT_PCT",
+              "restriction_value": 150.0,
+              "restriction_unit": "PCT_MDQ",
+              "flow_direction": "OFF_OF_PIPE",
+              "start_datetime": "2025-12-12",
+              "end_datetime": "TBD"
+            },
+            {
+              "notice_id": 46528,
+              "location_index": 0,
+              "service_type": "INTERRUPTIBLE",
+              "restriction_type": "HOURLY_LIMIT_PCT",
+              "restriction_value": 105.0,
+              "restriction_unit": "PCT_MDQ",
+              "flow_direction": "OFF_OF_PIPE",
+              "start_datetime": "2025-12-12",
+              "end_datetime": "TBD"
+            },
+            {
+              "notice_id": 46528,
+              "location_index": 0,
+              "service_type": "AOR_ITS",
+              "restriction_type": "HOURLY_LIMIT_PCT",
+              "restriction_value": 105.0,
+              "restriction_unit": "PCT_MDQ",
+              "flow_direction": "OFF_OF_PIPE",
+              "start_datetime": "2025-12-12",
+              "end_datetime": "TBD"
+            }
+          ],
+          "normalized_value": [
+            {
+              "kind": "HOURLY_LIMIT_PCT",
+              "unit": "PERCENT_ENTITLEMENT",
+              "value": 150.0,
+              "basis": "PCT_MDQ",
+              "evidence_ref": "source.fields.body"
+            },
+            {
+              "kind": "HOURLY_LIMIT_PCT",
+              "unit": "PERCENT_ENTITLEMENT",
+              "value": 150.0,
+              "basis": "PCT_MDQ",
+              "evidence_ref": "source.fields.body"
+            },
+            {
+              "kind": "HOURLY_LIMIT_PCT",
+              "unit": "PERCENT_ENTITLEMENT",
+              "value": 105.0,
+              "basis": "PCT_MDQ",
+              "evidence_ref": "source.fields.body"
+            },
+            {
+              "kind": "HOURLY_LIMIT_PCT",
+              "unit": "PERCENT_ENTITLEMENT",
+              "value": 105.0,
+              "basis": "PCT_MDQ",
+              "evidence_ref": "source.fields.body"
+            }
+          ],
+          "supplied_by": "model",
+          "unknown_handling": "Keep unrecognized values and row associations; no label, confidence or final-classification input"
+        },
+        {
+          "field": "restriction_status",
+          "source_basis": "Notice Stat Desc header retained in notice.status",
+          "source_value": "INITIATE",
+          "normalized_value": "INITIATE",
+          "supplied_by": "source_parser",
+          "unknown_handling": "Unrecognized status has no inferred lifecycle semantics"
+        },
+        {
+          "field": "source_time",
+          "source_basis": "Source-parser header strings plus model-extracted restriction intervals; only explicit offsets converted",
+          "source_value": {
+            "effective_datetime": "2025-12-09T16:10:22",
+            "end_datetime": "2026-02-28T09:00:00",
+            "restriction_intervals": [
+              [
+                "2025-12-12",
+                "TBD"
+              ],
+              [
+                "2025-12-12",
+                "TBD"
+              ],
+              [
+                "2025-12-12",
+                "TBD"
+              ],
+              [
+                "2025-12-12",
+                "TBD"
+              ]
+            ]
+          },
+          "normalized_value": {
+            "start_time": null,
+            "end_time": null,
+            "time_basis": "UNRESOLVED",
+            "timezone_known": false
+          },
+          "supplied_by": "normalizer",
+          "unknown_handling": "Naive/date-only strings and mixed intervals remain UNRESOLVED; no gas-day or timezone inference"
+        },
+        {
+          "field": "history",
+          "source_basis": "Explicit source-parser prior header and supplied retained history",
+          "source_value": {
+            "status": "INITIATE",
+            "prior_notice_id": null
+          },
+          "normalized_value": {
+            "prior_notice_id": null,
+            "available_notice_ids": [
+              46507
+            ]
+          },
+          "supplied_by": "retained_history",
+          "unknown_handling": "Missing, unsupported or conflicting chain remains review; no ID-order inference"
+        }
+      ],
+      "source": {
+        "pipeline": "NGPL",
+        "media_type": "text/html",
+        "sha256": "e0f2e8022373b0efc99840606339e9ce4f12443dd026b198934e28a6aabfca87",
+        "bytes_reference": "sha256:e0f2e8022373b0efc99840606339e9ce4f12443dd026b198934e28a6aabfca87",
+        "fields": {
+          "body": "HOURLY TAKES ADVISORY – MARKET DELIVERY ZONE\n\nHOURLY TAKES ADVISORY – MARKET\nDELIVERY ZONE \n\n \n\nDue to the impending colder\nweather and current system operating conditions, effective for\n Friday, December\n 12, 2025, at 9:00 am., and continuing until further notice\n, per Natural's\ntariff [GT&C Section 7.4], \nShippers and Point Operators\n are advised\nto \nlimit hourly\n \ntakes\n at \nALL DELIVERY POINTS IN THE MARKET\nDELIVERY ZONE\n.  Additionally, Natural continues to monitor operating\nconditions system wide.  If necessary, Natural will issue Operational Flow\nOrders (OFOs) to address Shipper actions that are \ndetrimental to such\noperating conditions outside the Market Delivery Zone\n.  Should Natural's\nability to provide hourly flexibility decrease, an Operational Flow Order (OFO)\ncondition will occur.\n\n \n\nAs provided in the tariff,\nat each point in the Market Delivery Zone, the hourly rights for each Shipper/Point\nOperator will be limited.  Such hourly rights will be limited by service\npriority and nomination cycle, based on hours remaining in the gas day. \nShippers and Point Operators are responsible for calculating and monitoring\ntheir hourly usage so as not to exceed the limits described herein.\n\n \n\nHourly Rights for Firm\nService – 150%\n\nIncludes Primary and\nSecondary Confirmed Nominations and Unused No-Notice firm service rights\n\n \n\n            \nTimely/Evening\nCycles\n\nLimited to \n6.25% (150% / 24 hours)\n of Firm\nService.  \n\n \n\nIntra-Day 1 Cycle\n\nLimited to the hourly rights computed in the previous\ncycle for Firm Service; plus \n7.895%\n \n(150% / 19 hours)\n of the difference\nof current cycle Firm Service minus prior cycle Firm Service.  \n\n \n\nIntra-Day 2 Cycle\n\nLimited to the hourly rights computed in the previous\ncycle for Firm Service; plus\n 10.00% (150% / 15 hours)\n of the difference\nof current cycle Firm Service minus prior cycle Firm Service.  \n\n \n\nIntra-Day 3 Cycle\n\nLimited to the hourly rights computed in the previous\ncycle for Firm Service, plus \n13.64% (150% / 11 hours)\n of the difference\nof current cycle Firm Service minus prior cycle Firm Service.\n\n \n\n \n\nHourly Rights for\nInterruptible Service – 105%\n\nIncludes Interruptible and\nAOR nominations, as well as POA tolerances\n\n \n\nTimely/Evening\nCycles\n\nLimited to \n4.375% (105% / 24 hours)\n of Interruptible\nService.  \n\n \n\nIntra-Day 1 Cycle\n\nLimited to the hourly rights computed in the previous\ncycle for Interruptible Service; plus\n 5.53%\n \n(105% / 19 hours)\n of\nthe difference of current cycle Interruptible Service minus prior cycle Interruptible\nService.  \n\n \n\n \n\nIntra-Day 2 Cycle\n\nLimited to the hourly rights computed in the previous\ncycle for Interruptible Service; plus \n7.0% (105% / 15 hours)\n of the\ndifference of current cycle Interruptible Service minus prior cycle Interruptible\nService.  \n\n \n\nIntra-Day 3 Cycle\n\nLimited to the hourly rights computed in the previous\ncycle for Interruptible Service; plus \n9.55% (105% / 11 hours)\n of the\ndifference of current cycle Interruptible Service minus prior cycle\nInterruptible Service.\n\n \n\nLimitation on\nNominations in All Cycles for Firm and Interruptible Service\n\n \n\nShippers are advised that nominations should be\nreceived by Timely/Evening Cycle in order to utilize full rights over 24 hours,\nto avoid exceeding the 24 hour ratable hourly takes calculation.  In all\ncases, any first time nominations received on Non-Timely Cycles for full MDQ\nutilization rights, plus any scheduled ITS nominations must conform to the 24\nhour ratable calculation.  Shipper's hourly rights based on firm MDQ, plus\ninterruptible nominations, must be adequate enough to accommodate the\ncalculated hourly rights for the remaining hours of the gas day. \nSpecifically, hourly rights cannot exceed 150% / 24 hours of Shipper's MDQ on\nthe nominated contract, plus 105% / 24 hours of Shipper's interruptible\nnominations.\n\n \n\nIn addition, Natural would\nlike to remind point operators to utilize the Operator Point Reports available\non our website to assist you in monitoring your hourly takes.  These reports\nare available by linking to http://pipeline.kindermorgan.com.  Select NGPL >\nCustomer Activities > Log On > Flowing Gas > Additional Reports >\nNGPL/HRZ > NGPL/HRZ – Hourly Nomination Details.\n\n \n\nPlease contact your Account\nDirector or Scheduling Representative if you have any questions.\n\n..",
+          "effective_datetime": "2025-12-09T16:10:22",
+          "end_datetime": "2026-02-28T09:00:00",
+          "retained_extraction": "{\"locations\": [{\"compressor_station\": null, \"loc_code\": null, \"loc_name\": null, \"location_index\": 0, \"notice_id\": 46528, \"segment\": null, \"system\": null, \"zone\": \"Market Delivery Zone\"}], \"restrictions\": [{\"end_datetime\": \"TBD\", \"flow_direction\": \"OFF_OF_PIPE\", \"location_index\": 0, \"notice_id\": 46528, \"restriction_type\": \"HOURLY_LIMIT_PCT\", \"restriction_unit\": \"PCT_MDQ\", \"restriction_value\": 150.0, \"service_type\": \"PRIMARY_FIRM\", \"start_datetime\": \"2025-12-12\"}, {\"end_datetime\": \"TBD\", \"flow_direction\": \"OFF_OF_PIPE\", \"location_index\": 0, \"notice_id\": 46528, \"restriction_type\": \"HOURLY_LIMIT_PCT\", \"restriction_unit\": \"PCT_MDQ\", \"restriction_value\": 150.0, \"service_type\": \"NO_NOTICE\", \"start_datetime\": \"2025-12-12\"}, {\"end_datetime\": \"TBD\", \"flow_direction\": \"OFF_OF_PIPE\", \"location_index\": 0, \"notice_id\": 46528, \"restriction_type\": \"HOURLY_LIMIT_PCT\", \"restriction_unit\": \"PCT_MDQ\", \"restriction_value\": 105.0, \"service_type\": \"INTERRUPTIBLE\", \"start_datetime\": \"2025-12-12\"}, {\"end_datetime\": \"TBD\", \"flow_direction\": \"OFF_OF_PIPE\", \"location_index\": 0, \"notice_id\": 46528, \"restriction_type\": \"HOURLY_LIMIT_PCT\", \"restriction_unit\": \"PCT_MDQ\", \"restriction_value\": 105.0, \"service_type\": \"AOR_ITS\", \"start_datetime\": \"2025-12-12\"}]}"
+        }
+      },
+      "notice": {
+        "notice_id": 46528,
+        "prior_notice_id": null,
+        "status": "INITIATE",
+        "notice_type": "OPERATIONAL ALERT"
+      },
+      "facts": {
+        "content_kind": "RESTRICTION",
+        "services": [
+          "AOR_ITS",
+          "INTERRUPTIBLE",
+          "PRIMARY_FIRM",
+          "UNKNOWN"
+        ],
+        "availability": "PARTIAL",
+        "locations": [
+          {
+            "kind": "ZONE",
+            "value": "Market Delivery Zone",
+            "evidence_ref": "source.fields.body"
+          }
+        ],
+        "quantities": [
+          {
+            "kind": "HOURLY_LIMIT_PCT",
+            "unit": "PERCENT_ENTITLEMENT",
+            "value": 150.0,
+            "basis": "PCT_MDQ",
+            "evidence_ref": "source.fields.body"
+          },
+          {
+            "kind": "HOURLY_LIMIT_PCT",
+            "unit": "PERCENT_ENTITLEMENT",
+            "value": 150.0,
+            "basis": "PCT_MDQ",
+            "evidence_ref": "source.fields.body"
+          },
+          {
+            "kind": "HOURLY_LIMIT_PCT",
+            "unit": "PERCENT_ENTITLEMENT",
+            "value": 105.0,
+            "basis": "PCT_MDQ",
+            "evidence_ref": "source.fields.body"
+          },
+          {
+            "kind": "HOURLY_LIMIT_PCT",
+            "unit": "PERCENT_ENTITLEMENT",
+            "value": 105.0,
+            "basis": "PCT_MDQ",
+            "evidence_ref": "source.fields.body"
+          }
+        ],
+        "operational_assertions": [
+          "HOURLY TAKES ADVISORY – MARKET DELIVERY ZONE HOURLY TAKES ADVISORY – MARKET DELIVERY ZONE Due to the impending colder weather and current system operating conditions, effective for Friday, December 12, 2025, at 9:00 am., and continuing until further notice , per Natural's tariff [GT&C Section 7.4], Shippers and Point Operators are advised to limit hourly takes at ALL DELIVERY POINTS IN THE MARKET DELIVERY ZONE . Additionally, Natural continues to monitor operating conditions system wide. If necessary, Natural will issue Operational Flow Orders (OFOs) to address Shipper actions that are detrimental to such operating conditions outside the Market Delivery Zone . Should Natural's ability to provide hourly flexibility decrease, an Operational Flow Order (OFO) condition will occur. As provided in the tariff, at each point in the Market Delivery Zone, the hourly rights for each Shipper/Point Operator will be limited. Such hourly rights will be limited by service priority and nomination cycle, based on hours remaining in the gas day. Shippers and Point Operators are responsible for calculating and monitoring their hourly usage so as not to exceed the limits described herein. Hourly Rights for Firm Service – 150% Includes Primary and Secondary Confirmed Nominations and Unused No-Notice firm service rights Timely/Evening Cycles Limited to 6.25% (150% / 24 hours) of Firm Service. Intra-Day 1 Cycle Limited to the hourly rights computed in the previous cycle for Firm Service; plus 7.895% (150% / 19 hours) of the difference of current cycle Firm Service minus prior cycle Firm Service. Intra-Day 2 Cycle Limited to the hourly rights computed in the previous cycle for Firm Service; plus 10.00% (150% / 15 hours) of the difference of current cycle Firm Service minus prior cycle Firm Service. Intra-Day 3 Cycle Limited to the hourly rights computed in the previous cycle for Firm Service, plus 13.64% (150% / 11 hours) of the difference of current cycle Firm Service minus prior cycle Firm Service. Hourly Rights for Interruptible Service – 105% Includes Interruptible and AOR nominations, as well as POA tolerances Timely/Evening Cycles Limited to 4.375% (105% / 24 hours) of Interruptible Service. Intra-Day 1 Cycle Limited to the hourly rights computed in the previous cycle for Interruptible Service; plus 5.53% (105% / 19 hours) of the difference of current cycle Interruptible Service minus prior cycle Interruptible Service. Intra-Day 2 Cycle Limited to the hourly rights computed in the previous cycle for Interruptible Service; plus 7.0% (105% / 15 hours) of the difference of current cycle Interruptible Service minus prior cycle Interruptible Service. Intra-Day 3 Cycle Limited to the hourly rights computed in the previous cycle for Interruptible Service; plus 9.55% (105% / 11 hours) of the difference of current cycle Interruptible Service minus prior cycle Interruptible Service. Limitation on Nominations in All Cycles for Firm and Interruptible Service Shippers are advised that nominations should be received by Timely/Evening Cycle in order to utilize full rights over 24 hours, to avoid exceeding the 24 hour ratable hourly takes calculation. In all cases, any first time nominations received on Non-Timely Cycles for full MDQ utilization rights, plus any scheduled ITS nominations must conform to the 24 hour ratable calculation. Shipper's hourly rights based on firm MDQ, plus interruptible nominations, must be adequate enough to accommodate the calculated hourly rights for the remaining hours of the gas day. Specifically, hourly rights cannot exceed 150% / 24 hours of Shipper's MDQ on the nominated contract, plus 105% / 24 hours of Shipper's interruptible nominations. In addition, Natural would like to remind point operators to utilize the Operator Point Reports available on our website to assist you in monitoring your hourly takes. These reports are available by linking to http://pipeline.kindermorgan.com. Select NGPL > Customer Activities > Log On > Flowing Gas > Additional Reports > NGPL/HRZ > NGPL/HRZ – Hourly Nomination Details. Please contact your Account Director or Scheduling Representative if you have any questions. .."
+        ],
+        "start_time": null,
+        "end_time": null,
+        "time_basis": "UNRESOLVED",
+        "restrictions": [
+          {
+            "service": "PRIMARY_FIRM",
+            "availability": "PARTIAL",
+            "restriction_type": "HOURLY_LIMIT_PCT",
+            "status": "UNKNOWN",
+            "location_index": 0,
+            "source_start": "2025-12-12",
+            "source_end": "TBD",
+            "evidence_ref": "source.fields.body"
+          },
+          {
+            "service": "UNKNOWN",
+            "availability": "PARTIAL",
+            "restriction_type": "HOURLY_LIMIT_PCT",
+            "status": "UNKNOWN",
+            "location_index": 0,
+            "source_start": "2025-12-12",
+            "source_end": "TBD",
+            "evidence_ref": "source.fields.body"
+          },
+          {
+            "service": "INTERRUPTIBLE",
+            "availability": "PARTIAL",
+            "restriction_type": "HOURLY_LIMIT_PCT",
+            "status": "UNKNOWN",
+            "location_index": 0,
+            "source_start": "2025-12-12",
+            "source_end": "TBD",
+            "evidence_ref": "source.fields.body"
+          },
+          {
+            "service": "AOR_ITS",
+            "availability": "PARTIAL",
+            "restriction_type": "HOURLY_LIMIT_PCT",
+            "status": "UNKNOWN",
+            "location_index": 0,
+            "source_start": "2025-12-12",
+            "source_end": "TBD",
+            "evidence_ref": "source.fields.body"
+          }
+        ]
+      },
+      "history": [
+        {
+          "facts": {
+            "availability": "UNAVAILABLE",
+            "content_kind": "RESTRICTION",
+            "end_time": null,
+            "locations": [
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "SEGMENT",
+                "value": "14"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "COMPRESSOR_STATION",
+                "value": "113"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "ZONE",
+                "value": "Market Delivery Zone"
+              },
+              {
+                "evidence_ref": "source.fields.body",
+                "kind": "SYSTEM",
+                "value": "Amarillo Mainline System"
+              }
+            ],
+            "operational_assertions": [
+              "SEGMENT 17 FORCE MAJURE SEGMENT 14 WESTBOUND – CS 113 – PRIMARY ONLY Due to current operating conditions, Natural is at operating capacity for transports westbound on the Amarillo Mainline System through Compressor Station 113 located in Will County, IL (Natural's Market Delivery Zone). Therefore, effective for gas day, Wednesday, December 3, 2025, Timely Cycle and continuing until further notice , only Primary Firm and Secondary in-path Firm transports will be scheduled. AOR/ITS and Secondary out-of-path Firm transports will not be available. Please contact your Account Director or Scheduling Representative if you have any questions. .."
+            ],
+            "quantities": [],
+            "restrictions": [
+              {
+                "availability": "UNAVAILABLE",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "UNAVAILABLE",
+                "service": "AOR_ITS",
+                "source_end": "TBD",
+                "source_start": "2025-12-03",
+                "status": "UNKNOWN"
+              },
+              {
+                "availability": "UNAVAILABLE",
+                "evidence_ref": "source.fields.body",
+                "location_index": 0,
+                "restriction_type": "UNAVAILABLE",
+                "service": "SECONDARY_FIRM",
+                "source_end": "TBD",
+                "source_start": "2025-12-03",
+                "status": "UNKNOWN"
+              }
+            ],
+            "services": [
+              "AOR_ITS",
+              "SECONDARY_FIRM"
+            ],
+            "start_time": null,
+            "time_basis": "UNRESOLVED"
+          },
+          "notice": {
+            "notice_id": 46507,
+            "notice_type": "CAPACITY CONSTRAINT",
+            "prior_notice_id": null,
+            "status": "INITIATE"
+          },
+          "source_sha256": "6cc6c6ea924d52f09130dc83de3d1a65a25f75982750faddb57e77c5d7f6d084"
+        }
+      ],
+      "reference_time": "2026-09-26T18:56:18.828240+00:00",
+      "evidence": {
+        "extraction_usable": true,
+        "helpers_usable": false,
+        "contradictory": false,
+        "references": [
+          "source.fields.body"
+        ]
+      }
+    },
+    "normalization_gaps": [
+      "Unresolved source timestamp: 2025-12-12",
+      "Unsupported restriction/service vocabulary retained as UNKNOWN"
+    ],
+    "actionability": {
+      "status": "UNRESOLVED",
+      "source_timezone_known": false,
+      "source_timezone_status": "UNKNOWN",
+      "automatic_current_future": false,
+      "recommendation_authorized": false
+    },
+    "classifier_decision": {
+      "notice_id": 46528,
+      "source_sha256": "e0f2e8022373b0efc99840606339e9ce4f12443dd026b198934e28a6aabfca87",
+      "classification": "UNRESOLVED",
+      "disposition": "ERROR",
+      "recommendation_allowed": false,
+      "reason_codes": [
+        "BR-SEMANTICS",
+        "UNUSABLE_SEMANTICS"
+      ],
+      "evidence_refs": [
+        "sha256:6cc6c6ea924d52f09130dc83de3d1a65a25f75982750faddb57e77c5d7f6d084",
+        "sha256:e0f2e8022373b0efc99840606339e9ce4f12443dd026b198934e28a6aabfca87",
+        "source.fields.body"
+      ]
+    },
+    "matched_rule": "BR-SEMANTICS",
+    "classification": "UNRESOLVED",
+    "disposition": "ERROR",
+    "reason": "UNUSABLE_SEMANTICS",
+    "reason_codes": [
+      "BR-SEMANTICS",
+      "UNUSABLE_SEMANTICS"
+    ],
+    "recommendation_allowed": false,
+    "candidate_classification": null,
+    "authorization": null,
+    "publication_disposition": "ERROR",
+    "publication_reason": "UNUSABLE_SEMANTICS",
+    "initial_decision": false,
+    "publication_attempted": false,
+    "delivery_acknowledged": null
+  },
+  "recommendation_count": 0,
+  "replay_recommendation_count": 0,
+  "authorization": "None; evaluation labels never authorize publication"
+}

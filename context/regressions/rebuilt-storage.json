@@ -1,0 +1,13 @@
+{
+  "status": "observed paired comparison; policy proposals remain unapproved",
+  "run": "evidence/rebuild/20260926T194455.389677Z/component-final",
+  "fixtures": "evidence/rebuild/20260926T194455.389677Z/component-final/fixtures.json",
+  "inherited_failures": "evidence/rebuild/20260926T194455.389677Z/component-final/inherited/failures.json",
+  "comparison": "evidence/rebuild/20260926T194455.389677Z/component-final/comparison.json",
+  "requirements": ["STATE-001", "STATE-002", "STATE-006", "OUTPUT-003", "HISTORY-001"],
+  "cases": ["duplicate-input", "restart-replay", "repeated-revision", "termination-with-prior"],
+  "synthetic_cases": ["unchanged-revision", "repeated-revision"],
+  "observed": "9 checks newly pass; 0 newly fail; 148 unchanged; no unexpected differences",
+  "still_failing": "Frozen SIGNAL-001 case 46528; do not claim a storage repair fixes classification",
+  "still_unknown": "Missing-prior cases, delivered alerts, full application acceptance"
+}

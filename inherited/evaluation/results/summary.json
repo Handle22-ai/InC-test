@@ -1,0 +1,202 @@
+[
+  {
+    "notice_id": 46507,
+    "notice_type": "CAPACITY CONSTRAINT",
+    "status": "INITIATE",
+    "prior_notice_id": null,
+    "information_only": false,
+    "is_signal": false,
+    "confidence_score": 0.0,
+    "validity_flags": [
+      "VC-2: high-confidence notice type (CAPACITY CONSTRAINT) — capacity constraint (+0.20 confidence)",
+      "VC-3: small curtailment impact — interruptible/lower-priority service only or <10% reduction (+0.10 confidence)",
+      "VC-4: specific LOC code(s) or compressor station identified — precise constraint point known (+0.10 confidence)",
+      "llm_extraction"
+    ]
+  },
+  {
+    "notice_id": 46528,
+    "notice_type": "OPERATIONAL ALERT",
+    "status": "INITIATE",
+    "prior_notice_id": null,
+    "information_only": false,
+    "is_signal": false,
+    "confidence_score": 0.0,
+    "validity_flags": [
+      "VC-3: small curtailment impact — interruptible/lower-priority service only or <10% reduction (+0.10 confidence)",
+      "VC-4: named zone(s) identified — regional constraint known (+0.20 confidence)",
+      "llm_extraction"
+    ]
+  },
+  {
+    "notice_id": 46604,
+    "notice_type": "OTHER",
+    "status": "INITIATE",
+    "prior_notice_id": null,
+    "information_only": true,
+    "is_signal": false,
+    "confidence_score": 0.0,
+    "validity_flags": [
+      "VC-1: information-only notice — Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction",
+      "llm_extraction"
+    ]
+  },
+  {
+    "notice_id": 46615,
+    "notice_type": "MAINTENANCE",
+    "status": "INITIATE",
+    "prior_notice_id": null,
+    "information_only": false,
+    "is_signal": false,
+    "confidence_score": 0.0,
+    "validity_flags": [
+      "VC-2: high-confidence notice type (MAINTENANCE) — maintenance outage (+0.10 confidence)",
+      "VC-3: small curtailment impact — interruptible/lower-priority service only or <10% reduction (+0.10 confidence)",
+      "VC-4: specific LOC code(s) or compressor station identified — precise constraint point known (+0.10 confidence)",
+      "llm_extraction"
+    ]
+  },
+  {
+    "notice_id": 46624,
+    "notice_type": "CAPACITY CONSTRAINT",
+    "status": "INITIATE",
+    "prior_notice_id": null,
+    "information_only": false,
+    "is_signal": true,
+    "confidence_score": 0.7,
+    "validity_flags": [
+      "VC-2: high-confidence notice type (CAPACITY CONSTRAINT) — capacity constraint (+0.20 confidence)",
+      "VC-3: medium curtailment impact — firm service affected with 10–30% reduction (+0.20 confidence)",
+      "VC-4: specific LOC code(s) or compressor station identified — precise constraint point known (+0.10 confidence)",
+      "VC-5: Henry Hub / Gulf Coast / Louisiana zone location — direct price impact on NYMEX front-month (+0.20 confidence)",
+      "llm_extraction"
+    ]
+  },
+  {
+    "notice_id": 46725,
+    "notice_type": "OPERATIONAL FLOW ORDER",
+    "status": "TERMINATE",
+    "prior_notice_id": 46705,
+    "information_only": true,
+    "is_signal": false,
+    "confidence_score": 0.0,
+    "validity_flags": [
+      "VC-1: information-only notice — Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction",
+      "llm_extraction"
+    ]
+  },
+  {
+    "notice_id": 46728,
+    "notice_type": "CAPACITY CONSTRAINT",
+    "status": "INITIATE",
+    "prior_notice_id": null,
+    "information_only": false,
+    "is_signal": false,
+    "confidence_score": 0.0,
+    "validity_flags": [
+      "VC-2: high-confidence notice type (CAPACITY CONSTRAINT) — capacity constraint (+0.20 confidence)",
+      "VC-3: no measurable curtailment — no restriction value and no UNAVAILABLE restriction type extracted; advisory notice only (-0.20 confidence)",
+      "VC-4: pipeline segment identified — constraint point known (+0.15 confidence)",
+      "VC-5: Henry Hub / Gulf Coast / Louisiana zone location — direct price impact on NYMEX front-month (+0.20 confidence)",
+      "llm_extraction"
+    ]
+  },
+  {
+    "notice_id": 46732,
+    "notice_type": "CAPACITY CONSTRAINT",
+    "status": "TERMINATE",
+    "prior_notice_id": 46507,
+    "information_only": false,
+    "is_signal": false,
+    "confidence_score": 0.0,
+    "validity_flags": [
+      "VC-1: terminated notice — prior notice 46507 was not a signal; termination has no trading relevance",
+      "llm_extraction"
+    ]
+  },
+  {
+    "notice_id": 46775,
+    "notice_type": "COMPUTER SYSTEM STATUS",
+    "status": "INITIATE",
+    "prior_notice_id": null,
+    "information_only": true,
+    "is_signal": false,
+    "confidence_score": 0.0,
+    "validity_flags": [
+      "VC-1: information-only notice — Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction",
+      "llm_extraction"
+    ]
+  },
+  {
+    "notice_id": 46795,
+    "notice_type": "OPERATIONAL FLOW ORDER",
+    "status": "INITIATE",
+    "prior_notice_id": null,
+    "information_only": true,
+    "is_signal": false,
+    "confidence_score": 0.0,
+    "validity_flags": [
+      "VC-1: information-only notice — Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction",
+      "llm_extraction"
+    ]
+  },
+  {
+    "notice_id": 46805,
+    "notice_type": "MAINTENANCE",
+    "status": "INITIATE",
+    "prior_notice_id": null,
+    "information_only": false,
+    "is_signal": true,
+    "confidence_score": 0.5,
+    "validity_flags": [
+      "VC-2: high-confidence notice type (MAINTENANCE) — maintenance outage (+0.10 confidence)",
+      "VC-3: large curtailment impact — primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)",
+      "VC-4: specific LOC code(s) or compressor station identified — precise constraint point known (+0.10 confidence)",
+      "llm_extraction"
+    ]
+  },
+  {
+    "notice_id": 46818,
+    "notice_type": "MAINTENANCE",
+    "status": "INITIATE",
+    "prior_notice_id": null,
+    "information_only": true,
+    "is_signal": false,
+    "confidence_score": 0.0,
+    "validity_flags": [
+      "VC-1: information-only notice — Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction",
+      "llm_extraction"
+    ]
+  },
+  {
+    "notice_id": 46864,
+    "notice_type": "FORCE MAJEURE",
+    "status": "INITIATE",
+    "prior_notice_id": null,
+    "information_only": false,
+    "is_signal": true,
+    "confidence_score": 0.6,
+    "validity_flags": [
+      "VC-2: high-confidence notice type (FORCE MAJEURE) — force majeure or OFO (+0.30 confidence)",
+      "VC-3: medium curtailment impact — firm service affected with 10–30% reduction (+0.20 confidence)",
+      "VC-4: specific LOC code(s) or compressor station identified — precise constraint point known (+0.10 confidence)",
+      "llm_extraction"
+    ]
+  },
+  {
+    "notice_id": 46881,
+    "notice_type": "MAINTENANCE",
+    "status": "SUPERSEDE",
+    "prior_notice_id": 46857,
+    "information_only": false,
+    "is_signal": true,
+    "confidence_score": 0.5,
+    "validity_flags": [
+      "VC-1: superseded notice — prior notice not in DB, cannot compare; continuing validation",
+      "VC-2: high-confidence notice type (MAINTENANCE) — maintenance outage (+0.10 confidence)",
+      "VC-3: large curtailment impact — primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)",
+      "VC-4: specific LOC code(s) or compressor station identified — precise constraint point known (+0.10 confidence)",
+      "llm_extraction"
+    ]
+  }
+]
