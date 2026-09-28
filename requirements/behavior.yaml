@@ -1,4 +1,4 @@
-# Generated from spec.md; spec-sha256: 22403278e4a5c917b1190f981346773015a2de43df932bc0b1facc729cf99eea; behavior; DO NOT EDIT
+# Generated from spec.md; spec-sha256: 41cc4f5916379f1cdc3ef1c8841cc8dfd1fe3587f653b2ee2da7563af296eba9; behavior; DO NOT EDIT
 {
   "version": 6,
   "policy_id": "assessment-v4-timezone-separation-20260928",
@@ -1433,7 +1433,7 @@
       "spec_line": 359
     }
   ],
-  "source_spec_sha256": "22403278e4a5c917b1190f981346773015a2de43df932bc0b1facc729cf99eea",
+  "source_spec_sha256": "41cc4f5916379f1cdc3ef1c8841cc8dfd1fe3587f653b2ee2da7563af296eba9",
   "normative_role": "Generated from spec.md; never edit",
   "precedence": "BR-FORMAT > BR-SEMANTICS > BR-CONTRADICTION > BR-HISTORY > BR-UNCHANGED > BR-ROUTINE > BR-HISTORICAL > BR-FIRM > BR-UNRESOLVED",
   "input_contract": [
@@ -1960,7 +1960,7 @@
     },
     {
       "ID": "AUDIT5-001",
-      "Status": "proposed",
+      "Status": "approved",
       "Person": "Thomas Hand",
       "Previous spec SHA256": "c1f20c1cf233a0ccdd5607c33a443bf653f0e3993b334b806498b55686d4b937",
       "Decision": "Fifth audit, wording only: a note under the verification table states what the STATE-003 and OBS-001 PASS rows cover and what is not built; both requirements stay as written. The decision-status vocabulary lists all four statuses the compiler accepts and what reread accepts; the boundary-check count says 23 are listed and names the two that are not. No requirement, rule, predicate, set, setting or acceptance value changes; make consequences shows 0 of 69 captured outcomes changed.",
