@@ -1,6 +1,6 @@
 # Where the code was read anyway
 
-Commit IDs below refer to the pre-publication history (see [ARCHIVE.md](ARCHIVE.md)); they are not in this repository.
+Commit IDs below refer to the earlier, unpublished history (see [ARCHIVE.md](ARCHIVE.md)); they cannot be checked from this repository.
 
 The human owner reports no direct source reads, and the transcripts agree. Every read below
 was made by an agent: the building agent, an audit, or a fresh maintenance session. The

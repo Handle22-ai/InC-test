@@ -51,7 +51,7 @@ Fixed with evidence:
 Held, with reasons:
 - **#1 / #31, approval.** Correct: the receipt is not authentication, and a local mechanism cannot stop an agent that holds the owner's credentials. The answer is branch protection with required CI and code-owner review (README), and ultimately a second reviewer. It is stated as the first limit in harness.md, not defended as sufficient.
 - **#28, the budget equals today's misses.** It is a ratchet the owner approved, not a desk tolerance. The desk must set the real miss tolerance and a review capacity; until then, Gate 2's budget can only detect a regression.
-- **#21, unpublished history.** A deliberate choice to publish one commit. The full history and raw transcripts are kept in a bundle and are available on request; the evidence says so and marks every cited commit as pre-publication.
+- **#21, unpublished history.** A deliberate choice to publish one commit. The earlier history and raw transcripts are not published or offered, so the commit IDs cited from it cannot be checked here. That is a real limit on verifying the code-read and fresh-session records, and it is stated in ARCHIVE.md.
 - **#29 / #30, scope.** `rebuilt/` holds a parser, normalizer, engine, publisher and store. The classifier boundary is the maintained component; the publisher and store are the downstream seam the replay tests exercise. The maintenance exercise was deliberately spec-only, which is what the spec-predicates change was meant to make possible.
 - **#33 / #34, completeness-only checks.** Upstream extraction checks re-check frozen captures, and Gate 3 had not failed alone. Gate 3's distinct value is now naming harness and oracle edits (EVALUATOR_OR_ORACLE_CHANGED); the extraction rows are reported, not relied on.
 
