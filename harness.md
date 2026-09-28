@@ -11,7 +11,7 @@ Two documents: **spec.md**, which they own, and **CURRENT.md** of the latest gat
 | `spec-rules`, `spec-actions`, precedence | the decision table (`requirements/behavior.yaml`) | the component executes it; the harness oracle re-derives it |
 | `spec-predicates` + `spec-settings.sets` | what every rule-column value means, as a small closed condition language | the component and the harness each evaluate it with their own code |
 | `spec-interfaces` | input/output JSON Schemas | the component validates every decision against them |
-| `spec-inputs`, `date_formats` | the parser contract | the gate parses every declared field, every labeled notice header and the 25 unlabeled HTML samples, and refuses ambiguous date formats |
+| `spec-inputs`, `date_formats` | the parser contract | the gate parses every declared field, every labeled notice header and the 25 unlabeled HTML samples, refuses ambiguous date formats, and checks that 01:30:00PM and 12:05:00AM parse to 13:30 and 00:05 (compile also refuses `%p` without `%I` and `%I` without `%p`) |
 | `spec-replays` | the 12-step publisher replay (duplicates, restart, refusals) | run against both the rebuilt and the inherited system |
 | `spec-verification` | which requirement each check covers, and which rows are `out_of_scope` | per-requirement coverage in `coverage.md` |
 | `spec-settings.acceptance` | Gate 2 budgets | per-capture missed-positive and false-positive findings |

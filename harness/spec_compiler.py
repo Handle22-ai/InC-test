@@ -467,6 +467,15 @@ def _compile(text: str, schema_text: str) -> dict:
                 start,
                 "acceptance needs nonnegative integer budgets and known review_satisfies IDs",
             )
+    for form in settings.get("date_formats", []):
+        if ("%p" in form) != ("%I" in form):
+            raise fail(
+                "spec-settings",
+                "date_formats",
+                start,
+                f"INPUT_DATE_FORMAT_INVALID: {form!r}: %p needs %I and %I needs %p "
+                "(with %H, strptime ignores AM/PM and every 1-11 PM time reads as AM)",
+            )
     obligations = {r["id"]: r for r in contract["requirements_document"]["requirements"]}
     for bound, value in settings["bounds"].items():
         requirement, parameter = bound.split(".", 1)

@@ -2,10 +2,47 @@
 
 from __future__ import annotations
 
+from datetime import datetime
 from pathlib import Path
 
 from harness.runtime import ROOT, digest, write_json
 from rebuilt.source_input import HEADER_LABELS, READ_FIELDS, parse_field, parse_html, timestamp
+
+# 12-hour times where a wrong format reads the wrong instant, with the naive value each
+# must parse to. 12:00:00PM alone cannot tell %I from %H (audit 4 #5).
+NAIVE_PROBES = {
+    "01/14/2026 01:30:00PM": datetime(2026, 1, 14, 13, 30),
+    "01/14/2026 12:05:00AM": datetime(2026, 1, 14, 0, 5),
+    "01/14/2026 01:30:00 PM": datetime(2026, 1, 14, 13, 30),
+    "01/14/2026 12:05:00 AM": datetime(2026, 1, 14, 0, 5),
+}
+
+
+def naive_readings(contract: dict) -> list[dict]:
+    """Each probe must be accepted, and every declared format that reads it must agree."""
+    rows = []
+    for raw, expected in NAIVE_PROBES.items():
+        readings = {}
+        for form in contract["date_formats"]:
+            if form == "ISO8601":
+                continue
+            try:
+                readings[form] = datetime.strptime(" ".join(raw.split()), form)
+            except ValueError:
+                continue
+        issue = timestamp(raw, contract)[1]
+        wrong = {f: v.isoformat() for f, v in readings.items() if v != expected}
+        rows.append(
+            {
+                "raw": raw,
+                "expected": expected.isoformat(),
+                "readings": {f: v.isoformat() for f, v in readings.items()},
+                "issue": issue
+                or (f"reads the wrong instant under {wrong}" if wrong else None)
+                or (None if readings else "no declared format reads it"),
+            }
+        )
+    return rows
 
 
 def run(contract: dict, destination: Path) -> dict:
@@ -69,7 +106,7 @@ def run(contract: dict, destination: Path) -> dict:
     date_checks = [
         {"raw": v, "utc": timestamp(v, contract)[0], "issue": timestamp(v, contract)[1]}
         for v in dates
-    ]
+    ] + naive_readings(contract)
     inventory = {
         r["Field"].removeprefix("header.")
         for r in contract["input_contract"]
@@ -190,7 +227,6 @@ def run(contract: dict, destination: Path) -> dict:
 
 def matching_formats(raw: str, formats: list[str]) -> list[str]:
     """Declared formats that read raw, when they disagree about the instant."""
-    from datetime import datetime
 
     readings = {}
     for form in formats:

@@ -341,6 +341,22 @@ class SpecSourceTests(unittest.TestCase):
         self.assertEqual(parse_field(row, "id12", c)["status"], "ERROR")
         self.assertEqual(parse_field(row, None, c)["status"], "ERROR")
 
+    def test_a_twelve_hour_time_must_parse_to_the_right_instant(self):
+        from harness.input_contract_checks import naive_readings
+
+        text = (self.root / "spec.md").read_text()
+        wrong = text.replace("%I:%M:%S%p", "%H:%M:%S%p")
+        self.assertNotEqual(wrong, text)
+        with self.assertRaisesRegex(ValueError, "INPUT_DATE_FORMAT_INVALID"):
+            compile_spec(self.root, wrong)
+        c = compile_spec(self.root)
+        self.assertTrue(all(row["issue"] is None for row in naive_readings(c)))
+        # The gate probe catches the same edit even if compile did not.
+        c["date_formats"] = [f.replace("%I", "%H") for f in c["date_formats"]]
+        issues = {row["raw"]: row["issue"] for row in naive_readings(c)}
+        self.assertIn("wrong instant", issues["01/14/2026 01:30:00PM"])
+        self.assertIn("wrong instant", issues["01/14/2026 12:05:00AM"])
+
     def test_consequences_cover_every_case_rule_and_first_failure(self):
         c = compile_spec(self.root)
         rows = consequences.observations(c)
