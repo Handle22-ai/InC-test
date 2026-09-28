@@ -2,10 +2,25 @@
 
 from __future__ import annotations
 
+import traceback
 from pathlib import Path
 
 from harness.runtime import digest, write_json
 from harness.spec_compiler import fail
+
+
+def unclassified(exc: BaseException) -> str:
+    """The code for an error that names no known refusal (audit 5 follow-up).
+
+    The harness refuses deliberately with ValueError; any other exception type is a
+    harness defect, not a problem with the spec, and must not be reported as one.
+    """
+    return "SPECIFICATION_INTEGRITY_ERROR" if isinstance(exc, ValueError) else "HARNESS_EXCEPTION"
+
+
+def trace(exc: BaseException) -> str:
+    """The full traceback, so a harness defect can be located without rerunning."""
+    return "".join(traceback.format_exception(exc))
 
 
 def refusal(exc: Exception) -> dict:
@@ -25,9 +40,13 @@ def refusal(exc: Exception) -> dict:
             )
             if name in reason
         ),
-        "BOUNDARY_VIOLATION" if "BOUNDARY_VIOLATION" in reason else "SPECIFICATION_INTEGRITY_ERROR",
+        "BOUNDARY_VIOLATION" if "BOUNDARY_VIOLATION" in reason else unclassified(exc),
     )
-    return {"gate": 1, "status": "ERROR", "code": code, "reason": reason}
+    row = {"gate": 1, "status": "ERROR", "code": code, "reason": reason}
+    if code == "HARNESS_EXCEPTION":
+        row["reason"] = f"{type(exc).__name__}: {reason}"
+        row["traceback"] = trace(exc)
+    return row
 
 
 def collect(root: Path, destination: Path) -> tuple[dict, dict | None]:

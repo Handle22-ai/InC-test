@@ -271,3 +271,39 @@ class RefusalStageTests(unittest.TestCase):
         result, report = self.consequences("BR-HISTORY > BR-UNCHANGED", "BR-UNCHANGED > BR-HISTORY")
         self.assertTrue(result["refused_by"]["compile"])
         self.assertIn("by `make compile` (boundary checks)", report)
+
+
+class HarnessExceptionTests(unittest.TestCase):
+    """Audit 5 #11 follow-up: a harness defect is not a spec problem, and keeps its traceback."""
+
+    def test_only_deliberate_refusals_are_spec_integrity_errors(self):
+        from harness.contract_preflight import refusal
+
+        def raised(exc: Exception) -> Exception:
+            try:
+                raise exc
+            except Exception as caught:  # noqa: BLE001 - the probe needs a real traceback
+                return caught
+
+        defect = refusal(raised(KeyError("candidate_classification")))
+        self.assertEqual(defect["code"], "HARNESS_EXCEPTION")
+        self.assertIn("Traceback", defect["traceback"])
+        spec = refusal(raised(ValueError("spec.md:300: block spec-decisions, row X: bad status")))
+        self.assertEqual(spec["code"], "SPECIFICATION_INTEGRITY_ERROR")
+        self.assertNotIn("traceback", spec)
+
+    def test_a_harness_crash_in_the_gate_is_named_and_traced(self):
+        with tempfile.TemporaryDirectory(dir=ROOT / "evidence") as directory:
+            out = Path(directory) / "run"
+            with patch.object(trading_evaluation, "run", side_effect=KeyError("probe")):
+                result = evaluation.run(out)
+            codes = {f.get("code") for f in result["findings"]}
+            self.assertIn("HARNESS_EXCEPTION", codes)
+            self.assertNotIn("SPECIFICATION_INTEGRITY_ERROR", codes)
+            self.assertEqual(evaluation.exit_code(result), 5)
+            traced = json.loads((out / "exception.json").read_text())
+            self.assertEqual(traced["type"], "KeyError")
+            self.assertIn("Traceback (most recent call last)", traced["traceback"])
+            self.assertIn("normalized_evaluation.py", traced["traceback"])
+            manifest = json.loads((out / "manifest.json").read_text())
+            self.assertIn("exception.json", manifest["files"])

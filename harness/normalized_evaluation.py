@@ -770,7 +770,15 @@ def run(destination: Path) -> dict:
     except PreflightRefused:
         pass
     except Exception as exc:  # noqa: BLE001 - every failure is classified and retained
+        from harness.contract_preflight import trace, unclassified
+
         reason = f"{type(exc).__name__}: {exc}"
+        # Keep the traceback beside the results: a crash reduced to a key name cannot
+        # be located without rerunning (audit 5 #11 follow-up).
+        write_json(
+            destination / "exception.json",
+            {"type": type(exc).__name__, "reason": str(exc), "traceback": trace(exc)},
+        )
         known = (
             "UNRECORDED_SPEC_CHANGE",
             "STALE_SPEC_PIN",
@@ -780,7 +788,13 @@ def run(destination: Path) -> dict:
         if crashed_in_component(exc) and not any(code in reason for code in known):
             # The component under test raised: an established failure, not a refused run.
             result["findings"].append(
-                {"gate": 1, "status": "FAIL", "code": "COMPONENT_CRASH", "reason": reason}
+                {
+                    "gate": 1,
+                    "status": "FAIL",
+                    "code": "COMPONENT_CRASH",
+                    "reason": reason,
+                    "traceback": "exception.json",
+                }
             )
             result["gates"] = {
                 "1": {"name": "contracts_and_invariants", "status": "FAIL", "reason": reason},
@@ -819,9 +833,16 @@ def run(destination: Path) -> dict:
                 )
                 if code in reason
             ),
-            "SPECIFICATION_INTEGRITY_ERROR",
+            unclassified(exc),
         )
-        result["findings"].append({"status": "ERROR", "code": classification, "reason": reason})
+        result["findings"].append(
+            {
+                "status": "ERROR",
+                "code": classification,
+                "reason": reason,
+                "traceback": "exception.json",
+            }
+        )
         result["gates"].setdefault("1", {"name": "contracts_and_invariants", "status": "ERROR"})
         result["gates"].setdefault(
             "2", {"name": "trading_behavior", "status": "UNKNOWN", "classification": "NOT_RUN"}
