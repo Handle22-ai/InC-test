@@ -1,6 +1,6 @@
 {
   "step": "unusable-impact",
-  "machine_latency_ms": 4.076375,
+  "machine_latency_ms": 4.364084,
   "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
   "initial_count": 0,
   "disposition": "REVIEW_REQUIRED",
@@ -9,7 +9,7 @@
   "classification_scorable": true,
   "classification_presented_as_valid": true,
   "decision": {
-    "decision_id": "5b86da3f-6a9a-4eb9-8c1d-64d5056086b8",
+    "decision_id": "347d1cbf-78d6-49ce-8b26-01ac8e3689e7",
     "notice_id": 800001,
     "source_sha256": "4e3014a157f842266f1b8ebebb90fa4d43ae1354e037c12ae075cef90ede25b8",
     "reference_time": "2026-01-15T12:00:00+00:00",
@@ -37,8 +37,8 @@
         "confidence_score": 0.6,
         "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: small curtailment impact \\u2014 interruptible/lower-priority service only or <10% reduction (+0.10 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
         "source_url": null,
-        "scraped_at": "2026-09-28T16:49:05.116840",
-        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/candidate/unusable-impact/input.html"
+        "scraped_at": "2026-09-28T17:04:30.137349",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/candidate/unusable-impact/input.html"
       },
       "locations": [
         {
@@ -467,7 +467,7 @@
       "materiality": "MATERIAL",
       "actionable": true,
       "approved": true,
-      "source_evidence": "evidence/root-run/signals/candidate/unusable-impact/input.html",
+      "source_evidence": "evidence/reviewed-run/signals/candidate/unusable-impact/input.html",
       "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
     },
     "publication_disposition": "REVIEW_REQUIRED",
@@ -484,7 +484,7 @@
     "materiality": "MATERIAL",
     "actionable": true,
     "approved": true,
-    "source_evidence": "evidence/root-run/signals/candidate/unusable-impact/input.html",
+    "source_evidence": "evidence/reviewed-run/signals/candidate/unusable-impact/input.html",
     "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
   },
   "parser_evidence": "unusable-impact/parser.json",

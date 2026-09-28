@@ -1,6 +1,6 @@
 {
   "step": "B",
-  "machine_latency_ms": 4.870166,
+  "machine_latency_ms": 7.792375,
   "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
   "initial_count": 0,
   "disposition": "SUPPRESSED",
@@ -9,7 +9,7 @@
   "classification_scorable": true,
   "classification_presented_as_valid": true,
   "decision": {
-    "decision_id": "773f8e5a-817a-4ed9-a166-b7fa67ab6f28",
+    "decision_id": "32583314-4fa7-47d6-870a-cff4910e0e6c",
     "notice_id": 800001,
     "source_sha256": "4e3014a157f842266f1b8ebebb90fa4d43ae1354e037c12ae075cef90ede25b8",
     "reference_time": "2026-01-15T12:00:00+00:00",
@@ -37,8 +37,8 @@
         "confidence_score": 0.8,
         "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
         "source_url": null,
-        "scraped_at": "2026-09-28T16:49:05.084190",
-        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/candidate/B/input.html"
+        "scraped_at": "2026-09-28T17:04:30.093750",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/candidate/B/input.html"
       },
       "locations": [
         {
@@ -357,7 +357,7 @@
       "materiality": "MATERIAL",
       "actionable": true,
       "approved": true,
-      "source_evidence": "evidence/root-run/signals/candidate/B/input.html",
+      "source_evidence": "evidence/reviewed-run/signals/candidate/B/input.html",
       "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
     },
     "publication_disposition": "SUPPRESSED",
@@ -366,7 +366,7 @@
     "publication_attempted": false,
     "delivery_acknowledged": null,
     "event_key": "NGPL:800001",
-    "initial_decision_reference": "895399e5-5ee7-4909-86b3-ac131059a2b1"
+    "initial_decision_reference": "b0df4ba4-c34d-4f97-bb90-86af96942b43"
   },
   "authorization": {
     "actor": "Synthetic fixture adjudicator (not real approval)",
@@ -376,7 +376,7 @@
     "materiality": "MATERIAL",
     "actionable": true,
     "approved": true,
-    "source_evidence": "evidence/root-run/signals/candidate/B/input.html",
+    "source_evidence": "evidence/reviewed-run/signals/candidate/B/input.html",
     "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
   },
   "parser_evidence": "B/parser.json",

@@ -1,6 +1,6 @@
 [
   {
-    "decision_id": "eb2d9079-c3b5-48d0-84d0-57ce8e2e7783",
+    "decision_id": "88715d9d-9f8b-452c-9fcf-827815935611",
     "notice_id": 800001,
     "source_sha256": "4e3014a157f842266f1b8ebebb90fa4d43ae1354e037c12ae075cef90ede25b8",
     "reference_time": "2026-01-15T12:00:00+00:00",
@@ -28,8 +28,8 @@
         "confidence_score": 0.8,
         "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
         "source_url": null,
-        "scraped_at": "2026-09-28T16:49:05.305472",
-        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/fault-memory/A/input.html"
+        "scraped_at": "2026-09-28T17:04:30.428771",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/fault-memory/A/input.html"
       },
       "locations": [
         {
@@ -348,7 +348,7 @@
       "materiality": "MATERIAL",
       "actionable": true,
       "approved": true,
-      "source_evidence": "evidence/root-run/signals/fault-memory/A/input.html",
+      "source_evidence": "evidence/reviewed-run/signals/fault-memory/A/input.html",
       "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
     },
     "publication_disposition": "INITIAL_RECOMMENDATION",

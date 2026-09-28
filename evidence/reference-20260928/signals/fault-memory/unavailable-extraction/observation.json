@@ -1,6 +1,6 @@
 {
   "step": "unavailable-extraction",
-  "machine_latency_ms": 3.759542,
+  "machine_latency_ms": 3.924625,
   "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
   "initial_count": 0,
   "disposition": "ERROR",
@@ -9,7 +9,7 @@
   "classification_scorable": false,
   "classification_presented_as_valid": false,
   "decision": {
-    "decision_id": "2df37506-cb76-4c9a-bfd4-f9b46e31baf1",
+    "decision_id": "73ac8b05-f67e-4f2c-95cf-55f879807c4f",
     "notice_id": 800004,
     "source_sha256": "3903d28efb3fddc0e679b05c8e05a1ec2af1ccd16a7b67c9f1a7e92bacc08b85",
     "reference_time": "2026-01-15T12:00:00+00:00",
@@ -37,8 +37,8 @@
         "confidence_score": 0.8,
         "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"regex_fallback\"]",
         "source_url": null,
-        "scraped_at": "2026-09-28T16:49:05.352530",
-        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/fault-memory/unavailable-extraction/input.html"
+        "scraped_at": "2026-09-28T17:04:30.486745",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/fault-memory/unavailable-extraction/input.html"
       },
       "locations": [
         {
@@ -497,7 +497,7 @@
       "materiality": "MATERIAL",
       "actionable": true,
       "approved": true,
-      "source_evidence": "evidence/root-run/signals/fault-memory/unavailable-extraction/input.html",
+      "source_evidence": "evidence/reviewed-run/signals/fault-memory/unavailable-extraction/input.html",
       "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
     },
     "publication_disposition": "ERROR",
@@ -514,7 +514,7 @@
     "materiality": "MATERIAL",
     "actionable": true,
     "approved": true,
-    "source_evidence": "evidence/root-run/signals/fault-memory/unavailable-extraction/input.html",
+    "source_evidence": "evidence/reviewed-run/signals/fault-memory/unavailable-extraction/input.html",
     "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
   },
   "parser_evidence": "unavailable-extraction/parser.json",

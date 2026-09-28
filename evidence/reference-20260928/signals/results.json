@@ -1,9 +1,9 @@
 {
   "scope": "bounded initial outbound recommendation decisions; not delivery or complete lifecycle acceptance",
   "kind": "downstream state/safety execution; extracted facts and helper proposals supplied by SDK stubs, not raw-text classification evidence",
-  "contract_sha256": "39a379321fd6664486497241a7acabf5877d68dd0d71a743ef83aca36e7574de",
+  "contract_sha256": "7dd9aeb7581e1100dfaf0182b025279e874a91767a9a791b061bd7f4919aa0dc",
   "provenance": {
-    "timestamp": "2026-09-28T16:49:04.987049+00:00",
+    "timestamp": "2026-09-28T17:04:29.989148+00:00",
     "integrity": {
       "inherited_file_count": 97,
       "changed": [],
@@ -63,14 +63,14 @@
       "harness/adapter.py": "8896536c27b635518125cfe7395b73e611e853daa04865d524ecc86d56bc698c",
       "harness/baseline.py": "c1190662033d37967b34a89d36726ff8cdd60157e54b3c0bd202c8d20dc005fb",
       "harness/behavior_contract.py": "4582fced1183ca5f83897ce0dad4c52bb90e8e3547132ac3439c71ddbdaa5193",
-      "harness/captures.py": "e02ac8281bae2ed4ca19c17f324f2ec768c8e7314001d5404973c228d6fb7b3b",
+      "harness/captures.py": "dd83c4b045198fd347191762ee9855b8d22c488d56285ca976e21a9515fdc1e3",
       "harness/commands.py": "547be8682242ab269858cb8be39a3de686fed048245a4a7e735f18f293a582d7",
-      "harness/comparison_identity.py": "736ed5d12de13717f3cd570fbf4a9baa20b5a110c245a7faff1cbf4487b454bc",
-      "harness/consequences.py": "6cc2aaf05dba3d104510a37cb1f5aeeff83cc447ebd09e1cd3e4da4a384eb45b",
+      "harness/comparison_identity.py": "d4202b75860a3db7d084b0b527fbbfab9192a492472674f84fda6bfd2472a979",
+      "harness/consequences.py": "ea33b7a8327e641e26c54d3c720e591a7609a78c836accd5832f0a7a46a5a2af",
       "harness/context.py": "0cc85464c64665b40ecd2e1d6c07c83b370f66993e50e2e1fa6ca26175ce3ae0",
       "harness/context_integrity.py": "2d6fe4015a6ad055171bc52e21f41b4e4c7e74ec65179628b2a12074415351bb",
       "harness/contract_preflight.py": "2d2be2484c42a2cdf6f1fdaefbd8c20cbb7d0a6be7b16acc2aef5b2a77471b17",
-      "harness/current_evidence.py": "9ed5dbabc026c4747578c974b78ea8fad406fe5483e243ea904c1d43d9efc493",
+      "harness/current_evidence.py": "3059bc6d23c70107e2185124d87ea96fcf57b5b8ba5b0c8fe245f0769f2427f7",
       "harness/domain_rules.py": "7bb5fe1f3a6d32a93c3c4d7652acbd915ee3b340f532ca9e183fff337aa2fda1",
       "harness/e2e.py": "e56b38830ebdc4ccf3eba57e77e305e64dac4a7b73a1ed61ac2fb2b87859507b",
       "harness/evaluator.py": "2750eef6ddc4ac6a235dded4cd82c0fb220e7fd2bbb2c78226045448b5215a4b",
@@ -78,12 +78,12 @@
       "harness/gates.py": "4b5d88e8e25b73cb8dd96d79b3da1d2ed1b67800da31754a30efd741c5d520a8",
       "harness/input_contract_checks.py": "a6e250acbf26c864f05d2c466f61fad15510702028b434c98a6f3319633dd0d2",
       "harness/live.py": "1b1d3e600f2325b5166a17b884969788bddd18afbdec4f2d9b86be955315829f",
-      "harness/normalized_evaluation.py": "f5aa0ca297a6aac82fc903b9efc44bb0144c48e9572005c8e864fe0cfd743c8a",
+      "harness/normalized_evaluation.py": "52fa61609ead4b3b440c551d69a7f2fe14416e49866f7f15c70d8b64c51d2843",
       "harness/offline.py": "c78e22f0bcf25319dd3a700877f45d3cea485c459e6e56190f462a4f6b2f0df0",
       "harness/predicate_table.py": "4e20b83b09ba3fbef143f21ec79eab0a6e8be237b9c626bcd53e5d2bc1456c78",
       "harness/predicates.py": "dbe3a1d72009b7f8e442855ecf01f4086e9d34c29ff19bf5ebf84ad232dcfc27",
       "harness/preflight.py": "326f1b768143ac48effc78ac056ef1d2bca127b96942bc917ffd60115478e2d9",
-      "harness/proposals.py": "42cca829fa164e9d57ac26e46c927e8115ae88be708a0b022f35babe87fed7b4",
+      "harness/proposals.py": "24be8f18e2c59c6aa531af63af712b93c333437a5a12f77d05ab3b3dd271162e",
       "harness/real_positive_evaluation.py": "ee8bc10aa397bbc8b96c6f9007d80cf0a6fe24c54e23fb37c89953148033eda3",
       "harness/refusal_control.py": "bf3af10ffc604717d1fda67aab498f3133622044d132dd6fe3205a5fb2864ddb",
       "harness/regression.py": "ee49f8631461e90c1f6debac153ebacba8de2e69250d4ee3b756c86140444d18",
@@ -92,17 +92,17 @@
       "harness/rule_invariants.py": "7013b4065dd2ec8901e3e6e9eb211a6214ba2c4c2ff3e14ca4466d89ad4f4892",
       "harness/runtime.py": "08c5252fe1edd23c70f120755616b8562168af2b4f16465af2a4a4b87f34bdcd",
       "harness/signal_evaluation.py": "b5ac991f2afa0c1848eeadbd43c9b91f61fdb12c04cdd244cec7259af4047dad",
-      "harness/spec_compiler.py": "8a58220beefce173928a98119baa39be9c0bac626a555444fbd5c1b60f638ef9",
+      "harness/spec_compiler.py": "bc8e57e848d8e4cdba5f1638ea9cd2258336955cef600fb4b32d9ed3ef21212f",
       "harness/spec_ownership.py": "f05c9ea25fd56a50421f180ca2dc7531fbb8fb2ba1b007cd9955207aef27fbf5",
       "harness/spec_tables.py": "d95f98e05652650453ace3407035fa045e5711299636f18eec185d30d397b0a8",
       "harness/specification.py": "6651255abb5093fb46e15a745938fd2b504f39ba942536710cdb366573b5ee90",
       "harness/storage_evaluation.py": "1244757ba5699789642151c8ab5c645dc5b6700d85213fc199b4ff2152506b50",
       "harness/storage_ports.py": "09eb6ad0dc045b24d745395bc302d7275bb09cb8ea34c3434dc8bef91c52ccd6",
       "harness/temporal_authority.py": "2afd17c7cc4fe6e08a52a0524350ff3791b62d8f4d70ece6360f84249e37a47a",
-      "harness/trading_evaluation.py": "e488b5b4ce1f49f1a6b9e48da7e3dace04b4649702f3994810f1915295512dec",
-      "requirements/behavior.yaml": "890dd52e70abd3a8258ce424053769824dc3468ab86d0577a53d1d0747dc241a",
+      "harness/trading_evaluation.py": "59cb2606a4a3f0b2d697f892febc3bbad2a11e2126b15bdaa0754e8d6d930f58",
+      "requirements/behavior.yaml": "136a950500383a9d6ee0898372b3c93ccbdada8c1e5530c8d1490fdb14e5f9e1",
       "requirements/capture-registry.json": "65f575bd5b496bed3757279c7752d02b87171dbf93511b61502d068ec797a9b3",
-      "requirements/compiled-build.json": "c2a5d70a22726341de69f14e18edd2797e7144cabd290a7a927e35cfad7f4442",
+      "requirements/compiled-build.json": "ca0cdea2e841fe6b0909ccf7eedf07af73a99e135d7999852ae30bfe84c1f600",
       "requirements/dataset.json": "a51147dffc80b69de840865ea01091eee66ad720e334adee9a983179841810ef",
       "requirements/normalized-baselines.json": "2ca542545dd2d31365b1ab9f307357ce3abbf3c4b35388824e0ffe90da56db0e",
       "requirements/normalized-input.schema.json": "a648bc9b58cddda4cdc33e37c19cccd57d815f84387d512bacc1d9f252ebf598",
@@ -111,14 +111,14 @@
       "requirements/oracle-support.json": "237d35251aeed2614370812ec175b543e91a5184daca3e5316af544f07f0fe46",
       "requirements/publisher-witnesses.json": "abbf2b834ca282ca3cc47d5acfc3a9a499b8f1238885daf67296f11288581345",
       "requirements/real-positive-witnesses.json": "89b16247954da7b39b1b8b83191ecbeb3406056bd3c7e4b05308ec161120d542",
-      "requirements/replay-expectations.json": "f8263ac2396c7041eeeb61463d4a025a1d922c205025a2da25aa688beb3d44f3",
+      "requirements/replay-expectations.json": "3d941e3d827b62d1f815f173677786012e1aaa7da901ad0d46266706f9e82919",
       "requirements/requirement-revisions.json": "7373164e7d355f27ac83ed17c9f75fcd26f0c2221c1e37fcd48b90530457843e",
       "requirements/requirements.example.yaml": "8c766be56a4e72a904d155e9d8be46f425624e4f5977fcddb9c23b920dd7d569",
-      "requirements/requirements.yaml": "330ad20502efa8d1bcb263cd442e8adb7973acc3c2972dff42e95cfed3766849",
+      "requirements/requirements.yaml": "b06113514eae67134c0befb2f744bda4ac911c01f7c60836dd9666b4a7667227",
       "requirements/rule-block.schema.json": "7e1416cfd2d589e38f576edef21eeeb8d959e4a6019fa8c59c57546bb5a3c5af",
-      "requirements/signal-safety.yaml": "39a379321fd6664486497241a7acabf5877d68dd0d71a743ef83aca36e7574de",
+      "requirements/signal-safety.yaml": "7dd9aeb7581e1100dfaf0182b025279e874a91767a9a791b061bd7f4919aa0dc",
       "requirements/trading-evidence.json": "a5075550e7115dd5b452ca686336432d7a50f5b4712673e9feb89ff8cc52c7ff",
-      "spec.md": "4448a6f9e9ee3841e0086a8e556c21bbd584efc9167742a831154f70e3e18a8e",
+      "spec.md": "c89f760b3f2167345112801cd7825d26c40c102996239d13a2c788c9c4d363b6",
       "artifacts/dependencies.lock.txt": "9b68538bcdc28bc1f46c28865d1316079f241ab1317f43e529794dc94cfcdcb7",
       "context/authority-reference.json": "6604a33ce8e51842755792eabbd3347906f0232a493045a95e03524c145c4749"
     },
@@ -140,7 +140,7 @@
       "observations": [
         {
           "step": "A",
-          "machine_latency_ms": 6.869458,
+          "machine_latency_ms": 7.38425,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 1,
           "disposition": "LEGACY_BINARY",
@@ -161,7 +161,7 @@
             "materiality": "MATERIAL",
             "actionable": true,
             "approved": true,
-            "source_evidence": "evidence/root-run/signals/inherited/A/input.html",
+            "source_evidence": "evidence/reviewed-run/signals/inherited/A/input.html",
             "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
           },
           "parser_evidence": "A/parser.json",
@@ -169,7 +169,7 @@
         },
         {
           "step": "B",
-          "machine_latency_ms": 1.68375,
+          "machine_latency_ms": 1.662792,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 1,
           "disposition": "LEGACY_BINARY",
@@ -190,7 +190,7 @@
             "materiality": "MATERIAL",
             "actionable": true,
             "approved": true,
-            "source_evidence": "evidence/root-run/signals/inherited/B/input.html",
+            "source_evidence": "evidence/reviewed-run/signals/inherited/B/input.html",
             "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
           },
           "parser_evidence": "B/parser.json",
@@ -198,7 +198,7 @@
         },
         {
           "step": "C",
-          "machine_latency_ms": 1.622208,
+          "machine_latency_ms": 2.184166,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 1,
           "disposition": "LEGACY_BINARY",
@@ -219,7 +219,7 @@
             "materiality": "MATERIAL",
             "actionable": true,
             "approved": true,
-            "source_evidence": "evidence/root-run/signals/inherited/C/input.html",
+            "source_evidence": "evidence/reviewed-run/signals/inherited/C/input.html",
             "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
           },
           "parser_evidence": "C/parser.json",
@@ -227,7 +227,7 @@
         },
         {
           "step": "D",
-          "machine_latency_ms": 2.068542,
+          "machine_latency_ms": 2.914542,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 1,
           "disposition": "LEGACY_BINARY",
@@ -248,7 +248,7 @@
             "materiality": "MATERIAL",
             "actionable": true,
             "approved": true,
-            "source_evidence": "evidence/root-run/signals/inherited/D/input.html",
+            "source_evidence": "evidence/reviewed-run/signals/inherited/D/input.html",
             "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
           },
           "parser_evidence": "D/parser.json",
@@ -256,7 +256,7 @@
         },
         {
           "step": "E",
-          "machine_latency_ms": 1.474667,
+          "machine_latency_ms": 1.639542,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 1,
           "disposition": "LEGACY_BINARY",
@@ -277,7 +277,7 @@
             "materiality": "MATERIAL",
             "actionable": true,
             "approved": true,
-            "source_evidence": "evidence/root-run/signals/inherited/E/input.html",
+            "source_evidence": "evidence/reviewed-run/signals/inherited/E/input.html",
             "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
           },
           "parser_evidence": "E/parser.json",
@@ -285,7 +285,7 @@
         },
         {
           "step": "F",
-          "machine_latency_ms": 1.672375,
+          "machine_latency_ms": 2.400667,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 1,
           "disposition": "LEGACY_BINARY",
@@ -306,7 +306,7 @@
             "materiality": "MATERIAL",
             "actionable": true,
             "approved": true,
-            "source_evidence": "evidence/root-run/signals/inherited/F/input.html",
+            "source_evidence": "evidence/reviewed-run/signals/inherited/F/input.html",
             "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
           },
           "parser_evidence": "F/parser.json",
@@ -314,7 +314,7 @@
         },
         {
           "step": "unusable-impact",
-          "machine_latency_ms": 1.420875,
+          "machine_latency_ms": 2.446791,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 1,
           "disposition": "LEGACY_BINARY",
@@ -335,7 +335,7 @@
             "materiality": "MATERIAL",
             "actionable": true,
             "approved": true,
-            "source_evidence": "evidence/root-run/signals/inherited/unusable-impact/input.html",
+            "source_evidence": "evidence/reviewed-run/signals/inherited/unusable-impact/input.html",
             "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
           },
           "parser_evidence": "unusable-impact/parser.json",
@@ -343,7 +343,7 @@
         },
         {
           "step": "unavailable-extraction",
-          "machine_latency_ms": 1.221792,
+          "machine_latency_ms": 1.490791,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 1,
           "disposition": "LEGACY_BINARY",
@@ -364,7 +364,7 @@
             "materiality": "MATERIAL",
             "actionable": true,
             "approved": true,
-            "source_evidence": "evidence/root-run/signals/inherited/unavailable-extraction/input.html",
+            "source_evidence": "evidence/reviewed-run/signals/inherited/unavailable-extraction/input.html",
             "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
           },
           "parser_evidence": "unavailable-extraction/parser.json",
@@ -372,7 +372,7 @@
         },
         {
           "step": "missing-history",
-          "machine_latency_ms": 1.297708,
+          "machine_latency_ms": 1.509375,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 1,
           "disposition": "LEGACY_BINARY",
@@ -393,7 +393,7 @@
             "materiality": "MATERIAL",
             "actionable": true,
             "approved": true,
-            "source_evidence": "evidence/root-run/signals/inherited/missing-history/input.html",
+            "source_evidence": "evidence/reviewed-run/signals/inherited/missing-history/input.html",
             "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
           },
           "parser_evidence": "missing-history/parser.json",
@@ -401,7 +401,7 @@
         },
         {
           "step": "missing-authorization",
-          "machine_latency_ms": 1.782167,
+          "machine_latency_ms": 2.123166,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 1,
           "disposition": "LEGACY_BINARY",
@@ -420,7 +420,7 @@
         },
         {
           "step": "routine",
-          "machine_latency_ms": 1.898584,
+          "machine_latency_ms": 1.683833,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 0,
           "disposition": "LEGACY_BINARY",
@@ -441,7 +441,7 @@
             "materiality": "MATERIAL",
             "actionable": true,
             "approved": true,
-            "source_evidence": "evidence/root-run/signals/inherited/routine/input.html",
+            "source_evidence": "evidence/reviewed-run/signals/inherited/routine/input.html",
             "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
           },
           "parser_evidence": "routine/parser.json",
@@ -449,7 +449,7 @@
         },
         {
           "step": "unsupported-format",
-          "machine_latency_ms": 1.185708,
+          "machine_latency_ms": 1.170667,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 1,
           "disposition": "LEGACY_BINARY",
@@ -470,7 +470,7 @@
             "materiality": "MATERIAL",
             "actionable": true,
             "approved": true,
-            "source_evidence": "evidence/root-run/signals/inherited/unsupported-format/input.pdf",
+            "source_evidence": "evidence/reviewed-run/signals/inherited/unsupported-format/input.pdf",
             "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
           },
           "parser_evidence": "unsupported-format/parser.json",
@@ -1049,7 +1049,7 @@
       "observations": [
         {
           "step": "A",
-          "machine_latency_ms": 5.172292,
+          "machine_latency_ms": 6.303583,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 1,
           "disposition": "INITIAL_RECOMMENDATION",
@@ -1058,7 +1058,7 @@
           "classification_scorable": true,
           "classification_presented_as_valid": true,
           "decision": {
-            "decision_id": "895399e5-5ee7-4909-86b3-ac131059a2b1",
+            "decision_id": "b0df4ba4-c34d-4f97-bb90-86af96942b43",
             "notice_id": 800001,
             "source_sha256": "4e3014a157f842266f1b8ebebb90fa4d43ae1354e037c12ae075cef90ede25b8",
             "reference_time": "2026-01-15T12:00:00+00:00",
@@ -1086,8 +1086,8 @@
                 "confidence_score": 0.8,
                 "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
                 "source_url": null,
-                "scraped_at": "2026-09-28T16:49:05.078068",
-                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/candidate/A/input.html"
+                "scraped_at": "2026-09-28T17:04:30.085984",
+                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/candidate/A/input.html"
               },
               "locations": [
                 {
@@ -1406,7 +1406,7 @@
               "materiality": "MATERIAL",
               "actionable": true,
               "approved": true,
-              "source_evidence": "evidence/root-run/signals/candidate/A/input.html",
+              "source_evidence": "evidence/reviewed-run/signals/candidate/A/input.html",
               "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
             },
             "publication_disposition": "INITIAL_RECOMMENDATION",
@@ -1424,7 +1424,7 @@
             "materiality": "MATERIAL",
             "actionable": true,
             "approved": true,
-            "source_evidence": "evidence/root-run/signals/candidate/A/input.html",
+            "source_evidence": "evidence/reviewed-run/signals/candidate/A/input.html",
             "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
           },
           "parser_evidence": "A/parser.json",
@@ -1432,7 +1432,7 @@
         },
         {
           "step": "B",
-          "machine_latency_ms": 4.870166,
+          "machine_latency_ms": 7.792375,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 0,
           "disposition": "SUPPRESSED",
@@ -1441,7 +1441,7 @@
           "classification_scorable": true,
           "classification_presented_as_valid": true,
           "decision": {
-            "decision_id": "773f8e5a-817a-4ed9-a166-b7fa67ab6f28",
+            "decision_id": "32583314-4fa7-47d6-870a-cff4910e0e6c",
             "notice_id": 800001,
             "source_sha256": "4e3014a157f842266f1b8ebebb90fa4d43ae1354e037c12ae075cef90ede25b8",
             "reference_time": "2026-01-15T12:00:00+00:00",
@@ -1469,8 +1469,8 @@
                 "confidence_score": 0.8,
                 "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
                 "source_url": null,
-                "scraped_at": "2026-09-28T16:49:05.084190",
-                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/candidate/B/input.html"
+                "scraped_at": "2026-09-28T17:04:30.093750",
+                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/candidate/B/input.html"
               },
               "locations": [
                 {
@@ -1789,7 +1789,7 @@
               "materiality": "MATERIAL",
               "actionable": true,
               "approved": true,
-              "source_evidence": "evidence/root-run/signals/candidate/B/input.html",
+              "source_evidence": "evidence/reviewed-run/signals/candidate/B/input.html",
               "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
             },
             "publication_disposition": "SUPPRESSED",
@@ -1798,7 +1798,7 @@
             "publication_attempted": false,
             "delivery_acknowledged": null,
             "event_key": "NGPL:800001",
-            "initial_decision_reference": "895399e5-5ee7-4909-86b3-ac131059a2b1"
+            "initial_decision_reference": "b0df4ba4-c34d-4f97-bb90-86af96942b43"
           },
           "authorization": {
             "actor": "Synthetic fixture adjudicator (not real approval)",
@@ -1808,7 +1808,7 @@
             "materiality": "MATERIAL",
             "actionable": true,
             "approved": true,
-            "source_evidence": "evidence/root-run/signals/candidate/B/input.html",
+            "source_evidence": "evidence/reviewed-run/signals/candidate/B/input.html",
             "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
           },
           "parser_evidence": "B/parser.json",
@@ -1816,7 +1816,7 @@
         },
         {
           "step": "C",
-          "machine_latency_ms": 5.00475,
+          "machine_latency_ms": 6.703167,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 0,
           "disposition": "SUPPRESSED",
@@ -1825,7 +1825,7 @@
           "classification_scorable": true,
           "classification_presented_as_valid": true,
           "decision": {
-            "decision_id": "fea57f63-4446-4196-b858-7b58fae402ec",
+            "decision_id": "f4010411-c539-4bbb-bcb9-0aea7299d08f",
             "notice_id": 800002,
             "source_sha256": "a7c7d426273bc476c090c699a7a9894eb49e7d99315fb695101a1c1c8dac0cdc",
             "reference_time": "2026-01-15T12:00:00+00:00",
@@ -1853,8 +1853,8 @@
                 "confidence_score": 0.8,
                 "validity_flags": "[\"VC-1: superseded notice \\u2014 LLM assessed as materially different from prior notice 800001; continuing as potential new signal\", \"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
                 "source_url": null,
-                "scraped_at": "2026-09-28T16:49:05.089963",
-                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/candidate/C/input.html"
+                "scraped_at": "2026-09-28T17:04:30.102694",
+                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/candidate/C/input.html"
               },
               "locations": [
                 {
@@ -2233,7 +2233,7 @@
               "materiality": "MATERIAL",
               "actionable": true,
               "approved": true,
-              "source_evidence": "evidence/root-run/signals/candidate/C/input.html",
+              "source_evidence": "evidence/reviewed-run/signals/candidate/C/input.html",
               "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
             },
             "publication_disposition": "SUPPRESSED",
@@ -2251,7 +2251,7 @@
             "materiality": "MATERIAL",
             "actionable": true,
             "approved": true,
-            "source_evidence": "evidence/root-run/signals/candidate/C/input.html",
+            "source_evidence": "evidence/reviewed-run/signals/candidate/C/input.html",
             "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
           },
           "parser_evidence": "C/parser.json",
@@ -2259,7 +2259,7 @@
         },
         {
           "step": "D",
-          "machine_latency_ms": 6.524667,
+          "machine_latency_ms": 7.624333,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 0,
           "disposition": "SUPPRESSED",
@@ -2268,7 +2268,7 @@
           "classification_scorable": true,
           "classification_presented_as_valid": true,
           "decision": {
-            "decision_id": "88dcb2ef-d19c-4573-9dfd-b676b38791ea",
+            "decision_id": "44d99565-18a9-4c54-880e-b29b301102a6",
             "notice_id": 800002,
             "source_sha256": "a7c7d426273bc476c090c699a7a9894eb49e7d99315fb695101a1c1c8dac0cdc",
             "reference_time": "2026-01-15T12:00:00+00:00",
@@ -2296,8 +2296,8 @@
                 "confidence_score": 0.8,
                 "validity_flags": "[\"VC-1: superseded notice \\u2014 LLM assessed as materially different from prior notice 800001; continuing as potential new signal\", \"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
                 "source_url": null,
-                "scraped_at": "2026-09-28T16:49:05.096203",
-                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/candidate/D/input.html"
+                "scraped_at": "2026-09-28T17:04:30.110760",
+                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/candidate/D/input.html"
               },
               "locations": [
                 {
@@ -2676,7 +2676,7 @@
               "materiality": "MATERIAL",
               "actionable": true,
               "approved": true,
-              "source_evidence": "evidence/root-run/signals/candidate/D/input.html",
+              "source_evidence": "evidence/reviewed-run/signals/candidate/D/input.html",
               "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
             },
             "publication_disposition": "SUPPRESSED",
@@ -2694,7 +2694,7 @@
             "materiality": "MATERIAL",
             "actionable": true,
             "approved": true,
-            "source_evidence": "evidence/root-run/signals/candidate/D/input.html",
+            "source_evidence": "evidence/reviewed-run/signals/candidate/D/input.html",
             "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
           },
           "parser_evidence": "D/parser.json",
@@ -2702,7 +2702,7 @@
         },
         {
           "step": "E",
-          "machine_latency_ms": 5.723041,
+          "machine_latency_ms": 7.460709,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 1,
           "disposition": "INITIAL_RECOMMENDATION",
@@ -2711,7 +2711,7 @@
           "classification_scorable": true,
           "classification_presented_as_valid": true,
           "decision": {
-            "decision_id": "3455bf4e-15fe-4c02-a9c6-b3a8373bdbac",
+            "decision_id": "994a4679-47e6-42a7-9887-c00941811f7a",
             "notice_id": 800003,
             "source_sha256": "719194dd0d3f0d0f1b7e880aa8257aa03173255cd2d343947dfb8dc7316443c5",
             "reference_time": "2026-01-15T12:00:00+00:00",
@@ -2739,8 +2739,8 @@
                 "confidence_score": 0.8,
                 "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
                 "source_url": null,
-                "scraped_at": "2026-09-28T16:49:05.103336",
-                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/candidate/E/input.html"
+                "scraped_at": "2026-09-28T17:04:30.119388",
+                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/candidate/E/input.html"
               },
               "locations": [
                 {
@@ -3169,7 +3169,7 @@
               "materiality": "MATERIAL",
               "actionable": true,
               "approved": true,
-              "source_evidence": "evidence/root-run/signals/candidate/E/input.html",
+              "source_evidence": "evidence/reviewed-run/signals/candidate/E/input.html",
               "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
             },
             "publication_disposition": "INITIAL_RECOMMENDATION",
@@ -3187,7 +3187,7 @@
             "materiality": "MATERIAL",
             "actionable": true,
             "approved": true,
-            "source_evidence": "evidence/root-run/signals/candidate/E/input.html",
+            "source_evidence": "evidence/reviewed-run/signals/candidate/E/input.html",
             "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
           },
           "parser_evidence": "E/parser.json",
@@ -3195,7 +3195,7 @@
         },
         {
           "step": "F",
-          "machine_latency_ms": 5.97625,
+          "machine_latency_ms": 8.056,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 0,
           "disposition": "SUPPRESSED",
@@ -3204,7 +3204,7 @@
           "classification_scorable": true,
           "classification_presented_as_valid": true,
           "decision": {
-            "decision_id": "1fbef3ec-c34f-4d55-9615-54b169319208",
+            "decision_id": "3ae9467a-c9a0-4d0e-bf58-e4c5f84d3225",
             "notice_id": 800003,
             "source_sha256": "719194dd0d3f0d0f1b7e880aa8257aa03173255cd2d343947dfb8dc7316443c5",
             "reference_time": "2026-01-15T12:00:00+00:00",
@@ -3232,8 +3232,8 @@
                 "confidence_score": 0.8,
                 "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
                 "source_url": null,
-                "scraped_at": "2026-09-28T16:49:05.110310",
-                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/candidate/F/input.html"
+                "scraped_at": "2026-09-28T17:04:30.128437",
+                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/candidate/F/input.html"
               },
               "locations": [
                 {
@@ -3662,7 +3662,7 @@
               "materiality": "MATERIAL",
               "actionable": true,
               "approved": true,
-              "source_evidence": "evidence/root-run/signals/candidate/F/input.html",
+              "source_evidence": "evidence/reviewed-run/signals/candidate/F/input.html",
               "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
             },
             "publication_disposition": "SUPPRESSED",
@@ -3671,7 +3671,7 @@
             "publication_attempted": false,
             "delivery_acknowledged": null,
             "event_key": "NGPL:800003",
-            "initial_decision_reference": "3455bf4e-15fe-4c02-a9c6-b3a8373bdbac"
+            "initial_decision_reference": "994a4679-47e6-42a7-9887-c00941811f7a"
           },
           "authorization": {
             "actor": "Synthetic fixture adjudicator (not real approval)",
@@ -3681,7 +3681,7 @@
             "materiality": "MATERIAL",
             "actionable": true,
             "approved": true,
-            "source_evidence": "evidence/root-run/signals/candidate/F/input.html",
+            "source_evidence": "evidence/reviewed-run/signals/candidate/F/input.html",
             "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
           },
           "parser_evidence": "F/parser.json",
@@ -3689,7 +3689,7 @@
         },
         {
           "step": "unusable-impact",
-          "machine_latency_ms": 4.076375,
+          "machine_latency_ms": 4.364084,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 0,
           "disposition": "REVIEW_REQUIRED",
@@ -3698,7 +3698,7 @@
           "classification_scorable": true,
           "classification_presented_as_valid": true,
           "decision": {
-            "decision_id": "5b86da3f-6a9a-4eb9-8c1d-64d5056086b8",
+            "decision_id": "347d1cbf-78d6-49ce-8b26-01ac8e3689e7",
             "notice_id": 800001,
             "source_sha256": "4e3014a157f842266f1b8ebebb90fa4d43ae1354e037c12ae075cef90ede25b8",
             "reference_time": "2026-01-15T12:00:00+00:00",
@@ -3726,8 +3726,8 @@
                 "confidence_score": 0.6,
                 "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: small curtailment impact \\u2014 interruptible/lower-priority service only or <10% reduction (+0.10 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
                 "source_url": null,
-                "scraped_at": "2026-09-28T16:49:05.116840",
-                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/candidate/unusable-impact/input.html"
+                "scraped_at": "2026-09-28T17:04:30.137349",
+                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/candidate/unusable-impact/input.html"
               },
               "locations": [
                 {
@@ -4156,7 +4156,7 @@
               "materiality": "MATERIAL",
               "actionable": true,
               "approved": true,
-              "source_evidence": "evidence/root-run/signals/candidate/unusable-impact/input.html",
+              "source_evidence": "evidence/reviewed-run/signals/candidate/unusable-impact/input.html",
               "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
             },
             "publication_disposition": "REVIEW_REQUIRED",
@@ -4173,7 +4173,7 @@
             "materiality": "MATERIAL",
             "actionable": true,
             "approved": true,
-            "source_evidence": "evidence/root-run/signals/candidate/unusable-impact/input.html",
+            "source_evidence": "evidence/reviewed-run/signals/candidate/unusable-impact/input.html",
             "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
           },
           "parser_evidence": "unusable-impact/parser.json",
@@ -4181,7 +4181,7 @@
         },
         {
           "step": "unavailable-extraction",
-          "machine_latency_ms": 3.476583,
+          "machine_latency_ms": 4.705625,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 0,
           "disposition": "ERROR",
@@ -4190,7 +4190,7 @@
           "classification_scorable": false,
           "classification_presented_as_valid": false,
           "decision": {
-            "decision_id": "6d6c8850-8f20-4308-88a3-86869266aef1",
+            "decision_id": "4a8caf7d-5dfb-4eb9-8056-a9548bcc83cf",
             "notice_id": 800004,
             "source_sha256": "3903d28efb3fddc0e679b05c8e05a1ec2af1ccd16a7b67c9f1a7e92bacc08b85",
             "reference_time": "2026-01-15T12:00:00+00:00",
@@ -4218,8 +4218,8 @@
                 "confidence_score": 0.8,
                 "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"regex_fallback\"]",
                 "source_url": null,
-                "scraped_at": "2026-09-28T16:49:05.122219",
-                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/candidate/unavailable-extraction/input.html"
+                "scraped_at": "2026-09-28T17:04:30.142942",
+                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/candidate/unavailable-extraction/input.html"
               },
               "locations": [
                 {
@@ -4678,7 +4678,7 @@
               "materiality": "MATERIAL",
               "actionable": true,
               "approved": true,
-              "source_evidence": "evidence/root-run/signals/candidate/unavailable-extraction/input.html",
+              "source_evidence": "evidence/reviewed-run/signals/candidate/unavailable-extraction/input.html",
               "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
             },
             "publication_disposition": "ERROR",
@@ -4695,7 +4695,7 @@
             "materiality": "MATERIAL",
             "actionable": true,
             "approved": true,
-            "source_evidence": "evidence/root-run/signals/candidate/unavailable-extraction/input.html",
+            "source_evidence": "evidence/reviewed-run/signals/candidate/unavailable-extraction/input.html",
             "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
           },
           "parser_evidence": "unavailable-extraction/parser.json",
@@ -4703,7 +4703,7 @@
         },
         {
           "step": "missing-history",
-          "machine_latency_ms": 3.76325,
+          "machine_latency_ms": 4.889333,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 0,
           "disposition": "REVIEW_REQUIRED",
@@ -4712,7 +4712,7 @@
           "classification_scorable": true,
           "classification_presented_as_valid": false,
           "decision": {
-            "decision_id": "91c07c1b-7c17-4d83-b971-8259b6b84eaf",
+            "decision_id": "f5aefae2-177e-4d3c-bc07-7400a3e60748",
             "notice_id": 800005,
             "source_sha256": "795cb39836c958931def1563029c2697e5373bfe7e47a0a073a7628366417f25",
             "reference_time": "2026-01-15T12:00:00+00:00",
@@ -4740,8 +4740,8 @@
                 "confidence_score": 0.8,
                 "validity_flags": "[\"VC-1: superseded notice \\u2014 prior notice not in DB, cannot compare; continuing validation\", \"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
                 "source_url": null,
-                "scraped_at": "2026-09-28T16:49:05.126478",
-                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/candidate/missing-history/input.html"
+                "scraped_at": "2026-09-28T17:04:30.148539",
+                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/candidate/missing-history/input.html"
               },
               "locations": [
                 {
@@ -5224,7 +5224,7 @@
               "materiality": "MATERIAL",
               "actionable": true,
               "approved": true,
-              "source_evidence": "evidence/root-run/signals/candidate/missing-history/input.html",
+              "source_evidence": "evidence/reviewed-run/signals/candidate/missing-history/input.html",
               "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
             },
             "publication_disposition": "REVIEW_REQUIRED",
@@ -5241,7 +5241,7 @@
             "materiality": "MATERIAL",
             "actionable": true,
             "approved": true,
-            "source_evidence": "evidence/root-run/signals/candidate/missing-history/input.html",
+            "source_evidence": "evidence/reviewed-run/signals/candidate/missing-history/input.html",
             "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
           },
           "parser_evidence": "missing-history/parser.json",
@@ -5249,7 +5249,7 @@
         },
         {
           "step": "missing-authorization",
-          "machine_latency_ms": 5.4125,
+          "machine_latency_ms": 6.957083,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 0,
           "disposition": "REVIEW_REQUIRED",
@@ -5258,7 +5258,7 @@
           "classification_scorable": true,
           "classification_presented_as_valid": true,
           "decision": {
-            "decision_id": "4b327887-7159-4679-bc68-f7cc97dfb83c",
+            "decision_id": "c6f4b85f-4211-460b-ade0-4ae56dfd5e10",
             "notice_id": 800006,
             "source_sha256": "341cf33a9399bc48a6693fa3a0991dc5b947bd86cb27dbc1905533a4eaa3a894",
             "reference_time": "2026-01-15T12:00:00+00:00",
@@ -5286,8 +5286,8 @@
                 "confidence_score": 0.8,
                 "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
                 "source_url": null,
-                "scraped_at": "2026-09-28T16:49:05.131083",
-                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/candidate/missing-authorization/input.html"
+                "scraped_at": "2026-09-28T17:04:30.154502",
+                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/candidate/missing-authorization/input.html"
               },
               "locations": [
                 {
@@ -5776,7 +5776,7 @@
         },
         {
           "step": "routine",
-          "machine_latency_ms": 5.670875,
+          "machine_latency_ms": 7.163375,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 0,
           "disposition": "NO_SIGNAL",
@@ -5785,7 +5785,7 @@
           "classification_scorable": true,
           "classification_presented_as_valid": true,
           "decision": {
-            "decision_id": "30870474-c3f8-4327-b943-275c0b3be915",
+            "decision_id": "7d424334-6676-49f8-a9d8-3c823412ddcb",
             "notice_id": 800007,
             "source_sha256": "d61a7fd086cfa88045261a1c4a2c5fcf0fe31e637fc295537f13d4de00db7b6b",
             "reference_time": "2026-01-15T12:00:00+00:00",
@@ -5813,8 +5813,8 @@
                 "confidence_score": 0.0,
                 "validity_flags": "[\"VC-1: information-only notice \\u2014 Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction\", \"llm_extraction\"]",
                 "source_url": null,
-                "scraped_at": "2026-09-28T16:49:05.137600",
-                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/candidate/routine/input.html"
+                "scraped_at": "2026-09-28T17:04:30.162833",
+                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/candidate/routine/input.html"
               },
               "locations": [],
               "restrictions": []
@@ -6223,7 +6223,7 @@
               "materiality": "MATERIAL",
               "actionable": true,
               "approved": true,
-              "source_evidence": "evidence/root-run/signals/candidate/routine/input.html",
+              "source_evidence": "evidence/reviewed-run/signals/candidate/routine/input.html",
               "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
             },
             "publication_disposition": "NO_SIGNAL",
@@ -6241,7 +6241,7 @@
             "materiality": "MATERIAL",
             "actionable": true,
             "approved": true,
-            "source_evidence": "evidence/root-run/signals/candidate/routine/input.html",
+            "source_evidence": "evidence/reviewed-run/signals/candidate/routine/input.html",
             "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
           },
           "parser_evidence": "routine/parser.json",
@@ -6249,7 +6249,7 @@
         },
         {
           "step": "unsupported-format",
-          "machine_latency_ms": 3.608042,
+          "machine_latency_ms": 4.235792,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 0,
           "disposition": "REVIEW_REQUIRED",
@@ -6258,7 +6258,7 @@
           "classification_scorable": false,
           "classification_presented_as_valid": false,
           "decision": {
-            "decision_id": "b1948360-0db7-48b4-9296-323c6bb49eaf",
+            "decision_id": "e07d71c8-0fdd-4a71-ae50-b5b361ced850",
             "notice_id": 800008,
             "source_sha256": "f1fb9bc151cb0d2f071f5422b2e1382a2ea491e26c84570496b10d45acfe5608",
             "reference_time": "2026-01-15T12:00:00+00:00",
@@ -6272,7 +6272,7 @@
                 "notice_subtype": null,
                 "effective_datetime": null,
                 "end_datetime": null,
-                "post_datetime": "2026-09-28T16:49:05.144201",
+                "post_datetime": "2026-09-28T17:04:30.171224",
                 "response_required": 0,
                 "response_due_date": null,
                 "status": "INITIATE",
@@ -6286,8 +6286,8 @@
                 "confidence_score": 0.6,
                 "validity_flags": "[\"VC-2: unknown notice type 'UNKNOWN' \\u2014 treating as signal-capable; downstream validators will assess operational impact\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
                 "source_url": null,
-                "scraped_at": "2026-09-28T16:49:05.144226",
-                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/candidate/unsupported-format/input.pdf"
+                "scraped_at": "2026-09-28T17:04:30.171248",
+                "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/candidate/unsupported-format/input.pdf"
               },
               "locations": [
                 {
@@ -6849,7 +6849,7 @@
               "materiality": "MATERIAL",
               "actionable": true,
               "approved": true,
-              "source_evidence": "evidence/root-run/signals/candidate/unsupported-format/input.pdf",
+              "source_evidence": "evidence/reviewed-run/signals/candidate/unsupported-format/input.pdf",
               "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
             },
             "publication_disposition": "REVIEW_REQUIRED",
@@ -6866,7 +6866,7 @@
             "materiality": "MATERIAL",
             "actionable": true,
             "approved": true,
-            "source_evidence": "evidence/root-run/signals/candidate/unsupported-format/input.pdf",
+            "source_evidence": "evidence/reviewed-run/signals/candidate/unsupported-format/input.pdf",
             "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
           },
           "parser_evidence": "unsupported-format/parser.json",

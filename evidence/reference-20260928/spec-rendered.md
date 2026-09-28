@@ -281,7 +281,7 @@ D6-016 | - | UNCHECKED
 
 ## Spec ownership and decisions
 
-Thomas Hand is the repository owner. Decision ownership records the supplied request; it does not assert that Thomas has reread subsequently edited bytes. Every spec change requires a named decision and makes the old read receipt stale. The hash is not approval; required human review is enforced outside this repository. The current structural revision awaits an exact-spec human reread.
+Thomas Hand is the repository owner. Decision ownership records the supplied request; it does not assert that Thomas has reread subsequently edited bytes. Every spec change requires a named decision and makes the old read receipt stale. The hash is not approval; required human review is enforced outside this repository.
 
 ```spec-decisions
 ID | Status | Person | Previous spec SHA256 | Decision
@@ -290,10 +290,11 @@ TZ-NGPL-001 | rejected | Thomas Hand | - | REJECTED proposal: NGPL posts in Cent
 TZ-NGPL-002 | owner-requested | Thomas Hand | 5d4adfff7cb944c6a4ec9e9f17bb0ea7deaed47dfff2eeb35583703786a2245f | Adopt source-grounded SIGNAL_CANDIDATE classification with unknown timezone; prohibit automatic time actionability and recommendation authorization, require REVIEW_REQUIRED, and never infer a zone. Exact ruling: evidence/timezone-separation/20260928/owner-ruling.txt.
 FEEDBACK-001 | owner-requested | Thomas Hand | c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f | Make evidence-driven spec maintenance practical: compact normative tables, preview consequences before adoption, explicit check limits and measured tradeoffs. Preserve classification policy, labels, thresholds and authorization; exact revised spec review remains pending.
 AUDIT-TRUTH-001 | owner-requested | Thomas Hand | c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f | Repair gate exits, read-only validation, execution-failure scoring and honest check coverage. Keep unchecked prose separate from code-owned boundaries; retain assumptions here. No new business policy or exact human reread is asserted.
-REMEDIATION-001 | approved | Thomas Hand | c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f | Predicate meaning moves into spec-predicates. An unusable helper verdict vetoes a decision only when the notice is not a firm disruption; the publisher neither stores nor publishes such a decision (SEMANTICS_INCOMPLETE). Measured: capture-1/46864 ERROR -> SIGNAL_CANDIDATE, no new false positive. The publisher witness unusable-impact was re-frozen to match; spec and witness changed in the same session, so the owner's approval is the independent check. Exact spec reread still pending.
+REMEDIATION-001 | approved | Thomas Hand | c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f | Predicate meaning moves into spec-predicates. An unusable helper verdict vetoes a decision only when the notice is not a firm disruption; the publisher neither stores nor publishes such a decision (SEMANTICS_INCOMPLETE). Measured: capture-1/46864 ERROR -> SIGNAL_CANDIDATE, no new false positive. The publisher witness unusable-impact was re-frozen to match; spec and witness changed in the same session, so the owner's approval is the independent check.
 REMEDIATION-002 | approved | Thomas Hand | c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f | Approved by Thomas Hand 2026-09-28: a restriction with no stated timezone is ENDED when its latest naive source end plus unresolved_time_margin_hours (at least 14, the largest UTC offset) is at or before the reference time. Labeled captures are scored as of each notice's post time (D3-011). No captured outcome changes; live candidates for long-ended restrictions become HISTORICAL_ONLY.
 REMEDIATION-003 | approved | Thomas Hand | c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f | Approved by Thomas Hand 2026-09-28: Gate 2 acceptance budgets. Per capture, at most 0 labeled negatives may be candidates and at most 2 labeled positives may be missed (a positive sent to review counts as missed). 2 is the measured value on 2026-09-28: a ratchet that may only tighten, not a quality claim. Review is the specified outcome for SIGNAL-002 and SIGNAL-004 cases; an unresolved SIGNAL-003 case fails. Six verification rows that this component cannot observe are declared out_of_scope. OUTPUT-001 and STATE-006 text now describe what their checks observe.
 NNS-FIRM-001 | approved | Thomas Hand | c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f | Approved by Thomas Hand 2026-09-28 (desk request): NGPL No-Notice Service is a firm, storage-backed service. Extracted service_type NO_NOTICE normalizes to a distinct NO_NOTICE_FIRM value (source distinction preserved) and NO_NOTICE_FIRM joins FIRM_SERVICES, so a firm NNS restriction (UNAVAILABLE or PRIMARY_ONLY) is a FIRM_DISRUPTION like other firm services. Measured by make consequences: 0/46 captured outcomes change; the only captured NNS row (46528, labeled negative) is an HOURLY_LIMIT_PCT partial limit and stays non-firm-disruption. No captured or labeled NNS outage exists, so the intended positive effect is unmeasured by frozen labels.
+AUDIT2-001 | approved | Thomas Hand | 4448a6f9e9ee3841e0086a8e556c21bbd584efc9167742a831154f70e3e18a8e | Approved by Thomas Hand 2026-09-28: remove status prose that was false on the reviewed bytes ("awaits an exact-spec human reread", "Exact spec reread still pending"). No rule, predicate, setting or requirement changes; make consequences shows 0 of 46 changed.
 ```
 
 ## Fixed domain rules
@@ -641,14 +642,14 @@ Captured cases: **46** (two 23-case captures; 14 labels per capture). No abstent
 | BR-FORMAT | 0/46 | 0/46 | Format: 46 |
 | BR-SEMANTICS | 1/46 | 1/46 | Oracle answer: 45 |
 | BR-CONTRADICTION | 3/46 | 3/46 | Conflict: 43 |
-| BR-HISTORY | 4/46 | 3/46 | History: 42 |
+| BR-HISTORY | 6/46 | 5/46 | History: 40 |
 | BR-UNCHANGED | 4/46 | 4/46 | Operational change: 42 |
 | BR-ROUTINE | 6/46 | 6/46 | Information-only: 37; Restriction: 3 |
 | BR-HISTORICAL | 0/46 | 0/46 | Restriction current: 24; Service class: 22 |
 | BR-FIRM | 24/46 | 20/46 | Service class: 22 |
-| BR-UNRESOLVED | 46/46 | 9/46 |  |
+| BR-UNRESOLVED | 46/46 | 7/46 |  |
 
-Previous commit: `41fd17205f05834e70140c6ff116b256c764d128`. Spec-to-spec consequences with current fixed compiler; not a runtime regression mapping
+Previous commit: `0164af56c69e227c574b72b624da2f16bdc77bd2`. Spec-to-spec consequences with current fixed compiler; not a runtime regression mapping
 
 | Notice/capture | From | To |
 |---|---|---|
@@ -794,8 +795,7 @@ Previous commit: `41fd17205f05834e70140c6ff116b256c764d128`. Spec-to-spec conseq
 | capture-0/missing-prior | BR-FORMAT | Format | UNSUPPORTED | SUPPORTED |
 | capture-0/missing-prior | BR-SEMANTICS | Oracle answer | UNUSABLE | USABLE |
 | capture-0/missing-prior | BR-CONTRADICTION | Conflict | YES | NO |
-| capture-0/missing-prior | BR-HISTORY | History | GAP | COMPLETE |
-| capture-0/missing-prior | BR-UNCHANGED | Operational change | UNCHANGED | CHANGED |
+| capture-0/missing-prior | BR-UNCHANGED | Operational change | UNCHANGED | UNKNOWN |
 | capture-0/missing-prior | BR-ROUTINE | Information-only | YES | NO |
 | capture-0/missing-prior | BR-HISTORICAL | Service class | FIRM_DISRUPTION | OTHER |
 | capture-0/missing-prior | BR-FIRM | Service class | FIRM_DISRUPTION | OTHER |
@@ -957,8 +957,7 @@ Previous commit: `41fd17205f05834e70140c6ff116b256c764d128`. Spec-to-spec conseq
 | capture-1/missing-prior | BR-FORMAT | Format | UNSUPPORTED | SUPPORTED |
 | capture-1/missing-prior | BR-SEMANTICS | Oracle answer | UNUSABLE | USABLE |
 | capture-1/missing-prior | BR-CONTRADICTION | Conflict | YES | NO |
-| capture-1/missing-prior | BR-HISTORY | History | GAP | COMPLETE |
-| capture-1/missing-prior | BR-UNCHANGED | Operational change | UNCHANGED | CHANGED |
+| capture-1/missing-prior | BR-UNCHANGED | Operational change | UNCHANGED | UNKNOWN |
 | capture-1/missing-prior | BR-ROUTINE | Information-only | YES | NO |
 | capture-1/missing-prior | BR-HISTORICAL | Service class | FIRM_DISRUPTION | OTHER |
 | capture-1/missing-prior | BR-FIRM | Service class | FIRM_DISRUPTION | OTHER |

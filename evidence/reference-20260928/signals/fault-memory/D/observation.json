@@ -1,6 +1,6 @@
 {
   "step": "D",
-  "machine_latency_ms": 7.579792,
+  "machine_latency_ms": 8.427167,
   "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
   "initial_count": 0,
   "disposition": "SUPPRESSED",
@@ -9,7 +9,7 @@
   "classification_scorable": true,
   "classification_presented_as_valid": true,
   "decision": {
-    "decision_id": "5c8afaae-10d3-4b3a-a57f-e3b1b32e216b",
+    "decision_id": "bf323ccd-404e-4ce5-b1dc-aab61f9bcb96",
     "notice_id": 800002,
     "source_sha256": "a7c7d426273bc476c090c699a7a9894eb49e7d99315fb695101a1c1c8dac0cdc",
     "reference_time": "2026-01-15T12:00:00+00:00",
@@ -37,8 +37,8 @@
         "confidence_score": 0.8,
         "validity_flags": "[\"VC-1: superseded notice \\u2014 LLM assessed as materially different from prior notice 800001; continuing as potential new signal\", \"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
         "source_url": null,
-        "scraped_at": "2026-09-28T16:49:05.327198",
-        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/fault-memory/D/input.html"
+        "scraped_at": "2026-09-28T17:04:30.456082",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/fault-memory/D/input.html"
       },
       "locations": [
         {
@@ -417,7 +417,7 @@
       "materiality": "MATERIAL",
       "actionable": true,
       "approved": true,
-      "source_evidence": "evidence/root-run/signals/fault-memory/D/input.html",
+      "source_evidence": "evidence/reviewed-run/signals/fault-memory/D/input.html",
       "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
     },
     "publication_disposition": "SUPPRESSED",
@@ -435,7 +435,7 @@
     "materiality": "MATERIAL",
     "actionable": true,
     "approved": true,
-    "source_evidence": "evidence/root-run/signals/fault-memory/D/input.html",
+    "source_evidence": "evidence/reviewed-run/signals/fault-memory/D/input.html",
     "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
   },
   "parser_evidence": "D/parser.json",

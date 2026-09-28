@@ -11,8 +11,8 @@
     "D5": "f02cf8a2cc5db90e0f71e2ce939b0b74a27b4f9408f271d2e08a07d00cb91bfb",
     "D6": "96dada4676a46ebfb31e936ecfb52893436c782dae9551cce9a43b84539cfd68"
   },
-  "spec_sha256": "4448a6f9e9ee3841e0086a8e556c21bbd584efc9167742a831154f70e3e18a8e",
-  "requirements_sha256": "330ad20502efa8d1bcb263cd442e8adb7973acc3c2972dff42e95cfed3766849",
+  "spec_sha256": "c89f760b3f2167345112801cd7825d26c40c102996239d13a2c788c9c4d363b6",
+  "requirements_sha256": "b06113514eae67134c0befb2f744bda4ac911c01f7c60836dd9666b4a7667227",
   "requirement_rows": {
     "INPUT-001": {
       "revision": {
@@ -267,7 +267,7 @@
       "normative_sha256": "505ebe49f57fff2191ac0543280ed127c424059ecabbfb6ad3d1c4e3137af573"
     }
   },
-  "behavior_contract_sha256": "890dd52e70abd3a8258ce424053769824dc3468ab86d0577a53d1d0747dc241a",
+  "behavior_contract_sha256": "136a950500383a9d6ee0898372b3c93ccbdada8c1e5530c8d1490fdb14e5f9e1",
   "schemas": {
     "requirements/normalized-input.schema.json": "a648bc9b58cddda4cdc33e37c19cccd57d815f84387d512bacc1d9f252ebf598",
     "requirements/normalized-output.schema.json": "f1f538f0c39199dd34225ba646faebaad86ee24c6a21c2d7e5305ae4602402bc",
@@ -278,7 +278,7 @@
     "requirements/normalized-witnesses.json": "904b6dd551678fecbbd4add561359e4872037e587eaa5c454d92a0a53a454be1",
     "requirements/publisher-witnesses.json": "abbf2b834ca282ca3cc47d5acfc3a9a499b8f1238885daf67296f11288581345",
     "requirements/real-positive-witnesses.json": "89b16247954da7b39b1b8b83191ecbeb3406056bd3c7e4b05308ec161120d542",
-    "requirements/signal-safety.yaml": "39a379321fd6664486497241a7acabf5877d68dd0d71a743ef83aca36e7574de"
+    "requirements/signal-safety.yaml": "7dd9aeb7581e1100dfaf0182b025279e874a91767a9a791b061bd7f4919aa0dc"
   },
   "runtime_evaluator_publisher": {
     "classifier.py": "438a9726e6c356a067a89b593b5adf279bb834481ba57def0e426a2e71e1d481",
@@ -287,14 +287,14 @@
     "harness/adapter.py": "8896536c27b635518125cfe7395b73e611e853daa04865d524ecc86d56bc698c",
     "harness/baseline.py": "c1190662033d37967b34a89d36726ff8cdd60157e54b3c0bd202c8d20dc005fb",
     "harness/behavior_contract.py": "4582fced1183ca5f83897ce0dad4c52bb90e8e3547132ac3439c71ddbdaa5193",
-    "harness/captures.py": "e02ac8281bae2ed4ca19c17f324f2ec768c8e7314001d5404973c228d6fb7b3b",
+    "harness/captures.py": "dd83c4b045198fd347191762ee9855b8d22c488d56285ca976e21a9515fdc1e3",
     "harness/commands.py": "547be8682242ab269858cb8be39a3de686fed048245a4a7e735f18f293a582d7",
-    "harness/comparison_identity.py": "736ed5d12de13717f3cd570fbf4a9baa20b5a110c245a7faff1cbf4487b454bc",
-    "harness/consequences.py": "6cc2aaf05dba3d104510a37cb1f5aeeff83cc447ebd09e1cd3e4da4a384eb45b",
+    "harness/comparison_identity.py": "d4202b75860a3db7d084b0b527fbbfab9192a492472674f84fda6bfd2472a979",
+    "harness/consequences.py": "ea33b7a8327e641e26c54d3c720e591a7609a78c836accd5832f0a7a46a5a2af",
     "harness/context.py": "0cc85464c64665b40ecd2e1d6c07c83b370f66993e50e2e1fa6ca26175ce3ae0",
     "harness/context_integrity.py": "2d6fe4015a6ad055171bc52e21f41b4e4c7e74ec65179628b2a12074415351bb",
     "harness/contract_preflight.py": "2d2be2484c42a2cdf6f1fdaefbd8c20cbb7d0a6be7b16acc2aef5b2a77471b17",
-    "harness/current_evidence.py": "9ed5dbabc026c4747578c974b78ea8fad406fe5483e243ea904c1d43d9efc493",
+    "harness/current_evidence.py": "3059bc6d23c70107e2185124d87ea96fcf57b5b8ba5b0c8fe245f0769f2427f7",
     "harness/domain_rules.py": "7bb5fe1f3a6d32a93c3c4d7652acbd915ee3b340f532ca9e183fff337aa2fda1",
     "harness/e2e.py": "e56b38830ebdc4ccf3eba57e77e305e64dac4a7b73a1ed61ac2fb2b87859507b",
     "harness/evaluator.py": "2750eef6ddc4ac6a235dded4cd82c0fb220e7fd2bbb2c78226045448b5215a4b",
@@ -302,12 +302,12 @@
     "harness/gates.py": "4b5d88e8e25b73cb8dd96d79b3da1d2ed1b67800da31754a30efd741c5d520a8",
     "harness/input_contract_checks.py": "a6e250acbf26c864f05d2c466f61fad15510702028b434c98a6f3319633dd0d2",
     "harness/live.py": "1b1d3e600f2325b5166a17b884969788bddd18afbdec4f2d9b86be955315829f",
-    "harness/normalized_evaluation.py": "f5aa0ca297a6aac82fc903b9efc44bb0144c48e9572005c8e864fe0cfd743c8a",
+    "harness/normalized_evaluation.py": "52fa61609ead4b3b440c551d69a7f2fe14416e49866f7f15c70d8b64c51d2843",
     "harness/offline.py": "c78e22f0bcf25319dd3a700877f45d3cea485c459e6e56190f462a4f6b2f0df0",
     "harness/predicate_table.py": "4e20b83b09ba3fbef143f21ec79eab0a6e8be237b9c626bcd53e5d2bc1456c78",
     "harness/predicates.py": "dbe3a1d72009b7f8e442855ecf01f4086e9d34c29ff19bf5ebf84ad232dcfc27",
     "harness/preflight.py": "326f1b768143ac48effc78ac056ef1d2bca127b96942bc917ffd60115478e2d9",
-    "harness/proposals.py": "42cca829fa164e9d57ac26e46c927e8115ae88be708a0b022f35babe87fed7b4",
+    "harness/proposals.py": "24be8f18e2c59c6aa531af63af712b93c333437a5a12f77d05ab3b3dd271162e",
     "harness/real_positive_evaluation.py": "ee8bc10aa397bbc8b96c6f9007d80cf0a6fe24c54e23fb37c89953148033eda3",
     "harness/refusal_control.py": "bf3af10ffc604717d1fda67aab498f3133622044d132dd6fe3205a5fb2864ddb",
     "harness/regression.py": "ee49f8631461e90c1f6debac153ebacba8de2e69250d4ee3b756c86140444d18",
@@ -316,14 +316,14 @@
     "harness/rule_invariants.py": "7013b4065dd2ec8901e3e6e9eb211a6214ba2c4c2ff3e14ca4466d89ad4f4892",
     "harness/runtime.py": "08c5252fe1edd23c70f120755616b8562168af2b4f16465af2a4a4b87f34bdcd",
     "harness/signal_evaluation.py": "b5ac991f2afa0c1848eeadbd43c9b91f61fdb12c04cdd244cec7259af4047dad",
-    "harness/spec_compiler.py": "8a58220beefce173928a98119baa39be9c0bac626a555444fbd5c1b60f638ef9",
+    "harness/spec_compiler.py": "bc8e57e848d8e4cdba5f1638ea9cd2258336955cef600fb4b32d9ed3ef21212f",
     "harness/spec_ownership.py": "f05c9ea25fd56a50421f180ca2dc7531fbb8fb2ba1b007cd9955207aef27fbf5",
     "harness/spec_tables.py": "d95f98e05652650453ace3407035fa045e5711299636f18eec185d30d397b0a8",
     "harness/specification.py": "6651255abb5093fb46e15a745938fd2b504f39ba942536710cdb366573b5ee90",
     "harness/storage_evaluation.py": "1244757ba5699789642151c8ab5c645dc5b6700d85213fc199b4ff2152506b50",
     "harness/storage_ports.py": "09eb6ad0dc045b24d745395bc302d7275bb09cb8ea34c3434dc8bef91c52ccd6",
     "harness/temporal_authority.py": "2afd17c7cc4fe6e08a52a0524350ff3791b62d8f4d70ece6360f84249e37a47a",
-    "harness/trading_evaluation.py": "e488b5b4ce1f49f1a6b9e48da7e3dace04b4649702f3994810f1915295512dec",
+    "harness/trading_evaluation.py": "59cb2606a4a3f0b2d697f892febc3bbad2a11e2126b15bdaa0754e8d6d930f58",
     "inherited/database.py": "04b605bec74234ad0662c4dd813e1c66b280666b3fdb440c954ef878a7b8fd76",
     "inherited/llm_utils.py": "68448416555956b04b8591a4e1c09c1226ee619005ef293894567430eb834139",
     "inherited/main.py": "9f544c91fd32d7a5c70a26016f6e9c78f274a4046b6159919a85be5f510ccf2f",
@@ -567,6 +567,7 @@
   "capture_interpretation": "Original manifests retain captured model/prompt/config identities. Current adapter/evaluator source hashes describe replay only; historical identities are never restamped.",
   "model_configuration": {
     "status": "PASS",
+    "unverifiable_config_file": null,
     "requested_model_environment": null,
     "effective_configured_model": "claude-sonnet-4-6",
     "captured_configured_models": [

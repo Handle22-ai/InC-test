@@ -1,6 +1,6 @@
 {
   "step": "unsupported-format",
-  "machine_latency_ms": 3.83225,
+  "machine_latency_ms": 6.430833,
   "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
   "initial_count": 0,
   "disposition": "REVIEW_REQUIRED",
@@ -9,7 +9,7 @@
   "classification_scorable": false,
   "classification_presented_as_valid": false,
   "decision": {
-    "decision_id": "bc4f75d0-e938-4019-9672-2789698a8a75",
+    "decision_id": "c40b8329-1382-4a4b-89ad-dfa4553c644a",
     "notice_id": 800008,
     "source_sha256": "f1fb9bc151cb0d2f071f5422b2e1382a2ea491e26c84570496b10d45acfe5608",
     "reference_time": "2026-01-15T12:00:00+00:00",
@@ -23,7 +23,7 @@
         "notice_subtype": null,
         "effective_datetime": null,
         "end_datetime": null,
-        "post_datetime": "2026-09-28T16:49:05.292464",
+        "post_datetime": "2026-09-28T17:04:30.412855",
         "response_required": 0,
         "response_due_date": null,
         "status": "INITIATE",
@@ -37,8 +37,8 @@
         "confidence_score": 0.6,
         "validity_flags": "[\"VC-2: unknown notice type 'UNKNOWN' \\u2014 treating as signal-capable; downstream validators will assess operational impact\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
         "source_url": null,
-        "scraped_at": "2026-09-28T16:49:05.292487",
-        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/fault-never/unsupported-format/input.pdf"
+        "scraped_at": "2026-09-28T17:04:30.412878",
+        "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/fault-never/unsupported-format/input.pdf"
       },
       "locations": [
         {
@@ -600,7 +600,7 @@
       "materiality": "MATERIAL",
       "actionable": true,
       "approved": true,
-      "source_evidence": "evidence/root-run/signals/fault-never/unsupported-format/input.pdf",
+      "source_evidence": "evidence/reviewed-run/signals/fault-never/unsupported-format/input.pdf",
       "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
     },
     "publication_disposition": "REVIEW_REQUIRED",
@@ -617,7 +617,7 @@
     "materiality": "MATERIAL",
     "actionable": true,
     "approved": true,
-    "source_evidence": "evidence/root-run/signals/fault-never/unsupported-format/input.pdf",
+    "source_evidence": "evidence/reviewed-run/signals/fault-never/unsupported-format/input.pdf",
     "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
   },
   "parser_evidence": "unsupported-format/parser.json",

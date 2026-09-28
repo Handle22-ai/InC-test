@@ -9,7 +9,7 @@
       "notice_subtype": null,
       "effective_datetime": null,
       "end_datetime": null,
-      "post_datetime": "2026-09-28T16:49:05.070529",
+      "post_datetime": "2026-09-28T17:04:30.077103",
       "response_required": 0,
       "response_due_date": null,
       "status": "INITIATE",
@@ -23,8 +23,8 @@
       "confidence_score": 0.6,
       "validity_flags": "[\"VC-2: unknown notice type 'UNKNOWN' \\u2014 treating as signal-capable; downstream validators will assess operational impact\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
       "source_url": null,
-      "scraped_at": "2026-09-28T16:49:05.070550",
-      "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/root-run/signals/inherited/unsupported-format/input.pdf"
+      "scraped_at": "2026-09-28T17:04:30.077122",
+      "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/inherited/unsupported-format/input.pdf"
     },
     "locations": [
       {

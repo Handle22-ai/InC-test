@@ -1,14 +1,14 @@
 {
   "scope": "bounded-integrated-classifier-publisher-v3",
   "source": {
-    "content_sha256": "2343770c9689b8223f221ef3789517e27448771c85bc13d4652fcdf92e270a17",
+    "content_sha256": "11b6bf1cd56c9e19fec08743a5e1e964ca98cbfa86bce3bbb6438091daab91f6",
     "content_scope": "Code/contracts/context/tests/build inputs; evidence, reports and baseline registration excluded",
-    "revision": "41fd17205f05834e70140c6ff116b256c764d128",
+    "revision": "5c91e8b9b596e530f3f7e337d24c8e0055743a2b",
     "working_tree_dirty": false,
     "files": {
       "AGENTS.md": "dd4b75fe800cd5a168a4e502b3e5e4da60a237bdfd93a2295246ddcf58503ad0",
       "Makefile": "36deb2e655d7693315feab3709c3f1fdba14c129fac2eaeb8018e47b92480d3c",
-      "README.md": "3e2e2c0dece5eb5ab39a5e860a4bc66e3dea1e116138f0f709198c44ad7d82b3",
+      "README.md": "b9e5152073680bff6bddd4d50f09e43aae3fc2bea16ae903fbb9abb7af387db5",
       "artifacts/dependencies-dev.lock.txt": "930dc24d33273c655c611eb4476ba48680ba7d3db1350329775d0539f210a3c6",
       "artifacts/dependencies.lock.txt": "9b68538bcdc28bc1f46c28865d1316079f241ab1317f43e529794dc94cfcdcb7",
       "classifier.py": "438a9726e6c356a067a89b593b5adf279bb834481ba57def0e426a2e71e1d481",
@@ -89,13 +89,15 @@
       "context/format-compatibility-learning.md": "6b6c45bf299a1b32ec5537f8ae3bdf0c8a2aa87d03a96b56330d83c6afa25072",
       "context/maintenance-learning.md": "4f57e7e7e8910bf9573cf7533fec3160ab41f12ecb2a132efa95f31daf9966a3",
       "context/manifest.example.yaml": "934d9d14bf6ad494c64a3cf7c1db62e327af8c69a2e2bcc0c16354b969143487",
-      "context/manifest.yaml": "5d37e6e478c4f9576025f9e958667af49d14d720811bf3594a323f6a5ec9da0e",
+      "context/manifest.yaml": "aeb2f779e06b1a915d9737e796e47cf90c1d2ace8afb291d98cfa2081e0e4f45",
       "context/pending-learning/audit-contract-questions.md": "0de683c3b9af3f948f5530d1c42da3faa05dc1a68ddd9bf9ecb0b06d4711ceaa",
       "context/pending-learning/audit-critical-informational.md": "7f3cfc6f269206fd57ee58f14638904579253146244d7df51c546b67f5096c1f",
       "context/pending-learning/audit-truth-20260928.md": "957a2aa11b855947fc73d936d96794556cfe3d3cd0ccc4feed91cf65b496a5cd",
       "context/pending-learning/derivation-integrity.md": "d27d539d6c18a9e1ec5012bb0164d7697907f10e9f45c661764c5bb59628d66f",
       "context/pending-learning/integrated-captured-boundary.md": "a5aa7446d9982187bc0699f0c1ea977af16902d3b624c7ff49895f151d1dcc2b",
+      "context/pending-learning/nns-firm-service.md": "7d056c866415e405d8b0a740fd1cae9225175480beaeb0207814dea2ddd0181b",
       "context/pending-learning/ofo-policy-gap.md": "2ad9b005b559cbe9cd13677f76b37358c622be03d1d0dcaf42ff339bca6b9975",
+      "context/pending-learning/source-format-changes.md": "1dfe82cdb3778380f15886d65ef8f515afc73e2771a0c6c5bec89e796014ccf2",
       "context/proposals/archive-build-history.md": "60e05a4b0c134e7af0dde70cb3f3d57e0399d69ca40c4fb3b0849765ee701740",
       "context/proposals/baseline-policy.md": "dcb488865894a52811ca5fd22de4f01491cde462e52f4e6dfc5b2cdd66be2f68",
       "context/proposals/normalized-classifier-rule.md": "9bdcdd3e5146fea06df7730cfde937913e6a92bd3b5ab752ca1a56ab1cee51d7",
@@ -146,7 +148,7 @@
       "context/regressions/rebuilt-storage.json": "5be0f43ec189e9b662322fffeda03867432137aa147115dd633a6324d4227ce0",
       "context/regressions/v2-storage-probes.json": "dfa5a29631e8a3858bbe6b76f195fce33a19f4a04df70c731949f4c3c166aec1",
       "context/spec-owner-review.json": "8d70d6011b5e00dcc2c5d1a4a91933c409f95cf6a14ae65d3470d18f93a708bc",
-      "context/spec-read-pin.json": "6348a0a18c75604301fee7c0a49e96ad4983e64f05ed35a67cc0b3eef8877f54",
+      "context/spec-read-pin.json": "f9024bc1626b6c93802fcd7cd3e016ac4465876dc94267c66d2678a6ab18297b",
       "context/spec-review-learning.md": "0aa53bccdf31be64d2d19230740dac2b4c68137709f328dbee423f8034bc6e54",
       "context/temporal-approval.json": "8466cd5be9fe8fa45f30790076b8df68e390e5ccf5642294506e179648d9ccb4",
       "docs/history/ARCHITECTURE_AND_CODE_QUALITY.md": "c794ac3020e2735a9955e0568829f18ad22cbe75a8e31141320e3471fdcca6f8",
@@ -159,22 +161,22 @@
       "docs/history/README.md": "a6eef06163b52da992eb9696ca1d1b88b2c8a96a4ca75426757a9a4a9da1534b",
       "docs/history/START_HERE.md": "9b72ff2d13da5b1f3e1e9711a20ac20e7f2117543fcdccf56de34829be37c3d4",
       "docs/history/d_sentence_bindings.json": "8e71dcf9e4ff50a53f54812ca0de443dc8239354b9761360102954fd09dfdb71",
-      "docs/positions.md": "b5221dcf841acedd88caee981dc7a80bd8a47bd61782e76ae329be52d54a1c4a",
-      "docs/signal-contract.md": "582094e3cffd24de1669eb14c2ac2e42e95a0e8a880c35abc9176519d9563abb",
-      "docs/system-contract.md": "2d9b2c2becad76cec28a56969d592d48a76d79a83061ef5cac1b00b80849b51e",
+      "docs/positions.md": "c1c0c6083826bbf81693d226c1ad7938b945ff83c2ad6c95d342dfb9d7e0f8f7",
+      "docs/signal-contract.md": "6b7aeb679457128e0344a71648b98ef4e4175ef2cfd857f96f2bf9d4c8710ec1",
+      "docs/system-contract.md": "7e3d49d4d09bfc83ff7c733ff7e6604f7ca69d643c05158de14f0bc8b93e71a1",
       "harness/__init__.py": "29f7829d89d3f18af499f0e01f61bf4f2f1866024a7c45e5cd6fe610ef31601e",
       "harness/__main__.py": "da51e6ee7bf5d0bee17856d3c47655a07c6d9383bf1134a63baf495bc40ecf2a",
       "harness/adapter.py": "8896536c27b635518125cfe7395b73e611e853daa04865d524ecc86d56bc698c",
       "harness/baseline.py": "c1190662033d37967b34a89d36726ff8cdd60157e54b3c0bd202c8d20dc005fb",
       "harness/behavior_contract.py": "4582fced1183ca5f83897ce0dad4c52bb90e8e3547132ac3439c71ddbdaa5193",
-      "harness/captures.py": "e02ac8281bae2ed4ca19c17f324f2ec768c8e7314001d5404973c228d6fb7b3b",
+      "harness/captures.py": "dd83c4b045198fd347191762ee9855b8d22c488d56285ca976e21a9515fdc1e3",
       "harness/commands.py": "547be8682242ab269858cb8be39a3de686fed048245a4a7e735f18f293a582d7",
-      "harness/comparison_identity.py": "736ed5d12de13717f3cd570fbf4a9baa20b5a110c245a7faff1cbf4487b454bc",
-      "harness/consequences.py": "6cc2aaf05dba3d104510a37cb1f5aeeff83cc447ebd09e1cd3e4da4a384eb45b",
+      "harness/comparison_identity.py": "d4202b75860a3db7d084b0b527fbbfab9192a492472674f84fda6bfd2472a979",
+      "harness/consequences.py": "ea33b7a8327e641e26c54d3c720e591a7609a78c836accd5832f0a7a46a5a2af",
       "harness/context.py": "0cc85464c64665b40ecd2e1d6c07c83b370f66993e50e2e1fa6ca26175ce3ae0",
       "harness/context_integrity.py": "2d6fe4015a6ad055171bc52e21f41b4e4c7e74ec65179628b2a12074415351bb",
       "harness/contract_preflight.py": "2d2be2484c42a2cdf6f1fdaefbd8c20cbb7d0a6be7b16acc2aef5b2a77471b17",
-      "harness/current_evidence.py": "9ed5dbabc026c4747578c974b78ea8fad406fe5483e243ea904c1d43d9efc493",
+      "harness/current_evidence.py": "3059bc6d23c70107e2185124d87ea96fcf57b5b8ba5b0c8fe245f0769f2427f7",
       "harness/domain_rules.py": "7bb5fe1f3a6d32a93c3c4d7652acbd915ee3b340f532ca9e183fff337aa2fda1",
       "harness/e2e.py": "e56b38830ebdc4ccf3eba57e77e305e64dac4a7b73a1ed61ac2fb2b87859507b",
       "harness/evaluator.py": "2750eef6ddc4ac6a235dded4cd82c0fb220e7fd2bbb2c78226045448b5215a4b",
@@ -182,12 +184,12 @@
       "harness/gates.py": "4b5d88e8e25b73cb8dd96d79b3da1d2ed1b67800da31754a30efd741c5d520a8",
       "harness/input_contract_checks.py": "a6e250acbf26c864f05d2c466f61fad15510702028b434c98a6f3319633dd0d2",
       "harness/live.py": "1b1d3e600f2325b5166a17b884969788bddd18afbdec4f2d9b86be955315829f",
-      "harness/normalized_evaluation.py": "f5aa0ca297a6aac82fc903b9efc44bb0144c48e9572005c8e864fe0cfd743c8a",
+      "harness/normalized_evaluation.py": "52fa61609ead4b3b440c551d69a7f2fe14416e49866f7f15c70d8b64c51d2843",
       "harness/offline.py": "c78e22f0bcf25319dd3a700877f45d3cea485c459e6e56190f462a4f6b2f0df0",
       "harness/predicate_table.py": "4e20b83b09ba3fbef143f21ec79eab0a6e8be237b9c626bcd53e5d2bc1456c78",
       "harness/predicates.py": "dbe3a1d72009b7f8e442855ecf01f4086e9d34c29ff19bf5ebf84ad232dcfc27",
       "harness/preflight.py": "326f1b768143ac48effc78ac056ef1d2bca127b96942bc917ffd60115478e2d9",
-      "harness/proposals.py": "42cca829fa164e9d57ac26e46c927e8115ae88be708a0b022f35babe87fed7b4",
+      "harness/proposals.py": "24be8f18e2c59c6aa531af63af712b93c333437a5a12f77d05ab3b3dd271162e",
       "harness/real_positive_evaluation.py": "ee8bc10aa397bbc8b96c6f9007d80cf0a6fe24c54e23fb37c89953148033eda3",
       "harness/refusal_control.py": "bf3af10ffc604717d1fda67aab498f3133622044d132dd6fe3205a5fb2864ddb",
       "harness/regression.py": "ee49f8631461e90c1f6debac153ebacba8de2e69250d4ee3b756c86140444d18",
@@ -196,14 +198,14 @@
       "harness/rule_invariants.py": "7013b4065dd2ec8901e3e6e9eb211a6214ba2c4c2ff3e14ca4466d89ad4f4892",
       "harness/runtime.py": "08c5252fe1edd23c70f120755616b8562168af2b4f16465af2a4a4b87f34bdcd",
       "harness/signal_evaluation.py": "b5ac991f2afa0c1848eeadbd43c9b91f61fdb12c04cdd244cec7259af4047dad",
-      "harness/spec_compiler.py": "8a58220beefce173928a98119baa39be9c0bac626a555444fbd5c1b60f638ef9",
+      "harness/spec_compiler.py": "bc8e57e848d8e4cdba5f1638ea9cd2258336955cef600fb4b32d9ed3ef21212f",
       "harness/spec_ownership.py": "f05c9ea25fd56a50421f180ca2dc7531fbb8fb2ba1b007cd9955207aef27fbf5",
       "harness/spec_tables.py": "d95f98e05652650453ace3407035fa045e5711299636f18eec185d30d397b0a8",
       "harness/specification.py": "6651255abb5093fb46e15a745938fd2b504f39ba942536710cdb366573b5ee90",
       "harness/storage_evaluation.py": "1244757ba5699789642151c8ab5c645dc5b6700d85213fc199b4ff2152506b50",
       "harness/storage_ports.py": "09eb6ad0dc045b24d745395bc302d7275bb09cb8ea34c3434dc8bef91c52ccd6",
       "harness/temporal_authority.py": "2afd17c7cc4fe6e08a52a0524350ff3791b62d8f4d70ece6360f84249e37a47a",
-      "harness/trading_evaluation.py": "e488b5b4ce1f49f1a6b9e48da7e3dace04b4649702f3994810f1915295512dec",
+      "harness/trading_evaluation.py": "59cb2606a4a3f0b2d697f892febc3bbad2a11e2126b15bdaa0754e8d6d930f58",
       "pyproject.toml": "88a9a14947fd5575b75a5c5a2eb75af374c08d884ec9ac2a8517d144aec4af32",
       "rebuilt/__init__.py": "9f772f3410262ea916680aa7294f397b77c25e55ea82c470e22d645c9f2893ab",
       "rebuilt/normalization.py": "3fcecdcc28ac71bdc391b8d775ce8ff1ee435ff578f3a32a42be29921b78d21d",
@@ -213,9 +215,9 @@
       "rebuilt/snapshot.py": "9de7b01ca0b60deda192eca07a1d2b57561c505396ba661fcfb678a34683fc1d",
       "rebuilt/source_input.py": "957bd0b3080fc31d3e70aa2eddb8a5437fcd066c9193af7091c03ed063a6e804",
       "rebuilt/store.py": "b34372778ddf2c5de2430284a1f8cd2abd2800d65022014ea21c5cae6fbc624c",
-      "requirements/behavior.yaml": "890dd52e70abd3a8258ce424053769824dc3468ab86d0577a53d1d0747dc241a",
+      "requirements/behavior.yaml": "136a950500383a9d6ee0898372b3c93ccbdada8c1e5530c8d1490fdb14e5f9e1",
       "requirements/capture-registry.json": "65f575bd5b496bed3757279c7752d02b87171dbf93511b61502d068ec797a9b3",
-      "requirements/compiled-build.json": "c2a5d70a22726341de69f14e18edd2797e7144cabd290a7a927e35cfad7f4442",
+      "requirements/compiled-build.json": "ca0cdea2e841fe6b0909ccf7eedf07af73a99e135d7999852ae30bfe84c1f600",
       "requirements/dataset.json": "a51147dffc80b69de840865ea01091eee66ad720e334adee9a983179841810ef",
       "requirements/normalized-baselines.json": "2ca542545dd2d31365b1ab9f307357ce3abbf3c4b35388824e0ffe90da56db0e",
       "requirements/normalized-input.schema.json": "a648bc9b58cddda4cdc33e37c19cccd57d815f84387d512bacc1d9f252ebf598",
@@ -224,14 +226,14 @@
       "requirements/oracle-support.json": "237d35251aeed2614370812ec175b543e91a5184daca3e5316af544f07f0fe46",
       "requirements/publisher-witnesses.json": "abbf2b834ca282ca3cc47d5acfc3a9a499b8f1238885daf67296f11288581345",
       "requirements/real-positive-witnesses.json": "89b16247954da7b39b1b8b83191ecbeb3406056bd3c7e4b05308ec161120d542",
-      "requirements/replay-expectations.json": "f8263ac2396c7041eeeb61463d4a025a1d922c205025a2da25aa688beb3d44f3",
+      "requirements/replay-expectations.json": "3d941e3d827b62d1f815f173677786012e1aaa7da901ad0d46266706f9e82919",
       "requirements/requirement-revisions.json": "7373164e7d355f27ac83ed17c9f75fcd26f0c2221c1e37fcd48b90530457843e",
       "requirements/requirements.example.yaml": "8c766be56a4e72a904d155e9d8be46f425624e4f5977fcddb9c23b920dd7d569",
-      "requirements/requirements.yaml": "330ad20502efa8d1bcb263cd442e8adb7973acc3c2972dff42e95cfed3766849",
+      "requirements/requirements.yaml": "b06113514eae67134c0befb2f744bda4ac911c01f7c60836dd9666b4a7667227",
       "requirements/rule-block.schema.json": "7e1416cfd2d589e38f576edef21eeeb8d959e4a6019fa8c59c57546bb5a3c5af",
-      "requirements/signal-safety.yaml": "39a379321fd6664486497241a7acabf5877d68dd0d71a743ef83aca36e7574de",
+      "requirements/signal-safety.yaml": "7dd9aeb7581e1100dfaf0182b025279e874a91767a9a791b061bd7f4919aa0dc",
       "requirements/trading-evidence.json": "a5075550e7115dd5b452ca686336432d7a50f5b4712673e9feb89ff8cc52c7ff",
-      "spec.md": "4448a6f9e9ee3841e0086a8e556c21bbd584efc9167742a831154f70e3e18a8e",
+      "spec.md": "c89f760b3f2167345112801cd7825d26c40c102996239d13a2c788c9c4d363b6",
       "submission/verify_positive_path.py": "bca6e5fd46925b2fa4bd4dc2444663029b9dde02179a6c96ffb66e17ca35c98a",
       "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "tests/authority_fixture.py": "79c3984b9d03e108b1516a6a433e1ffabae6506a867cebf1139502796987acd3",
@@ -250,8 +252,8 @@
       "tests/test_release_hardening.py": "4da02707acf9b9a2d235040f6b4cc08fffc979b9d945ca2acea3da0754de7fa7",
       "tests/test_signals.py": "142db47f108fb98250cf9d52cc83c046c20041e6f5eb529edce39ca29d6fe99d",
       "tests/test_spec_owner_review.py": "55994be9c919e49c58de9c27523137aca550f91ef9c2dddf8d608f0f14917670",
-      "tests/test_spec_predicates.py": "06f6e528f9299a30cff31a1a6b8a471fca86484bb031dc9c1f4e882c2b1bce59",
-      "tests/test_spec_source.py": "746e94f4f468084b04d1695429522a0840fadc61ec6ae8dcbf086e7e48a1e12a",
+      "tests/test_spec_predicates.py": "9527b7d572db6c26d47690ab43531f9590b60da0f62e61b087fb5f677b933f62",
+      "tests/test_spec_source.py": "fefda6f96689e6171f31b625d91d7b78a45080cabf6c15cd2f5fff33e388ea40",
       "tests/test_specification.py": "1539ffeb3f8891798265834f0b346739495fc35a91ffa3b5ecde4fde136334d9",
       "tests/test_storage.py": "db56be3a684ec32518d2adf0212393f798348fcbfa8466088565306b3a1e432a"
     }
@@ -5025,14 +5027,130 @@
       "case": "comparison",
       "status": "UNKNOWN",
       "code": "REGRESSION_COMPARISON",
-      "reason": "NO_COMPARISON_REFERENCE"
+      "reason": "Harness, tests or evaluation oracle changed since the reference (evaluator); register a reviewed reference before this comparison can pass"
     }
   ],
   "gates": {
     "3": {
       "name": "regression_change",
       "status": "UNKNOWN",
-      "classification": "NO_COMPARISON_REFERENCE",
+      "classification": "EVALUATOR_OR_ORACLE_CHANGED",
+      "reason": "Harness, tests or evaluation oracle changed since the reference (evaluator); register a reviewed reference before this comparison can pass",
+      "changed_files": {
+        "spec_and_generated": [
+          "docs/signal-contract.md",
+          "docs/system-contract.md",
+          "requirements/behavior.yaml",
+          "requirements/compiled-build.json",
+          "requirements/replay-expectations.json",
+          "requirements/requirements.yaml",
+          "requirements/signal-safety.yaml",
+          "spec.md"
+        ],
+        "evaluator": [
+          "harness/captures.py",
+          "harness/comparison_identity.py",
+          "harness/consequences.py",
+          "harness/current_evidence.py",
+          "harness/normalized_evaluation.py",
+          "harness/proposals.py",
+          "harness/spec_compiler.py",
+          "harness/trading_evaluation.py",
+          "tests/test_spec_predicates.py",
+          "tests/test_spec_source.py"
+        ],
+        "other": [
+          "README.md"
+        ]
+      },
+      "changed_decisions": [],
+      "unexplained_differences": [],
+      "newly_passing": [],
+      "newly_failing": [],
+      "unchanged": [
+        "capture-0/46507",
+        "capture-0/46528",
+        "capture-0/46604",
+        "capture-0/46615",
+        "capture-0/46624",
+        "capture-0/46725",
+        "capture-0/46728",
+        "capture-0/46732",
+        "capture-0/46775",
+        "capture-0/46795",
+        "capture-0/46805",
+        "capture-0/46818",
+        "capture-0/46864",
+        "capture-0/46881",
+        "capture-0/duplicate-input",
+        "capture-0/duplicate-seed",
+        "capture-0/field-mutation",
+        "capture-0/late-prior-arrival",
+        "capture-0/missing-prior",
+        "capture-0/reconcile-termination",
+        "capture-0/repeated-revision",
+        "capture-0/restart-replay",
+        "capture-0/unchanged-revision",
+        "capture-1/46507",
+        "capture-1/46528",
+        "capture-1/46604",
+        "capture-1/46615",
+        "capture-1/46624",
+        "capture-1/46725",
+        "capture-1/46728",
+        "capture-1/46732",
+        "capture-1/46775",
+        "capture-1/46795",
+        "capture-1/46805",
+        "capture-1/46818",
+        "capture-1/46864",
+        "capture-1/46881",
+        "capture-1/duplicate-input",
+        "capture-1/duplicate-seed",
+        "capture-1/field-mutation",
+        "capture-1/late-prior-arrival",
+        "capture-1/missing-prior",
+        "capture-1/reconcile-termination",
+        "capture-1/repeated-revision",
+        "capture-1/restart-replay",
+        "capture-1/unchanged-revision",
+        "firm-positive",
+        "insufficient",
+        "missing-prior",
+        "overlap-contradiction",
+        "overlap-unusable-routine",
+        "planned-positive",
+        "primary-only-positive",
+        "publisher/A",
+        "publisher/B",
+        "publisher/C",
+        "publisher/D",
+        "publisher/E",
+        "publisher/F",
+        "publisher/missing-authorization",
+        "publisher/missing-history",
+        "publisher/routine",
+        "publisher/unavailable-extraction",
+        "publisher/unsupported-format",
+        "publisher/unusable-impact",
+        "routine-negative",
+        "unchanged-revision",
+        "unsupported-pdf"
+      ],
+      "missing_cases": [],
+      "requirements_affected": [],
+      "original_execution_identity": {
+        "content_sha256": "2343770c9689b8223f221ef3789517e27448771c85bc13d4652fcdf92e270a17",
+        "content_scope": "Code/contracts/context/tests/build inputs; evidence, reports and baseline registration excluded",
+        "revision": "41fd17205f05834e70140c6ff116b256c764d128",
+        "working_tree_dirty": false
+      },
+      "current_execution_identity": {
+        "content_sha256": "11b6bf1cd56c9e19fec08743a5e1e964ca98cbfa86bce3bbb6438091daab91f6",
+        "content_scope": "Code/contracts/context/tests/build inputs; evidence, reports and baseline registration excluded",
+        "revision": "5c91e8b9b596e530f3f7e337d24c8e0055743a2b",
+        "working_tree_dirty": false
+      },
       "findings": [
         {
           "requirement": "OBS-003",
@@ -5040,7 +5158,7 @@
           "case": "comparison",
           "status": "UNKNOWN",
           "code": "REGRESSION_COMPARISON",
-          "reason": "NO_COMPARISON_REFERENCE"
+          "reason": "Harness, tests or evaluation oracle changed since the reference (evaluator); register a reviewed reference before this comparison can pass"
         }
       ],
       "scope": "Current normalized witnesses, integrated publisher sequence, and retained captured trading replay; findings routed to declared requirement gates"
@@ -8714,7 +8832,7 @@
   "accepted": false,
   "application_accepted": false,
   "preflight_identity": {
-    "spec_sha256": "4448a6f9e9ee3841e0086a8e556c21bbd584efc9167742a831154f70e3e18a8e",
+    "spec_sha256": "c89f760b3f2167345112801cd7825d26c40c102996239d13a2c788c9c4d363b6",
     "policy_id": "assessment-v4-timezone-separation-20260928",
     "policy_version": 4,
     "scope": "Known spec identity before components; unavailable comparison fields remain unverified"
@@ -9966,78 +10084,101 @@
     "UNKNOWN": 73
   },
   "spec_read": {
-    "spec_sha256": "4448a6f9e9ee3841e0086a8e556c21bbd584efc9167742a831154f70e3e18a8e",
-    "decision": "NNS-FIRM-001",
+    "spec_sha256": "c89f760b3f2167345112801cd7825d26c40c102996239d13a2c788c9c4d363b6",
+    "decision": "AUDIT2-001",
     "person": "Thomas Hand",
     "decision_body": {
-      "ID": "NNS-FIRM-001",
+      "ID": "AUDIT2-001",
       "Status": "approved",
       "Person": "Thomas Hand",
-      "Previous spec SHA256": "c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f",
-      "Decision": "Approved by Thomas Hand 2026-09-28 (desk request): NGPL No-Notice Service is a firm, storage-backed service. Extracted service_type NO_NOTICE normalizes to a distinct NO_NOTICE_FIRM value (source distinction preserved) and NO_NOTICE_FIRM joins FIRM_SERVICES, so a firm NNS restriction (UNAVAILABLE or PRIMARY_ONLY) is a FIRM_DISRUPTION like other firm services. Measured by make consequences: 0/46 captured outcomes change; the only captured NNS row (46528, labeled negative) is an HOURLY_LIMIT_PCT partial limit and stays non-firm-disruption. No captured or labeled NNS outage exists, so the intended positive effect is unmeasured by frozen labels."
+      "Previous spec SHA256": "4448a6f9e9ee3841e0086a8e556c21bbd584efc9167742a831154f70e3e18a8e",
+      "Decision": "Approved by Thomas Hand 2026-09-28: remove status prose that was false on the reviewed bytes (\"awaits an exact-spec human reread\", \"Exact spec reread still pending\"). No rule, predicate, setting or requirement changes; make consequences shows 0 of 46 changed."
     },
     "decisions": {
-      "FEEDBACK-001": {
-        "ID": "FEEDBACK-001",
-        "Status": "owner-requested",
-        "Person": "Thomas Hand",
-        "Previous spec SHA256": "c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f",
-        "Decision": "Make evidence-driven spec maintenance practical: compact normative tables, preview consequences before adoption, explicit check limits and measured tradeoffs. Preserve classification policy, labels, thresholds and authorization; exact revised spec review remains pending."
-      },
-      "AUDIT-TRUTH-001": {
-        "ID": "AUDIT-TRUTH-001",
-        "Status": "owner-requested",
-        "Person": "Thomas Hand",
-        "Previous spec SHA256": "c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f",
-        "Decision": "Repair gate exits, read-only validation, execution-failure scoring and honest check coverage. Keep unchecked prose separate from code-owned boundaries; retain assumptions here. No new business policy or exact human reread is asserted."
-      },
-      "REMEDIATION-001": {
-        "ID": "REMEDIATION-001",
+      "AUDIT2-001": {
+        "ID": "AUDIT2-001",
         "Status": "approved",
         "Person": "Thomas Hand",
-        "Previous spec SHA256": "c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f",
-        "Decision": "Predicate meaning moves into spec-predicates. An unusable helper verdict vetoes a decision only when the notice is not a firm disruption; the publisher neither stores nor publishes such a decision (SEMANTICS_INCOMPLETE). Measured: capture-1/46864 ERROR -> SIGNAL_CANDIDATE, no new false positive. The publisher witness unusable-impact was re-frozen to match; spec and witness changed in the same session, so the owner's approval is the independent check. Exact spec reread still pending."
-      },
-      "REMEDIATION-002": {
-        "ID": "REMEDIATION-002",
-        "Status": "approved",
-        "Person": "Thomas Hand",
-        "Previous spec SHA256": "c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f",
-        "Decision": "Approved by Thomas Hand 2026-09-28: a restriction with no stated timezone is ENDED when its latest naive source end plus unresolved_time_margin_hours (at least 14, the largest UTC offset) is at or before the reference time. Labeled captures are scored as of each notice's post time (D3-011). No captured outcome changes; live candidates for long-ended restrictions become HISTORICAL_ONLY."
-      },
-      "REMEDIATION-003": {
-        "ID": "REMEDIATION-003",
-        "Status": "approved",
-        "Person": "Thomas Hand",
-        "Previous spec SHA256": "c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f",
-        "Decision": "Approved by Thomas Hand 2026-09-28: Gate 2 acceptance budgets. Per capture, at most 0 labeled negatives may be candidates and at most 2 labeled positives may be missed (a positive sent to review counts as missed). 2 is the measured value on 2026-09-28: a ratchet that may only tighten, not a quality claim. Review is the specified outcome for SIGNAL-002 and SIGNAL-004 cases; an unresolved SIGNAL-003 case fails. Six verification rows that this component cannot observe are declared out_of_scope. OUTPUT-001 and STATE-006 text now describe what their checks observe."
-      },
-      "NNS-FIRM-001": {
+        "Previous spec SHA256": "4448a6f9e9ee3841e0086a8e556c21bbd584efc9167742a831154f70e3e18a8e",
+        "Decision": "Approved by Thomas Hand 2026-09-28: remove status prose that was false on the reviewed bytes (\"awaits an exact-spec human reread\", \"Exact spec reread still pending\"). No rule, predicate, setting or requirement changes; make consequences shows 0 of 46 changed."
+      }
+    },
+    "previous_read": {
+      "spec_sha256": "4448a6f9e9ee3841e0086a8e556c21bbd584efc9167742a831154f70e3e18a8e",
+      "decision": "NNS-FIRM-001",
+      "person": "Thomas Hand",
+      "decision_body": {
         "ID": "NNS-FIRM-001",
         "Status": "approved",
         "Person": "Thomas Hand",
         "Previous spec SHA256": "c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f",
         "Decision": "Approved by Thomas Hand 2026-09-28 (desk request): NGPL No-Notice Service is a firm, storage-backed service. Extracted service_type NO_NOTICE normalizes to a distinct NO_NOTICE_FIRM value (source distinction preserved) and NO_NOTICE_FIRM joins FIRM_SERVICES, so a firm NNS restriction (UNAVAILABLE or PRIMARY_ONLY) is a FIRM_DISRUPTION like other firm services. Measured by make consequences: 0/46 captured outcomes change; the only captured NNS row (46528, labeled negative) is an HOURLY_LIMIT_PCT partial limit and stays non-firm-disruption. No captured or labeled NNS outage exists, so the intended positive effect is unmeasured by frozen labels."
-      }
-    },
-    "previous_read": {
-      "spec_sha256": "c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f",
-      "decision": "TZ-NGPL-002",
-      "person": "Thomas Hand",
-      "decision_body": {
-        "ID": "TZ-NGPL-002",
-        "Status": "owner-requested",
-        "Person": "PENDING_PERSON",
-        "Previous spec SHA256": "5d4adfff7cb944c6a4ec9e9f17bb0ea7deaed47dfff2eeb35583703786a2245f",
-        "Decision": "Adopt source-grounded SIGNAL_CANDIDATE classification with unknown timezone; prohibit automatic time actionability and recommendation authorization, require REVIEW_REQUIRED, and never infer a zone. Exact ruling: evidence/timezone-separation/20260928/owner-ruling.txt."
       },
-      "previous_read": null,
+      "decisions": {
+        "FEEDBACK-001": {
+          "ID": "FEEDBACK-001",
+          "Status": "owner-requested",
+          "Person": "Thomas Hand",
+          "Previous spec SHA256": "c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f",
+          "Decision": "Make evidence-driven spec maintenance practical: compact normative tables, preview consequences before adoption, explicit check limits and measured tradeoffs. Preserve classification policy, labels, thresholds and authorization; exact revised spec review remains pending."
+        },
+        "AUDIT-TRUTH-001": {
+          "ID": "AUDIT-TRUTH-001",
+          "Status": "owner-requested",
+          "Person": "Thomas Hand",
+          "Previous spec SHA256": "c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f",
+          "Decision": "Repair gate exits, read-only validation, execution-failure scoring and honest check coverage. Keep unchecked prose separate from code-owned boundaries; retain assumptions here. No new business policy or exact human reread is asserted."
+        },
+        "REMEDIATION-001": {
+          "ID": "REMEDIATION-001",
+          "Status": "approved",
+          "Person": "Thomas Hand",
+          "Previous spec SHA256": "c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f",
+          "Decision": "Predicate meaning moves into spec-predicates. An unusable helper verdict vetoes a decision only when the notice is not a firm disruption; the publisher neither stores nor publishes such a decision (SEMANTICS_INCOMPLETE). Measured: capture-1/46864 ERROR -> SIGNAL_CANDIDATE, no new false positive. The publisher witness unusable-impact was re-frozen to match; spec and witness changed in the same session, so the owner's approval is the independent check. Exact spec reread still pending."
+        },
+        "REMEDIATION-002": {
+          "ID": "REMEDIATION-002",
+          "Status": "approved",
+          "Person": "Thomas Hand",
+          "Previous spec SHA256": "c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f",
+          "Decision": "Approved by Thomas Hand 2026-09-28: a restriction with no stated timezone is ENDED when its latest naive source end plus unresolved_time_margin_hours (at least 14, the largest UTC offset) is at or before the reference time. Labeled captures are scored as of each notice's post time (D3-011). No captured outcome changes; live candidates for long-ended restrictions become HISTORICAL_ONLY."
+        },
+        "REMEDIATION-003": {
+          "ID": "REMEDIATION-003",
+          "Status": "approved",
+          "Person": "Thomas Hand",
+          "Previous spec SHA256": "c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f",
+          "Decision": "Approved by Thomas Hand 2026-09-28: Gate 2 acceptance budgets. Per capture, at most 0 labeled negatives may be candidates and at most 2 labeled positives may be missed (a positive sent to review counts as missed). 2 is the measured value on 2026-09-28: a ratchet that may only tighten, not a quality claim. Review is the specified outcome for SIGNAL-002 and SIGNAL-004 cases; an unresolved SIGNAL-003 case fails. Six verification rows that this component cannot observe are declared out_of_scope. OUTPUT-001 and STATE-006 text now describe what their checks observe."
+        },
+        "NNS-FIRM-001": {
+          "ID": "NNS-FIRM-001",
+          "Status": "approved",
+          "Person": "Thomas Hand",
+          "Previous spec SHA256": "c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f",
+          "Decision": "Approved by Thomas Hand 2026-09-28 (desk request): NGPL No-Notice Service is a firm, storage-backed service. Extracted service_type NO_NOTICE normalizes to a distinct NO_NOTICE_FIRM value (source distinction preserved) and NO_NOTICE_FIRM joins FIRM_SERVICES, so a firm NNS restriction (UNAVAILABLE or PRIMARY_ONLY) is a FIRM_DISRUPTION like other firm services. Measured by make consequences: 0/46 captured outcomes change; the only captured NNS row (46528, labeled negative) is an HOURLY_LIMIT_PCT partial limit and stays non-firm-disruption. No captured or labeled NNS outage exists, so the intended positive effect is unmeasured by frozen labels."
+        }
+      },
+      "previous_read": {
+        "spec_sha256": "c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f",
+        "decision": "TZ-NGPL-002",
+        "person": "Thomas Hand",
+        "decision_body": {
+          "ID": "TZ-NGPL-002",
+          "Status": "owner-requested",
+          "Person": "PENDING_PERSON",
+          "Previous spec SHA256": "5d4adfff7cb944c6a4ec9e9f17bb0ea7deaed47dfff2eeb35583703786a2245f",
+          "Decision": "Adopt source-grounded SIGNAL_CANDIDATE classification with unknown timezone; prohibit automatic time actionability and recommendation authorization, require REVIEW_REQUIRED, and never infer a zone. Exact ruling: evidence/timezone-separation/20260928/owner-ruling.txt."
+        },
+        "previous_read": null,
+        "approval": false,
+        "meaning": "Exact bytes reread; person/status are assertions, not authentication. Required review on spec.md must be enforced outside this repo.",
+        "review_record": {
+          "path": "context/spec-owner-review.json",
+          "sha256": "8d70d6011b5e00dcc2c5d1a4a91933c409f95cf6a14ae65d3470d18f93a708bc"
+        }
+      },
       "approval": false,
-      "meaning": "Exact bytes reread; person/status are assertions, not authentication. Required review on spec.md must be enforced outside this repo.",
-      "review_record": {
-        "path": "context/spec-owner-review.json",
-        "sha256": "8d70d6011b5e00dcc2c5d1a4a91933c409f95cf6a14ae65d3470d18f93a708bc"
-      }
+      "meaning": "Exact bytes reread; person/status are assertions, not authentication. Required review on spec.md must be enforced outside this repo."
     },
     "approval": false,
     "meaning": "Exact bytes reread; person/status are assertions, not authentication. Required review on spec.md must be enforced outside this repo."
@@ -10047,7 +10188,7 @@
     "fields": [
       {
         "id": "INPUT-SOURCE-001",
-        "spec_line": 421,
+        "spec_line": 422,
         "field": "header.tsp",
         "status": "PASS",
         "observations": {
@@ -10058,7 +10199,7 @@
             "normalized": "retained",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 421
+            "spec_line": 422
           },
           "missing": {
             "id": "INPUT-SOURCE-001",
@@ -10067,7 +10208,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 421
+            "spec_line": 422
           },
           "malformed": {
             "id": "INPUT-SOURCE-001",
@@ -10076,13 +10217,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed text",
-            "spec_line": 421
+            "spec_line": 422
           }
         }
       },
       {
         "id": "INPUT-SOURCE-002",
-        "spec_line": 422,
+        "spec_line": 423,
         "field": "header.critical",
         "status": "PASS",
         "observations": {
@@ -10093,7 +10234,7 @@
             "normalized": "retained",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 422
+            "spec_line": 423
           },
           "missing": {
             "id": "INPUT-SOURCE-002",
@@ -10102,7 +10243,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 422
+            "spec_line": 423
           },
           "malformed": {
             "id": "INPUT-SOURCE-002",
@@ -10111,13 +10252,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed text",
-            "spec_line": 422
+            "spec_line": 423
           }
         }
       },
       {
         "id": "INPUT-SOURCE-003",
-        "spec_line": 423,
+        "spec_line": 424,
         "field": "header.type1",
         "status": "PASS",
         "observations": {
@@ -10128,7 +10269,7 @@
             "normalized": "retained",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 423
+            "spec_line": 424
           },
           "missing": {
             "id": "INPUT-SOURCE-003",
@@ -10137,7 +10278,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 423
+            "spec_line": 424
           },
           "malformed": {
             "id": "INPUT-SOURCE-003",
@@ -10146,13 +10287,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed text",
-            "spec_line": 423
+            "spec_line": 424
           }
         }
       },
       {
         "id": "INPUT-SOURCE-004",
-        "spec_line": 424,
+        "spec_line": 425,
         "field": "header.type2",
         "status": "PASS",
         "observations": {
@@ -10163,7 +10304,7 @@
             "normalized": "retained",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 424
+            "spec_line": 425
           },
           "missing": {
             "id": "INPUT-SOURCE-004",
@@ -10172,7 +10313,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 424
+            "spec_line": 425
           },
           "malformed": {
             "id": "INPUT-SOURCE-004",
@@ -10181,13 +10322,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed text",
-            "spec_line": 424
+            "spec_line": 425
           }
         }
       },
       {
         "id": "INPUT-SOURCE-005",
-        "spec_line": 425,
+        "spec_line": 426,
         "field": "header.notice_effective_date",
         "status": "PASS",
         "observations": {
@@ -10198,7 +10339,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 425
+            "spec_line": 426
           },
           "missing": {
             "id": "INPUT-SOURCE-005",
@@ -10207,7 +10348,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 425
+            "spec_line": 426
           },
           "malformed": {
             "id": "INPUT-SOURCE-005",
@@ -10216,13 +10357,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "unrecognized or impossible source date",
-            "spec_line": 425
+            "spec_line": 426
           }
         }
       },
       {
         "id": "INPUT-SOURCE-006",
-        "spec_line": 426,
+        "spec_line": 427,
         "field": "header.notice_end_date",
         "status": "PASS",
         "observations": {
@@ -10233,7 +10374,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 426
+            "spec_line": 427
           },
           "missing": {
             "id": "INPUT-SOURCE-006",
@@ -10242,7 +10383,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 426
+            "spec_line": 427
           },
           "malformed": {
             "id": "INPUT-SOURCE-006",
@@ -10251,13 +10392,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "unrecognized or impossible source date",
-            "spec_line": 426
+            "spec_line": 427
           }
         }
       },
       {
         "id": "INPUT-SOURCE-007",
-        "spec_line": 427,
+        "spec_line": 428,
         "field": "header.post_date",
         "status": "PASS",
         "observations": {
@@ -10268,7 +10409,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 427
+            "spec_line": 428
           },
           "missing": {
             "id": "INPUT-SOURCE-007",
@@ -10277,7 +10418,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 427
+            "spec_line": 428
           },
           "malformed": {
             "id": "INPUT-SOURCE-007",
@@ -10286,13 +10427,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "unrecognized or impossible source date",
-            "spec_line": 427
+            "spec_line": 428
           }
         }
       },
       {
         "id": "INPUT-SOURCE-008",
-        "spec_line": 428,
+        "spec_line": 429,
         "field": "header.notice_id",
         "status": "PASS",
         "observations": {
@@ -10303,7 +10444,7 @@
             "normalized": "46624",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 428
+            "spec_line": 429
           },
           "missing": {
             "id": "INPUT-SOURCE-008",
@@ -10312,7 +10453,7 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "missing required value",
-            "spec_line": 428
+            "spec_line": 429
           },
           "malformed": {
             "id": "INPUT-SOURCE-008",
@@ -10321,13 +10462,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed identifier",
-            "spec_line": 428
+            "spec_line": 429
           }
         }
       },
       {
         "id": "INPUT-SOURCE-009",
-        "spec_line": 429,
+        "spec_line": 430,
         "field": "header.req_rsp",
         "status": "PASS",
         "observations": {
@@ -10338,7 +10479,7 @@
             "normalized": "retained",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 429
+            "spec_line": 430
           },
           "missing": {
             "id": "INPUT-SOURCE-009",
@@ -10347,7 +10488,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 429
+            "spec_line": 430
           },
           "malformed": {
             "id": "INPUT-SOURCE-009",
@@ -10356,13 +10497,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed text",
-            "spec_line": 429
+            "spec_line": 430
           }
         }
       },
       {
         "id": "INPUT-SOURCE-010",
-        "spec_line": 430,
+        "spec_line": 431,
         "field": "header.rsp_date",
         "status": "PASS",
         "observations": {
@@ -10373,7 +10514,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 430
+            "spec_line": 431
           },
           "missing": {
             "id": "INPUT-SOURCE-010",
@@ -10382,7 +10523,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 430
+            "spec_line": 431
           },
           "malformed": {
             "id": "INPUT-SOURCE-010",
@@ -10391,13 +10532,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "unrecognized or impossible source date",
-            "spec_line": 430
+            "spec_line": 431
           }
         }
       },
       {
         "id": "INPUT-SOURCE-011",
-        "spec_line": 431,
+        "spec_line": 432,
         "field": "header.status",
         "status": "PASS",
         "observations": {
@@ -10408,7 +10549,7 @@
             "normalized": "retained",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 431
+            "spec_line": 432
           },
           "missing": {
             "id": "INPUT-SOURCE-011",
@@ -10417,7 +10558,7 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "missing required value",
-            "spec_line": 431
+            "spec_line": 432
           },
           "malformed": {
             "id": "INPUT-SOURCE-011",
@@ -10426,13 +10567,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed text",
-            "spec_line": 431
+            "spec_line": 432
           }
         }
       },
       {
         "id": "INPUT-SOURCE-012",
-        "spec_line": 432,
+        "spec_line": 433,
         "field": "header.prior_notice_id",
         "status": "PASS",
         "observations": {
@@ -10443,7 +10584,7 @@
             "normalized": "46624",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 432
+            "spec_line": 433
           },
           "missing": {
             "id": "INPUT-SOURCE-012",
@@ -10452,7 +10593,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 432
+            "spec_line": 433
           },
           "malformed": {
             "id": "INPUT-SOURCE-012",
@@ -10461,13 +10602,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed identifier",
-            "spec_line": 432
+            "spec_line": 433
           }
         }
       },
       {
         "id": "INPUT-SOURCE-013",
-        "spec_line": 433,
+        "spec_line": 434,
         "field": "header.subject",
         "status": "PASS",
         "observations": {
@@ -10478,7 +10619,7 @@
             "normalized": "retained",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 433
+            "spec_line": 434
           },
           "missing": {
             "id": "INPUT-SOURCE-013",
@@ -10487,7 +10628,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 433
+            "spec_line": 434
           },
           "malformed": {
             "id": "INPUT-SOURCE-013",
@@ -10496,13 +10637,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed text",
-            "spec_line": 433
+            "spec_line": 434
           }
         }
       },
       {
         "id": "INPUT-SOURCE-014",
-        "spec_line": 434,
+        "spec_line": 435,
         "field": "metadata.notice_id",
         "status": "PASS",
         "observations": {
@@ -10513,7 +10654,7 @@
             "normalized": "46624",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 434
+            "spec_line": 435
           },
           "missing": {
             "id": "INPUT-SOURCE-014",
@@ -10522,7 +10663,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 434
+            "spec_line": 435
           },
           "malformed": {
             "id": "INPUT-SOURCE-014",
@@ -10531,13 +10672,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed identifier",
-            "spec_line": 434
+            "spec_line": 435
           }
         }
       },
       {
         "id": "INPUT-SOURCE-015",
-        "spec_line": 435,
+        "spec_line": 436,
         "field": "metadata.notice_type",
         "status": "PASS",
         "observations": {
@@ -10548,7 +10689,7 @@
             "normalized": "retained",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 435
+            "spec_line": 436
           },
           "missing": {
             "id": "INPUT-SOURCE-015",
@@ -10557,7 +10698,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 435
+            "spec_line": 436
           },
           "malformed": {
             "id": "INPUT-SOURCE-015",
@@ -10566,13 +10707,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed text",
-            "spec_line": 435
+            "spec_line": 436
           }
         }
       },
       {
         "id": "INPUT-SOURCE-016",
-        "spec_line": 436,
+        "spec_line": 437,
         "field": "metadata.subject",
         "status": "PASS",
         "observations": {
@@ -10583,7 +10724,7 @@
             "normalized": "retained",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 436
+            "spec_line": 437
           },
           "missing": {
             "id": "INPUT-SOURCE-016",
@@ -10592,7 +10733,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 436
+            "spec_line": 437
           },
           "malformed": {
             "id": "INPUT-SOURCE-016",
@@ -10601,13 +10742,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed text",
-            "spec_line": 436
+            "spec_line": 437
           }
         }
       },
       {
         "id": "INPUT-SOURCE-017",
-        "spec_line": 437,
+        "spec_line": 438,
         "field": "metadata.download_date",
         "status": "PASS",
         "observations": {
@@ -10618,7 +10759,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 437
+            "spec_line": 438
           },
           "missing": {
             "id": "INPUT-SOURCE-017",
@@ -10627,7 +10768,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 437
+            "spec_line": 438
           },
           "malformed": {
             "id": "INPUT-SOURCE-017",
@@ -10636,13 +10777,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "unrecognized or impossible source date",
-            "spec_line": 437
+            "spec_line": 438
           }
         }
       },
       {
         "id": "INPUT-SOURCE-018",
-        "spec_line": 438,
+        "spec_line": 439,
         "field": "metadata.source_url",
         "status": "PASS",
         "observations": {
@@ -10653,7 +10794,7 @@
             "normalized": "retained",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 438
+            "spec_line": 439
           },
           "missing": {
             "id": "INPUT-SOURCE-018",
@@ -10662,7 +10803,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 438
+            "spec_line": 439
           },
           "malformed": {
             "id": "INPUT-SOURCE-018",
@@ -10671,13 +10812,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed text",
-            "spec_line": 438
+            "spec_line": 439
           }
         }
       },
       {
         "id": "INPUT-SOURCE-019",
-        "spec_line": 439,
+        "spec_line": 440,
         "field": "metadata.html_file",
         "status": "PASS",
         "observations": {
@@ -10688,7 +10829,7 @@
             "normalized": "retained",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 439
+            "spec_line": 440
           },
           "missing": {
             "id": "INPUT-SOURCE-019",
@@ -10697,7 +10838,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 439
+            "spec_line": 440
           },
           "malformed": {
             "id": "INPUT-SOURCE-019",
@@ -10706,13 +10847,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed text",
-            "spec_line": 439
+            "spec_line": 440
           }
         }
       },
       {
         "id": "INPUT-SOURCE-020",
-        "spec_line": 440,
+        "spec_line": 441,
         "field": "body",
         "status": "PASS",
         "observations": {
@@ -10723,7 +10864,7 @@
             "normalized": "retained",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 440
+            "spec_line": 441
           },
           "missing": {
             "id": "INPUT-SOURCE-020",
@@ -10732,7 +10873,7 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "missing required value",
-            "spec_line": 440
+            "spec_line": 441
           },
           "malformed": {
             "id": "INPUT-SOURCE-020",
@@ -10741,13 +10882,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed text",
-            "spec_line": 440
+            "spec_line": 441
           }
         }
       },
       {
         "id": "INPUT-SOURCE-021",
-        "spec_line": 441,
+        "spec_line": 442,
         "field": "notice.notice_id",
         "status": "PASS",
         "observations": {
@@ -10758,7 +10899,7 @@
             "normalized": 1,
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 441
+            "spec_line": 442
           },
           "missing": {
             "id": "INPUT-SOURCE-021",
@@ -10767,7 +10908,7 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "missing required value",
-            "spec_line": 441
+            "spec_line": 442
           },
           "malformed": {
             "id": "INPUT-SOURCE-021",
@@ -10776,13 +10917,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed integer",
-            "spec_line": 441
+            "spec_line": 442
           }
         }
       },
       {
         "id": "INPUT-SOURCE-022",
-        "spec_line": 442,
+        "spec_line": 443,
         "field": "notice.prior_notice_id",
         "status": "PASS",
         "observations": {
@@ -10793,7 +10934,7 @@
             "normalized": 1,
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 442
+            "spec_line": 443
           },
           "missing": {
             "id": "INPUT-SOURCE-022",
@@ -10802,7 +10943,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 442
+            "spec_line": 443
           },
           "malformed": {
             "id": "INPUT-SOURCE-022",
@@ -10811,13 +10952,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed integer",
-            "spec_line": 442
+            "spec_line": 443
           }
         }
       },
       {
         "id": "INPUT-SOURCE-023",
-        "spec_line": 443,
+        "spec_line": 444,
         "field": "notice.status",
         "status": "PASS",
         "observations": {
@@ -10828,7 +10969,7 @@
             "normalized": "retained",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 443
+            "spec_line": 444
           },
           "missing": {
             "id": "INPUT-SOURCE-023",
@@ -10837,7 +10978,7 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "missing required value",
-            "spec_line": 443
+            "spec_line": 444
           },
           "malformed": {
             "id": "INPUT-SOURCE-023",
@@ -10846,13 +10987,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed text",
-            "spec_line": 443
+            "spec_line": 444
           }
         }
       },
       {
         "id": "INPUT-SOURCE-024",
-        "spec_line": 444,
+        "spec_line": 445,
         "field": "notice.notice_type",
         "status": "PASS",
         "observations": {
@@ -10863,7 +11004,7 @@
             "normalized": "retained",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 444
+            "spec_line": 445
           },
           "missing": {
             "id": "INPUT-SOURCE-024",
@@ -10872,7 +11013,7 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "missing required value",
-            "spec_line": 444
+            "spec_line": 445
           },
           "malformed": {
             "id": "INPUT-SOURCE-024",
@@ -10881,13 +11022,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed text",
-            "spec_line": 444
+            "spec_line": 445
           }
         }
       },
       {
         "id": "INPUT-SOURCE-025",
-        "spec_line": 445,
+        "spec_line": 446,
         "field": "notice.information_only",
         "status": "PASS",
         "observations": {
@@ -10898,7 +11039,7 @@
             "normalized": false,
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 445
+            "spec_line": 446
           },
           "missing": {
             "id": "INPUT-SOURCE-025",
@@ -10907,7 +11048,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 445
+            "spec_line": 446
           },
           "malformed": {
             "id": "INPUT-SOURCE-025",
@@ -10916,13 +11057,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed flag",
-            "spec_line": 445
+            "spec_line": 446
           }
         }
       },
       {
         "id": "INPUT-SOURCE-026",
-        "spec_line": 446,
+        "spec_line": 447,
         "field": "notice.body_text",
         "status": "PASS",
         "observations": {
@@ -10933,7 +11074,7 @@
             "normalized": "retained",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 446
+            "spec_line": 447
           },
           "missing": {
             "id": "INPUT-SOURCE-026",
@@ -10942,7 +11083,7 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "missing required value",
-            "spec_line": 446
+            "spec_line": 447
           },
           "malformed": {
             "id": "INPUT-SOURCE-026",
@@ -10951,13 +11092,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed text",
-            "spec_line": 446
+            "spec_line": 447
           }
         }
       },
       {
         "id": "INPUT-SOURCE-027",
-        "spec_line": 447,
+        "spec_line": 448,
         "field": "notice.effective_datetime",
         "status": "PASS",
         "observations": {
@@ -10968,7 +11109,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 447
+            "spec_line": 448
           },
           "missing": {
             "id": "INPUT-SOURCE-027",
@@ -10977,7 +11118,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 447
+            "spec_line": 448
           },
           "malformed": {
             "id": "INPUT-SOURCE-027",
@@ -10986,13 +11127,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "unrecognized or impossible source date",
-            "spec_line": 447
+            "spec_line": 448
           }
         }
       },
       {
         "id": "INPUT-SOURCE-028",
-        "spec_line": 448,
+        "spec_line": 449,
         "field": "notice.end_datetime",
         "status": "PASS",
         "observations": {
@@ -11003,7 +11144,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 448
+            "spec_line": 449
           },
           "missing": {
             "id": "INPUT-SOURCE-028",
@@ -11012,7 +11153,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 448
+            "spec_line": 449
           },
           "malformed": {
             "id": "INPUT-SOURCE-028",
@@ -11021,13 +11162,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "unrecognized or impossible source date",
-            "spec_line": 448
+            "spec_line": 449
           }
         }
       },
       {
         "id": "INPUT-SOURCE-029",
-        "spec_line": 449,
+        "spec_line": 450,
         "field": "locations",
         "status": "PASS",
         "observations": {
@@ -11038,7 +11179,7 @@
             "normalized": [],
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 449
+            "spec_line": 450
           },
           "missing": {
             "id": "INPUT-SOURCE-029",
@@ -11047,7 +11188,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 449
+            "spec_line": 450
           },
           "malformed": {
             "id": "INPUT-SOURCE-029",
@@ -11058,13 +11199,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed rows",
-            "spec_line": 449
+            "spec_line": 450
           }
         }
       },
       {
         "id": "INPUT-SOURCE-030",
-        "spec_line": 450,
+        "spec_line": 451,
         "field": "restrictions",
         "status": "PASS",
         "observations": {
@@ -11075,7 +11216,7 @@
             "normalized": [],
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 450
+            "spec_line": 451
           },
           "missing": {
             "id": "INPUT-SOURCE-030",
@@ -11084,7 +11225,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 450
+            "spec_line": 451
           },
           "malformed": {
             "id": "INPUT-SOURCE-030",
@@ -11095,13 +11236,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed rows",
-            "spec_line": 450
+            "spec_line": 451
           }
         }
       },
       {
         "id": "INPUT-SOURCE-031",
-        "spec_line": 451,
+        "spec_line": 452,
         "field": "locations[].loc_code",
         "status": "PASS",
         "observations": {
@@ -11112,7 +11253,7 @@
             "normalized": "24",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 451
+            "spec_line": 452
           },
           "missing": {
             "id": "INPUT-SOURCE-031",
@@ -11121,7 +11262,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 451
+            "spec_line": 452
           },
           "malformed": {
             "id": "INPUT-SOURCE-031",
@@ -11130,13 +11271,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed text_or_integer",
-            "spec_line": 451
+            "spec_line": 452
           }
         }
       },
       {
         "id": "INPUT-SOURCE-032",
-        "spec_line": 452,
+        "spec_line": 453,
         "field": "locations[].segment",
         "status": "PASS",
         "observations": {
@@ -11147,7 +11288,7 @@
             "normalized": "24",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 452
+            "spec_line": 453
           },
           "missing": {
             "id": "INPUT-SOURCE-032",
@@ -11156,7 +11297,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 452
+            "spec_line": 453
           },
           "malformed": {
             "id": "INPUT-SOURCE-032",
@@ -11165,13 +11306,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed text_or_integer",
-            "spec_line": 452
+            "spec_line": 453
           }
         }
       },
       {
         "id": "INPUT-SOURCE-033",
-        "spec_line": 453,
+        "spec_line": 454,
         "field": "locations[].compressor_station",
         "status": "PASS",
         "observations": {
@@ -11182,7 +11323,7 @@
             "normalized": "24",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 453
+            "spec_line": 454
           },
           "missing": {
             "id": "INPUT-SOURCE-033",
@@ -11191,7 +11332,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 453
+            "spec_line": 454
           },
           "malformed": {
             "id": "INPUT-SOURCE-033",
@@ -11200,13 +11341,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed text_or_integer",
-            "spec_line": 453
+            "spec_line": 454
           }
         }
       },
       {
         "id": "INPUT-SOURCE-034",
-        "spec_line": 454,
+        "spec_line": 455,
         "field": "locations[].zone",
         "status": "PASS",
         "observations": {
@@ -11217,7 +11358,7 @@
             "normalized": "24",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 454
+            "spec_line": 455
           },
           "missing": {
             "id": "INPUT-SOURCE-034",
@@ -11226,7 +11367,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 454
+            "spec_line": 455
           },
           "malformed": {
             "id": "INPUT-SOURCE-034",
@@ -11235,13 +11376,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed text_or_integer",
-            "spec_line": 454
+            "spec_line": 455
           }
         }
       },
       {
         "id": "INPUT-SOURCE-035",
-        "spec_line": 455,
+        "spec_line": 456,
         "field": "locations[].system",
         "status": "PASS",
         "observations": {
@@ -11252,7 +11393,7 @@
             "normalized": "24",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 455
+            "spec_line": 456
           },
           "missing": {
             "id": "INPUT-SOURCE-035",
@@ -11261,7 +11402,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 455
+            "spec_line": 456
           },
           "malformed": {
             "id": "INPUT-SOURCE-035",
@@ -11270,13 +11411,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed text_or_integer",
-            "spec_line": 455
+            "spec_line": 456
           }
         }
       },
       {
         "id": "INPUT-SOURCE-036",
-        "spec_line": 456,
+        "spec_line": 457,
         "field": "restrictions[].service_type",
         "status": "PASS",
         "observations": {
@@ -11287,7 +11428,7 @@
             "normalized": "retained",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 456
+            "spec_line": 457
           },
           "missing": {
             "id": "INPUT-SOURCE-036",
@@ -11296,7 +11437,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 456
+            "spec_line": 457
           },
           "malformed": {
             "id": "INPUT-SOURCE-036",
@@ -11305,13 +11446,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed text",
-            "spec_line": 456
+            "spec_line": 457
           }
         }
       },
       {
         "id": "INPUT-SOURCE-037",
-        "spec_line": 457,
+        "spec_line": 458,
         "field": "restrictions[].restriction_type",
         "status": "PASS",
         "observations": {
@@ -11322,7 +11463,7 @@
             "normalized": "retained",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 457
+            "spec_line": 458
           },
           "missing": {
             "id": "INPUT-SOURCE-037",
@@ -11331,7 +11472,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 457
+            "spec_line": 458
           },
           "malformed": {
             "id": "INPUT-SOURCE-037",
@@ -11340,13 +11481,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed text",
-            "spec_line": 457
+            "spec_line": 458
           }
         }
       },
       {
         "id": "INPUT-SOURCE-038",
-        "spec_line": 458,
+        "spec_line": 459,
         "field": "restrictions[].restriction_value",
         "status": "PASS",
         "observations": {
@@ -11357,7 +11498,7 @@
             "normalized": 0.5,
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 458
+            "spec_line": 459
           },
           "missing": {
             "id": "INPUT-SOURCE-038",
@@ -11366,7 +11507,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 458
+            "spec_line": 459
           },
           "malformed": {
             "id": "INPUT-SOURCE-038",
@@ -11375,13 +11516,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed number",
-            "spec_line": 458
+            "spec_line": 459
           }
         }
       },
       {
         "id": "INPUT-SOURCE-039",
-        "spec_line": 459,
+        "spec_line": 460,
         "field": "restrictions[].restriction_unit",
         "status": "PASS",
         "observations": {
@@ -11392,7 +11533,7 @@
             "normalized": "retained",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 459
+            "spec_line": 460
           },
           "missing": {
             "id": "INPUT-SOURCE-039",
@@ -11401,7 +11542,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 459
+            "spec_line": 460
           },
           "malformed": {
             "id": "INPUT-SOURCE-039",
@@ -11410,13 +11551,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed text",
-            "spec_line": 459
+            "spec_line": 460
           }
         }
       },
       {
         "id": "INPUT-SOURCE-040",
-        "spec_line": 460,
+        "spec_line": 461,
         "field": "restrictions[].status",
         "status": "PASS",
         "observations": {
@@ -11427,7 +11568,7 @@
             "normalized": "retained",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 460
+            "spec_line": 461
           },
           "missing": {
             "id": "INPUT-SOURCE-040",
@@ -11436,7 +11577,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 460
+            "spec_line": 461
           },
           "malformed": {
             "id": "INPUT-SOURCE-040",
@@ -11445,13 +11586,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed text",
-            "spec_line": 460
+            "spec_line": 461
           }
         }
       },
       {
         "id": "INPUT-SOURCE-041",
-        "spec_line": 461,
+        "spec_line": 462,
         "field": "restrictions[].location_index",
         "status": "PASS",
         "observations": {
@@ -11462,7 +11603,7 @@
             "normalized": 1,
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 461
+            "spec_line": 462
           },
           "missing": {
             "id": "INPUT-SOURCE-041",
@@ -11471,7 +11612,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 461
+            "spec_line": 462
           },
           "malformed": {
             "id": "INPUT-SOURCE-041",
@@ -11480,13 +11621,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed integer",
-            "spec_line": 461
+            "spec_line": 462
           }
         }
       },
       {
         "id": "INPUT-SOURCE-042",
-        "spec_line": 462,
+        "spec_line": 463,
         "field": "restrictions[].start_datetime",
         "status": "PASS",
         "observations": {
@@ -11497,7 +11638,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 462
+            "spec_line": 463
           },
           "missing": {
             "id": "INPUT-SOURCE-042",
@@ -11506,7 +11647,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 462
+            "spec_line": 463
           },
           "malformed": {
             "id": "INPUT-SOURCE-042",
@@ -11515,13 +11656,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "unrecognized or impossible source date",
-            "spec_line": 462
+            "spec_line": 463
           }
         }
       },
       {
         "id": "INPUT-SOURCE-043",
-        "spec_line": 463,
+        "spec_line": 464,
         "field": "restrictions[].end_datetime",
         "status": "PASS",
         "observations": {
@@ -11532,7 +11673,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 463
+            "spec_line": 464
           },
           "missing": {
             "id": "INPUT-SOURCE-043",
@@ -11541,7 +11682,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 463
+            "spec_line": 464
           },
           "malformed": {
             "id": "INPUT-SOURCE-043",
@@ -11550,13 +11691,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "unrecognized or impossible source date",
-            "spec_line": 463
+            "spec_line": 464
           }
         }
       },
       {
         "id": "INPUT-SOURCE-044",
-        "spec_line": 464,
+        "spec_line": 465,
         "field": "semantic.extraction_usable",
         "status": "PASS",
         "observations": {
@@ -11567,7 +11708,7 @@
             "normalized": true,
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 464
+            "spec_line": 465
           },
           "missing": {
             "id": "INPUT-SOURCE-044",
@@ -11576,7 +11717,7 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "missing required value",
-            "spec_line": 464
+            "spec_line": 465
           },
           "malformed": {
             "id": "INPUT-SOURCE-044",
@@ -11585,13 +11726,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed boolean",
-            "spec_line": 464
+            "spec_line": 465
           }
         }
       },
       {
         "id": "INPUT-SOURCE-045",
-        "spec_line": 465,
+        "spec_line": 466,
         "field": "semantic.execution_error",
         "status": "PASS",
         "observations": {
@@ -11602,7 +11743,7 @@
             "normalized": "retained",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 465
+            "spec_line": 466
           },
           "missing": {
             "id": "INPUT-SOURCE-045",
@@ -11611,7 +11752,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 465
+            "spec_line": 466
           },
           "malformed": {
             "id": "INPUT-SOURCE-045",
@@ -11620,13 +11761,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed text",
-            "spec_line": 465
+            "spec_line": 466
           }
         }
       },
       {
         "id": "INPUT-SOURCE-046",
-        "spec_line": 466,
+        "spec_line": 467,
         "field": "semantic.helpers",
         "status": "PASS",
         "observations": {
@@ -11647,7 +11788,7 @@
             ],
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 466
+            "spec_line": 467
           },
           "missing": {
             "id": "INPUT-SOURCE-046",
@@ -11656,7 +11797,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 466
+            "spec_line": 467
           },
           "malformed": {
             "id": "INPUT-SOURCE-046",
@@ -11669,13 +11810,13 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed helper_pairs",
-            "spec_line": 466
+            "spec_line": 467
           }
         }
       },
       {
         "id": "INPUT-SOURCE-047",
-        "spec_line": 467,
+        "spec_line": 468,
         "field": "semantic.source_media_type",
         "status": "PASS",
         "observations": {
@@ -11686,7 +11827,7 @@
             "normalized": "retained",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 467
+            "spec_line": 468
           },
           "missing": {
             "id": "INPUT-SOURCE-047",
@@ -11695,7 +11836,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 467
+            "spec_line": 468
           },
           "malformed": {
             "id": "INPUT-SOURCE-047",
@@ -11704,7 +11845,7 @@
             "normalized": null,
             "status": "ERROR",
             "issue": "malformed text",
-            "spec_line": 467
+            "spec_line": 468
           }
         }
       }
@@ -11755,7 +11896,7 @@
             "normalized": "6931794-NATURAL GAS PIPELINE CO.",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 421
+            "spec_line": 422
           },
           {
             "id": "INPUT-SOURCE-002",
@@ -11764,7 +11905,7 @@
             "normalized": "Non-Critical",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 422
+            "spec_line": 423
           },
           {
             "id": "INPUT-SOURCE-003",
@@ -11773,7 +11914,7 @@
             "normalized": "CAPACITY CONSTRAINT",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 423
+            "spec_line": 424
           },
           {
             "id": "INPUT-SOURCE-004",
@@ -11782,7 +11923,7 @@
             "normalized": "SEGMENTS",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 424
+            "spec_line": 425
           },
           {
             "id": "INPUT-SOURCE-005",
@@ -11791,7 +11932,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 425
+            "spec_line": 426
           },
           {
             "id": "INPUT-SOURCE-006",
@@ -11800,7 +11941,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 426
+            "spec_line": 427
           },
           {
             "id": "INPUT-SOURCE-007",
@@ -11809,7 +11950,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 427
+            "spec_line": 428
           },
           {
             "id": "INPUT-SOURCE-008",
@@ -11818,7 +11959,7 @@
             "normalized": "46507",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 428
+            "spec_line": 429
           },
           {
             "id": "INPUT-SOURCE-009",
@@ -11827,7 +11968,7 @@
             "normalized": "1",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 429
+            "spec_line": 430
           },
           {
             "id": "INPUT-SOURCE-010",
@@ -11836,7 +11977,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 430
+            "spec_line": 431
           },
           {
             "id": "INPUT-SOURCE-011",
@@ -11845,7 +11986,7 @@
             "normalized": "INITIATE",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 431
+            "spec_line": 432
           },
           {
             "id": "INPUT-SOURCE-012",
@@ -11854,7 +11995,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 432
+            "spec_line": 433
           },
           {
             "id": "INPUT-SOURCE-013",
@@ -11863,7 +12004,7 @@
             "normalized": "SEGMENT 14 WB - CS 113 - PRIMARY ONLY",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 433
+            "spec_line": 434
           },
           {
             "id": "INPUT-SOURCE-014",
@@ -11872,7 +12013,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 434
+            "spec_line": 435
           },
           {
             "id": "INPUT-SOURCE-015",
@@ -11881,7 +12022,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 435
+            "spec_line": 436
           },
           {
             "id": "INPUT-SOURCE-016",
@@ -11890,7 +12031,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 436
+            "spec_line": 437
           },
           {
             "id": "INPUT-SOURCE-017",
@@ -11899,7 +12040,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 437
+            "spec_line": 438
           },
           {
             "id": "INPUT-SOURCE-018",
@@ -11908,7 +12049,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 438
+            "spec_line": 439
           },
           {
             "id": "INPUT-SOURCE-019",
@@ -11917,7 +12058,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 439
+            "spec_line": 440
           },
           {
             "id": "INPUT-SOURCE-020",
@@ -11926,7 +12067,7 @@
             "normalized": "SEGMENT 17 FORCE MAJURE\nSEGMENT 14 WESTBOUND – CS 113 – PRIMARY ONLY\nDue to current operating\nconditions, Natural is at operating capacity for transports\nwestbound\non\nthe Amarillo Mainline System through Compressor Station 113 located in Will\nCounty, IL (Natural's Market Delivery Zone).  Therefore, effective for gas day,\nWednesday, December 3, 2025, Timely Cycle and continuing until further\nnotice\n, only Primary Firm and Secondary in-path Firm transports will be\nscheduled.  AOR/ITS and Secondary out-of-path Firm transports\nwill not\nbe available.\nPlease contact your Account\nDirector or Scheduling Representative if you have any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 440
+            "spec_line": 441
           }
         ],
         "header": {
@@ -11958,7 +12099,7 @@
             "normalized": "6931794-NATURAL GAS PIPELINE CO.",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 421
+            "spec_line": 422
           },
           {
             "id": "INPUT-SOURCE-002",
@@ -11967,7 +12108,7 @@
             "normalized": "Non-Critical",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 422
+            "spec_line": 423
           },
           {
             "id": "INPUT-SOURCE-003",
@@ -11976,7 +12117,7 @@
             "normalized": "OPERATIONAL ALERT",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 423
+            "spec_line": 424
           },
           {
             "id": "INPUT-SOURCE-004",
@@ -11985,7 +12126,7 @@
             "normalized": "ADVISORY/DIRECTIONAL NOTICE",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 424
+            "spec_line": 425
           },
           {
             "id": "INPUT-SOURCE-005",
@@ -11994,7 +12135,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 425
+            "spec_line": 426
           },
           {
             "id": "INPUT-SOURCE-006",
@@ -12003,7 +12144,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 426
+            "spec_line": 427
           },
           {
             "id": "INPUT-SOURCE-007",
@@ -12012,7 +12153,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 427
+            "spec_line": 428
           },
           {
             "id": "INPUT-SOURCE-008",
@@ -12021,7 +12162,7 @@
             "normalized": "46528",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 428
+            "spec_line": 429
           },
           {
             "id": "INPUT-SOURCE-009",
@@ -12030,7 +12171,7 @@
             "normalized": "1",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 429
+            "spec_line": 430
           },
           {
             "id": "INPUT-SOURCE-010",
@@ -12039,7 +12180,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 430
+            "spec_line": 431
           },
           {
             "id": "INPUT-SOURCE-011",
@@ -12048,7 +12189,7 @@
             "normalized": "INITIATE",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 431
+            "spec_line": 432
           },
           {
             "id": "INPUT-SOURCE-012",
@@ -12057,7 +12198,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 432
+            "spec_line": 433
           },
           {
             "id": "INPUT-SOURCE-013",
@@ -12066,7 +12207,7 @@
             "normalized": "HOURLY TAKES ADVISORY - MARKET DELIVERY",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 433
+            "spec_line": 434
           },
           {
             "id": "INPUT-SOURCE-014",
@@ -12075,7 +12216,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 434
+            "spec_line": 435
           },
           {
             "id": "INPUT-SOURCE-015",
@@ -12084,7 +12225,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 435
+            "spec_line": 436
           },
           {
             "id": "INPUT-SOURCE-016",
@@ -12093,7 +12234,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 436
+            "spec_line": 437
           },
           {
             "id": "INPUT-SOURCE-017",
@@ -12102,7 +12243,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 437
+            "spec_line": 438
           },
           {
             "id": "INPUT-SOURCE-018",
@@ -12111,7 +12252,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 438
+            "spec_line": 439
           },
           {
             "id": "INPUT-SOURCE-019",
@@ -12120,7 +12261,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 439
+            "spec_line": 440
           },
           {
             "id": "INPUT-SOURCE-020",
@@ -12129,7 +12270,7 @@
             "normalized": "HOURLY TAKES ADVISORY – MARKET DELIVERY ZONE\nHOURLY TAKES ADVISORY – MARKET\nDELIVERY ZONE\nDue to the impending colder\nweather and current system operating conditions, effective for\nFriday, December\n12, 2025, at 9:00 am., and continuing until further notice\n, per Natural's\ntariff [GT&C Section 7.4],\nShippers and Point Operators\nare advised\nto\nlimit hourly\ntakes\nat\nALL DELIVERY POINTS IN THE MARKET\nDELIVERY ZONE\n.  Additionally, Natural continues to monitor operating\nconditions system wide.  If necessary, Natural will issue Operational Flow\nOrders (OFOs) to address Shipper actions that are\ndetrimental to such\noperating conditions outside the Market Delivery Zone\n.  Should Natural's\nability to provide hourly flexibility decrease, an Operational Flow Order (OFO)\ncondition will occur.\nAs provided in the tariff,\nat each point in the Market Delivery Zone, the hourly rights for each Shipper/Point\nOperator will be limited.  Such hourly rights will be limited by service\npriority and nomination cycle, based on hours remaining in the gas day.\nShippers and Point Operators are responsible for calculating and monitoring\ntheir hourly usage so as not to exceed the limits described herein.\nHourly Rights for Firm\nService – 150%\nIncludes Primary and\nSecondary Confirmed Nominations and Unused No-Notice firm service rights\nTimely/Evening\nCycles\nLimited to\n6.25% (150% / 24 hours)\nof Firm\nService.\nIntra-Day 1 Cycle\nLimited to the hourly rights computed in the previous\ncycle for Firm Service; plus\n7.895%\n(150% / 19 hours)\nof the difference\nof current cycle Firm Service minus prior cycle Firm Service.\nIntra-Day 2 Cycle\nLimited to the hourly rights computed in the previous\ncycle for Firm Service; plus\n10.00% (150% / 15 hours)\nof the difference\nof current cycle Firm Service minus prior cycle Firm Service.\nIntra-Day 3 Cycle\nLimited to the hourly rights computed in the previous\ncycle for Firm Service, plus\n13.64% (150% / 11 hours)\nof the difference\nof current cycle Firm Service minus prior cycle Firm Service.\nHourly Rights for\nInterruptible Service – 105%\nIncludes Interruptible and\nAOR nominations, as well as POA tolerances\nTimely/Evening\nCycles\nLimited to\n4.375% (105% / 24 hours)\nof Interruptible\nService.\nIntra-Day 1 Cycle\nLimited to the hourly rights computed in the previous\ncycle for Interruptible Service; plus\n5.53%\n(105% / 19 hours)\nof\nthe difference of current cycle Interruptible Service minus prior cycle Interruptible\nService.\nIntra-Day 2 Cycle\nLimited to the hourly rights computed in the previous\ncycle for Interruptible Service; plus\n7.0% (105% / 15 hours)\nof the\ndifference of current cycle Interruptible Service minus prior cycle Interruptible\nService.\nIntra-Day 3 Cycle\nLimited to the hourly rights computed in the previous\ncycle for Interruptible Service; plus\n9.55% (105% / 11 hours)\nof the\ndifference of current cycle Interruptible Service minus prior cycle\nInterruptible Service.\nLimitation on\nNominations in All Cycles for Firm and Interruptible Service\nShippers are advised that nominations should be\nreceived by Timely/Evening Cycle in order to utilize full rights over 24 hours,\nto avoid exceeding the 24 hour ratable hourly takes calculation.  In all\ncases, any first time nominations received on Non-Timely Cycles for full MDQ\nutilization rights, plus any scheduled ITS nominations must conform to the 24\nhour ratable calculation.  Shipper's hourly rights based on firm MDQ, plus\ninterruptible nominations, must be adequate enough to accommodate the\ncalculated hourly rights for the remaining hours of the gas day.\nSpecifically, hourly rights cannot exceed 150% / 24 hours of Shipper's MDQ on\nthe nominated contract, plus 105% / 24 hours of Shipper's interruptible\nnominations.\nIn addition, Natural would\nlike to remind point operators to utilize the Operator Point Reports available\non our website to assist you in monitoring your hourly takes.  These reports\nare available by linking to http://pipeline.kindermorgan.com.  Select NGPL >\nCustomer Activities > Log On > Flowing Gas > Additional Reports >\nNGPL/HRZ > NGPL/HRZ – Hourly Nomination Details.\nPlease contact your Account\nDirector or Scheduling Representative if you have any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 440
+            "spec_line": 441
           }
         ],
         "header": {
@@ -12161,7 +12302,7 @@
             "normalized": "6931794-NATURAL GAS PIPELINE CO.",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 421
+            "spec_line": 422
           },
           {
             "id": "INPUT-SOURCE-002",
@@ -12170,7 +12311,7 @@
             "normalized": "Non-Critical",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 422
+            "spec_line": 423
           },
           {
             "id": "INPUT-SOURCE-003",
@@ -12179,7 +12320,7 @@
             "normalized": "OTHER",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 423
+            "spec_line": 424
           },
           {
             "id": "INPUT-SOURCE-004",
@@ -12188,7 +12329,7 @@
             "normalized": "TARIFF PROVISIONS/PARAMETERS",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 424
+            "spec_line": 425
           },
           {
             "id": "INPUT-SOURCE-005",
@@ -12197,7 +12338,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 425
+            "spec_line": 426
           },
           {
             "id": "INPUT-SOURCE-006",
@@ -12206,7 +12347,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 426
+            "spec_line": 427
           },
           {
             "id": "INPUT-SOURCE-007",
@@ -12215,7 +12356,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 427
+            "spec_line": 428
           },
           {
             "id": "INPUT-SOURCE-008",
@@ -12224,7 +12365,7 @@
             "normalized": "46604",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 428
+            "spec_line": 429
           },
           {
             "id": "INPUT-SOURCE-009",
@@ -12233,7 +12374,7 @@
             "normalized": "1",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 429
+            "spec_line": 430
           },
           {
             "id": "INPUT-SOURCE-010",
@@ -12242,7 +12383,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 430
+            "spec_line": 431
           },
           {
             "id": "INPUT-SOURCE-011",
@@ -12251,7 +12392,7 @@
             "normalized": "INITIATE",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 431
+            "spec_line": 432
           },
           {
             "id": "INPUT-SOURCE-012",
@@ -12260,7 +12401,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 432
+            "spec_line": 433
           },
           {
             "id": "INPUT-SOURCE-013",
@@ -12269,7 +12410,7 @@
             "normalized": "PHMSA MEGA RULE ELIGIBLE PROJ-UPDATE",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 433
+            "spec_line": 434
           },
           {
             "id": "INPUT-SOURCE-014",
@@ -12278,7 +12419,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 434
+            "spec_line": 435
           },
           {
             "id": "INPUT-SOURCE-015",
@@ -12287,7 +12428,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 435
+            "spec_line": 436
           },
           {
             "id": "INPUT-SOURCE-016",
@@ -12296,7 +12437,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 436
+            "spec_line": 437
           },
           {
             "id": "INPUT-SOURCE-017",
@@ -12305,7 +12446,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 437
+            "spec_line": 438
           },
           {
             "id": "INPUT-SOURCE-018",
@@ -12314,7 +12455,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 438
+            "spec_line": 439
           },
           {
             "id": "INPUT-SOURCE-019",
@@ -12323,7 +12464,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 439
+            "spec_line": 440
           },
           {
             "id": "INPUT-SOURCE-020",
@@ -12332,7 +12473,7 @@
             "normalized": "Pursuant to\nits Tariff (GT&C Section 5.2 (c) (5)), Natural has updated its list of\nPHMSA Mega Rule Eligible Projects set forth on Appendix F to its Settlement in\nDocket No. RP22-1222.\nSee the\nlatest posted notice at\nInformational\nPostings :: Natural Gas Pipeline Company of America, L.L.C.\nunder\nRegulatory, which will contain an updated Appendix F.  Any questions or\nconcerns regarding the updated Appendix F should be directed to Rahul Singh,\nDirector of Regulatory, at\nRahul.singh@kindermorgan.com\n.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 440
+            "spec_line": 441
           }
         ],
         "header": {
@@ -12364,7 +12505,7 @@
             "normalized": "6931794-NATURAL GAS PIPELINE CO.",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 421
+            "spec_line": 422
           },
           {
             "id": "INPUT-SOURCE-002",
@@ -12373,7 +12514,7 @@
             "normalized": "Non-Critical",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 422
+            "spec_line": 423
           },
           {
             "id": "INPUT-SOURCE-003",
@@ -12382,7 +12523,7 @@
             "normalized": "MAINTENANCE",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 423
+            "spec_line": 424
           },
           {
             "id": "INPUT-SOURCE-004",
@@ -12391,7 +12532,7 @@
             "normalized": "MAINTENANCE",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 424
+            "spec_line": 425
           },
           {
             "id": "INPUT-SOURCE-005",
@@ -12400,7 +12541,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 425
+            "spec_line": 426
           },
           {
             "id": "INPUT-SOURCE-006",
@@ -12409,7 +12550,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 426
+            "spec_line": 427
           },
           {
             "id": "INPUT-SOURCE-007",
@@ -12418,7 +12559,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 427
+            "spec_line": 428
           },
           {
             "id": "INPUT-SOURCE-008",
@@ -12427,7 +12568,7 @@
             "normalized": "46615",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 428
+            "spec_line": 429
           },
           {
             "id": "INPUT-SOURCE-009",
@@ -12436,7 +12577,7 @@
             "normalized": "1",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 429
+            "spec_line": 430
           },
           {
             "id": "INPUT-SOURCE-010",
@@ -12445,7 +12586,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 430
+            "spec_line": 431
           },
           {
             "id": "INPUT-SOURCE-011",
@@ -12454,7 +12595,7 @@
             "normalized": "INITIATE",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 431
+            "spec_line": 432
           },
           {
             "id": "INPUT-SOURCE-012",
@@ -12463,7 +12604,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 432
+            "spec_line": 433
           },
           {
             "id": "INPUT-SOURCE-013",
@@ -12472,7 +12613,7 @@
             "normalized": "SEG 25 - STATION MAINT - CS 302",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 433
+            "spec_line": 434
           },
           {
             "id": "INPUT-SOURCE-014",
@@ -12481,7 +12622,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 434
+            "spec_line": 435
           },
           {
             "id": "INPUT-SOURCE-015",
@@ -12490,7 +12631,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 435
+            "spec_line": 436
           },
           {
             "id": "INPUT-SOURCE-016",
@@ -12499,7 +12640,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 436
+            "spec_line": 437
           },
           {
             "id": "INPUT-SOURCE-017",
@@ -12508,7 +12649,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 437
+            "spec_line": 438
           },
           {
             "id": "INPUT-SOURCE-018",
@@ -12517,7 +12658,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 438
+            "spec_line": 439
           },
           {
             "id": "INPUT-SOURCE-019",
@@ -12526,7 +12667,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 439
+            "spec_line": 440
           },
           {
             "id": "INPUT-SOURCE-020",
@@ -12535,7 +12676,7 @@
             "normalized": "ANR/NGPL SOUTH JOLIET AT CAPACITY\nSEGMENT\n25 – STATION MAINTENANCE – CS 302\nAs\nposted on Natural's Outage Impact Report (X25-1527903), Natural will be\nperforming station maintenance at Compressor Station 302 (CS 302) located in Montgomery\nCounty, Texas (Segment 25 of Natural's Texok Zone).  Natural is required to\nreduce the maximum operating capacity eastbound into Segment 25 from Segment 26\nand Segment 22, thus limiting Natural's throughput capacity eastbound through\nCS 302 during this restriction.\nThe\nscheduling constraint will be at CS 302\n; therefore, any gas received\nwest of CS 302 for delivery east of CS 302 will be impacted for the duration of\nthe restriction.  The Pooling Point - Texok Zone (LOC 10560) is located west of\nthe constraint.  Firm transportation associated with storage withdrawals may be\nimpacted.\nAs\nsuch, effective for gas day\nWednesday, April 1, 2026, Timely Cycle, and\ncontinuing through gas day Friday, May 1, 2026\n, Natural will schedule\nPrimary Firm and Secondary in-path Firm transports to no less than\n55%\nof contract MDQ through CS 302.  AOR/ITS and Secondary out-of-path Firm\ntransports\nwill not\nbe available for the duration of this restriction.\nThe\nstated scheduling percentage is based upon the current level of firm capacity\ncontracted for during this restriction and is subject to change based upon\noperational conditions and Shipper utilization.\nContinue\nto monitor Natural's interactive website for any updates.  Please contact your\nAccount Director or Scheduling Representative if you have any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 440
+            "spec_line": 441
           }
         ],
         "header": {
@@ -12567,7 +12708,7 @@
             "normalized": "6931794-NATURAL GAS PIPELINE CO.",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 421
+            "spec_line": 422
           },
           {
             "id": "INPUT-SOURCE-002",
@@ -12576,7 +12717,7 @@
             "normalized": "Non-Critical",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 422
+            "spec_line": 423
           },
           {
             "id": "INPUT-SOURCE-003",
@@ -12585,7 +12726,7 @@
             "normalized": "CAPACITY CONSTRAINT",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 423
+            "spec_line": 424
           },
           {
             "id": "INPUT-SOURCE-004",
@@ -12594,7 +12735,7 @@
             "normalized": "POINTS",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 424
+            "spec_line": 425
           },
           {
             "id": "INPUT-SOURCE-005",
@@ -12603,7 +12744,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 425
+            "spec_line": 426
           },
           {
             "id": "INPUT-SOURCE-006",
@@ -12612,7 +12753,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 426
+            "spec_line": 427
           },
           {
             "id": "INPUT-SOURCE-007",
@@ -12621,7 +12762,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 427
+            "spec_line": 428
           },
           {
             "id": "INPUT-SOURCE-008",
@@ -12630,7 +12771,7 @@
             "normalized": "46624",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 428
+            "spec_line": 429
           },
           {
             "id": "INPUT-SOURCE-009",
@@ -12639,7 +12780,7 @@
             "normalized": "1",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 429
+            "spec_line": 430
           },
           {
             "id": "INPUT-SOURCE-010",
@@ -12648,7 +12789,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 430
+            "spec_line": 431
           },
           {
             "id": "INPUT-SOURCE-011",
@@ -12657,7 +12798,7 @@
             "normalized": "INITIATE",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 431
+            "spec_line": 432
           },
           {
             "id": "INPUT-SOURCE-012",
@@ -12666,7 +12807,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 432
+            "spec_line": 433
           },
           {
             "id": "INPUT-SOURCE-013",
@@ -12675,7 +12816,7 @@
             "normalized": "FGT VERMILLION (LOC 7936) - PRIMARY ONLY",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 433
+            "spec_line": 434
           },
           {
             "id": "INPUT-SOURCE-014",
@@ -12684,7 +12825,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 434
+            "spec_line": 435
           },
           {
             "id": "INPUT-SOURCE-015",
@@ -12693,7 +12834,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 435
+            "spec_line": 436
           },
           {
             "id": "INPUT-SOURCE-016",
@@ -12702,7 +12843,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 436
+            "spec_line": 437
           },
           {
             "id": "INPUT-SOURCE-017",
@@ -12711,7 +12852,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 437
+            "spec_line": 438
           },
           {
             "id": "INPUT-SOURCE-018",
@@ -12720,7 +12861,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 438
+            "spec_line": 439
           },
           {
             "id": "INPUT-SOURCE-019",
@@ -12729,7 +12870,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 439
+            "spec_line": 440
           },
           {
             "id": "INPUT-SOURCE-020",
@@ -12738,7 +12879,7 @@
             "normalized": "ANR/NGPL SOUTH JOLIET AT CAPACITY\nFLORIDA\nVERMILION (LOC 7936) – PRIMARY ONLY\nDue\nto current operating conditions, effective for gas day\nWednesday, January 14,\n2026, Timely Cycle and continuing until further notice,\nFlorida Vermilion (LOC\n7936) is at operating capacity.  As such, Natural will only schedule Primary\nFirm transports for deliveries to Florida Vermilion (LOC 7936).  AOR/ITS, Secondary\nout-of-path Firm transports and Secondary in-path Firm transports\nwill\nnot\nbe available.\nFlorida\nVermilion is located in Vermilion Parish, Louisiana (Segment 24), in Natural's Louisiana\nZone.\nPlease\ncontact your Account Director or Scheduling Representative if you have any\nquestions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 440
+            "spec_line": 441
           }
         ],
         "header": {
@@ -12770,7 +12911,7 @@
             "normalized": "6931794-NATURAL GAS PIPELINE CO.",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 421
+            "spec_line": 422
           },
           {
             "id": "INPUT-SOURCE-002",
@@ -12779,7 +12920,7 @@
             "normalized": "Non-Critical",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 422
+            "spec_line": 423
           },
           {
             "id": "INPUT-SOURCE-003",
@@ -12788,7 +12929,7 @@
             "normalized": "OPERATIONAL FLOW ORDER",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 423
+            "spec_line": 424
           },
           {
             "id": "INPUT-SOURCE-004",
@@ -12797,7 +12938,7 @@
             "normalized": "OFO",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 424
+            "spec_line": 425
           },
           {
             "id": "INPUT-SOURCE-005",
@@ -12806,7 +12947,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 425
+            "spec_line": 426
           },
           {
             "id": "INPUT-SOURCE-006",
@@ -12815,7 +12956,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 426
+            "spec_line": 427
           },
           {
             "id": "INPUT-SOURCE-007",
@@ -12824,7 +12965,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 427
+            "spec_line": 428
           },
           {
             "id": "INPUT-SOURCE-008",
@@ -12833,7 +12974,7 @@
             "normalized": "46725",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 428
+            "spec_line": 429
           },
           {
             "id": "INPUT-SOURCE-009",
@@ -12842,7 +12983,7 @@
             "normalized": "1",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 429
+            "spec_line": 430
           },
           {
             "id": "INPUT-SOURCE-010",
@@ -12851,7 +12992,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 430
+            "spec_line": 431
           },
           {
             "id": "INPUT-SOURCE-011",
@@ -12860,7 +13001,7 @@
             "normalized": "TERMINATE",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 431
+            "spec_line": 432
           },
           {
             "id": "INPUT-SOURCE-012",
@@ -12869,7 +13010,7 @@
             "normalized": "46705",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 432
+            "spec_line": 433
           },
           {
             "id": "INPUT-SOURCE-013",
@@ -12878,7 +13019,7 @@
             "normalized": "OFO - MARKET DELVIERY ZONE - REMOVED",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 433
+            "spec_line": 434
           },
           {
             "id": "INPUT-SOURCE-014",
@@ -12887,7 +13028,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 434
+            "spec_line": 435
           },
           {
             "id": "INPUT-SOURCE-015",
@@ -12896,7 +13037,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 435
+            "spec_line": 436
           },
           {
             "id": "INPUT-SOURCE-016",
@@ -12905,7 +13046,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 436
+            "spec_line": 437
           },
           {
             "id": "INPUT-SOURCE-017",
@@ -12914,7 +13055,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 437
+            "spec_line": 438
           },
           {
             "id": "INPUT-SOURCE-018",
@@ -12923,7 +13064,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 438
+            "spec_line": 439
           },
           {
             "id": "INPUT-SOURCE-019",
@@ -12932,7 +13073,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 439
+            "spec_line": 440
           },
           {
             "id": "INPUT-SOURCE-020",
@@ -12941,7 +13082,7 @@
             "normalized": "Post Date: 01/05/1999 19:01:20\nOPERATIONAL FLOW ORDER\nISSUED - MARKET DELIVERY ZONE – REMOVED\nEffective for gas day\nMonday,\nFebruary 9, 2026\n,\nbeginning 9:00 a.m., Central Clock Time\n,\nNatural is removing the Operational Flow Order (OFO) in the Market Delivery\nZone.  Please continue to monitor Natural's interactive website for updates.\nPlease contact your\nAccount Director for any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 440
+            "spec_line": 441
           }
         ],
         "header": {
@@ -12973,7 +13114,7 @@
             "normalized": "6931794-NATURAL GAS PIPELINE CO.",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 421
+            "spec_line": 422
           },
           {
             "id": "INPUT-SOURCE-002",
@@ -12982,7 +13123,7 @@
             "normalized": "Non-Critical",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 422
+            "spec_line": 423
           },
           {
             "id": "INPUT-SOURCE-003",
@@ -12991,7 +13132,7 @@
             "normalized": "CAPACITY CONSTRAINT",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 423
+            "spec_line": 424
           },
           {
             "id": "INPUT-SOURCE-004",
@@ -13000,7 +13141,7 @@
             "normalized": "SEGMENTS",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 424
+            "spec_line": 425
           },
           {
             "id": "INPUT-SOURCE-005",
@@ -13009,7 +13150,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 425
+            "spec_line": 426
           },
           {
             "id": "INPUT-SOURCE-006",
@@ -13018,7 +13159,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 426
+            "spec_line": 427
           },
           {
             "id": "INPUT-SOURCE-007",
@@ -13027,7 +13168,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 427
+            "spec_line": 428
           },
           {
             "id": "INPUT-SOURCE-008",
@@ -13036,7 +13177,7 @@
             "normalized": "46728",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 428
+            "spec_line": 429
           },
           {
             "id": "INPUT-SOURCE-009",
@@ -13045,7 +13186,7 @@
             "normalized": "1",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 429
+            "spec_line": 430
           },
           {
             "id": "INPUT-SOURCE-010",
@@ -13054,7 +13195,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 430
+            "spec_line": 431
           },
           {
             "id": "INPUT-SOURCE-011",
@@ -13063,7 +13204,7 @@
             "normalized": "INITIATE",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 431
+            "spec_line": 432
           },
           {
             "id": "INPUT-SOURCE-012",
@@ -13072,7 +13213,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 432
+            "spec_line": 433
           },
           {
             "id": "INPUT-SOURCE-013",
@@ -13081,7 +13222,7 @@
             "normalized": "IBS/LPS/SRO - RESTRICTIONS",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 433
+            "spec_line": 434
           },
           {
             "id": "INPUT-SOURCE-014",
@@ -13090,7 +13231,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 434
+            "spec_line": 435
           },
           {
             "id": "INPUT-SOURCE-015",
@@ -13099,7 +13240,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 435
+            "spec_line": 436
           },
           {
             "id": "INPUT-SOURCE-016",
@@ -13108,7 +13249,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 436
+            "spec_line": 437
           },
           {
             "id": "INPUT-SOURCE-017",
@@ -13117,7 +13258,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 437
+            "spec_line": 438
           },
           {
             "id": "INPUT-SOURCE-018",
@@ -13126,7 +13267,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 438
+            "spec_line": 439
           },
           {
             "id": "INPUT-SOURCE-019",
@@ -13135,7 +13276,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 439
+            "spec_line": 440
           },
           {
             "id": "INPUT-SOURCE-020",
@@ -13144,7 +13285,7 @@
             "normalized": "IBS/LPS - RESTRICIONS\nIBS/LPS/SRO – AVAILABILITY\nAMARILLO SYSTEM\nEffective for gas day\nMonday,\nFebruary 9, 2026, Intraday 1 Cycle, and continuing until further notice\n,\nNatural has the following availability for line pack services:\nCategories\n:  (Unavailable; Up to MDQ; Limited Available;\nAvailable)\nAMARILLO\n:\nON to the Pipe\nMarket\nDelivery Zones\nAmarillo Mainline (Up to MDQ)\nIowa-Illinois\n(Up to MDQ)\nProduction\nZones\nMidcontinent (Up to MDQ)\nPermian (Up\nto MDQ\n)\nOFF of the Pipe\nMarket Delivery Zones\nAmarillo\nMainline (Up to MDQ)\nIowa-Illinois (Up to MDQ)\nè\nIowa-Illinois – Segment 29 – (Available)\nProduction Zones\nMidcontinent\n(Up to MDQ)\nPermian (Up to MDQ)\nGULF COAST SYSTEM\nEffective for gas day\nMonday,\nFebruary 9, 2026, Intraday 1 Cycle, and continuing until further notice\n,\nNatural has the following availability for line pack services:\nCategories\n:  (Unavailable; Up to MDQ*; Limited Available;\nAvailable)\nGULF COAST\n:\nON to the Pipe\nMarket Delivery Zones\nGulf Coast Mainline (Up to MDQ)\nIowa-Illinois (Up\nto MDQ)\nProduction Zones\nTexok\nGC (Up to MDQ)\nTexok\nA/G (Up to MDQ)\nSouth Texas (Up to MDQ)\nLouisiana (Up to MDQ)\nOFF of the Pipe\nMarket Delivery Zones\nGulf Coast Mainline (Up to MDQ)\nIowa-Illinois (Up to MDQ)\nè\nIowa-Illinois\n– Segment 39 – (Available)\nè\nIowa-Illinois – Segment 40 – (Available)\nProduction Zones\nTexok GC (Up to MDQ)\nTexok\nA/G (Up to MDQ)\nSouth Texas (Up to MDQ)\nLouisiana\n(Up to MDQ)\nè\nIndicates Change\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 440
+            "spec_line": 441
           }
         ],
         "header": {
@@ -13176,7 +13317,7 @@
             "normalized": "6931794-NATURAL GAS PIPELINE CO.",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 421
+            "spec_line": 422
           },
           {
             "id": "INPUT-SOURCE-002",
@@ -13185,7 +13326,7 @@
             "normalized": "Non-Critical",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 422
+            "spec_line": 423
           },
           {
             "id": "INPUT-SOURCE-003",
@@ -13194,7 +13335,7 @@
             "normalized": "CAPACITY CONSTRAINT",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 423
+            "spec_line": 424
           },
           {
             "id": "INPUT-SOURCE-004",
@@ -13203,7 +13344,7 @@
             "normalized": "SEGMENTS",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 424
+            "spec_line": 425
           },
           {
             "id": "INPUT-SOURCE-005",
@@ -13212,7 +13353,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 425
+            "spec_line": 426
           },
           {
             "id": "INPUT-SOURCE-006",
@@ -13221,7 +13362,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 426
+            "spec_line": 427
           },
           {
             "id": "INPUT-SOURCE-007",
@@ -13230,7 +13371,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 427
+            "spec_line": 428
           },
           {
             "id": "INPUT-SOURCE-008",
@@ -13239,7 +13380,7 @@
             "normalized": "46732",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 428
+            "spec_line": 429
           },
           {
             "id": "INPUT-SOURCE-009",
@@ -13248,7 +13389,7 @@
             "normalized": "1",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 429
+            "spec_line": 430
           },
           {
             "id": "INPUT-SOURCE-010",
@@ -13257,7 +13398,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 430
+            "spec_line": 431
           },
           {
             "id": "INPUT-SOURCE-011",
@@ -13266,7 +13407,7 @@
             "normalized": "TERMINATE",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 431
+            "spec_line": 432
           },
           {
             "id": "INPUT-SOURCE-012",
@@ -13275,7 +13416,7 @@
             "normalized": "46507",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 432
+            "spec_line": 433
           },
           {
             "id": "INPUT-SOURCE-013",
@@ -13284,7 +13425,7 @@
             "normalized": "SEG 14 WB - CS 113 - PRIM ONLY LIFTED",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 433
+            "spec_line": 434
           },
           {
             "id": "INPUT-SOURCE-014",
@@ -13293,7 +13434,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 434
+            "spec_line": 435
           },
           {
             "id": "INPUT-SOURCE-015",
@@ -13302,7 +13443,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 435
+            "spec_line": 436
           },
           {
             "id": "INPUT-SOURCE-016",
@@ -13311,7 +13452,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 436
+            "spec_line": 437
           },
           {
             "id": "INPUT-SOURCE-017",
@@ -13320,7 +13461,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 437
+            "spec_line": 438
           },
           {
             "id": "INPUT-SOURCE-018",
@@ -13329,7 +13470,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 438
+            "spec_line": 439
           },
           {
             "id": "INPUT-SOURCE-019",
@@ -13338,7 +13479,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 439
+            "spec_line": 440
           },
           {
             "id": "INPUT-SOURCE-020",
@@ -13347,7 +13488,7 @@
             "normalized": "SEGMENT 17 FORCE MAJURE\nSEGMENT 14 WESTBOUND – CS 113 – PRIMARY ONLY - LIFTED\nEffective for gas day\nMonday,\nFebruary 9, 2026, Intraday 1 Cycle and continuing thereafter\n, Natural has\noperating capacity available for transports westbound on the Amarillo Mainline\nSystem through Compressor Station 113 located in Will County, IL (Natural's\nMarket Delivery Zone).  Therefore, the Primary only restriction has been\nlifted.  All transport services are available.\nPlease contact your Account\nDirector or Scheduling Representative if you have any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 440
+            "spec_line": 441
           }
         ],
         "header": {
@@ -13379,7 +13520,7 @@
             "normalized": "6931794-NATURAL GAS PIPELINE CO.",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 421
+            "spec_line": 422
           },
           {
             "id": "INPUT-SOURCE-002",
@@ -13388,7 +13529,7 @@
             "normalized": "Non-Critical",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 422
+            "spec_line": 423
           },
           {
             "id": "INPUT-SOURCE-003",
@@ -13397,7 +13538,7 @@
             "normalized": "COMPUTER SYSTEM STATUS",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 423
+            "spec_line": 424
           },
           {
             "id": "INPUT-SOURCE-004",
@@ -13406,7 +13547,7 @@
             "normalized": "DART SYSTEM INFORMATION",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 424
+            "spec_line": 425
           },
           {
             "id": "INPUT-SOURCE-005",
@@ -13415,7 +13556,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 425
+            "spec_line": 426
           },
           {
             "id": "INPUT-SOURCE-006",
@@ -13424,7 +13565,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 426
+            "spec_line": 427
           },
           {
             "id": "INPUT-SOURCE-007",
@@ -13433,7 +13574,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 427
+            "spec_line": 428
           },
           {
             "id": "INPUT-SOURCE-008",
@@ -13442,7 +13583,7 @@
             "normalized": "46775",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 428
+            "spec_line": 429
           },
           {
             "id": "INPUT-SOURCE-009",
@@ -13451,7 +13592,7 @@
             "normalized": "1",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 429
+            "spec_line": 430
           },
           {
             "id": "INPUT-SOURCE-010",
@@ -13460,7 +13601,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 430
+            "spec_line": 431
           },
           {
             "id": "INPUT-SOURCE-011",
@@ -13469,7 +13610,7 @@
             "normalized": "INITIATE",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 431
+            "spec_line": 432
           },
           {
             "id": "INPUT-SOURCE-012",
@@ -13478,7 +13619,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 432
+            "spec_line": 433
           },
           {
             "id": "INPUT-SOURCE-013",
@@ -13487,7 +13628,7 @@
             "normalized": "DART Connection Issues",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 433
+            "spec_line": 434
           },
           {
             "id": "INPUT-SOURCE-014",
@@ -13496,7 +13637,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 434
+            "spec_line": 435
           },
           {
             "id": "INPUT-SOURCE-015",
@@ -13505,7 +13646,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 435
+            "spec_line": 436
           },
           {
             "id": "INPUT-SOURCE-016",
@@ -13514,7 +13655,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 436
+            "spec_line": 437
           },
           {
             "id": "INPUT-SOURCE-017",
@@ -13523,7 +13664,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 437
+            "spec_line": 438
           },
           {
             "id": "INPUT-SOURCE-018",
@@ -13532,7 +13673,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 438
+            "spec_line": 439
           },
           {
             "id": "INPUT-SOURCE-019",
@@ -13541,7 +13682,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 439
+            "spec_line": 440
           },
           {
             "id": "INPUT-SOURCE-020",
@@ -13550,7 +13691,7 @@
             "normalized": "DART\nTECHNICAL ISSUES – ID-1 NOMINATION DEADLINE EXTENDED FOR 02-26-26\nDART\nexperienced technical issues.  Due to these issues, the ID-1 nomination\ndeadline for February 26, 2026, will be extended until 10:45 am CCT.\nIf you have\nany questions, please call your Scheduler.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 440
+            "spec_line": 441
           }
         ],
         "header": {
@@ -13582,7 +13723,7 @@
             "normalized": "6931794-NATURAL GAS PIPELINE CO.",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 421
+            "spec_line": 422
           },
           {
             "id": "INPUT-SOURCE-002",
@@ -13591,7 +13732,7 @@
             "normalized": "Non-Critical",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 422
+            "spec_line": 423
           },
           {
             "id": "INPUT-SOURCE-003",
@@ -13600,7 +13741,7 @@
             "normalized": "OPERATIONAL FLOW ORDER",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 423
+            "spec_line": 424
           },
           {
             "id": "INPUT-SOURCE-004",
@@ -13609,7 +13750,7 @@
             "normalized": "OFO",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 424
+            "spec_line": 425
           },
           {
             "id": "INPUT-SOURCE-005",
@@ -13618,7 +13759,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 425
+            "spec_line": 426
           },
           {
             "id": "INPUT-SOURCE-006",
@@ -13627,7 +13768,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 426
+            "spec_line": 427
           },
           {
             "id": "INPUT-SOURCE-007",
@@ -13636,7 +13777,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 427
+            "spec_line": 428
           },
           {
             "id": "INPUT-SOURCE-008",
@@ -13645,7 +13786,7 @@
             "normalized": "46795",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 428
+            "spec_line": 429
           },
           {
             "id": "INPUT-SOURCE-009",
@@ -13654,7 +13795,7 @@
             "normalized": "1",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 429
+            "spec_line": 430
           },
           {
             "id": "INPUT-SOURCE-010",
@@ -13663,7 +13804,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 430
+            "spec_line": 431
           },
           {
             "id": "INPUT-SOURCE-011",
@@ -13672,7 +13813,7 @@
             "normalized": "INITIATE",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 431
+            "spec_line": 432
           },
           {
             "id": "INPUT-SOURCE-012",
@@ -13681,7 +13822,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 432
+            "spec_line": 433
           },
           {
             "id": "INPUT-SOURCE-013",
@@ -13690,7 +13831,7 @@
             "normalized": "OPERATIONAL FLOW ORDER - REPORT",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 433
+            "spec_line": 434
           },
           {
             "id": "INPUT-SOURCE-014",
@@ -13699,7 +13840,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 434
+            "spec_line": 435
           },
           {
             "id": "INPUT-SOURCE-015",
@@ -13708,7 +13849,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 435
+            "spec_line": 436
           },
           {
             "id": "INPUT-SOURCE-016",
@@ -13717,7 +13858,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 436
+            "spec_line": 437
           },
           {
             "id": "INPUT-SOURCE-017",
@@ -13726,7 +13867,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 437
+            "spec_line": 438
           },
           {
             "id": "INPUT-SOURCE-018",
@@ -13735,7 +13876,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 438
+            "spec_line": 439
           },
           {
             "id": "INPUT-SOURCE-019",
@@ -13744,7 +13885,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 439
+            "spec_line": 440
           },
           {
             "id": "INPUT-SOURCE-020",
@@ -13753,7 +13894,7 @@
             "normalized": "OPERATIONAL\nFLOW ORDER – MARKET DELIVERY ZONE – REPORT\nOn January 20, 2026, due\nto forecasted colder than normal weather, expected increased load on its\nsystem, anticipated maximum peaking withdrawals from storage facilities, and\nsystem operating conditions, Natural issued an Operational Flow Order (“OFO”) in\nthe Market Delivery Zone effective for Thursday, January 22, 2026 at 9:00 a.m. Central\nClock Time. This action was taken in accordance with Section 23.6 of the\nGeneral Terms and Conditions of Natural's FERC Gas Tariff (“GT&C”).\nThe OFO was issued to\nmaintain and preserve the operational integrity of Natural's system and was in\nresponse to the following operational factors: (1) to maintain pressures for\nfirm transportation deliveries in the Market Delivery Zone; and (2) maintain deliverability\nfrom Natural's market area storage fields for firm storage services.\nThe OFO did not result in\nany curtailment of primary firm service.  During the OFO, Natural implemented\ndaily and hourly take limitations for firm and interruptible Shippers\n(including Point Operators) at all points in the Market Delivery Zone.  The OFO\nlimited Shippers and Point Operators, on a daily basis, from taking volumes in\nexcess of confirmed transportation nominations plus no-notice rights at\ndelivery points in the Market Delivery Zone, and on an hourly basis to 130% of\ntheir firm service rights.  Hourly rights for interruptible nominations were\nlimited to 105% of the Shipper's interruptible nominations. Additionally,\nShippers and Point Operators were required to flow more ratably during the gas\nday based on service priority and nomination cycles.\nThe\nfirm service percentage was reduced to 110% on Tuesday, January 27, 2026 at\n9:00 a.m. Central Clock Time, and then  increased back to 130% on Thursday\nFebruary 5, 2026 at 9:00 am Central Clock Time.\nThese measures were taken\nconsistent with Natural's Tariff due to sustained colder than normal weather in\nthe Market Delivery Zone and anticipated maximum peaking withdrawals from\nstorage facilities.  As the weather conditions moderated and the associated\nhigh gas demand declined, Natural removed the OFO, effective at 9:00 a.m. on\ngas day Monday, February 9, 2026.\nThis posting complies\nwith GT&C Section 23.6(h) of Natural's Tariff to describe the specific\noperational factors which caused the Operational Flow Order to be issued and to\nbe lifted.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 440
+            "spec_line": 441
           }
         ],
         "header": {
@@ -13785,7 +13926,7 @@
             "normalized": "6931794-NATURAL GAS PIPELINE CO.",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 421
+            "spec_line": 422
           },
           {
             "id": "INPUT-SOURCE-002",
@@ -13794,7 +13935,7 @@
             "normalized": "Non-Critical",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 422
+            "spec_line": 423
           },
           {
             "id": "INPUT-SOURCE-003",
@@ -13803,7 +13944,7 @@
             "normalized": "MAINTENANCE",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 423
+            "spec_line": 424
           },
           {
             "id": "INPUT-SOURCE-004",
@@ -13812,7 +13953,7 @@
             "normalized": "MAINTENANCE",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 424
+            "spec_line": 425
           },
           {
             "id": "INPUT-SOURCE-005",
@@ -13821,7 +13962,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 425
+            "spec_line": 426
           },
           {
             "id": "INPUT-SOURCE-006",
@@ -13830,7 +13971,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 426
+            "spec_line": 427
           },
           {
             "id": "INPUT-SOURCE-007",
@@ -13839,7 +13980,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 427
+            "spec_line": 428
           },
           {
             "id": "INPUT-SOURCE-008",
@@ -13848,7 +13989,7 @@
             "normalized": "46805",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 428
+            "spec_line": 429
           },
           {
             "id": "INPUT-SOURCE-009",
@@ -13857,7 +13998,7 @@
             "normalized": "1",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 429
+            "spec_line": 430
           },
           {
             "id": "INPUT-SOURCE-010",
@@ -13866,7 +14007,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 430
+            "spec_line": 431
           },
           {
             "id": "INPUT-SOURCE-011",
@@ -13875,7 +14016,7 @@
             "normalized": "INITIATE",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 431
+            "spec_line": 432
           },
           {
             "id": "INPUT-SOURCE-012",
@@ -13884,7 +14025,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 432
+            "spec_line": 433
           },
           {
             "id": "INPUT-SOURCE-013",
@@ -13893,7 +14034,7 @@
             "normalized": "PHMSA MEGA-SEG 13 AM#3 107/108-ILI TOOLS",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 433
+            "spec_line": 434
           },
           {
             "id": "INPUT-SOURCE-014",
@@ -13902,7 +14043,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 434
+            "spec_line": 435
           },
           {
             "id": "INPUT-SOURCE-015",
@@ -13911,7 +14052,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 435
+            "spec_line": 436
           },
           {
             "id": "INPUT-SOURCE-016",
@@ -13920,7 +14061,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 436
+            "spec_line": 437
           },
           {
             "id": "INPUT-SOURCE-017",
@@ -13929,7 +14070,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 437
+            "spec_line": 438
           },
           {
             "id": "INPUT-SOURCE-018",
@@ -13938,7 +14079,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 438
+            "spec_line": 439
           },
           {
             "id": "INPUT-SOURCE-019",
@@ -13947,7 +14088,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 439
+            "spec_line": 440
           },
           {
             "id": "INPUT-SOURCE-020",
@@ -13956,7 +14097,7 @@
             "normalized": "STATION 302 – REPLACE REGULATOR – UPDATE\nPHMSA MEGA RULE–- ELIGIBLE\nPROJECT\n- SEGMENT 13 – AMARILLO #3 M/L – CS 107/108 – ILI TOOL\nRUNS\nIn accordance with its FERC\nGas Tariff and as posted on Natural's Outage Impact Report\n(X25-1166550)\n;\nas part of\nNatural's ongoing pipeline Integrity Management Program, Natural will perform a\nseries of ILI tool runs on its Amarillo #3 mainline between Compressor Station 107\n(CS 107) located in Mills County, Iowa and Compressor Station 108 (CS 108)\nlocated in Warren County, Iowa (Segment 13 of Natural's Amarillo Mainline Zone).\nThe tool runs will require Natural to reduce the operating capacity, thus limiting\nNatural's throughput capacity northbound through CS 108.  Once the data\nfrom the tool runs have been analyzed, any remediation work impacting shippers\nwill be posted.\nThis remediation project is\npursuant to the PHMSA Mega Rule and as set forth in its Tariff, is an Eligible\nProject (ID 4819) included on the Eligible Project List posted on Natural's\ninternet website.  See Eligible Project ID, line name and location\nidentified below (Appendix F- Docket No. RP22-1222 Settlement).  This\noutage is subject to the provisions of Section 5.2 (c) (5) of the General\nTerms and Conditions of Natural's FERC Gas Tariff.\nProject\nID          Line\nName\nLocation/Segment\nNo.\n4819                  AMARILLO\n#3 MAINLINE     SEGMENT 13\nThe scheduling\nconstraint will be upstream of CS 108 at the beginning of Segment 13;\ntherefore, any gas received south of Segment 13 for delivery north of Segment\n13 will be impacted for the duration of the restriction.  Receipts from\nTrailblazer Gage (LOC 902900) are south of CS 107 and will be impacted for the\nduration of the restriction.  Northern Natural Mills (LOC 900203) is located\ndownstream of the Segment 13 constraint location.  For scheduling purposes, the\nAmarillo Pool (LOC 10566) is located south of the constraint.\nAdditionally, firm transportation associated with storage withdrawals or\ninjections may be impacted.\nAs such,\neffective on the gas days indicated below, Natural will schedule Primary Firm and\nSecondary in-path Firm transports to no less than\n44%\nof contract\nMDQ northbound through CS 107.  AOR/ITS and Secondary out-of-path Firm\ntransports\nwill not\nbe available for the duration of the restriction.\nTOOL RUN\nDATES\n:\nGas day Friday,\nApril 17, 2026 (Cleaning/ Gauge Tools)\nGas day\nTuesday, April 21, 2026 (Cleaning Tool)\nGas day Thursday,\nApril 23, 2026 (Cleaning Tool)\nGas day Tuesday,\nApril 28, 2026 (Combo Tool)\nGas day Thursday,\nApril 30, 2026 (EMAT Tool)\nGas day\nFriday, May 1, 2026 (EMAT Tool)\nThe stated\nscheduling percentage is based upon the current level of firm capacity\ncontracted for during this restriction and is subject to change based upon\noperational conditions and Shipper utilization.\nContinue to\nmonitor Natural's interactive website for any updates to the end date and/or\nscheduling percentage during this restriction.  Please contact your\nAccount Director or Scheduling Representative if you have any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 440
+            "spec_line": 441
           }
         ],
         "header": {
@@ -13988,7 +14129,7 @@
             "normalized": "6931794-NATURAL GAS PIPELINE CO.",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 421
+            "spec_line": 422
           },
           {
             "id": "INPUT-SOURCE-002",
@@ -13997,7 +14138,7 @@
             "normalized": "Non-Critical",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 422
+            "spec_line": 423
           },
           {
             "id": "INPUT-SOURCE-003",
@@ -14006,7 +14147,7 @@
             "normalized": "MAINTENANCE",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 423
+            "spec_line": 424
           },
           {
             "id": "INPUT-SOURCE-004",
@@ -14015,7 +14156,7 @@
             "normalized": "MAINTENANCE",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 424
+            "spec_line": 425
           },
           {
             "id": "INPUT-SOURCE-005",
@@ -14024,7 +14165,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 425
+            "spec_line": 426
           },
           {
             "id": "INPUT-SOURCE-006",
@@ -14033,7 +14174,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 426
+            "spec_line": 427
           },
           {
             "id": "INPUT-SOURCE-007",
@@ -14042,7 +14183,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 427
+            "spec_line": 428
           },
           {
             "id": "INPUT-SOURCE-008",
@@ -14051,7 +14192,7 @@
             "normalized": "46818",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 428
+            "spec_line": 429
           },
           {
             "id": "INPUT-SOURCE-009",
@@ -14060,7 +14201,7 @@
             "normalized": "1",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 429
+            "spec_line": 430
           },
           {
             "id": "INPUT-SOURCE-010",
@@ -14069,7 +14210,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 430
+            "spec_line": 431
           },
           {
             "id": "INPUT-SOURCE-011",
@@ -14078,7 +14219,7 @@
             "normalized": "INITIATE",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 431
+            "spec_line": 432
           },
           {
             "id": "INPUT-SOURCE-012",
@@ -14087,7 +14228,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 432
+            "spec_line": 433
           },
           {
             "id": "INPUT-SOURCE-013",
@@ -14096,7 +14237,7 @@
             "normalized": "OUTAGE IMPACT REPORT - 3-12-26",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 433
+            "spec_line": 434
           },
           {
             "id": "INPUT-SOURCE-014",
@@ -14105,7 +14246,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 434
+            "spec_line": 435
           },
           {
             "id": "INPUT-SOURCE-015",
@@ -14114,7 +14255,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 435
+            "spec_line": 436
           },
           {
             "id": "INPUT-SOURCE-016",
@@ -14123,7 +14264,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 436
+            "spec_line": 437
           },
           {
             "id": "INPUT-SOURCE-017",
@@ -14132,7 +14273,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 437
+            "spec_line": 438
           },
           {
             "id": "INPUT-SOURCE-018",
@@ -14141,7 +14282,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 438
+            "spec_line": 439
           },
           {
             "id": "INPUT-SOURCE-019",
@@ -14150,7 +14291,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 439
+            "spec_line": 440
           },
           {
             "id": "INPUT-SOURCE-020",
@@ -14159,7 +14300,7 @@
             "normalized": "REVISED ROLLING 12-MONTH MAINTENANCE PLAN\nOUTAGE\nIMPACT REPORT UPDATE\nNatural\nhas posted an updated Outage Impact Report on its website.\nThe\nreport outlines scheduled projects that may affect customers and includes:\n·\nImpacted\npipeline segments\n·\nEstimated\nstart and finish dates\n·\nBrief\nproject descriptions\n·\nAnticipated\nshipper impacts\nChanges\nto existing projects and newly added projects are highlighted in yellow for\neasy reference.  In addition, Natural will continue to post detailed updates on\nspecific maintenance projects with direct shipper impacts on its interactive\nwebsite as needed.  The full maintenance plan is accessible via Natural's\nportal page or by clicking the link below:\nOutage\nImpact Report - 3-12-26\nIf\nyou have any questions, please contact your Account Director or Scheduling\nRepresentative.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 440
+            "spec_line": 441
           }
         ],
         "header": {
@@ -14191,7 +14332,7 @@
             "normalized": "6931794-NATURAL GAS PIPELINE CO.",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 421
+            "spec_line": 422
           },
           {
             "id": "INPUT-SOURCE-002",
@@ -14200,7 +14341,7 @@
             "normalized": "Non-Critical",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 422
+            "spec_line": 423
           },
           {
             "id": "INPUT-SOURCE-003",
@@ -14209,7 +14350,7 @@
             "normalized": "FORCE MAJEURE",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 423
+            "spec_line": 424
           },
           {
             "id": "INPUT-SOURCE-004",
@@ -14218,7 +14359,7 @@
             "normalized": "FORCE MAJEURE",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 424
+            "spec_line": 425
           },
           {
             "id": "INPUT-SOURCE-005",
@@ -14227,7 +14368,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 425
+            "spec_line": 426
           },
           {
             "id": "INPUT-SOURCE-006",
@@ -14236,7 +14377,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 426
+            "spec_line": 427
           },
           {
             "id": "INPUT-SOURCE-007",
@@ -14245,7 +14386,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 427
+            "spec_line": 428
           },
           {
             "id": "INPUT-SOURCE-008",
@@ -14254,7 +14395,7 @@
             "normalized": "46864",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 428
+            "spec_line": 429
           },
           {
             "id": "INPUT-SOURCE-009",
@@ -14263,7 +14404,7 @@
             "normalized": "1",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 429
+            "spec_line": 430
           },
           {
             "id": "INPUT-SOURCE-010",
@@ -14272,7 +14413,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 430
+            "spec_line": 431
           },
           {
             "id": "INPUT-SOURCE-011",
@@ -14281,7 +14422,7 @@
             "normalized": "INITIATE",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 431
+            "spec_line": 432
           },
           {
             "id": "INPUT-SOURCE-012",
@@ -14290,7 +14431,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 432
+            "spec_line": 433
           },
           {
             "id": "INPUT-SOURCE-013",
@@ -14299,7 +14440,7 @@
             "normalized": "FORCE MAJEURE-COMP STA 168",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 433
+            "spec_line": 434
           },
           {
             "id": "INPUT-SOURCE-014",
@@ -14308,7 +14449,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 434
+            "spec_line": 435
           },
           {
             "id": "INPUT-SOURCE-015",
@@ -14317,7 +14458,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 435
+            "spec_line": 436
           },
           {
             "id": "INPUT-SOURCE-016",
@@ -14326,7 +14467,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 436
+            "spec_line": 437
           },
           {
             "id": "INPUT-SOURCE-017",
@@ -14335,7 +14476,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 437
+            "spec_line": 438
           },
           {
             "id": "INPUT-SOURCE-018",
@@ -14344,7 +14485,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 438
+            "spec_line": 439
           },
           {
             "id": "INPUT-SOURCE-019",
@@ -14353,7 +14494,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 439
+            "spec_line": 440
           },
           {
             "id": "INPUT-SOURCE-020",
@@ -14362,7 +14503,7 @@
             "normalized": "FORCE MAJEURE – COMPRESSOR STATION 168\nNatural has experienced\nhorsepower issues at Compressor Station 168 (CS 168) located in Bailey County,\nTexas (Segment 8 of Natural's Permian Zone).  This is a Force Majeure\nevent.  Natural is required to reduce the maximum operating capacity\nnorthbound into Segment 8 from Segment 9, thus limiting Natural's throughput\ncapacity northbound through Compressor Station 167 (CS 167).\nThe scheduling constraint\nwill be Segment 9 at CS 167; therefore, any gas received south of CS 167 for\ndelivery north of CS 167 will be impacted for the duration of the\nrestriction.  The Pooling Point - Permian Zone (LOC 25077) is located\nsouth of the constraint.  Firm transportation associated with storage\nwithdrawals may be impacted.\nAs such, effective for gas\nday\nTuesday, April 7, 2026, Timely\nCycle and continuing until further notice\n, Natural will schedule Primary Firm and Secondary in-path Firm\ntransports to no less than\n94%\nof contract MDQ through CS 167.  AOR/ITS and\nSecondary out-of-path Firm transports\nwill not\nbe available for the\nduration of this restriction.\nAdditionally, the unit\nmaintenance referenced on Natural's Outage Impact Report (X26-220667) has been\npostponed until further notice\n.\nThe stated scheduling\npercentage is based upon the current level of firm capacity contracted for\nduring this restriction and is subject to change based upon operational\nconditions and Shipper utilization.\nContinue to monitor Natural's\ninteractive website for any updates to the end date during this\nrestriction.  Please contact your Account Director or Scheduling\nRepresentative if you have any questions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 440
+            "spec_line": 441
           }
         ],
         "header": {
@@ -14394,7 +14535,7 @@
             "normalized": "6931794-NATURAL GAS PIPELINE CO.",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 421
+            "spec_line": 422
           },
           {
             "id": "INPUT-SOURCE-002",
@@ -14403,7 +14544,7 @@
             "normalized": "Non-Critical",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 422
+            "spec_line": 423
           },
           {
             "id": "INPUT-SOURCE-003",
@@ -14412,7 +14553,7 @@
             "normalized": "MAINTENANCE",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 423
+            "spec_line": 424
           },
           {
             "id": "INPUT-SOURCE-004",
@@ -14421,7 +14562,7 @@
             "normalized": "MAINTENANCE",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 424
+            "spec_line": 425
           },
           {
             "id": "INPUT-SOURCE-005",
@@ -14430,7 +14571,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 425
+            "spec_line": 426
           },
           {
             "id": "INPUT-SOURCE-006",
@@ -14439,7 +14580,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 426
+            "spec_line": 427
           },
           {
             "id": "INPUT-SOURCE-007",
@@ -14448,7 +14589,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 427
+            "spec_line": 428
           },
           {
             "id": "INPUT-SOURCE-008",
@@ -14457,7 +14598,7 @@
             "normalized": "46881",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 428
+            "spec_line": 429
           },
           {
             "id": "INPUT-SOURCE-009",
@@ -14466,7 +14607,7 @@
             "normalized": "1",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 429
+            "spec_line": 430
           },
           {
             "id": "INPUT-SOURCE-010",
@@ -14475,7 +14616,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 430
+            "spec_line": 431
           },
           {
             "id": "INPUT-SOURCE-011",
@@ -14484,7 +14625,7 @@
             "normalized": "SUPERSEDE",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 431
+            "spec_line": 432
           },
           {
             "id": "INPUT-SOURCE-012",
@@ -14493,7 +14634,7 @@
             "normalized": "46857",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 432
+            "spec_line": 433
           },
           {
             "id": "INPUT-SOURCE-013",
@@ -14502,7 +14643,7 @@
             "normalized": "SEG 26 - GC #3 M/L-ILI TOOL RUNS - UPD 1",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 433
+            "spec_line": 434
           },
           {
             "id": "INPUT-SOURCE-014",
@@ -14511,7 +14652,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 434
+            "spec_line": 435
           },
           {
             "id": "INPUT-SOURCE-015",
@@ -14520,7 +14661,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 435
+            "spec_line": 436
           },
           {
             "id": "INPUT-SOURCE-016",
@@ -14529,7 +14670,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 436
+            "spec_line": 437
           },
           {
             "id": "INPUT-SOURCE-017",
@@ -14538,7 +14679,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 437
+            "spec_line": 438
           },
           {
             "id": "INPUT-SOURCE-018",
@@ -14547,7 +14688,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 438
+            "spec_line": 439
           },
           {
             "id": "INPUT-SOURCE-019",
@@ -14556,7 +14697,7 @@
             "normalized": null,
             "status": "UNKNOWN",
             "issue": null,
-            "spec_line": 439
+            "spec_line": 440
           },
           {
             "id": "INPUT-SOURCE-020",
@@ -14565,7 +14706,7 @@
             "normalized": "SEGMENT\n26 – GULF COAST #3 M/L - ILI TOOL RUNS – UPDATE 1\nThe\nTool run dates have changed. See previous Notice ID 46857 dated April 2, 2026\nAs previously\nposted on Natural's Outage Impact Report (\nX25-1474603 and X25-147896\n) and as part of\nNatural's ongoing pipeline Integrity Management Program, Natural will perform a\nseries of ILI tool runs on the Gulf Coast #3 Mainline near Compressor Station 394\n(CS 394) located in Cass County, Texas, in Segment 26 of Natural's Texok Zone.\nNatural previously anticipated no customer impact during this pipeline\nintegrity maintenance work at CS 394.  However, due to current operational\nconditions and to maintain system integrity, the scope of the project has been\nchanged and will now impact the receipt locations as noted below.  Once the\ndata from the tool runs have been analyzed, any remediation work impacting\nshippers will be posted.\nAs\nsuch, effective on the gas days indicated below, the receipt locations listed\nbelow will be shut in for the duration of this integrity work.  No transport\nservices will be available.\nLOCATIONS\nUNAVAILABLE FOR RECEIPTS:\nLOC\n42741      ET G&P ETML NACOGDOCHES\nLOC\n45310      BTA ETG EAST TEXAS GATHERING\nLOC 45397      ET G&P NACOGDOCHES\nLOC 46389      TGG NACOGDOGDOCES\nLOC\n55704      MARKWEST HARRISON\nTOOL\nRUN DATES\n:\nGas\nday Thursday, April 9, 2026 (Cleaning Tool)\nGas\nday Tuesday April 14, 2026 and continuing through gas day Tuesday, April 21, 2026\n(Previously Thursday, April 16, 2026) (Cleaning and MFL Tool)\nGas\nday Wednesday April 22, 2026 (Previously Tuesday April 21, 2026) and continuing\nthrough gas day Saturday, April 25, 2026 (Previously Friday April 24, 2026)\n(MFL and EMAT Tool)\nPlease\ncontact your Account Director or Scheduling Representative if you have any\nquestions.\n..\nYour session will expire in\n. Click OK to renew your session.\nOK\nYour download is starting...",
             "status": "KNOWN",
             "issue": null,
-            "spec_line": 440
+            "spec_line": 441
           }
         ],
         "header": {
@@ -14602,12 +14743,12 @@
     "findings": []
   },
   "consequences": {
-    "spec_sha256": "4448a6f9e9ee3841e0086a8e556c21bbd584efc9167742a831154f70e3e18a8e",
+    "spec_sha256": "c89f760b3f2167345112801cd7825d26c40c102996239d13a2c788c9c4d363b6",
     "denominator": 46,
     "rules": [
       {
         "id": "BR-FORMAT",
-        "spec_line": 315,
+        "spec_line": 316,
         "matches": 0,
         "wins": 0,
         "first_failed_counts": {
@@ -14616,7 +14757,7 @@
       },
       {
         "id": "BR-SEMANTICS",
-        "spec_line": 316,
+        "spec_line": 317,
         "matches": 1,
         "wins": 1,
         "first_failed_counts": {
@@ -14625,7 +14766,7 @@
       },
       {
         "id": "BR-CONTRADICTION",
-        "spec_line": 317,
+        "spec_line": 318,
         "matches": 3,
         "wins": 3,
         "first_failed_counts": {
@@ -14634,16 +14775,16 @@
       },
       {
         "id": "BR-HISTORY",
-        "spec_line": 318,
-        "matches": 4,
-        "wins": 3,
+        "spec_line": 319,
+        "matches": 6,
+        "wins": 5,
         "first_failed_counts": {
-          "History": 42
+          "History": 40
         }
       },
       {
         "id": "BR-UNCHANGED",
-        "spec_line": 319,
+        "spec_line": 320,
         "matches": 4,
         "wins": 4,
         "first_failed_counts": {
@@ -14652,7 +14793,7 @@
       },
       {
         "id": "BR-ROUTINE",
-        "spec_line": 320,
+        "spec_line": 321,
         "matches": 6,
         "wins": 6,
         "first_failed_counts": {
@@ -14662,7 +14803,7 @@
       },
       {
         "id": "BR-HISTORICAL",
-        "spec_line": 321,
+        "spec_line": 322,
         "matches": 0,
         "wins": 0,
         "first_failed_counts": {
@@ -14672,7 +14813,7 @@
       },
       {
         "id": "BR-FIRM",
-        "spec_line": 322,
+        "spec_line": 323,
         "matches": 24,
         "wins": 20,
         "first_failed_counts": {
@@ -14681,13 +14822,13 @@
       },
       {
         "id": "BR-UNRESOLVED",
-        "spec_line": 323,
+        "spec_line": 324,
         "matches": 46,
-        "wins": 9,
+        "wins": 7,
         "first_failed_counts": {}
       }
     ],
-    "previous_commit": "41fd17205f05834e70140c6ff116b256c764d128",
+    "previous_commit": "0164af56c69e227c574b72b624da2f16bdc77bd2",
     "comparison_scope": "Spec-to-spec consequences with current fixed compiler; not a runtime regression mapping",
     "changed_outcomes": [],
     "meaning": "Spec consequences derived from retained facts; generated expectations are not independent evaluation labels or approval"
@@ -15497,8 +15638,8 @@
       "D5": "f02cf8a2cc5db90e0f71e2ce939b0b74a27b4f9408f271d2e08a07d00cb91bfb",
       "D6": "96dada4676a46ebfb31e936ecfb52893436c782dae9551cce9a43b84539cfd68"
     },
-    "spec_sha256": "4448a6f9e9ee3841e0086a8e556c21bbd584efc9167742a831154f70e3e18a8e",
-    "requirements_sha256": "330ad20502efa8d1bcb263cd442e8adb7973acc3c2972dff42e95cfed3766849",
+    "spec_sha256": "c89f760b3f2167345112801cd7825d26c40c102996239d13a2c788c9c4d363b6",
+    "requirements_sha256": "b06113514eae67134c0befb2f744bda4ac911c01f7c60836dd9666b4a7667227",
     "requirement_rows": {
       "INPUT-001": {
         "revision": {
@@ -15753,7 +15894,7 @@
         "normative_sha256": "505ebe49f57fff2191ac0543280ed127c424059ecabbfb6ad3d1c4e3137af573"
       }
     },
-    "behavior_contract_sha256": "890dd52e70abd3a8258ce424053769824dc3468ab86d0577a53d1d0747dc241a",
+    "behavior_contract_sha256": "136a950500383a9d6ee0898372b3c93ccbdada8c1e5530c8d1490fdb14e5f9e1",
     "schemas": {
       "requirements/normalized-input.schema.json": "a648bc9b58cddda4cdc33e37c19cccd57d815f84387d512bacc1d9f252ebf598",
       "requirements/normalized-output.schema.json": "f1f538f0c39199dd34225ba646faebaad86ee24c6a21c2d7e5305ae4602402bc",
@@ -15764,7 +15905,7 @@
       "requirements/normalized-witnesses.json": "904b6dd551678fecbbd4add561359e4872037e587eaa5c454d92a0a53a454be1",
       "requirements/publisher-witnesses.json": "abbf2b834ca282ca3cc47d5acfc3a9a499b8f1238885daf67296f11288581345",
       "requirements/real-positive-witnesses.json": "89b16247954da7b39b1b8b83191ecbeb3406056bd3c7e4b05308ec161120d542",
-      "requirements/signal-safety.yaml": "39a379321fd6664486497241a7acabf5877d68dd0d71a743ef83aca36e7574de"
+      "requirements/signal-safety.yaml": "7dd9aeb7581e1100dfaf0182b025279e874a91767a9a791b061bd7f4919aa0dc"
     },
     "runtime_evaluator_publisher": {
       "classifier.py": "438a9726e6c356a067a89b593b5adf279bb834481ba57def0e426a2e71e1d481",
@@ -15773,14 +15914,14 @@
       "harness/adapter.py": "8896536c27b635518125cfe7395b73e611e853daa04865d524ecc86d56bc698c",
       "harness/baseline.py": "c1190662033d37967b34a89d36726ff8cdd60157e54b3c0bd202c8d20dc005fb",
       "harness/behavior_contract.py": "4582fced1183ca5f83897ce0dad4c52bb90e8e3547132ac3439c71ddbdaa5193",
-      "harness/captures.py": "e02ac8281bae2ed4ca19c17f324f2ec768c8e7314001d5404973c228d6fb7b3b",
+      "harness/captures.py": "dd83c4b045198fd347191762ee9855b8d22c488d56285ca976e21a9515fdc1e3",
       "harness/commands.py": "547be8682242ab269858cb8be39a3de686fed048245a4a7e735f18f293a582d7",
-      "harness/comparison_identity.py": "736ed5d12de13717f3cd570fbf4a9baa20b5a110c245a7faff1cbf4487b454bc",
-      "harness/consequences.py": "6cc2aaf05dba3d104510a37cb1f5aeeff83cc447ebd09e1cd3e4da4a384eb45b",
+      "harness/comparison_identity.py": "d4202b75860a3db7d084b0b527fbbfab9192a492472674f84fda6bfd2472a979",
+      "harness/consequences.py": "ea33b7a8327e641e26c54d3c720e591a7609a78c836accd5832f0a7a46a5a2af",
       "harness/context.py": "0cc85464c64665b40ecd2e1d6c07c83b370f66993e50e2e1fa6ca26175ce3ae0",
       "harness/context_integrity.py": "2d6fe4015a6ad055171bc52e21f41b4e4c7e74ec65179628b2a12074415351bb",
       "harness/contract_preflight.py": "2d2be2484c42a2cdf6f1fdaefbd8c20cbb7d0a6be7b16acc2aef5b2a77471b17",
-      "harness/current_evidence.py": "9ed5dbabc026c4747578c974b78ea8fad406fe5483e243ea904c1d43d9efc493",
+      "harness/current_evidence.py": "3059bc6d23c70107e2185124d87ea96fcf57b5b8ba5b0c8fe245f0769f2427f7",
       "harness/domain_rules.py": "7bb5fe1f3a6d32a93c3c4d7652acbd915ee3b340f532ca9e183fff337aa2fda1",
       "harness/e2e.py": "e56b38830ebdc4ccf3eba57e77e305e64dac4a7b73a1ed61ac2fb2b87859507b",
       "harness/evaluator.py": "2750eef6ddc4ac6a235dded4cd82c0fb220e7fd2bbb2c78226045448b5215a4b",
@@ -15788,12 +15929,12 @@
       "harness/gates.py": "4b5d88e8e25b73cb8dd96d79b3da1d2ed1b67800da31754a30efd741c5d520a8",
       "harness/input_contract_checks.py": "a6e250acbf26c864f05d2c466f61fad15510702028b434c98a6f3319633dd0d2",
       "harness/live.py": "1b1d3e600f2325b5166a17b884969788bddd18afbdec4f2d9b86be955315829f",
-      "harness/normalized_evaluation.py": "f5aa0ca297a6aac82fc903b9efc44bb0144c48e9572005c8e864fe0cfd743c8a",
+      "harness/normalized_evaluation.py": "52fa61609ead4b3b440c551d69a7f2fe14416e49866f7f15c70d8b64c51d2843",
       "harness/offline.py": "c78e22f0bcf25319dd3a700877f45d3cea485c459e6e56190f462a4f6b2f0df0",
       "harness/predicate_table.py": "4e20b83b09ba3fbef143f21ec79eab0a6e8be237b9c626bcd53e5d2bc1456c78",
       "harness/predicates.py": "dbe3a1d72009b7f8e442855ecf01f4086e9d34c29ff19bf5ebf84ad232dcfc27",
       "harness/preflight.py": "326f1b768143ac48effc78ac056ef1d2bca127b96942bc917ffd60115478e2d9",
-      "harness/proposals.py": "42cca829fa164e9d57ac26e46c927e8115ae88be708a0b022f35babe87fed7b4",
+      "harness/proposals.py": "24be8f18e2c59c6aa531af63af712b93c333437a5a12f77d05ab3b3dd271162e",
       "harness/real_positive_evaluation.py": "ee8bc10aa397bbc8b96c6f9007d80cf0a6fe24c54e23fb37c89953148033eda3",
       "harness/refusal_control.py": "bf3af10ffc604717d1fda67aab498f3133622044d132dd6fe3205a5fb2864ddb",
       "harness/regression.py": "ee49f8631461e90c1f6debac153ebacba8de2e69250d4ee3b756c86140444d18",
@@ -15802,14 +15943,14 @@
       "harness/rule_invariants.py": "7013b4065dd2ec8901e3e6e9eb211a6214ba2c4c2ff3e14ca4466d89ad4f4892",
       "harness/runtime.py": "08c5252fe1edd23c70f120755616b8562168af2b4f16465af2a4a4b87f34bdcd",
       "harness/signal_evaluation.py": "b5ac991f2afa0c1848eeadbd43c9b91f61fdb12c04cdd244cec7259af4047dad",
-      "harness/spec_compiler.py": "8a58220beefce173928a98119baa39be9c0bac626a555444fbd5c1b60f638ef9",
+      "harness/spec_compiler.py": "bc8e57e848d8e4cdba5f1638ea9cd2258336955cef600fb4b32d9ed3ef21212f",
       "harness/spec_ownership.py": "f05c9ea25fd56a50421f180ca2dc7531fbb8fb2ba1b007cd9955207aef27fbf5",
       "harness/spec_tables.py": "d95f98e05652650453ace3407035fa045e5711299636f18eec185d30d397b0a8",
       "harness/specification.py": "6651255abb5093fb46e15a745938fd2b504f39ba942536710cdb366573b5ee90",
       "harness/storage_evaluation.py": "1244757ba5699789642151c8ab5c645dc5b6700d85213fc199b4ff2152506b50",
       "harness/storage_ports.py": "09eb6ad0dc045b24d745395bc302d7275bb09cb8ea34c3434dc8bef91c52ccd6",
       "harness/temporal_authority.py": "2afd17c7cc4fe6e08a52a0524350ff3791b62d8f4d70ece6360f84249e37a47a",
-      "harness/trading_evaluation.py": "e488b5b4ce1f49f1a6b9e48da7e3dace04b4649702f3994810f1915295512dec",
+      "harness/trading_evaluation.py": "59cb2606a4a3f0b2d697f892febc3bbad2a11e2126b15bdaa0754e8d6d930f58",
       "inherited/database.py": "04b605bec74234ad0662c4dd813e1c66b280666b3fdb440c954ef878a7b8fd76",
       "inherited/llm_utils.py": "68448416555956b04b8591a4e1c09c1226ee619005ef293894567430eb834139",
       "inherited/main.py": "9f544c91fd32d7a5c70a26016f6e9c78f274a4046b6159919a85be5f510ccf2f",
@@ -16053,6 +16194,7 @@
     "capture_interpretation": "Original manifests retain captured model/prompt/config identities. Current adapter/evaluator source hashes describe replay only; historical identities are never restamped.",
     "model_configuration": {
       "status": "PASS",
+      "unverifiable_config_file": null,
       "requested_model_environment": null,
       "effective_configured_model": "claude-sonnet-4-6",
       "captured_configured_models": [
@@ -16065,6 +16207,7 @@
   },
   "model_configuration": {
     "status": "PASS",
+    "unverifiable_config_file": null,
     "requested_model_environment": null,
     "effective_configured_model": "claude-sonnet-4-6",
     "captured_configured_models": [
@@ -18002,11 +18145,13 @@
         ]
       },
       "history_required_review": {
-        "count": 3,
+        "count": 5,
         "cases": [
           "capture-0/46881",
+          "capture-0/missing-prior",
           "capture-1/46725",
-          "capture-1/46881"
+          "capture-1/46881",
+          "capture-1/missing-prior"
         ]
       },
       "labeled_scored": {

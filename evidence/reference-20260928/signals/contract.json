@@ -47,7 +47,7 @@
         "disposition": "INITIAL_RECOMMENDATION"
       },
       "requirement": "STATE-003",
-      "spec_line": 385
+      "spec_line": 386
     },
     {
       "id": "B",
@@ -60,7 +60,7 @@
         "disposition": "SUPPRESSED"
       },
       "requirement": "STATE-003",
-      "spec_line": 386
+      "spec_line": 387
     },
     {
       "id": "C",
@@ -73,7 +73,7 @@
         "disposition": "SUPPRESSED"
       },
       "requirement": "STATE-004",
-      "spec_line": 387
+      "spec_line": 388
     },
     {
       "id": "D",
@@ -86,7 +86,7 @@
         "disposition": "SUPPRESSED"
       },
       "requirement": "STATE-006",
-      "spec_line": 388
+      "spec_line": 389
     },
     {
       "id": "E",
@@ -99,7 +99,7 @@
         "disposition": "INITIAL_RECOMMENDATION"
       },
       "requirement": "STATE-003",
-      "spec_line": 389
+      "spec_line": 390
     },
     {
       "id": "F",
@@ -112,7 +112,7 @@
         "disposition": "SUPPRESSED"
       },
       "requirement": "STATE-006",
-      "spec_line": 390
+      "spec_line": 391
     },
     {
       "id": "unusable-impact",
@@ -126,7 +126,7 @@
         "reason": "SEMANTICS_INCOMPLETE"
       },
       "requirement": "INPUT-002",
-      "spec_line": 391
+      "spec_line": 392
     },
     {
       "id": "unavailable-extraction",
@@ -140,7 +140,7 @@
         "semantic_safety": true
       },
       "requirement": "INPUT-002",
-      "spec_line": 392
+      "spec_line": 393
     },
     {
       "id": "missing-history",
@@ -154,7 +154,7 @@
         "reason": "MISSING_HISTORY"
       },
       "requirement": "HISTORY-002",
-      "spec_line": 393
+      "spec_line": 394
     },
     {
       "id": "missing-authorization",
@@ -168,7 +168,7 @@
         "reason": "AUTHORIZATION_REQUIRED"
       },
       "requirement": "STATE-003",
-      "spec_line": 394
+      "spec_line": 395
     },
     {
       "id": "routine",
@@ -181,7 +181,7 @@
         "disposition": "NO_SIGNAL"
       },
       "requirement": "SIGNAL-002",
-      "spec_line": 395
+      "spec_line": 396
     },
     {
       "id": "unsupported-format",
@@ -195,7 +195,7 @@
         "reason": "UNSUPPORTED_FORMAT"
       },
       "requirement": "SAFETY-002",
-      "spec_line": 396
+      "spec_line": 397
     }
   ]
 }

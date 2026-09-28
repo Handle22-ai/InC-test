@@ -1,6 +1,6 @@
 {
   "step": "unsupported-format",
-  "machine_latency_ms": 1.185708,
+  "machine_latency_ms": 1.170667,
   "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
   "initial_count": 1,
   "disposition": "LEGACY_BINARY",
@@ -21,7 +21,7 @@
     "materiality": "MATERIAL",
     "actionable": true,
     "approved": true,
-    "source_evidence": "evidence/root-run/signals/inherited/unsupported-format/input.pdf",
+    "source_evidence": "evidence/reviewed-run/signals/inherited/unsupported-format/input.pdf",
     "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
   },
   "parser_evidence": "unsupported-format/parser.json",

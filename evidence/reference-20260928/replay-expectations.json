@@ -1,5 +1,5 @@
 {
-  "source_spec_sha256": "4448a6f9e9ee3841e0086a8e556c21bbd584efc9167742a831154f70e3e18a8e",
+  "source_spec_sha256": "c89f760b3f2167345112801cd7825d26c40c102996239d13a2c788c9c4d363b6",
   "cases": {
     "capture-0/46507": {
       "rule": "BR-FIRM",
@@ -496,23 +496,24 @@
       }
     },
     "capture-0/missing-prior": {
-      "rule": "BR-UNRESOLVED",
+      "rule": "BR-HISTORY",
       "action": {
         "classification": "UNRESOLVED",
         "disposition": "REVIEW_REQUIRED",
         "recommendation_allowed": false
       },
       "matched_rules": [
+        "BR-HISTORY",
         "BR-UNRESOLVED"
       ],
       "features": {
         "Format": "SUPPORTED",
         "Oracle answer": "USABLE",
         "Conflict": "NO",
-        "History": "COMPLETE",
+        "History": "GAP",
         "Arriving status": "TERMINATE",
-        "Prior": "PRESENT",
-        "Operational change": "CHANGED",
+        "Prior": "ABSENT",
+        "Operational change": "UNKNOWN",
         "Information-only": "NO",
         "Restriction": "KNOWN",
         "Service class": "OTHER",
@@ -1092,23 +1093,24 @@
       }
     },
     "capture-1/missing-prior": {
-      "rule": "BR-UNRESOLVED",
+      "rule": "BR-HISTORY",
       "action": {
         "classification": "UNRESOLVED",
         "disposition": "REVIEW_REQUIRED",
         "recommendation_allowed": false
       },
       "matched_rules": [
+        "BR-HISTORY",
         "BR-UNRESOLVED"
       ],
       "features": {
         "Format": "SUPPORTED",
         "Oracle answer": "USABLE",
         "Conflict": "NO",
-        "History": "COMPLETE",
+        "History": "GAP",
         "Arriving status": "TERMINATE",
-        "Prior": "PRESENT",
-        "Operational change": "CHANGED",
+        "Prior": "ABSENT",
+        "Operational change": "UNKNOWN",
         "Information-only": "NO",
         "Restriction": "KNOWN",
         "Service class": "OTHER",

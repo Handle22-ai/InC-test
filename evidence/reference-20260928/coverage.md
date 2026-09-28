@@ -1,6 +1,6 @@
 # Requirement coverage
 
-Run `root-run` · spec `4448a6f9e9ee3841e0086a8e556c21bbd584efc9167742a831154f70e3e18a8e` · mode `REVIEWED_SPEC` · commit `41fd17205f05834e70140c6ff116b256c764d128`.
+Run `reviewed-run` · spec `c89f760b3f2167345112801cd7825d26c40c102996239d13a2c788c9c4d363b6` · mode `REVIEWED_SPEC` · commit `5c91e8b9b596e530f3f7e337d24c8e0055743a2b`.
 
 PASS means the declared check passed on the listed observations, not that the whole obligation is proven. OUT_OF_SCOPE rows are declared in spec-verification and never gated.
 

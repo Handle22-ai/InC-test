@@ -1,6 +1,6 @@
 {
   "step": "routine",
-  "machine_latency_ms": 1.898584,
+  "machine_latency_ms": 1.683833,
   "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
   "initial_count": 0,
   "disposition": "LEGACY_BINARY",
@@ -21,7 +21,7 @@
     "materiality": "MATERIAL",
     "actionable": true,
     "approved": true,
-    "source_evidence": "evidence/root-run/signals/inherited/routine/input.html",
+    "source_evidence": "evidence/reviewed-run/signals/inherited/routine/input.html",
     "rationale": "Synthetic firm service unavailability materially affects flow; actionability stipulated at the fixed reference time."
   },
   "parser_evidence": "routine/parser.json",
