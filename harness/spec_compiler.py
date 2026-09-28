@@ -13,6 +13,31 @@ from pathlib import Path
 
 from harness.runtime import ROOT
 
+# Every check name spec-verification may declare. tests/test_check_registry.py
+# requires each one to have an executor in both the offline gate and the live path.
+CHECK_NAMES = frozenset(
+    {
+        "identity",
+        "out_of_scope",
+        "refusal",
+        "replay",
+        "decision_shape",
+        "quantities",
+        "links",
+        "field_values",
+        "classification",
+        "persistence",
+        "stored_idempotency",
+        "revision",
+        "restart",
+        "lineage",
+        "model_proof",
+        "provenance",
+        "integrity",
+        "regression",
+    }
+)
+
 
 def sha(text: str) -> str:
     return hashlib.sha256(text.encode()).hexdigest()
@@ -108,27 +133,7 @@ def requirements(text: str, settings: dict) -> dict:
             gate not in {"Gate 1", "Gate 2", "Gate 3"}
             or kind
             not in {"contract", "invariant", "metamorphic", "labeled_eval", "negative_control"}
-            or check
-            not in {
-                "identity",
-                "out_of_scope",
-                "refusal",
-                "replay",
-                "decision_shape",
-                "quantities",
-                "links",
-                "field_values",
-                "classification",
-                "persistence",
-                "stored_idempotency",
-                "revision",
-                "restart",
-                "lineage",
-                "model_proof",
-                "provenance",
-                "integrity",
-                "regression",
-            }
+            or check not in CHECK_NAMES
         ):
             raise fail("requirements", key, line, "unsupported hand-authored check binding")
         if not isinstance(params, dict) or set(params) - PARAMETERS.get(check, set()):

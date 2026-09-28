@@ -249,9 +249,16 @@ def main() -> int:
         except Exception as exc:
             write_json(
                 run / "execution_error.json",
-                {"classification": "HARNESS_FAILURE", "error_type": type(exc).__name__},
+                {
+                    "classification": "HARNESS_FAILURE",
+                    "error_type": type(exc).__name__,
+                    "reason": str(exc),
+                },
             )
-            print(f"HARNESS_FAILURE: {type(exc).__name__}; partial evidence retained.", flush=True)
+            print(
+                f"HARNESS_FAILURE: {type(exc).__name__}: {exc}; partial evidence retained.",
+                flush=True,
+            )
             return 2
 
 

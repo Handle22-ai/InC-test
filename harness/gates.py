@@ -379,6 +379,29 @@ def check_case(req: dict, case: dict) -> dict | None:
     return finding(req, case, "PASS" if passed else "FAIL", observed, expected)
 
 
+# How the live path handles each check name (see spec_compiler.CHECK_NAMES).
+RUN_CHECKS = frozenset({"out_of_scope", "regression", "integrity", "provenance"})
+CASE_CHECKS = frozenset(
+    {
+        "identity",
+        "decision_shape",
+        "quantities",
+        "links",
+        "classification",
+        "field_values",
+        "persistence",
+        "stored_idempotency",
+        "restart",
+        "revision",
+        "lineage",
+        "model_proof",
+    }
+)
+# Measured only by the offline gate at the rebuilt component and publisher seam;
+# a live run of the inherited system has no such boundary to observe.
+COMPONENT_ONLY_CHECKS = frozenset({"refusal", "replay"})
+
+
 def evaluate(requirements: list[dict], cases: list[dict], manifest: dict) -> list[dict]:
     findings = []
     run_case = {"case_id": "run", "evidence_ref": "manifest.json"}
@@ -401,6 +424,17 @@ def evaluate(requirements: list[dict], cases: list[dict], manifest: dict) -> lis
             )
         elif check == "regression":
             continue
+        elif check in COMPONENT_ONLY_CHECKS:
+            findings.append(
+                finding(
+                    req,
+                    run_case,
+                    "N/A",
+                    {
+                        "evaluation": "Measured by the offline gate at the rebuilt component; a live run of the inherited system has no such boundary"
+                    },
+                )
+            )
         elif check == "integrity":
             good = not manifest["integrity_after"]["changed"]
             findings.append(
@@ -435,7 +469,7 @@ def evaluate(requirements: list[dict], cases: list[dict], manifest: dict) -> lis
                         req,
                         case,
                         "ERROR",
-                        {"check_error": type(exc).__name__},
+                        {"check_error": type(exc).__name__, "reason": str(exc)},
                         domain="HARNESS_FAILURE",
                     )
                 if result is not None:

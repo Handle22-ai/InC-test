@@ -343,6 +343,7 @@ def run(destination: Path) -> dict:
                 else "Secondary fixed 14-label replay, reported separately",
             }
         )
+    result["capture_differences"] = capture_differences(result)
     from harness.proposals import summaries
 
     cases = [
@@ -422,3 +423,31 @@ def semantic_evidence(case: dict) -> SemanticEvidence:
         tuple((row["helper"], row["result"]) for row in case.get("helper_results", [])),
         None if case["outcome"] == "SUCCESS" else case["outcome"],
     )
+
+
+def capture_differences(result: dict) -> list[dict]:
+    """Labeled notices whose inherited execution or rebuilt decision differs across captures.
+
+    Captures of the same notices are repeated runs of the inherited system (different
+    token budget, model or date). Where they disagree, the notice depends on the run.
+    """
+    rows: dict[int, dict] = {}
+    for o in result["observations"]:
+        if o["category"] != "labeled":
+            continue
+        capture = o["id"].split("/")[0]
+        rows.setdefault(
+            o["notice_id"],
+            {"notice_id": o["notice_id"], "label": o["expected_signal"], "captures": {}},
+        )
+        rows[o["notice_id"]]["captures"][capture] = {
+            "inherited": o["inherited_execution"]
+            if o["inherited_execution"] != "SUCCESS"
+            else ("signal" if o["inherited_signal"] else "no signal"),
+            "rebuilt": o["decision"]["classification"],
+        }
+    return [
+        row
+        for _, row in sorted(rows.items())
+        if len({json.dumps(v, sort_keys=True) for v in row["captures"].values()}) > 1
+    ]

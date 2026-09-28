@@ -496,6 +496,7 @@ def run(destination: Path) -> dict:
                 "label_outcomes",
                 "label_summaries",
                 "tradeoffs",
+                "capture_differences",
                 "checks_not_applicable",
             )
         }
@@ -588,9 +589,7 @@ def run(destination: Path) -> dict:
                 "name": "regression_change",
                 "status": "UNKNOWN",
                 "classification": "MODEL_CONFIG_CHANGED",
-                "reason": "inherited/.env exists and may set LLM_MODEL; the offline gate never reads credential files, so the model is unverified. Use environment variables instead."
-                if result["model_configuration"].get("unverifiable_config_file")
-                else "Effective configured model differs from retained capture identities; no live model execution or comparison mapping",
+                "reason": "Effective configured model differs from retained capture identities; no live model execution or comparison mapping",
                 "model_configuration": result["model_configuration"],
             }
         findings.append(

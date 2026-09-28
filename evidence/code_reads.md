@@ -33,6 +33,17 @@ Times are UTC and approximate. None of these is a human read.
 | 09-26 – 09-28 | Claude audits at f7de5a5, 9c75f30, 019de93, b9cd042 (×2), b2c82e9, and one more | `inherited/` and `harness/` file:line citations | Supplied audits (proxy reads) | Only 3 of 10 audits had proxy entries |
 | 09-28 | Claude session 2edc1739 (began as an audit, then did the remediation) | Created `rebuilt/rule_engine.py` (the evaluator, about 240 lines), rewrote `rebuilt/normalized_classifier.py`, and edited `normalization.py` and `signals.py`, plus many `harness/` modules. One pre-publication commit changed the component (`rule_engine.py`, `signals.py`) and the oracle (`domain_rules.py`, `signal_evaluation.py`) together. | Separating the component from the harness; the publisher snapshot rule | The same session wrote the component and changed the evaluator that judges it, in one commit. Gate 3 now flags such edits, but it did not exist yet when that commit was made. |
 
+## Live path drift (second audit's live run, 2026-09-28)
+
+CODE-READ-ID: AGENT-LIVE-PATH-20260928
+Observed failure: `make evaluate-inherited LIVE=1` produced HARNESS_FAILURE findings recorded only as `check_error: ValueError`, so Measurement valid was False; preflight on README's MAX_CALLS=1 reported `observed_signal: true` although the helper call was blocked.
+Why evidence was insufficient: the error record kept the exception type but not its message, and no check tied the spec's check names to the live evaluator.
+Source inspected: `harness/gates.py` (check dispatch), `harness/evaluator.py`, `harness/preflight.py`, `harness/adapter.py`, `harness/live.py`.
+What was learned: the remediation added the check names `refusal` and `replay` to spec-verification and the offline gate, but the live evaluator had no branch for them. The offline and live paths drifted, and nothing bound them together.
+Missing harness capability: one registry of check names that both paths must cover; error records that keep the message; a preflight that refuses when any call is blocked; a command that turns a live run into a scored capture.
+Harness improvement made: `spec_compiler.CHECK_NAMES` plus `tests/test_check_registry.py` (every name needs a live branch, and the live scoring of a retained live capture has no HARNESS_FAILURE); messages kept; preflight refuses blocked calls (tested with budgets 1 and 2); `python -m harness register-capture`; a cross-capture differences table in CURRENT.md. These are evaluator changes, reported by Gate 3 as EVALUATOR_OR_ORACLE_CHANGED until the owner registers a new reference.
+Could the same code read be avoided next time? Yes. A new check name without a live branch now fails `make check` before any live run.
+
 ## Detailed entries (retained)
 
 Earlier ledgers:

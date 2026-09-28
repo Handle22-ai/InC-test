@@ -66,6 +66,12 @@ def run_preflight(run: Path) -> dict:
                 reopened.close()
             output = result.get("output", {})
             row = output.get("notice", {})
+            # Every helper the inherited system asked for must have answered; a call the
+            # budget blocked leaves a fallback that must not read as a real signal.
+            helpers_complete = all(
+                h.get("result") is not None for h in result.get("helper_results", [])
+            ) and not any(c.get("classification") == "NOT_ATTEMPTED" for c in result["model_calls"])
+            scorable = bool(result.get("stages", {}).get("classification", {}).get("scorable"))
             record.update(
                 real_model_request_verified=bool(result["model_calls"])
                 and all(
@@ -85,12 +91,17 @@ def run_preflight(run: Path) -> dict:
                 else "N/A",
                 history_lookup_verified=bool(chain) and chain[-1]["notice_id"] == 46624,
                 persistence_verified=before_close == restored and len(restored["notices"]) == 1,
-                observed_signal=bool(row.get("is_signal")),
+                helpers_complete=helpers_complete,
+                observed_signal=bool(row.get("is_signal"))
+                if scorable and helpers_complete
+                else None,
                 stages=result["stages"],
                 state=restored,
             )
             if result["outcome"] != "SUCCESS":
                 record["classification"] = result["outcome"]
+            elif not helpers_complete:
+                record["classification"] = "BUDGET_EXHAUSTED"
             elif all(
                 record[k] is True
                 for k in [
@@ -99,6 +110,7 @@ def run_preflight(run: Path) -> dict:
                     "output_shape_valid",
                     "history_lookup_verified",
                     "persistence_verified",
+                    "helpers_complete",
                 ]
             ):
                 record.update(status="PASS", classification=None)

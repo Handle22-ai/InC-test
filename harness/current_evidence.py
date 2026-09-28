@@ -143,6 +143,26 @@ def render(destination: Path, result: dict) -> None:
                     + " | ".join(str(counts[s]) for s in ("PASS", "FAIL", "ERROR", "UNKNOWN"))
                     + " |"
                 )
+    differences = trading.get("capture_differences", [])
+    if differences:
+        captures = sorted({c for row in differences for c in row["captures"]})
+        lines += [
+            "",
+            "Where the captures disagree (the same labeled notice, different runs of the "
+            "inherited system):",
+            "",
+            "| Notice | Label | " + " | ".join(f"{c} inherited / rebuilt" for c in captures) + " |",
+            "|---|---|" + "---|" * len(captures),
+        ]
+        for row in differences:
+            cells = [
+                f"{row['captures'][c]['inherited']} / {row['captures'][c]['rebuilt']}"
+                if c in row["captures"]
+                else "—"
+                for c in captures
+            ]
+            label = "signal" if row["label"] else "no signal"
+            lines.append(f"| {row['notice_id']} | {label} | " + " | ".join(cells) + " |")
     if trading.get("metrics"):
         lines += ["", "| Observed count | Cases |", "|---|---:|"]
         lines += [f"| {name} | {row['count']} |" for name, row in trading["metrics"].items()]

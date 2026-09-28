@@ -36,15 +36,25 @@ CI (`.github/workflows/gate.yml`) runs `make check` and the gate, and passes onl
 
 ## Run the harness against the inherited system (live model calls)
 
-The inherited system needs an Anthropic key. Export `ANTHROPIC_API_KEY` (and `LLM_MODEL`, if you change it) in the environment. Don't use `inherited/.env`: offline commands never read credential files, so while that file exists the gate cannot see the model setting and keeps Gate 3 UNKNOWN. Every live command also needs `LIVE=1` and a call budget.
+The inherited system needs an Anthropic key: export `ANTHROPIC_API_KEY`, or put it in `.env` at the repo root or in `inherited/`. The offline gate resolves the model the way the inherited system does (environment first, then the first `.env` found from `inherited/` upward). It reads only the `LLM_MODEL` line from that file, never the key. Every live command also needs `LIVE=1` and a call budget.
 
 ```bash
-make preflight          LIVE=1 MAX_CALLS=1    # key and model reachable?
-make evaluate-inherited LIVE=1 MAX_CALLS=45   # the 14 labeled notices plus replay/mutation cases, about 40 calls
+make preflight          LIVE=1 MAX_CALLS=2    # one real notice: extraction plus its impact helper
+make evaluate-inherited LIVE=1 MAX_CALLS=45   # preflight (2) + 23 cases (39) = 41 calls
 make e2e-live           LIVE=1 MAX_CALLS=10   # inherited CLI on freshly fetched NGPL notices
 ```
 
-A wrong key reports AUTHENTICATION_FAILURE. A missing key reports CREDENTIALS_MISSING. A model different from the retained captures makes Gate 3 UNKNOWN (MODEL_CONFIG_CHANGED). The offline gate replays two retained captures of the inherited system, so it needs no key.
+Preflight passes only if every call it needed was made and answered. A blocked or failed helper call reports BUDGET_EXHAUSTED or the failure, never a signal. A wrong key reports AUTHENTICATION_FAILURE and a missing key CREDENTIALS_MISSING. The model ID itself is not validated: a nonexistent model surfaces only as a failed call.
+
+To score a live run with the gate (an oracle change, so the owner does it):
+
+```bash
+.venv/bin/python -B -m harness register-capture evidence/legacy/<run>/results.json
+git add evidence/legacy/<run> requirements/capture-registry.json requirements/trading-evidence.json context/authority-reference.json
+make gate
+```
+
+The gate then scores the new capture next to the retained ones, and CURRENT.md lists every labeled notice where the captures disagree. Gate 3 reports EVALUATOR_OR_ORACLE_CHANGED until the owner registers a new reference.
 
 ## Change the policy
 

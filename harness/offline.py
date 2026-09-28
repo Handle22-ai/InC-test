@@ -7,17 +7,9 @@ import os
 import runpy
 import sys
 from contextlib import nullcontext
-from pathlib import Path
 from unittest.mock import patch
 
-
-def reject_external_access(event: str, arguments: tuple) -> None:
-    if event in {"socket.connect", "socket.getaddrinfo", "socket.bind"}:
-        raise RuntimeError("Offline harness command: network access is disabled")
-    if event == "open" and isinstance(arguments[0], (str, bytes)):
-        path = os.fsdecode(arguments[0])
-        if Path(path).name.startswith(".env") or Path(path).resolve().name.startswith(".env"):
-            raise RuntimeError("Offline harness command: credential-file access is disabled")
+from harness.credential_guard import reject_external_access
 
 
 def main() -> None:

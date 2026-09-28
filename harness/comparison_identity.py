@@ -24,10 +24,14 @@ def build(contract: dict, witnesses: list[dict]) -> dict:
 
     revisions = json.loads((ROOT / "requirements/requirement-revisions.json").read_text())
     captured_models = sorted({capture["manifest"]["configured_model"] for _, capture in sources()})
-    effective_model = os.environ.get("LLM_MODEL", llm_utils._MODEL)
-    # The inherited system loads inherited/.env for live runs; offline commands never
-    # read credential files, so a model set there would be invisible (audit 2 #3).
-    unreadable_config = (ROOT / "inherited/.env").exists()
+    from harness.credential_guard import model_setting
+
+    # The inherited system's load_dotenv() uses the first .env found searching upward
+    # from inherited/, and never overrides the environment. Resolve the model the same
+    # way, reading only LLM_MODEL from that file (audit 2 #3).
+    dotenv = next((ROOT / n for n in ("inherited/.env", ".env") if (ROOT / n).exists()), None)
+    file_model = model_setting(dotenv) if dotenv else None
+    effective_model = os.environ.get("LLM_MODEL") or file_model or llm_utils._MODEL
     return {
         "scope": "bounded-integrated-classifier-publisher-v3",
         "python_runtime": sys.version,
@@ -94,11 +98,11 @@ def build(contract: dict, witnesses: list[dict]) -> dict:
         ],
         "capture_interpretation": "Original manifests retain captured model/prompt/config identities. Current adapter/evaluator source hashes describe replay only; historical identities are never restamped.",
         "model_configuration": {
-            "status": "PASS"
-            if captured_models == [effective_model] and not unreadable_config
-            else "UNKNOWN",
-            "unverifiable_config_file": "inherited/.env" if unreadable_config else None,
+            "status": "PASS" if captured_models == [effective_model] else "UNKNOWN",
             "requested_model_environment": os.environ.get("LLM_MODEL"),
+            "dotenv_model": {"file": str(dotenv.relative_to(ROOT)), "LLM_MODEL": file_model}
+            if dotenv
+            else None,
             "effective_configured_model": effective_model,
             "captured_configured_models": captured_models,
             "live_model_executed": False,

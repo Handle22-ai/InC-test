@@ -42,7 +42,7 @@ The engineer decides, records a decision row, and rereads the exact bytes. The g
 
 ## When the model changes
 
-The offline gate replays retained captures, so it sees only that the configured model differs (Gate 3 MODEL_CONFIG_CHANGED); it cannot tell a new model from a nonexistent model ID. To learn what a new model does, run `make evaluate-inherited LIVE=1 MAX_CALLS=45` (about 40 calls). Its run directory is a new capture. Using it for scoring is an oracle change: the owner adds its path and hash to `requirements/capture-registry.json` and `requirements/trading-evidence.json`, updates `context/authority-reference.json`, and re-registers the Gate 3 reference. There is no single command for this yet.
+The offline gate replays retained captures, so it sees only that the configured model differs (Gate 3 MODEL_CONFIG_CHANGED), and it cannot tell a new model from a nonexistent ID. To learn what a new model does, run `make evaluate-inherited LIVE=1 MAX_CALLS=45`, then `python -m harness register-capture <run>/results.json`. The gate scores that capture next to the retained ones and lists every labeled notice where the runs disagree (today: 46528, 46725, 46864). Registering is an oracle change, so Gate 3 stays UNKNOWN until the owner registers a new reference.
 
 ## Context across sessions
 
