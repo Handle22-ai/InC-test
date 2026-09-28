@@ -1,4 +1,4 @@
-"""Visible spec consequences over all 46 retained capture cases, without model calls."""
+"""Visible spec consequences over every registered capture case, without model calls."""
 
 from __future__ import annotations
 
@@ -15,6 +15,7 @@ from rebuilt.normalization import normalize
 
 def observations(contract: dict) -> list[dict]:
     from harness.captures import evaluation_clock, oracle, store_before, verified_capture
+    from harness.trading_evaluation import semantic_evidence
 
     labels = oracle()
     result = []
@@ -59,12 +60,22 @@ def observations(contract: dict) -> list[dict]:
                         "normalized": value,
                     }
                 )
-                retained[value["notice"]["notice_id"]] = {
-                    "notice": value["notice"],
-                    "facts": value["facts"],
-                    "source_sha256": value["source"]["sha256"],
-                }
+                # History holds what the publisher would have stored, as the gate replays
+                # it: a decided (not UNRESOLVED) notice whose semantic evidence is usable.
+                # Otherwise the latest version of this notice is absent from history.
+                if (
+                    outcome["action"]["classification"] != "UNRESOLVED"
+                    and semantic_evidence(case).refusal() is None
+                ):
+                    retained[value["notice"]["notice_id"]] = {
+                        "notice": value["notice"],
+                        "facts": value["facts"],
+                        "source_sha256": value["source"]["sha256"],
+                    }
+                else:
+                    retained.pop(value["notice"]["notice_id"], None)
             except (ValueError, KeyError, TypeError) as exc:
+                retained.pop(case["output"].get("notice", {}).get("notice_id"), None)
                 result.append(
                     {
                         "id": key,

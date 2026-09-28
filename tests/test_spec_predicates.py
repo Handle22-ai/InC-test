@@ -154,6 +154,25 @@ class SpecPredicateTests(unittest.TestCase):
             ids = {entry["notice"]["notice_id"] for entry in history}
             self.assertTrue(ids <= set(store_before(case)), case["case_id"])
 
+    def test_consequences_match_the_rules_the_gate_executes(self):
+        """Audit 5 #3: the preview must decide every captured case the way the gate did."""
+        import tempfile
+        from pathlib import Path
+
+        from harness import consequences, trading_evaluation
+
+        rows = consequences.observations(compile_spec(ROOT))
+        with tempfile.TemporaryDirectory() as directory:
+            executed = trading_evaluation.run(Path(directory))
+        gate = {o["id"]: o["decision"].get("matched_rule") for o in executed["observations"]}
+        preview = {row["id"]: row["outcome"]["rule"] for row in rows}
+        refused = {k for k, v in preview.items() if v == "INPUT-REFUSED"}
+        self.assertEqual(set(preview), set(gate))
+        differing = {
+            k: (preview[k], gate[k]) for k in preview if k not in refused and preview[k] != gate[k]
+        }
+        self.assertEqual(differing, {})
+
     def test_audit3_mutations_are_boundary_violations(self):
         from harness.rule_invariants import enforce
 
