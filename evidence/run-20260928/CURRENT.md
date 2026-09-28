@@ -12,7 +12,7 @@ Gates judge the **rebuilt component**. The inherited system is measured below, n
 | 2 — trading_behavior | PASS | All in-scope findings passed |
 | 3 — regression_change | PASS | Nothing changed since the reference; this is not a regression test of a change |
 
-Run `final-run` · commit `1dc58370b2d0399e50b0fb88b76453fc3d16842f` · tracked changes `False` · spec `c89f760b3f2167345112801cd7825d26c40c102996239d13a2c788c9c4d363b6`.
+Run `final-run` · commit `ee6fe7b1072adfe2d6fbb52cab5acba52971c3cf` · tracked changes `False` · spec `c89f760b3f2167345112801cd7825d26c40c102996239d13a2c788c9c4d363b6`.
 
 **Not claimed by this gate** (spec-verification `out_of_scope`): HISTORY-003, HISTORY-004, HISTORY-005, STATE-001, STATE-002, STATE-005. All 73 D prose obligations are unchecked prose; 23 code-owned boundary checks constrain the tables.
 
@@ -43,6 +43,14 @@ Upstream extraction retained from the inherited runs (no new model call):
 | quantities | 46 | 0 | 0 | 0 |
 | segments | 20 | 0 | 0 | 0 |
 | zones | 18 | 0 | 0 | 0 |
+
+Where the captures disagree (the same labeled notice, different runs of the inherited system):
+
+| Notice | Label | capture-0 inherited / rebuilt | capture-1 inherited / rebuilt |
+|---|---|---|---|
+| 46528 | no signal | signal / UNRESOLVED | MODEL_FAILURE / UNRESOLVED |
+| 46725 | no signal | no signal / UNRESOLVED | signal / UNRESOLVED |
+| 46864 | signal | signal / SIGNAL_CANDIDATE | MODEL_FAILURE / SIGNAL_CANDIDATE |
 
 | Observed count | Cases |
 |---|---:|
@@ -76,7 +84,7 @@ Captured cases: **46** (two 23-case captures; 14 labels per capture). No abstent
 | BR-FIRM | 24/46 | 20/46 | Service class: 22 |
 | BR-UNRESOLVED | 46/46 | 7/46 |  |
 
-Previous commit: `5c91e8b9b596e530f3f7e337d24c8e0055743a2b`. Spec-to-spec consequences with current fixed compiler; not a runtime regression mapping
+Previous commit: `a6628e458c80c9c2ede5e6c30c1eb4cacab8b998`. Spec-to-spec consequences with current fixed compiler; not a runtime regression mapping
 
 | Notice/capture | From | To |
 |---|---|---|
