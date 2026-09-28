@@ -48,7 +48,7 @@ The offline gate replays retained captures, so it sees only that the configured 
 
 ## Context across sessions
 
-`make context TASK=recommendation-classification-maintenance` writes a package: binding requirements, the source files in scope, pending learning (marked unapproved) and superseded guidance (with the reason it lost). A fresh agent needs README, the package, spec.md and CURRENT.md. Learning goes to `context/pending-learning/`; only the owner promotes it into spec.md. Conflicting guidance becomes a proposal file; neither version is silently picked.
+`make context TASK=recommendation-classification-maintenance` writes a package: binding requirements, the source files in scope, pending learning (marked unapproved) and superseded guidance (with the reason it lost). A fresh agent needs README, the package, spec.md and CURRENT.md. If spec.md is not the bytes the owner last reread, the package opens with SPEC UNREVIEWED and lists every declaration changed since the reread. Learning goes to `context/pending-learning/`; only the owner promotes it into spec.md. Conflicting guidance becomes a proposal file; neither version is silently picked.
 
 ## The engineer's first day
 

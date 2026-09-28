@@ -373,3 +373,12 @@ Missing harness/evidence capability: one list of what counts as a policy edit, s
 Harness improvement made: `e1b8ec5` adds `prose_declarations` and `policy_edit`; prose edits are always unmeasured; 3 tests, each failing on the old code. Verified end to end in a scratch clone after registering a scratch reference.
 Could the same code read be avoided next time? Yes, if CURRENT.md stated which spec parts it tracks.
 
+CODE-READ-ID: AUDIT5-TIER1-CONTEXT-20260928
+Observed failure: fifth audit #13. After an unreviewed edit inverting A-004, `make context` exited 0 and copied the inverted row into package.md with no warning.
+Why evidence was insufficient: the package gives no sign of whether it checked review status at all.
+Source inspected: `harness/context.py` (all), `harness/spec_ownership.py` (`PIN`, `spec_text_with_hash`, `verify`'s return value).
+What was learned: `select()` already put the reread status in package.json from `verify()`, but package.md never rendered it, and nothing listed what changed.
+Missing harness/evidence capability: package.md rendered from the same status the gate uses.
+Harness improvement made: `review_status()`, `edits_since_reread()` and the SPEC UNREVIEWED banner; 2 tests, both failing on the old code; verified end to end in a scratch clone.
+Could the same code read be avoided next time? Yes: the package now states its own review status.
+
