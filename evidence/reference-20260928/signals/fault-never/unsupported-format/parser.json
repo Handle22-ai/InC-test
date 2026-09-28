@@ -28,7 +28,7 @@
         "confidence_score": 0.6,
         "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: small curtailment impact \\u2014 interruptible/lower-priority service only or <10% reduction (+0.10 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
         "source_url": null,
-        "scraped_at": "2026-09-28T17:04:30.370104",
+        "scraped_at": "2026-09-28T17:19:28.224777",
         "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/fault-never/unusable-impact/input.html"
       },
       {
@@ -54,7 +54,7 @@
         "confidence_score": 0.8,
         "validity_flags": "[\"VC-1: superseded notice \\u2014 LLM assessed as materially different from prior notice 800001; continuing as potential new signal\", \"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
         "source_url": null,
-        "scraped_at": "2026-09-28T17:04:30.338369",
+        "scraped_at": "2026-09-28T17:19:28.204927",
         "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/fault-never/D/input.html"
       },
       {
@@ -80,7 +80,7 @@
         "confidence_score": 0.8,
         "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
         "source_url": null,
-        "scraped_at": "2026-09-28T17:04:30.358930",
+        "scraped_at": "2026-09-28T17:19:28.218232",
         "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/fault-never/F/input.html"
       },
       {
@@ -106,7 +106,7 @@
         "confidence_score": 0.8,
         "validity_flags": "[\"VC-1: superseded notice \\u2014 prior notice not in DB, cannot compare; continuing validation\", \"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
         "source_url": null,
-        "scraped_at": "2026-09-28T17:04:30.385005",
+        "scraped_at": "2026-09-28T17:19:28.233597",
         "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/fault-never/missing-history/input.html"
       },
       {
@@ -132,7 +132,7 @@
         "confidence_score": 0.8,
         "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
         "source_url": null,
-        "scraped_at": "2026-09-28T17:04:30.392084",
+        "scraped_at": "2026-09-28T17:19:28.238518",
         "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/fault-never/missing-authorization/input.html"
       },
       {
@@ -158,7 +158,7 @@
         "confidence_score": 0.0,
         "validity_flags": "[\"VC-1: information-only notice \\u2014 Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction\", \"llm_extraction\"]",
         "source_url": null,
-        "scraped_at": "2026-09-28T17:04:30.402437",
+        "scraped_at": "2026-09-28T17:19:28.246208",
         "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/fault-never/routine/input.html"
       }
     ],
@@ -393,7 +393,7 @@
       "notice_subtype": null,
       "effective_datetime": null,
       "end_datetime": null,
-      "post_datetime": "2026-09-28T17:04:30.412855",
+      "post_datetime": "2026-09-28T17:19:28.253407",
       "response_required": 0,
       "response_due_date": null,
       "status": "INITIATE",
@@ -407,7 +407,7 @@
       "confidence_score": 0.6,
       "validity_flags": "[\"VC-2: unknown notice type 'UNKNOWN' \\u2014 treating as signal-capable; downstream validators will assess operational impact\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
       "source_url": null,
-      "scraped_at": "2026-09-28T17:04:30.412878",
+      "scraped_at": "2026-09-28T17:19:28.253425",
       "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/fault-never/unsupported-format/input.pdf"
     },
     "locations": [
@@ -751,7 +751,7 @@
         "confidence_score": 0.6,
         "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: small curtailment impact \\u2014 interruptible/lower-priority service only or <10% reduction (+0.10 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
         "source_url": null,
-        "scraped_at": "2026-09-28T17:04:30.370104",
+        "scraped_at": "2026-09-28T17:19:28.224777",
         "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/fault-never/unusable-impact/input.html"
       },
       {
@@ -777,7 +777,7 @@
         "confidence_score": 0.8,
         "validity_flags": "[\"VC-1: superseded notice \\u2014 LLM assessed as materially different from prior notice 800001; continuing as potential new signal\", \"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
         "source_url": null,
-        "scraped_at": "2026-09-28T17:04:30.338369",
+        "scraped_at": "2026-09-28T17:19:28.204927",
         "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/fault-never/D/input.html"
       },
       {
@@ -803,7 +803,7 @@
         "confidence_score": 0.8,
         "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
         "source_url": null,
-        "scraped_at": "2026-09-28T17:04:30.358930",
+        "scraped_at": "2026-09-28T17:19:28.218232",
         "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/fault-never/F/input.html"
       },
       {
@@ -829,7 +829,7 @@
         "confidence_score": 0.8,
         "validity_flags": "[\"VC-1: superseded notice \\u2014 prior notice not in DB, cannot compare; continuing validation\", \"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
         "source_url": null,
-        "scraped_at": "2026-09-28T17:04:30.385005",
+        "scraped_at": "2026-09-28T17:19:28.233597",
         "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/fault-never/missing-history/input.html"
       },
       {
@@ -855,7 +855,7 @@
         "confidence_score": 0.8,
         "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
         "source_url": null,
-        "scraped_at": "2026-09-28T17:04:30.392084",
+        "scraped_at": "2026-09-28T17:19:28.238518",
         "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/fault-never/missing-authorization/input.html"
       },
       {
@@ -881,7 +881,7 @@
         "confidence_score": 0.0,
         "validity_flags": "[\"VC-1: information-only notice \\u2014 Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction\", \"llm_extraction\"]",
         "source_url": null,
-        "scraped_at": "2026-09-28T17:04:30.402437",
+        "scraped_at": "2026-09-28T17:19:28.246208",
         "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/fault-never/routine/input.html"
       }
     ],

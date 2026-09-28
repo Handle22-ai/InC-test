@@ -1,6 +1,6 @@
 {
   "step": "unusable-impact",
-  "machine_latency_ms": 2.446791,
+  "machine_latency_ms": 1.443875,
   "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
   "initial_count": 1,
   "disposition": "LEGACY_BINARY",

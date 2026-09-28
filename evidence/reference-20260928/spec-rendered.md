@@ -649,7 +649,7 @@ Captured cases: **46** (two 23-case captures; 14 labels per capture). No abstent
 | BR-FIRM | 24/46 | 20/46 | Service class: 22 |
 | BR-UNRESOLVED | 46/46 | 7/46 |  |
 
-Previous commit: `0164af56c69e227c574b72b624da2f16bdc77bd2`. Spec-to-spec consequences with current fixed compiler; not a runtime regression mapping
+Previous commit: `695896b7b976e70484558e6b1673fe062a3f446f`. Spec-to-spec consequences with current fixed compiler; not a runtime regression mapping
 
 | Notice/capture | From | To |
 |---|---|---|

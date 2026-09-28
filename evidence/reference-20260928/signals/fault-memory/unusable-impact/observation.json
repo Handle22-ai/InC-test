@@ -1,6 +1,6 @@
 {
   "step": "unusable-impact",
-  "machine_latency_ms": 4.587916,
+  "machine_latency_ms": 3.697417,
   "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
   "initial_count": 0,
   "disposition": "REVIEW_REQUIRED",
@@ -9,7 +9,7 @@
   "classification_scorable": true,
   "classification_presented_as_valid": true,
   "decision": {
-    "decision_id": "18ebe196-a2c6-453e-aa1a-07b1b82dc9c8",
+    "decision_id": "115142a9-bba3-4cbd-b382-2e52803d463b",
     "notice_id": 800001,
     "source_sha256": "4e3014a157f842266f1b8ebebb90fa4d43ae1354e037c12ae075cef90ede25b8",
     "reference_time": "2026-01-15T12:00:00+00:00",
@@ -37,7 +37,7 @@
         "confidence_score": 0.6,
         "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: small curtailment impact \\u2014 interruptible/lower-priority service only or <10% reduction (+0.10 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
         "source_url": null,
-        "scraped_at": "2026-09-28T17:04:30.481073",
+        "scraped_at": "2026-09-28T17:19:28.302094",
         "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/fault-memory/unusable-impact/input.html"
       },
       "locations": [

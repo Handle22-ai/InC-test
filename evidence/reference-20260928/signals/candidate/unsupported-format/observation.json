@@ -1,6 +1,6 @@
 {
   "step": "unsupported-format",
-  "machine_latency_ms": 4.235792,
+  "machine_latency_ms": 4.08125,
   "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
   "initial_count": 0,
   "disposition": "REVIEW_REQUIRED",
@@ -9,7 +9,7 @@
   "classification_scorable": false,
   "classification_presented_as_valid": false,
   "decision": {
-    "decision_id": "e07d71c8-0fdd-4a71-ae50-b5b361ced850",
+    "decision_id": "8552502f-77ed-4e19-881c-de7f29f30ff9",
     "notice_id": 800008,
     "source_sha256": "f1fb9bc151cb0d2f071f5422b2e1382a2ea491e26c84570496b10d45acfe5608",
     "reference_time": "2026-01-15T12:00:00+00:00",
@@ -23,7 +23,7 @@
         "notice_subtype": null,
         "effective_datetime": null,
         "end_datetime": null,
-        "post_datetime": "2026-09-28T17:04:30.171224",
+        "post_datetime": "2026-09-28T17:19:28.102821",
         "response_required": 0,
         "response_due_date": null,
         "status": "INITIATE",
@@ -37,7 +37,7 @@
         "confidence_score": 0.6,
         "validity_flags": "[\"VC-2: unknown notice type 'UNKNOWN' \\u2014 treating as signal-capable; downstream validators will assess operational impact\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
         "source_url": null,
-        "scraped_at": "2026-09-28T17:04:30.171248",
+        "scraped_at": "2026-09-28T17:19:28.102844",
         "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/candidate/unsupported-format/input.pdf"
       },
       "locations": [

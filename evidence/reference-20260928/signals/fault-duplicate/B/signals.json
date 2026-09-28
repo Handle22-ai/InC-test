@@ -1,6 +1,6 @@
 [
   {
-    "decision_id": "f04286b0-4c5c-447b-ae82-213824cc64a5",
+    "decision_id": "fbecfdc3-2386-4d7c-be96-3410768ec9f5",
     "notice_id": 800001,
     "source_sha256": "4e3014a157f842266f1b8ebebb90fa4d43ae1354e037c12ae075cef90ede25b8",
     "reference_time": "2026-01-15T12:00:00+00:00",
@@ -28,7 +28,7 @@
         "confidence_score": 0.8,
         "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
         "source_url": null,
-        "scraped_at": "2026-09-28T17:04:30.192224",
+        "scraped_at": "2026-09-28T17:19:28.119881",
         "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/fault-duplicate/B/input.html"
       },
       "locations": [
@@ -357,6 +357,6 @@
     "publication_attempted": false,
     "delivery_acknowledged": null,
     "event_key": "NGPL:800001",
-    "initial_decision_reference": "33d654c6-83ac-47be-b8d4-3fae86844628"
+    "initial_decision_reference": "61422695-3b13-4cc4-9367-7736fd6c8ea3"
   }
 ]

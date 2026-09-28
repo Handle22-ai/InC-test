@@ -12,7 +12,7 @@
     "locations": []
   },
   "decision": {
-    "decision_id": "6e420413-395a-4ead-aead-c68908151681",
+    "decision_id": "8bcd571f-8794-4c31-89b6-eb5fcca37de5",
     "notice_id": 88001,
     "source_sha256": "5966b189e1261c1635af75c96fce1f053f3c313ebdf8d4effaa513841830bfb5",
     "reference_time": "2026-01-15T12:00:00+00:00",
@@ -56,7 +56,7 @@
   "retained_after_reopen": [
     {
       "classification": "UNRESOLVED",
-      "decision_id": "6e420413-395a-4ead-aead-c68908151681",
+      "decision_id": "8bcd571f-8794-4c31-89b6-eb5fcca37de5",
       "delivery_acknowledged": null,
       "disposition": "ERROR",
       "error_reason": "input.notice.status: unsupported value",

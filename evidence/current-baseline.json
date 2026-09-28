@@ -2,12 +2,12 @@
   "version": 2,
   "role": "observed-comparison-reference-not-release-acceptance",
   "path": "evidence/reference-20260928",
-  "source_commit": "5c91e8b9b596e530f3f7e337d24c8e0055743a2b",
+  "source_commit": "a6628e458c80c9c2ede5e6c30c1eb4cacab8b998",
   "spec_sha256": "c89f760b3f2167345112801cd7825d26c40c102996239d13a2c788c9c4d363b6",
   "human_review_asserted": false,
   "sha256": {
-    "results.json": "44f45df0ac1b227e03cfc28eee0afe6c48fa40fab6af0a883cef2153f45eb94c",
-    "manifest.json": "d587ca0e5e3e7fe74e80decac4d3747dbeb8a59f8eda19a18cdb1ddd870b9185"
+    "results.json": "cafe92793632fd0cf89b89ed113e564670fb8ff7766e736da714d990bc0cc457",
+    "manifest.json": "465b7899a22b5428f93cdb64615c414b8f9632570c77b8fae47ad6a0c48ec1b9"
   },
   "observed_gates": {
     "3": "UNKNOWN",

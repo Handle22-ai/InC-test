@@ -1,6 +1,6 @@
 {
   "step": "missing-authorization",
-  "machine_latency_ms": 2.123166,
+  "machine_latency_ms": 1.633125,
   "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
   "initial_count": 1,
   "disposition": "LEGACY_BINARY",

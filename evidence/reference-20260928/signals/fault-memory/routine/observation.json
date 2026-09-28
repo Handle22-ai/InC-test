@@ -1,6 +1,6 @@
 {
   "step": "routine",
-  "machine_latency_ms": 6.787,
+  "machine_latency_ms": 5.24275,
   "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
   "initial_count": 0,
   "disposition": "NO_SIGNAL",
@@ -9,7 +9,7 @@
   "classification_scorable": true,
   "classification_presented_as_valid": true,
   "decision": {
-    "decision_id": "45d81e64-e957-40c2-b4c8-5df83aeb5548",
+    "decision_id": "3dc9d6d1-a015-426e-b00b-83e283b18673",
     "notice_id": 800007,
     "source_sha256": "d61a7fd086cfa88045261a1c4a2c5fcf0fe31e637fc295537f13d4de00db7b6b",
     "reference_time": "2026-01-15T12:00:00+00:00",
@@ -37,7 +37,7 @@
         "confidence_score": 0.0,
         "validity_flags": "[\"VC-1: information-only notice \\u2014 Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction\", \"llm_extraction\"]",
         "source_url": null,
-        "scraped_at": "2026-09-28T17:04:30.504680",
+        "scraped_at": "2026-09-28T17:19:28.322152",
         "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/fault-memory/routine/input.html"
       },
       "locations": [],

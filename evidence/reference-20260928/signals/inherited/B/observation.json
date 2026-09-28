@@ -1,6 +1,6 @@
 {
   "step": "B",
-  "machine_latency_ms": 1.662792,
+  "machine_latency_ms": 1.886834,
   "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
   "initial_count": 1,
   "disposition": "LEGACY_BINARY",

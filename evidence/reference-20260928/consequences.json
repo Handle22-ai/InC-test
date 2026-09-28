@@ -35634,7 +35634,7 @@
       "source_critical": 1
     }
   ],
-  "previous_commit": "0164af56c69e227c574b72b624da2f16bdc77bd2",
+  "previous_commit": "695896b7b976e70484558e6b1673fe062a3f446f",
   "comparison_scope": "Spec-to-spec consequences with current fixed compiler; not a runtime regression mapping",
   "changed_outcomes": [],
   "meaning": "Spec consequences derived from retained facts; generated expectations are not independent evaluation labels or approval"

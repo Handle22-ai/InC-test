@@ -1,6 +1,6 @@
 {
   "step": "F",
-  "machine_latency_ms": 8.056,
+  "machine_latency_ms": 6.014417,
   "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
   "initial_count": 0,
   "disposition": "SUPPRESSED",
@@ -9,7 +9,7 @@
   "classification_scorable": true,
   "classification_presented_as_valid": true,
   "decision": {
-    "decision_id": "3ae9467a-c9a0-4d0e-bf58-e4c5f84d3225",
+    "decision_id": "9f2a0d52-4f25-4d4f-9cbe-e99732b84c01",
     "notice_id": 800003,
     "source_sha256": "719194dd0d3f0d0f1b7e880aa8257aa03173255cd2d343947dfb8dc7316443c5",
     "reference_time": "2026-01-15T12:00:00+00:00",
@@ -37,7 +37,7 @@
         "confidence_score": 0.8,
         "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
         "source_url": null,
-        "scraped_at": "2026-09-28T17:04:30.128437",
+        "scraped_at": "2026-09-28T17:19:28.066968",
         "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/reviewed-run/signals/candidate/F/input.html"
       },
       "locations": [
@@ -476,7 +476,7 @@
     "publication_attempted": false,
     "delivery_acknowledged": null,
     "event_key": "NGPL:800003",
-    "initial_decision_reference": "994a4679-47e6-42a7-9887-c00941811f7a"
+    "initial_decision_reference": "18e44a2a-e2c9-43b9-a022-94d850fae91a"
   },
   "authorization": {
     "actor": "Synthetic fixture adjudicator (not real approval)",
