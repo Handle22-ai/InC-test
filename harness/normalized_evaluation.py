@@ -354,7 +354,19 @@ def spec_edits(previous: dict | None, current: dict) -> list[dict]:
     old = spec_text_with_hash(ROOT, previous.get("comparison_identity", {}).get("spec_sha256", ""))
     if old is None:
         return []
-    moved = bool(current["gates"].get("3", {}).get("changed_decisions"))
+    # Measured means the spec change itself moved a decision, judged by comparing the two
+    # specs under the current evaluator; Gate 3's changed decisions also include what an
+    # evaluator change moved (audit 5). Fall back to them only if the old spec no longer
+    # compiles.
+    from harness.consequences import spec_moved
+    from harness.spec_compiler import compile_spec
+
+    try:
+        moved = bool(
+            spec_moved(compile_spec(ROOT, old), compile_spec(ROOT, (ROOT / "spec.md").read_text()))
+        )
+    except ValueError:
+        moved = bool(current["gates"].get("3", {}).get("changed_decisions"))
     edits = []
     for change in declaration_changes(old, (ROOT / "spec.md").read_text()):
         if not policy_edit(change["block"]):

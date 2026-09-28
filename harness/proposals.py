@@ -10,7 +10,7 @@ import subprocess
 from difflib import unified_diff
 from pathlib import Path
 
-from harness.consequences import observations, render
+from harness.consequences import observations, render, spec_moved
 from harness.rule_invariants import evaluate
 from harness.runtime import ROOT, create_run, digest, new_run, write_json
 from harness.spec_compiler import blocks, compile_spec, table
@@ -437,11 +437,13 @@ def run(spec: Path, base: str, destination: Path, inputs_path: Path | None = Non
     result["would_be_refused"] = result["refused_by"]["compile"] + result["refused_by"]["gate"]
     # Examples supplied with --inputs are the author's own; they illustrate an edit but
     # do not count as independent evidence (audit 3 #9).
+    # The same measure as the gate's spec_edits: any decision the spec change moves,
+    # including a reason-only change or a frozen witness (audit 5).
+    moved = spec_moved(before_contract, after_contract, before, after)
     result["unmeasured_edits"] = [
         f"{c['block']} / {c['id']}"
         for c in result["declaration_changes"]
-        if c["block"] != "spec-decisions"
-        and (c["block"] in PROSE_BLOCKS or not result["changed_outcomes"])
+        if c["block"] != "spec-decisions" and (c["block"] in PROSE_BLOCKS or not moved)
     ]
     (destination / "rules.md").write_text(render_rules(after_contract))
     (destination / "nonmatches.md").write_text(render(result))

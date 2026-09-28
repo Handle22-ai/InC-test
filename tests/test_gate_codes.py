@@ -336,3 +336,36 @@ class LastValidSnapshotTests(unittest.TestCase):
             for case in ("unchanged-revision", "repeated-revision"):
                 key = f"{capture}/{case}"
                 self.assertEqual((gate[key], preview[key]), ("BR-UNCHANGED", "BR-UNCHANGED"), key)
+
+
+class SpecMeasurementTests(unittest.TestCase):
+    """Audit 5: an edit is measured only if the spec change itself moves a decision."""
+
+    TEXT = ("| Already emitted signals | At the publisher seam", "| Already emitted signals | Here")
+    ROUTINE = ("| ANY | ANY | NO_OPERATIONAL_RESTRICTION", "| ANY | ANY | HISTORICAL_ONLY")
+
+    def edited(self, pair: tuple[str, str]) -> str:
+        text = (ROOT / "spec.md").read_text()
+        self.assertEqual(text.count(pair[0]), 1, pair[0])
+        return text.replace(*pair)
+
+    def test_a_text_edit_moves_nothing_and_a_reason_edit_moves_routine_cases(self):
+        from harness.consequences import spec_moved
+
+        current = compile_spec(ROOT)
+        self.assertEqual(spec_moved(compile_spec(ROOT, self.edited(self.TEXT)), current), [])
+        moved = spec_moved(compile_spec(ROOT, self.edited(self.ROUTINE)), current)
+        self.assertTrue(any(key.endswith("/46604") for key in moved), moved)
+
+    def test_decisions_an_evaluator_moved_do_not_measure_a_text_edit(self):
+        old = self.edited(self.TEXT)
+        moved_by_evaluator = {
+            "gates": {"3": {"changed_decisions": ["capture-2/unchanged-revision"]}}
+        }
+        previous = {"comparison_identity": {"spec_sha256": "reference"}}
+        with patch("harness.spec_ownership.spec_text_with_hash", return_value=old):
+            edits = evaluation.spec_edits(previous, moved_by_evaluator)
+        self.assertEqual(
+            {e["declaration"]: e["unmeasured"] for e in edits},
+            {"spec-requirements / STATE-003 (edited)": True},
+        )

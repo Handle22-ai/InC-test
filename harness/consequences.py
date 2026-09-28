@@ -119,6 +119,59 @@ def observations(contract: dict) -> list[dict]:
     return result
 
 
+def spec_moved(
+    before: dict,
+    after: dict,
+    before_rows: list[dict] | None = None,
+    after_rows: list[dict] | None = None,
+) -> list[str]:
+    """Decisions that differ between two specs under the same evaluator (audit 5).
+
+    Compares every captured case, every frozen classifier witness and every replay
+    expectation. A decision is its rule, action name, reason and action, so an edit that
+    changes only the reason still counts. Evaluator or oracle changes cannot appear
+    here, because both specs are evaluated by the current code.
+    """
+
+    def signature(contract: dict, outcome: dict) -> tuple:
+        rule: dict = next((r for r in contract["rules"] if r["id"] == outcome["rule"]), {})
+        return (
+            outcome["rule"],
+            rule.get("action_name"),
+            rule.get("output_reason"),
+            json.dumps(outcome["action"], sort_keys=True),
+        )
+
+    moved = []
+    old = {r["id"]: r for r in (before_rows if before_rows is not None else observations(before))}
+    new = {r["id"]: r for r in (after_rows if after_rows is not None else observations(after))}
+    for key in sorted(old.keys() | new.keys()):
+        if key not in old or key not in new:
+            moved.append(key)
+        elif signature(before, old[key]["outcome"]) != signature(after, new[key]["outcome"]):
+            moved.append(key)
+    witnesses = json.loads((ROOT / "requirements/normalized-witnesses.json").read_text())
+    for witness in witnesses:
+        outcomes = []
+        for contract in (before, after):
+            try:
+                outcomes.append(signature(contract, derive(contract, witness["input"])))
+            except (ValueError, KeyError, TypeError) as exc:
+                outcomes.append(("REFUSED", type(exc).__name__))
+        if outcomes[0] != outcomes[1]:
+            moved.append("witness/" + witness["id"])
+    steps = [
+        {s["id"]: s.get("expected") for s in c.get("state_safety", {}).get("steps", [])}
+        for c in (before, after)
+    ]
+    moved += [
+        "publisher/" + step
+        for step in sorted(steps[0].keys() | steps[1].keys())
+        if steps[0].get(step) != steps[1].get(step)
+    ]
+    return moved
+
+
 def previous(contract: dict) -> tuple[str, list[dict], str]:
     def git(*args):
         return subprocess.check_output(
