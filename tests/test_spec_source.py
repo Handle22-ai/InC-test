@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import copy
 import json
+import re
 import shutil
 import tempfile
 import unittest
@@ -195,8 +196,14 @@ class SpecSourceTests(unittest.TestCase):
     def test_hand_edited_predicate_names_its_spec_row(self):
         build(self.root)
         path = self.root / "requirements/behavior.yaml"
-        path.write_text(path.read_text().replace('"op": "within"', '"op": "overlaps"', 1))
-        with self.assertRaisesRegex(ValueError, r"block spec-predicates, row History=COMPLETE"):
+        header, body = path.read_text().split("\n", 1)
+        behavior = json.loads(body)
+        # Edit whichever predicate comes first, not a particular operator (audit 5 #45).
+        row = next(p for p in behavior["predicates"] if p["ast"]["op"] != "otherwise")
+        row["ast"] = {"op": "otherwise"}
+        path.write_text(header + "\n" + json.dumps(behavior, indent=2) + "\n")
+        name = f"{row['column']}={row['value']}"
+        with self.assertRaisesRegex(ValueError, rf"block spec-predicates, row {re.escape(name)}"):
             check_generated(self.root)
 
     def test_a_crash_inside_the_component_is_a_failure_not_a_refusal(self):

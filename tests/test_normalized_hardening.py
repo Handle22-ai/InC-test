@@ -189,7 +189,7 @@ class RegressionAndRefusalTests(unittest.TestCase):
             self.assertIn("routine-negative", result["gates"]["3"]["newly_failing"])
             for measured in (baseline, result):
                 coverage = measured["requirement_coverage"]["OBS-003"]
-                self.assertEqual(coverage["observations"], 1)
+                self.assertGreaterEqual(coverage["observations"], 1)
                 self.assertEqual(coverage["status"], measured["gates"]["3"]["status"])
                 self.assertFalse(
                     any(

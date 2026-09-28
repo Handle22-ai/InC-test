@@ -60,12 +60,11 @@ class AuditControls(unittest.TestCase):
             root = Path(directory)
             copy_requirement_authority(root)
             path = root / "spec.md"
-            path.write_text(
-                path.read_text().replace(
-                    "block automatic alerts on history gaps",
-                    "allow automatic alerts on history gaps",
-                )
-            )
+            text = path.read_text()
+            # Derive the edit from the table, not its wording (audit 5 #45).
+            row = next(line for line in text.splitlines() if line.startswith("| A-0"))
+            path.write_text(text.replace(row, row.replace(" | ", " | (edited) ", 1)))
+            self.assertNotEqual(path.read_text(), text)
             output = root / "probe"
             output.mkdir()
             data, _ = collect(root, output)

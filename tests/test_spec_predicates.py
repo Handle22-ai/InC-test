@@ -174,19 +174,28 @@ class SpecPredicateTests(unittest.TestCase):
         self.assertEqual(differing, {})
 
     def test_audit3_mutations_are_boundary_violations(self):
-        from harness.rule_invariants import enforce
+        from harness.rule_invariants import evaluate
+
+        def failing(spec_text: str) -> set[str]:
+            # Every boundary that fails, not just the first one enforce() reports.
+            rows = evaluate(compile_spec(ROOT, spec_text))
+            return {r["hand_authored_check"] for r in rows if r["status"] == "FAIL"}
 
         text = (ROOT / "spec.md").read_text()
+        # Derive both mutations from the compiled tables, not their wording (audit 5 #45).
+        contract = compile_spec(ROOT)
+        classification = {r["id"]: r["action"]["classification"] for r in contract["rules"]}
         precedence = next(line for line in text.splitlines() if line.startswith("Precedence:"))
-        swapped = precedence.replace("BR-HISTORY > BR-UNCHANGED", "BR-UNCHANGED > BR-HISTORY")
+        order = precedence.removeprefix("Precedence:").strip().split(" > ")
+        deciding = next(rule for rule in order if classification[rule] != "UNRESOLVED")
+        swapped = "Precedence: " + " > ".join([deciding, *(r for r in order if r != deciding)])
         self.assertNotEqual(swapped, precedence)
-        with self.assertRaisesRegex(ValueError, "refusals_first"):
-            enforce(compile_spec(ROOT, text.replace(precedence, swapped)))
+        self.assertIn("refusals_first", failing(text.replace(precedence, swapped)))
         status = next(line for line in text.splitlines() if "| header.status |" in line)
-        relaxed = status.replace("| text | ERROR | ERROR |", "| text | UNKNOWN | ERROR |")
-        self.assertNotEqual(relaxed, status)
-        with self.assertRaisesRegex(ValueError, "required_inputs"):
-            enforce(compile_spec(ROOT, text.replace(status, relaxed)))
+        cells = status.split(" | ")
+        self.assertEqual(cells[3], "ERROR")  # the Missing column
+        relaxed = " | ".join([*cells[:3], "UNKNOWN", *cells[4:]])
+        self.assertIn("required_inputs", failing(text.replace(status, relaxed)))
 
     def test_an_empty_list_is_never_within_a_set(self):
         """Audit 4 #6: unknown services must not satisfy a `within` condition vacuously."""

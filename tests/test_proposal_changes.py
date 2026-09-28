@@ -99,15 +99,15 @@ class ProposalChangeTests(unittest.TestCase):
 
     def test_precedence_edits_are_visible_and_line_shifts_are_not_edits(self):
         self.assertEqual(declaration_changes(self.spec, "\n\n" + self.spec), [])
-        proposal = self.spec.replace(
-            "Precedence: BR-FORMAT > BR-SEMANTICS",
-            "Precedence: BR-SEMANTICS > BR-FORMAT",
-        )
+        line = next(x for x in self.spec.splitlines() if x.startswith("Precedence:"))
+        order = line.removeprefix("Precedence:").strip().split(" > ")
+        swapped = "Precedence: " + " > ".join([order[1], order[0], *order[2:]])
+        proposal = self.spec.replace(line, swapped)
         changes = declaration_changes(self.spec, proposal)
         self.assertEqual(len(changes), 1)
         self.assertEqual(changes[0]["id"], "Precedence")
         self.assertEqual(changes[0]["baseline_line"], self.line(self.spec, "Precedence:"))
-        self.assertTrue(changes[0]["fields"]["Order"]["after"].startswith("BR-SEMANTICS"))
+        self.assertTrue(changes[0]["fields"]["Order"]["after"].startswith(order[1]))
 
     def test_added_and_removed_input_rows_have_only_existing_snapshot_references(self):
         old = "```spec-inputs\nID | Field\nINPUT-A | old\n```\n"
