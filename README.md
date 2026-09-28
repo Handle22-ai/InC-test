@@ -75,7 +75,7 @@ A change to frozen labels or witnesses (`requirements/*witnesses.json`, `dataset
 .venv/bin/python -B -m harness register-reference evidence/reviewed-run evidence/reference-<date> --person 'Thomas Hand'
 ```
 
-The reference records who registered it, which evaluator and oracle files they accepted, and any spec table edit it was registered over that changed no measured decision (UNMEASURED_POLICY_EDIT). CURRENT.md shows all three, and keeps listing the spec table edits the last reread covered, so registering a reference does not erase the record of an unmeasured edit. Like the reread, this is an assertion, not authentication.
+The reference records who registered it, which evaluator and oracle files they accepted, and any spec edit it was registered over that changed no measured decision (UNMEASURED_POLICY_EDIT). Every declaration except the decision log counts, including D-sentences, assumption rows and spec-verification scope; a D-sentence or assumption edit is always unmeasured, because no check reads it. CURRENT.md shows all three, and keeps listing the spec table edits the last reread covered, so registering a reference does not erase the record of an unmeasured edit. Like the reread, this is an assertion, not authentication.
 
 ## Start a fresh agent session
 

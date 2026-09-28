@@ -364,3 +364,12 @@ Missing harness/evidence capability: a registry mapping each gate code to its em
 Harness improvement made: `tests/test_gate_codes.py` (`fd98aef`). Each test was mutation-checked: breaking its emitter makes it fail.
 Could the same code read be avoided next time? Yes, with that registry.
 
+CODE-READ-ID: AUDIT5-TIER1-UNMEASURED-20260928
+Observed failure: fifth audit #12. Inverting D1-005 or A-004, then adding an approved row and rereading, gave gate exit 0 with nothing flagged. An action edit showed UNMEASURED in consequences but not in the gate.
+Why evidence was insufficient: CURRENT.md lists the spec edits since the reference but not which spec parts are tracked, so a missing edit looks the same as no edit.
+Source inspected: `harness/normalized_evaluation.py` (330–410, 640–700: `POLICY_BLOCKS`, `spec_edits`, `edits_covered_by_last_reread`), and `harness/proposals.py` (1–85 `declarations`/`declaration_changes`, 400–425 unmeasured edits).
+What was learned: the gate tracked 8 of 13 fenced blocks, and neither tool saw D-sentences or the assumptions table, which are markdown. The gate counts witness and replay decisions as measurement; consequences counts captured cases only. The action-edit disagreement comes from that difference in measure, not from a gap.
+Missing harness/evidence capability: one list of what counts as a policy edit, shared by both tools.
+Harness improvement made: `e1b8ec5` adds `prose_declarations` and `policy_edit`; prose edits are always unmeasured; 3 tests, each failing on the old code. Verified end to end in a scratch clone after registering a scratch reference.
+Could the same code read be avoided next time? Yes, if CURRENT.md stated which spec parts it tracks.
+

@@ -16,7 +16,7 @@ Two documents: **spec.md**, which they own, and **CURRENT.md** of the latest gat
 | `spec-verification` | which requirement each check covers, and which rows are `out_of_scope` | per-requirement coverage in `coverage.md` |
 | `spec-settings.acceptance` | Gate 2 budgets | per-capture missed-positive and false-positive findings |
 
-What is still hand-written: 25 boundary checks in `harness/rule_invariants.py`, such as "a history gap must be refused before a firm candidate". They stop a table edit from quietly removing a safety refusal, and they change only by code review. The 73 numbered D-sentences are owned prose that explain intent. No check claims them, with one exception: the D6 wording scopes the annotation oracle behind OUTPUT-004/005/006 and STATE-004, so editing a D6 sentence takes those four requirements out of scope (UNKNOWN) until the owner re-approves it.
+What is still hand-written: 25 boundary checks in `harness/rule_invariants.py`, such as "a history gap must be refused before a firm candidate". They stop a table edit from quietly removing a safety refusal, and they change only by code review. The 73 numbered D-sentences are owned prose that explain intent. No check claims them, but an edit to one, or to an assumption row, is reported as UNMEASURED_POLICY_EDIT and keeps Gate 3 UNKNOWN until an owner registers a reference that accepts it, with one exception: the D6 wording scopes the annotation oracle behind OUTPUT-004/005/006 and STATE-004, so editing a D6 sentence takes those four requirements out of scope (UNKNOWN) until the owner re-approves it.
 
 ## Three gates
 
