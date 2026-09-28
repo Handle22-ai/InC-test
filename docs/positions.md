@@ -34,7 +34,7 @@ response, what did not and why, and what now waits on the owner.
 ## Owner steps (done 2026-09-28)
 
 1. Reread of spec `4448a6f9…` recorded; it covers FEEDBACK-001, AUDIT-TRUTH-001, REMEDIATION-001 to -003 and NNS-FIRM-001.
-2. The reviewed run of `c90e5d2` is registered as the Gate 3 reference (`evidence/reference-20260928`).
+2. The reviewed run of the publication root commit is registered as the Gate 3 reference (`evidence/reference-20260928`).
 3. Build-history evidence is archived (`evidence/ARCHIVE.md`).
 
 `make gate` now exits 0 with all three gates PASS. Gate 3 PASS here means nothing has changed since the reference; the next change is its first real test.

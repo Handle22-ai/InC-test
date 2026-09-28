@@ -1,4 +1,4 @@
-<!-- Index copy of evidence/run-20260928/CURRENT.md, produced by `make gate` (reviewed spec) on commit ca5ef22 with a clean tree. Per-case files are omitted from the commit; re-run the command to regenerate them. -->
+<!-- Index copy of evidence/run-20260928/CURRENT.md, produced by `make gate` (reviewed spec) on commit 35b5af7 with a clean tree. Per-case files are omitted from the commit; re-run the command to regenerate them. -->
 
 # Evidence for the engineer's next decision
 
@@ -12,7 +12,7 @@ Non-passing finding codes: **none**. CI accepts only exit 0 from a reviewed run.
 | 2 — trading_behavior | PASS | All in-scope findings passed |
 | 3 — regression_change | PASS | Nothing changed since the reference; this is not a regression test of a change |
 
-Run `final-run` · commit `ca5ef229b9ca35808eb0c170ea77d94805d92f83` · tracked changes `False` · spec `4448a6f9e9ee3841e0086a8e556c21bbd584efc9167742a831154f70e3e18a8e`.
+Run `final-run` · commit `35b5af7d8f2dae7cf8eb7de0b97162a9188e48ca` · tracked changes `False` · spec `4448a6f9e9ee3841e0086a8e556c21bbd584efc9167742a831154f70e3e18a8e`.
 
 **Not claimed by this gate** (spec-verification `out_of_scope`): HISTORY-003, HISTORY-004, HISTORY-005, STATE-001, STATE-002, STATE-005. All 73 D prose obligations are unchecked prose; 23 code-owned boundary checks constrain the tables.
 
@@ -76,7 +76,7 @@ Captured cases: **46** (two 23-case captures; 14 labels per capture). No abstent
 | BR-FIRM | 24/46 | 20/46 | Service class: 22 |
 | BR-UNRESOLVED | 46/46 | 9/46 |  |
 
-Previous commit: `c90e5d25267dbf8ef415143561a0b17864c3a9da`. Spec-to-spec consequences with current fixed compiler; not a runtime regression mapping
+Previous commit: `41fd17205f05834e70140c6ff116b256c764d128`. Spec-to-spec consequences with current fixed compiler; not a runtime regression mapping
 
 | Notice/capture | From | To |
 |---|---|---|
