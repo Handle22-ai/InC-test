@@ -445,3 +445,12 @@ Missing harness/evidence capability: a check that the replayed history honours D
 Harness improvement made: the gate replays all earlier versions; consequences keeps the last valid version rather than dropping it. The new test fails on the old code, and the parity test still passes.
 Could the same code read be avoided next time? Partly: the gate should state in its evidence how it rebuilds each case's history.
 
+CODE-READ-ID: AUDIT5-TIER2-SPEC-WORDING-20260928
+Observed failure: Tier 2 of the fifth audit (#15, #16, #8): spec text that overstated what STATE-003 and OBS-001 check, a status vocabulary missing two statuses, and a boundary count that did not match its table.
+Why evidence was insufficient: rewording what a check claims needs to know what it observes, and the evidence records only PASS and an observation count.
+Source inspected: `harness/normalized_evaluation.py` (290–325, the OBS-001 `provenance` fields), `harness/spec_ownership.py` (the status sets `reread` accepts), `harness/spec_compiler.py` (388–393, the statuses compile accepts).
+What was learned: OBS-001 checks five run identities, not request IDs or raw output. `reread` accepts `approved` and `owner-requested` (README said only `approved`). `spec_edits` judges measurement by any moved Gate 3 decision, so an evaluator change can make an unmeasured wording edit look measured.
+Missing harness/evidence capability: each check's observed fields stated in the spec it serves; spec-to-spec measurement in `spec_edits`.
+Harness improvement made: none to the harness; spec wording under AUDIT5-001 (proposed), a README correction, and one test that now fixes its own review state (`c6baeb1`).
+Could the same code read be avoided next time? Yes, if each verification row named the fields its check reads.
+
