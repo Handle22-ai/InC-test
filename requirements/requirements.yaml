@@ -1,4 +1,4 @@
-# Generated from spec.md; spec-sha256: c1f20c1cf233a0ccdd5607c33a443bf653f0e3993b334b806498b55686d4b937; requirements; DO NOT EDIT
+# Generated from spec.md; spec-sha256: 8586b61f3cb4f3c18642d6b4433a5894e68d7680cea6ca905c22ea3f399b0f30; requirements; DO NOT EDIT
 {
   "version": 2,
   "policy_id": "assessment-v4-timezone-separation-20260928",
@@ -519,7 +519,7 @@
     {
       "id": "STATE-003",
       "title": "Already emitted signals",
-      "statement": "Automatic alerting must use the approved event identity, persistent alert keys and acknowledgement contract.",
+      "statement": "At the publisher seam, a resolved event records at most PARAM-INITIAL-001 initial alerts, a replay records none, and a candidate without authorization records none (replay steps A, B, E and missing-authorization). Persistent alert keys, delivery attempts and acknowledgements (D1-008 to D1-010) are not built and not claimed.",
       "rationale": "Duplicate trading actions create risk.",
       "severity": "critical",
       "preconditions": "A candidate for automatic alerting, including initial, update, replay and retry decisions.",
@@ -901,7 +901,7 @@
     {
       "id": "OBS-001",
       "title": "Evidence provenance",
-      "statement": "Every run must retain input, spec, requirements, implementation, model/prompt and dependency identities plus raw output and prior state.",
+      "statement": "Every gate run records the source-content hash, the spec hash, the comparison identity, the configured model and each registered capture's original execution identity. Model request IDs, raw output and prior state are retained inside the registered captures and are not re-checked per run.",
       "rationale": "Supports independent review and reproduction.",
       "severity": "critical",
       "preconditions": "Every harness run.",

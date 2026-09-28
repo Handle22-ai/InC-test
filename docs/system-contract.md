@@ -1,6 +1,6 @@
 # Generated input contract
 
-Source: spec.md SHA256 c1f20c1cf233a0ccdd5607c33a443bf653f0e3993b334b806498b55686d4b937
+Source: spec.md SHA256 8586b61f3cb4f3c18642d6b4433a5894e68d7680cea6ca905c22ea3f399b0f30
 
 | ID | Source field | Type | Missing | Malformed | Supplier |
 |---|---|---|---|---|---|
