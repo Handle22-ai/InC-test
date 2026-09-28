@@ -346,3 +346,12 @@ Missing harness/evidence capability: a check that the preview and the gate agree
 Harness improvement made: `3fb95fa`, where consequences mirrors the rule by reusing the gate's `semantic_evidence`, plus the parity test. It is an evaluator change, so Gate 3 reports EVALUATOR_OR_ORACLE_CHANGED until the owner registers a new reference.
 Could the same code read be avoided next time? Yes, if spec.md stated which decisions enter history. That is a spec proposal for the owner.
 
+CODE-READ-ID: AUDIT5-TIER1-CRASH-20260928
+Observed failure: fifth audit #11. Changing INPUT-SOURCE-022 from `integer` to `text` made `gate --proposal` exit 5 with `SPECIFICATION_INTEGRITY_ERROR "KeyError: 'candidate_classification'"`, and CURRENT.md named no spec row.
+Why evidence was insufficient: the crash was reduced to a key name; the gate retained neither a traceback nor the refused input.
+Source inspected: `harness/normalized_evaluation.py` (800–840, the catch-all that labels any exception SPECIFICATION_INTEGRITY_ERROR), `harness/signal_evaluation.py` (120–160, 250–280, 292–336, 445–470), `harness/current_evidence.py` (295–312), and `rebuilt/signals.py` (84–122, the input-refusal record, which has no `candidate_classification`).
+What was learned: the component's refusal already names the row (`spec.md:447: block spec-inputs, row INPUT-SOURCE-022`); the harness dropped it. The catch-all still turns any unexpected harness exception into a spec-integrity refusal.
+Missing harness/evidence capability: a stated output shape for refusals, and a traceback kept for harness exceptions.
+Harness improvement made: the replay observer reads the key tolerantly and attaches `refused_by` to failing findings; test `test_an_input_refusal_in_the_replay_is_a_finding_not_a_crash`. It is an evaluator change.
+Could the same code read be avoided next time? Yes, if the catch-all kept a traceback under evidence and labeled it HARNESS_EXCEPTION instead of SPECIFICATION_INTEGRITY_ERROR. That is a further Tier 1 item.
+
