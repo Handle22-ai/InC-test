@@ -1,4 +1,4 @@
-# Generated from spec.md; spec-sha256: 4448a6f9e9ee3841e0086a8e556c21bbd584efc9167742a831154f70e3e18a8e; behavior; DO NOT EDIT
+# Generated from spec.md; spec-sha256: c07da2192a09b2f7cd62951facc12594ca9a59a975abc25aff2082d48f8e6828; behavior; DO NOT EDIT
 {
   "version": 6,
   "policy_id": "assessment-v4-timezone-separation-20260928",
@@ -1430,7 +1430,7 @@
       "spec_line": 351
     }
   ],
-  "source_spec_sha256": "4448a6f9e9ee3841e0086a8e556c21bbd584efc9167742a831154f70e3e18a8e",
+  "source_spec_sha256": "c07da2192a09b2f7cd62951facc12594ca9a59a975abc25aff2082d48f8e6828",
   "normative_role": "Generated from spec.md; never edit",
   "precedence": "BR-FORMAT > BR-SEMANTICS > BR-CONTRADICTION > BR-HISTORY > BR-UNCHANGED > BR-ROUTINE > BR-HISTORICAL > BR-FIRM > BR-UNRESOLVED",
   "input_contract": [
@@ -1904,7 +1904,7 @@
       "Status": "approved",
       "Person": "Thomas Hand",
       "Previous spec SHA256": "c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f",
-      "Decision": "Predicate meaning moves into spec-predicates. An unusable helper verdict vetoes a decision only when the notice is not a firm disruption; the publisher neither stores nor publishes such a decision (SEMANTICS_INCOMPLETE). Measured: capture-1/46864 ERROR -> SIGNAL_CANDIDATE, no new false positive. The publisher witness unusable-impact was re-frozen to match; spec and witness changed in the same session, so the owner's approval is the independent check. Exact spec reread still pending.",
+      "Decision": "Predicate meaning moves into spec-predicates. An unusable helper verdict vetoes a decision only when the notice is not a firm disruption; the publisher neither stores nor publishes such a decision (SEMANTICS_INCOMPLETE). Measured: capture-1/46864 ERROR -> SIGNAL_CANDIDATE, no new false positive. The publisher witness unusable-impact was re-frozen to match; spec and witness changed in the same session, so the owner's approval is the independent check.",
       "_line": 293
     },
     {
