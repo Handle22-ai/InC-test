@@ -591,7 +591,9 @@ task_profiles:
     instructions: Maintain the normalized classifier and normalization only. Treat harness, labels and
       check code as read-only during component maintenance; Gate 3 reports any harness or oracle
       edit. What a rule column means is spec-predicates, and service or availability mappings
-      and named sets live in spec-settings, so changing them is a spec change, not code. Use the declared
+      and named sets live in spec-settings, so changing them is a spec change, not code. Accepted
+      date formats are spec-settings date_formats; the gate's sample dates are in
+      harness/input_contract_checks.py, an evaluator file. Use the declared
       spec-verification scope; out_of_scope rows are never claimed. Proposed business changes need a human decision and exact
       reread; no live calls.
 storage_evaluation: evidence/correction/20260927T220352.636265Z/registered-demo

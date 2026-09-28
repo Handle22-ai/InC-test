@@ -1,6 +1,6 @@
 # The Harness
 
-The engineer owns [spec.md](spec.md) and reads [evidence/CURRENT.md](evidence/CURRENT.md). Coding agents maintain the implementation. The rebuilt component is `NormalizedNotice + EventHistory → SignalDecision` in `rebuilt/`. Its output is a candidate, never a trading recommendation.
+The engineer owns [spec.md](spec.md) and reads [evidence/CURRENT.md](evidence/CURRENT.md). Coding agents maintain the implementation. The rebuilt component is `NormalizedNotice + EventHistory → SignalDecision` in `rebuilt/`. Its output is a candidate, never a trading recommendation. (The replay tests drive a downstream publisher seam with synthetic authorization, and that seam reports `INITIAL_RECOMMENDATION` so duplicate suppression can be checked. No real recommendation path exists.)
 
 This repository starts from one commit; the earlier working history is described in [evidence/ARCHIVE.md](evidence/ARCHIVE.md). [harness.md](harness.md) explains the three gates, what each costs and what it would miss. The code-read map is [evidence/code_reads.md](evidence/code_reads.md).
 
@@ -10,7 +10,7 @@ Needs Python 3.14+, Git and Make. `make setup` downloads pinned packages; everyt
 
 ```bash
 make setup      # venv and pinned dependencies
-make check      # format, lint, types, 157 tests
+make check      # format, lint, types, tests
 make compile    # spec.md -> requirements/*.yaml and schemas; refuses boundary violations
 make gate       # the acceptance run: needs the owner's reread of the current spec bytes
 ```
@@ -30,7 +30,9 @@ Each run writes `evidence/normalized/<time>/CURRENT.md`. It leads with the desk 
 | 4 | An established failure |
 | 5 | Refused before running: stale review, drifted generated files, or a boundary violation |
 
-CI accepts only exit 0. Make reports any failure as exit 2.
+CI (`.github/workflows/gate.yml`) runs `make check` and the gate, and passes only on exit 0. Make reports any failure as exit 2.
+
+**What makes the owner's review real:** in GitHub settings, protect `main`. Require pull requests, require the `gate` check, require review from code owners (`.github/CODEOWNERS` covers spec.md, the read receipt, the oracle and the harness), and include administrators. Without that, anyone who can run `harness reread` can produce an accepted run; see harness.md, "Limits".
 
 ## Run the harness against the inherited system (live model calls)
 

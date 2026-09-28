@@ -1,0 +1,12 @@
+# Changes to policy, the owner's read receipt, the evaluation oracle or the harness
+# need the owner's review once branch protection requires code-owner approval.
+spec.md                          @Handle22-ai
+context/spec-read-pin.json       @Handle22-ai
+context/authority-reference.json @Handle22-ai
+requirements/dataset.json        @Handle22-ai
+requirements/*witnesses.json     @Handle22-ai
+requirements/capture-registry.json @Handle22-ai
+evidence/current-baseline.json   @Handle22-ai
+harness/                         @Handle22-ai
+tests/                           @Handle22-ai
+.github/                         @Handle22-ai

@@ -19,7 +19,7 @@ response, what did not and why, and what now waits on the owner.
 |---|---|---|
 | What FIRM_DISRUPTION means lived in `harness/domain_rules.py` | The `spec-predicates` table in spec.md | Every fresh session had to read harness code to change "what is firm" (audit #23) |
 | The rebuilt component imported the harness, so the gate checked the harness against itself | `rebuilt/` imports nothing from `harness/`; a test enforces it | Agreement checks were circular (#22) |
-| A failed impact helper vetoed every decision | It vetoes only non-firm notices; such decisions are neither stored nor published | 46864, the only force majeure, was lost to a helper no rule reads (REMEDIATION-001, approved) |
+| A failed impact helper vetoed every decision | It vetoes only non-firm notices; such decisions are neither stored nor published | 46864, the only notice typed FORCE MAJEURE, was lost to a helper no rule reads (REMEDIATION-001, approved) |
 | Gate could never exit 0: 12 rows permanently UNKNOWN | Six unobservable rows are declared out of scope and listed; five gained observers; Gate 2 judges acceptance budgets | A gate that cannot pass cannot discriminate (#13; REMEDIATION-003, approved) |
 | Gate 3 NONCOMPARABLE on any spec change | Changed decisions must match the spec's derivation; harness or oracle edits are named and block | Spec changes are when regression evidence matters (#8, #15) |
 | Unzoned restrictions could never end | ENDED once past under every offset; labels scored as of posting | Expired restrictions stayed candidates live (#29; REMEDIATION-002, approved) |

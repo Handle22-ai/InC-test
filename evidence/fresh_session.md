@@ -1,6 +1,6 @@
 # Fresh-session maintenance exercise (2026-09-28, branch claude/audit-remediation)
 
-A new agent session started with no conversation history, on a clean clone of commit `d09b68d`. It received only README's first message plus the change below. Nothing else was explained.
+A new agent session started with no conversation history, on a clean clone of pre-publication commit `d09b68d` (see ARCHIVE.md). It received only README's first message plus the change below. Nothing else was explained.
 
 **Starting request.** The inherited extractor labels NGPL's No-Notice Service restrictions with `service_type: NO_NOTICE`. NNS is a firm, storage-backed service, but today those rows are not recognised as firm. The desk wants a firm restriction on NNS handled like other firm-service disruptions.
 
@@ -22,9 +22,9 @@ Generated files were recompiled. No component or harness code changed.
 **Gate results.** `make consequences`: 0 of 46 captured outcomes change. The only captured NNS row (46528, labeled negative) is a partial hourly limit and correctly stays non-firm. `gate --proposal` gave the same result before and after: Gate 1 PASS, Gate 2 PASS, Gate 3 UNKNOWN (EVALUATOR_OR_ORACLE_CHANGED, already present from the remediation). The desk view is unchanged: 2 of 7 positives missed and 0 false positives per capture. A scratch probe showed the component and the harness oracle agreeing: NNS unavailable → BR-FIRM; NNS partial and interruptible → unresolved.
 
 **New learning, retained for the next session.**
-1. A test matched the literal `FIRM_SERVICES` text, so any real edit of the set broke it. The test now reads the current set. Fixed on this branch.
+1. A test matched the literal `FIRM_SERVICES` text, so any real edit of the set broke it. The coordinating session fixed the test in the same commit that adopted the NNS policy; an evaluator change and a policy change should not share a commit.
 2. No labeled or frozen NNS outage exists, so the intended effect is unmeasured. The owner should add an NNS-unavailable witness; that is an oracle change.
 3. The desk should confirm that a partial NNS limit stays non-firm, as it does for primary and secondary firm service.
 4. The package should say that service mappings and `FIRM_SERVICES` are spec-owned. The agent read two component files to confirm this; both reads are recorded in `code_reads.md`.
 
-**Owner decision:** NNS-FIRM-001 approved 2026-09-28. Still open: reread, and add an NNS-unavailable witness.
+**Owner decision:** NNS-FIRM-001 approved on 2026-09-28 and covered by the owner's reread. Still open: an NNS-unavailable witness.

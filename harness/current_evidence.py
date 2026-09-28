@@ -20,9 +20,11 @@ def desk_summary(result: dict) -> list[str]:
     ]
     if not rows:
         return []
+    outcomes = result.get("trading_layer", {}).get("label_outcomes", [])
     lines = [
-        "| Capture | Labeled positives missed (limit) | Labeled negatives signaled (limit) |",
-        "|---|---|---|",
+        "| Capture | Labeled positives missed (limit) | Labeled negatives signaled (limit) "
+        "| Labeled negatives sent to review |",
+        "|---|---|---|---|",
     ]
     for capture in sorted({r["case"] for r in rows}):
         cells = []
@@ -30,11 +32,20 @@ def desk_summary(result: dict) -> list[str]:
             row = next(r for r in rows if r["case"] == capture and r["code"] == code)
             cases = ", ".join(c.split("/")[-1] for c in row["cases"]) or "none"
             cells.append(f"{row['observed']}/7 ({row['limit']}) — {cases}")
-        lines.append(f"| {capture} | {cells[0]} | {cells[1]} |")
+        review = [
+            o["notice_id"]
+            for o in outcomes
+            if o["id"].startswith(capture + "/")
+            and o["label"] is False
+            and o["classification"] == "UNRESOLVED"
+        ]
+        cells.append(f"{len(review)}/7 — {', '.join(map(str, review)) or 'none'}")
+        lines.append(f"| {capture} | {cells[0]} | {cells[1]} | {cells[2]} |")
     lines += [
         "",
         "A positive sent to review counts as missed: nobody on the desk receives review items "
-        "today. Limits are spec-settings `acceptance`.",
+        "today. Limits are spec-settings `acceptance`. Negatives sent to review have no budget "
+        "yet; that needs a desk decision on review capacity.",
     ]
     return lines
 
@@ -68,6 +79,14 @@ def render(destination: Path, result: dict) -> None:
         "",
         f"Non-passing finding codes: **{', '.join(codes) or 'none'}**. CI accepts only exit 0 "
         "from a reviewed run.",
+        "",
+        "Gates judge the **rebuilt component**. The inherited system is measured below, "
+        "not gated"
+        + (
+            f" (12-step replay: **{result['inherited_layer']['status']}**)."
+            if result.get("inherited_layer")
+            else "."
+        ),
         "",
         "| Gate | Status | Why |",
         "|---|---|---|",

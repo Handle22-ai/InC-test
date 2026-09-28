@@ -1,0 +1,19 @@
+name: gate
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # the Gate 3 reference must be an ancestor commit
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - run: make setup
+      - run: make check
+      # Only exit 0 passes: a reviewed spec, a clean tree and all three gates PASS.
+      - run: .venv/bin/python -B -m harness gate
