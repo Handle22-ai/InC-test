@@ -6,6 +6,11 @@ context/authority-reference.json @Handle22-ai
 requirements/dataset.json        @Handle22-ai
 requirements/*witnesses.json     @Handle22-ai
 requirements/capture-registry.json @Handle22-ai
+requirements/trading-evidence.json @Handle22-ai
+requirements/oracle-support.json @Handle22-ai
+context/spec-owner-review.json   @Handle22-ai
+context/assumptions.md           @Handle22-ai
+evidence/reference-*/            @Handle22-ai
 evidence/current-baseline.json   @Handle22-ai
 harness/                         @Handle22-ai
 tests/                           @Handle22-ai
