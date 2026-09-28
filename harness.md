@@ -28,6 +28,8 @@ What is still hand-written: 25 boundary checks in `harness/rule_invariants.py`, 
 
 The acceptance budgets (REMEDIATION-003, approved by the owner) are a ratchet at today's measured level: at most 2 missed positives and 0 false positives per capture. A positive sent to review counts as missed, because no one on the desk receives review items yet.
 
+**Abstention is not safety, and the rebuilt component is not shown to be the better system.** On the live capture-2, the inherited system detects 7/7 labeled positives with 0 false positives and leaves 1/14 labeled notices unresolved. The rebuilt component detects 5/7, also with 0 false positives, but leaves 6/14 unresolved: 2 positives and 4 negatives (46528, 46725, 46728, 46795) go to review instead of a decision. Its zero false positives are bought largely by abstaining. The review queue those cases go to has no owner and no capacity budget: nobody receives it, and Gate 2 limits only missed positives and false positives, not how much is sent to review. So "0 false positives" in the desk table is not evidence that the rebuilt component is safer. Settling it needs a desk review-capacity number and the review rate on unlabeled live notices; until then the honest comparison is that the inherited system finds more on these 14 labels and the rebuilt one is more predictable across runs (its outcomes are identical on all three captures, while the inherited system's differ).
+
 ## What the evidence surface must never hide
 
 Missed positives, false positives, abstentions counted as correct, execution failures scored as behavior, rows the gate does not claim, and an unreviewed spec. CURRENT.md shows each of these at the top. Unresolved cases are counted, never credited.
