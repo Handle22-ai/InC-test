@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import tempfile
 import unittest
 from pathlib import Path
@@ -142,3 +143,44 @@ class UnmeasuredEditTests(unittest.TestCase):
         self.assertEqual(
             self.gate_edits(old, moved=False), {"spec-verification / SIGNAL-004 (edited)": True}
         )
+
+
+class ContextReviewTests(unittest.TestCase):
+    """Audit 5 #13: an agent's package must say when spec.md is not what the owner reread."""
+
+    def package(self) -> tuple[dict, str]:
+        from harness import context
+
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory) / "out"
+            context.write_package("recommendation-classification-maintenance", out)
+            return json.loads((out / "package.json").read_text()), (out / "package.md").read_text()
+
+    def test_the_reviewed_spec_carries_no_warning(self):
+        package, text = self.package()
+        self.assertEqual(package["spec_review"]["edits_since_reread"], [])
+        self.assertNotIn("SPEC UNREVIEWED", text)
+        self.assertIn("No check reads the assumptions table", text)
+
+    def test_an_unreviewed_assumption_edit_is_named_at_the_top(self):
+        spec = (ROOT / "spec.md").read_text()
+        reread = spec.replace("block automatic alerts on history gaps", "allow automatic alerts")
+        self.assertNotEqual(reread, spec)
+        with (
+            patch(
+                "harness.context.review_status",
+                return_value={
+                    "reviewed": False,
+                    "status": "REVIEW_PENDING",
+                    "reason": "spec.md differs from the last reread.",
+                },
+            ),
+            patch("harness.spec_ownership.spec_text_with_hash", return_value=reread),
+        ):
+            package, text = self.package()
+        self.assertEqual(package["spec_review"]["status"], "REVIEW_PENDING")
+        self.assertEqual(
+            package["spec_review"]["edits_since_reread"], ["spec-assumptions / A-004 (edited)"]
+        )
+        self.assertLess(text.index("SPEC UNREVIEWED"), text.index("## Requirements"))
+        self.assertIn("- spec-assumptions / A-004 (edited)", text)

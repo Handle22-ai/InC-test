@@ -15,15 +15,23 @@ from harness.requirements import load_requirements
 from harness.runtime import ROOT, digest, new_run, write_json
 
 
-def select(task: str, manifest_path: Path = ROOT / "context/manifest.yaml") -> dict:
-    from harness.spec_ownership import proposal_scope, verify
+def review_status() -> dict:
+    """The owner's read receipt for the current spec bytes, or why there is none."""
+    from harness.spec_ownership import verify
 
     try:
-        review = verify(ROOT)
+        return verify(ROOT)
     except ValueError as exc:
-        review = {"reviewed": False, "status": "REVIEW_PENDING", "reason": str(exc)}
+        return {"reviewed": False, "status": "REVIEW_PENDING", "reason": str(exc)}
+
+
+def select(task: str, manifest_path: Path = ROOT / "context/manifest.yaml") -> dict:
+    from harness.spec_ownership import proposal_scope
+
+    review = review_status()
     with proposal_scope(ROOT):
         package = _select(task, manifest_path)
+    review["edits_since_reread"] = edits_since_reread()
     package["spec_review"] = review
     return package
 
@@ -163,6 +171,26 @@ def _select(task: str, manifest_path: Path = ROOT / "context/manifest.yaml") -> 
     }
 
 
+def edits_since_reread(root: Path = ROOT) -> list[str]:
+    """Declarations changed since the spec an owner last reread (audit 5 #13).
+
+    An agent reads the package as its context; unreviewed declarations must not look like
+    policy. The package is still written: a session may need context before the reread.
+    """
+    from harness.proposals import declaration_changes
+    from harness.spec_ownership import PIN, spec_text_with_hash
+
+    try:
+        reread = json.loads((root / PIN).read_text()).get("spec_sha256")
+    except OSError, ValueError:
+        reread = None
+    old = spec_text_with_hash(root, reread) if reread else None
+    if old is None:
+        return ["(no reread spec found in the working file or git history)"]
+    text = (root / "spec.md").read_text()
+    return [f"{c['block']} / {c['id']} ({c['change']})" for c in declaration_changes(old, text)]
+
+
 def spec_section(start: str, end: str) -> str:
     text = (ROOT / "spec.md").read_text()
     return text[text.index(start) : text.index(end)].strip()
@@ -194,9 +222,17 @@ def write_package(task: str, destination: Path) -> dict:
     if any((destination / name).exists() for name in ("package.json", "package.md")):
         raise FileExistsError("Context packages are append-only; choose a fresh output directory")
     write_json(destination / "package.json", package)
-    lines = [
-        f"# Selected task: {task}",
-        "",
+    review = package["spec_review"]
+    lines = [f"# Selected task: {task}", ""]
+    if review.get("status") == "REVIEW_PENDING":
+        lines += [
+            f"**SPEC UNREVIEWED.** {review.get('reason', '').rstrip('.')}. These declarations have no owner "
+            "approval yet; treat them as proposals, not requirements, and do not build on them:",
+            "",
+            *[f"- {edit}" for edit in review["edits_since_reread"]],
+            "",
+        ]
+    lines += [
         package["authority"],
         "",
         package["instructions"],
@@ -253,7 +289,16 @@ def write_package(task: str, destination: Path) -> dict:
     lines.extend(f"- {row}" for row in package["known_failures"])
     lines.extend(["", "## Decisions (spec-decisions)", ""])
     lines.extend(f"- {d['ID']} ({d['Status']}): {d['Decision']}" for d in package["decisions"])
-    lines.extend(["", package["assumptions"], ""])
+    lines.extend(
+        [
+            "",
+            package["assumptions"],
+            "",
+            "No check reads the assumptions table; an edit to it is reported only as "
+            "UNMEASURED_POLICY_EDIT.",
+            "",
+        ]
+    )
     lines.extend(["## Pending learning — unapproved, not requirements", ""])
     for item in package["pending_learning"]:
         lines.extend(
