@@ -339,23 +339,16 @@ def identity_findings(
     return rows
 
 
-POLICY_BLOCKS = {
-    "spec-rules",
-    "spec-actions",
-    "spec-predicates",
-    "spec-settings",
-    "spec-parameters",
-    "spec-replays",
-    "spec-replay-actions",
-    "spec-inputs",
-}
+def policy_edit(block: str) -> bool:
+    """Every spec declaration except the decision log, including owned prose (audit 5 #12)."""
+    return block != "spec-decisions"
 
 
 def spec_edits(previous: dict | None, current: dict) -> list[dict]:
     """Spec table edits since the reference run, and whether any measured decision moved."""
     if not previous:
         return []
-    from harness.proposals import declaration_changes
+    from harness.proposals import PROSE_BLOCKS, declaration_changes
     from harness.spec_ownership import spec_text_with_hash
 
     old = spec_text_with_hash(ROOT, previous.get("comparison_identity", {}).get("spec_sha256", ""))
@@ -364,13 +357,14 @@ def spec_edits(previous: dict | None, current: dict) -> list[dict]:
     moved = bool(current["gates"].get("3", {}).get("changed_decisions"))
     edits = []
     for change in declaration_changes(old, (ROOT / "spec.md").read_text()):
-        if change["block"] not in POLICY_BLOCKS:
+        if not policy_edit(change["block"]):
             continue
         edits.append(
             {
                 "declaration": f"{change['block']} / {change['id']} ({change['change']})",
                 "fields": change["fields"],
-                "unmeasured": not moved,
+                # No check reads owned prose, so a decision that moved did not measure it.
+                "unmeasured": change["block"] in PROSE_BLOCKS or not moved,
             }
         )
     return edits
@@ -396,7 +390,7 @@ def edits_covered_by_last_reread(unmeasured: set[str], root: Path = ROOT) -> dic
     edits = [
         f"{change['block']} / {change['id']} ({change['change']})"
         for change in declaration_changes(old, (root / "spec.md").read_text())
-        if change["block"] in POLICY_BLOCKS
+        if policy_edit(change["block"])
     ]
     return {
         "from_spec_sha256": base,

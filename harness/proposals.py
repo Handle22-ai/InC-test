@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import re
 import subprocess
 from difflib import unified_diff
 from pathlib import Path
@@ -52,6 +53,27 @@ def declarations(text: str) -> dict[tuple[str, str], dict]:
                     "line": start + offset,
                     "fields": {"Order": line.removeprefix("Precedence:").strip()},
                 }
+    result.update(prose_declarations(text))
+    return result
+
+
+# Owned prose that no check reads: an edit to it can never be measured (audit 5 #12).
+PROSE_BLOCKS = {"spec-prose", "spec-assumptions"}
+D_SENTENCE = re.compile(r"^\[(D\d-\d{3})\] (.*)$")
+ASSUMPTION = re.compile(r"^\| (A-\d{3}) \| (.*) \| (.*) \|$")
+
+
+def prose_declarations(text: str) -> dict[tuple[str, str], dict]:
+    """Index D-sentences and assessment-assumption rows, which live outside fenced blocks."""
+    result = {}
+    for number, line in enumerate(text.splitlines(), start=1):
+        if match := D_SENTENCE.match(line):
+            result["spec-prose", match[1]] = {"line": number, "fields": {"Sentence": match[2]}}
+        elif match := ASSUMPTION.match(line):
+            result["spec-assumptions", match[1]] = {
+                "line": number,
+                "fields": {"Scope": match[2], "Limit": match[3]},
+            }
     return result
 
 
@@ -413,15 +435,12 @@ def run(spec: Path, base: str, destination: Path, inputs_path: Path | None = Non
     )
     # Examples supplied with --inputs are the author's own; they illustrate an edit but
     # do not count as independent evidence (audit 3 #9).
-    result["unmeasured_edits"] = (
-        []
-        if result["changed_outcomes"]
-        else [
-            f"{c['block']} / {c['id']}"
-            for c in result["declaration_changes"]
-            if c["block"] not in {"spec-decisions"}
-        ]
-    )
+    result["unmeasured_edits"] = [
+        f"{c['block']} / {c['id']}"
+        for c in result["declaration_changes"]
+        if c["block"] != "spec-decisions"
+        and (c["block"] in PROSE_BLOCKS or not result["changed_outcomes"])
+    ]
     (destination / "rules.md").write_text(render_rules(after_contract))
     (destination / "nonmatches.md").write_text(render(result))
     lines = [

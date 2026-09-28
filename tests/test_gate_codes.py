@@ -98,3 +98,47 @@ class GateCodeTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class UnmeasuredEditTests(unittest.TestCase):
+    """Audit 5 #12: owned prose, assumptions and verification scope are policy edits too."""
+
+    def spec(self) -> str:
+        return (ROOT / "spec.md").read_text()
+
+    def swap(self, old: str, new: str) -> str:
+        text = self.spec()
+        self.assertEqual(text.count(old), 1, old)
+        return text.replace(old, new)
+
+    def test_prose_and_assumption_edits_are_declaration_changes(self):
+        from harness.proposals import declaration_changes
+
+        text = self.spec()
+        edited = self.swap(
+            "must not exceed PARAM-INITIAL-001", "must be at least PARAM-INITIAL-001"
+        )
+        edited = edited.replace("block automatic alerts on history gaps", "allow automatic alerts")
+        changed = {(c["block"], c["id"]) for c in declaration_changes(text, edited)}
+        self.assertEqual(changed, {("spec-prose", "D1-005"), ("spec-assumptions", "A-004")})
+
+    def gate_edits(self, old_text: str, moved: bool) -> dict[str, bool]:
+        current = {"gates": {"3": {"changed_decisions": ["x"] if moved else []}}}
+        previous = {"comparison_identity": {"spec_sha256": "reference"}}
+        with patch("harness.spec_ownership.spec_text_with_hash", return_value=old_text):
+            edits = evaluation.spec_edits(previous, current)
+        return {e["declaration"]: e["unmeasured"] for e in edits}
+
+    def test_a_prose_edit_stays_unmeasured_even_when_decisions_moved(self):
+        # The reference spec had different wording; the current spec is what is on disk.
+        old = self.swap("must not exceed PARAM-INITIAL-001", "must be at least PARAM-INITIAL-001")
+        self.assertEqual(self.gate_edits(old, moved=True), {"spec-prose / D1-005 (edited)": True})
+
+    def test_scoping_a_requirement_out_is_a_tracked_policy_edit(self):
+        old = self.swap(
+            "SIGNAL-004 | 2 | labeled_eval | classification |",
+            "SIGNAL-004 | 2 | labeled_eval | out_of_scope |",
+        )
+        self.assertEqual(
+            self.gate_edits(old, moved=False), {"spec-verification / SIGNAL-004 (edited)": True}
+        )
