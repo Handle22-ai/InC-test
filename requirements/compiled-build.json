@@ -1,13 +1,13 @@
 {
-  "spec_sha256": "4e01d836a597f8f4c704d81600758ece828738e5a3db717515f08326d6316ebe",
+  "spec_sha256": "d0023af06fe3263c3754f42c76465366a452317cce4755073aea4a7dedf72cc2",
   "files": {
-    "requirements/behavior.yaml": "26cf5b1024b30f319a99545abc849859f5a4cc09acbf4b0b23bff2b5da70bb9f",
-    "requirements/requirements.yaml": "a4845aa286f3637133619e2143372c6d7626c561e8c2366cfeb66f460b8334c2",
-    "requirements/signal-safety.yaml": "2f916a7fa4aa4e13be12d6b2b955f83a79d58a0809e28fec529d878002271ef7",
-    "requirements/replay-expectations.json": "8f55a0807c635fcc4df66c3c99401fe9872d9a5703a6be8d12802a0a231b7765",
+    "requirements/behavior.yaml": "928f6d9ed14b87521f6495d385946ce14b4c96d7944fc44682f0e8d6b83f9e1e",
+    "requirements/requirements.yaml": "f0a135fefac8d6f7ad7f971e06da48f2e9624bea6d173031dc99eacc4eff883a",
+    "requirements/signal-safety.yaml": "b8fc717e230f953c9ab9788ad7c44dc9049ced21903e955149f65ee796b550c0",
+    "requirements/replay-expectations.json": "3f830154e85d4bfb460fb792b750b18a4add9be5f24c941eb3f66e169705bd8f",
     "requirements/normalized-input.schema.json": "a648bc9b58cddda4cdc33e37c19cccd57d815f84387d512bacc1d9f252ebf598",
     "requirements/normalized-output.schema.json": "f1f538f0c39199dd34225ba646faebaad86ee24c6a21c2d7e5305ae4602402bc",
-    "docs/signal-contract.md": "b372b624116c2b79df72daa678c7f6b0bd8b0d892617a64005c26e2b42a418fa",
-    "docs/system-contract.md": "b57e876c3b65d5c774425d45fec188c99b1f86a9b7abd6da2222a476e9bc5f14"
+    "docs/signal-contract.md": "cfd9d79e2f9611b4c45d7614926c0765b568a39216d0f52724b909dcb07dafb6",
+    "docs/system-contract.md": "ba01dc9770236a4b886ae648e8b2a86342c54492479871097c2c222583a0a0e9"
   }
 }
