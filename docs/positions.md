@@ -59,7 +59,7 @@ Held, with reasons:
 
 Fixed, with tests:
 - **#1 / #17, reference registration.** `harness register-reference RUN DEST --person OWNER` replaces the undocumented baseline command. It refuses non-owners, records the person and the evaluator/oracle files they accepted, and CURRENT.md shows both. A reference with no owner stops Gate 3 from passing but never hides a regression. Earlier commit messages that said "reviewed run" meant the gate ran in reviewed-spec mode. They are pushed and stay as written; from now on such commits say "observed".
-- **#2, reviewer identity.** `spec-settings.owners` lists who may reread or register; anyone else is refused, and CURRENT.md names the reviewer and the decisions covered.
+- **#2, reviewer identity.** `spec-settings.owners` lists who may reread or register; anyone else is refused, and CURRENT.md names the reviewer and the decisions covered. The owners list is taken from the spec last reread, so an edit cannot add its own reviewer (tested).
 - **#3 / #4, circular or partial guards.** New code-owned boundaries: `required_inputs` (identity, status and body stay ERROR when missing) and `refusals_first` (any row refusing on a safety condition precedes every deciding row). Both are keyed on conditions and actions, not rule names.
 - **#5 / #9, consequences.** It now runs the frozen classifier witnesses, so the auditor's routine mutation exits 4. Author-supplied `--inputs` no longer clear UNMEASURED.
 - **#6, #15, #16, report.** Every non-passing finding is listed with requirement and case; coverage shows status per evidence kind; results.json carries its run ID.

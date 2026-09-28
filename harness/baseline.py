@@ -79,9 +79,12 @@ def copy_evidence(source: Path, target: Path) -> None:
 
 
 def owners(root: Path = ROOT) -> list[str]:
+    """Owners of the spec the owner last reread (see spec_ownership.owners_as_of)."""
     from harness.spec_compiler import compile_spec
+    from harness.spec_ownership import PIN, owners_as_of
 
-    return list(compile_spec(root).get("owners", []))
+    pin = json.loads((root / PIN).read_text()) if (root / PIN).exists() else {}
+    return owners_as_of(root, pin.get("spec_sha256"), compile_spec(root))
 
 
 def require_owner(person: str, root: Path = ROOT) -> None:

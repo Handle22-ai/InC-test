@@ -101,6 +101,50 @@ def _review_record(root: Path, c: dict, decision: str, person: str, reference: d
         raise refuse() from exc
 
 
+def spec_text_with_hash(root: Path, sha256: str) -> str | None:
+    """The spec bytes with this SHA-256: the working file or a committed version."""
+    import hashlib
+    import subprocess
+
+    current = (root / "spec.md").read_text()
+    if hashlib.sha256(current.encode()).hexdigest() == sha256:
+        return current
+    try:
+        commits = subprocess.check_output(
+            ["git", "log", "--format=%H", "--", "spec.md"],
+            cwd=root,
+            text=True,
+            stderr=subprocess.DEVNULL,
+        ).split()
+        for commit in commits:
+            text = subprocess.check_output(
+                ["git", "show", f"{commit}:spec.md"], cwd=root, text=True, stderr=subprocess.DEVNULL
+            )
+            if hashlib.sha256(text.encode()).hexdigest() == sha256:
+                return text
+    except OSError, subprocess.CalledProcessError:
+        return None
+    return None
+
+
+def owners_as_of(root: Path, reviewed_sha256: str | None, current: dict) -> list[str]:
+    """Owners declared by an already reread spec, so an edit cannot name its own reviewer.
+
+    Only when that spec declared no owners (the reread that introduces the list) does
+    the list in the spec being reread apply.
+    """
+    if reviewed_sha256:
+        text = spec_text_with_hash(root, reviewed_sha256)
+        if text is not None:
+            try:
+                listed = compile_spec(root, text).get("owners")
+            except ValueError:
+                listed = None
+            if listed:
+                return list(listed)
+    return list(current.get("owners", []))
+
+
 def verify(root: Path = ROOT, contract: dict | None = None) -> dict:
     c = contract or compile_spec(root)
     if _PROPOSAL.get() == (root.resolve(), c["source_spec_sha256"]):
@@ -159,7 +203,8 @@ def verify(root: Path = ROOT, contract: dict | None = None) -> dict:
         )
     if pin.get("approval") is not False:
         raise fail("spec-decisions", row["ID"], row["_line"], "read receipt is not approval")
-    listed = c.get("owners", [])
+    previous = pin.get("previous_read") or {}
+    listed = owners_as_of(root, previous.get("spec_sha256"), c)
     if listed and pin.get("person") not in listed:
         raise fail(
             "spec-settings",
@@ -204,7 +249,8 @@ def reread(
     previous reread; each must be approved (or owner-requested) and name person.
     """
     c = compile_spec(root)
-    listed = c.get("owners", [])
+    last = json.loads((root / PIN).read_text()) if (root / PIN).exists() else {}
+    listed = owners_as_of(root, last.get("spec_sha256"), c)
     if listed and person not in listed:
         raise fail(
             "spec-settings",

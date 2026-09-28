@@ -231,6 +231,34 @@ class SpecSourceTests(unittest.TestCase):
             baseline.require_owner("Somebody Else", self.root)
         baseline.require_owner("Synthetic Test Person", self.root)
 
+    def test_an_edit_cannot_add_its_own_reviewer_as_owner(self):
+        import subprocess
+
+        def git(*args):
+            subprocess.run(
+                ["git", "-c", "user.name=t", "-c", "user.email=t@t", *args],
+                cwd=self.root,
+                check=True,
+                capture_output=True,
+            )
+
+        path = self.root / "spec.md"
+        text = path.read_text().replace(" | Thomas Hand | ", " | Owner A | ")
+        text = text.replace('"owners": ["Thomas Hand"]', '"owners": ["Owner A"]')
+        path.write_text(text)
+        first = reread("ARCH-SOURCE-001", "Owner A", self.root)
+        git("init", "-q")
+        git("add", "-A")
+        git("commit", "-qm", "reviewed")
+        anchor = next(line for line in text.splitlines() if line.startswith("ARCH-SOURCE-001 |"))
+        row = f"TAKEOVER-001 | approved | Agent | {first['spec_sha256']} | Add myself."
+        edited = text.replace(anchor, anchor + "\n" + row).replace(
+            '"owners": ["Owner A"]', '"owners": ["Owner A", "Agent"]'
+        )
+        path.write_text(edited)
+        with self.assertRaisesRegex(ValueError, "not a spec owner"):
+            reread(None, "Agent", self.root)
+
     def test_declared_types_and_dates_refuse_fabrication(self):
         c = compile_spec(self.root)
         self.assertEqual(timestamp("2026-01-14", c), (None, None))
