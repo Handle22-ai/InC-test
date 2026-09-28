@@ -427,3 +427,12 @@ Missing harness/evidence capability: none; each flag's meaning is now stated whe
 Harness improvement made: `helpers_complete` is None when processing failed before any helper was asked. A synthetic failing-provider test fails on the old code. No new live call was made.
 Could the same code read be avoided next time? Yes, if the record said N/A whenever a precondition failed, as `output_shape_valid` already does.
 
+CODE-READ-ID: AUDIT5-FOLLOWUP-HARNESS-EXCEPTION-20260928
+Observed failure: follow-up to #11. Any exception without a known code was reported as SPECIFICATION_INTEGRITY_ERROR with only its message.
+Why evidence was insufficient: the finding held only the message, e.g. `KeyError: 'candidate_classification'`, with no location.
+Source inspected: `harness/normalized_evaluation.py` (765–860, the catch-all; `exit_code`; `verify_evidence`; the manifest hashes only *.json), `harness/contract_preflight.py` (1–45), `harness/runtime.py` (`write_json`).
+What was learned: deliberate refusals are all ValueError, while harness defects surface as KeyError, TypeError and similar. A ValueError raised by a harness bug is still labeled a spec-integrity error, but its traceback is now kept.
+Missing harness/evidence capability: a traceback for every unexpected error.
+Harness improvement made: `unclassified()` and `trace()`; `exception.json` is written for every caught error and hashed by the manifest. 2 tests, both failing on the old code.
+Could the same code read be avoided next time? Yes: the traceback is now in the evidence.
+

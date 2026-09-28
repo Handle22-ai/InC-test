@@ -30,7 +30,7 @@ Each run writes `evidence/normalized/<time>/CURRENT.md`. It leads with the desk 
 | 0 | All three gates pass on a reviewed spec |
 | 3 | Something in scope is UNKNOWN, or the run is proposal-only |
 | 4 | An established failure |
-| 5 | Refused before running: stale review, drifted generated files, or a boundary violation |
+| 5 | Refused before running: stale review, drifted generated files, or a boundary violation; or a harness defect (`HARNESS_EXCEPTION`, traceback in `exception.json`) |
 
 CI (`.github/workflows/gate.yml`) runs `make check` and the gate, and passes only on exit 0. Make reports any failure as exit 2.
 
