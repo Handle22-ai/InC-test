@@ -409,3 +409,12 @@ Missing harness/evidence capability: the refusing stage recorded with each refus
 Harness improvement made: `refused_by` {compile, gate} and one headline per stage; 2 tests, both failing on the old code.
 Could the same code read be avoided next time? Yes: the report now names the stage.
 
+CODE-READ-ID: AUDIT5-TIER1-COUPLED-TESTS-20260928
+Observed failure: fifth audit #45. `make check` went red on legitimate spec edits (within→overlaps, two precedence swaps, an assumption rewording) because five tests located their fixtures by exact spec text or depended on which boundary failed first.
+Why evidence was insufficient: a red test says which assertion failed, not whether the policy or the fixture broke.
+Source inspected: the five tests; `harness/rule_invariants.py` (`evaluate`, `enforce`); `harness/spec_ownership.py` (`verify`, `proposal_scope`); `harness/offline.py` (50–66; `make check` runs tests inside `proposal_scope`); and the structure of `requirements/behavior.yaml` (`predicates`).
+What was learned: `enforce()` reports only the first failing boundary, so a test that pins its message depends on table order. `make check` already measures an unreviewed spec in proposal scope.
+Missing harness/evidence capability: none new; the fixtures now derive from compiled tables.
+Harness improvement made: the five tests were rewritten, each asserting that its mutation changed something. Under the four harmless edits (run as `make check` runs them), the old tests go red and the new ones pass.
+Could the same code read be avoided next time? Yes, if test fixtures are written against compiled tables from the start.
+
