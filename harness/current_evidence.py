@@ -148,8 +148,9 @@ def render(destination: Path, result: dict) -> None:
     reread_edits = result.get("spec_edits_covered_by_last_reread") or {}
     if reread_edits.get("edits"):
         lines += [
-            "Spec table edits covered by the last reread (from spec "
-            f"`{str(reread_edits['from_spec_sha256'])[:12]}…`), kept after reference registration:",
+            "Spec edits covered by the last reread (from spec "
+            f"`{str(reread_edits['from_spec_sha256'])[:12]}…` to the reread spec "
+            f"`{str(reread_edits.get('to_spec_sha256'))[:12]}…`), kept after reference registration:",
             "",
         ]
         lines += [

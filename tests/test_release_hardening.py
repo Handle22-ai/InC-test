@@ -175,7 +175,10 @@ class BoundaryAndEvidenceTests(unittest.TestCase):
             subprocess.run([*git, "add", "-A"], cwd=root, check=True)
             subprocess.run([*git, "commit", "-qm", "before"], cwd=root, check=True)
             (root / "spec.md").write_text(spec)
-            pin = {"previous_read": {"spec_sha256": hashlib.sha256(before.encode()).hexdigest()}}
+            pin = {
+                "spec_sha256": hashlib.sha256(spec.encode()).hexdigest(),
+                "previous_read": {"spec_sha256": hashlib.sha256(before.encode()).hexdigest()},
+            }
             write_json(root / "context/spec-read-pin.json", pin)
             covered = edits_covered_by_last_reread(set(), root)
             first = "spec-settings / acceptance (edited)"

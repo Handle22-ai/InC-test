@@ -184,3 +184,42 @@ class ContextReviewTests(unittest.TestCase):
         )
         self.assertLess(text.index("SPEC UNREVIEWED"), text.index("## Requirements"))
         self.assertIn("- spec-assumptions / A-004 (edited)", text)
+
+
+class RereadCoverageTests(unittest.TestCase):
+    """Audit 5 #14: edits made after the reread must never be listed as covered by it."""
+
+    def test_an_unreviewed_working_edit_is_not_covered_by_the_last_reread(self):
+        import hashlib
+        import subprocess
+
+        from harness.runtime import write_json
+
+        spec = (ROOT / "spec.md").read_text()
+        before = spec.replace(
+            '"max_false_positives_per_capture": 0', '"max_false_positives_per_capture": 1'
+        )
+        working = spec.replace("block automatic alerts on history gaps", "allow automatic alerts")
+        self.assertNotEqual(before, spec)
+        self.assertNotEqual(working, spec)
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "context").mkdir()
+            git = ["git", "-c", "user.name=t", "-c", "user.email=t@t"]
+            subprocess.run([*git, "init", "-q"], cwd=root, check=True)
+            for text, message in ((before, "previous read"), (spec, "reread")):
+                (root / "spec.md").write_text(text)
+                subprocess.run([*git, "add", "-A"], cwd=root, check=True)
+                subprocess.run([*git, "commit", "-qm", message], cwd=root, check=True)
+            (root / "spec.md").write_text(working)  # an edit nobody has reread
+            write_json(
+                root / "context/spec-read-pin.json",
+                {
+                    "spec_sha256": hashlib.sha256(spec.encode()).hexdigest(),
+                    "previous_read": {"spec_sha256": hashlib.sha256(before.encode()).hexdigest()},
+                },
+            )
+            covered = evaluation.edits_covered_by_last_reread(set(), root)
+        self.assertEqual(
+            [e["declaration"] for e in covered["edits"]], ["spec-settings / acceptance (edited)"]
+        )

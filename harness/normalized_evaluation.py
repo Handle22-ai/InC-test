@@ -371,10 +371,12 @@ def spec_edits(previous: dict | None, current: dict) -> list[dict]:
 
 
 def edits_covered_by_last_reread(unmeasured: set[str], root: Path = ROOT) -> dict:
-    """Spec table edits from the spec before the last reread to the current spec.
+    """Spec edits the last reread covered: from the spec reread before it to the reread bytes.
 
     A reference registration moves the Gate 3 baseline, so the since-reference list
     empties; this list does not, and it keeps any edit known to be unmeasured flagged.
+    It ends at the bytes the owner reread, never the working file: in proposal mode the
+    working file holds edits no one has reread (audit 5 #14).
     """
     from harness.proposals import declaration_changes
     from harness.spec_ownership import PIN, spec_text_with_hash
@@ -384,16 +386,19 @@ def edits_covered_by_last_reread(unmeasured: set[str], root: Path = ROOT) -> dic
     except OSError, ValueError:
         return {"from_spec_sha256": None, "edits": []}
     base = (pin.get("previous_read") or {}).get("spec_sha256")
+    reread = pin.get("spec_sha256")
     old = spec_text_with_hash(root, base) if base else None
-    if old is None:
-        return {"from_spec_sha256": base, "edits": []}
+    new = spec_text_with_hash(root, reread) if reread else None
+    if old is None or new is None:
+        return {"from_spec_sha256": base, "to_spec_sha256": reread, "edits": []}
     edits = [
         f"{change['block']} / {change['id']} ({change['change']})"
-        for change in declaration_changes(old, (root / "spec.md").read_text())
+        for change in declaration_changes(old, new)
         if policy_edit(change["block"])
     ]
     return {
         "from_spec_sha256": base,
+        "to_spec_sha256": reread,
         "edits": [{"declaration": e, "unmeasured": e in unmeasured} for e in edits],
     }
 
