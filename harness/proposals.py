@@ -428,11 +428,13 @@ def run(spec: Path, base: str, destination: Path, inputs_path: Path | None = Non
                 f"{want['classification']}/{want['disposition']}; the proposal gives "
                 f"{got['classification']}/{got['disposition']} ({observed['active_expectation']['rule']})"
             )
-    result["would_be_refused"] = (
-        [violation(r) for r in checks if r["status"] == "FAIL"]
-        + [r["reason"] for r in inputs["findings"]]
-        + witness_failures
-    )
+    # Which stage refuses matters: make compile enforces the boundary checks, while input
+    # contract findings and frozen-witness contradictions stop only the gate (audit 5 #10).
+    result["refused_by"] = {
+        "compile": [violation(r) for r in checks if r["status"] == "FAIL"],
+        "gate": [r["reason"] for r in inputs["findings"]] + witness_failures,
+    }
+    result["would_be_refused"] = result["refused_by"]["compile"] + result["refused_by"]["gate"]
     # Examples supplied with --inputs are the author's own; they illustrate an edit but
     # do not count as independent evidence (audit 3 #9).
     result["unmeasured_edits"] = [
@@ -449,10 +451,21 @@ def run(spec: Path, base: str, destination: Path, inputs_path: Path | None = Non
         "**PROPOSAL ONLY — no policy adoption, read receipt or acceptance.**",
         "",
         *(
-            ["**WOULD BE REFUSED** by `make compile` and the gate:", ""]
-            + [f"- {reason}" for reason in result["would_be_refused"]]
+            ["**WOULD BE REFUSED** by `make compile` (boundary checks) and so by the gate:", ""]
+            + [f"- {reason}" for reason in result["refused_by"]["compile"]]
             + [""]
-            if result["would_be_refused"]
+            if result["refused_by"]["compile"]
+            else []
+        ),
+        *(
+            [
+                "**WOULD BE REFUSED** by the gate only (`make compile` accepts these bytes; "
+                "the input contract and frozen witnesses are checked at gate time):",
+                "",
+            ]
+            + [f"- {reason}" for reason in result["refused_by"]["gate"]]
+            + [""]
+            if result["refused_by"]["gate"]
             else []
         ),
         *(

@@ -242,3 +242,32 @@ class DeskCountTests(unittest.TestCase):
         )
         self.assertEqual(counted, missed)
         self.assertGreater(missed, 0)  # today's captures miss 46732 and 46881 in each
+
+
+class RefusalStageTests(unittest.TestCase):
+    """Audit 5 #10: the consequences headline must name the stage that refuses."""
+
+    def consequences(self, old: str, new: str) -> tuple[dict, str]:
+        from harness.proposals import run
+
+        text = (ROOT / "spec.md").read_text()
+        self.assertEqual(text.count(old), 1, old)
+        with tempfile.TemporaryDirectory(dir=ROOT / "evidence") as directory:
+            proposal = Path(directory) / "proposal.md"
+            proposal.write_text(text.replace(old, new))
+            result = run(proposal, str(ROOT / "spec.md"), Path(directory) / "out")
+            return result, (Path(directory) / "out/REPORT.md").read_text()
+
+    def test_a_witness_contradiction_is_refused_by_the_gate_not_compile(self):
+        result, report = self.consequences(
+            "FIRM_DISRUPTION | ANY | FIRM_CANDIDATE", "FIRM_DISRUPTION | ANY | UNRESOLVED"
+        )
+        self.assertEqual(result["refused_by"]["compile"], [])
+        self.assertTrue(result["refused_by"]["gate"])
+        self.assertIn("by the gate only", report)
+        self.assertNotIn("by `make compile` (boundary checks)", report)
+
+    def test_a_boundary_violation_is_refused_by_compile(self):
+        result, report = self.consequences("BR-HISTORY > BR-UNCHANGED", "BR-UNCHANGED > BR-HISTORY")
+        self.assertTrue(result["refused_by"]["compile"])
+        self.assertIn("by `make compile` (boundary checks)", report)
