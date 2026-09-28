@@ -341,24 +341,38 @@ class LastValidSnapshotTests(unittest.TestCase):
 class SpecMeasurementTests(unittest.TestCase):
     """Audit 5: an edit is measured only if the spec change itself moves a decision."""
 
-    TEXT = ("| Already emitted signals | At the publisher seam", "| Already emitted signals | Here")
-    ROUTINE = ("| ANY | ANY | NO_OPERATIONAL_RESTRICTION", "| ANY | ANY | HISTORICAL_ONLY")
-
-    def edited(self, pair: tuple[str, str]) -> str:
+    def edited(self, key: str, column: int, value: str | None = None) -> str:
+        """Change one cell of a table row found by its ID, not by its wording (audit 5 #45)."""
         text = (ROOT / "spec.md").read_text()
-        self.assertEqual(text.count(pair[0]), 1, pair[0])
-        return text.replace(*pair)
+        line = next(
+            row
+            for row in text.splitlines()
+            if row.startswith(key + " | ") and not row.split(" | ")[1].isdigit()
+        )
+        cells = line.split(" | ")
+        cells[column] = value if value is not None else cells[column] + " (reworded)"
+        changed = text.replace(line, " | ".join(cells))
+        self.assertNotEqual(changed, text)
+        return changed
+
+    @property
+    def TEXT(self) -> str:  # noqa: N802 - reads like the constant it replaces
+        return self.edited("STATE-003", 2)  # the Requirement column
+
+    @property
+    def ROUTINE(self) -> str:  # noqa: N802
+        return self.edited("BR-ROUTINE", -1, "HISTORICAL_ONLY")  # the Action column
 
     def test_a_text_edit_moves_nothing_and_a_reason_edit_moves_routine_cases(self):
         from harness.consequences import spec_moved
 
         current = compile_spec(ROOT)
-        self.assertEqual(spec_moved(compile_spec(ROOT, self.edited(self.TEXT)), current), [])
-        moved = spec_moved(compile_spec(ROOT, self.edited(self.ROUTINE)), current)
+        self.assertEqual(spec_moved(compile_spec(ROOT, self.TEXT), current), [])
+        moved = spec_moved(compile_spec(ROOT, self.ROUTINE), current)
         self.assertTrue(any(key.endswith("/46604") for key in moved), moved)
 
     def test_decisions_an_evaluator_moved_do_not_measure_a_text_edit(self):
-        old = self.edited(self.TEXT)
+        old = self.TEXT
         moved_by_evaluator = {
             "gates": {"3": {"changed_decisions": ["capture-2/unchanged-revision"]}}
         }
