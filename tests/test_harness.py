@@ -158,6 +158,51 @@ class EvidenceTests(unittest.TestCase):
             observer.client().messages.create(model="test-model")
         self.assertNotIn("synthetic-secret-value", json.dumps(observer.calls))
 
+    def test_provider_failures_keep_their_cause_but_not_secrets(self):
+        from harness.live import provider_error, request_failure
+
+        class ProviderError(Exception):
+            def __init__(self, status, kind, message):
+                super().__init__("raw text sk-ant-api03-secret")
+                self.status_code = status
+                self.body = {"type": "error", "error": {"type": kind, "message": message}}
+
+        billing = ProviderError(
+            400,
+            "invalid_request_error",
+            "Your credit balance is too low to access the Anthropic API. key sk-ant-api03-abc",
+        )
+        self.assertEqual(request_failure(billing), "BILLING")
+        kept = provider_error(billing)
+        assert kept is not None
+        self.assertIn("credit balance is too low", kept["message"])
+        self.assertNotIn("sk-ant", json.dumps(kept))
+        missing = ProviderError(404, "not_found_error", "model: claude-nonexistent")
+        self.assertEqual(request_failure(missing), "MODEL_NOT_FOUND")
+        other = ProviderError(500, "api_error", "Internal server error")
+        self.assertEqual(request_failure(other), "PROVIDER_FAILURE")
+
+        def fail(**kwargs):
+            raise billing
+
+        import harness.live as live
+
+        observer = ModelObserver()
+        observer.factory = lambda: SimpleNamespace(
+            messages=SimpleNamespace(create=fail), close=lambda: None
+        )
+        blocker = live._blocker
+        try:
+            with self.assertRaises(ProviderError):
+                observer.client().messages.create(model="test-model")
+            self.assertEqual(live._blocker, "BILLING")
+        finally:
+            live._blocker = blocker
+        record = observer.calls[0]
+        self.assertEqual((record["classification"], record["status_code"]), ("BILLING", 400))
+        self.assertIn("credit balance", record["provider_error"]["message"])
+        self.assertNotIn("sk-ant", json.dumps(observer.calls))
+
     def test_revision_changes_only_header_semantics(self):
         source = ROOT / "inherited/evaluation/notices/46624_CAPACITY CONSTRAINT.html"
         with tempfile.TemporaryDirectory() as directory:

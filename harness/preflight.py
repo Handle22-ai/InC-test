@@ -98,8 +98,20 @@ def run_preflight(run: Path) -> dict:
                 stages=result["stages"],
                 state=restored,
             )
+            failed = next(
+                (c for c in result["model_calls"] if c.get("attempted") and not c["success"]),
+                None,
+            )
+            if failed is not None:
+                # The provider's cause (BILLING, MODEL_NOT_FOUND, ...), its status code and
+                # its redacted message, rather than the inherited system's generic outcome.
+                record["provider_failure"] = {
+                    k: failed.get(k) for k in ("root_cause", "status_code", "provider_error")
+                }
             if result["outcome"] != "SUCCESS":
-                record["classification"] = result["outcome"]
+                record["classification"] = (
+                    failed["root_cause"] if failed is not None else result["outcome"]
+                )
             elif not helpers_complete:
                 record["classification"] = "BUDGET_EXHAUSTED"
             elif all(

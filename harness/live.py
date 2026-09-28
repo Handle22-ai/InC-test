@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -40,14 +41,42 @@ class RequestBlocked(RuntimeError):
         )
 
 
+SECRET = re.compile(r"sk-[\w-]+|[A-Za-z0-9_\-]{32,}")
+
+
+def provider_error(exc: Exception) -> dict | None:
+    """The provider's own error type and message, from its structured body only.
+
+    Arbitrary exception text is never kept. The provider message is kept because it
+    names the cause (credit balance, unknown model); anything shaped like a key or a
+    long token is redacted and the message is cut to 300 characters.
+    """
+    body = getattr(exc, "body", None)
+    error = body.get("error") if isinstance(body, dict) else None
+    if not isinstance(error, dict) or not isinstance(error.get("message"), str):
+        return None
+    return {
+        "type": str(error.get("type", ""))[:60],
+        "message": SECRET.sub("[REDACTED]", error["message"])[:300],
+    }
+
+
 def request_failure(exc: Exception) -> str:
     if isinstance(exc, RequestBlocked):
         return exc.classification
     status = getattr(exc, "status_code", None)
+    error = provider_error(exc) or {"type": "", "message": ""}
+    message = error["message"].lower()
     if status in {401, 403}:
         return "AUTHENTICATION_FAILURE"
-    if status == 404:
-        return "MODEL_UNAVAILABLE"
+    if "credit balance" in message or "billing" in message:
+        return "BILLING"
+    if (
+        status == 404
+        or error["type"] == "not_found_error"
+        or (status == 400 and "model" in message)
+    ):
+        return "MODEL_NOT_FOUND"
     if type(exc).__name__ in {"APIConnectionError", "APITimeoutError"}:
         return "PROVIDER_UNREACHABLE"
     return "PROVIDER_FAILURE"
@@ -55,7 +84,12 @@ def request_failure(exc: Exception) -> str:
 
 def block_requests(classification: str) -> None:
     global _blocker
-    if classification in {"AUTHENTICATION_FAILURE", "MODEL_UNAVAILABLE", "PROVIDER_UNREACHABLE"}:
+    if classification in {
+        "AUTHENTICATION_FAILURE",
+        "BILLING",
+        "MODEL_NOT_FOUND",
+        "PROVIDER_UNREACHABLE",
+    }:
         _blocker = classification
 
 
@@ -73,7 +107,8 @@ def action_for(classification: str) -> str:
     return {
         "CREDENTIALS_MISSING": "Enable the provider and supply a credential through the operator environment; never paste it into evidence.",
         "AUTHENTICATION_FAILURE": "Check credential validity and model permissions outside the evidence directory; no downstream evaluation was authorized by this readiness failure.",
-        "MODEL_UNAVAILABLE": "Check the configured model identifier and account access before an explicitly authorized retry.",
+        "MODEL_NOT_FOUND": "Check the configured model identifier and account access before an explicitly authorized retry.",
+        "BILLING": "The provider account cannot pay for calls (see the retained provider message); resolve billing before an explicitly authorized retry.",
         "BUDGET_EXHAUSTED": "Review the retained attempted/not-attempted calls; any larger budget needs a new explicit invocation.",
         "PROVIDER_UNREACHABLE": "Check provider connectivity before an explicitly authorized retry.",
         "OUTPUT_DESTINATION": "Choose a new writable directory beneath evidence; existing destinations are never reused.",

@@ -46,7 +46,7 @@ make evaluate-inherited LIVE=1 MAX_CALLS=45   # preflight plus 23 cases, about 4
 make e2e-live           LIVE=1 MAX_CALLS=10   # inherited CLI on freshly fetched NGPL notices
 ```
 
-Preflight passes only if every call it needed was made and answered. A blocked or failed helper call reports BUDGET_EXHAUSTED or the failure, never a signal. A wrong key reports AUTHENTICATION_FAILURE and a missing key CREDENTIALS_MISSING. The model ID itself is not validated: a nonexistent model surfaces only as a failed call.
+Preflight passes only if every call it needed was made and answered. A blocked or failed helper call reports BUDGET_EXHAUSTED or the failure, never a signal. A wrong key reports AUTHENTICATION_FAILURE and a missing key CREDENTIALS_MISSING. An account without credit reports BILLING and an unknown model MODEL_NOT_FOUND; both stop further calls. Any other provider error is PROVIDER_FAILURE. Each failed call keeps its status code and the provider's own error message, with anything shaped like a key redacted; other exception text is never kept.
 
 To score a live run with the gate (an oracle change, so the owner does it):
 

@@ -58,6 +58,7 @@ class ModelObserver:
                 RequestBlocked,
                 block_requests,
                 consume_request,
+                provider_error,
                 request_failure,
             )
 
@@ -87,9 +88,11 @@ class ModelObserver:
                 return response
             except Exception as exc:
                 # Never persist exception text: provider errors may echo credential material.
+                # Only the provider's structured message is kept, redacted (live.provider_error).
                 record.update(
                     error_type=type(exc).__name__,
                     status_code=getattr(exc, "status_code", None),
+                    provider_error=provider_error(exc),
                     classification="NOT_ATTEMPTED"
                     if isinstance(exc, RequestBlocked)
                     else request_failure(exc),
