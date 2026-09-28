@@ -223,3 +223,22 @@ class RereadCoverageTests(unittest.TestCase):
         self.assertEqual(
             [e["declaration"] for e in covered["edits"]], ["spec-settings / acceptance (edited)"]
         )
+
+
+class DeskCountTests(unittest.TestCase):
+    """Audit 5 #2: the observed counts must reconcile with the desk table's missed positives."""
+
+    def test_missed_positives_are_decided_negatives_plus_unresolved(self):
+        with tempfile.TemporaryDirectory() as directory:
+            result = trading_evaluation.run(Path(directory))
+        metrics = result["metrics"]
+        self.assertNotIn("supplied_label_false_negatives", metrics)
+        missed = sum(
+            f["observed"] for f in result["findings"] if f["code"] == "LABELED_MISSED_POSITIVES"
+        )
+        counted = (
+            metrics["labeled_positives_decided_non_signal"]["count"]
+            + metrics["labeled_positives_unresolved"]["count"]
+        )
+        self.assertEqual(counted, missed)
+        self.assertGreater(missed, 0)  # today's captures miss 46732 and 46881 in each

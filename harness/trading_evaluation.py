@@ -38,7 +38,8 @@ def run(destination: Path) -> dict:
         key: []
         for key in (
             "supplied_label_false_positives",
-            "supplied_label_false_negatives",
+            "labeled_positives_decided_non_signal",
+            "labeled_positives_unresolved",
             "unscored_labeled",
             "routine_admin_signaled",
             "duplicate_replay_recommendations",
@@ -190,7 +191,10 @@ def run(destination: Path) -> dict:
                     if expected is False and predicted == "SIGNAL_CANDIDATE":
                         metrics["supplied_label_false_positives"].append(key)
                     if expected is True and predicted == "NON_SIGNAL":
-                        metrics["supplied_label_false_negatives"].append(key)
+                        metrics["labeled_positives_decided_non_signal"].append(key)
+                    if expected is True and predicted == "UNRESOLVED":
+                        # Sent to review: a miss for the desk (audit 5 #2), not a decided negative.
+                        metrics["labeled_positives_unresolved"].append(key)
                     status = (
                         ("COUNTED" if acceptance else "UNKNOWN")
                         if predicted == "UNRESOLVED"
@@ -367,7 +371,7 @@ def run(destination: Path) -> dict:
     if acceptance:
         result["findings"].extend(budget_findings(result, acceptance, requirements))
     result["metric_definitions"] = {
-        "false_negatives": "Supplied positive labels classified NON_SIGNAL; abstentions are separately unscored, never credited correct.",
+        "false_negatives": "labeled_positives_decided_non_signal counts positives classified NON_SIGNAL; labeled_positives_unresolved counts positives sent to review. Both are misses for the Gate 2 budget; neither is credited correct.",
         "replay": "Unauthenticated captured scenarios cannot prove positive publication; the separately identified synthetic A–F sequence supplies positive authorization controls.",
         "critical": "Critical source flag on unscored labeled cases; not a new materiality label.",
         "counts": "Each capture/case is counted separately; repeated source notices across captures are not independent samples.",
