@@ -127,6 +127,28 @@ def spec_text_with_hash(root: Path, sha256: str) -> str | None:
     return None
 
 
+def reviewed_settings(root: Path, sha256: str) -> dict | None:
+    """The spec-settings of the spec with this hash, read without compiling it.
+
+    Guards that compare with the last reread spec must not depend on today's compiler
+    accepting yesterday's spec: a compiler change would otherwise switch them off, so
+    unreadable settings refuse. None only when those bytes are in neither the working
+    file nor git history (a limit stated in harness.md).
+    """
+    from harness.spec_compiler import blocks
+
+    text = spec_text_with_hash(root, sha256)
+    if text is None:
+        return None
+    try:
+        _, body = blocks(text)["spec-settings"]
+        return json.loads("\n".join(body))
+    except (KeyError, ValueError) as exc:
+        raise fail(
+            "spec-settings", "-", 1, "REVIEWED_SPEC_UNREADABLE: settings of the reread spec"
+        ) from exc
+
+
 def owners_as_of(root: Path, reviewed_sha256: str | None, current: dict) -> list[str]:
     """Owners declared by an already reread spec, so an edit cannot name its own reviewer.
 
@@ -134,14 +156,9 @@ def owners_as_of(root: Path, reviewed_sha256: str | None, current: dict) -> list
     the list in the spec being reread apply.
     """
     if reviewed_sha256:
-        text = spec_text_with_hash(root, reviewed_sha256)
-        if text is not None:
-            try:
-                listed = compile_spec(root, text).get("owners")
-            except ValueError:
-                listed = None
-            if listed:
-                return list(listed)
+        listed = (reviewed_settings(root, reviewed_sha256) or {}).get("owners")
+        if listed:
+            return list(listed)
     return list(current.get("owners", []))
 
 
@@ -150,13 +167,10 @@ def acceptance_loosening(root: Path, contract: dict) -> list[str]:
     pin_path = root / PIN
     if not pin_path.exists():
         return []
-    reviewed = spec_text_with_hash(root, json.loads(pin_path.read_text())["spec_sha256"])
-    if reviewed is None:
-        return []
-    try:
-        old = compile_spec(root, reviewed).get("acceptance") or {}
-    except ValueError:
-        return []
+    reviewed = reviewed_settings(root, json.loads(pin_path.read_text())["spec_sha256"])
+    if not reviewed or "acceptance" not in reviewed:
+        return []  # no budget was reviewed, so introducing one cannot loosen it
+    old = reviewed["acceptance"] or {}
     new = contract.get("acceptance") or {}
     loosened = [
         f"{key}: {old[key]} -> {new.get(key)}"

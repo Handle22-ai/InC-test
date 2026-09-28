@@ -331,6 +331,34 @@ class SpecSourceTests(unittest.TestCase):
         reread(None, "Owner A", self.root)
         build(self.root)
 
+    def test_the_loosening_guard_survives_a_compiler_change(self):
+        """Probe C5: a reviewed spec the current compiler cannot read must not disable it."""
+        import hashlib
+        import subprocess
+
+        path = self.root / "spec.md"
+        text = path.read_text()
+        old = text.replace("ID | Check | Sentence coverage", "ID | Check | Coverage (old)")
+        self.assertNotEqual(old, text)
+        with self.assertRaises(ValueError):
+            compile_spec(self.root, old)
+        path.write_text(old)
+        git = ["git", "-c", "user.name=t", "-c", "user.email=t@t"]
+        subprocess.run([*git, "init", "-q"], cwd=self.root, check=True)
+        subprocess.run([*git, "add", "-A"], cwd=self.root, check=True)
+        subprocess.run([*git, "commit", "-qm", "reviewed"], cwd=self.root, check=True)
+        reviewed = hashlib.sha256(old.encode()).hexdigest()
+        pin = self.root / "context/spec-read-pin.json"
+        pin.write_text(json.dumps({"spec_sha256": reviewed, "decision": "ARCH-SOURCE-001"}))
+        anchor = next(line for line in text.splitlines() if line.startswith("ARCH-SOURCE-001 |"))
+        looser = text.replace(
+            '"max_missed_positives_per_capture": 2', '"max_missed_positives_per_capture": 4'
+        )
+        row = f"LOOSER-001 | approved | Thomas Hand | {reviewed} | Editorial tidy."
+        path.write_text(looser.replace(anchor, anchor + "\n" + row))
+        with self.assertRaisesRegex(ValueError, "ACCEPTANCE_LOOSENED"):
+            build(self.root)
+
     def test_declared_types_and_dates_refuse_fabrication(self):
         c = compile_spec(self.root)
         self.assertEqual(timestamp("2026-01-14", c), (None, None))

@@ -93,3 +93,4 @@ Moving toward automatic alerts would need:
 - 14 labels, correlated across three captures. No geography or Henry Hub/LNG case can be measured yet (spec A-009).
 - Out of scope, and listed as such: durable storage, material-update delivery, out-of-order reconciliation, late-notice actionability, historical decision retrieval.
 - The unlabeled samples get header and format checks only. Classifying them needs a live run.
+- The budget-loosening and owners guards compare with the spec bytes the owner last reread. They find those bytes in the working file or git history and read their settings without compiling them, so a compiler change cannot switch the guards off. If the reread bytes are in neither place (a reread that was never committed, then edited), both guards fall back to the current spec.
