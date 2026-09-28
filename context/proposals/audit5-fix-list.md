@@ -26,7 +26,7 @@ Source: the fifth audit of `3aaba89` (2026-09-28). Finding numbers (#n) refer to
 5. **Done in the commit after `88bd66f`: #13 Mark an unreviewed spec in the context package.** package.md opens with SPEC UNREVIEWED and the declarations changed since the reread; verified end to end with an inverted A-004. Originally: When the spec hash differs from `context/spec-read-pin.json`, `make context` should stamp package.md "spec unreviewed" or refuse. Either way, say that the assumptions table is prose with no check.
 6. **Done in the commit after `af1468a`: #14 In proposal mode, compute "covered by the last reread" from the pin only.** It now diffs the previous reread against the reread bytes, never the working file; verified end to end with an unreviewed BR-ROUTINE edit. Originally:
 7. **Done in the commit after `7842059`: #2** Renamed to `labeled_positives_decided_non_signal`, with `labeled_positives_unresolved` added; a test holds that the two sum to Gate 2's missed positives. Originally: **Rename `supplied_label_false_negatives`** to `…_decided_negative`, or count unresolved positives in it.
-8. **#10 Name the refusing stage in the consequences headline** (compile, witness or gate).
+8. **Done in the commit after `5bd6c87`: #10** The report now has one headline per refusing stage. Originally: **Name the refusing stage in the consequences headline** (compile, witness or gate).
 9. **#45 Remove string- and count-coupled tests** that fail on harmless edits (the fifth audit's precedence and quantifier mutations).
 10. **#34 Preflight: `helpers_complete` should be false or N/A when extraction failed.**
 

@@ -400,3 +400,12 @@ Missing harness/evidence capability: counts that reconcile with the desk table b
 Harness improvement made: renamed the key, added `labeled_positives_unresolved`, and added a reconciliation test that fails on the old code.
 Could the same code read be avoided next time? Yes, if CURRENT.md rendered `metric_definitions` next to the counts.
 
+CODE-READ-ID: AUDIT5-TIER1-REFUSAL-STAGE-20260928
+Observed failure: fifth audit #10. For a BR-FIRM action edit and a day-first date format, the consequences headline said "WOULD BE REFUSED by `make compile`", yet `make compile` exited 0.
+Why evidence was insufficient: the report merged three refusal sources into one list.
+Source inspected: `harness/proposals.py` (241–320, 400–470, 555–580), `harness/rule_invariants.py` (`enforce`), `harness/spec_compiler.py` (665–669, where compile calls `enforce`).
+What was learned: compile enforces only the rule-invariant boundaries; the input contract and frozen witnesses run at gate time.
+Missing harness/evidence capability: the refusing stage recorded with each refusal.
+Harness improvement made: `refused_by` {compile, gate} and one headline per stage; 2 tests, both failing on the old code.
+Could the same code read be avoided next time? Yes: the report now names the stage.
+
