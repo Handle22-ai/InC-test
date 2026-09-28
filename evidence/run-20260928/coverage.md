@@ -1,8 +1,8 @@
 # Requirement coverage
 
-Run `final-run` · spec `c1f20c1cf233a0ccdd5607c33a443bf653f0e3993b334b806498b55686d4b937` · mode `REVIEWED_SPEC` · commit `695cc5f66afd00e70f94297a878491a9cb0e0d08`.
+Run `final-run` · spec `41cc4f5916379f1cdc3ef1c8841cc8dfd1fe3587f653b2ee2da7563af296eba9` · mode `REVIEWED_SPEC` · commit `8bbcd0e7fdc854304c7db3685e3e9038719fa19d`.
 
-PASS means the declared check passed on the listed observations, not that the whole obligation is proven. OUT_OF_SCOPE rows are declared in spec-verification and never gated.
+PASS means the declared check passed on the listed observations, not that the whole obligation is proven. REVIEW_AS_SPECIFIED means every observation was a case the spec sends to review (spec-settings acceptance `review_satisfies`): its gate passes, but no decision was made. OUT_OF_SCOPE rows are declared in spec-verification and never gated.
 
 | Requirement | Check | Result | Observations | Evidence kind and status (count) |
 |---|---|---|---:|---|
@@ -27,7 +27,7 @@ PASS means the declared check passed on the listed observations, not that the wh
 | SIGNAL-001 | classification | PASS | 58 | FROZEN_WITNESS_MATCH PASS: 5; INDEPENDENT_SEMANTIC_WITNESS PASS: 3; LABELED_FALSE_POSITIVES PASS: 3; LABELED_MISSED_POSITIVES PASS: 3; LABEL_UNRESOLVED_COUNTED COUNTED: 18; REAL_SOURCE_POSITIVE_WITNESS PASS: 2; SUPPLIED_LABEL_COMPARISON PASS: 24 |
 | SIGNAL-002 | classification | PASS | 11 | DECLARED_CASE_COMPARISON PASS: 9; FROZEN_WITNESS_MATCH PASS: 1; initial PASS: 1 |
 | SIGNAL-003 | classification | PASS | 3 | DECLARED_CASE_COMPARISON PASS: 3 |
-| SIGNAL-004 | classification | PASS | 6 | DECLARED_CASE_REVIEW_AS_SPECIFIED PASS: 6 |
+| SIGNAL-004 | classification | REVIEW_AS_SPECIFIED | 6 | DECLARED_CASE_REVIEW_AS_SPECIFIED PASS: 6 |
 | STATE-001 | out_of_scope | OUT_OF_SCOPE | 0 |  |
 | STATE-002 | out_of_scope | OUT_OF_SCOPE | 0 |  |
 | STATE-003 | replay | PASS | 4 | initial PASS: 4 |

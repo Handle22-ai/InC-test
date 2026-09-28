@@ -879,7 +879,7 @@
     "id": "CHECK-history_refusal",
     "kind": "compiled_boundary",
     "sentence": "history_refusal",
-    "spec_line": 210,
+    "spec_line": 212,
     "references": [
       "D1-004",
       "D3-003"
@@ -895,7 +895,7 @@
     "id": "CHECK-conflict_refusal",
     "kind": "compiled_boundary",
     "sentence": "conflict_refusal",
-    "spec_line": 227,
+    "spec_line": 229,
     "references": [
       "D2-010",
       "D5-005"
@@ -911,7 +911,7 @@
     "id": "CHECK-semantics_refusal",
     "kind": "compiled_boundary",
     "sentence": "semantics_refusal",
-    "spec_line": 260,
+    "spec_line": 262,
     "references": [
       "D5-008",
       "D5-011"
@@ -927,7 +927,7 @@
     "id": "CHECK-invalid_refusal",
     "kind": "compiled_boundary",
     "sentence": "invalid_refusal",
-    "spec_line": 253,
+    "spec_line": 255,
     "references": [
       "D5-001",
       "D5-003"
@@ -943,7 +943,7 @@
     "id": "CHECK-one_initial",
     "kind": "compiled_boundary",
     "sentence": "one_initial",
-    "spec_line": 211,
+    "spec_line": 213,
     "references": [
       "D1-005"
     ],
@@ -958,7 +958,7 @@
     "id": "CHECK-replay_suppression",
     "kind": "compiled_boundary",
     "sentence": "replay_suppression",
-    "spec_line": 213,
+    "spec_line": 215,
     "references": [
       "D1-007",
       "D2-007"
@@ -974,7 +974,7 @@
     "id": "CHECK-unchanged_suppression",
     "kind": "compiled_boundary",
     "sentence": "unchanged_suppression",
-    "spec_line": 220,
+    "spec_line": 222,
     "references": [
       "D2-003",
       "D6-012"
@@ -990,7 +990,7 @@
     "id": "CHECK-unresolved_refusal",
     "kind": "compiled_boundary",
     "sentence": "unresolved_refusal",
-    "spec_line": 221,
+    "spec_line": 223,
     "references": [
       "D2-004",
       "D2-008",
@@ -1007,7 +1007,7 @@
     "id": "CHECK-historical_precedence",
     "kind": "compiled_boundary",
     "sentence": "historical_precedence",
-    "spec_line": 237,
+    "spec_line": 239,
     "references": [
       "D3-008",
       "D3-015"
@@ -1023,7 +1023,7 @@
     "id": "CHECK-candidate_only",
     "kind": "compiled_boundary",
     "sentence": "candidate_only",
-    "spec_line": 264,
+    "spec_line": 266,
     "references": [
       "D6-001",
       "D6-004",
@@ -1040,7 +1040,7 @@
     "id": "CHECK-no_timezone_inference",
     "kind": "compiled_boundary",
     "sentence": "no_timezone_inference",
-    "spec_line": 231,
+    "spec_line": 233,
     "references": [
       "D3-002",
       "D3-014"
@@ -1056,7 +1056,7 @@
     "id": "CHECK-clock_boundary",
     "kind": "compiled_boundary",
     "sentence": "clock_boundary",
-    "spec_line": 239,
+    "spec_line": 241,
     "references": [
       "D3-010",
       "D3-012",
@@ -1074,7 +1074,7 @@
     "id": "CHECK-source_identity",
     "kind": "compiled_boundary",
     "sentence": "source_identity",
-    "spec_line": 207,
+    "spec_line": 209,
     "references": [
       "D1-001"
     ],
@@ -1089,7 +1089,7 @@
     "id": "CHECK-explicit_history",
     "kind": "compiled_boundary",
     "sentence": "explicit_history",
-    "spec_line": 208,
+    "spec_line": 210,
     "references": [
       "D1-002"
     ],
@@ -1104,7 +1104,7 @@
     "id": "CHECK-domain_identity",
     "kind": "compiled_boundary",
     "sentence": "domain_identity",
-    "spec_line": 209,
+    "spec_line": 211,
     "references": [
       "D1-003"
     ],
@@ -1119,7 +1119,7 @@
     "id": "CHECK-time_schema",
     "kind": "compiled_boundary",
     "sentence": "time_schema",
-    "spec_line": 230,
+    "spec_line": 232,
     "references": [
       "D3-001"
     ],
@@ -1134,7 +1134,7 @@
     "id": "CHECK-no_age_cutoff",
     "kind": "compiled_boundary",
     "sentence": "no_age_cutoff",
-    "spec_line": 238,
+    "spec_line": 240,
     "references": [
       "D3-009"
     ],
@@ -1149,7 +1149,7 @@
     "id": "CHECK-output_provenance",
     "kind": "compiled_boundary",
     "sentence": "output_provenance",
-    "spec_line": 246,
+    "spec_line": 248,
     "references": [
       "D4-002"
     ],
@@ -1164,7 +1164,7 @@
     "id": "CHECK-optional_unknown",
     "kind": "compiled_boundary",
     "sentence": "optional_unknown",
-    "spec_line": 256,
+    "spec_line": 258,
     "references": [
       "D5-004",
       "D6-006"
@@ -1180,7 +1180,7 @@
     "id": "CHECK-disposition_vocabulary",
     "kind": "compiled_boundary",
     "sentence": "disposition_vocabulary",
-    "spec_line": 262,
+    "spec_line": 264,
     "references": [
       "D5-010"
     ],
@@ -1195,7 +1195,7 @@
     "id": "CHECK-no_labels_or_authorization",
     "kind": "compiled_boundary",
     "sentence": "no_labels_or_authorization",
-    "spec_line": 240,
+    "spec_line": 242,
     "references": [
       "D3-011",
       "D6-008",
@@ -1212,7 +1212,7 @@
     "id": "CHECK-no_quantity_checklist",
     "kind": "compiled_boundary",
     "sentence": "no_quantity_checklist",
-    "spec_line": 268,
+    "spec_line": 270,
     "references": [
       "D6-005"
     ],
@@ -1253,7 +1253,7 @@
     "id": "CHECK-no_absolute_inference",
     "kind": "compiled_boundary",
     "sentence": "no_absolute_inference",
-    "spec_line": 270,
+    "spec_line": 272,
     "references": [
       "D6-007"
     ],

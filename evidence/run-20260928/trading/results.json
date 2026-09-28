@@ -375,7 +375,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "impact-budget-512",
       "decision": {
-        "decision_id": "c35a7be6-aac2-440a-bd59-5144f335c992",
+        "decision_id": "c57d8b3a-7f06-490d-b562-d2b6ec72f3ca",
         "notice_id": 46507,
         "source_sha256": "6cc6c6ea924d52f09130dc83de3d1a65a25f75982750faddb57e77c5d7f6d084",
         "reference_time": "2025-12-01T13:52:24+00:00",
@@ -939,7 +939,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "impact-budget-512",
       "decision": {
-        "decision_id": "9905b726-782c-4378-891c-573f81bb4f57",
+        "decision_id": "5e97b5a2-544c-40c4-a363-34565ce5f10b",
         "notice_id": 46528,
         "source_sha256": "e0f2e8022373b0efc99840606339e9ce4f12443dd026b198934e28a6aabfca87",
         "reference_time": "2025-12-09T16:10:22+00:00",
@@ -1473,7 +1473,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "impact-budget-512",
       "decision": {
-        "decision_id": "f87432fa-07c2-4851-9745-55db728f307b",
+        "decision_id": "6020a5b3-ea0e-4b93-ab7e-6e551841ef14",
         "notice_id": 46604,
         "source_sha256": "0161fbbc08714add7d3e3742d05667ba6380e07fe60549471ab3d6f7f758acfc",
         "reference_time": "2026-01-06T11:27:29+00:00",
@@ -1808,7 +1808,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "impact-budget-512",
       "decision": {
-        "decision_id": "5b9eedcb-a203-4d59-8a65-8046d3749052",
+        "decision_id": "c61d0c6c-74a4-4e40-9b74-885f1d7893f5",
         "notice_id": 46615,
         "source_sha256": "59bceaae533f4d516e49ed540211022c32e7af7ec2df37f20a2e17ec0d86f8f3",
         "reference_time": "2026-01-08T16:53:39+00:00",
@@ -2520,7 +2520,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "impact-budget-512",
       "decision": {
-        "decision_id": "5bd2ed7e-cb2d-4e95-a41d-bff7cb645188",
+        "decision_id": "4ec83d57-7be8-4f7b-8d33-8e59b843372d",
         "notice_id": 46624,
         "source_sha256": "faf2ec98d47909410928c664ccec1287e449cab56a2b410d2fd1ddf25af0811b",
         "reference_time": "2026-01-12T10:51:37+00:00",
@@ -3235,7 +3235,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "impact-budget-512",
       "decision": {
-        "decision_id": "5a887913-67da-46f6-8008-cd6b92edef8f",
+        "decision_id": "238cbf80-5d43-4cd1-a828-e0febbb3977b",
         "notice_id": 46725,
         "source_sha256": "3f7e883fde61c2b23b72324c0dc133885d39513706f57c2e15eeedf1e6f8bd9c",
         "reference_time": "2026-02-09T08:15:20+00:00",
@@ -3881,7 +3881,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "impact-budget-512",
       "decision": {
-        "decision_id": "a2b2e0a4-8cf6-4f80-9065-bedc785a906a",
+        "decision_id": "1cbbda57-18e2-4af6-9996-751f5c14eac9",
         "notice_id": 46728,
         "source_sha256": "6e60efe52cf5dbac74fa1cf5e13c1a06927e73e8e210b2e2421df98b5fea1e41",
         "reference_time": "2026-02-09T08:25:50+00:00",
@@ -4734,7 +4734,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "impact-budget-512",
       "decision": {
-        "decision_id": "1bdd3d23-d605-4363-9ee6-cf8d8a4d339b",
+        "decision_id": "47f8b179-8145-4b36-a83d-0dd7629edfaf",
         "notice_id": 46732,
         "source_sha256": "72ebe91721ad00e884e84a4bdfe8c193966460b94586d5c645cb625da03022d1",
         "reference_time": "2026-02-09T08:32:30+00:00",
@@ -5410,7 +5410,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "impact-budget-512",
       "decision": {
-        "decision_id": "9a21730a-983c-4549-a0bd-7b3e6a55935f",
+        "decision_id": "12fdc784-e90b-4a5d-9b9a-c7fb8d157846",
         "notice_id": 46775,
         "source_sha256": "9bc6d3df53e6848ef4a2936ed86466b65833c67784067075955bd7d198975b58",
         "reference_time": "2026-02-26T10:15:22+00:00",
@@ -5951,7 +5951,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "impact-budget-512",
       "decision": {
-        "decision_id": "fa54a8aa-9047-4f4b-b1fd-9122475b5761",
+        "decision_id": "f7d35135-f3d5-4f9c-a96e-d7997c30fb7c",
         "notice_id": 46795,
         "source_sha256": "94c2e2d71aa6409161b6a72c917afdfb6eb7fd8273a4234d71803a9ae40ac051",
         "reference_time": "2026-03-04T14:08:29+00:00",
@@ -6860,7 +6860,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "impact-budget-512",
       "decision": {
-        "decision_id": "0339bae3-74f4-40d1-85b6-7a7218c59ee7",
+        "decision_id": "86157245-93cf-4d2e-a161-e4fe353ddda3",
         "notice_id": 46805,
         "source_sha256": "447dbb9c66febe1170c4f9a11db9cbc56a9ce744791a425befbc850f0741ce5b",
         "reference_time": "2026-03-05T14:53:02+00:00",
@@ -8082,7 +8082,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "impact-budget-512",
       "decision": {
-        "decision_id": "298c5b29-e02a-4c16-9790-20b8214d925f",
+        "decision_id": "cde5d136-296f-4d9c-bcd8-65308123a687",
         "notice_id": 46818,
         "source_sha256": "961e9bc5f5644ae02fa13578c77c03f07b096aa8b4c684933b2d28f3245582ed",
         "reference_time": "2026-03-12T12:38:41+00:00",
@@ -8818,7 +8818,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "impact-budget-512",
       "decision": {
-        "decision_id": "e2a40725-eee6-47d9-a263-4ee18ff883ba",
+        "decision_id": "8cb422d6-69e1-4086-932b-103f1328935c",
         "notice_id": 46864,
         "source_sha256": "aeb686ef2f60a384bdb5965d43499102f8721003060f8436d46312e7aba269db",
         "reference_time": "2026-04-06T09:21:29+00:00",
@@ -9930,7 +9930,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "impact-budget-512",
       "decision": {
-        "decision_id": "fd7657b1-312c-4adc-82a2-4c2acbd4fe7c",
+        "decision_id": "1ec55f11-e905-4462-88f3-08f42a041633",
         "notice_id": 46881,
         "source_sha256": "e6a24fef1e8d9d9f5d2a8891ce19e19ffbdc44b7865167b4050028ae64d1d563",
         "reference_time": "2026-04-15T15:47:10+00:00",
@@ -11293,7 +11293,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "impact-budget-512",
       "decision": {
-        "decision_id": "ff3bfbb1-5d2d-494c-9e19-b0bf2da5cb23",
+        "decision_id": "97683302-c946-4f45-a49e-4dc45bf5ac72",
         "notice_id": 46624,
         "source_sha256": "faf2ec98d47909410928c664ccec1287e449cab56a2b410d2fd1ddf25af0811b",
         "reference_time": "2026-01-12T10:51:37+00:00",
@@ -11784,7 +11784,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "impact-budget-512",
       "decision": {
-        "decision_id": "b3154ac6-c637-43ca-a0bc-015d9b6352b3",
+        "decision_id": "0f21d1ee-69c5-4c22-8f21-87e754c09d10",
         "notice_id": 46624,
         "source_sha256": "faf2ec98d47909410928c664ccec1287e449cab56a2b410d2fd1ddf25af0811b",
         "reference_time": "2026-01-12T10:51:37+00:00",
@@ -12275,7 +12275,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "impact-budget-512",
       "decision": {
-        "decision_id": "4823187d-1830-4a2e-b834-616caa385105",
+        "decision_id": "87a4ffcc-65a6-4185-a4fc-d69b924f715f",
         "notice_id": 46624,
         "source_sha256": "faf2ec98d47909410928c664ccec1287e449cab56a2b410d2fd1ddf25af0811b",
         "reference_time": "2026-01-12T10:51:37+00:00",
@@ -12766,7 +12766,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "impact-budget-512",
       "decision": {
-        "decision_id": "cdccc2c6-b19f-4edc-bf02-d9f4a00b9b75",
+        "decision_id": "8619457d-0d96-45f4-94af-bc553a1b6a2d",
         "notice_id": 96624,
         "source_sha256": "633b47fd47b5d7dc8472ca827470031f0188eae367cf22da539217f32497b85d",
         "reference_time": "2026-01-12T10:51:37+00:00",
@@ -13334,7 +13334,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "impact-budget-512",
       "decision": {
-        "decision_id": "04401322-f7ab-4974-ae71-81e3a19a0d3c",
+        "decision_id": "72f940e1-1a66-4519-98de-4ac9078e6365",
         "notice_id": 96624,
         "source_sha256": "633b47fd47b5d7dc8472ca827470031f0188eae367cf22da539217f32497b85d",
         "reference_time": "2026-01-12T10:51:37+00:00",
@@ -13902,7 +13902,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "impact-budget-512",
       "decision": {
-        "decision_id": "7a81b80e-8f0b-42ff-a90c-5f77bf95bd4b",
+        "decision_id": "ab06a221-6e83-48f8-87f9-e6df12338a04",
         "notice_id": 46732,
         "source_sha256": "72ebe91721ad00e884e84a4bdfe8c193966460b94586d5c645cb625da03022d1",
         "reference_time": "2026-02-09T08:32:30+00:00",
@@ -14284,7 +14284,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "impact-budget-512",
       "decision": {
-        "decision_id": "06be3872-ec9a-4950-9c49-be83ca112980",
+        "decision_id": "47378cbd-684d-4e43-81c7-d92e48b2062b",
         "notice_id": 46507,
         "source_sha256": "6cc6c6ea924d52f09130dc83de3d1a65a25f75982750faddb57e77c5d7f6d084",
         "reference_time": "2025-12-01T13:52:24+00:00",
@@ -14726,7 +14726,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "impact-budget-512",
       "decision": {
-        "decision_id": "f5ad30ca-a6c7-46ad-9f95-6b6c30aaf59c",
+        "decision_id": "dd6176a5-db6d-454b-adc3-4d665c2b07f7",
         "notice_id": 46732,
         "source_sha256": "72ebe91721ad00e884e84a4bdfe8c193966460b94586d5c645cb625da03022d1",
         "reference_time": "2026-02-09T08:32:30+00:00",
@@ -15175,7 +15175,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "impact-budget-512",
       "decision": {
-        "decision_id": "0d6be7a1-3bed-4b49-8f73-8597ac4deff8",
+        "decision_id": "7dc54a9f-0529-476a-8bf2-fee1905cadbd",
         "notice_id": 96615,
         "source_sha256": "d53573f667d86cd752f98584073d25ff41777619f104b081faa25c32c2ef804e",
         "reference_time": "2026-01-08T16:53:39+00:00",
@@ -15769,7 +15769,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "5577ffa8-4d5e-437b-acad-a783d1f42801",
+        "decision_id": "37442bd4-0cac-45d1-91a1-af92c274f191",
         "notice_id": 46507,
         "source_sha256": "6cc6c6ea924d52f09130dc83de3d1a65a25f75982750faddb57e77c5d7f6d084",
         "reference_time": "2025-12-01T13:52:24+00:00",
@@ -16211,7 +16211,7 @@
       "inherited_execution": "MODEL_FAILURE",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "954543dd-f737-453e-ad42-608aaf8d8f9c",
+        "decision_id": "eba71719-fd56-4f80-8fff-d6b5b2570d20",
         "notice_id": 46528,
         "source_sha256": "e0f2e8022373b0efc99840606339e9ce4f12443dd026b198934e28a6aabfca87",
         "reference_time": "2025-12-09T16:10:22+00:00",
@@ -16874,7 +16874,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "82edc3f7-fadf-48aa-9838-3d7414f5329c",
+        "decision_id": "cf7759e4-e7c9-4ab9-ac52-cadd16b11ab9",
         "notice_id": 46604,
         "source_sha256": "0161fbbc08714add7d3e3742d05667ba6380e07fe60549471ab3d6f7f758acfc",
         "reference_time": "2026-01-06T11:27:29+00:00",
@@ -17188,7 +17188,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "df6ddbec-eea1-4bfb-886d-b22e78cf3df7",
+        "decision_id": "7748c964-f862-4184-95de-a1751f372e55",
         "notice_id": 46615,
         "source_sha256": "59bceaae533f4d516e49ed540211022c32e7af7ec2df37f20a2e17ec0d86f8f3",
         "reference_time": "2026-01-08T16:53:39+00:00",
@@ -17879,7 +17879,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "dd4920e0-90cb-408c-86f8-cc442b6a6dc3",
+        "decision_id": "222cc2a1-d3d2-4d83-9d91-8f801e1e4f02",
         "notice_id": 46624,
         "source_sha256": "faf2ec98d47909410928c664ccec1287e449cab56a2b410d2fd1ddf25af0811b",
         "reference_time": "2026-01-12T10:51:37+00:00",
@@ -18573,7 +18573,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "ad9dec83-bb14-4d9b-bad8-7f04673cdfb7",
+        "decision_id": "8ee544f2-868d-4de7-9aa2-9d218140871c",
         "notice_id": 46725,
         "source_sha256": "3f7e883fde61c2b23b72324c0dc133885d39513706f57c2e15eeedf1e6f8bd9c",
         "reference_time": "2026-02-09T08:15:20+00:00",
@@ -19202,7 +19202,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "7c183d02-46c5-4a96-af87-2db8544a6abc",
+        "decision_id": "6c60c3f7-9783-4761-a144-d3bbe30d6ced",
         "notice_id": 46728,
         "source_sha256": "6e60efe52cf5dbac74fa1cf5e13c1a06927e73e8e210b2e2421df98b5fea1e41",
         "reference_time": "2026-02-09T08:25:50+00:00",
@@ -20034,7 +20034,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "f45d99f6-8bec-453f-88c2-cdea5d59b07d",
+        "decision_id": "3f591b87-f82d-4de6-b303-ced0c481eb4a",
         "notice_id": 46732,
         "source_sha256": "72ebe91721ad00e884e84a4bdfe8c193966460b94586d5c645cb625da03022d1",
         "reference_time": "2026-02-09T08:32:30+00:00",
@@ -20689,7 +20689,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "b093ff9e-ecc7-4a98-9741-f3f646ab2663",
+        "decision_id": "ffa7270f-c6ed-433d-a276-ca241dd1d7e1",
         "notice_id": 46775,
         "source_sha256": "9bc6d3df53e6848ef4a2936ed86466b65833c67784067075955bd7d198975b58",
         "reference_time": "2026-02-26T10:15:22+00:00",
@@ -21209,7 +21209,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "6f6a3e57-e321-4dc2-ae16-925bff4f3d5c",
+        "decision_id": "5f24440e-f396-4c42-8afd-9bce8cb61177",
         "notice_id": 46795,
         "source_sha256": "94c2e2d71aa6409161b6a72c917afdfb6eb7fd8273a4234d71803a9ae40ac051",
         "reference_time": "2026-03-04T14:08:29+00:00",
@@ -22160,7 +22160,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "f2d4231a-db15-4c3e-a105-7cc8d829a640",
+        "decision_id": "1475a105-fc90-4d83-a40c-488f9c0aff51",
         "notice_id": 46805,
         "source_sha256": "447dbb9c66febe1170c4f9a11db9cbc56a9ce744791a425befbc850f0741ce5b",
         "reference_time": "2026-03-05T14:53:02+00:00",
@@ -23361,7 +23361,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "060aa4ef-1760-445e-b7ff-066fab20ba32",
+        "decision_id": "f201a6ba-b10f-45f6-9346-db5384a03be2",
         "notice_id": 46818,
         "source_sha256": "961e9bc5f5644ae02fa13578c77c03f07b096aa8b4c684933b2d28f3245582ed",
         "reference_time": "2026-03-12T12:38:41+00:00",
@@ -24076,7 +24076,7 @@
       "inherited_execution": "MODEL_FAILURE",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "132a87f6-5f44-4ef2-a0c3-cecb58e3af64",
+        "decision_id": "18e37599-9b58-4d47-955b-4af613b4701a",
         "notice_id": 46864,
         "source_sha256": "aeb686ef2f60a384bdb5965d43499102f8721003060f8436d46312e7aba269db",
         "reference_time": "2026-04-06T09:21:29+00:00",
@@ -25166,7 +25166,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "bb874c85-e141-4414-a320-cfb0bfb1d389",
+        "decision_id": "32140d1b-2a3a-49db-a934-e634dc574960",
         "notice_id": 46881,
         "source_sha256": "e6a24fef1e8d9d9f5d2a8891ce19e19ffbdc44b7865167b4050028ae64d1d563",
         "reference_time": "2026-04-15T15:47:10+00:00",
@@ -26402,7 +26402,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "1b682970-7adb-4d44-a497-f5fc929925b5",
+        "decision_id": "2156c6cc-d63a-4335-961b-d30235763752",
         "notice_id": 46624,
         "source_sha256": "faf2ec98d47909410928c664ccec1287e449cab56a2b410d2fd1ddf25af0811b",
         "reference_time": "2026-01-12T10:51:37+00:00",
@@ -26893,7 +26893,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "fa4aba1d-30ff-48a6-8fbd-e44c2dd88772",
+        "decision_id": "176aee24-bc3c-4bfb-a9d5-e0196df1e49d",
         "notice_id": 46624,
         "source_sha256": "faf2ec98d47909410928c664ccec1287e449cab56a2b410d2fd1ddf25af0811b",
         "reference_time": "2026-01-12T10:51:37+00:00",
@@ -27384,7 +27384,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "e55529aa-5d3a-44fe-8a74-df1eb287da49",
+        "decision_id": "67c3fbb8-0399-4cbc-beef-7de10a43db46",
         "notice_id": 46624,
         "source_sha256": "faf2ec98d47909410928c664ccec1287e449cab56a2b410d2fd1ddf25af0811b",
         "reference_time": "2026-01-12T10:51:37+00:00",
@@ -27875,7 +27875,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "f07ed86b-c3d4-48f2-9fc4-48363984f89a",
+        "decision_id": "41103f87-e521-4b84-88c8-038e8f841264",
         "notice_id": 96624,
         "source_sha256": "633b47fd47b5d7dc8472ca827470031f0188eae367cf22da539217f32497b85d",
         "reference_time": "2026-01-12T10:51:37+00:00",
@@ -28443,7 +28443,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "ad4ef61b-66b2-4ac2-8c35-66a64b487afc",
+        "decision_id": "f86dee0c-5934-466e-bf05-8bdec6bb3b44",
         "notice_id": 96624,
         "source_sha256": "633b47fd47b5d7dc8472ca827470031f0188eae367cf22da539217f32497b85d",
         "reference_time": "2026-01-12T10:51:37+00:00",
@@ -29011,7 +29011,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "4ac91066-92cf-4383-9f7b-8e57d3fcd9e1",
+        "decision_id": "c0f8b020-96c2-4fce-a746-a1012a634cb8",
         "notice_id": 46732,
         "source_sha256": "72ebe91721ad00e884e84a4bdfe8c193966460b94586d5c645cb625da03022d1",
         "reference_time": "2026-02-09T08:32:30+00:00",
@@ -29393,7 +29393,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "426c7e81-b587-4892-985f-d75521b0fa30",
+        "decision_id": "7476003a-61f4-42ef-bbc9-6accc2029103",
         "notice_id": 46507,
         "source_sha256": "6cc6c6ea924d52f09130dc83de3d1a65a25f75982750faddb57e77c5d7f6d084",
         "reference_time": "2025-12-01T13:52:24+00:00",
@@ -29835,7 +29835,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "eb060fec-eaf6-43be-b9c5-abde80ee9cb5",
+        "decision_id": "69f95cdc-d6b2-46a7-8568-ecfb54659009",
         "notice_id": 46732,
         "source_sha256": "72ebe91721ad00e884e84a4bdfe8c193966460b94586d5c645cb625da03022d1",
         "reference_time": "2026-02-09T08:32:30+00:00",
@@ -30284,7 +30284,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "bd11456a-7eb8-4fcc-b1ed-0637e04cb112",
+        "decision_id": "19c65fcb-1f08-4876-aed7-0cc3dface6e7",
         "notice_id": 96615,
         "source_sha256": "d53573f667d86cd752f98584073d25ff41777619f104b081faa25c32c2ef804e",
         "reference_time": "2026-01-08T16:53:39+00:00",
@@ -30878,7 +30878,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "a918d6b3-af20-4547-9735-34e7188500c6",
+        "decision_id": "529ac809-772d-42f7-bd8d-43405d517143",
         "notice_id": 46507,
         "source_sha256": "6cc6c6ea924d52f09130dc83de3d1a65a25f75982750faddb57e77c5d7f6d084",
         "reference_time": "2025-12-01T13:52:24+00:00",
@@ -31442,7 +31442,7 @@
       "inherited_execution": "MODEL_FAILURE",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "502ef638-707b-43da-b9f1-8bb7668d93ed",
+        "decision_id": "a2a6d401-3921-416e-83ff-3fd33c159de7",
         "notice_id": 46528,
         "source_sha256": "e0f2e8022373b0efc99840606339e9ce4f12443dd026b198934e28a6aabfca87",
         "reference_time": "2025-12-09T16:10:22+00:00",
@@ -32126,7 +32126,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "3f962d8c-d5d5-44bc-9360-170e7fb8b45f",
+        "decision_id": "e38fe1b6-4e78-44c8-b641-290c31a95c20",
         "notice_id": 46604,
         "source_sha256": "0161fbbc08714add7d3e3742d05667ba6380e07fe60549471ab3d6f7f758acfc",
         "reference_time": "2026-01-06T11:27:29+00:00",
@@ -32461,7 +32461,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "7387142d-5aa1-46c8-acb5-8a805370250d",
+        "decision_id": "d57ef525-5026-4660-8207-936a44d8ad64",
         "notice_id": 46615,
         "source_sha256": "59bceaae533f4d516e49ed540211022c32e7af7ec2df37f20a2e17ec0d86f8f3",
         "reference_time": "2026-01-08T16:53:39+00:00",
@@ -33173,7 +33173,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "99e9f02e-e5c0-469b-827f-4d9cef82cbea",
+        "decision_id": "95a84777-be53-4f5d-bb1b-371adbc2ea33",
         "notice_id": 46624,
         "source_sha256": "faf2ec98d47909410928c664ccec1287e449cab56a2b410d2fd1ddf25af0811b",
         "reference_time": "2026-01-12T10:51:37+00:00",
@@ -33966,7 +33966,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "abb5f9be-a2b4-4bdc-b5ce-b02d1549c07e",
+        "decision_id": "7c28bcac-48b3-4330-867d-87b78e4c8a1e",
         "notice_id": 46725,
         "source_sha256": "3f7e883fde61c2b23b72324c0dc133885d39513706f57c2e15eeedf1e6f8bd9c",
         "reference_time": "2026-02-09T08:15:20+00:00",
@@ -34631,7 +34631,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "b0175ba2-fc56-420a-a88f-163d96f22eca",
+        "decision_id": "d5fd89f9-2178-4af8-928a-166b99847d52",
         "notice_id": 46728,
         "source_sha256": "6e60efe52cf5dbac74fa1cf5e13c1a06927e73e8e210b2e2421df98b5fea1e41",
         "reference_time": "2026-02-09T08:25:50+00:00",
@@ -35503,7 +35503,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "43d3ca1b-55d7-42e8-8080-6d7a04c235ee",
+        "decision_id": "106d6101-0216-4f8b-9aaf-7abc73296cbe",
         "notice_id": 46732,
         "source_sha256": "72ebe91721ad00e884e84a4bdfe8c193966460b94586d5c645cb625da03022d1",
         "reference_time": "2026-02-09T08:32:30+00:00",
@@ -36198,7 +36198,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "30c5e4a2-39c7-41d3-9fdf-df18ad70e7f0",
+        "decision_id": "388abca8-e04f-4887-95f5-db9b051f2cad",
         "notice_id": 46775,
         "source_sha256": "9bc6d3df53e6848ef4a2936ed86466b65833c67784067075955bd7d198975b58",
         "reference_time": "2026-02-26T10:15:22+00:00",
@@ -36758,7 +36758,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "5586487f-d883-4800-b00b-6b7fc5f5df07",
+        "decision_id": "5d46a479-9d58-48bd-a432-91efcdf20208",
         "notice_id": 46795,
         "source_sha256": "94c2e2d71aa6409161b6a72c917afdfb6eb7fd8273a4234d71803a9ae40ac051",
         "reference_time": "2026-03-04T14:08:29+00:00",
@@ -37749,7 +37749,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "a6453add-ef22-4b1a-aab1-415f3f087fc4",
+        "decision_id": "24fc9cdd-f5f8-4f02-9864-12a02247188d",
         "notice_id": 46805,
         "source_sha256": "447dbb9c66febe1170c4f9a11db9cbc56a9ce744791a425befbc850f0741ce5b",
         "reference_time": "2026-03-05T14:53:02+00:00",
@@ -38990,7 +38990,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "f84896e1-29ed-4a65-9ed5-84ac1e0255d5",
+        "decision_id": "3ea79bae-1296-449b-9d3d-def333d82b0d",
         "notice_id": 46818,
         "source_sha256": "961e9bc5f5644ae02fa13578c77c03f07b096aa8b4c684933b2d28f3245582ed",
         "reference_time": "2026-03-12T12:38:41+00:00",
@@ -39745,7 +39745,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "1f7d76e1-8743-49ce-8880-a4d79b9eb5b5",
+        "decision_id": "96f8d79e-e64b-4bea-a02c-1b850182d394",
         "notice_id": 46864,
         "source_sha256": "aeb686ef2f60a384bdb5965d43499102f8721003060f8436d46312e7aba269db",
         "reference_time": "2026-04-06T09:21:29+00:00",
@@ -40876,7 +40876,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "940d5700-7737-441d-b44b-e69b4a4b6956",
+        "decision_id": "08e42cbe-6fdd-4c3a-908f-ff51cbff7778",
         "notice_id": 46881,
         "source_sha256": "e6a24fef1e8d9d9f5d2a8891ce19e19ffbdc44b7865167b4050028ae64d1d563",
         "reference_time": "2026-04-15T15:47:10+00:00",
@@ -42258,7 +42258,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "f515b998-3437-43c1-8c8b-159f93dd98f0",
+        "decision_id": "7e7312d1-0639-4f11-9ac3-9060b1ad2e67",
         "notice_id": 46624,
         "source_sha256": "faf2ec98d47909410928c664ccec1287e449cab56a2b410d2fd1ddf25af0811b",
         "reference_time": "2026-01-12T10:51:37+00:00",
@@ -42749,7 +42749,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "57277c5a-293b-421b-934c-9ba90eceae94",
+        "decision_id": "e3a45015-1773-4646-ab02-4683e92628fb",
         "notice_id": 46624,
         "source_sha256": "faf2ec98d47909410928c664ccec1287e449cab56a2b410d2fd1ddf25af0811b",
         "reference_time": "2026-01-12T10:51:37+00:00",
@@ -43240,7 +43240,7 @@
       "inherited_execution": "MODEL_FAILURE",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "a817e472-79f2-4c4e-8ed6-45ca58e69faf",
+        "decision_id": "e5c5cd93-73de-46c5-8b42-ee269bcc46e3",
         "notice_id": 46624,
         "source_sha256": "faf2ec98d47909410928c664ccec1287e449cab56a2b410d2fd1ddf25af0811b",
         "reference_time": "2026-01-12T10:51:37+00:00",
@@ -43730,7 +43730,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "15cdcb11-49fa-4bf0-a2cc-dd268df09f80",
+        "decision_id": "9b798854-186d-4899-9858-1e0f4050be9f",
         "notice_id": 96624,
         "source_sha256": "633b47fd47b5d7dc8472ca827470031f0188eae367cf22da539217f32497b85d",
         "reference_time": "2026-01-12T10:51:37+00:00",
@@ -44058,7 +44058,9 @@
               },
               "normalized_value": {
                 "prior_notice_id": 46624,
-                "available_notice_ids": []
+                "available_notice_ids": [
+                  46624
+                ]
               },
               "supplied_by": "retained_history",
               "unknown_handling": "Missing, unsupported or conflicting chain remains review; no ID-order inference"
@@ -44146,7 +44148,81 @@
               }
             ]
           },
-          "history": [],
+          "history": [
+            {
+              "facts": {
+                "availability": "UNAVAILABLE",
+                "content_kind": "RESTRICTION",
+                "end_time": null,
+                "locations": [
+                  {
+                    "evidence_ref": "source.fields.body",
+                    "kind": "LOC",
+                    "value": "7936"
+                  },
+                  {
+                    "evidence_ref": "source.fields.body",
+                    "kind": "SEGMENT",
+                    "value": "24"
+                  },
+                  {
+                    "evidence_ref": "source.fields.body",
+                    "kind": "ZONE",
+                    "value": "Louisiana Zone"
+                  }
+                ],
+                "operational_assertions": [
+                  "ANR/NGPL SOUTH JOLIET AT CAPACITY FLORIDA VERMILION (LOC 7936) – PRIMARY ONLY Due to current operating conditions, effective for gas day Wednesday, January 14, 2026, Timely Cycle and continuing until further notice, Florida Vermilion (LOC 7936) is at operating capacity. As such, Natural will only schedule Primary Firm transports for deliveries to Florida Vermilion (LOC 7936). AOR/ITS, Secondary out-of-path Firm transports and Secondary in-path Firm transports will not be available. Florida Vermilion is located in Vermilion Parish, Louisiana (Segment 24), in Natural's Louisiana Zone. Please contact your Account Director or Scheduling Representative if you have any questions. .."
+                ],
+                "quantities": [],
+                "restrictions": [
+                  {
+                    "availability": "UNAVAILABLE",
+                    "evidence_ref": "source.fields.body",
+                    "location_index": 0,
+                    "restriction_type": "UNAVAILABLE",
+                    "service": "AOR_ITS",
+                    "source_end": "TBD",
+                    "source_start": "2026-01-14",
+                    "status": "UNKNOWN"
+                  },
+                  {
+                    "availability": "UNAVAILABLE",
+                    "evidence_ref": "source.fields.body",
+                    "location_index": 0,
+                    "restriction_type": "UNAVAILABLE",
+                    "service": "SECONDARY_FIRM",
+                    "source_end": "TBD",
+                    "source_start": "2026-01-14",
+                    "status": "UNKNOWN"
+                  },
+                  {
+                    "availability": "UNAVAILABLE",
+                    "evidence_ref": "source.fields.body",
+                    "location_index": 0,
+                    "restriction_type": "UNAVAILABLE",
+                    "service": "SECONDARY_FIRM",
+                    "source_end": "TBD",
+                    "source_start": "2026-01-14",
+                    "status": "UNKNOWN"
+                  }
+                ],
+                "services": [
+                  "AOR_ITS",
+                  "SECONDARY_FIRM"
+                ],
+                "start_time": null,
+                "time_basis": "UNRESOLVED"
+              },
+              "notice": {
+                "notice_id": 46624,
+                "notice_type": "CAPACITY CONSTRAINT",
+                "prior_notice_id": null,
+                "status": "INITIATE"
+              },
+              "source_sha256": "faf2ec98d47909410928c664ccec1287e449cab56a2b410d2fd1ddf25af0811b"
+            }
+          ],
           "reference_time": "2026-01-12T10:51:37+00:00",
           "evidence": {
             "extraction_usable": true,
@@ -44170,34 +44246,36 @@
         "classifier_decision": {
           "notice_id": 96624,
           "source_sha256": "633b47fd47b5d7dc8472ca827470031f0188eae367cf22da539217f32497b85d",
-          "classification": "UNRESOLVED",
-          "disposition": "REVIEW_REQUIRED",
+          "classification": "NON_SIGNAL",
+          "disposition": "SUPPRESSED",
           "recommendation_allowed": false,
           "reason_codes": [
-            "BR-HISTORY",
-            "MISSING_HISTORY"
+            "BR-UNCHANGED",
+            "UNCHANGED_REVISION"
           ],
           "evidence_refs": [
             "sha256:633b47fd47b5d7dc8472ca827470031f0188eae367cf22da539217f32497b85d",
+            "sha256:faf2ec98d47909410928c664ccec1287e449cab56a2b410d2fd1ddf25af0811b",
             "source.fields.body"
           ]
         },
-        "matched_rule": "BR-HISTORY",
-        "classification": "UNRESOLVED",
-        "disposition": "REVIEW_REQUIRED",
-        "reason": "MISSING_HISTORY",
+        "matched_rule": "BR-UNCHANGED",
+        "classification": "NON_SIGNAL",
+        "disposition": "SUPPRESSED",
+        "reason": "UNCHANGED_REVISION",
         "reason_codes": [
-          "BR-HISTORY",
-          "MISSING_HISTORY"
+          "BR-UNCHANGED",
+          "UNCHANGED_REVISION"
         ],
         "recommendation_allowed": false,
-        "candidate_classification": null,
+        "candidate_classification": false,
         "authorization": null,
-        "publication_disposition": "REVIEW_REQUIRED",
-        "publication_reason": "MISSING_HISTORY",
+        "publication_disposition": "SUPPRESSED",
+        "publication_reason": "UNCHANGED_REVISION",
         "initial_decision": false,
         "publication_attempted": false,
-        "delivery_acknowledged": null
+        "delivery_acknowledged": null,
+        "event_key": "NGPL:46624"
       },
       "recommendation_count": 0,
       "replay_recommendation_count": 0,
@@ -44220,7 +44298,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "26a80eab-701b-4bca-b321-d4beb8c081ec",
+        "decision_id": "fb31ae08-aecb-4431-9d3d-7e3e025b77c6",
         "notice_id": 96624,
         "source_sha256": "633b47fd47b5d7dc8472ca827470031f0188eae367cf22da539217f32497b85d",
         "reference_time": "2026-01-12T10:51:37+00:00",
@@ -44548,7 +44626,9 @@
               },
               "normalized_value": {
                 "prior_notice_id": 46624,
-                "available_notice_ids": []
+                "available_notice_ids": [
+                  46624
+                ]
               },
               "supplied_by": "retained_history",
               "unknown_handling": "Missing, unsupported or conflicting chain remains review; no ID-order inference"
@@ -44636,7 +44716,81 @@
               }
             ]
           },
-          "history": [],
+          "history": [
+            {
+              "facts": {
+                "availability": "UNAVAILABLE",
+                "content_kind": "RESTRICTION",
+                "end_time": null,
+                "locations": [
+                  {
+                    "evidence_ref": "source.fields.body",
+                    "kind": "LOC",
+                    "value": "7936"
+                  },
+                  {
+                    "evidence_ref": "source.fields.body",
+                    "kind": "SEGMENT",
+                    "value": "24"
+                  },
+                  {
+                    "evidence_ref": "source.fields.body",
+                    "kind": "ZONE",
+                    "value": "Louisiana Zone"
+                  }
+                ],
+                "operational_assertions": [
+                  "ANR/NGPL SOUTH JOLIET AT CAPACITY FLORIDA VERMILION (LOC 7936) – PRIMARY ONLY Due to current operating conditions, effective for gas day Wednesday, January 14, 2026, Timely Cycle and continuing until further notice, Florida Vermilion (LOC 7936) is at operating capacity. As such, Natural will only schedule Primary Firm transports for deliveries to Florida Vermilion (LOC 7936). AOR/ITS, Secondary out-of-path Firm transports and Secondary in-path Firm transports will not be available. Florida Vermilion is located in Vermilion Parish, Louisiana (Segment 24), in Natural's Louisiana Zone. Please contact your Account Director or Scheduling Representative if you have any questions. .."
+                ],
+                "quantities": [],
+                "restrictions": [
+                  {
+                    "availability": "UNAVAILABLE",
+                    "evidence_ref": "source.fields.body",
+                    "location_index": 0,
+                    "restriction_type": "UNAVAILABLE",
+                    "service": "AOR_ITS",
+                    "source_end": "TBD",
+                    "source_start": "2026-01-14",
+                    "status": "UNKNOWN"
+                  },
+                  {
+                    "availability": "UNAVAILABLE",
+                    "evidence_ref": "source.fields.body",
+                    "location_index": 0,
+                    "restriction_type": "UNAVAILABLE",
+                    "service": "SECONDARY_FIRM",
+                    "source_end": "TBD",
+                    "source_start": "2026-01-14",
+                    "status": "UNKNOWN"
+                  },
+                  {
+                    "availability": "UNAVAILABLE",
+                    "evidence_ref": "source.fields.body",
+                    "location_index": 0,
+                    "restriction_type": "UNAVAILABLE",
+                    "service": "SECONDARY_FIRM",
+                    "source_end": "TBD",
+                    "source_start": "2026-01-14",
+                    "status": "UNKNOWN"
+                  }
+                ],
+                "services": [
+                  "AOR_ITS",
+                  "SECONDARY_FIRM"
+                ],
+                "start_time": null,
+                "time_basis": "UNRESOLVED"
+              },
+              "notice": {
+                "notice_id": 46624,
+                "notice_type": "CAPACITY CONSTRAINT",
+                "prior_notice_id": null,
+                "status": "INITIATE"
+              },
+              "source_sha256": "faf2ec98d47909410928c664ccec1287e449cab56a2b410d2fd1ddf25af0811b"
+            }
+          ],
           "reference_time": "2026-01-12T10:51:37+00:00",
           "evidence": {
             "extraction_usable": true,
@@ -44660,34 +44814,36 @@
         "classifier_decision": {
           "notice_id": 96624,
           "source_sha256": "633b47fd47b5d7dc8472ca827470031f0188eae367cf22da539217f32497b85d",
-          "classification": "UNRESOLVED",
-          "disposition": "REVIEW_REQUIRED",
+          "classification": "NON_SIGNAL",
+          "disposition": "SUPPRESSED",
           "recommendation_allowed": false,
           "reason_codes": [
-            "BR-HISTORY",
-            "MISSING_HISTORY"
+            "BR-UNCHANGED",
+            "UNCHANGED_REVISION"
           ],
           "evidence_refs": [
             "sha256:633b47fd47b5d7dc8472ca827470031f0188eae367cf22da539217f32497b85d",
+            "sha256:faf2ec98d47909410928c664ccec1287e449cab56a2b410d2fd1ddf25af0811b",
             "source.fields.body"
           ]
         },
-        "matched_rule": "BR-HISTORY",
-        "classification": "UNRESOLVED",
-        "disposition": "REVIEW_REQUIRED",
-        "reason": "MISSING_HISTORY",
+        "matched_rule": "BR-UNCHANGED",
+        "classification": "NON_SIGNAL",
+        "disposition": "SUPPRESSED",
+        "reason": "UNCHANGED_REVISION",
         "reason_codes": [
-          "BR-HISTORY",
-          "MISSING_HISTORY"
+          "BR-UNCHANGED",
+          "UNCHANGED_REVISION"
         ],
         "recommendation_allowed": false,
-        "candidate_classification": null,
+        "candidate_classification": false,
         "authorization": null,
-        "publication_disposition": "REVIEW_REQUIRED",
-        "publication_reason": "MISSING_HISTORY",
+        "publication_disposition": "SUPPRESSED",
+        "publication_reason": "UNCHANGED_REVISION",
         "initial_decision": false,
         "publication_attempted": false,
-        "delivery_acknowledged": null
+        "delivery_acknowledged": null,
+        "event_key": "NGPL:46624"
       },
       "recommendation_count": 0,
       "replay_recommendation_count": 0,
@@ -44710,7 +44866,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "508f0a6d-be5c-424f-bfa4-33d79916300e",
+        "decision_id": "d85abe47-beae-4412-8e79-a9eb9541b0b7",
         "notice_id": 46732,
         "source_sha256": "72ebe91721ad00e884e84a4bdfe8c193966460b94586d5c645cb625da03022d1",
         "reference_time": "2026-02-09T08:32:30+00:00",
@@ -45092,7 +45248,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "890fc5ae-2c20-44fb-bad0-4efde1d55d6d",
+        "decision_id": "9ffebae2-6f85-4857-b7a2-4de034fdad54",
         "notice_id": 46507,
         "source_sha256": "6cc6c6ea924d52f09130dc83de3d1a65a25f75982750faddb57e77c5d7f6d084",
         "reference_time": "2025-12-01T13:52:24+00:00",
@@ -45534,7 +45690,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "e0122e97-97a9-412d-8c48-6bd48be2541d",
+        "decision_id": "40175141-6c9b-4136-b6e1-067bb7dda6e3",
         "notice_id": 46732,
         "source_sha256": "72ebe91721ad00e884e84a4bdfe8c193966460b94586d5c645cb625da03022d1",
         "reference_time": "2026-02-09T08:32:30+00:00",
@@ -45983,7 +46139,7 @@
       "inherited_execution": "SUCCESS",
       "inherited_system": "inherited",
       "decision": {
-        "decision_id": "080208b2-3356-4907-b1a9-ef12439ed9d3",
+        "decision_id": "628206e9-6523-49fd-8fc7-1fb138206710",
         "notice_id": 96615,
         "source_sha256": "d53573f667d86cd752f98584073d25ff41777619f104b081faa25c32c2ef804e",
         "reference_time": "2026-01-08T16:53:39+00:00",
@@ -50838,9 +50994,20 @@
       "count": 0,
       "cases": []
     },
-    "supplied_label_false_negatives": {
+    "labeled_positives_decided_non_signal": {
       "count": 0,
       "cases": []
+    },
+    "labeled_positives_unresolved": {
+      "count": 6,
+      "cases": [
+        "capture-0/46732",
+        "capture-0/46881",
+        "capture-1/46732",
+        "capture-1/46881",
+        "capture-2/46732",
+        "capture-2/46881"
+      ]
     },
     "unscored_labeled": {
       "count": 18,
@@ -50881,7 +51048,7 @@
       ]
     },
     "history_required_review": {
-      "count": 9,
+      "count": 7,
       "cases": [
         "capture-0/46881",
         "capture-0/missing-prior",
@@ -50889,8 +51056,6 @@
         "capture-1/46881",
         "capture-1/missing-prior",
         "capture-2/46881",
-        "capture-2/unchanged-revision",
-        "capture-2/repeated-revision",
         "capture-2/missing-prior"
       ]
     },
@@ -52932,7 +53097,7 @@
     ]
   },
   "metric_definitions": {
-    "false_negatives": "Supplied positive labels classified NON_SIGNAL; abstentions are separately unscored, never credited correct.",
+    "false_negatives": "labeled_positives_decided_non_signal counts positives classified NON_SIGNAL; labeled_positives_unresolved counts positives sent to review. Both are misses for the Gate 2 budget; neither is credited correct.",
     "replay": "Unauthenticated captured scenarios cannot prove positive publication; the separately identified synthetic A–F sequence supplies positive authorization controls.",
     "critical": "Critical source flag on unscored labeled cases; not a new materiality label.",
     "counts": "Each capture/case is counted separately; repeated source notices across captures are not independent samples."

@@ -1,4 +1,4 @@
-<!-- Index copy of evidence/run-20260928/CURRENT.md, produced by `make gate` (reviewed spec) on commit 695cc5f with a clean tree. Per-case files are omitted from the commit (the replay and trading results are included); per-case files for an equivalent run (`reviewed-run-final` at 15d4bdd, same decisions) are in the Gate 3 reference directory; this run's own per-case files are not retained. -->
+<!-- Index copy of evidence/run-20260928/CURRENT.md, produced by `make gate` (reviewed spec) on commit 8bbcd0e with a clean tree. Per-case files are omitted from the commit (the replay and trading results are included); per-case files of an equivalent run are in the Gate 3 reference directory. -->
 
 # Evidence for the engineer's next decision
 
@@ -14,11 +14,11 @@ Gates judge the **rebuilt component**. The inherited system is measured below, n
 | 2 — trading_behavior | PASS | All in-scope findings passed |
 | 3 — regression_change | PASS | Nothing changed since the reference; this is not a regression test of a change |
 
-Run `final-run` · commit `695cc5f66afd00e70f94297a878491a9cb0e0d08` · tracked changes `False` · spec `c1f20c1cf233a0ccdd5607c33a443bf653f0e3993b334b806498b55686d4b937`.
+Run `final-run` · commit `8bbcd0e7fdc854304c7db3685e3e9038719fa19d` · tracked changes `False` · spec `41cc4f5916379f1cdc3ef1c8841cc8dfd1fe3587f653b2ee2da7563af296eba9`.
 
-Reread by **Thomas Hand**, covering decisions: AUDIT4-001.
+Reread by **Thomas Hand**, covering decisions: AUDIT5-001.
 
-Gate 3 reference `evidence/reference-20260928d` (commit `15d4bdd`), registered by **Thomas Hand**; evaluator/oracle changes it accepted: evaluator: harness/adapter.py, harness/baseline.py, harness/contract_preflight.py, harness/current_evidence.py, harness/domain_rules.py, harness/input_contract_checks.py, harness/live.py, harness/normalized_evaluation.py, harness/preflight.py, harness/spec_compiler.py, harness/spec_ownership.py, harness/trading_evaluation.py, tests/test_harness.py, tests/test_release_hardening.py, tests/test_spec_predicates.py, tests/test_spec_source.py.
+Gate 3 reference `evidence/reference-20260928e` (commit `37c9dfa`), registered by **Thomas Hand**; evaluator/oracle changes it accepted: evaluator: harness/consequences.py, harness/context.py, harness/contract_preflight.py, harness/current_evidence.py, harness/normalized_evaluation.py, harness/preflight.py, harness/proposals.py, harness/signal_evaluation.py, harness/trading_evaluation.py, tests/test_audit_controls.py, tests/test_check_registry.py, tests/test_gate_codes.py, tests/test_normalized_hardening.py, tests/test_proposal_changes.py, tests/test_release_hardening.py, tests/test_spec_predicates.py, tests/test_spec_source.py.
 
 Gate 2 limits, as declared in spec-settings acceptance (the comparison code is guarded by Gate 3 and the reference owner): max_missed_positives_per_capture = 2, max_false_positives_per_capture = 0, review_satisfies = ['SIGNAL-002', 'SIGNAL-004'].
 
@@ -66,12 +66,13 @@ Where the captures disagree (the same labeled notice, different runs of the inhe
 | Observed count | Cases |
 |---|---:|
 | supplied_label_false_positives | 0 |
-| supplied_label_false_negatives | 0 |
+| labeled_positives_decided_non_signal | 0 |
+| labeled_positives_unresolved | 6 |
 | unscored_labeled | 18 |
 | routine_admin_signaled | 0 |
 | duplicate_replay_recommendations | 0 |
 | semantic_execution_refusals | 2 |
-| history_required_review | 9 |
+| history_required_review | 7 |
 | labeled_scored | 24 |
 | labeled_total | 42 |
 
@@ -106,7 +107,7 @@ Captured cases: **69** (3 captures of 23 cases; 14 labels per capture). No abste
 | BR-FIRM | 36/69 | 30/69 | Service class: 33 |
 | BR-UNRESOLVED | 69/69 | 10/69 |  |
 
-Previous commit: `15d4bdd8bb09ffb06679f8ce8fca180b3d2a6e03`. Spec-to-spec consequences with current fixed compiler; not a runtime regression mapping
+Previous commit: `37c9dfaa0dc062d746315279e21638ee5b955cbb`. Spec-to-spec consequences with current fixed compiler; not a runtime regression mapping
 
 | Notice/capture | From | To |
 |---|---|---|
