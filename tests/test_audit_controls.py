@@ -112,6 +112,27 @@ class AuditControls(unittest.TestCase):
                 )
             )
 
+    def test_an_input_refusal_in_the_replay_is_a_finding_not_a_crash(self):
+        """Audit 5 #11: a refused input has no candidate classification; name its spec row."""
+        from harness.behavior_contract import load
+        from harness.signal_evaluation import check, execute
+        from rebuilt.signals import RecommendationPublisher
+
+        reason = "spec.md:447: block spec-inputs, row INPUT-SOURCE-022: malformed text"
+
+        def refuse(*args, **kwargs):
+            raise ValueError(reason)
+
+        contract = load()
+        one_step = {**contract["state_safety"], "steps": contract["state_safety"]["steps"][:1]}
+        with tempfile.TemporaryDirectory(dir=ROOT / "evidence") as directory:
+            with patch.object(RecommendationPublisher, "_decide", refuse):
+                observations = execute(one_step, Path(directory) / "signals", "candidate")
+        self.assertFalse(observations[0]["classification_presented_as_valid"])
+        failed = [f for f in check(one_step, observations) if f["status"] == "FAIL"]
+        self.assertTrue(failed)
+        self.assertTrue(all(f["refused_by"] == reason for f in failed))
+
     def test_config_change_does_not_masquerade_as_synthetic_execution(self):
         from harness.adapter import llm_utils
         from harness.behavior_contract import load

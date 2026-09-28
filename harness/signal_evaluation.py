@@ -267,7 +267,8 @@ def execute(contract: dict, destination: Path, implementation: str, fault: str =
                 "classification_scorable": classification_scorable(decision, semantic)
                 if implementation != "inherited"
                 else semantic.refusal() is None,
-                "classification_presented_as_valid": decision["candidate_classification"]
+                # An input refusal carries no candidate classification at all.
+                "classification_presented_as_valid": decision.get("candidate_classification")
                 is not None,
                 "decision": decision,
                 "authorization": as_authorization(auth),
@@ -329,6 +330,10 @@ def check(contract: dict, observations: list[dict]) -> list[dict]:
                     else "FAIL",
                 }
             )
+            refusal = (observation.get("decision") or {}).get("error_reason")
+            if refusal and findings[-1]["status"] == "FAIL":
+                # The component names the spec row that refused the input; keep it visible.
+                findings[-1]["refused_by"] = refusal
     return findings
 
 
@@ -458,7 +463,7 @@ def probe(record_path: Path, destination: Path) -> dict:
         "recommendation_count": len(emitted),
         "authorization": "None supplied; probe cannot authorize recommendations",
         "semantic_safety": classification_scorable(decision, semantic)
-        or (decision["candidate_classification"] is None and not emitted),
+        or (decision.get("candidate_classification") is None and not emitted),
     }
     write_json(destination / "input.json", record)
     write_json(destination / "results.json", result)

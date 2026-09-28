@@ -302,7 +302,7 @@ def render(destination: Path, result: dict) -> None:
         for r in nonpassing:
             detail = str(
                 r.get("reason")
-                or {k: r[k] for k in ("expected", "observed") if k in r}
+                or {k: r[k] for k in ("expected", "observed", "refused_by") if k in r}
                 or r.get("relation", "")
             ).replace("|", "/")
             lines.append(
