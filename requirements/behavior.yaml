@@ -1,4 +1,4 @@
-# Generated from spec.md; spec-sha256: c07da2192a09b2f7cd62951facc12594ca9a59a975abc25aff2082d48f8e6828; behavior; DO NOT EDIT
+# Generated from spec.md; spec-sha256: 1310d850c01449cd3cd7ee82c63087de31ec497d0a542b473d74b5c4fc76281f; behavior; DO NOT EDIT
 {
   "version": 6,
   "policy_id": "assessment-v4-timezone-separation-20260928",
@@ -219,7 +219,7 @@
           "disposition": "INITIAL_RECOMMENDATION"
         },
         "requirement": "STATE-003",
-        "spec_line": 385
+        "spec_line": 386
       },
       {
         "id": "B",
@@ -232,7 +232,7 @@
           "disposition": "SUPPRESSED"
         },
         "requirement": "STATE-003",
-        "spec_line": 386
+        "spec_line": 387
       },
       {
         "id": "C",
@@ -245,7 +245,7 @@
           "disposition": "SUPPRESSED"
         },
         "requirement": "STATE-004",
-        "spec_line": 387
+        "spec_line": 388
       },
       {
         "id": "D",
@@ -258,7 +258,7 @@
           "disposition": "SUPPRESSED"
         },
         "requirement": "STATE-006",
-        "spec_line": 388
+        "spec_line": 389
       },
       {
         "id": "E",
@@ -271,7 +271,7 @@
           "disposition": "INITIAL_RECOMMENDATION"
         },
         "requirement": "STATE-003",
-        "spec_line": 389
+        "spec_line": 390
       },
       {
         "id": "F",
@@ -284,7 +284,7 @@
           "disposition": "SUPPRESSED"
         },
         "requirement": "STATE-006",
-        "spec_line": 390
+        "spec_line": 391
       },
       {
         "id": "unusable-impact",
@@ -298,7 +298,7 @@
           "reason": "SEMANTICS_INCOMPLETE"
         },
         "requirement": "INPUT-002",
-        "spec_line": 391
+        "spec_line": 392
       },
       {
         "id": "unavailable-extraction",
@@ -312,7 +312,7 @@
           "semantic_safety": true
         },
         "requirement": "INPUT-002",
-        "spec_line": 392
+        "spec_line": 393
       },
       {
         "id": "missing-history",
@@ -326,7 +326,7 @@
           "reason": "MISSING_HISTORY"
         },
         "requirement": "HISTORY-002",
-        "spec_line": 393
+        "spec_line": 394
       },
       {
         "id": "missing-authorization",
@@ -340,7 +340,7 @@
           "reason": "AUTHORIZATION_REQUIRED"
         },
         "requirement": "STATE-003",
-        "spec_line": 394
+        "spec_line": 395
       },
       {
         "id": "routine",
@@ -353,7 +353,7 @@
           "disposition": "NO_SIGNAL"
         },
         "requirement": "SIGNAL-002",
-        "spec_line": 395
+        "spec_line": 396
       },
       {
         "id": "unsupported-format",
@@ -367,7 +367,7 @@
           "reason": "UNSUPPORTED_FORMAT"
         },
         "requirement": "SAFETY-002",
-        "spec_line": 396
+        "spec_line": 397
       }
     ]
   },
@@ -855,9 +855,9 @@
       ],
       "status": "spec-recorded",
       "oracle": "spec-derived, not independent",
-      "basis": "spec.md:315",
+      "basis": "spec.md:316",
       "output_reason": "UNSUPPORTED_FORMAT",
-      "spec_line": 315
+      "spec_line": 316
     },
     {
       "id": "BR-SEMANTICS",
@@ -877,9 +877,9 @@
       ],
       "status": "spec-recorded",
       "oracle": "spec-derived, not independent",
-      "basis": "spec.md:316",
+      "basis": "spec.md:317",
       "output_reason": "UNUSABLE_SEMANTICS",
-      "spec_line": 316
+      "spec_line": 317
     },
     {
       "id": "BR-CONTRADICTION",
@@ -898,9 +898,9 @@
       ],
       "status": "spec-recorded",
       "oracle": "spec-derived, not independent",
-      "basis": "spec.md:317",
+      "basis": "spec.md:318",
       "output_reason": "CONTRADICTORY_EVIDENCE",
-      "spec_line": 317
+      "spec_line": 318
     },
     {
       "id": "BR-HISTORY",
@@ -919,9 +919,9 @@
       ],
       "status": "spec-recorded",
       "oracle": "spec-derived, not independent",
-      "basis": "spec.md:318",
+      "basis": "spec.md:319",
       "output_reason": "MISSING_HISTORY",
-      "spec_line": 318
+      "spec_line": 319
     },
     {
       "id": "BR-UNCHANGED",
@@ -940,9 +940,9 @@
       ],
       "status": "spec-recorded",
       "oracle": "spec-derived, not independent",
-      "basis": "spec.md:319",
+      "basis": "spec.md:320",
       "output_reason": "UNCHANGED_REVISION",
-      "spec_line": 319
+      "spec_line": 320
     },
     {
       "id": "BR-ROUTINE",
@@ -962,9 +962,9 @@
       ],
       "status": "spec-recorded",
       "oracle": "spec-derived, not independent",
-      "basis": "spec.md:320",
+      "basis": "spec.md:321",
       "output_reason": "NO_OPERATIONAL_RESTRICTION",
-      "spec_line": 320
+      "spec_line": 321
     },
     {
       "id": "BR-HISTORICAL",
@@ -984,9 +984,9 @@
       ],
       "status": "spec-recorded",
       "oracle": "spec-derived, not independent",
-      "basis": "spec.md:321",
+      "basis": "spec.md:322",
       "output_reason": "HISTORICAL_ONLY",
-      "spec_line": 321
+      "spec_line": 322
     },
     {
       "id": "BR-FIRM",
@@ -1006,9 +1006,9 @@
       ],
       "status": "spec-recorded",
       "oracle": "spec-derived, not independent",
-      "basis": "spec.md:322",
+      "basis": "spec.md:323",
       "output_reason": "FIRM_CANDIDATE",
-      "spec_line": 322
+      "spec_line": 323
     },
     {
       "id": "BR-UNRESOLVED",
@@ -1026,9 +1026,9 @@
       ],
       "status": "spec-recorded",
       "oracle": "spec-derived, not independent",
-      "basis": "spec.md:323",
+      "basis": "spec.md:324",
       "output_reason": "UNRESOLVED",
-      "spec_line": 323
+      "spec_line": 324
     }
   ],
   "columns": {
@@ -1091,7 +1091,7 @@
         "path": "source.media_type",
         "set": "SUPPORTED_FORMATS"
       },
-      "spec_line": 331
+      "spec_line": 332
     },
     {
       "column": "Format",
@@ -1100,7 +1100,7 @@
       "ast": {
         "op": "otherwise"
       },
-      "spec_line": 332
+      "spec_line": 333
     },
     {
       "column": "Information-only",
@@ -1111,7 +1111,7 @@
         "path": "facts.content_kind",
         "set": "INFORMATION_KINDS"
       },
-      "spec_line": 333
+      "spec_line": 334
     },
     {
       "column": "Information-only",
@@ -1120,7 +1120,7 @@
       "ast": {
         "op": "otherwise"
       },
-      "spec_line": 334
+      "spec_line": 335
     },
     {
       "column": "Restriction",
@@ -1145,7 +1145,7 @@
           }
         ]
       },
-      "spec_line": 335
+      "spec_line": 336
     },
     {
       "column": "Restriction",
@@ -1156,7 +1156,7 @@
         "column": "Information-only",
         "value": "YES"
       },
-      "spec_line": 336
+      "spec_line": 337
     },
     {
       "column": "Restriction",
@@ -1165,7 +1165,7 @@
       "ast": {
         "op": "otherwise"
       },
-      "spec_line": 337
+      "spec_line": 338
     },
     {
       "column": "Conflict",
@@ -1195,7 +1195,7 @@
           }
         ]
       },
-      "spec_line": 338
+      "spec_line": 339
     },
     {
       "column": "Conflict",
@@ -1204,7 +1204,7 @@
       "ast": {
         "op": "otherwise"
       },
-      "spec_line": 339
+      "spec_line": 340
     },
     {
       "column": "History",
@@ -1229,7 +1229,7 @@
           }
         ]
       },
-      "spec_line": 340
+      "spec_line": 341
     },
     {
       "column": "History",
@@ -1238,7 +1238,7 @@
       "ast": {
         "op": "otherwise"
       },
-      "spec_line": 341
+      "spec_line": 342
     },
     {
       "column": "Operational change",
@@ -1263,7 +1263,7 @@
           }
         ]
       },
-      "spec_line": 342
+      "spec_line": 343
     },
     {
       "column": "Operational change",
@@ -1273,7 +1273,7 @@
         "op": "flag",
         "path": "predecessor.present"
       },
-      "spec_line": 343
+      "spec_line": 344
     },
     {
       "column": "Operational change",
@@ -1282,7 +1282,7 @@
       "ast": {
         "op": "otherwise"
       },
-      "spec_line": 344
+      "spec_line": 345
     },
     {
       "column": "Service class",
@@ -1342,7 +1342,7 @@
           }
         ]
       },
-      "spec_line": 345
+      "spec_line": 346
     },
     {
       "column": "Service class",
@@ -1351,7 +1351,7 @@
       "ast": {
         "op": "otherwise"
       },
-      "spec_line": 346
+      "spec_line": 347
     },
     {
       "column": "Oracle answer",
@@ -1380,7 +1380,7 @@
           }
         ]
       },
-      "spec_line": 347
+      "spec_line": 348
     },
     {
       "column": "Oracle answer",
@@ -1389,7 +1389,7 @@
       "ast": {
         "op": "otherwise"
       },
-      "spec_line": 348
+      "spec_line": 349
     },
     {
       "column": "Restriction current",
@@ -1408,7 +1408,7 @@
           }
         ]
       },
-      "spec_line": 349
+      "spec_line": 350
     },
     {
       "column": "Restriction current",
@@ -1418,7 +1418,7 @@
         "op": "flag",
         "path": "time.current"
       },
-      "spec_line": 350
+      "spec_line": 351
     },
     {
       "column": "Restriction current",
@@ -1427,10 +1427,10 @@
       "ast": {
         "op": "otherwise"
       },
-      "spec_line": 351
+      "spec_line": 352
     }
   ],
-  "source_spec_sha256": "c07da2192a09b2f7cd62951facc12594ca9a59a975abc25aff2082d48f8e6828",
+  "source_spec_sha256": "1310d850c01449cd3cd7ee82c63087de31ec497d0a542b473d74b5c4fc76281f",
   "normative_role": "Generated from spec.md; never edit",
   "precedence": "BR-FORMAT > BR-SEMANTICS > BR-CONTRADICTION > BR-HISTORY > BR-UNCHANGED > BR-ROUTINE > BR-HISTORICAL > BR-FIRM > BR-UNRESOLVED",
   "input_contract": [
@@ -1441,7 +1441,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 421
+      "_line": 422
     },
     {
       "ID": "INPUT-SOURCE-002",
@@ -1450,7 +1450,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 422
+      "_line": 423
     },
     {
       "ID": "INPUT-SOURCE-003",
@@ -1459,7 +1459,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 423
+      "_line": 424
     },
     {
       "ID": "INPUT-SOURCE-004",
@@ -1468,7 +1468,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 424
+      "_line": 425
     },
     {
       "ID": "INPUT-SOURCE-005",
@@ -1477,7 +1477,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 425
+      "_line": 426
     },
     {
       "ID": "INPUT-SOURCE-006",
@@ -1486,7 +1486,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 426
+      "_line": 427
     },
     {
       "ID": "INPUT-SOURCE-007",
@@ -1495,7 +1495,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 427
+      "_line": 428
     },
     {
       "ID": "INPUT-SOURCE-008",
@@ -1504,7 +1504,7 @@
       "Missing": "ERROR",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 428
+      "_line": 429
     },
     {
       "ID": "INPUT-SOURCE-009",
@@ -1513,7 +1513,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 429
+      "_line": 430
     },
     {
       "ID": "INPUT-SOURCE-010",
@@ -1522,7 +1522,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 430
+      "_line": 431
     },
     {
       "ID": "INPUT-SOURCE-011",
@@ -1531,7 +1531,7 @@
       "Missing": "ERROR",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 431
+      "_line": 432
     },
     {
       "ID": "INPUT-SOURCE-012",
@@ -1540,7 +1540,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 432
+      "_line": 433
     },
     {
       "ID": "INPUT-SOURCE-013",
@@ -1549,7 +1549,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 433
+      "_line": 434
     },
     {
       "ID": "INPUT-SOURCE-014",
@@ -1558,7 +1558,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 434
+      "_line": 435
     },
     {
       "ID": "INPUT-SOURCE-015",
@@ -1567,7 +1567,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 435
+      "_line": 436
     },
     {
       "ID": "INPUT-SOURCE-016",
@@ -1576,7 +1576,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 436
+      "_line": 437
     },
     {
       "ID": "INPUT-SOURCE-017",
@@ -1585,7 +1585,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 437
+      "_line": 438
     },
     {
       "ID": "INPUT-SOURCE-018",
@@ -1594,7 +1594,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 438
+      "_line": 439
     },
     {
       "ID": "INPUT-SOURCE-019",
@@ -1603,7 +1603,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 439
+      "_line": 440
     },
     {
       "ID": "INPUT-SOURCE-020",
@@ -1612,7 +1612,7 @@
       "Missing": "ERROR",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 440
+      "_line": 441
     },
     {
       "ID": "INPUT-SOURCE-021",
@@ -1621,7 +1621,7 @@
       "Missing": "ERROR",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 441
+      "_line": 442
     },
     {
       "ID": "INPUT-SOURCE-022",
@@ -1630,7 +1630,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 442
+      "_line": 443
     },
     {
       "ID": "INPUT-SOURCE-023",
@@ -1639,7 +1639,7 @@
       "Missing": "ERROR",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 443
+      "_line": 444
     },
     {
       "ID": "INPUT-SOURCE-024",
@@ -1648,7 +1648,7 @@
       "Missing": "ERROR",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 444
+      "_line": 445
     },
     {
       "ID": "INPUT-SOURCE-025",
@@ -1657,7 +1657,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "model",
-      "_line": 445
+      "_line": 446
     },
     {
       "ID": "INPUT-SOURCE-026",
@@ -1666,7 +1666,7 @@
       "Missing": "ERROR",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 446
+      "_line": 447
     },
     {
       "ID": "INPUT-SOURCE-027",
@@ -1675,7 +1675,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 447
+      "_line": 448
     },
     {
       "ID": "INPUT-SOURCE-028",
@@ -1684,7 +1684,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "source_parser",
-      "_line": 448
+      "_line": 449
     },
     {
       "ID": "INPUT-SOURCE-029",
@@ -1693,7 +1693,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "model",
-      "_line": 449
+      "_line": 450
     },
     {
       "ID": "INPUT-SOURCE-030",
@@ -1702,7 +1702,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "model",
-      "_line": 450
+      "_line": 451
     },
     {
       "ID": "INPUT-SOURCE-031",
@@ -1711,7 +1711,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "model",
-      "_line": 451
+      "_line": 452
     },
     {
       "ID": "INPUT-SOURCE-032",
@@ -1720,7 +1720,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "model",
-      "_line": 452
+      "_line": 453
     },
     {
       "ID": "INPUT-SOURCE-033",
@@ -1729,7 +1729,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "model",
-      "_line": 453
+      "_line": 454
     },
     {
       "ID": "INPUT-SOURCE-034",
@@ -1738,7 +1738,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "model",
-      "_line": 454
+      "_line": 455
     },
     {
       "ID": "INPUT-SOURCE-035",
@@ -1747,7 +1747,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "model",
-      "_line": 455
+      "_line": 456
     },
     {
       "ID": "INPUT-SOURCE-036",
@@ -1756,7 +1756,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "model",
-      "_line": 456
+      "_line": 457
     },
     {
       "ID": "INPUT-SOURCE-037",
@@ -1765,7 +1765,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "model",
-      "_line": 457
+      "_line": 458
     },
     {
       "ID": "INPUT-SOURCE-038",
@@ -1774,7 +1774,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "model",
-      "_line": 458
+      "_line": 459
     },
     {
       "ID": "INPUT-SOURCE-039",
@@ -1783,7 +1783,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "model",
-      "_line": 459
+      "_line": 460
     },
     {
       "ID": "INPUT-SOURCE-040",
@@ -1792,7 +1792,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "model",
-      "_line": 460
+      "_line": 461
     },
     {
       "ID": "INPUT-SOURCE-041",
@@ -1801,7 +1801,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "model",
-      "_line": 461
+      "_line": 462
     },
     {
       "ID": "INPUT-SOURCE-042",
@@ -1810,7 +1810,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "model",
-      "_line": 462
+      "_line": 463
     },
     {
       "ID": "INPUT-SOURCE-043",
@@ -1819,7 +1819,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "model",
-      "_line": 463
+      "_line": 464
     },
     {
       "ID": "INPUT-SOURCE-044",
@@ -1828,7 +1828,7 @@
       "Missing": "ERROR",
       "Malformed": "ERROR",
       "Supplier": "retained_evidence",
-      "_line": 464
+      "_line": 465
     },
     {
       "ID": "INPUT-SOURCE-045",
@@ -1837,7 +1837,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "retained_evidence",
-      "_line": 465
+      "_line": 466
     },
     {
       "ID": "INPUT-SOURCE-046",
@@ -1846,7 +1846,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "retained_evidence",
-      "_line": 466
+      "_line": 467
     },
     {
       "ID": "INPUT-SOURCE-047",
@@ -1855,7 +1855,7 @@
       "Missing": "UNKNOWN",
       "Malformed": "ERROR",
       "Supplier": "retained_evidence",
-      "_line": 467
+      "_line": 468
     }
   ],
   "decisions": [
@@ -1930,6 +1930,14 @@
       "Previous spec SHA256": "c7a3898dab4f2acb0e2123ed218449023e3fbec94d9bd0b1704376605afaac1f",
       "Decision": "Approved by Thomas Hand 2026-09-28 (desk request): NGPL No-Notice Service is a firm, storage-backed service. Extracted service_type NO_NOTICE normalizes to a distinct NO_NOTICE_FIRM value (source distinction preserved) and NO_NOTICE_FIRM joins FIRM_SERVICES, so a firm NNS restriction (UNAVAILABLE or PRIMARY_ONLY) is a FIRM_DISRUPTION like other firm services. Measured by make consequences: 0/46 captured outcomes change; the only captured NNS row (46528, labeled negative) is an HOURLY_LIMIT_PCT partial limit and stays non-firm-disruption. No captured or labeled NNS outage exists, so the intended positive effect is unmeasured by frozen labels.",
       "_line": 296
+    },
+    {
+      "ID": "AUDIT2-001",
+      "Status": "proposed",
+      "Person": "Thomas Hand",
+      "Previous spec SHA256": "4448a6f9e9ee3841e0086a8e556c21bbd584efc9167742a831154f70e3e18a8e",
+      "Decision": "Remove status prose that was false on the reviewed bytes (\"awaits an exact-spec human reread\", \"Exact spec reread still pending\"). No rule, predicate, setting or requirement changes; make consequences shows 0 of 46 changed.",
+      "_line": 297
     }
   ],
   "sentences": [
@@ -2299,5 +2307,5 @@
       "spec_line": 106
     }
   ],
-  "input_time_line": 470
+  "input_time_line": 471
 }
