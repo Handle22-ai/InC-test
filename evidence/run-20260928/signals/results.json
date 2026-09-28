@@ -1,9 +1,9 @@
 {
   "scope": "bounded initial outbound recommendation decisions; not delivery or complete lifecycle acceptance",
   "kind": "downstream state/safety execution; extracted facts and helper proposals supplied by SDK stubs, not raw-text classification evidence",
-  "contract_sha256": "7dd9aeb7581e1100dfaf0182b025279e874a91767a9a791b061bd7f4919aa0dc",
+  "contract_sha256": "addec40384951011f8945a2123c43ef7179f463f47dbfada3c8a1b327b9d2f1f",
   "provenance": {
-    "timestamp": "2026-09-28T17:19:38.013626+00:00",
+    "timestamp": "2026-09-28T18:21:42.409620+00:00",
     "integrity": {
       "inherited_file_count": 97,
       "changed": [],
@@ -59,52 +59,52 @@
     },
     "files": {
       "harness/__init__.py": "29f7829d89d3f18af499f0e01f61bf4f2f1866024a7c45e5cd6fe610ef31601e",
-      "harness/__main__.py": "1ea9d274b3d93a92f5c21c9beaa3644b5d4c5dfdbbfac322d255e558d82d6405",
+      "harness/__main__.py": "ff7ad02a560af34fcca4d74f5189f70ae059f5cb434caa45977154df4ef83328",
       "harness/adapter.py": "8896536c27b635518125cfe7395b73e611e853daa04865d524ecc86d56bc698c",
-      "harness/baseline.py": "c1190662033d37967b34a89d36726ff8cdd60157e54b3c0bd202c8d20dc005fb",
+      "harness/baseline.py": "4ab4c29310165c3ea17bc3c0e0481bcd8d8b650701fdd4ecd83f918bbfb702f5",
       "harness/behavior_contract.py": "4582fced1183ca5f83897ce0dad4c52bb90e8e3547132ac3439c71ddbdaa5193",
       "harness/capture_registration.py": "07a285599fee015a5216a44f37e10c17ddb3a19ab354119522f917176ace2546",
       "harness/captures.py": "dd83c4b045198fd347191762ee9855b8d22c488d56285ca976e21a9515fdc1e3",
       "harness/commands.py": "547be8682242ab269858cb8be39a3de686fed048245a4a7e735f18f293a582d7",
       "harness/comparison_identity.py": "c5fd8e7c2a46c20b18332589bdd27328b3ad4a95d241c9f13c7145716f0e2c38",
-      "harness/consequences.py": "ea33b7a8327e641e26c54d3c720e591a7609a78c836accd5832f0a7a46a5a2af",
-      "harness/context.py": "0cc85464c64665b40ecd2e1d6c07c83b370f66993e50e2e1fa6ca26175ce3ae0",
+      "harness/consequences.py": "a4b31bb58bc6a4858771a6e8251282a38f77352f59d921ff04214c05cef123d1",
+      "harness/context.py": "a1929a0067238b393abc8539f34cbe35a9322cac3fac1d67229222744842a72d",
       "harness/context_integrity.py": "2d6fe4015a6ad055171bc52e21f41b4e4c7e74ec65179628b2a12074415351bb",
       "harness/contract_preflight.py": "2d2be2484c42a2cdf6f1fdaefbd8c20cbb7d0a6be7b16acc2aef5b2a77471b17",
       "harness/credential_guard.py": "05f27f20a54d2896c4339d2df47f0c1f2b00a9f2599b0c5c9f232d9c22e1c0c5",
-      "harness/current_evidence.py": "dd4f1ac3dca5b10db2e2614101afb67513ee7724d25d78749200a704ed571eb6",
+      "harness/current_evidence.py": "01097c41c036e278ff297d8811b346bbd896fca66b3215d363ef336ac1f45d1c",
       "harness/domain_rules.py": "7bb5fe1f3a6d32a93c3c4d7652acbd915ee3b340f532ca9e183fff337aa2fda1",
       "harness/e2e.py": "e56b38830ebdc4ccf3eba57e77e305e64dac4a7b73a1ed61ac2fb2b87859507b",
-      "harness/evaluator.py": "9d6bc45d1f909745d4c43ad6db4cd1ec090591f0d7437d53e9b2ea0874e64fdc",
-      "harness/evidence.py": "7cfc7bf4c6f1961dd68d35111af110ad8597c03c7d18f429f91f8a4ea41b5ae6",
+      "harness/evaluator.py": "505ebcdbdf8932dba45dc428daa921a6830d758e358d11f3b93b0fb71cf68b2d",
+      "harness/evidence.py": "b5826490650f0e2805c00252761376b4135044195d82fbec868e2397c8d714d3",
       "harness/gates.py": "c1f7131cc2aa73af7e89cdee9325a2f9dde8d44b512d33eb83050b1cc00da7ec",
       "harness/input_contract_checks.py": "a6e250acbf26c864f05d2c466f61fad15510702028b434c98a6f3319633dd0d2",
       "harness/live.py": "1b1d3e600f2325b5166a17b884969788bddd18afbdec4f2d9b86be955315829f",
-      "harness/normalized_evaluation.py": "39e402b6fdd97690da9b5046ac84d79f722c54c0b3fb266b822ec80d6d81d87b",
+      "harness/normalized_evaluation.py": "36abae2374471233cb2018f9479593ef51ce3dc9246a456b789536ddc5c00b3b",
       "harness/offline.py": "1d6a4ea44d8757c19c0b1e2ccbcad49a506246397d2834ecc8ceab754b31b329",
       "harness/predicate_table.py": "4e20b83b09ba3fbef143f21ec79eab0a6e8be237b9c626bcd53e5d2bc1456c78",
       "harness/predicates.py": "dbe3a1d72009b7f8e442855ecf01f4086e9d34c29ff19bf5ebf84ad232dcfc27",
       "harness/preflight.py": "3a87bbcc8e831ec963c27062c9e5ff26d0a7bfb5c9f4ea402d740f0978de5df0",
-      "harness/proposals.py": "24be8f18e2c59c6aa531af63af712b93c333437a5a12f77d05ab3b3dd271162e",
+      "harness/proposals.py": "21efce3a490829c3222e94204bce77cb7c43ba7f7c6650891844a38bd1301491",
       "harness/real_positive_evaluation.py": "ee8bc10aa397bbc8b96c6f9007d80cf0a6fe24c54e23fb37c89953148033eda3",
       "harness/refusal_control.py": "bf3af10ffc604717d1fda67aab498f3133622044d132dd6fe3205a5fb2864ddb",
       "harness/regression.py": "ee49f8631461e90c1f6debac153ebacba8de2e69250d4ee3b756c86140444d18",
       "harness/requirement_trace.py": "4bf685032f94839cb84bd4b0553c962476022717185a51529715d332c909c970",
       "harness/requirements.py": "a22e5db70afaebf9531ab6f110bcbd7af3bf56137d1b537982b3e8fbadb0f028",
-      "harness/rule_invariants.py": "7013b4065dd2ec8901e3e6e9eb211a6214ba2c4c2ff3e14ca4466d89ad4f4892",
+      "harness/rule_invariants.py": "8ca7d2e1ba52ad6ef51ec9846ab6c5ebcbdca98216cdc20a16b508c4a3606e7b",
       "harness/runtime.py": "08c5252fe1edd23c70f120755616b8562168af2b4f16465af2a4a4b87f34bdcd",
       "harness/signal_evaluation.py": "b5ac991f2afa0c1848eeadbd43c9b91f61fdb12c04cdd244cec7259af4047dad",
       "harness/spec_compiler.py": "eeecb1dab97038f3b9f278cf4ec8b2d4a36ab656a8d0ea7f6cd193adbc905c68",
-      "harness/spec_ownership.py": "f05c9ea25fd56a50421f180ca2dc7531fbb8fb2ba1b007cd9955207aef27fbf5",
-      "harness/spec_tables.py": "d95f98e05652650453ace3407035fa045e5711299636f18eec185d30d397b0a8",
+      "harness/spec_ownership.py": "7212ce5a8e4c02389399297b6e9d6e555756106253f6c69d68c1cb57b2d5a06c",
+      "harness/spec_tables.py": "ddb6d22bd9bac73108dcd2c1cf4db0c61bfafe41724374e2710e7f5aa78c60f5",
       "harness/specification.py": "6651255abb5093fb46e15a745938fd2b504f39ba942536710cdb366573b5ee90",
       "harness/storage_evaluation.py": "1244757ba5699789642151c8ab5c645dc5b6700d85213fc199b4ff2152506b50",
       "harness/storage_ports.py": "09eb6ad0dc045b24d745395bc302d7275bb09cb8ea34c3434dc8bef91c52ccd6",
       "harness/temporal_authority.py": "2afd17c7cc4fe6e08a52a0524350ff3791b62d8f4d70ece6360f84249e37a47a",
-      "harness/trading_evaluation.py": "f4102e5682152b69470779f82468a2434e68fb779b925cc0077a2c9f43547126",
-      "requirements/behavior.yaml": "136a950500383a9d6ee0898372b3c93ccbdada8c1e5530c8d1490fdb14e5f9e1",
-      "requirements/capture-registry.json": "65f575bd5b496bed3757279c7752d02b87171dbf93511b61502d068ec797a9b3",
-      "requirements/compiled-build.json": "ca0cdea2e841fe6b0909ccf7eedf07af73a99e135d7999852ae30bfe84c1f600",
+      "harness/trading_evaluation.py": "54e081e3d226c4b509f251fe1db95e859e102a0420257f4ef42466e3f2cfa2fa",
+      "requirements/behavior.yaml": "1056e4bc87d99d21d98245d7b1dd0a03c30d088887d5e35399d58593bddebb77",
+      "requirements/capture-registry.json": "c3cec4dae53a827207b5eae1abfdb5ac83f2ca3f33fa3d70fbb96e8366319563",
+      "requirements/compiled-build.json": "9e506196a6969b5dfc309cd5eef68e67f117607a644571d54c284866678e5356",
       "requirements/dataset.json": "a51147dffc80b69de840865ea01091eee66ad720e334adee9a983179841810ef",
       "requirements/normalized-baselines.json": "2ca542545dd2d31365b1ab9f307357ce3abbf3c4b35388824e0ffe90da56db0e",
       "requirements/normalized-input.schema.json": "a648bc9b58cddda4cdc33e37c19cccd57d815f84387d512bacc1d9f252ebf598",
@@ -113,16 +113,16 @@
       "requirements/oracle-support.json": "237d35251aeed2614370812ec175b543e91a5184daca3e5316af544f07f0fe46",
       "requirements/publisher-witnesses.json": "abbf2b834ca282ca3cc47d5acfc3a9a499b8f1238885daf67296f11288581345",
       "requirements/real-positive-witnesses.json": "89b16247954da7b39b1b8b83191ecbeb3406056bd3c7e4b05308ec161120d542",
-      "requirements/replay-expectations.json": "3d941e3d827b62d1f815f173677786012e1aaa7da901ad0d46266706f9e82919",
+      "requirements/replay-expectations.json": "f0e1a930081fae303a5be5ec1bfe1dc530568091f285c74284c1a52f420ef3be",
       "requirements/requirement-revisions.json": "7373164e7d355f27ac83ed17c9f75fcd26f0c2221c1e37fcd48b90530457843e",
       "requirements/requirements.example.yaml": "8c766be56a4e72a904d155e9d8be46f425624e4f5977fcddb9c23b920dd7d569",
-      "requirements/requirements.yaml": "b06113514eae67134c0befb2f744bda4ac911c01f7c60836dd9666b4a7667227",
+      "requirements/requirements.yaml": "29827595d544de3f23b91483450df9f23d08c824a8834ea3375cc65abf161244",
       "requirements/rule-block.schema.json": "7e1416cfd2d589e38f576edef21eeeb8d959e4a6019fa8c59c57546bb5a3c5af",
-      "requirements/signal-safety.yaml": "7dd9aeb7581e1100dfaf0182b025279e874a91767a9a791b061bd7f4919aa0dc",
-      "requirements/trading-evidence.json": "a5075550e7115dd5b452ca686336432d7a50f5b4712673e9feb89ff8cc52c7ff",
-      "spec.md": "c89f760b3f2167345112801cd7825d26c40c102996239d13a2c788c9c4d363b6",
+      "requirements/signal-safety.yaml": "addec40384951011f8945a2123c43ef7179f463f47dbfada3c8a1b327b9d2f1f",
+      "requirements/trading-evidence.json": "b98c6517643b1d70dc4c59d39b118f34e68d2ec87c176ef0f1a6e88b3999d52b",
+      "spec.md": "a5bb4e2231092d6da4928c346d8d8f3722c8d44299a721de5c58d4be35249e76",
       "artifacts/dependencies.lock.txt": "9b68538bcdc28bc1f46c28865d1316079f241ab1317f43e529794dc94cfcdcb7",
-      "context/authority-reference.json": "6604a33ce8e51842755792eabbd3347906f0232a493045a95e03524c145c4749"
+      "context/authority-reference.json": "a63d1cc77105f4eb11ab4aa4387ca74834fdda3f02d64e3178aabc030ff752de"
     },
     "inherited_manifest_sha256": "9587f5ec2dac6100084a2e644cd562cf702c7611cb86a5335f16149bf62f4b82",
     "model_and_prompt_source_sha256": "68448416555956b04b8591a4e1c09c1226ee619005ef293894567430eb834139"
@@ -142,7 +142,7 @@
       "observations": [
         {
           "step": "A",
-          "machine_latency_ms": 5.395291,
+          "machine_latency_ms": 5.880291,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 1,
           "disposition": "LEGACY_BINARY",
@@ -171,7 +171,7 @@
         },
         {
           "step": "B",
-          "machine_latency_ms": 1.363625,
+          "machine_latency_ms": 1.578709,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 1,
           "disposition": "LEGACY_BINARY",
@@ -200,7 +200,7 @@
         },
         {
           "step": "C",
-          "machine_latency_ms": 1.398667,
+          "machine_latency_ms": 1.49975,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 1,
           "disposition": "LEGACY_BINARY",
@@ -229,7 +229,7 @@
         },
         {
           "step": "D",
-          "machine_latency_ms": 1.669333,
+          "machine_latency_ms": 1.895,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 1,
           "disposition": "LEGACY_BINARY",
@@ -258,7 +258,7 @@
         },
         {
           "step": "E",
-          "machine_latency_ms": 1.269042,
+          "machine_latency_ms": 1.529833,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 1,
           "disposition": "LEGACY_BINARY",
@@ -287,7 +287,7 @@
         },
         {
           "step": "F",
-          "machine_latency_ms": 1.644208,
+          "machine_latency_ms": 1.819417,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 1,
           "disposition": "LEGACY_BINARY",
@@ -316,7 +316,7 @@
         },
         {
           "step": "unusable-impact",
-          "machine_latency_ms": 1.480583,
+          "machine_latency_ms": 1.423833,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 1,
           "disposition": "LEGACY_BINARY",
@@ -345,7 +345,7 @@
         },
         {
           "step": "unavailable-extraction",
-          "machine_latency_ms": 1.285708,
+          "machine_latency_ms": 1.256292,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 1,
           "disposition": "LEGACY_BINARY",
@@ -374,7 +374,7 @@
         },
         {
           "step": "missing-history",
-          "machine_latency_ms": 1.443958,
+          "machine_latency_ms": 1.450875,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 1,
           "disposition": "LEGACY_BINARY",
@@ -403,7 +403,7 @@
         },
         {
           "step": "missing-authorization",
-          "machine_latency_ms": 1.547,
+          "machine_latency_ms": 1.728958,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 1,
           "disposition": "LEGACY_BINARY",
@@ -422,7 +422,7 @@
         },
         {
           "step": "routine",
-          "machine_latency_ms": 1.255834,
+          "machine_latency_ms": 1.3225,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 0,
           "disposition": "LEGACY_BINARY",
@@ -451,7 +451,7 @@
         },
         {
           "step": "unsupported-format",
-          "machine_latency_ms": 1.047167,
+          "machine_latency_ms": 1.133209,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 1,
           "disposition": "LEGACY_BINARY",
@@ -1051,7 +1051,7 @@
       "observations": [
         {
           "step": "A",
-          "machine_latency_ms": 6.28275,
+          "machine_latency_ms": 6.501917,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 1,
           "disposition": "INITIAL_RECOMMENDATION",
@@ -1060,7 +1060,7 @@
           "classification_scorable": true,
           "classification_presented_as_valid": true,
           "decision": {
-            "decision_id": "6e188364-894a-47d5-9c31-69a8f25db6a7",
+            "decision_id": "2c5054ee-d6ce-4c79-ac12-c358ca1b818b",
             "notice_id": 800001,
             "source_sha256": "4e3014a157f842266f1b8ebebb90fa4d43ae1354e037c12ae075cef90ede25b8",
             "reference_time": "2026-01-15T12:00:00+00:00",
@@ -1088,7 +1088,7 @@
                 "confidence_score": 0.8,
                 "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
                 "source_url": null,
-                "scraped_at": "2026-09-28T17:19:38.093278",
+                "scraped_at": "2026-09-28T18:21:42.592918",
                 "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/final-run/signals/candidate/A/input.html"
               },
               "locations": [
@@ -1434,7 +1434,7 @@
         },
         {
           "step": "B",
-          "machine_latency_ms": 6.336667,
+          "machine_latency_ms": 5.688292,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 0,
           "disposition": "SUPPRESSED",
@@ -1443,7 +1443,7 @@
           "classification_scorable": true,
           "classification_presented_as_valid": true,
           "decision": {
-            "decision_id": "8335e2f4-e70f-4208-8af1-403e1b69d496",
+            "decision_id": "c4bd7fbb-18ce-4643-807c-a4220a26945d",
             "notice_id": 800001,
             "source_sha256": "4e3014a157f842266f1b8ebebb90fa4d43ae1354e037c12ae075cef90ede25b8",
             "reference_time": "2026-01-15T12:00:00+00:00",
@@ -1471,7 +1471,7 @@
                 "confidence_score": 0.8,
                 "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
                 "source_url": null,
-                "scraped_at": "2026-09-28T17:19:38.101134",
+                "scraped_at": "2026-09-28T18:21:42.600126",
                 "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/final-run/signals/candidate/B/input.html"
               },
               "locations": [
@@ -1800,7 +1800,7 @@
             "publication_attempted": false,
             "delivery_acknowledged": null,
             "event_key": "NGPL:800001",
-            "initial_decision_reference": "6e188364-894a-47d5-9c31-69a8f25db6a7"
+            "initial_decision_reference": "2c5054ee-d6ce-4c79-ac12-c358ca1b818b"
           },
           "authorization": {
             "actor": "Synthetic fixture adjudicator (not real approval)",
@@ -1818,7 +1818,7 @@
         },
         {
           "step": "C",
-          "machine_latency_ms": 6.2095,
+          "machine_latency_ms": 5.982625,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 0,
           "disposition": "SUPPRESSED",
@@ -1827,7 +1827,7 @@
           "classification_scorable": true,
           "classification_presented_as_valid": true,
           "decision": {
-            "decision_id": "6ccbe4ef-30c2-47bc-bb46-fd75c03e22fa",
+            "decision_id": "a2b1906b-4507-4de2-88b8-7ee8d3e32375",
             "notice_id": 800002,
             "source_sha256": "a7c7d426273bc476c090c699a7a9894eb49e7d99315fb695101a1c1c8dac0cdc",
             "reference_time": "2026-01-15T12:00:00+00:00",
@@ -1855,7 +1855,7 @@
                 "confidence_score": 0.8,
                 "validity_flags": "[\"VC-1: superseded notice \\u2014 LLM assessed as materially different from prior notice 800001; continuing as potential new signal\", \"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
                 "source_url": null,
-                "scraped_at": "2026-09-28T17:19:38.108817",
+                "scraped_at": "2026-09-28T18:21:42.607103",
                 "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/final-run/signals/candidate/C/input.html"
               },
               "locations": [
@@ -2261,7 +2261,7 @@
         },
         {
           "step": "D",
-          "machine_latency_ms": 6.897833,
+          "machine_latency_ms": 6.560542,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 0,
           "disposition": "SUPPRESSED",
@@ -2270,7 +2270,7 @@
           "classification_scorable": true,
           "classification_presented_as_valid": true,
           "decision": {
-            "decision_id": "c49a14bf-32de-42c2-9959-b6bc21bb312e",
+            "decision_id": "af9656ca-46a6-41c4-9eef-6f54e2cc922b",
             "notice_id": 800002,
             "source_sha256": "a7c7d426273bc476c090c699a7a9894eb49e7d99315fb695101a1c1c8dac0cdc",
             "reference_time": "2026-01-15T12:00:00+00:00",
@@ -2298,7 +2298,7 @@
                 "confidence_score": 0.8,
                 "validity_flags": "[\"VC-1: superseded notice \\u2014 LLM assessed as materially different from prior notice 800001; continuing as potential new signal\", \"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
                 "source_url": null,
-                "scraped_at": "2026-09-28T17:19:38.116390",
+                "scraped_at": "2026-09-28T18:21:42.614198",
                 "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/final-run/signals/candidate/D/input.html"
               },
               "locations": [
@@ -2704,7 +2704,7 @@
         },
         {
           "step": "E",
-          "machine_latency_ms": 6.335042,
+          "machine_latency_ms": 6.382834,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 1,
           "disposition": "INITIAL_RECOMMENDATION",
@@ -2713,7 +2713,7 @@
           "classification_scorable": true,
           "classification_presented_as_valid": true,
           "decision": {
-            "decision_id": "3738bcec-0178-4e56-a638-398c4580ea34",
+            "decision_id": "14ca34d4-5e5e-488e-8c46-a3ec33cffb5f",
             "notice_id": 800003,
             "source_sha256": "719194dd0d3f0d0f1b7e880aa8257aa03173255cd2d343947dfb8dc7316443c5",
             "reference_time": "2026-01-15T12:00:00+00:00",
@@ -2741,7 +2741,7 @@
                 "confidence_score": 0.8,
                 "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
                 "source_url": null,
-                "scraped_at": "2026-09-28T17:19:38.124017",
+                "scraped_at": "2026-09-28T18:21:42.621261",
                 "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/final-run/signals/candidate/E/input.html"
               },
               "locations": [
@@ -3197,7 +3197,7 @@
         },
         {
           "step": "F",
-          "machine_latency_ms": 6.462,
+          "machine_latency_ms": 6.855084,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 0,
           "disposition": "SUPPRESSED",
@@ -3206,7 +3206,7 @@
           "classification_scorable": true,
           "classification_presented_as_valid": true,
           "decision": {
-            "decision_id": "3ba4711e-9f07-4da7-866c-5ee9951b4b23",
+            "decision_id": "683050a3-ede5-4e31-9055-bf459b188f88",
             "notice_id": 800003,
             "source_sha256": "719194dd0d3f0d0f1b7e880aa8257aa03173255cd2d343947dfb8dc7316443c5",
             "reference_time": "2026-01-15T12:00:00+00:00",
@@ -3234,7 +3234,7 @@
                 "confidence_score": 0.8,
                 "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
                 "source_url": null,
-                "scraped_at": "2026-09-28T17:19:38.131731",
+                "scraped_at": "2026-09-28T18:21:42.629360",
                 "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/final-run/signals/candidate/F/input.html"
               },
               "locations": [
@@ -3673,7 +3673,7 @@
             "publication_attempted": false,
             "delivery_acknowledged": null,
             "event_key": "NGPL:800003",
-            "initial_decision_reference": "3738bcec-0178-4e56-a638-398c4580ea34"
+            "initial_decision_reference": "14ca34d4-5e5e-488e-8c46-a3ec33cffb5f"
           },
           "authorization": {
             "actor": "Synthetic fixture adjudicator (not real approval)",
@@ -3691,7 +3691,7 @@
         },
         {
           "step": "unusable-impact",
-          "machine_latency_ms": 3.877333,
+          "machine_latency_ms": 4.305666,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 0,
           "disposition": "REVIEW_REQUIRED",
@@ -3700,7 +3700,7 @@
           "classification_scorable": true,
           "classification_presented_as_valid": true,
           "decision": {
-            "decision_id": "b5a43567-9d09-4f67-b6a5-9613c7f08fc2",
+            "decision_id": "b23d5ea4-ab63-41f4-99a7-1dc2067222cb",
             "notice_id": 800001,
             "source_sha256": "4e3014a157f842266f1b8ebebb90fa4d43ae1354e037c12ae075cef90ede25b8",
             "reference_time": "2026-01-15T12:00:00+00:00",
@@ -3728,7 +3728,7 @@
                 "confidence_score": 0.6,
                 "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: small curtailment impact \\u2014 interruptible/lower-priority service only or <10% reduction (+0.10 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
                 "source_url": null,
-                "scraped_at": "2026-09-28T17:19:38.138881",
+                "scraped_at": "2026-09-28T18:21:42.636670",
                 "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/final-run/signals/candidate/unusable-impact/input.html"
               },
               "locations": [
@@ -4183,7 +4183,7 @@
         },
         {
           "step": "unavailable-extraction",
-          "machine_latency_ms": 4.266542,
+          "machine_latency_ms": 3.742458,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 0,
           "disposition": "ERROR",
@@ -4192,7 +4192,7 @@
           "classification_scorable": false,
           "classification_presented_as_valid": false,
           "decision": {
-            "decision_id": "12cefc96-fa36-431a-8e71-904730c2f5d5",
+            "decision_id": "4c72cf06-22fc-45d5-a806-13bbc909bf86",
             "notice_id": 800004,
             "source_sha256": "3903d28efb3fddc0e679b05c8e05a1ec2af1ccd16a7b67c9f1a7e92bacc08b85",
             "reference_time": "2026-01-15T12:00:00+00:00",
@@ -4220,7 +4220,7 @@
                 "confidence_score": 0.8,
                 "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"regex_fallback\"]",
                 "source_url": null,
-                "scraped_at": "2026-09-28T17:19:38.143751",
+                "scraped_at": "2026-09-28T18:21:42.642030",
                 "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/final-run/signals/candidate/unavailable-extraction/input.html"
               },
               "locations": [
@@ -4705,7 +4705,7 @@
         },
         {
           "step": "missing-history",
-          "machine_latency_ms": 3.981833,
+          "machine_latency_ms": 4.145167,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 0,
           "disposition": "REVIEW_REQUIRED",
@@ -4714,7 +4714,7 @@
           "classification_scorable": true,
           "classification_presented_as_valid": false,
           "decision": {
-            "decision_id": "1db2d3bf-3644-45e3-a267-1b2cba1ce7d8",
+            "decision_id": "717e1ee0-4a56-4d81-9390-a464d7b4c089",
             "notice_id": 800005,
             "source_sha256": "795cb39836c958931def1563029c2697e5373bfe7e47a0a073a7628366417f25",
             "reference_time": "2026-01-15T12:00:00+00:00",
@@ -4742,7 +4742,7 @@
                 "confidence_score": 0.8,
                 "validity_flags": "[\"VC-1: superseded notice \\u2014 prior notice not in DB, cannot compare; continuing validation\", \"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
                 "source_url": null,
-                "scraped_at": "2026-09-28T17:19:38.149078",
+                "scraped_at": "2026-09-28T18:21:42.646650",
                 "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/final-run/signals/candidate/missing-history/input.html"
               },
               "locations": [
@@ -5251,7 +5251,7 @@
         },
         {
           "step": "missing-authorization",
-          "machine_latency_ms": 6.138125,
+          "machine_latency_ms": 6.174875,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 0,
           "disposition": "REVIEW_REQUIRED",
@@ -5260,7 +5260,7 @@
           "classification_scorable": true,
           "classification_presented_as_valid": true,
           "decision": {
-            "decision_id": "73a63cf8-a045-4ef9-8a88-b8e7a0094d32",
+            "decision_id": "aa3e49e2-3e76-4486-803f-6a26fb9825e3",
             "notice_id": 800006,
             "source_sha256": "341cf33a9399bc48a6693fa3a0991dc5b947bd86cb27dbc1905533a4eaa3a894",
             "reference_time": "2026-01-15T12:00:00+00:00",
@@ -5288,7 +5288,7 @@
                 "confidence_score": 0.8,
                 "validity_flags": "[\"VC-2: high-confidence notice type (CAPACITY CONSTRAINT) \\u2014 capacity constraint (+0.20 confidence)\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
                 "source_url": null,
-                "scraped_at": "2026-09-28T17:19:38.154000",
+                "scraped_at": "2026-09-28T18:21:42.651840",
                 "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/final-run/signals/candidate/missing-authorization/input.html"
               },
               "locations": [
@@ -5778,7 +5778,7 @@
         },
         {
           "step": "routine",
-          "machine_latency_ms": 5.679291,
+          "machine_latency_ms": 6.767,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 0,
           "disposition": "NO_SIGNAL",
@@ -5787,7 +5787,7 @@
           "classification_scorable": true,
           "classification_presented_as_valid": true,
           "decision": {
-            "decision_id": "406f9752-9444-4dd1-abe3-042d07e6ba47",
+            "decision_id": "1085317b-10e9-49cc-877f-177a8bf629a3",
             "notice_id": 800007,
             "source_sha256": "d61a7fd086cfa88045261a1c4a2c5fcf0fe31e637fc295537f13d4de00db7b6b",
             "reference_time": "2026-01-15T12:00:00+00:00",
@@ -5815,7 +5815,7 @@
                 "confidence_score": 0.0,
                 "validity_flags": "[\"VC-1: information-only notice \\u2014 Agent 1 determined this notice is purely informational (retrospective report, advisory, or administrative update); not a current operational restriction\", \"llm_extraction\"]",
                 "source_url": null,
-                "scraped_at": "2026-09-28T17:19:38.161393",
+                "scraped_at": "2026-09-28T18:21:42.659033",
                 "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/final-run/signals/candidate/routine/input.html"
               },
               "locations": [],
@@ -6251,7 +6251,7 @@
         },
         {
           "step": "unsupported-format",
-          "machine_latency_ms": 5.153333,
+          "machine_latency_ms": 4.832958,
           "latency_scope": "parser + synthetic SDK + SQLite + report; no human/provider/network wait",
           "initial_count": 0,
           "disposition": "REVIEW_REQUIRED",
@@ -6260,7 +6260,7 @@
           "classification_scorable": false,
           "classification_presented_as_valid": false,
           "decision": {
-            "decision_id": "2a65f6c1-144e-4e61-8e28-82918671674e",
+            "decision_id": "9a931a94-93d8-4b71-b0de-474852954707",
             "notice_id": 800008,
             "source_sha256": "f1fb9bc151cb0d2f071f5422b2e1382a2ea491e26c84570496b10d45acfe5608",
             "reference_time": "2026-01-15T12:00:00+00:00",
@@ -6274,7 +6274,7 @@
                 "notice_subtype": null,
                 "effective_datetime": null,
                 "end_datetime": null,
-                "post_datetime": "2026-09-28T17:19:38.168026",
+                "post_datetime": "2026-09-28T18:21:42.666731",
                 "response_required": 0,
                 "response_due_date": null,
                 "status": "INITIATE",
@@ -6288,7 +6288,7 @@
                 "confidence_score": 0.6,
                 "validity_flags": "[\"VC-2: unknown notice type 'UNKNOWN' \\u2014 treating as signal-capable; downstream validators will assess operational impact\", \"VC-3: large curtailment impact \\u2014 primary/secondary firm affected or >10% volume reduction or UNAVAILABLE (+0.30 confidence)\", \"VC-4: specific LOC code(s) or compressor station identified \\u2014 precise constraint point known (+0.10 confidence)\", \"VC-5: Henry Hub / Gulf Coast / Louisiana zone location \\u2014 direct price impact on NYMEX front-month (+0.20 confidence)\", \"llm_extraction\"]",
                 "source_url": null,
-                "scraped_at": "2026-09-28T17:19:38.168048",
+                "scraped_at": "2026-09-28T18:21:42.666749",
                 "html_file": "/Users/thomashand/PycharmProjects/incommodities-take-home/evidence/final-run/signals/candidate/unsupported-format/input.pdf"
               },
               "locations": [

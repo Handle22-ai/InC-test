@@ -1224,6 +1224,32 @@
     "scope": "Code-owned structural boundary listed in spec-checks; does not check the meaning of referenced prose or full runtime behavior"
   },
   {
+    "id": "CHECK-refusals_first",
+    "kind": "compiled_boundary",
+    "sentence": "refusals_first",
+    "spec_line": 1,
+    "references": [],
+    "status": "PASS",
+    "constraint_status": "PASS",
+    "code": "COMPILED_BOUNDARY_CHECK",
+    "hand_authored_check": "refusals_first",
+    "sentence_coverage": "TABLE_ONLY",
+    "scope": "Code-owned structural boundary listed in spec-checks; does not check the meaning of referenced prose or full runtime behavior"
+  },
+  {
+    "id": "CHECK-required_inputs",
+    "kind": "compiled_boundary",
+    "sentence": "required_inputs",
+    "spec_line": 1,
+    "references": [],
+    "status": "PASS",
+    "constraint_status": "PASS",
+    "code": "COMPILED_BOUNDARY_CHECK",
+    "hand_authored_check": "required_inputs",
+    "sentence_coverage": "TABLE_ONLY",
+    "scope": "Code-owned structural boundary listed in spec-checks; does not check the meaning of referenced prose or full runtime behavior"
+  },
+  {
     "id": "CHECK-no_absolute_inference",
     "kind": "compiled_boundary",
     "sentence": "no_absolute_inference",
