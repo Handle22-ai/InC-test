@@ -454,3 +454,12 @@ Missing harness/evidence capability: each check's observed fields stated in the 
 Harness improvement made: none to the harness; spec wording under AUDIT5-001 (proposed), a README correction, and one test that now fixes its own review state (`c6baeb1`).
 Could the same code read be avoided next time? Yes, if each verification row named the fields its check reads.
 
+CODE-READ-ID: AUDIT5-MEASURED-AND-REVIEW-20260928
+Observed failure: (a) the gate called AUDIT5-001's wording edits measured, because Gate 3's changed decisions included two that the D5-002 evaluator fix moved; (b) fifth audit #9, SIGNAL-004 reported PASS although its cases were only sent to review.
+Why evidence was insufficient: CURRENT.md does not separate decisions moved by the spec from decisions moved by the evaluator; coverage showed one PASS for decided and review-only rows alike.
+Source inspected: `harness/normalized_evaluation.py` (`compare`, `spec_edits`, `aggregate`, `declared_coverage`), `harness/consequences.py`, `harness/proposals.py` (unmeasured edits), `harness/current_evidence.py` (the coverage renderer), and the compiled rule fields (`action_name`, `output_reason`).
+What was learned: `compare` checks that changes agree with the current spec but cannot attribute them. `derive()` drops the reason, so a reason-only edit had looked unmeasured.
+Missing harness/evidence capability: attributing decision changes to spec or evaluator.
+Harness improvement made: `spec_moved` (shared by the gate and consequences; the spec change is judged under the current evaluator; the reason is part of the signature), and REVIEW_AS_SPECIFIED coverage (`468559c` and the commit after it). The tests fail on the old code.
+Could the same code read be avoided next time? Yes, if Gate 3 reported spec-moved and evaluator-moved decisions separately.
+

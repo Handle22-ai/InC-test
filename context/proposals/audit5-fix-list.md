@@ -32,9 +32,9 @@ Source: the fifth audit of `3aaba89` (2026-09-28). Finding numbers (#n) refer to
 
 ## Tier 2: spec prose (a `proposed` decision row, then the owner approves and rereads)
 
-**Status:** #15, #16 and #8 (STATE-003, OBS-001) are adopted into spec.md under decision row AUDIT5-001, still `proposed`; `make gate` exits 5 until the owner approves it and rereads. #9 is an evaluator change, still open. #30 is not changed: NNS-FIRM-001 is approved and covered by a reread, and AUDIT4-001 already records the correction, so rewording the approved row would need a new decision of its own.
+**Status:** #15, #16 and #8 (STATE-003, OBS-001) are adopted into spec.md under decision row AUDIT5-001, still `proposed`; `make gate` exits 5 until the owner approves it and rereads. #9 is done as an evaluator change: SIGNAL-004 reads REVIEW_AS_SPECIFIED. #30 is not changed: NNS-FIRM-001 is approved and covered by a reread, and AUDIT4-001 already records the correction, so rewording the approved row would need a new decision of its own.
 
-**Found while doing Tier 2:** the gate marks every spec edit since the reference as measured whenever *any* Gate 3 decision moved, even if the evaluator moved it. AUDIT5-001's two requirement-text edits change no outcome (consequences: 0 of 69), yet the gate lists them as measured, because the D5-002 evaluator fix moved two capture-2 decisions. `spec_edits` should compare reference spec and current spec under one evaluator, as consequences does, rather than reading Gate 3's changed decisions.
+**Found while doing Tier 2, now fixed (`468559c`):** the gate marked every spec edit since the reference as measured whenever *any* Gate 3 decision moved, even if the evaluator moved it. AUDIT5-001's two requirement-text edits change no outcome (consequences: 0 of 69), yet the gate lists them as measured, because the D5-002 evaluator fix moved two capture-2 decisions. `spec_edits` should compare reference spec and current spec under one evaluator, as consequences does, rather than reading Gate 3's changed decisions.
 
 Run `make consequences` first; all of these should show 0 changed outcomes.
 - #15 spec.md:203: "23 listed below, plus `refusals_first` and `required_inputs`, which are keyed on conditions", or list the two rows so their violations stop reporting `spec.md:1`.
