@@ -1,4 +1,4 @@
-<!-- Index copy of evidence/run-20260928/CURRENT.md, produced by `make gate` (reviewed spec) on commit 695cc5f with a clean tree. Per-case files are omitted from the commit (the replay and trading results are included); the full per-case run is the Gate 3 reference directory. -->
+<!-- Index copy of evidence/run-20260928/CURRENT.md, produced by `make gate` (reviewed spec) on commit 695cc5f with a clean tree. Per-case files are omitted from the commit (the replay and trading results are included); per-case files for an equivalent run (`reviewed-run-final` at 15d4bdd, same decisions) are in the Gate 3 reference directory; this run's own per-case files are not retained. -->
 
 # Evidence for the engineer's next decision
 

@@ -26,7 +26,7 @@ The operational block and the reporting paragraph were added by the build sessio
 
 So it searched harness and inherited code and ran the harness oracle directly, beyond the five in-scope files. Before the remediation, a similar request made an earlier subagent open 14 source files, 9 of them harness modules, to find what "firm" meant; that session also edited the oracle (see `AGENT-NNS-A8F1AB8D` in code_reads.md).
 
-**Additional human explanation required.** None.
+**Additional human explanation required.** None about the task. The prompt did carry operational instructions the README message lacks (checkout path, PATH, no live calls, no commits), and it framed the request as the desk's although no desk exists.
 
 **What changed.** spec.md only, through the proposal and consequences steps:
 - `NO_NOTICE` normalizes to a new `NO_NOTICE_FIRM` value (the source distinction is kept);
@@ -35,7 +35,7 @@ So it searched harness and inherited code and ran the harness oracle directly, b
 
 Generated files were recompiled. No component or harness code changed.
 
-**Gate results.** `make consequences`: 0 of 46 captured outcomes change. The only captured NNS row (46528, labeled negative) is a partial hourly limit and correctly stays non-firm. `gate --proposal` gave the same result before and after: Gate 1 PASS, Gate 2 PASS, Gate 3 UNKNOWN (EVALUATOR_OR_ORACLE_CHANGED, already present from the remediation). The desk view is unchanged: 2 of 7 positives missed and 0 false positives per capture. A scratch probe showed the component and the harness oracle agreeing: NNS unavailable → BR-FIRM; NNS partial and interruptible → unresolved.
+**Gate results.** Mid-session `make check` exited 2 (157 tests, 1 failure, per the transcript at 16:03:57Z; the session then read `tests/test_spec_predicates.py`, see learning 1); the session's own report did not mention it. `make consequences`: 0 of 46 captured outcomes change. The only captured NNS row (46528, labeled negative) is a partial hourly limit and correctly stays non-firm. `gate --proposal` gave the same result before and after: Gate 1 PASS, Gate 2 PASS, Gate 3 UNKNOWN (EVALUATOR_OR_ORACLE_CHANGED, already present from the remediation). The desk view is unchanged: 2 of 7 positives missed and 0 false positives per capture. A scratch probe showed the component and the harness oracle agreeing: NNS unavailable → BR-FIRM; NNS partial and interruptible → unresolved.
 
 **New learning, retained for the next session.**
 1. A test matched the literal `FIRM_SERVICES` text, so any real edit of the set broke it. The coordinating session fixed the test in the same commit that adopted the NNS policy; an evaluator change and a policy change should not share a commit.

@@ -42,8 +42,8 @@ The inherited system needs an Anthropic key: export `ANTHROPIC_API_KEY`, or put 
 
 ```bash
 make preflight          LIVE=1 MAX_CALLS=2    # one real notice: extraction plus its impact helper
-make evaluate-inherited LIVE=1 MAX_CALLS=45   # preflight plus 23 cases, about 40 calls (the one full run made 38)
-make e2e-live           LIVE=1 MAX_CALLS=10   # inherited CLI on freshly fetched NGPL notices
+make evaluate-inherited LIVE=1 MAX_CALLS=45   # preflight plus 23 cases, about 40 calls (full runs so far made 38, 39, 38 and 38)
+make e2e-live           LIVE=1 MAX_CALLS=10   # one freshly fetched NGPL notice through the inherited CLI (2 calls); a smoke test, not scored by the gate
 ```
 
 Preflight passes only if every call it needed was made and answered. A blocked or failed helper call reports BUDGET_EXHAUSTED or the failure, never a signal. A wrong key reports AUTHENTICATION_FAILURE and a missing key CREDENTIALS_MISSING. An account without credit reports BILLING and an unknown model MODEL_NOT_FOUND; both stop further calls. Any other provider error is PROVIDER_FAILURE. Each failed call keeps its status code and the provider's own error message, with anything shaped like a key redacted; other exception text is never kept.
@@ -61,7 +61,7 @@ The gate then scores the new capture next to the retained ones, and CURRENT.md l
 ## Change the policy
 
 1. Copy the spec: `cp spec.md context/proposals/proposed-spec.md`, then edit a rule, predicate, set or setting.
-2. `make consequences SPEC=context/proposals/proposed-spec.md`, then read the printed `REPORT.md`. The baseline defaults to the spec you last reread (pass `BASE=` to override). The report shows every changed notice and the per-capture tradeoffs; keep the losses visible. Exit 4 with a **WOULD BE REFUSED** headline means a compile boundary, the input contract or a frozen classifier witness rejects the proposal; publisher-replay witnesses run only in the gate. **UNMEASURED** means no captured case changes. Examples you supply with `--inputs` are illustrations, not evidence.
+2. `make consequences SPEC=context/proposals/proposed-spec.md`, then read the printed `REPORT.md`. The baseline defaults to the spec you last reread (pass `BASE=` to override). The report shows every changed notice and the per-capture tradeoffs; keep the losses visible. Exit 4 with a **WOULD BE REFUSED** headline means a compile boundary, the input contract or a frozen classifier witness rejects the proposal. The headline says "by `make compile` and the gate" even when only the gate refuses: witness and input-contract refusals do not stop `make compile`; publisher-replay witnesses run only in the gate. **UNMEASURED** means no captured case changes. Examples you supply with `--inputs` are illustrations, not evidence.
 3. To adopt, edit `spec.md` and add a `spec-decisions` row with status `proposed`, then run `make compile`.
 4. The owner reads the new bytes, sets the row to `approved`, and runs `.venv/bin/python -B -m harness reread --person 'Thomas Hand'`. Only names in `spec-settings.owners` are accepted. The receipt covers every decision row added since the last reread, and refuses if any is not approved. Agents never do this step, and never register a reference unasked (one did, once: `35b5af7`, see evidence/ARCHIVE.md).
 5. `make gate`.

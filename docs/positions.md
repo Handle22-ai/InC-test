@@ -74,5 +74,5 @@ Held, or waiting on you:
 
 ## After the third audit
 
-- **Live path, now exercised.** `make preflight` (2 calls) and `make evaluate-inherited` (38 calls, `claude-sonnet-4-6`) ran with the owner's key. The full run had no harness failure. It reproduced the missing-verdict defect on 46528 live, and it did not reproduce the 46725 false positive, so that false positive depends on the run. It is registered as capture-2, and the report lists every notice where captures disagree.
+- **Live path, now exercised.** `make preflight` (2 calls) and `make evaluate-inherited` (38 calls, `claude-sonnet-4-6`) ran with the owner's key. The full run had no harness failure. It reproduced a missing impact verdict on 46528 live (the notice did not signal, so the "failed verdict still signals" defect was not reproduced there), and it did not reproduce the 46725 false positive, so that false positive depends on the run. It is registered as capture-2, and the report lists every notice where captures disagree.
 - **Owners.** The owners list now comes from the last reread spec, so an edit cannot add its own reviewer.
