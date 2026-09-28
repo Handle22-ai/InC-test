@@ -369,3 +369,30 @@ class SpecMeasurementTests(unittest.TestCase):
             {e["declaration"]: e["unmeasured"] for e in edits},
             {"spec-requirements / STATE-003 (edited)": True},
         )
+
+
+class ReviewAsSpecifiedTests(unittest.TestCase):
+    """Audit 5 #9: a requirement met only by sending cases to review is not reported PASS."""
+
+    def test_review_only_requirements_are_labelled_and_mixed_ones_counted(self):
+        requirements = {
+            key: {"validation": {"check": "classification", "gate": 2}}
+            for key in ("REVIEW-ONLY", "MIXED", "DECIDED")
+        }
+        review = {"status": "PASS", "code": "DECLARED_CASE_REVIEW_AS_SPECIFIED"}
+        decided = {"status": "PASS", "code": "DECLARED_CASE_COMPARISON"}
+        findings = [
+            {**review, "requirement": "REVIEW-ONLY"},
+            {**review, "requirement": "REVIEW-ONLY"},
+            {**review, "requirement": "MIXED"},
+            {**decided, "requirement": "MIXED"},
+            {**decided, "requirement": "DECIDED"},
+        ]
+        coverage, missing = evaluation.declared_coverage(requirements, findings)
+        self.assertEqual(missing, [])
+        self.assertEqual(coverage["REVIEW-ONLY"]["status"], "REVIEW_AS_SPECIFIED")
+        self.assertEqual(coverage["REVIEW-ONLY"]["reviewed_as_specified"], 2)
+        self.assertEqual(coverage["MIXED"]["status"], "PASS")
+        self.assertEqual(coverage["MIXED"]["reviewed_as_specified"], 1)
+        self.assertEqual(coverage["DECIDED"]["status"], "PASS")
+        self.assertNotIn("reviewed_as_specified", coverage["DECIDED"])

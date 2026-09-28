@@ -319,7 +319,9 @@ def render(destination: Path, result: dict) -> None:
         f"`{mode}` · commit `{source['revision']}`.",
         "",
         "PASS means the declared check passed on the listed observations, not that the whole "
-        "obligation is proven. OUT_OF_SCOPE rows are declared in spec-verification and never gated.",
+        "obligation is proven. REVIEW_AS_SPECIFIED means every observation was a case the spec "
+        "sends to review (spec-settings acceptance `review_satisfies`): its gate passes, but no "
+        "decision was made. OUT_OF_SCOPE rows are declared in spec-verification and never gated.",
         "",
         "| Requirement | Check | Result | Observations | Evidence kind and status (count) |",
         "|---|---|---|---:|---|",

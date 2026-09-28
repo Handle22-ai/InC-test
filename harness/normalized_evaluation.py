@@ -265,6 +265,11 @@ def declared_coverage(requirements: dict, findings: list[dict]) -> tuple[dict, l
             }
             continue
         status = aggregate(observed) if observed else "UNKNOWN"
+        # A declared review outcome passes its gate, but it is not a decision: say so
+        # rather than report PASS for a requirement that was only sent to review (audit 5 #9).
+        reviewed = sum(row.get("code") == "DECLARED_CASE_REVIEW_AS_SPECIFIED" for row in observed)
+        if status == "PASS" and observed and reviewed == len(observed):
+            status = "REVIEW_AS_SPECIFIED"
         if not observed:
             missing.append(
                 {
@@ -284,6 +289,8 @@ def declared_coverage(requirements: dict, findings: list[dict]) -> tuple[dict, l
             "availability": "declared",
             "scope": "Finite observations of the declared check; full obligation completion is not inferred",
         }
+        if reviewed:
+            coverage[key]["reviewed_as_specified"] = reviewed
     return coverage, missing
 
 
