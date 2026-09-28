@@ -436,3 +436,12 @@ Missing harness/evidence capability: a traceback for every unexpected error.
 Harness improvement made: `unclassified()` and `trace()`; `exception.json` is written for every caught error and hashed by the manifest. 2 tests, both failing on the old code.
 Could the same code read be avoided next time? Yes: the traceback is now in the evidence.
 
+CODE-READ-ID: AUDIT5-FOLLOWUP-LAST-VALID-20260928
+Observed failure: correcting my own `3fb95fa`. While writing the history-retention rule into spec.md, I found that spec D5-002 ("Validation failure leaves the last valid snapshot unchanged") and INPUT-002 already state it. The gate's replay broke that rule: it replayed only the latest captured case of each prior notice. In capture-2 that is `restart-replay`, whose impact verdict failed, so the valid 46624 vanished from history and the revisions went to review. `3fb95fa` copied that behaviour into consequences.
+Why evidence was insufficient: CURRENT.md showed the capture-2 revisions going to review but not how each case's history was rebuilt.
+Source inspected: `harness/trading_evaluation.py` (65–90), `harness/consequences.py` (the history block), and spec.md D5 and INPUT-002.
+What was learned: the gate should replay every earlier version, so the publisher keeps the last valid one. Only `capture-2/unchanged-revision` and `capture-2/repeated-revision` change (BR-HISTORY to BR-UNCHANGED); no labeled outcome or budget changes.
+Missing harness/evidence capability: a check that the replayed history honours D5-002 (now `LastValidSnapshotTests`).
+Harness improvement made: the gate replays all earlier versions; consequences keeps the last valid version rather than dropping it. The new test fails on the old code, and the parity test still passes.
+Could the same code read be avoided next time? Partly: the gate should state in its evidence how it rebuilds each case's history.
+
