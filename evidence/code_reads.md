@@ -336,3 +336,13 @@ What was learned: the gate emits the codes harness.md cites, but no test holds I
 Missing harness/evidence capability: negative-control tests per gate code; a consumer or an unreviewed-spec warning for the assumptions table; input-type facts in the context package.
 Harness improvement made: none; documentation corrections only (`context/proposals/audit5-fix-list.md`).
 Could the same code read be avoided next time? The model-resolution and assumptions reads, yes, if harness.md stated both. The fresh session's reads, yes, if the package stated identifier types.
+
+CODE-READ-ID: AUDIT5-TIER1-CONSEQUENCES-20260928
+Observed failure: fifth audit #3. `make consequences` reported BR-HISTORY wins 7 and BR-UNCHANGED wins 6, while the gate executed 9 and 4. The disagreement was on capture-2 `unchanged-revision` and `repeated-revision`: consequences showed BR-UNCHANGED, the gate BR-HISTORY.
+Why evidence was insufficient: both reports showed the two outcomes but not why the histories differed. Neither states which earlier versions of a notice the publisher keeps as history.
+Source inspected: `harness/consequences.py` (lines 1–158), `harness/captures.py` (all), `harness/trading_evaluation.py` (55–194, 419–427), and `rebuilt/signals.py` (a grep for definitions, then 30–69 and 123–230). The signals.py read found the rule: a notice enters history only when its classification is not UNRESOLVED and `SemanticEvidence.refusal()` is None. In capture-2 the latest 46624 before the revisions is `restart-replay`, whose impact verdict failed, so the gate's history had a gap.
+What was learned: the publisher's history-retention rule lives only in component code; spec.md does not state it.
+Missing harness/evidence capability: a check that the preview and the gate agree (now `test_consequences_match_the_rules_the_gate_executes`); the retention rule stated in spec.md so it can be derived instead of mirrored.
+Harness improvement made: `3fb95fa`, where consequences mirrors the rule by reusing the gate's `semantic_evidence`, plus the parity test. It is an evaluator change, so Gate 3 reports EVALUATOR_OR_ORACLE_CHANGED until the owner registers a new reference.
+Could the same code read be avoided next time? Yes, if spec.md stated which decisions enter history. That is a spec proposal for the owner.
+
