@@ -272,7 +272,8 @@ class SpecSourceTests(unittest.TestCase):
     def test_consequences_cover_every_case_rule_and_first_failure(self):
         c = compile_spec(self.root)
         rows = consequences.observations(c)
-        self.assertEqual(len(rows), 46)
+        registered = json.loads((ROOT / "requirements/trading-evidence.json").read_text())
+        self.assertEqual(len(rows), 23 * len(registered["captures"]))
         firm = [next(x for x in row["conditions"] if x["rule"] == "BR-FIRM") for row in rows]
         self.assertGreater(sum(x["matched"] for x in firm), 0)
         for row in rows:

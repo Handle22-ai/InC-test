@@ -150,9 +150,10 @@ def render(destination: Path, result: dict) -> None:
         lines += [
             "",
             tradeoff_table(tradeoffs["inherited"] + tradeoffs["rebuilt"]),
-            "Both captures carry the same 14 labels and are not independent samples. capture-1 is "
-            "the unmodified inherited run; capture-0 raised its impact-verdict token budget to 512. "
-            "Unresolved cases are never counted as correct.",
+            "Every capture carries the same 14 labels; captures are repeated runs of the "
+            "inherited system, not independent samples. capture-0 raised its impact-verdict "
+            "token budget to 512; later captures are unmodified runs (see the registry for "
+            "their dates and models). Unresolved cases are never counted as correct.",
         ]
         extraction = [
             r for r in result.get("findings", []) if r.get("code") == "CAPTURED_UPSTREAM_EXTRACTION"

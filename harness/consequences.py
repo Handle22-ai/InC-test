@@ -160,7 +160,7 @@ def render(result: dict, *, details: bool = True) -> str:
     lines = [
         "## Generated consequences of this spec",
         "",
-        f"Captured cases: **{result['denominator']}** (two 23-case captures; 14 labels per capture). No abstention is a correct negative.",
+        f"Captured cases: **{result['denominator']}** ({result['denominator'] // 23} captures of 23 cases; 14 labels per capture). No abstention is a correct negative.",
         "",
         "| Rule | Matches / cases | Wins / cases | First failed conditions (counts) |",
         "|---|---:|---:|---|",

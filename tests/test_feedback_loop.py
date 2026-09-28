@@ -38,9 +38,11 @@ class FeedbackLoopTests(unittest.TestCase):
             result = run(proposal, str(ROOT / "spec.md"), out)
             self.assertFalse(result["accepted"])
             self.assertFalse(result["review_recorded"])
-            self.assertEqual(len(result["changed_outcomes"]), 6)
-            self.assertEqual([r["true_negative"] for r in result["before_labels"]], [3, 3])
-            self.assertEqual([r["true_negative"] for r in result["after_labels"]], [0, 0])
+            captures = len(result["before_labels"])  # one row per registered capture
+            self.assertGreaterEqual(captures, 2)
+            self.assertEqual(len(result["changed_outcomes"]), 3 * captures)
+            self.assertEqual([r["true_negative"] for r in result["before_labels"]], [3] * captures)
+            self.assertEqual([r["true_negative"] for r in result["after_labels"]], [0] * captures)
             self.assertEqual(
                 [r["true_positive"] for r in result["before_labels"]],
                 [r["true_positive"] for r in result["after_labels"]],
