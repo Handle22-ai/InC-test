@@ -2,7 +2,7 @@
 
 The engineer owns [spec.md](spec.md) and reads [evidence/CURRENT.md](evidence/CURRENT.md). Coding agents maintain the implementation. The rebuilt component is `NormalizedNotice + EventHistory → SignalDecision` in `rebuilt/`. Its output is a candidate, never a trading recommendation. (The replay tests drive a downstream publisher seam with synthetic authorization, and that seam reports `INITIAL_RECOMMENDATION` so duplicate suppression can be checked. No real recommendation path exists.)
 
-This repository starts from one commit; the earlier working history is described in [evidence/ARCHIVE.md](evidence/ARCHIVE.md). [harness.md](harness.md) explains the three gates, what each costs and what it would miss. The code-read map is [evidence/code_reads.md](evidence/code_reads.md).
+This repository's history starts at root commit `41fd172`; the earlier working history is described in [evidence/ARCHIVE.md](evidence/ARCHIVE.md). [harness.md](harness.md) explains the three gates, what each costs and what it would miss. The code-read map is [evidence/code_reads.md](evidence/code_reads.md).
 
 ## Run the harness (offline, no API key)
 
