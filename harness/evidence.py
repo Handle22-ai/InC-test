@@ -10,6 +10,21 @@ from harness.gates import aggregate
 from harness.runtime import ROOT, digest, write_json
 
 
+def measured(result: dict, findings: list[dict]) -> bool:
+    """The measurement is valid when every model call was made and answered, the
+    inherited files are unchanged and the harness itself did not fail. A usable call
+    that returns an unusable verdict (MODEL_FAILURE) is the inherited system's own
+    behavior: a finding, not an invalid measurement.
+    """
+    calls = [call for case in result["cases"] for call in case.get("model_calls", [])]
+    return (
+        bool(result["cases"])
+        and all(call.get("success") for call in calls)
+        and not result["manifest"]["integrity_after"]["changed"]
+        and not any(f["failure_domain"] == "HARNESS_FAILURE" for f in findings)
+    )
+
+
 def metrics(cases: list[dict], findings: list[dict]) -> dict:
     labeled = [c for c in cases if c["category"] == "labeled"]
     valid = [c for c in labeled if c["outcome"] == "SUCCESS"]
@@ -101,11 +116,7 @@ def render(run: Path, result: dict, requirements: list[dict]) -> None:
                 "check_status": req["check_status"],
             }
         )
-    measurement_valid = (
-        all(c["outcome"] == "SUCCESS" for c in result["cases"])
-        and not result["manifest"]["integrity_after"]["changed"]
-        and not any(f["failure_domain"] == "HARNESS_FAILURE" for f in findings)
-    )
+    measurement_valid = measured(result, findings)
     summary = {
         "policy_id": policy_id,
         "measurement_valid": measurement_valid,

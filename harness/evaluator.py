@@ -239,12 +239,11 @@ def main() -> int:
 
             render(run, result, requirements)
             print(f"Preserved baseline: {run.relative_to(ROOT)}", flush=True)
+            from harness.evidence import measured
+
+            # Exit on measurement validity; inherited behavior failures are findings.
             return (
-                0
-                if cases
-                and all(c["outcome"] == "SUCCESS" for c in cases)
-                and not (run / "not-attempted.json").exists()
-                else 2
+                0 if measured(result, findings) and not (run / "not-attempted.json").exists() else 2
             )
         except Exception as exc:
             write_json(

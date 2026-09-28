@@ -35,6 +35,25 @@ class CheckRegistryTests(unittest.TestCase):
         self.assertEqual(broken, [])
 
 
+class MeasurementValidityTests(unittest.TestCase):
+    def test_an_unusable_verdict_is_a_finding_not_an_invalid_measurement(self):
+        from harness.evidence import measured
+
+        answered = {"success": True}
+        result: dict = {
+            "cases": [
+                {"outcome": "MODEL_FAILURE", "model_calls": [answered, answered]},
+                {"outcome": "SUCCESS", "model_calls": [answered]},
+            ],
+            "manifest": {"integrity_after": {"changed": []}},
+        }
+        self.assertTrue(measured(result, []))
+        result["cases"][0]["model_calls"][1] = {"success": False}  # a call that failed
+        self.assertFalse(measured(result, []))
+        result["cases"][0]["model_calls"][1] = answered
+        self.assertFalse(measured(result, [{"failure_domain": "HARNESS_FAILURE"}]))
+
+
 class ManifestTests(unittest.TestCase):
     def test_every_manifest_path_exists(self):
         import re
