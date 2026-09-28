@@ -463,3 +463,12 @@ Missing harness/evidence capability: attributing decision changes to spec or eva
 Harness improvement made: `spec_moved` (shared by the gate and consequences; the spec change is judged under the current evaluator; the reason is part of the signature), and REVIEW_AS_SPECIFIED coverage (`468559c` and the commit after it). The tests fail on the old code.
 Could the same code read be avoided next time? Yes, if Gate 3 reported spec-moved and evaluator-moved decisions separately.
 
+CODE-READ-ID: AUDIT5-TIER2-CORRECTION-20260928
+Observed failure: a reviewer found that `50ccd4c` rewrote the Requirement column of STATE-003 and OBS-001 to match what their checks observe, while each row's Expected column still demanded alert keys and acknowledgements, and request IDs and raw output. So both rows contradicted themselves, and the change narrowed the obligation to fit the check.
+Why evidence was insufficient: `make consequences` reported the rewrites as UNMEASURED but could not say that a requirement had been weakened; no check compares a row's Requirement and Expected columns.
+Source inspected: none beyond spec.md; `tests/test_gate_codes.py` (my SpecMeasurementTests) once `make check` failed on its literal STATE-003 wording.
+What was learned: narrowing a claim belongs in a scope note, not in the requirement. My own new test repeated the #45 wording coupling.
+Missing harness/evidence capability: a check that a requirement row is internally consistent, and a flag when a requirement edit narrows what it demands.
+Harness improvement made: `d24ef7e` finds the test's edits by row ID and column. `314118d` restores both requirements and adds the scope note; consequences: 0 changed, 0 refused, 0 unmeasured.
+Could the same code read be avoided next time? Yes: write fixtures by ID and column from the start.
+
