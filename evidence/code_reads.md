@@ -2,9 +2,9 @@
 
 Commit IDs below refer to the earlier, unpublished history (see [ARCHIVE.md](ARCHIVE.md)); they cannot be checked from this repository.
 
-The human owner reports no direct source reads, and the transcripts agree. Every read below
-was made by an agent: the building agent, an audit, or a fresh maintenance session. The
-question for each read is what the harness could not show without it.
+**The full ledger is generated, not written by hand:** [code-read-ledger/LEDGER.md](code-read-ledger/LEDGER.md), made by `code-read-ledger/generate.py` from every Claude Code transcript and subagent transcript of this project (245 transcripts name a code file; 23 touch `rebuilt/`). It classifies each tool call mechanically; its rules and limits are in the script. The entries below explain the reads that mattered. Where they disagree with the ledger, the ledger is right. Codex sessions are not in the ledger; their reads are the hand-reconstructed table below.
+
+The human owner reports no direct source reads. The transcripts show three IDE-open events, each while an agent session ran: `harness/trading_evaluation.py` (session 3bd56e2e, 09-28 ~09:28Z) and `harness/behavior_contract.py` (sessions 2edc1739 and 2348e84d). Whether the file was read is not recorded. Every other read below was made by an agent: the building agent, an audit, or a maintenance subagent. The question for each read is what the harness could not show without it.
 
 ## What the reads say about the harness
 
@@ -14,7 +14,7 @@ question for each read is what the harness could not show without it.
 | What a rule column means | Every fresh session opened `harness/domain_rules.py` to learn what FIRM_DISRUPTION is | Predicate meaning lived in harness code, not in spec.md | **Partly closed.** Rule, set and mapping changes need no harness read: the NNS session read only component files. Parser and format changes still do: a second audit's fresh session (timezone-suffixed timestamps) read 7 harness modules to learn how `date_formats` reaches the parser checks. |
 | The component was the harness | The gate imported the component, and the component imported the harness | No separation between oracle and implementation, so agreement checks were circular | **Closed:** `rebuilt/` imports nothing from `harness/`, and a test enforces it. |
 | The author graded itself | The orchestrating thread wrote `rebuilt/*.py`, then re-read it ~25 times while evaluating it | No independent writer/evaluator split | Open. The gate now flags evaluator/oracle edits (Gate 3 EVALUATOR_OR_ORACLE_CHANGED), but one thread still writes both. |
-| Audits reading on the human's behalf | 10 supplied audits read `inherited/` and `harness/`; 4 of their helper agents read `rebuilt/` | Self-reported evidence did not reveal its own false PASSes | Partly closed: Gates 1–2 now judge declared budgets instead of staying UNKNOWN, and Gate 3 names moved files. |
+| Audits reading on the human's behalf | Supplied audits read `inherited/` and `harness/`; the ledger shows 23 transcripts (audits, their helpers and the build sessions) touching `rebuilt/`, and the second and third audits (7f5d703d, a612115b) mutated `rebuilt/rule_engine.py` and `harness/trading_evaluation.py` in scratch copies | Self-reported evidence did not reveal its own false PASSes | Partly closed: Gates 1–2 now judge declared budgets instead of staying UNKNOWN, and Gate 3 names moved files. |
 
 ## Reads missing from the earlier ledger
 
@@ -306,3 +306,12 @@ What was learned: a maintenance session asked to change behavior changed the eva
 Missing harness/evidence capability: predicate meaning in the spec; a refusal (or at least a named report) when an evaluator file changes alongside the component.
 Harness improvement made: its edits stayed in the scratch clone and were never merged. The coordinating session then moved predicate meaning into the `spec-predicates` table (REMEDIATION-001), and Gate 3 now reports any edit under `harness/` or `tests/` as EVALUATOR_OR_ORACLE_CHANGED, naming the files, until an owner registers a new reference. This entry was missing until the fourth audit found the breach in the transcript; the earlier record mentioned only this session's reads.
 Could the same code read be avoided next time? The read, yes: the second NNS session needed no oracle read. The edit is now visible but not prevented; a session can still edit harness files, and only Gate 3 and code-owner review expose it.
+
+CODE-READ-ID: AGENT-UNNAMED-EDITS-20260928
+Observed failure: fourth audit #10. Earlier entries did not name three harness files the build session edited: `harness/credential_guard.py` and `harness/capture_registration.py` (created in `a6628e4`, the live-path work) and `harness/spec_tables.py` (edited in `c260405`, third-audit fixes). Nor did they record the second and third audits (sessions 7f5d703d and a612115b), which read `harness/` and `inherited/` files and mutated `rebuilt/rule_engine.py` and `harness/trading_evaluation.py` in scratch copies to test the gate.
+Why evidence was insufficient: the entries were written from memory at commit time, so they listed what seemed important, not what happened.
+Source inspected: the files named, by the build session 2edc1739 (its main thread); the audits' reads are listed per transcript in the ledger.
+What was learned: a hand-written code-read log drifts from the transcripts within a day.
+Missing harness/evidence capability: a generated ledger.
+Harness improvement made: `code-read-ledger/generate.py` and its output. Entries in this file are now explanations of reads the ledger lists, not the record itself.
+Could the same code read be avoided next time? Not the reads; they were edits. The omission can be avoided by regenerating the ledger before each submission.
